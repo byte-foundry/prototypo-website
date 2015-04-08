@@ -1,0 +1,139 @@
+Title: Prototypo
+
+----
+
+Infobox1: 
+
+Move these cursors
+to custom your font
+on the right…
+
+----
+
+Infobox2: 
+
+…and get the render
+of your font instantly
+& ready to use!
+
+----
+
+Textlineunderdemo: Discover all Prototypo features
+
+----
+
+Getstartedtagline: Streamlining font creation
+
+----
+
+Getstartedbuttonlabel: Get started
+
+----
+
+Section1title: A parametric type design tool
+
+----
+
+Section1subtitle: Sketch ideas, export fonts
+
+----
+
+Section1txt: Design a typeface is long and hard task. Prototypo allows to produce quickly some strong basis to design your own custom font. Each parameter is defined to operate specific changes...Fusce dapibus, tellus ac cursus commodo, tortor mauris condim entum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue.
+
+----
+
+Fonts: 
+
+- 
+  fontfile: pt_sans-web-bold.ttf
+  fontname: Garamond
+  fontdescription: >
+    The perfect sans serif, now with
+    infinite variations.
+  fontstring: Az
+- 
+  fontfile: comic.ttf
+  fontname: Comic Sans
+  fontdescription: "Yes, you can. But you shouldn't."
+  fontstring: Xy
+- 
+  fontname: Helvetica
+  fontdescription: >
+    The beautiful font, rebuilt with
+    Prototypo
+  fontslug: helvetica
+  fontstring: Abc
+
+----
+
+Downloadbuttonlabel: Download this font!
+
+----
+
+Section2title: A bunch of great features
+
+----
+
+Section2subtitle: Available in Prototypo 0.9 & about to land
+
+----
+
+Features: 
+
+- 
+  featureimg: pictofeaturescharactersset.svg
+  featurename: Characters set
+  featuredescription: >
+    Works with all the latin basic
+    characters set. It includes uppercases,
+    lowercases, smallcaps, figures and
+    punctuation!
+- 
+  featureimg: pictofeaturesexportfonts.svg
+  featurename: Export fonts
+  featuredescription: 'Once your design is ok, you can export all font format you need to use your fonts offline & online.'
+- 
+  featureimg: pictofeaturessplitviews.svg
+  featurename: Split views
+  featuredescription: 'Improve your design process with severals views: glyph, words, paragraphs, and watch changes in real time.'
+- 
+  featureimg: pictofeaturesfontmanager.svg
+  featurename: Font manager
+  featuredescription: >
+    Create and manage multiple projects!
+    Define variants of a master typeface, or
+    branch it in sub-projects!
+- 
+  featureimg: pictofeaturesswitchalternates.svg
+  featurename: Switch alternates
+  featuredescription: >
+    A lot of glyphs are proposed with one or
+    more alternates to define the perfect
+    shape to fit your custom design.
+- 
+  featureimg: pictofeaturesmoretocome.svg
+  featurename: …and more!
+  featuredescription: >
+    We work on more advanced great features,
+    like spacing/kerning, individualize
+    parameters, and more! See our roadmap.
+
+----
+
+Section3title: Want to be the first to know the next features?
+
+----
+
+Section3subtitle: Subscribe to our newsletter
+
+----
+
+Newsletternameplaceholder: Your name
+
+----
+
+Newslettermailplaceholder: Your mail
+
+----
+
+Newslettersubmitlabel: Keep me tuned

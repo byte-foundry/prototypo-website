@@ -1,0 +1,23 @@
+/*
+ *  Keyframes
+ */
+
+@include keyframes('DemoHomeInfoboxLeftAnimation') {
+  0%,100% { #{$browser}transform: translateX(0px);}
+  50% { #{$browser}transform: translateX(10px);}
+}
+
+@include keyframes('DemoHomeInfoboxRightAnimation') {
+  0%,100% { #{$browser}transform: translateX(0px);}
+  50% { #{$browser}transform: translateX(-10px);}
+}
+
+@include keyframes('DemoHomeInfoboxLeftAnimation-vertical') {
+  0%,100% { #{$browser}transform: translateY(0px);}
+  50% { #{$browser}transform: translateY(10px);}
+}
+
+@include keyframes('DemoHomeInfoboxRightAnimation-vertical') {
+  0%,100% { #{$browser}transform: translateY(0px);}
+  50% { #{$browser}transform: translateY(-10px);}
+}

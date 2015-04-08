@@ -1,0 +1,484 @@
+/*
+ *  Global CSS
+ */
+ 
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
+ 
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+html {
+	font-size:62.5%;
+}
+
+body {
+	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	color:#444;
+	padding-top:65px;
+  background:$colorBlack; /* equal to footer background */
+  line-height:1 !important;
+}
+
+html, body {
+  width:100%;
+  min-height:100%;
+  position:relative;
+}
+
+main {
+  width:100%;
+  position:relative;
+}
+
+.clear:before,
+.clear:after {
+  content:' ';
+  display:table;
+}
+
+.clear:after {
+  clear:both;
+}
+
+.clear {
+  *zoom:1;
+}
+
+img {
+  max-width:100%;
+  vertical-align:bottom;
+}
+
+a {
+	text-decoration:none;
+}
+/*
+a:hover {
+	color:#444;
+}
+*/
+
+a:focus,
+a:hover,
+a:active {
+	outline:0;
+}
+
+h1 {
+  margin:0;
+}
+
+input:focus {
+	outline:0;
+}
+
+.textType-title {
+  font-family:'PT Sans';
+  font-weight:bold;
+  font-size:44px;
+  line-height:50px;
+}
+
+.textType-subtitle {
+  font-family:'Playfair Display';
+  font-weight:normal;
+  font-style:italic;
+  font-size:32px;
+  line-height:42px
+}
+
+.textType-txt {
+  font-family:'PT Sans';
+  font-size:18px;
+  line-height:24px;
+}
+
+.textType-subtxt {
+  font-family:'PT Sans';
+  font-size:14px;
+  line-height:18px;
+}
+
+
+input[type="text"] {
+  border-radius:3px;
+  background:white;
+  outline:none;
+  color:$colorDarkGray;
+  font-size:16px;
+  font-family:'PT Sans';
+  padding:10px 18px 7px 18px;
+  display:inline-block;
+  border:none;
+  border-bottom:solid 3px white;
+  height:auto;
+  margin:0 0 10px 0;
+  width:auto;
+}
+
+
+
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+
+.width50 {width:50%}
+.width100 {width:100%}
+
+.marginTop30 {margin-top:30px}
+.marginTop60 {margin-top:60px}
+
+.height100 { height:100%}
+
+.fitToContent {
+  width:800px;
+  margin-left:auto;
+  margin-right:auto
+}
+
+.callToAction {
+  display: inline-block;
+  padding: 16px 22px;
+  
+  font-family: 'PT Sans', inherit;
+  font-weight: bold;
+  font-style: italic;
+  color: $callToActionTextColor;
+  font-size: 17px;
+  border-radius: 3px !important; /* foundation */
+  background: $callToActionBackgroundColor;
+  cursor: pointer;
+  color:white;
+    
+  @include transition(all 200ms ease);
+}
+
+.callToAction:hover {
+  color:$callToActionTextColor-hover;
+  background:$callToActionBackgroundColor-hover;
+  
+  @include transform(scale(1.1,1.1));
+}
+
+.callToAction.disabled {
+  background:$callToActionBackgroundColor-disabled;
+  color:$callToActionTextColor-disabled;
+}
+
+.callToAction.disabled:hover {
+  color:$callToActionTextColor-hover-disabled;
+  background:$callToActionBackgroundColor-hover-disabled;
+  
+  @include transform(scale(1,1));
+}
+
+
+.ToggleSwitch {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 65px;
+  height: 65px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background 0.4s;
+          transition: background 0.4s;
+}
+
+.ToggleSwitch:focus {
+  outline: none;
+}
+
+.ToggleSwitch-inner {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 18px;
+  right: 18px;
+  height: 5px;
+  background: white;
+}
+
+.ToggleSwitch-inner::before,
+.ToggleSwitch-inner::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  content: "";
+}
+
+.ToggleSwitch-inner::before {
+  top: -10px;
+}
+
+.ToggleSwitch-inner::after {
+  bottom: -10px;
+}
+
+
+
+
+.ToggleSwitch-hamburgerToCross {
+  background-color: lighten($colorBlack,20%);
+}
+
+.ToggleSwitch-hamburgerToCross .ToggleSwitch-inner {
+  -webkit-transition: background 0 0.2s;
+          transition: background 0 0.2s;
+}
+
+.ToggleSwitch-hamburgerToCross .ToggleSwitch-inner::before,
+.ToggleSwitch-hamburgerToCross .ToggleSwitch-inner::after {
+  -webkit-transition-duration: 0.2s, 0.2s;
+          transition-duration: 0.2s, 0.2s;
+  -webkit-transition-delay: 0.2s, 0;
+          transition-delay: 0.2s, 0;
+}
+
+.ToggleSwitch-hamburgerToCross .ToggleSwitch-inner::before {
+  -webkit-transition-property: top, -webkit-transform;
+          transition-property: top, transform;
+}
+
+.ToggleSwitch-hamburgerToCross .ToggleSwitch-inner::after {
+  -webkit-transition-property: bottom, -webkit-transform;
+          transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.ToggleSwitch-hamburgerToCross.active {
+  background-color: $colorBlack;
+}
+
+.ToggleSwitch-hamburgerToCross.active .ToggleSwitch-inner {
+  background: none;
+}
+
+.ToggleSwitch-hamburgerToCross.active .ToggleSwitch-inner::before {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ToggleSwitch-hamburgerToCross.active .ToggleSwitch-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.ToggleSwitch-hamburgerToCross.active .ToggleSwitch-inner::before,
+.ToggleSwitch-hamburgerToCross.active .ToggleSwitch-inner::after {
+  -webkit-transition-delay: 0, 0.2s;
+          transition-delay: 0, 0.2s;
+}
+
+/*
+ *  STRUCTURE
+ */
+ 
+.Header {
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	height:65px;
+	z-index:100;
+	
+	background:white;
+	box-shadow:0 2px 0px rgba(0, 0, 0, 0.05);
+	
+	@include transition(all 300ms ease)
+}
+
+.Social {
+  position:fixed;
+  right:7px;
+  top:78px;
+  height:80px;
+  width:40px;
+  z-index:100
+}
+
+.Social-item {
+  display:block;
+  background-position:center center;
+  background-size:20px auto;
+  background-repeat:no-repeat;
+  height:30px;
+}
+
+.Social-itemTwitter {
+  background-image:url(img/pictos/pictoSocialTwitter.svg)
+}
+
+.Social-itemFacebook {
+  background-image:url(img/pictos/pictoSocialFacebook.svg)
+}
+
+
+
+.Nav-layout {
+  display: inline-block;
+  vertical-align:top;
+  font-size: 0;
+  margin:0
+}
+
+.Nav-layoutItem {
+  display:inline-block;
+  vertical-align:middle;
+}
+
+.Nav-layoutItemLink {
+  display: block;
+  height: 65px;
+  padding: 25px 15px 25px 15px;
+  
+  font-size: 14px;
+  line-height:17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $colorDarkGray;
+    
+  @include transition(all 300ms ease);
+}
+
+.Nav-layoutItemLink:hover,
+.Nav-layoutItemLink.active {
+  color: $colorBlack;
+  background:$colorLighterGray;
+}
+
+.Nav-layoutItemLoginLinkInner {
+  padding: 8px 20px;
+  border-radius: 3px;
+  border: solid 1px $colorLighterGray;
+    
+  @include transition(all 300ms ease);
+}
+
+.Nav-layoutItemLoginLink:hover {
+  background:$colorLighterGray;
+}
+
+.Nav-layoutItemLoginLink:hover .Nav-layoutItemLoginLinkInner {
+  background:$colorLighterGray;
+}
+
+.Nav-logo {
+  display: inline-block;
+  height: 65px;
+  font-size:0;
+}
+
+.Nav-logoPicto {
+  display:inline-block;
+  width:65px;
+  height:65px;
+  background:url(img/prototypoIconWhite.svg) center center no-repeat $colorBlack;
+  background-size:26px;  
+}
+
+.Nav-logoInner {
+  display:inline-block;
+  vertical-align:top;
+  padding: 21px 15px 23px 20px;
+  font-size: 20px;
+  font-weight: 700;
+  color: $colorBlack;
+}
+
+.Nav-callToAction  {
+  vertical-align: top;
+  margin-top: 8px;
+  margin-right:16px;
+  float:right
+}
+
+.Nav-hamburgerMenuHandler {  
+  position:absolute;
+  top:0;
+  right:0;
+  width:65px;
+  height:65px;
+  display:none
+}
+
+
+.PageContent {
+  padding-bottom:90px
+}
+
+.PageHeader {
+  padding-top:80px;
+  margin-bottom:60px
+}
+
+
+.Footer {
+  clear:both;
+  padding:30px 0 40px 0;
+  background:$colorBlack
+}
+
+
+.Footer-logo {
+  width:120px;
+  display:block;
+  margin:0 auto;
+}
+
+.Footer-copyright {
+  font-family:'PT Sans';
+  font-weight:400;
+  text-align:center;
+  font-size:16px;
+  line-height:20px;
+  color:$colorLightBlack;
+}
+
+.Footer-copyright a {
+  color:$colorDarkGray;
+}
+
+
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}

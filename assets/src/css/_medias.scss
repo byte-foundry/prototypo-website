@@ -1,0 +1,319 @@
+/*
+ *  Media queries
+ */
+ 
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+	   only screen and (min-resolution:144dpi) {
+
+}
+
+@media only screen and (min-width:1280px) {
+
+}
+
+@media only screen and (min-width:1140px) {
+
+}
+
+@media only screen and (max-width:1024px) {
+  
+  .Nav-layoutItemLink {
+    padding-left:9px;
+    padding-right:9px
+  }
+  
+  .Nav-layoutItemLoginLinkInner {
+    padding-left:9px;
+    padding-right:9px
+  }
+  
+  .Infobox-DemoHomeInfoboxLeft {
+    left: 17px;
+    top: 275px;
+    width: 200px;
+    height: 105px;
+    
+    @include animation('DemoHomeInfoboxLeftAnimation-vertical 1300ms ease infinite');
+  }
+
+  .Infobox-DemoHomeInfoboxLeft:after {
+    position: absolute;
+    right: 78px;
+    top: -32px;
+    border-bottom: 20px solid rgb(244, 230, 123);
+    border-right: solid 20px rgba(0, 0, 0, 0);
+    border-left: solid 20px rgba(0, 0, 0, 0);
+  }
+  
+  .Infobox-DemoHomeInfoboxRight {
+    right: 60px;
+    top: -15px;
+    width: 310px;
+    height: 86px;
+    
+    @include animation('DemoHomeInfoboxRightAnimation-vertical 1300ms ease infinite');
+  }
+
+  .Infobox-DemoHomeInfoboxRight:after {
+    position: absolute;
+    left: 136px;
+    top: 79px;
+    border-top: 20px solid rgb(244, 230, 123);
+    border-left: solid 20px rgba(0, 0, 0, 0);
+    border-right: solid 20px rgba(0, 0, 0, 0);
+  }
+  
+  .Infobox-DemoHomeInfoboxRight br {
+    display:none;
+  }
+  
+  .Section-homepageGetStartedLine {
+    margin: 20px 0 30px;
+    text-align: center;
+  }
+  
+  .Nav-callToActionCreateYourFont {}
+
+}
+
+@media only screen and (max-width:910px) {
+  
+
+  .SectionHeader {
+    margin-bottom:30px;
+  }
+  
+  .fitToContent {
+    width:86%;
+  }
+  
+  .js-showMainNav .Header {
+    height:100%
+  }
+  
+  .Nav-hamburgerMenuHandler {
+    display:block
+  }
+  
+  .Nav {
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    overflow:hidden;
+  }
+  
+  .Nav-layout {
+    position:absolute;
+    top:65px;
+    left:0;
+    bottom:0;
+    right:0;
+    background:lighten($colorBlack,20%);
+    overflow:hidden;
+    font-size:0;
+    
+    @include transition(all 400ms ease)
+  }
+  
+  .js-showMainNav .Nav-layout {
+    background:$colorBlack;
+    padding-top:30px;
+  }
+  
+  .Nav-layoutItem {
+    display:block;
+  }
+  
+  .Nav-layoutItemLink {
+    padding: 13px 10px 13px 63px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    height:45px;
+  }
+  
+  .Nav-layoutItemLink:hover {
+    color:$colorBlack;
+  }
+  
+  .Social {
+    bottom: auto;
+    left: 59px;
+    right: auto;
+    top: 430px;
+    width: 60px;
+    height: 30px;
+    font-size: 0;
+    position:absolute;
+  }
+  
+  .Social-item {
+    width:30px;
+    height:30px;
+    display:inline-block;
+  }
+  
+  .Nav-callToActionCreateYourFont {
+    display: block;
+    position: absolute;
+    right: 65px;
+    top: 0;
+  }
+  
+  .Section-homepageDiscoverFeaturesLine {
+    display:none
+  }
+}
+
+
+
+
+@media only screen and (max-width: 40.063em) {
+  .Section {
+    padding:35px 0 30px 0;
+  }
+  
+  .Section-featuresPictoWrap {
+    margin-left:0;  
+  }
+  
+  .textType-title {
+    font-size:30px;
+    line-height:34px;
+  }
+  
+  .textType-subtitle {
+    font-size:22px;
+    line-height:26px;
+    margin-top:5px
+  }
+  
+  .textType-txt {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .Section-homepageGetStartedLineSubtitle {
+    display:none /* Can't use .hide-for-small-only because of display:inline-block ≠ display:block (foundation 5 current issue) */
+  }
+  
+  .Section-homepageGetStartedLineTitle {
+    margin-right:15px
+  }
+  
+  .small-full-width {
+    width:100% !important;
+    display:block !important;
+  }
+  
+  .Section-homepage {
+    height:auto;
+    min-height:550px
+  }
+  
+  .Section-homepageWrap {
+    top:10px;
+    margin-top:0;
+    height:550px
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+  .DemoHome {
+    width:90%
+  }
+  
+  .DemoHome:after {
+    display:none
+  }
+}
+
+
+@media only screen and (max-width:480px) {
+  .Nav-logoInner {
+    display:none
+  }
+  
+  .Nav-callToActionCreateYourFont {
+    width:194px;
+    left:50%;
+    margin-left:-97px
+  }
+}
+
+
+@media only screen and (max-width:330px) {
+  .Nav-logo {
+    width: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
+  
+  .Nav-callToActionCreateYourFont {
+    display:none;  
+  }
+  
+  .Nav-layoutItemLink {
+    padding-left: 10px;
+    text-align: center;
+  }
+  
+  .Social {
+    left: 50%;
+    margin-left: -30px;
+  }
+}
+
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}

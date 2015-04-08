@@ -1,0 +1,158 @@
+/*
+ *  SASS variables & functions
+ */
+ 
+$mainFont: 'PT Sans';
+$secondFont: 'Playfair Display';
+ 
+$colorWhite:                    white;
+$colorBrightest:                rgba(255,255,255,.8);
+$colorBright:                   rgba(255,255,255,.6);
+$colorLighterGray:              rgb(240,240,240);
+$colorLightGray:                rgb(220,220,220);
+$colorGray:                     rgb(200,200,200);
+$colorDarkGray:                 rgb(120,120,120);
+$colorLightBlack:               rgb(60,60,59);
+$colorBlack:                    rgb(20,20,20);
+$colorDark:                     rgba(0,0,0,.6);
+$colorDarkest:                  rgba(0,0,0,.8);
+
+.colorWhite           {color:$colorWhite}
+.colorBrightest       {color:$colorBrightest}
+.colorBright          {color:$colorBright}
+.colorLighterGray     {color:$colorLighterGray;}
+.colorLightGray       {color:$colorLightGray;}
+.colorGray            {color:$colorGray;}
+.colorDarkGray        {color:$colorDarkGray;}
+.colorLightBlack      {color:$colorLightBlack;}
+.colorBlack           {color:$colorBlack;}
+.colorDark            {color:$colorDark}
+.colorDarkest         {color:$colorDarkest}
+
+$mainBackgroundColor:           #49e4a9;
+$mainTextColor:                 white;
+
+.colorMainBackgroundColor       {color:$mainBackgroundColor}
+.colorMainTextColor             {color:$mainTextColor}
+
+$secondBackgroundColor:         rgb(255, 114, 94);
+$secondTextColor:               white;
+
+.colorSecondBackgroundColor       {color:$secondBackgroundColor}
+.colorSecondTextColor             {color:$secondTextColor}
+
+
+$thirdBackgroundColor:          #fbe173;
+$thirdTextColor:                white;
+
+$callToActionTextColor:               $mainTextColor;
+$callToActionBackgroundColor:         $secondBackgroundColor;
+$callToActionTextColor-hover:         $mainTextColor;
+$callToActionBackgroundColor-hover:   darken($secondBackgroundColor,20%);
+
+$callToActionTextColor-disabled:               $colorDark;
+$callToActionBackgroundColor-disabled:         $colorLightGray;
+$callToActionTextColor-hover-disabled:         $colorDarkest;
+$callToActionBackgroundColor-hover-disabled:   $colorGray;
+
+$infoboxTextColor:              #5b5322;
+$infoboxBackgroundColor:        rgb(244, 230, 123);
+
+$potentiometerBackgroundColor:              $colorLightGray;
+$potentiometerBarBackgroundColor:           $mainBackgroundColor;
+$potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
+
+
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+    $vendor-prefixed-properties: transform background-clip background-size;
+    $result: ();
+    @each $prefix in $prefixes {
+       @if index($vendor-prefixed-properties, $property) {
+         $property: -#{$prefix}-#{$property}
+       }
+       $result: append($result, $property);
+    }
+    @return $result;
+}
+ 
+@function trans-prefix($transition, $prefix: moz) {
+    $prefixed: ();
+    @each $trans in $transition {
+        $prop-name: nth($trans, 1);
+        $vendor-prop-name: prefix($prop-name, $prefix);
+        $prop-vals: nth($trans, 2);
+        $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+    }
+    
+    @return $prefixed;
+}
+ 
+@mixin transition($values...) { 
+    $transitions: ();
+    @each $declaration in $values {
+        $prop: nth($declaration, 1);
+        $prop-opts: ();
+        $length: length($declaration);
+        @for $i from 2 through $length {
+            $prop-opts: append($prop-opts, nth($declaration, $i));   
+        }
+        $trans: ($prop, $prop-opts);
+        $transitions: append($transitions, $trans, comma);
+    }
+      
+    -webkit-transition: trans-prefix($transitions, webkit);
+    -moz-transition: trans-prefix($transitions, moz);
+    -o-transition: trans-prefix($transitions, o);
+    transition: $values;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+      $browser: '-webkit-'; @content;
+  }
+  @-moz-keyframes #{$animationName} {
+      $browser: '-moz-'; @content;
+  }
+  @-o-keyframes #{$animationName} {
+      $browser: '-o-'; @content;
+  }
+  @keyframes #{$animationName} {
+      $browser: ''; @content;
+  }
+} $browser: null;
+
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+  
+  @for $i from 1 through $max {
+      $animations: #{$animations + nth($animate, $i)};
+  
+      @if $i < $max {
+          $animations: #{$animations + ", "};
+      }
+  }
+  -webkit-animation: $animations;
+  -moz-animation:    $animations;
+  -o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+	    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+
