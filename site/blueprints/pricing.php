@@ -41,6 +41,9 @@ fields:
     placeholder: Subtitle of the section
     default: 3 packs that fit your needs
     
+  section1Txt:
+    type: textarea
+    placeholder: Text content of the section
     
   packs:
     label: Pricing packs
@@ -75,4 +78,10 @@ fields:
         type: text
         label: Button label
         placeholder: "Get started now!" or "Available soon"
+        
+  
+    
+  section1TxtAfter:
+    type: textarea
+    placeholder: Text content after the pricing packs
     

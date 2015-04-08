@@ -8,7 +8,10 @@
     		<h1 class="textType-title colorWhite"><?php echo $page->section1Title()->kirbytext(); ?></h1>
         <h3 class="textType-subtitle colorBright"><?php echo $page->section1Subtitle()->kirbytext(); ?></h3>
   		</header>
-
+  		
+  		<div class="Section-wrapTxt textType-txt marginTop30 colorBrightest text-center">
+        <?php echo $page->section1Txt()->kirbytext(); ?>
+  		</div>
       
       <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
         
@@ -40,6 +43,12 @@
     
       
       </ul>
+      
+      
+  		<div class="Section-wrapTxt textType-txt marginTop30 colorBrightest text-center">
+        <?php echo $page->section1TxtAfter()->kirbytext(); ?>
+  		</div>
+      
       
     </div>
 

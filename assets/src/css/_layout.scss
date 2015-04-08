@@ -37,6 +37,10 @@ main {
   position:relative;
 }
 
+em {
+  font-style:italic;
+}
+
 .clear:before,
 .clear:after {
   content:' ';
@@ -59,11 +63,21 @@ img {
 a {
 	text-decoration:none;
 }
-/*
-a:hover {
-	color:#444;
+
+a:focus,
+a:hover { color:inherit; }
+
+.Link {
 }
-*/
+
+.Section-wrapTxt a {
+  color:$colorWhite;
+}
+
+
+.Section-wrapTxt a:hover {
+	text-decoration:underline
+}
 
 a:focus,
 a:hover,
@@ -356,7 +370,7 @@ input[type="text"] {
 .Nav-layoutItemLink {
   display: block;
   height: 65px;
-  padding: 25px 15px 25px 15px;
+  padding: 24px 15px 26px 15px;
   
   font-size: 14px;
   line-height:17px;

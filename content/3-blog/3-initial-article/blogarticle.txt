@@ -1,0 +1,41 @@
+Title: Initial article
+
+----
+
+Subtitle: It's going to be awesome!
+
+----
+
+Contentarticle: 
+
+##Prototypo has a new home!
+
+This redesign wasn’t on the roadmap and was more work than anticipated, but we are really proud of it. We’ve spent a lot of time searching for the right level of details to describe Prototypo and our grand plans for it.
+
+Sad truth is: there’s no such thing as the right level of details.
+
+##Inviting users to try the app
+
+Taking the decision to invite people to try the beta is a lot harder than it seems: you originally decide on a very limited list of features that have to work before inviting others to try it. Then, developing the app and using it gives you a different perspective of what people might expect, and you start adding more features to the roadmap. Once a feature is complete, you inevitably think about this other little feature that could make an important difference: a difference between acceptable and good usability, between a cool demo and a useful product, a disappointed or an enthusiastic user, bad buzz and good buzz.
+
+The safe way out of this situation was to send invites to a very limited group of people that already knew about the project and did provide focused and constructive feedback. We are very grateful to have met people, offline and online, who care about Prototypo. There are still many bugs and incomplete features in Prototypo and we’re well aware of it. But we know have enough confidence in the app and its potential to extend the private beta to more users.
+
+##Sustainable Open-Source Software
+
+We’ve been working full-time on this project for more than four months. This is the most exciting, challenging, and rewarding project we ever worked on. The next big challenge is to find a way to keep the adventure going. Sustainability is a challenge for any project, and it is an even bigger one when your code is available to all, for free. Our idea is to provide a hosted version of Prototypo that people can just visit to start prototyping fonts (SaaS1 , in marketing terms). We also thought about other services that we can provide to streamline the workflow of webfonts: generating @font-faces and CDN-hosting2 complete font-families.
+
+Crowd-funding a project represents a great opportunity and a big risk as well. If the campaign fails, we will not only run out of cash, but most importantly of motivation. We’ve worked hard to make Prototypo stand out, now we can only hope for the best.
+
+##Marketing for Dummies
+
+When starting this project, the team had zero experience in marketing. We know we haven’t done enough, and we could always do better to get the word out. But when you have very limited resource, every hour spent doing marketing is an hour not spent adding more features to your application.
+
+This will inevitably change as we start working on the KickStarter campaign. We’ve closed our code editor and we try hard to stop thinking about those exciting features already in the pipes (draggable outline nodes, manual spacing). It’s time to focus on building an effective campaign!
+
+----
+
+Date: 2015-02-03
+
+----
+
+Tags: prototypo,release
