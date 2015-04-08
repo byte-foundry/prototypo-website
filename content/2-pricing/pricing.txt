@@ -2,4 +2,44 @@ Title: Pricing
 
 ----
 
-Text: 
+Section1title: Your Prototypo is here
+
+----
+
+Section1subtitle: 3 packs that fit your needs
+
+----
+
+Packs: 
+
+- 
+  packname: pro
+  packprice: $20/month
+  packservices: |
+    One user
+    Unlimited fonts
+  packdescription: The perfect pack for you
+  packstate: available
+  packbuttonlabel: Get started now!
+- 
+  packname: agency
+  packprice: $50/month
+  packservices: |
+    Up to 5 users
+    Unlimited fonts
+    Collaborative fonts
+  packdescription: The pack for your small business
+  packstate: notavailable
+  packbuttonlabel: Available soon
+- 
+  packname: agency+
+  packprice: From $80/month
+  packservices: |
+    5+ users
+    Unlimited fonts
+    Collaborative fonts
+  packdescription: |
+    The pack for your school
+    or your big company
+  packstate: notavailable
+  packbuttonlabel: Available soon

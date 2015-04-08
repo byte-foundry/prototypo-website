@@ -47,113 +47,32 @@ fields:
     type: structure
     entry: >
       <strong>{{packname}}</strong><br/>
+      {{packprice}}<br/>
+      {{packservices}}<br/>
       {{packdescription}}
     fields:
-      fontfile:
-        type: select
-        label: Font file
-        options: files
-      fontname:
+      packname:
         type: text
-        label: Font name
-        placeholder: Font name
-      fontdescription:
+        label: Pack name
+        placeholder: Pack name
+      packprice:
+        type: text
+        label: Pack price
+        placeholder: eg. $20/month
+      packservices:
+        type: textarea
+        label: Pack services (one per line)
+      packdescription:
         type: textarea
         label: Font description
         placeholder: Font description
-      fontstring:
+      packstate:
+        type:select
+        options:
+          available: Available
+          notavailable: Not available yet
+      packbuttonlabel:
         type: text
-        label: Characters to show
-        placeholder: Characters to show
-        default: Az
-        
-  downloadButtonLabel:
-    type: text
-    label: Download button label
-    placeholder: eg. Download this font
-    default: Download this font
-    
-    
-      
-    
-    
-  line-c:
-    type: line
-    
-  section2Info:
-    type: info
-    text: >
-      **Section : A bunch of great features**
-      
-      **Content** : A grid of some features with a figure, a title and a description for each.
-    
-  section2Title:
-    type: text
-    placeholder: Title of the section
-    default: A parametric type design tool
-    
-  section2Subtitle:
-    type: text
-    placeholder: Subtitle of the section
-    default: Sketch ideas, export fonts
-    
-  features:
-    label: Features
-    type: structure
-    entry: >
-      <strong>{{featurename}}</strong><br/>
-      {{featuredescription}}
-    fields:
-      featureimg:
-        type: select
-        label: Feature illustration
-        options: files
-      featurename:
-        type: text
-        label: Feature name
-        options: files
-      featuredescription:
-        type: textarea
-        label: Feature description
-      
-    
-    
-    
-  line-d:
-    type: line
-    
-  section3Info:
-    type: info
-    text: >
-      **Section : Want to be the first to know the next features?**
-      
-      **Content** : A form (two inputs, one submit)
-    
-  section3Title:
-    type: text
-    placeholder: Title of the section
-    default: Want to be the first to know the next features?
-    
-  section3Subtitle:
-    type: text
-    placeholder: Subtitle of the section
-    default: Subscribe to our newsletter
-    
-  newsletterNamePlaceholder:
-    type: text
-    placeholder: Newsletter name placeholder
-    default: Your name
-    width: 1/4
-    
-  newsletterMailPlaceholder:
-    type: text
-    placeholder: Newsletter mail placeholder
-    default: Your mail
-    width: 1/4
-    
-  newsletterSubmitLabel:
-    type: text
-    placeholder: Newsletter submit label
-    default: Keep me tuned
-    width: 2/4
+        label: Button label
+        placeholder: "Get started now!" or "Available soon"
     
