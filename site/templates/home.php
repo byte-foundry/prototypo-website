@@ -96,17 +96,17 @@
       		<?php if (!empty($fonts[0][fontfile])): ?>
       	  @font-face {
         	  font-family: 'Font1';
-            src: url('<?php echo url('/content/home/'.$fonts[0][fontfile]); ?>');
+            src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]); ?>');
       	  }	
       	  <?php endif; if (!empty($fonts[1][fontfile])): ?>
       	  @font-face {
         	  font-family: 'Font2';
-            src: url('<?php echo url('/content/home/'.$fonts[1][fontfile]); ?>');
+            src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]); ?>');
       	  }	
       	  <?php endif; if (!empty($fonts[2][fontfile])): ?>
       	  @font-face {
         	  font-family: 'Font3';
-            src: url('<?php echo url('/content/home/'.$fonts[2][fontfile]) ?>');
+            src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]) ?>');
       	  }	
       	  <?php endif; ?>
         </style>
@@ -119,7 +119,7 @@
               
               <div class="Section-fontsInfos">
                 <div class="Section-fontsDescription textType-subtxt"><?php echo $fonts[0][fontdescription]; ?></div>
-                <a href="<?php if (!empty($fonts[0][fontfile])) echo url('/content/home/'.$fonts[0][fontfile]) ?>" 
+                <a href="<?php if (!empty($fonts[0][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]) ?>" 
                    class="callToAction Section-fontsDownload text-center">
                   <?php echo $page->downloadButtonLabel()->kirbytext(); ?>
                 </a>
@@ -134,7 +134,7 @@
               
               <div class="Section-fontsInfos">
                 <div class="Section-fontsDescription textType-subtxt"><?php echo $fonts[1][fontdescription]; ?></div>
-                <a href="<?php if (!empty($fonts[1][fontfile])) echo url('/content/home/'.$fonts[1][fontfile]) ?>" 
+                <a href="<?php if (!empty($fonts[1][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]) ?>" 
                    class="callToAction Section-fontsDownload text-center">
                   <?php echo $page->downloadButtonLabel()->kirbytext(); ?>
                 </a>
@@ -149,7 +149,7 @@
               
               <div class="Section-fontsInfos">
                 <div class="Section-fontsDescription textType-subtxt"><?php echo $fonts[2][fontdescription]; ?></div>
-                <a href="<?php if (!empty($fonts[2][fontfile])) echo url('/content/home/'.$fonts[2][fontfile]) ?>" 
+                <a href="<?php if (!empty($fonts[2][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]) ?>" 
                    class="callToAction Section-fontsDownload text-center">
                   <?php echo $page->downloadButtonLabel()->kirbytext(); ?>
                 </a>
@@ -180,7 +180,7 @@
     		  
       		<li class="Section-featuresItem">
         		<div class="Section-featuresPictoWrap">
-          		<img src="<?php echo url('content/home/'.$feature[featureimg]); ?>" class="Section-featuresPicto">
+          		<img src="<?php echo url('content/'.$page->dirname().'/'.$feature[featureimg]); ?>" class="Section-featuresPicto">
         		</div>
         		<h5 class="Section-featuresTitle"><?php echo $feature[featurename]; ?></h5>
         		<div class="textType-subtxt colorBrightest">

@@ -43,3 +43,11 @@ Packs:
     or your big company
   packstate: notavailable
   packbuttonlabel: Available soon
+
+----
+
+Section1txt: 
+
+----
+
+Section1txtafter: (email: contact@prototypo.io text: Feel free to contact us) if you have any question about your needs.

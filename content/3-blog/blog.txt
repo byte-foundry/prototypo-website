@@ -1,0 +1,13 @@
+Title: Blog
+
+----
+
+Section1title: Prototypo blog
+
+----
+
+Section1subtitle: Stay tuned!
+
+----
+
+Section1txt: 

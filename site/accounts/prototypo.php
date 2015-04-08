@@ -8,8 +8,8 @@ language: en
 role: admin
 token: cbbc9f5355f91657f84f01f6e1dfa347549628a4
 history:
-  - pricing
-  - home
-  - null
-  - documentation
-  - about
+  - blog/initial-article
+  - error
+  - blog/article
+  - blog/second-article
+  - blog

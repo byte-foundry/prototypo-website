@@ -2,4 +2,25 @@ Title: Error
 
 ----
 
-Text: The page has not been found.
+Section1title: 
+
+I'm sorry Dave,
+I'm afraid I can't *find* that.
+
+----
+
+Section1subtitle: The page you're looking for can not be found
+
+----
+
+Section1txt: 
+
+Hopefully, you can navigate through the different sections of our website:
+check it out at the top of this page or (link: home/ text: go back home) :)
+
+
+(email: contact@prototypo.io text: Do you want to report a broken link?)
+
+----
+
+Errorimage: pictoerror.svg
