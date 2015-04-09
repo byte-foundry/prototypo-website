@@ -5,4 +5,7 @@ $(function(){
     $(this).toggleClass('active');
   });
   
+  $('.Question-header').on('click',function(){
+    $(this).parent().find('.Question-content').slideToggle(200);
+  });
 });

@@ -13,7 +13,7 @@
         <?php echo $page->section1Txt()->kirbytext(); ?>
   		</div>
       
-      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
+      <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 PricingTable">
         
     		
     		<?php 

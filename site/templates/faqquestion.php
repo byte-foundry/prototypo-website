@@ -12,7 +12,7 @@
     <div class="fitToContent">
   	
       <nav class="BlogPagination BlogPagination-before">
-        <a class="BlogPagination-item BlogPagination-back" href="<?php echo url('blog'); ?>">Back to blog</a>  
+        <a class="BlogPagination-item BlogPagination-prev" href="<?php echo url('blog'); ?>">Back to blog</a>  
       </nav>
       
   		<article class="Article">

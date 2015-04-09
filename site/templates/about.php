@@ -14,7 +14,7 @@
   		</div>
   		
   		
-      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 marginTop30">
+      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2 marginTop30 Members">
     		
     		<?php 
       		$members = yaml($page->members()); 

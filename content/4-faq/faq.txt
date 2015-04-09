@@ -1,0 +1,13 @@
+Title: FAQ
+
+----
+
+Section1title: Frequently Asked Questions
+
+----
+
+Section1subtitle: Your questions? Our answers!
+
+----
+
+Section1txt: 

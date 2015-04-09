@@ -27,11 +27,11 @@
       <nav class="BlogPagination BlogPagination-before">
       
         <?php if($articles->pagination()->hasNextPage()): ?>
-        <a class="BlogPagination-item BlogPagination-next" href="<?php echo $articles->pagination()->nextPageURL() ?>">newer posts</a>
+        <a class="BlogPagination-item BlogPagination-next" href="<?php echo $articles->pagination()->nextPageURL() ?>"><span>newer posts</span></a>
         <?php endif ?>
       
         <?php if($articles->pagination()->hasPrevPage()): ?>
-        <a class="BlogPagination-item BlogPagination-prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">older posts</a>
+        <a class="BlogPagination-item BlogPagination-prev" href="<?php echo $articles->pagination()->prevPageURL() ?>"><span>older posts</span></a>
         <?php endif ?>
       
       </nav>
@@ -81,11 +81,11 @@
       <nav class="BlogPagination BlogPagination-after">
       
         <?php if($articles->pagination()->hasNextPage()): ?>
-        <a class="BlogPagination-item BlogPagination-next" href="<?php echo $articles->pagination()->nextPageURL() ?>">newer posts</a>
+        <a class="BlogPagination-item BlogPagination-next" href="<?php echo $articles->pagination()->nextPageURL() ?>"><span>newer posts</span></a>
         <?php endif ?>
       
         <?php if($articles->pagination()->hasPrevPage()): ?>
-        <a class="BlogPagination-item BlogPagination-prev" href="<?php echo $articles->pagination()->prevPageURL() ?>">older posts</a>
+        <a class="BlogPagination-item BlogPagination-prev" href="<?php echo $articles->pagination()->prevPageURL() ?>"><span>older posts</span></a>
         <?php endif ?>
       
       </nav>

@@ -41,7 +41,7 @@
 
     <nav class="Nav" role="navigation">
     
-      <a href="./" class="Nav-logo">
+      <a href="<?php echo url('home'); ?>" class="Nav-logo">
         <span class="Nav-logoPicto"></span>
         <span class="Nav-logoInner">Prototypo</span>
       </a>
