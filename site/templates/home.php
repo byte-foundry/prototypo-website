@@ -2,14 +2,14 @@
 
   <main class="home height100 minHeight100" role="main">
 
-    <section class="Section Section-homepage">
+    <section class="Section Section-homepage hide-for-print">
       
-      <div class="Section-backgroundFonts">a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z 
+      <div class="Section-backgroundFonts hide-for-print">a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z 
       </div>
       
       <div class="Section-homepageWrap">
       
-    		<div class="Section-homepageGetStartedLine">
+    		<div class="Section-homepageGetStartedLine text-center">
       		<h1 class="Section-homepageGetStartedLineTitle colorWhite"><?php echo $page->title()->kirbytext(); ?></h1>
       		<h3 class="Section-homepageGetStartedLineSubtitle colorBrightest"><?php echo $page->getStartedTagline()->kirbytext(); ?></h3>
       		<a href="#" class="Section-homepageGetStartedLineCallToAction callToAction"><?php echo $page->getStartedButtonLabel()->kirbytext(); ?></a>
@@ -61,17 +61,17 @@
         		Demo
       		</div>
       		
-      		<div class="Infobox Infobox-DemoHomeInfoboxLeft">
+      		<div class="Infobox Infobox-DemoHomeInfoboxLeft text-center">
         		<?php echo $page->infobox1()->kirbytext() ?>
       		</div>
       		
-      		<div class="Infobox Infobox-DemoHomeInfoboxRight">
+      		<div class="Infobox Infobox-DemoHomeInfoboxRight text-center">
         		<?php echo $page->infobox2()->kirbytext() ?>
       		</div>
       		
     		</div>
     		
-    		<div class="Section-homepageDiscoverFeaturesLine"><?php echo $page->textLineUnderDemo()->kirbytext(); ?></div>
+    		<div class="Section-homepageDiscoverFeaturesLine text-center textSize-txt-large"><?php echo $page->textLineUnderDemo()->kirbytext(); ?></div>
     		
         <div class="clear"></div>
   		
@@ -81,13 +81,13 @@
 		
 		<div class="Section-sepa Section-sepaBefore"></div>
 		
-		<section class="Section Section-parametricDesignTool">
+		<section class="Section Section-parametricDesignTool colorDarkest text-center">
   		<header class="SectionHeader fitToContent">
-      	<h1 class="textType-title colorDarkest"><?php echo $page->section1Title()->kirbytext(); ?></h1>
-    		<h3 class="textType-subtitle colorDark"><?php echo $page->section1Subtitle()->kirbytext(); ?></h3>
+      	<h1 class="textType-title textSize-title-large"><?php echo $page->section1Title()->kirbytext(); ?></h1>
+    		<h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytext(); ?></h3>
   		</header>
   		
-  		<div class="Section-wrapTxt textType-txt marginTop30 colorDarkest fitToContent">
+  		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorDarkest fitToContent">
     		<?php echo $page->section1Txt()->kirbytext(); ?>
     		
     		<?php $fonts = yaml($page->fonts()); ?>
@@ -114,11 +114,11 @@
         <ul class="Section-fonts small-block-grid-1 medium-block-grid-3 large-block-grid-3">
           <li class="Section-fontsItem text-center">
             <div class="Section-fontsItemWrap radius">
-              <div class="Section-fontsView" style="font-family:'Font1', inherit"><?php echo $fonts[0][fontstring]; ?></div>
-              <h6 class="Section-fontsName"><?php echo $fonts[0][fontname]; ?></h6>
+              <div class="Section-fontsView colorDarkest" style="font-family:'Font1', inherit;font-size:<?php echo $fonts[0][fontsize]; ?>px; line-height:<?php echo $fonts[0][fontlineheight]; ?>px"><?php echo $fonts[0][fontstring]; ?></div>
+              <h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0][fontname]; ?></h6>
               
               <div class="Section-fontsInfos">
-                <div class="Section-fontsDescription textType-subtxt"><?php echo $fonts[0][fontdescription]; ?></div>
+                <div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[0][fontdescription]; ?></div>
                 <a href="<?php if (!empty($fonts[0][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]) ?>" 
                    class="callToAction Section-fontsDownload text-center">
                   <?php echo $page->downloadButtonLabel()->kirbytext(); ?>
@@ -129,11 +129,11 @@
           
           <li class="Section-fontsItem text-center">
             <div class="Section-fontsItemWrap">
-              <div class="Section-fontsView" style="font-family:'Font2', inherit"><?php echo $fonts[1][fontstring]; ?></div>
-              <h6 class="Section-fontsName"><?php echo $fonts[1][fontname]; ?></h6>
+              <div class="Section-fontsView colorDarkest" style="font-family:'Font2', inherit;font-size:<?php echo $fonts[1][fontsize]; ?>px; line-height:<?php echo $fonts[1][fontlineheight]; ?>px"><?php echo $fonts[1][fontstring]; ?></div>
+              <h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1][fontname]; ?></h6>
               
               <div class="Section-fontsInfos">
-                <div class="Section-fontsDescription textType-subtxt"><?php echo $fonts[1][fontdescription]; ?></div>
+                <div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[1][fontdescription]; ?></div>
                 <a href="<?php if (!empty($fonts[1][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]) ?>" 
                    class="callToAction Section-fontsDownload text-center">
                   <?php echo $page->downloadButtonLabel()->kirbytext(); ?>
@@ -144,11 +144,11 @@
           
           <li class="Section-fontsItem text-center">
             <div class="Section-fontsItemWrap">
-              <div class="Section-fontsView" style="font-family:'Font3', inherit"><?php echo $fonts[2][fontstring]; ?></div>
-              <h6 class="Section-fontsName"><?php echo $fonts[2][fontname]; ?></h6>
+              <div class="Section-fontsView colorDarkest" style="font-family:'Font3', inherit;font-size:<?php echo $fonts[2][fontsize]; ?>px; line-height:<?php echo $fonts[2][fontlineheight]; ?>px"><?php echo $fonts[2][fontstring]; ?></div>
+              <h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2][fontname]; ?></h6>
               
               <div class="Section-fontsInfos">
-                <div class="Section-fontsDescription textType-subtxt"><?php echo $fonts[2][fontdescription]; ?></div>
+                <div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[2][fontdescription]; ?></div>
                 <a href="<?php if (!empty($fonts[2][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]) ?>" 
                    class="callToAction Section-fontsDownload text-center">
                   <?php echo $page->downloadButtonLabel()->kirbytext(); ?>
@@ -165,8 +165,8 @@
 		<section class="Section Section-features">
   		
   		<header class="SectionHeader text-left fitToContent">
-    		<h1 class="textType-title colorLighterGray small-only-text-center"><?php echo $page->section2Title()->kirbytext(); ?></h1>
-        <h3 class="textType-subtitle colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytext(); ?></h3>
+    		<h1 class="textType-title textSize-title-large colorLighterGray small-only-text-center"><?php echo $page->section2Title()->kirbytext(); ?></h1>
+        <h3 class="textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytext(); ?></h3>
   		</header>  		
   		
   		<div class="Section-wrapTxt textType-txt fitToContent">
@@ -178,12 +178,12 @@
       		  foreach($features as $feature) :
     		  ?>
     		  
-      		<li class="Section-featuresItem">
+      		<li class="Section-featuresItem text-center">
         		<div class="Section-featuresPictoWrap">
           		<img src="<?php echo url('content/'.$page->dirname().'/'.$feature[featureimg]); ?>" class="Section-featuresPicto">
         		</div>
-        		<h5 class="Section-featuresTitle"><?php echo $feature[featurename]; ?></h5>
-        		<div class="textType-subtxt colorBrightest">
+        		<h5 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large"><?php echo $feature[featurename]; ?></h5>
+        		<div class="Section-featuresDescription textType-subtxt textSize-txt-small colorBrightest">
           		<?php echo $feature[featuredescription]; ?>
         		</div>
       		</li>
@@ -198,11 +198,11 @@
 		
 		<div class="Section-sepa Section-sepaAfter"></div>
 		
-		<section class="Section Section-newsletter">
+		<section class="Section Section-newsletter hide-for-print">
   		
   		<header class="SectionHeader text-center fitToContent">
-    		<h1 class="textType-title colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
-        <h3 class="textType-subtitle colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
+    		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
+        <h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
   		</header>  		
   		
   		<div class="Section-wrapTxt textType-txt fitToContent">

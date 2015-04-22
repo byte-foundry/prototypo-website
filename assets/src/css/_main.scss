@@ -1,9 +1,62 @@
+.Section-homepage {
+  background:linear-gradient(to bottom right, 
+                             $mainBackgroundColor, 
+                             adjust-hue($mainBackgroundColor, 35deg)); 
+}
+
+.Section-parametricDesignTool {
+  background:linear-gradient(to bottom right, 
+                             $thirdBackgroundColor, 
+                             adjust-hue($thirdBackgroundColor,-15deg));
+}
+
+.Section-features {
+  background:linear-gradient(to bottom right, 
+                             $colorDarkest, 
+                             $colorLightBlack);
+}
+
+.Section-newsletter {
+  background:linear-gradient(to bottom right, 
+                             adjust-hue($mainBackgroundColor, 35deg), 
+                             adjust-hue($mainBackgroundColor,0deg));
+}
+
+.Pricing {
+  background:linear-gradient(to bottom right, 
+                             adjust-hue($secondBackgroundColor, 0deg), 
+                             adjust-hue($secondBackgroundColor, 40deg));
+}
+
+.About {
+  background:linear-gradient(to bottom right, 
+                             $colorDarkest, 
+                             $colorLightBlack);
+}
+
+.Blog {
+  background:linear-gradient(to bottom right, 
+                             adjust-hue(#a2e392, 355deg), 
+                             adjust-hue(#a2e392, 325deg));
+}
+
+.FAQ {
+  background:linear-gradient(to bottom right, 
+                             adjust-hue(#a2e392, 285deg), 
+                             adjust-hue(#a2e392, 315deg));
+}
+
+.Thanks {
+  background:url('img/ourAwesomeBackers.png') repeat-x rgb(20,20,20);
+}
+
 /*
  *  Page: home
  */
  
 .Section {
   position:relative;
+  
   width:100%;
   padding: 65px 0 60px;
 }
@@ -13,14 +66,38 @@
   margin-bottom:60px
 }
 
-.Section-wrapTxt {
+.Section-wrapTxt a {
+  color:$colorBrightest;
 }
 
+.Section-wrapTxt a:hover {
+  color:$colorWhite;
+	text-decoration:underline;
+}
+
+.Section-wrapTxt.colorDarkGray a,
+.Section-wrapTxt.colorLightBlack a,
+.Section-wrapTxt.colorBlack a,
+.Section-wrapTxt.colorDark a,
+.Section-wrapTxt.colorDarkest a {
+  color:$colorDark;
+}
+
+
+.Section-wrapTxt.colorDarkGray a:hover,
+.Section-wrapTxt.colorLightBlack a:hover,
+.Section-wrapTxt.colorBlack a:hover,
+.Section-wrapTxt.colorDark a:hover,
+.Section-wrapTxt.colorDarkest a:hover {
+  color:$colorDarkest;
+	text-decoration:underline;
+}
+
+
 .Section-homepage {
-  background-image:linear-gradient(to bottom right, $mainBackgroundColor, adjust-hue($mainBackgroundColor, 35deg)); /* #00c5d4 */
-  height:100%;
   overflow:hidden;
-  min-height:600px
+  height:100%;
+  min-height:600px;
 }
 
 .Section-backgroundFonts {
@@ -29,42 +106,45 @@
   left:0;
   bottom:0;
   right:0;
+  
   font-size:42px;
-  color:rgba(0,0,0,.03);
-  font-family:'Playfair Display',inherit;
+  font-family:$secondFont,inherit;
   font-style:italic;
   letter-spacing:-5px;
   
+  color:rgba($colorDark,.02);
 }
 
 .Section-homepageWrap {
-  height: 600px;
   position: absolute;
-  top: 50%;
+  
   margin-top: -240px;
+  height: 600px;
+  top: 50%;
   left: 0;
   right: 0;
 }
 
 .Section-homepageGetStartedLine {
   margin:30px 0 20px 0;
-  text-align:center
 }
 
 .Section-homepageGetStartedLineTitle {
   display:inline-block;
+  
+  font-family:$mainFont, inherit;
   font-size:24px;
-  font-family:'PT Sans', inherit;
   font-weight:700
 }
 
 .Section-homepageGetStartedLineSubtitle {
   display:inline-block;
+  
   margin:0 15px;
+  font-family:$mainFont, inherit;
   font-size:22px;
-  font-family:'PT Sans', inherit;
+  font-weight:400;
   font-style:italic;
-  font-weight:400
 }
 
 .Section-homepageGetStartedLineCallToAction {
@@ -88,15 +168,16 @@
   margin:0 auto;
   z-index:1;
   
-  background:white;
+  background:$colorWhite;
   box-shadow:0px 5px 45px rgba(0,0,0,.4);
-  border-radius:3px;
+  border-radius:$global-radius;
 }
 
 .DemoHome:after {
   content:"";
   position:absolute;
   z-index:-1;
+  
   background:linear-gradient(to left, rgba(0,0,0,.08), transparent);
   width:900px;
   height:742px;
@@ -109,25 +190,28 @@
 
 .DemoHome-windowBackground {
   position:absolute;
+  
   top:0;
   left:0;
   right:0;
   bottom:0;
-  background:white;
-  border-radius:3px;
+  background:$colorWhite;
+  border-radius:$global-radius;
 }
 
 .DemoHome-windowTopBar {
-  border-top:solid 30px rgb(230,230,230);
   position:absolute;
+  
   top:0;
   left:0;
   right:0;
-  border-radius:3px 3px 0 0;
+  border-top:solid 30px rgb(230,230,230);
+  border-radius:$global-radius $global-radius 0 0;
 }
 
 .DemoHome-windowLogo {
   position:absolute;
+  
   top:60px;
   left:30px;
   opacity:.2;
@@ -135,20 +219,22 @@
 
 .DemoHome-windowButton {
   position:absolute;
+  display:inline-block;
+  
   top:9px;
   width:12px;
   height:12px;
-  display:inline-block;
   border-radius:50%;
-  background:white
+  background:$colorWhite;
 }
 
-.DemoHome-windowButtonRed {left:12px}
-.DemoHome-windowButtonYellow {left:32px}
-.DemoHome-windowButtonGreen {left:52px}
+.DemoHome-windowButtonRed       { left: 12px }
+.DemoHome-windowButtonYellow    { left: 32px }
+.DemoHome-windowButtonGreen     { left: 52px }
 
 .DemoControls {
   position:absolute;
+  
   top:150px;
   left:30px;
   width:130px;
@@ -157,56 +243,56 @@
 
 .DemoControls-PotentiometerItem {
   position:relative;
+  
   height:15px;
   margin-bottom:12px;
 }
 
 .DemoControls-PotentiometerPicto {
   position:absolute;
+  
   width:12px;
   top:-3px;
   left:0;
-  
 }
 
 .DemoControls-Potentiometer {
   position:absolute;
+  border-radius:10px;
+  cursor:pointer;
+  
   left:25px;
   top:0;
   width:150px;
   height:13px;
-  border-radius:10px;
   background:$potentiometerBackgroundColor;
-  border-radius:10px;
-  cursor:pointer;
 }
 
 .DemoControls-PotentiometerBar {
   position:relative;
+  
   width:60px;
   height:17px;
   margin:-2px 0 0 -2px;
-  
   border-radius:10px;
   background:$potentiometerBarBackgroundColor;
-  border-radius:10px;
 }
 
-.DemoControls-PotentiometerItem:nth-child(1) .DemoControls-PotentiometerBar {width:30px}
-.DemoControls-PotentiometerItem:nth-child(2) .DemoControls-PotentiometerBar {width:80px}
-.DemoControls-PotentiometerItem:nth-child(3) .DemoControls-PotentiometerBar {width:62px}
-.DemoControls-PotentiometerItem:nth-child(4) .DemoControls-PotentiometerBar {width:92px}
+.DemoControls-PotentiometerItem:nth-child(1) .DemoControls-PotentiometerBar { width: 30px }
+.DemoControls-PotentiometerItem:nth-child(2) .DemoControls-PotentiometerBar { width: 80px }
+.DemoControls-PotentiometerItem:nth-child(3) .DemoControls-PotentiometerBar { width: 62px }
+.DemoControls-PotentiometerItem:nth-child(4) .DemoControls-PotentiometerBar { width: 92px }
 
 .DemoControls-PotentiometerBar:after {
   content:"";
   position:absolute;
+  
   right:4px;
   top:4px;
   width:9px;
   height:9px;
   border-radius:10px;
   background:$potentiometerBarHandlerBackgroundColor;
-  border-radius:10px;
 }
 
 
@@ -217,14 +303,12 @@
   z-index:90;
   
   background:$infoboxBackgroundColor;
-  font-family:'PT Sans';
-  font-size:18px;
-  font-weight:bold;
-  font-style:italic;
-  border-radius:6px;
+  border-radius:$global-radius;
   color:$infoboxTextColor;
-  line-height:22px;
-  text-align:center
+  font-size:$infoboxTextSize;
+  line-height:$infoboxLineHeight;
+  
+  @extend .textType-callTo;
 }
 
 .Infobox-DemoHomeInfoboxLeft {
@@ -240,9 +324,10 @@
 .Infobox-DemoHomeInfoboxLeft:after {
   position: absolute;
   content: "";
+  
   right: -9px;
   top: 30px;
-  border-left: 20px solid rgb(244, 230, 123);
+  border-left: 20px solid $infoboxBackgroundColor;
   border-radius: 52px;
   border-top: solid 20px rgba(0, 0, 0, 0);
   border-bottom: solid 20px rgba(0, 0, 0, 0);
@@ -260,23 +345,23 @@
 .Infobox-DemoHomeInfoboxRight:after {
   position: absolute;
   content: "";
+  
   left: -9px;
   top: 30px;
-  border-right: 20px solid rgb(244, 230, 123);
+  border-right: 20px solid $infoboxBackgroundColor;
   border-radius: 52px;
   border-top: solid 20px rgba(0, 0, 0, 0);
   border-bottom: solid 20px rgba(0, 0, 0, 0);
 }
 
 .Section-homepageDiscoverFeaturesLine {
-  text-align:center;
-  font-size:18px;
-  color:white;
-  font-family:'PT sans', inherit;
+  position:relative;
+  
+  z-index:20;
+  color:$colorWhite;
+  font-family:$mainFont, inherit;
   font-style:italic;
   font-weight:400;
-  z-index:20;
-  position:relative;
   margin-top:30px
 }
 
@@ -286,63 +371,13 @@
 
 
 
-.Section-sepa {
-  position:relative;
-  background:white;
-  height:20px;
-  font-size:45px;
-  font-family:'PT Sans', inherit;
-  font-weight:400;
-  font-style:normal;
-  color:$mainBackgroundColor;
-  text-align:center;
-  display:none
-}
 
-.Section-sepaBefore:before {
-  content:"";
-  position:absolute;
-  top:-50px;
-  left:50%;
-  margin-left:-40px;
-  background:url(img/peakTop.svg) no-repeat center bottom;
-  width:80px;
-  height:50px;
-  z-index:2
-}
-
-.Section-sepaAfter:after {
-  content:"";
-  position:absolute;
-  bottom:-50px;
-  left:50%;
-  margin-left:-40px;
-  background:url(img/peakBottom.svg) no-repeat center top;
-  width:80px;
-  height:50px;
-  z-index:2
-}
-
-
-
-
-
-
-
-.Section-parametricDesignTool {
-  background:linear-gradient(to bottom right, $thirdBackgroundColor, adjust-hue($thirdBackgroundColor,-15deg));
-  font-size:45px;
-  font-family:'PT Sans', inherit;
-  font-weight:400;
-  font-style:normal;
-  color:$mainBackgroundColor;
-  text-align:center;
-}
 
 .Section-fonts {
   clear:both;
+  
   margin-top:30px;
-  border-top:solid 1px rgba(255,255,255,.3);
+  border-top:solid 1px $lineBorderColor;
   padding-top:30px;
 }
 
@@ -364,8 +399,8 @@
 }
 
 .Section-fontsItemWrap {
-  background:white;
-  border-radius:3px;
+  background:$colorWhite;
+  border-radius:$global-radius;
   padding:20px 30px 30px 30px !important; /* foundation */
   margin:5px;
   overflow:hidden;
@@ -375,7 +410,7 @@
 .Section-fontsView {
   font-size:100px;
   line-height:120px;
-  color:$colorBlack;
+  height:150px
 }
 
 .Section-fontsInfos {
@@ -385,15 +420,10 @@
 }
 
 .Section-fontsName {
-  font-family:'Playfair Display',inherit;
-  font-style:italic;
-  font-size:22px;
   margin-top:5px;
-  color:$colorDarkest;
 }
 
 .Section-fontsDescription {
-  color:$colorDark;
   border-bottom:solid 1px $colorLightGray;
   padding-bottom:20px;
 }
@@ -408,16 +438,6 @@
 
 
 
-.Section-features {
-  background:linear-gradient(to top left, $colorLightBlack, $colorLightBlack);
-  font-size:45px;
-  font-family:'PT Sans', inherit;
-  font-weight:400;
-  font-style:normal;
-  color:$colorLighterGray;
-  text-align:center;
-}
-
 .Section-featuresItem {
   padding:0 20px 50px 20px !important;
 }
@@ -425,7 +445,7 @@
 .Section-featuresPictoWrap {
   width:80%;
   height:150px;
-  margin:0 0 15px 10%;
+  margin:0 0 25px 0;
   display:inline-block;
   vertical-align:middle
 }
@@ -437,29 +457,20 @@
 }
 
 .Section-featuresTitle {
-  font-size:18px;
-  line-height:22px;
-  font-family:'Playfair Display';
-  font-weight:normal;
-  font-style:italic;
-  color:$colorWhite;
-  margin-bottom:20px;
+  margin-bottom:10px;
 }
 
-.Section-featuresSepaHorizontal {
-  border-top:solid 1px rgba(0,0,0,.15);
-  margin:40px 0;
-  clear:both;
+.Section-featuresDescription {
+  
 }
 
 
 
 
 
-.Section-newsletter {
-  background-image:linear-gradient(to bottom right, #11e5b4, adjust-hue(#a2e392, 35deg)); /* #00c5d4 */
+.Newsletter {
+  letter-spacing:10px
 }
-
 
 .NewsletterInput-submit {
   display:inline-block;
@@ -473,10 +484,6 @@
 
 
 
-.Pricing {
-  background-image:linear-gradient(to bottom right, adjust-hue($secondBackgroundColor, 0deg), adjust-hue($secondBackgroundColor, 40deg)); /* #00c5d4 */
-  
-}
 
 
 .PricingTable {
@@ -505,11 +512,11 @@
 .PricingItem-wrap {
   margin:0 5px;
   padding:35px 25px 0 25px;
-  background:white;
-  border-radius:3px;
+  background:$colorWhite;
+  border-radius:$global-radius;
   box-shadow:0 2px 40px rgba($secondBackgroundColor,.2);
   text-align:center;
-  border-top: solid 3px white;
+  border-top: solid 3px $colorWhite;
   
   
   display: -webkit-flex;
@@ -545,41 +552,29 @@
 }
 
 .PricingItem-title {
-  font-family:'Playfair Display';
-  font-size:42px;
-  line-height:48px;
-  font-style:italic;
   text-transform:lowercase;
   height:60px
 }
 
 .PricingItem-price {
-  font-family:'PT Sans';
-  font-size:12px;
-  line-height:18px;
-  color:$colorDarkGray;
 }
 
 .PricingItem-infos {
   background:$colorLighterGray;
   margin:25px -25px 0;
   padding:30px 25px 125px;
-  font-family:'PT Sans';
-  color:$colorDarkGray;  
   flex:1
 }
 
 .PricingItem-pack {
   font-weight:bold;
-  font-size:16px;
-  line-height:19px
 }
 
 .PricingItem-content {
   margin-top:8px;
   border-top:solid 1px $colorLightGray;
   margin-top:25px;
-  padding-top:25px
+  padding-top:25px;
 }
 
 .PricingItem-getStarted {
@@ -595,9 +590,7 @@
  * Page : About us
  */
  
-.About {
-  background-image:linear-gradient(to bottom right, $colorDarkest, $colorLightBlack); /* #00c5d4 */
-}
+
 
 .Members {
   display: -webkit-flex;
@@ -619,19 +612,23 @@
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
+
   
   @include transition(all 300ms ease)
 }
 
 .MembersItem-wrap {
+
   /*margin:0 5px;*/
+
   padding:0;
-  border-radius:3px;
+  border-radius:$global-radius;
   box-shadow:0 2px 40px rgba($colorBlack,.2);
-  text-align:center;
   overflow:hidden;
+
   display: flex;
   flex-direction: column;
+
 }
 
 .MembersItem-photo {
@@ -643,33 +640,30 @@
 }
 
 .MembersItem-name {
-  font-family:'Playfair Display';
-  font-size:38px;
-  line-height:42px;
-  font-style:italic;
   padding:0
 }
 
 .MembersItem-bloc {
-  background:white;
+  background:$colorWhite;
+
   padding:40px 25px 35px;
 }
 
 .MembersItem-links {
   margin:30px 0 0 0;
-  text-align:center;
+
   padding-top:0;
-  border-top:solid 1px rgba(0,0,0,.1);
+  border-top:solid 1px rgba($lineBorderColor,.1);
   font-size:0;
 }
 
 .MembersItem-linksItem:first-child {
-  border-left:solid 5px white;
+  border-left:solid 5px $colorWhite;
   width:35px;
 }
 
 .MembersItem-linksItem:last-child {
-  border-right:solid 5px white;
+  border-right:solid 5px $colorWhite;
   width:35px;
 }
 
@@ -679,9 +673,8 @@
   width:30px;
   height:30px;
   margin:-15px 0 0 0;
-  background:white;
+  background:$colorWhite;
   border-radius:50%;
-  font-size:14px
 }
 
 .MembersItem-linksItemLink {
@@ -691,7 +684,7 @@
   background-position:center center;
   background-size:16px;
   background-repeat:no-repeat;
-  opacity:.2;
+  opacity:.3;
   
   @include transition(all 300ms ease);
 }
@@ -710,10 +703,9 @@
 
 .MembersItem-infos {
   background:$colorLighterGray;
-  margin:0 0 0;
+  margin:0;
   padding:30px 25px 35px 25px;
-  font-family:'PT Sans';
-  color:$colorDarkGray;  
+
   flex: 1;
 }
 
@@ -723,15 +715,11 @@
 /*
  * Page : Blog
  */
- 
 
-.Blog {
-  background-image:linear-gradient(to top left,  adjust-hue(#a2e392, 325deg), adjust-hue(#a2e392, 355deg)); /* #00c5d4 */
-}
 
 .Article {
-  background:white;
-  border-radius:3px;
+  background:$colorWhite;
+  border-radius:$global-radius;
   margin-bottom:20px;
   box-shadow:0 2px 40px rgba(darken(adjust-hue(#a2e392, 355deg),10%),.5);
   clear:both;
@@ -744,7 +732,7 @@
 
 .Article-header {
   padding:45px 100px 35px 100px;
-  background:url(img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right rgba(220, 220, 220, 0.3);
+  background:url(img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right $blocSecondBackgroundColor;
 }
 
 .Article-tags {
@@ -759,9 +747,8 @@
 
 .Article-tagLink {
   background:$secondBackgroundColor;
-  color:$colorWhite;
   padding:4px 8px;
-  border-radius:3px;
+  border-radius:$global-radius;
   display:block;
   
   @include transition(all 300ms ease);
@@ -775,8 +762,6 @@
 
 .Article-title {
   margin:0;
-  font-size:32px;
-  line-height:37px
 }
 
 .Article-titleLink h1,
@@ -793,17 +778,14 @@
 
 .Article-subtitle {
   margin:5px 0 0 0;
-  font-size:22px;
-  line-height:26px
 }
 
 .Article-infos {
-  color:$colorDark;
-  border-top:solid 1px rgba(0,0,0,.05);
+  border-top:solid 1px $lineBorderColor;
   margin-top:15px;
   padding-top:15px;
-  font-size:14px
 }
+
 
 .Article-infos:after {
   content:"";
@@ -812,12 +794,11 @@
   position:relative
 }
 
+
 .Article-content {
   padding:85px 100px;
   text-align:justify;
   position:relative;
-  font-size:17px;
-  line-height:22px;
   clear:both;
 }
 
@@ -828,7 +809,7 @@
   left:50%;
   margin-left:-15px;
   border:solid 15px transparent;
-  border-bottom:solid 15px white
+  border-bottom:solid 15px $colorWhite
 }
 
 .Article-content img {
@@ -837,39 +818,39 @@
 }
 
 .Article-content h1 {
-  font-family:'Roboto Slab', inherit;
-  font-size: 36px;
-  line-height: 42px;
   text-align: left;
   padding-top: 0;
   margin-top: 15px;
   margin-bottom: 20px;
+  
+  @extend .textType-articleTitle;
+  @extend .textSize-title-medium; 
 }
 
 .Article-content h2 {
-  font-family:'Roboto Slab', inherit;
-  font-size:28px;
-  line-height:33px;
   text-align:left;
-  border-top:solid 1px rgba(0,0,0,.05);
+  border-top:solid 1px $lineBorderColor;
   padding-top:25px;
   margin-top:15px;
-  margin-bottom:20px
+  margin-bottom:20px;
+  
+  @extend .textType-articleTitle;
+  @extend .textSize-title-xsmall; 
 }
 
 .Article-content h3 {
-  font-family:'Roboto Slab', inherit;
-  font-size:22px;
-  line-height:26px;
   text-align:left;
-  margin-top:25px
+  margin-top:25px;
+  
+  @extend .textType-articleTitle;
+  @extend .textSize-txt-xlarge; 
 }
 
 .Article-content a {
   color:$colorDark;
   background:$colorLighterGray;
   padding:3px 7px;
-  border-radius:3px;
+  border-radius:$global-radius;
   
   @include transition(all 300ms ease);
 }
@@ -889,18 +870,16 @@
 }
 
 .Article-leaveComment {
-  background:rgba(0,0,0,.05);
+  background:$blocSecondBackgroundColor;
   padding:20px 100px 50px;
-  color:$colorDarkGray;
   display:block;
-  font-size:16px;
   
   @include transition(all 300ms ease);
 }
 
 .Article-leaveComment:hover {
   background:$colorDarkest;
-  color:white
+  color:$colorWhite;
 }
 
 
@@ -913,11 +892,10 @@
   display:inline-block;
   padding:13px 30px 10px 30px;
   color:$colorWhite;
-  font-size:14px;
   text-transform:uppercase;
   letter-spacing:2px;
   font-weight:bold;
-  background:rgba(0,0,0,.05);
+  background:$blocSecondBackgroundColor;
   
   @include transition(all 300ms ease);
 }
@@ -929,18 +907,20 @@
 .BlogPagination-before .BlogPagination-item {
   padding-top:13px;
   padding-bottom:10px;
-  border-bottom:solid 3px rgba(0,0,0,.03);
+  border-bottom:solid 3px $lineBorderColor;
 }
 
 .BlogPagination-after .BlogPagination-item {
   padding-bottom:13px;
   padding-top:10px;
-  border-top:solid 3px rgba(0,0,0,.03);
+  border-top:solid 3px $lineBorderColor;
 }
 
 .BlogPagination-item:hover {
   color:$colorWhite;
-  background-color:rgba(0,0,0,.15);  
+
+  background-color:rgba($blocSecondBackgroundColor,.2);  
+
 }
 
 .BlogPagination-prev {
@@ -955,8 +935,12 @@
 
 
 .Disqus {
-  background:rgba(0,0,0,.05);
-  padding:50px 100px
+  background:$blocSecondBackgroundColor;
+  padding:50px 100px;
+}
+
+.Disqus a {
+  color:$secondBackgroundColor !important;
 }
 
 
@@ -967,13 +951,10 @@
  */
  
 
-.FAQ {
-  background-image:linear-gradient(to top left,  adjust-hue(#a2e392, 315deg), adjust-hue(#a2e392, 285deg)); /* #00c5d4 */
-}
 
 .Question {
-  background:white;
-  border-radius:3px;
+  background:$colorWhite;
+  border-radius:$global-radius;
   margin-bottom:10px;
   box-shadow:0 2px 40px rgba(darken(adjust-hue(#a2e392, 285deg),10%),.5);
   clear:both;
@@ -984,32 +965,71 @@
   margin-bottom:0;
 }
 
+.Question.focus {
+  box-shadow:0 2px 40px rgba(darken(adjust-hue(#a2e392, 285deg),10%),.9);
+  border:solid 5px $secondBackgroundColor;
+  margin:20px -5px 20px -5px
+}
+
 .Question-header {
   padding:15px 40px 15px 70px;
-  background:url(img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px white;
+  background:url(img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px $colorWhite;
   cursor:pointer;
+  position:relative;
+}
+
+.Question-anchor {
+  position:absolute;
+  top:17px;
+  right:17px;
 }
 
 .Question-title {
   margin:0;
-  font-size:26px;
-  line-height:30px
-}
-
-.Question-titleLink h1,
-.Question-titleLink h3 {
-  color:$colorDarkest;
-  
-  @include transition(all 100ms ease);
-}
-
-.Question-titleLink:hover h1,
-.Question-titleLink:hover h3 {
-  color:$secondBackgroundColor !important;
 }
 
 .Question-content {
   padding:15px 40px 15px 70px;
-  background:rgba(0,0,0,.05);
+  background:$blocSecondBackgroundColor;
   display:none
 }
+
+
+/*
+ * Page : Thanks
+ */
+ 
+.Thanks-content {
+  font-size:0;
+} 
+ 
+.AwesomeBacker {
+  display:inline-block;
+  position:relative;
+}
+
+.AwesomeBacker-avatar {
+  width:35px;
+  height:35px;
+  float:left;
+  margin-right:12px
+}
+
+.AwesomeBacker-name {
+  width: 75%;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 21px;
+  white-space:nowrap
+}
+
+.AwesomeBacker-url {
+  width: 75%;
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 14px;
+}
+
+

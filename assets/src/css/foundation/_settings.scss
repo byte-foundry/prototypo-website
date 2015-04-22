@@ -152,12 +152,12 @@ $global-radius: 3px;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // $small-range: (0em, 40em);
-// $medium-range: (40.0625em, 64em);
-// $large-range: (64.0625em, 90em);
+$medium-range: (40.0625em, 64em);
+$large-range: (64.0625em, 90em);
 // $xlarge-range: (90.0625em, 120em);
 // $xxlarge-range: (120.0625em, 99999999em);
 
-// $screen: "only screen";
+$screen: "only screen";
 
 // $landscape: "#{$screen} and (orientation: landscape)";
 // $portrait: "#{$screen} and (orientation: portrait)";
@@ -167,9 +167,11 @@ $global-radius: 3px;
 
 // $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
 // $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+$medium-down: "#{$screen} and (max-width:#{lower-bound($medium-range)})";
 
 // $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
 // $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+$large-down: "#{$screen} and (max-width:#{lower-bound($large-range)})";
 
 // $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
 // $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
@@ -646,19 +648,19 @@ $global-radius: 3px;
 // $form-label-font-color: scale-color($black, $lightness: 30%);
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
-$input-font-family: $mainFont;
-$input-font-color: $colorDark;
-$input-font-size: rem-calc(24);
-$input-bg-color: $colorWhite;
-$input-focus-bg-color: $colorWhite;
-$input-border-color: $colorWhite;
-$input-focus-border-color: $callToActionBackgroundColor;
-$input-border-style: 'solid';
-$input-border-width: 0 0 3px 0;
-$input-border-radius: $global-radius;
+// $input-font-family: $mainFont;
+// $input-font-color: $colorDark;
+// $input-font-size: rem-calc(24);
+// $input-bg-color: $colorWhite;
+// $input-focus-bg-color: $colorWhite;
+// $input-border-color: $colorWhite;
+// $input-focus-border-color: $callToActionBackgroundColor;
+// $input-border-style: 'solid';
+// $input-border-width: 0 0 3px 0;
+// $input-border-radius: $global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
-$input-box-shadow: none;
+// $input-box-shadow: none;
 // $input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.

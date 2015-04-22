@@ -51,18 +51,24 @@ Fonts:
     The perfect sans serif, now with
     infinite variations.
   fontstring: Az
+  fontsize: 100
+  fontlineheight: 120
 - 
   fontfile: comic.ttf
   fontname: Comic Sans
   fontdescription: "Yes, you can. But you shouldn't."
   fontstring: Xy
+  fontsize: 100
+  fontlineheight: 120
 - 
+  fontfile:
   fontname: Helvetica
   fontdescription: >
     The beautiful font, rebuilt with
     Prototypo
-  fontslug: helvetica
   fontstring: Abc
+  fontsize: 100
+  fontlineheight: 150
 
 ----
 

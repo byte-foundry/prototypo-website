@@ -42,11 +42,14 @@
     <nav class="Nav" role="navigation">
     
       <a href="<?php echo url('home'); ?>" class="Nav-logo">
-        <span class="Nav-logoPicto"></span>
-        <span class="Nav-logoInner">Prototypo</span>
+        <span class="Nav-logoPicto keep-styles-for-print"></span>
+        <span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
       </a>
       
-      <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">Create your font now!</a>
+      <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
+        		<span class="show-for-medium-up">Create your font now!</span>
+        		<span class="show-for-small-only text-center">Get started!</span>
+      </a>
     
       <?php snippet('menu') ?>     
     			

@@ -112,6 +112,14 @@ fields:
         label: Characters to show
         placeholder: Characters to show
         default: Az
+      fontsize:
+        type: number
+        placeholder: Font size
+        default: 100px
+      fontlineheight:
+        type: number
+        placeholder: Line height
+        default: 120px
         
   downloadButtonLabel:
     type: text

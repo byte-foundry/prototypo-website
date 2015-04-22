@@ -413,6 +413,7 @@ $visibility-breakpoint-queries:
       */
       .print-only { display: none !important; }
       @media print {
+        
         * {
           background: transparent !important;
           box-shadow: none !important;

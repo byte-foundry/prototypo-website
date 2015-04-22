@@ -2,20 +2,60 @@
  *  SASS variables & functions
  */
  
-$mainFont: 'PT Sans';
-$secondFont: 'Playfair Display';
+$mainFont:            'PT Sans';
+$secondFont:          'Playfair Display';
+$thirdFont:           'Roboto Slab';
  
-$colorWhite:                    white;
-$colorBrightest:                rgba(255,255,255,.8);
-$colorBright:                   rgba(255,255,255,.6);
-$colorLighterGray:              rgb(240,240,240);
-$colorLightGray:                rgb(220,220,220);
-$colorGray:                     rgb(200,200,200);
-$colorDarkGray:                 rgb(120,120,120);
-$colorLightBlack:               rgb(60,60,59);
-$colorBlack:                    rgb(20,20,20);
-$colorDark:                     rgba(0,0,0,.6);
-$colorDarkest:                  rgba(0,0,0,.8);
+$colorWhite:          white;
+$colorBrightest:      rgba($colorWhite, .8);
+$colorBright:         rgba($colorWhite, .6);
+$colorLighterGray:    rgb(240,240,240);
+$colorLightGray:      rgb(220,220,220);
+$colorGray:           rgb(200,200,200);
+$colorDarkGray:       rgb(120,120,120);
+$colorLightBlack:     rgb(60,60,59);
+$colorBlack:          rgb(20,20,20);
+$colorDark:           rgba(0,0,0,.6);
+$colorDarkest:        rgba(0,0,0,.8);
+
+$mainBackgroundColor:           #49e4a9;
+$mainTextColor:                 $colorWhite;
+$secondBackgroundColor:         rgb(255, 114, 94);
+$secondTextColor:               $colorWhite;
+$thirdBackgroundColor:          #fbe173;
+$thirdTextColor:                $colorWhite;
+
+
+
+$blocMainBackgroundColor:           $colorWhite;
+$blocSecondBackgroundColor:         rgba(0,0,0,.05);
+
+$lineBorderColor:                   rgba(0,0,0,.03);
+
+$callToActionTextSize:  17px;
+$callToActionLineHeight:  18px;
+$callToActionTextColor:  $mainTextColor;
+$callToActionBackgroundColor:  $secondBackgroundColor;
+$callToActionTextColor-hover:  $mainTextColor;
+$callToActionBackgroundColor-hover:  darken($secondBackgroundColor,5%);
+
+$callToActionTextColor-disabled:  $colorDark;
+$callToActionBackgroundColor-disabled:  $colorLightGray;
+$callToActionTextColor-hover-disabled:  $colorDarkest;
+$callToActionBackgroundColor-hover-disabled:  $colorGray;
+
+$infoboxTextColor:              #5b5322;
+$infoboxBackgroundColor:        rgb(244, 230, 123);
+$infoboxTextSize:               18px;
+$infoboxLineHeight:             22px;
+
+$potentiometerBackgroundColor:              $colorLightGray;
+$potentiometerBarBackgroundColor:           $mainBackgroundColor;
+$potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
+
+
+
+
 
 .colorWhite           {color:$colorWhite}
 .colorBrightest       {color:$colorBrightest}
@@ -29,38 +69,13 @@ $colorDarkest:                  rgba(0,0,0,.8);
 .colorDark            {color:$colorDark}
 .colorDarkest         {color:$colorDarkest}
 
-$mainBackgroundColor:           #49e4a9;
-$mainTextColor:                 white;
-
 .colorMainBackgroundColor       {color:$mainBackgroundColor}
 .colorMainTextColor             {color:$mainTextColor}
-
-$secondBackgroundColor:         rgb(255, 114, 94);
-$secondTextColor:               white;
 
 .colorSecondBackgroundColor       {color:$secondBackgroundColor}
 .colorSecondTextColor             {color:$secondTextColor}
 
-
-$thirdBackgroundColor:          #fbe173;
-$thirdTextColor:                white;
-
-$callToActionTextColor:               $mainTextColor;
-$callToActionBackgroundColor:         $secondBackgroundColor;
-$callToActionTextColor-hover:         $mainTextColor;
-$callToActionBackgroundColor-hover:   darken($secondBackgroundColor,20%);
-
-$callToActionTextColor-disabled:               $colorDark;
-$callToActionBackgroundColor-disabled:         $colorLightGray;
-$callToActionTextColor-hover-disabled:         $colorDarkest;
-$callToActionBackgroundColor-hover-disabled:   $colorGray;
-
-$infoboxTextColor:              #5b5322;
-$infoboxBackgroundColor:        rgb(244, 230, 123);
-
-$potentiometerBackgroundColor:              $colorLightGray;
-$potentiometerBarBackgroundColor:           $mainBackgroundColor;
-$potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
+.lineBorderColor                    {color:$lineBorderColor}
 
 
 @function prefix($property, $prefixes: (webkit moz o ms)) {
@@ -120,7 +135,6 @@ $potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
       $browser: ''; @content;
   }
 } $browser: null;
-
 
 @mixin animation($animate...) {
   $max: length($animate);

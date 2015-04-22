@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: $mainFont, Helvetica, Arial, sans-serif;
 	color:#444;
 	padding-top:65px;
   background:$colorBlack; /* equal to footer background */
@@ -67,18 +67,6 @@ a {
 a:focus,
 a:hover { color:inherit; }
 
-.Link {
-}
-
-.Section-wrapTxt a {
-  color:$colorWhite;
-}
-
-
-.Section-wrapTxt a:hover {
-	text-decoration:underline
-}
-
 a:focus,
 a:hover,
 a:active {
@@ -93,50 +81,112 @@ input:focus {
 	outline:0;
 }
 
-.textType-title {
-  font-family:'PT Sans';
-  font-weight:bold;
+
+
+
+.textSize-title-large {
   font-size:44px;
   line-height:50px;
 }
 
-.textType-subtitle {
-  font-family:'Playfair Display';
-  font-weight:normal;
-  font-style:italic;
-  font-size:32px;
-  line-height:42px
+.textSize-title-medium {
+  font-size:38px;
+  line-height:45px
 }
 
-.textType-txt {
-  font-family:'PT Sans';
+.textSize-title-small {
+  font-size:32px;
+  line-height:39px
+}
+
+.textSize-title-xsmall {
+  font-size:28px;
+  line-height:34px
+}
+
+
+
+
+
+.textSize-txt-xlarge {
+  font-size:22px;
+  line-height:27px;
+}
+
+.textSize-txt-large {
   font-size:18px;
   line-height:24px;
 }
 
-.textType-subtxt {
-  font-family:'PT Sans';
+.textSize-txt-medium {
+  font-size:16px;
+  line-height:20px;
+}
+
+.textSize-txt-small {
   font-size:14px;
   line-height:18px;
 }
 
+.textSize-txt-xsmall {
+  font-size:12px;
+  line-height:14px;
+}
+
+
+
+
+.textType-articleTitle {
+  font-family:$thirdFont, inherit;
+  font-weight:normal;
+}
+
+.textType-title {
+  font-family:$mainFont, inherit;
+  font-weight:bold;
+}
+
+.textType-subtitle {
+  font-family:$secondFont, inherit;
+  font-weight:normal;
+  font-style:italic;
+}
+
+.textType-txt {
+  font-family:$mainFont, inherit;
+}
+
+.textType-subtxt {
+  font-family:$mainFont, inherit;
+}
+
+.textType-callTo {
+  font-family: $mainFont, inherit;
+  font-weight: bold;
+  font-style: italic;
+}
+
 
 input[type="text"] {
-  border-radius:3px;
-  background:white;
+  border-radius:$global-radius;
+  background:$colorWhite;
   outline:none;
   color:$colorDarkGray;
   font-size:16px;
-  font-family:'PT Sans';
+  font-family:$mainFont, inherit;
   padding:10px 18px 7px 18px;
   display:inline-block;
   border:none;
-  border-bottom:solid 3px white;
+  border-bottom:solid 3px $colorWhite;
   height:auto;
   margin:0 0 10px 0;
   width:auto;
 }
 
+
+input[type="text"]:focus {
+  border-bottom-color:$secondBackgroundColor;
+}
 
 
 .fullWidth {
@@ -157,23 +207,23 @@ input[type="text"] {
 .fitToContent {
   width:800px;
   margin-left:auto;
-  margin-right:auto
+  margin-right:auto;
 }
 
 .callToAction {
   display: inline-block;
   padding: 16px 22px;
+  text-decoration:none !important;
   
-  font-family: 'PT Sans', inherit;
-  font-weight: bold;
-  font-style: italic;
-  color: $callToActionTextColor;
-  font-size: 17px;
-  border-radius: 3px !important; /* foundation */
+  font-size:$callToActionTextSize;
+  line-height:$callToActionLineHeight;
+  color: $callToActionTextColor !important;
+  border-radius: $global-radius !important; /* foundation */
   background: $callToActionBackgroundColor;
   cursor: pointer;
-  color:white;
     
+  @extend .hide-for-print;
+  @extend .textType-callTo;
   @include transition(all 200ms ease);
 }
 
@@ -186,11 +236,11 @@ input[type="text"] {
 
 .callToAction.disabled {
   background:$callToActionBackgroundColor-disabled;
-  color:$callToActionTextColor-disabled;
+  color:$callToActionTextColor-disabled !important;
 }
 
 .callToAction.disabled:hover {
-  color:$callToActionTextColor-hover-disabled;
+  color:$callToActionTextColor-hover-disabled !important;
   background:$callToActionBackgroundColor-hover-disabled;
   
   @include transform(scale(1,1));
@@ -231,7 +281,7 @@ input[type="text"] {
   left: 18px;
   right: 18px;
   height: 5px;
-  background: white;
+  background: $colorWhite;
 }
 
 .ToggleSwitch-inner::before,
@@ -241,7 +291,7 @@ input[type="text"] {
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: white;
+  background-color: $colorWhite;
   content: "";
 }
 
@@ -324,7 +374,7 @@ input[type="text"] {
 	height:65px;
 	z-index:100;
 	
-	background:white;
+	background:$colorWhite;
 	box-shadow:0 2px 0px rgba(0, 0, 0, 0.05);
 	
 	@include transition(all 300ms ease)
@@ -391,7 +441,7 @@ input[type="text"] {
 
 .Nav-layoutItemLoginLinkInner {
   padding: 8px 20px;
-  border-radius: 3px;
+  border-radius: $global-radius;
   border: solid 1px $colorLighterGray;
     
   @include transition(all 300ms ease);
@@ -428,11 +478,12 @@ input[type="text"] {
   color: $colorBlack;
 }
 
-.Nav-callToAction  {
+.Nav-callToAction {
   vertical-align: top;
-  margin-top: 8px;
-  margin-right:16px;
-  float:right
+  margin-top: 15px;
+  margin-right: 16px;
+  float: right;
+  padding: 8px 22px;
 }
 
 .Nav-hamburgerMenuHandler {  
@@ -468,33 +519,30 @@ input[type="text"] {
   margin:0 auto;
 }
 
-.Footer-copyright {
-  font-family:'PT Sans';
-  font-weight:400;
-  text-align:center;
-  font-size:16px;
-  line-height:20px;
-  color:$colorLightBlack;
-}
-
 .Footer-copyright a {
   color:$colorDarkGray;
+    
+  @include transition(all 300ms ease);
+}
+
+.Footer-copyright a:hover {
+  color:$colorGray;
 }
 
 
 
 ::selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:$secondBackgroundColor;
+	color:$secondTextColor;
 	text-shadow:none;
 }
 ::-webkit-selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:$secondBackgroundColor;
+	color:$secondTextColor;
 	text-shadow:none;
 }
 ::-moz-selection {
-	background:#04A4CC;
-	color:#FFF;
+	background:$secondBackgroundColor;
+	color:$secondTextColor;
 	text-shadow:none;
 }

@@ -1,4 +1,4 @@
-<ul class="Nav-layout">
+<ul class="Nav-layout hide-for-print">
   <?php foreach($pages->visible() as $p): ?>
   <li class="Nav-layoutItem">
     <a class="Nav-layoutItemLink<?php e($p->isOpen(), ' active') ?>" href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
