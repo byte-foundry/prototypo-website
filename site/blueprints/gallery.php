@@ -12,41 +12,41 @@ fields:
         .structure-entry {width:33%;display:inline-block;vertical-align:top}
         .modal-content .field-grid-item { margin-bottom:5px; }
       </style>
-    
+
   title:
     label: Page name
     type:  text
     placeholder: Pricing
     default: Pricing
 
-    
-    
-    
+
+
+
   line-a:
     type:line
-    
+
   section1Info:
     type: info
     text: >
       **Section : About us**
-      
+
       **Content** : Three pricing packs.
-    
+
   section1Title:
     type: text
     placeholder: Title of the section
     default: About us
-    
+
   section1Subtitle:
     type: text
     placeholder: Subtitle of the section
     default: Everything you need to know about the Prototypo team
-    
+
   section1Txt:
     type: textarea
     placeholder: Text content of the section
-    
-    
+
+
   members:
     label: Members
     type: structure
@@ -84,9 +84,8 @@ fields:
       memberphoto:
         type:select
         options: files
-        
-  
+
+
   section1TxtAfter:
     type: textarea
     placeholder: Text content after the members list
-    

@@ -18,20 +18,20 @@ fields:
     type:  text
     placeholder: Page name
     default: FAQ
-    
+
   section1Title:
     type: text
     placeholder: Title of the section
     default: Frequently Asked Questions
-    
+
   section1Subtitle:
     type: text
     placeholder: Subtitle of the section
-    
+
   section1Txt:
     type: textarea
     placeholder: Text content of the section
-    
+
   section1TxtAfter:
     type: textarea
     placeholder: Text content after the main content
