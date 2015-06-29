@@ -1,4 +1,6 @@
 language: php
+php:
+  - 5.4
 deploy:
   provider: openshift
   user: francois.poizat@gmail.com
