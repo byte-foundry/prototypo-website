@@ -47,43 +47,48 @@ fields:
     placeholder: Text content of the section
 
 
-  members:
-    label: Members
+  fonts:
+    label: Fonts to display
     type: structure
     entry: >
-      <strong>{{membername}}</strong><br/>
-      {{memberdescription}}
+      <strong>{{fontname}}</strong><br/>
+      {{fontdescription}}
     fields:
-      membername:
-        type: text
-        placeholder: Member name
-      memberdescription:
-        type: textarea
-        placeholder: Member description
-      memberquery:
-        type: text
-        placeholder: Member favorite query
-      memberfacebook:
-        type: text
-        placeholder: Member Facebook
-      membergithub:
-        type: text
-        placeholder: Member Github
-      membertwitter:
-        type: text
-        placeholder: Member Twitter
-      memberwebsite:
-        type: text
-        placeholder: Member website
-      membermail:
-        type: text
-        placeholder: Member mail
-      membervimeo:
-        type: text
-        placeholder: Member Vimeo
-      memberphoto:
-        type:select
+      fontfile:
+        type: select
+        label: Font file
         options: files
+      fontname:
+        type: text
+        label: Font name
+        placeholder: Font name
+      fontdescription:
+        type: textarea
+        label: Font description
+        placeholder: Font description
+      fontstring:
+        type: text
+        label: Characters to show
+        placeholder: Characters to show
+        default: Az
+      fontnumbervariants:
+        type: number
+        placeholder: Number of variants
+        default: 1
+      fontsize:
+        type: number
+        placeholder: Font size
+        default: 100px
+      fontlineheight:
+        type: number
+        placeholder: Line height
+        default: 120px
+        
+  downloadButtonLabel:
+    type: text
+    label: Download button label
+    placeholder: eg. Download this font
+    default: Download this font
 
 
   section1TxtAfter:

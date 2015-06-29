@@ -18,8 +18,28 @@
     		
     		<?php 
       		$packs = yaml($page->packs()); 
-      		foreach($packs as $pack) :
+      		foreach($packs as $id => $pack) :
       		  $state = ($pack[packstate] == 'notavailable') ? 'disabled' : '';
+      		  
+      		  if ($id == 0) :
+        ?>
+      	
+        <li class="PricingItemFree">
+          <div class="PricingItemFree-wrap <?php echo $state; ?>">
+            
+            <div class="PricingItemFree-wrapIn">
+              <div class="PricingItemFree-pack textType-txt text-center textSize-txt-large colorWhite"><?php echo nl2br($pack[packservices]); ?></div>
+            </div>
+              
+            <div class="PricingItemFree-getStarted callToAction <?php echo $state; ?>"><?php echo $pack[packbuttonlabel]; ?></div>
+            
+            <div class="clear"></div>
+            
+          </div>
+        </li>
+        
+      	<?php	  
+      		  else :
     		?>
     		
         <li class="PricingItem">
@@ -38,6 +58,7 @@
         </li>
         
         <?php
+            endif;
           endforeach;
         ?>
     

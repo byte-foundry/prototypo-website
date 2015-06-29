@@ -171,6 +171,48 @@ fields:
         label: Feature description
       
     
+  line-e:
+    type: line
+    
+  section4Info:
+    type: info
+    text: >
+      **Section : They talk about us**
+      
+      **Content** : A list of media
+    
+  section4Title:
+    type: text
+    placeholder: Title of the section
+    default: They talk about us
+    
+  section4Subtitle:
+    type: text
+    placeholder: Subtitle of the section
+    default: 
+    
+    
+  theytalkaboutus:
+    label: They talk about us
+    type: structure
+    entry: >
+      <strong>{{ttauname}}</strong><br/>
+      {{ttauurl}}
+    fields:
+      ttauimg:
+        type: select
+        label: Logo file
+        options: files
+      ttauname:
+        type: text
+        label: Organization name
+        placeholder: Organization name
+      ttauurl:
+        type: text
+        label: Link to
+        placeholder: http://
+    
+    
     
     
   line-d:

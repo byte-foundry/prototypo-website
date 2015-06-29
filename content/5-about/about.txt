@@ -34,17 +34,6 @@ Members:
   membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=lrbabe@gmail.com&su=Hi%20LRB!'
   memberphoto: lrb-300x197.jpg
 - 
-  membername: VS
-  memberdescription: 'VS is a long-time friend of YM and has extensive experience in managing products and getting them into the hand of users. Moreover, he’s the bravest of all humans in the team: YM and LRB also experimented the wet climate of UK, but VS endured it and still lives in London. We believe this makes him really fit for his position.'
-  memberquery: >
-    https://www.google.co.uk/search?q=chopsticks
-  memberfacebook:
-  membergithub: https://github.com/anouvong
-  membertwitter:
-  memberwebsite: http://blog.prototypo.io/about/
-  membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=vs@prototypo.io&su=Hi%20VS!'
-  memberphoto: batman1-300x204.jpg
-- 
   membername: MJ
   memberdescription: "MJ is my name, and I've been kind enough to accept the role of author on this blog and community manager for Prototypo. You have to excuse my English because I'm just a cat, and keyboards aren't really meant for paws. When I'm not tweeting, I enjoy chasing mouse cursors, chewing headphone cables, making a mess in YM's houseplants, causing LRB to sneeze, and sleeping on people's lap without their consent."
   memberquery: 'https://www.google.fr/search?q=lizard+sushi&tbm=isch'
@@ -59,3 +48,15 @@ Members:
 ----
 
 Section1txt: Prototypo is a user-friendly parameter-based font generator being built by a team of three fiery font and code lovers. You can learn more about the project on its (link: http://prototypo.io/ text: home page).
+
+----
+
+Section1txtafter: 
+
+----
+
+Backerstitle: …and we're 1 670 more in the team!
+
+----
+
+Backerssubtitle: Check our awesome backers!

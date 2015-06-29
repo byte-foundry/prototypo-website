@@ -6,12 +6,21 @@ Section1title: Your Prototypo is here
 
 ----
 
-Section1subtitle: 3 packs that fit your needs
+Section1subtitle: 4 packs that fit your needs
 
 ----
 
 Packs: 
 
+- 
+  packname: free
+  packprice:
+  packservices: >
+    Get started with Prototypo with basic
+    features
+  packdescription:
+  packstate: available
+  packbuttonlabel: Try Prototypo for free
 - 
   packname: pro
   packprice: $20/month
@@ -32,7 +41,7 @@ Packs:
   packstate: notavailable
   packbuttonlabel: Available soon
 - 
-  packname: agency+
+  packname: enterprise
   packprice: From $80/month
   packservices: |
     5+ users

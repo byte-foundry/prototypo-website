@@ -72,6 +72,17 @@
   }
   
   .Nav-callToActionCreateYourFont {}
+  
+  
+  
+  .PricingItemFree-wrapIn {
+    float:none
+  }
+    
+  .PricingItemFree-getStarted {
+    float:none;
+    margin-top:10px
+  }
 
 }
 
@@ -253,13 +264,7 @@
   
   .Section-featuresPictoWrap {
     margin-left:0;  
-  }
-  
-  
-  
-  
-  
-  
+  } 
   
   
   
@@ -356,6 +361,8 @@
   .DemoHome:after {
     display:none
   }
+  
+
 }
 
 
@@ -385,6 +392,10 @@
   .Question-header,
   .Question-content {
     padding-left:20px
+  }
+  
+  .Footer-Nav-layoutItem {
+    display:block;
   }
 }
 

@@ -531,6 +531,81 @@ input[type="text"]:focus {
 
 
 
+
+.Footer-social {
+  text-align:center;
+}
+
+.Footer-socialItem {
+  display:inline-block;
+  background-position:center center;
+  background-size:20px auto;
+  background-repeat:no-repeat;
+  height:30px;
+  width:30px;
+  opacity:.3
+}
+
+.Footer-socialItem-Twitter {
+  background-image:url(img/pictos/pictoSocialTwitter.svg)
+}
+
+.Footer-socialItem-Facebook {
+  background-image:url(img/pictos/pictoSocialFacebook.svg)
+}
+
+
+
+.Footer-Nav-layout {
+  display: inline-block;
+  vertical-align:top;
+  font-size: 0;
+  margin:0 0 10px 0;
+}
+
+.Footer-Nav-layoutItemLink {
+  display: block;
+  height: 45px;
+  padding: 14px 15px 16px 15px;
+  
+  font-size: 14px;
+  line-height:17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $colorDarkGray;
+    
+  @include transition(all 300ms ease);
+}
+
+.Footer-Nav-layoutItem {
+  display:inline-block;
+  vertical-align:middle;
+}
+
+.Footer-Nav-layoutItemLink:hover,
+.Footer-Nav-layoutItemLink.active {
+  color: $colorBlack;
+  background:$colorLighterGray;
+}
+
+.Footer-Nav-layoutItemLoginLinkInner {
+  padding: 8px 20px;
+  border-radius: $global-radius;
+  border: solid 1px $colorLighterGray;
+    
+  @include transition(all 300ms ease);
+}
+
+.Footer-Nav-layoutItemLoginLink:hover {
+  background:$colorLighterGray;
+}
+
+.Footer-Nav-layoutItemLoginLink:hover .Footer-Nav-layoutItemLoginLinkInner {
+  background:$colorLighterGray;
+}
+
+
+
 ::selection {
 	background:$secondBackgroundColor;
 	color:$secondTextColor;

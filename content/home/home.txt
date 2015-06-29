@@ -143,3 +143,46 @@ Newslettermailplaceholder: Your mail
 ----
 
 Newslettersubmitlabel: Keep me tuned
+
+----
+
+Section4title: They talk about us!
+
+----
+
+Section4subtitle: 
+
+----
+
+Theytalkaboutus: 
+
+- 
+  ttauimg: gray-framasoft.png
+  ttauname: Framasoft
+  ttauurl: >
+    http://framablog.org/2014/04/22/prototypo-vos-polices-sur-mesure/
+- 
+  ttauimg: gray-creanum.png
+  ttauname: Creanum
+  ttauurl: >
+    http://www.creanum.fr/news/toutes-les-news/id/1829/prototypo-io-une-application-web-pour-dessiner-des-polices.aspx
+- 
+  ttauimg: gray-mashable.png
+  ttauname: Mashable
+  ttauurl: >
+    http://mashable.com/2014/05/04/prototypo-fonts/
+- 
+  ttauimg: gray-linuxfr.png
+  ttauname: LinuxFR
+  ttauurl: >
+    http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
+- 
+  ttauimg: gray-creapills.png
+  ttauname: Creapills
+  ttauurl: >
+    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
+- 
+  ttauimg: gray-mouv.png
+  ttauname: "Mouv'"
+  ttauurl: >
+    http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo

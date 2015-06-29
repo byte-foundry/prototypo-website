@@ -6,18 +6,11 @@ password: >
   $2a$10$monrLEQiaT7b6n1CSEbi/e5VvUkLD6gd7LWuXL3OzTFq6rMnNKBkW
 language: en
 role: admin
-token: 48232ba0b9ec9b4a3942ff0cc5ddc8f361fcefa3
+token: c6ce42c76102534e041d51d056cff989cde47ac8
 history:
-0:
-  - gallery
-  - thanks
-  - null
+  - about
   - home
-  - faq/i-can-t-export-my-custom-font
-1:
-  - blog/initial-article
-  - error
-  - blog/article
-  - blog/second-article
-  - blog
-2: '>>>>>>> 8a01d81a3cdf4ac5fd8c45b35e6a31394b6b05cd'
+  - null
+  - faq
+  - >
+    faq/i-can-t-open-svg-fonts-with-illustrator

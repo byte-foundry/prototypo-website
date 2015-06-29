@@ -116,6 +116,15 @@
   		</div>
       
     </div>
+    
+  		<a class="Members-thankstobackers textType-txt marginTop30 colorBrightest text-center" 
+    		 style="background-image:url(<?php echo url('assets/img/ourAwesomeBackers.png'); ?>)"
+         href="<?php echo $site->find('thanks')->url() ?>">
+    		<h1 class="textType-title textSize-title-small colorWhite"><?php echo $page->backersTitle()->kirbytext(); ?></h1>
+        <h3 class="textType-subtitle textSize-txt-xlarge colorBright"><?php echo $page->backersSubtitle()->kirbytext(); ?></h3>
+  		</a>
+      
+
 
   </main>
 

@@ -85,6 +85,14 @@ fields:
         type:select
         options: files
         
+  backersTitle:
+    type: text
+    placeholder: Title of the backers' link
+    default: …and we're 1 670 more in the team! 
+    
+  backersSubtitle:
+    type: text
+    placeholder: Subtitle of the backers' link
   
   section1TxtAfter:
     type: textarea

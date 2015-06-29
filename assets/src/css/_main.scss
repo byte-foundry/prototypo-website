@@ -16,6 +16,12 @@
                              $colorLightBlack);
 }
 
+.Section-theytalkaboutus {
+  background:linear-gradient(to bottom right, 
+                             $colorBrightest, 
+                             $colorWhite);
+}
+
 .Section-newsletter {
   background:linear-gradient(to bottom right, 
                              adjust-hue($mainBackgroundColor, 35deg), 
@@ -48,6 +54,12 @@
 
 .Thanks {
   background:url('img/ourAwesomeBackers.png') repeat-x rgb(20,20,20);
+}
+
+.Gallery {
+  background:linear-gradient(to bottom right, 
+                             adjust-hue(#eee, 285deg), 
+                             adjust-hue($colorLighterGray, 315deg));
 }
 
 /*
@@ -468,6 +480,48 @@
 
 
 
+
+
+.Section-theytalkaboutusItem {
+  padding:0 20px 5px 20px !important;
+  height:100px !important;
+}
+
+.Section-theytalkaboutusPictoWrap {
+  
+  height: 100px;      /* equals max image height */
+  width: 80%;
+  white-space: nowrap;
+  
+  text-align: center; 
+  margin: 0 auto;
+}
+
+.Section-theytalkaboutusHelper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.Section-theytalkaboutusPicto {
+  vertical-align: middle;
+    max-height: 100px;
+    max-width: 100%;
+  
+  -webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: gray;
+filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+
+.Section-theytalkaboutusTitle {
+  margin-bottom:10px;
+}
+
+
+
+
+
 .Newsletter {
   letter-spacing:10px
 }
@@ -530,21 +584,21 @@
   position: relative;
 }
 
-.PricingItem:first-child {
+.PricingItem:nth-child(2) {
   
   z-index:10;
 }
 
-.PricingItem:first-child .PricingItem-wrap {
+.PricingItem:nth-child(2) .PricingItem-wrap {
   box-shadow: 0 2px 80px rgb(255, 94, 94);
   border: solid 3px rgb(255, 114, 94);
 }
 
-.PricingItem:first-child:hover {
+.PricingItem:nth-child(2):hover {
   @include transform(scale(1.1,1.1));
 }
 
-.PricingItem:first-child:hover .PricingItem-wrap {
+.PricingItem:nth-child(2):hover .PricingItem-wrap {
 }
 
 .PricingItem-wrap.disabled * {
@@ -582,6 +636,44 @@
   bottom: 25px;
   left: 25px;
   right: 25px;
+}
+
+
+
+.PricingItemFree {
+  z-index:9;
+  position:relative;
+  display: block !important;
+  width:98.7% !important;
+  
+  @include transition(all 300ms ease)
+}
+
+.PricingItemFree-wrap {
+  margin:0 5px;
+  padding:15px 15px 15px 30px;
+  border-radius:$global-radius;
+  box-shadow:0 2px 40px rgba($secondBackgroundColor,.2);
+  text-align:center;
+  border: solid 2px $colorWhite;
+  width: 100%;
+  position: relative;
+}
+
+.PricingItemFree-wrapIn {
+  margin:0;
+  float:left
+}
+
+.PricingItemFree-pack {
+  margin:13px 0 0 0
+}
+
+.PricingItemFree-title {
+}
+
+.PricingItemFree-getStarted {
+  float:right
 }
 
 
@@ -707,6 +799,15 @@
   padding:30px 25px 35px 25px;
 
   flex: 1;
+}
+
+.Members-thankstobackers {
+  border-radius:2px;
+  padding:80px 25px;
+  margin-bottom:-90px;
+  display:block;
+  background-size:cover;
+  background-color:rgb(25,25,25);
 }
 
 
@@ -1032,4 +1133,77 @@
   height: 14px;
 }
 
+
+/*
+ * Page : Gallery
+ */
+
+.Fonts {
+  clear:both;
+  
+  margin-top:30px;
+}
+
+.FontsItem {
+  position:relative;
+  padding:0 !important;
+}
+
+/*
+.FontsItem:after {
+  content:"";
+  position:absolute;
+  top:-10px;
+  right:-5px;
+  width:70px;
+  height:70px;
+  background:url(img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  box-shadow:0 2px 40px rgba(adjust-hue($mainBackgroundColor, 35deg),.4);
+  border-radius:50%;
+  z-index:10
+}
+*/
+
+.FontsItemWrap {
+  background:$colorWhite;
+  padding:20px 30px 30px 30px !important; /* foundation */
+  margin:0;
+  overflow:hidden;
+  outline:solid 1px $colorLighterGray
+}
+
+.FontsView {
+  font-size:100px;
+  line-height:120px;
+  height:130px;
+}
+
+.FontsInfos {
+  margin:30px -30px -30px -30px;
+  background:$colorLighterGray;
+  padding:30px;
+}
+
+.FontsName {
+  margin-top:5px;
+  border-top: solid 1px rgb(240, 240, 240);
+  padding-top: 15px;
+}
+
+.FontsDescription {
+  border-bottom:solid 1px $colorLightGray;
+  padding-bottom:20px;
+}
+
+.FontsNumberVariants {
+  color:$colorGray;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:bold;
+}
+
+.FontsDownload {
+  margin-top:20px
+}
 

@@ -79,7 +79,28 @@
       
 		</section>
 		
+		
 		<div class="Section-sepa Section-sepaBefore"></div>
+		
+		<section class="Section Section-newsletter hide-for-print">
+  		
+  		<header class="SectionHeader text-center fitToContent">
+    		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
+        <h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
+  		</header>  		
+  		
+  		<div class="Section-wrapTxt textType-txt fitToContent">
+    		<form class="Newsletter text-center">
+      		<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
+      		<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
+      		<input class="NewsletterInput-submit callToAction" type="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
+    		</form>
+  		</div>  		
+  		
+		</section>
+		
+		
+		<div class="Section-sepa Section-sepaAfter"></div>
 		
 		<section class="Section Section-parametricDesignTool colorDarkest text-center">
   		<header class="SectionHeader fitToContent">
@@ -186,6 +207,38 @@
         		<div class="Section-featuresDescription textType-subtxt textSize-txt-small colorBrightest">
           		<?php echo $feature[featuredescription]; ?>
         		</div>
+      		</li>
+      		
+          <?php endforeach; ?>
+    		</ul>
+    		
+  		</div>
+  		
+		</section>
+		
+		<div class="Section-sepa Section-sepaAfter"></div>
+		
+		<section class="Section Section-theytalkaboutus">
+  		
+  		<header class="SectionHeader text-center fitToContent">
+    		<h1 class="textType-title textSize-title-large colorDarkerGray small-only-text-center"><?php echo $page->section4Title()->kirbytext(); ?></h1>
+        <h3 class="textType-subtitle textSize-title-small colorDarkGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytext(); ?></h3>
+  		</header>  		
+  		
+  		<div class="Section-wrapTxt textType-txt fitToContent text-center">
+    		
+    		<ul class="small-block-grid-2 medium-block-grid-4">
+      		
+    		  <?php 
+      		  $theytalkaboutus = yaml($page->theytalkaboutus()); 
+      		  foreach($theytalkaboutus as $ttau) :
+    		  ?>
+    		  
+      		<li class="Section-theytalkaboutusItem text-center">
+        		<a class="Section-theytalkaboutusPictoWrap" href="<?php echo $ttau[ttauurl]; ?>">
+          		<span class="Section-theytalkaboutusHelper"></span>
+          		<img src="<?php echo url('content/'.$page->dirname().'/'.$ttau[ttauimg]); ?>" class="Section-theytalkaboutusPicto">
+        		</a>
       		</li>
       		
           <?php endforeach; ?>

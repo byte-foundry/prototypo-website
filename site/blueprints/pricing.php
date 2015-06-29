@@ -67,8 +67,8 @@ fields:
         label: Pack services (one per line)
       packdescription:
         type: textarea
-        label: Font description
-        placeholder: Font description
+        label: Pack description
+        placeholder: Pack description
       packstate:
         type:select
         options:

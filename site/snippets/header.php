@@ -54,11 +54,11 @@
       <?php snippet('menu') ?>     
     			
   		<div class="Social">
-  			<a href="https://www.facebook.com/prototypoApp" class="Social-item Social-itemFacebook">
+  			<a href="<?php echo $site->facebook()->html() ?>" class="Social-item Social-itemFacebook">
     			<span class="show-for-sr">Facebook</span>
     		</a>
     		
-    		<a href="https://twitter.com/prototypoApp" class="Social-item Social-itemTwitter">
+    		<a href="<?php echo $site->twitter()->html() ?>" class="Social-item Social-itemTwitter">
       		<span class="show-for-sr">Twitter</span>
         </a>
   		</div>

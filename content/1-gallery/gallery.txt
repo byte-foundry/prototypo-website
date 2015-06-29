@@ -14,8 +14,41 @@ Section1txt:
 
 ----
 
-Members: 
+Section1txtafter: 
 
 ----
 
-Section1txtafter: 
+Fonts: 
+
+- 
+  fontfile: pt_sans-web-bold.ttf
+  fontname: Garamond
+  fontdescription: >
+    The perfect sans serif, now with
+    infinite variations.
+  fontstring: Az
+  fontnumbervariants: 2
+  fontsize: 100
+  fontlineheight: 150
+- 
+  fontfile:
+  fontname: Helvetica
+  fontdescription: >
+    The beautiful font, rebuilt with
+    Prototypo
+  fontstring: Az
+  fontnumbervariants: 6
+  fontsize: 100
+  fontlineheight: 150
+- 
+  fontfile:
+  fontname: Comic Sans
+  fontdescription: Just kidding.
+  fontstring: Az
+  fontnumbervariants: 1
+  fontsize: 100
+  fontlineheight: 150
+
+----
+
+Downloadbuttonlabel: Open in Prototypo
