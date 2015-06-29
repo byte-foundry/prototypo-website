@@ -74,29 +74,26 @@
     		<div class="Section-homepageDiscoverFeaturesLine text-center textSize-txt-large"><?php echo $page->textLineUnderDemo()->kirbytext(); ?></div>
     		
         <div class="clear"></div>
+        
+        <div class="SectionNewsletterIn">
+        
+      		<header class="SectionNewsletterInHeader text-center fitToContent">
+        		<h1 class="textType-title textSize-title-small colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
+            <h3 class="textType-subtitle textSize-txt-xlarge colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
+      		</header>  		
+      		
+      		<div class="Section-wrapTxt textType-txt fitToContent">
+        		<form class="Newsletter text-center">
+          		<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
+          		<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
+          		<input class="NewsletterInput-submit callToAction" type="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
+        		</form>
+      		</div>  		
+    		
+        </div>
   		
       </div>
       
-		</section>
-		
-		
-		<div class="Section-sepa Section-sepaBefore"></div>
-		
-		<section class="Section Section-newsletter hide-for-print">
-  		
-  		<header class="SectionHeader text-center fitToContent">
-    		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
-        <h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
-  		</header>  		
-  		
-  		<div class="Section-wrapTxt textType-txt fitToContent">
-    		<form class="Newsletter text-center">
-      		<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
-      		<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
-      		<input class="NewsletterInput-submit callToAction" type="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
-    		</form>
-  		</div>  		
-  		
 		</section>
 		
 		
@@ -254,7 +251,7 @@
 		<section class="Section Section-newsletter hide-for-print">
   		
   		<header class="SectionHeader text-center fitToContent">
-    		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
+    		<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
         <h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
   		</header>  		
   		
