@@ -219,7 +219,7 @@
 
   		<div class="text-center fitToContent">
     		<h1 class="textType-title textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Title()->kirbytext(); ?></h1>
-        <h3 class="textType-subtitle textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytext(); ?></h3>
+            <h3 class="textType-subtitle textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytext(); ?></h3>
   		</div>
 
   		<div class="Section-wrapTxt textType-txt fitToContent text-center">
@@ -232,7 +232,7 @@
     		  ?>
 
       		<li class="Section-theytalkaboutusItem text-center">
-        		<a class="Section-theytalkaboutusPictoWrap" href="<?php echo $ttau[ttauurl]; ?>">
+        		<a class="Section-theytalkaboutusPictoWrap" href="<?php echo $ttau[ttauurl]; ?>" target="_blank">
           		<span class="Section-theytalkaboutusHelper"></span>
           		<img src="<?php echo url('content/'.$page->dirname().'/'.$ttau[ttauimg]); ?>" class="Section-theytalkaboutusPicto">
         		</a>
