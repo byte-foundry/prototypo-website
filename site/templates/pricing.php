@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-  <main class="PageContent Pricing" role="main">
+  <main class="PageContent Pricing showAnnualBilling" role="main">
 
       
     <div class="PricingItemFree" style="background-image:url(<?php echo $page->file($page->freemiumImg())->url(); ?>)">
@@ -64,7 +64,13 @@
               <img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
             <?php else : ?>
               <span class="PricingItem-priceBefore textSize-txt-large">$</span><!--
-           --><span class="PricingItem-price textSize-title-xlarge"><?php echo $pack[packprice2]; ?></span><!--         
+           --><span class="PricingItem-price textSize-title-xlarge">
+<!--
+                <span class="js_annualBilling_price"><?php echo $pack[packprice2]; ?></span>
+                <span class="js_monthlyBilling_price"><?php echo $pack[packprice]; ?></span>
+-->
+                <div class="js_price"><?php echo $pack[packprice2]; ?><br><?php echo $pack[packprice]; ?></div>
+              </span><!--         
            --><span class="PricingItem-priceAfter textSize-txt-medium">/mo.</span>
             <?php endif; ?>
             </h3>
@@ -91,6 +97,12 @@
       
       </ul>
       
+  		
+  		<div class="PricingSwitch text-center textType-txt textSize-txt-medium">
+    		<span class="PricingSwitch-item js_annualBilling">Annual billing</span>
+    		<span class="PricingSwitch-item js_monthlyBilling">Monthly billing</span>
+  		</div>
+  		
       
   		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
         <?php echo $page->section1TxtAfter()->kirbytext(); ?>

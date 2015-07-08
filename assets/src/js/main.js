@@ -25,4 +25,12 @@ $(function(){
   }
   
   FAQ__checkIfAnchorToQuestion();
+  
+  $('.js_annualBilling').on('mousedown',function(){
+    $('.Pricing').removeClass('showMonthlyBilling').addClass('showAnnualBilling');
+  });
+  
+  $('.js_monthlyBilling').on('mousedown',function(){
+    $('.Pricing').removeClass('showAnnualBilling').addClass('showMonthlyBilling');
+  });
 });
