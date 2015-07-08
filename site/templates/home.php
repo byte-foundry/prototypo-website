@@ -224,7 +224,7 @@
 
   		<div class="Section-wrapTxt textType-txt fitToContent text-center">
 
-    		<ul class="small-block-grid-3 medium-block-grid-6">
+    		<ul class="small-block-grid-3 medium-block-grid-5">
 
     		  <?php
       		  $theytalkaboutus = yaml($page->theytalkaboutus());

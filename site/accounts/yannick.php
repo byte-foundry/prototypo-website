@@ -10,4 +10,4 @@ language: en
 role: admin
 history:
   - home
-token: 9ee7c8595c7e6583634e5bb44add0071f857b73c
+token: 4464ecc290531405e47e310fd9cdb45d78ff1c19

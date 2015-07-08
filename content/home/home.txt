@@ -186,3 +186,8 @@ Theytalkaboutus:
   ttauname: "Mouv'"
   ttauurl: >
     http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo
+- 
+  ttauimg: gray-wired.png
+  ttauname: WIRED
+  ttauurl: >
+    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
