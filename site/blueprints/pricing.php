@@ -24,6 +24,42 @@ fields:
   line-a:
     type:line
     
+  section0Info:
+    type: info
+    text: >
+      **Section : Get access to Prototypo**
+      
+      **Content** : Access to freemium.
+    
+  section0Title:
+    type: text
+    placeholder: Title of the section
+    default: Get access to Prototypo
+    
+  section0Subtitle:
+    type: text
+    placeholder: Subtitle of the section
+    default: Try prototypo for free with the freemium version
+    
+  section0Txt:
+    type: textarea
+    placeholder: Text content of the section
+    
+  freemiumImg:
+    type: select
+    label: Image of freemium version
+    options: files
+    
+  freemiumToS:
+    type: textarea
+    label: Terms of Service
+    
+  freemiumSubmit:
+    type: text
+    label: Try Prototypo button label
+    
+    
+    
   section1Info:
     type: info
     text: >
@@ -41,10 +77,6 @@ fields:
     placeholder: Subtitle of the section
     default: 3 packs that fit your needs
     
-  section1Txt:
-    type: textarea
-    placeholder: Text content of the section
-    
   packs:
     label: Pricing packs
     type: structure
@@ -60,15 +92,18 @@ fields:
         placeholder: Pack name
       packprice:
         type: text
-        label: Pack price
-        placeholder: eg. $20/month
+        label: Pack price (monthly)
+        placeholder: Price/mo (monthly)
+      packprice2:
+        type: text
+        label: Pack price (annually)
+        placeholder: Price/mo (annually)
       packservices:
         type: textarea
-        label: Pack services (one per line)
-      packdescription:
+        label: Pack service
+      packservices2:
         type: textarea
-        label: Pack description
-        placeholder: Pack description
+        label: Pack service (user)
       packstate:
         type:select
         options:

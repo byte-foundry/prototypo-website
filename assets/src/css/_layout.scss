@@ -84,6 +84,11 @@ input:focus {
 
 
 
+.textSize-title-xlarge {
+  font-size:62px;
+  line-height:66px;
+}
+
 .textSize-title-large {
   font-size:44px;
   line-height:50px;
@@ -167,7 +172,8 @@ input:focus {
 }
 
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   border-radius:$global-radius;
   background:$colorWhite;
   outline:none;
@@ -184,7 +190,8 @@ input[type="text"] {
 }
 
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   border-bottom-color:$secondBackgroundColor;
 }
 

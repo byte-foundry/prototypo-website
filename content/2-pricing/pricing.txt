@@ -2,7 +2,7 @@ Title: Pricing
 
 ----
 
-Section1title: Your Prototypo is here
+Section1title: Simple plans for everyone!
 
 ----
 
@@ -14,49 +14,63 @@ Packs:
 
 - 
   packname: free
-  packprice:
-  packservices: >
-    Get started with Prototypo with basic
-    features
-  packdescription:
-  packstate: available
-  packbuttonlabel: Try Prototypo for free
+  packprice: 0
+  packprice2: 0
+  packservices: One font
+  packservices2:
+  packstate:
+  packbuttonlabel: Get started!
 - 
-  packname: pro
-  packprice: $20/month
-  packservices: |
-    One user
-    Unlimited fonts
-  packdescription: The perfect pack for you
+  packname: professional
+  packprice: 15
+  packprice2: 13
+  packservices: Unlimited fonts
+  packservices2:
   packstate: available
-  packbuttonlabel: Get started now!
+  packbuttonlabel: Get started!
 - 
   packname: agency
-  packprice: $50/month
-  packservices: |
-    Up to 5 users
-    Unlimited fonts
-    Collaborative fonts
-  packdescription: The pack for your small business
-  packstate: notavailable
-  packbuttonlabel: Available soon
+  packprice: 59
+  packprice2: 45
+  packservices: Unlimited fonts
+  packservices2: Up to 5 users
+  packstate: available
+  packbuttonlabel: Get started!
 - 
   packname: enterprise
-  packprice: From $80/month
-  packservices: |
-    5+ users
-    Unlimited fonts
-    Collaborative fonts
-  packdescription: |
-    The pack for your school
-    or your big company
-  packstate: notavailable
-  packbuttonlabel: Available soon
-
-----
-
-Section1txt: 
+  packprice:
+  packprice2: 60
+  packservices: Unlimited fonts
+  packservices2: |
+    Unlimited users
+    Collaborative tools
+  packstate: available
+  packbuttonlabel: Contact us
 
 ----
 
 Section1txtafter: (email: contact@prototypo.io text: Feel free to contact us) if you have any question about your needs.
+
+----
+
+Section0title: Get access to Prototypo!
+
+----
+
+Section0subtitle: Try prototypo for free with the freemium version
+
+----
+
+Section0txt: 
+
+----
+
+Freemiumimg: prototypo.svg
+
+----
+
+Freemiumtos: By clicking "Try Prototypo!" I agree to (link: # text: Prototypo's Terms of Service.)
+
+----
+
+Freemiumsubmit: Try Prototypo!

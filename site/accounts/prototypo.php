@@ -6,11 +6,10 @@ password: >
   $2a$10$monrLEQiaT7b6n1CSEbi/e5VvUkLD6gd7LWuXL3OzTFq6rMnNKBkW
 language: en
 role: admin
-token: c6ce42c76102534e041d51d056cff989cde47ac8
+token: 5b0678c98af4d2d764e91c7cafa6d7690b6ef0e9
 history:
+  - pricing
   - about
   - home
   - null
   - faq
-  - >
-    faq/i-can-t-open-svg-fonts-with-illustrator
