@@ -60,10 +60,13 @@
           <div class="PricingItem-wrap <?php echo $state; ?>">
             <h3 class="PricingItem-packtitle textType-txt textSize-txt-small"><?php echo $pack[packname]; ?></h3>
             <h3 class="PricingItem-title textType-txt textSize-title-small <?php if ($state == 'disabled') echo 'colorGray'; else echo 'colorSecondBackgroundColor'; ?>">
-              
+            <?php if ($pack[packprice] === '') : ?>
+              <img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
+            <?php else : ?>
               <span class="PricingItem-priceBefore textSize-txt-large">$</span><!--
            --><span class="PricingItem-price textSize-title-xlarge"><?php echo $pack[packprice2]; ?></span><!--         
            --><span class="PricingItem-priceAfter textSize-txt-medium">/mo.</span>
+            <?php endif; ?>
             </h3>
             
 <!--

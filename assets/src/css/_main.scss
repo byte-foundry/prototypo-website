@@ -659,13 +659,12 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   border: solid 3px rgb(255, 114, 94);
 }
 
-.PricingItem:nth-child(2):hover {
-  @include transform(scale(1.1,1.1));
+*/
+.PricingItem:hover {
+  @include transform(scale(1.05,1.05));
+  z-index:10
 }
 
-.PricingItem:nth-child(2):hover .PricingItem-wrap {
-}
-*/
 
 .PricingItem-wrap.disabled * {
   opacity:.6
@@ -704,7 +703,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 .PricingItem-infos {
   background:$colorLighterGray;
   margin: 25px 0px 0;
-  padding: 25px 10px 100px;
+  padding: 25px 10px 80px;
   flex: 1;
   position:relative;
 }
@@ -752,6 +751,9 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   border-radius:0 0 2px 2px !important
 }
 
+.PricingItem-getStarted .callToAction:hover {
+  transform:scale(1)!important;
+}
 
 
 

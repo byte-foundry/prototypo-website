@@ -37,7 +37,7 @@ Packs:
   packstate: available
   packbuttonlabel: Get started!
 - 
-  packname: enterprise
+  packname: Want more?
   packprice:
   packprice2: 60
   packservices: Unlimited fonts
