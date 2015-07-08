@@ -9,5 +9,6 @@ password: >
 language: en
 role: admin
 history:
+  - null
   - home
 token: 4464ecc290531405e47e310fd9cdb45d78ff1c19
