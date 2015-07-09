@@ -1,9 +1,9 @@
 /*
  *  Global CSS
  */
- 
+
  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers */ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; }
- 
+
 *,
 *:after,
 *:before {
@@ -221,14 +221,14 @@ input[type="password"]:focus {
   display: inline-block;
   padding: 16px 22px;
   text-decoration:none !important;
-  
+
   font-size:$callToActionTextSize;
   line-height:$callToActionLineHeight;
   color: $callToActionTextColor !important;
   border-radius: $global-radius !important; /* foundation */
   background: $callToActionBackgroundColor;
   cursor: pointer;
-    
+
   @extend .hide-for-print;
   @extend .textType-callTo;
   @include transition(all 200ms ease);
@@ -237,7 +237,7 @@ input[type="password"]:focus {
 .callToAction:hover {
   color:$callToActionTextColor-hover;
   background:$callToActionBackgroundColor-hover;
-  
+
   @include transform(scale(1.1,1.1));
 }
 
@@ -249,7 +249,7 @@ input[type="password"]:focus {
 .callToAction.disabled:hover {
   color:$callToActionTextColor-hover-disabled !important;
   background:$callToActionBackgroundColor-hover-disabled;
-  
+
   @include transform(scale(1,1));
 }
 
@@ -372,7 +372,7 @@ input[type="password"]:focus {
 /*
  *  STRUCTURE
  */
- 
+
 .Header {
 	position:fixed;
 	top:0;
@@ -380,10 +380,10 @@ input[type="password"]:focus {
 	right:0;
 	height:65px;
 	z-index:100;
-	
+
 	background:$colorWhite;
 	box-shadow:0 2px 0px rgba(0, 0, 0, 0.05);
-	
+
 	@include transition(all 300ms ease)
 }
 
@@ -430,13 +430,13 @@ input[type="password"]:focus {
   display: block;
   height: 65px;
   padding: 24px 15px 26px 15px;
-  
+
   font-size: 14px;
   line-height:17px;
   font-weight: 400;
   letter-spacing: 1px;
   color: $colorDarkGray;
-    
+
   @include transition(all 300ms ease);
 }
 
@@ -450,7 +450,7 @@ input[type="password"]:focus {
   padding: 8px 20px;
   border-radius: $global-radius;
   border: solid 1px $colorLighterGray;
-    
+
   @include transition(all 300ms ease);
 }
 
@@ -473,7 +473,7 @@ input[type="password"]:focus {
   width:65px;
   height:65px;
   background:url(img/prototypoIconWhite.svg) center center no-repeat $colorBlack;
-  background-size:26px;  
+  background-size:26px;
 }
 
 .Nav-logoInner {
@@ -493,7 +493,7 @@ input[type="password"]:focus {
   padding: 8px 22px;
 }
 
-.Nav-hamburgerMenuHandler {  
+.Nav-hamburgerMenuHandler {
   position:absolute;
   top:0;
   right:0;
@@ -528,7 +528,7 @@ input[type="password"]:focus {
 
 .Footer-copyright a {
   color:$colorDarkGray;
-    
+
   @include transition(all 300ms ease);
 }
 
@@ -574,13 +574,13 @@ input[type="password"]:focus {
   display: block;
   height: 45px;
   padding: 14px 15px 16px 15px;
-  
+
   font-size: 14px;
   line-height:17px;
   font-weight: 400;
   letter-spacing: 1px;
   color: $colorDarkGray;
-    
+
   @include transition(all 300ms ease);
 }
 
@@ -591,15 +591,15 @@ input[type="password"]:focus {
 
 .Footer-Nav-layoutItemLink:hover,
 .Footer-Nav-layoutItemLink.active {
-  color: $colorBlack;
-  background:$colorLighterGray;
+  color: $colorWhite;
+  font-weight: bold;
 }
 
 .Footer-Nav-layoutItemLoginLinkInner {
   padding: 8px 20px;
   border-radius: $global-radius;
   border: solid 1px $colorLighterGray;
-    
+
   @include transition(all 300ms ease);
 }
 
