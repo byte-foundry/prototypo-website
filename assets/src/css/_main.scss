@@ -1,54 +1,54 @@
 .Section-homepage {
-  background:linear-gradient(to bottom right, 
-                             $mainBackgroundColor, 
-                             adjust-hue($mainBackgroundColor, 35deg)); 
+  background:linear-gradient(to bottom right,
+                             $mainBackgroundColor,
+                             adjust-hue($mainBackgroundColor, 35deg));
 }
 
 .Section-parametricDesignTool {
-  background:linear-gradient(to bottom right, 
-                             $thirdBackgroundColor, 
+  background:linear-gradient(to bottom right,
+                             $thirdBackgroundColor,
                              adjust-hue($thirdBackgroundColor,-15deg));
 }
 
 .Section-features {
-  background:linear-gradient(to bottom right, 
-                             $colorDarkest, 
+  background:linear-gradient(to bottom right,
+                             $colorDarkest,
                              $colorLightBlack);
 }
 
 .Section-theytalkaboutus {
-  background:linear-gradient(to bottom right, 
-                             $colorBrightest, 
+  background:linear-gradient(to bottom right,
+                             $colorBrightest,
                              $colorWhite);
 }
 
 .Section-newsletter {
-  background:linear-gradient(to bottom right, 
-                             adjust-hue($mainBackgroundColor, 35deg), 
+  background:linear-gradient(to bottom right,
+                             adjust-hue($mainBackgroundColor, 35deg),
                              adjust-hue($mainBackgroundColor,0deg));
 }
 
 .Pricing {
-  background:linear-gradient(to bottom right, 
-                             adjust-hue($secondBackgroundColor, 0deg), 
+  background:linear-gradient(to bottom right,
+                             adjust-hue($secondBackgroundColor, 0deg),
                              adjust-hue($secondBackgroundColor, 40deg));
 }
 
 .About {
-  background:linear-gradient(to bottom right, 
-                             $colorDarkest, 
+  background:linear-gradient(to bottom right,
+                             $colorDarkest,
                              $colorLightBlack);
 }
 
 .Blog {
-  background:linear-gradient(to bottom right, 
-                             adjust-hue(#a2e392, 355deg), 
+  background:linear-gradient(to bottom right,
+                             adjust-hue(#a2e392, 355deg),
                              adjust-hue(#a2e392, 325deg));
 }
 
 .FAQ {
-  background:linear-gradient(to bottom right, 
-                             adjust-hue(#a2e392, 285deg), 
+  background:linear-gradient(to bottom right,
+                             adjust-hue(#a2e392, 285deg),
                              adjust-hue(#a2e392, 315deg));
 }
 
@@ -57,18 +57,18 @@
 }
 
 .Gallery {
-  background:linear-gradient(to bottom right, 
-                             adjust-hue(#eee, 285deg), 
+  background:linear-gradient(to bottom right,
+                             adjust-hue(#eee, 285deg),
                              adjust-hue($colorLighterGray, 315deg));
 }
 
 /*
  *  Page: home
  */
- 
+
 .Section {
   position:relative;
-  
+
   width:100%;
   padding: 65px 0 60px;
 }
@@ -118,18 +118,18 @@
   left:0;
   bottom:0;
   right:0;
-  
+
   font-size:42px;
   font-family:$secondFont,inherit;
   font-style:italic;
   letter-spacing:-5px;
-  
+
   color:rgba($colorDark,.02);
 }
 
 .Section-homepageWrap {
   position: absolute;
-  
+
   margin-top: -390px;
   height: 600px;
   top: 50%;
@@ -143,7 +143,7 @@
 
 .Section-homepageGetStartedLineTitle {
   display:inline-block;
-  
+
   font-family:$mainFont, inherit;
   font-size:24px;
   font-weight:700
@@ -151,7 +151,7 @@
 
 .Section-homepageGetStartedLineSubtitle {
   display:inline-block;
-  
+
   margin:0 15px;
   font-family:$mainFont, inherit;
   font-size:22px;
@@ -165,7 +165,7 @@
   background-repeat:no-repeat !important;
   background-position:112px center;
   background-size:18px !important;
-  
+
   @include transition(all 300ms ease);
 }
 
@@ -179,7 +179,7 @@
   height:350px;
   margin:0 auto;
   z-index:1;
-  
+
   background:$colorWhite;
   box-shadow:0px 5px 45px rgba(0,0,0,.4);
   border-radius:$global-radius;
@@ -189,20 +189,20 @@
   content:"";
   position:absolute;
   z-index:-1;
-  
+
   background:linear-gradient(to left, rgba(0,0,0,.08), transparent);
   width:900px;
   height:742px;
   right:700px;
   top:-0;
-  
+
   @include transform-origin(top right);
   @include transform(rotateZ(-45deg) skew(18.5deg,0));
 }
 
 .DemoHome-windowBackground {
   position:absolute;
-  
+
   top:0;
   left:0;
   right:0;
@@ -213,7 +213,7 @@
 
 .DemoHome-windowTopBar {
   position:absolute;
-  
+
   top:0;
   left:0;
   right:0;
@@ -223,7 +223,7 @@
 
 .DemoHome-windowLogo {
   position:absolute;
-  
+
   top:60px;
   left:30px;
   opacity:.2;
@@ -232,7 +232,7 @@
 .DemoHome-windowButton {
   position:absolute;
   display:inline-block;
-  
+
   top:9px;
   width:12px;
   height:12px;
@@ -246,7 +246,7 @@
 
 .DemoControls {
   position:absolute;
-  
+
   top:150px;
   left:30px;
   width:130px;
@@ -255,14 +255,14 @@
 
 .DemoControls-PotentiometerItem {
   position:relative;
-  
+
   height:15px;
   margin-bottom:12px;
 }
 
 .DemoControls-PotentiometerPicto {
   position:absolute;
-  
+
   width:12px;
   top:-3px;
   left:0;
@@ -272,7 +272,7 @@
   position:absolute;
   border-radius:10px;
   cursor:pointer;
-  
+
   left:25px;
   top:0;
   width:150px;
@@ -282,7 +282,7 @@
 
 .DemoControls-PotentiometerBar {
   position:relative;
-  
+
   width:60px;
   height:17px;
   margin:-2px 0 0 -2px;
@@ -298,7 +298,7 @@
 .DemoControls-PotentiometerBar:after {
   content:"";
   position:absolute;
-  
+
   right:4px;
   top:4px;
   width:9px;
@@ -313,13 +313,13 @@
   position:absolute;
   padding:20px 24px;
   z-index:90;
-  
+
   background:$infoboxBackgroundColor;
   border-radius:$global-radius;
   color:$infoboxTextColor;
   font-size:$infoboxTextSize;
   line-height:$infoboxLineHeight;
-  
+
   @extend .textType-callTo;
 }
 
@@ -328,7 +328,7 @@
   top: 145px;
   width: 200px;
   height: 105px;
-  
+
   @include animation('DemoHomeInfoboxLeftAnimation 1300ms ease infinite');
 }
 
@@ -336,7 +336,7 @@
 .Infobox-DemoHomeInfoboxLeft:after {
   position: absolute;
   content: "";
-  
+
   right: -9px;
   top: 30px;
   border-left: 20px solid $infoboxBackgroundColor;
@@ -350,14 +350,14 @@
   top: 105px;
   width: 210px;
   height: 105px;
-  
+
   @include animation('DemoHomeInfoboxRightAnimation 1300ms ease infinite');
 }
 
 .Infobox-DemoHomeInfoboxRight:after {
   position: absolute;
   content: "";
-  
+
   left: -9px;
   top: 30px;
   border-right: 20px solid $infoboxBackgroundColor;
@@ -368,7 +368,7 @@
 
 .Section-homepageDiscoverFeaturesLine {
   position:relative;
-  
+
   z-index:20;
   color:$colorWhite;
   font-family:$mainFont, inherit;
@@ -399,7 +399,7 @@
 
 .Section-fonts {
   clear:both;
-  
+
   margin-top:30px;
   border-top:solid 1px $lineBorderColor;
   padding-top:30px;
@@ -485,7 +485,7 @@
 }
 
 .Section-featuresDescription {
-  
+
 }
 
 
@@ -500,12 +500,12 @@
 }
 
 .Section-theytalkaboutusPictoWrap {
-  
+
   height: 100px;      /* equals max image height */
   width: 80%;
   white-space: nowrap;
-  
-  text-align: center; 
+
+  text-align: center;
   margin: 0 auto;
 }
 
@@ -519,7 +519,7 @@
   vertical-align: middle;
     max-height: 100px;
     max-width: 100%;
-  
+
   -webkit-filter: grayscale(100%);
 filter: grayscale(100%);
 filter: gray;
@@ -568,7 +568,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   background-size:cover;
   background-position:center center;
   background-attachment: fixed;
-  
+
   @include transition(all 300ms ease)
 }
 
@@ -611,13 +611,15 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   display:inline-block;
   padding:5px 15px;
   border-radius:$global-radius;
+  border: 1px solid white;
   cursor:pointer;
-  
-  @include transition(all 300ms ease)
+
+  @include transition(all 300ms ease);
 }
 
 .showAnnualBilling .PricingSwitch-item.js_annualBilling,
-.showMonthlyBilling .PricingSwitch-item.js_monthlyBilling {
+.showMonthlyBilling .PricingSwitch-item.js_monthlyBilling,
+.PricingSwitch-item:hover {
   color:$colorDark;
   background:white;
 }
@@ -642,12 +644,12 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   z-index:9;
   position:relative;
   display: flex !important;
-  
+
   @include transition(all 300ms ease)
 }
 
 .PricingItem-wrap {
-  
+
   margin:0;
   padding: 35px 0px 0;
   background:$colorWhite;
@@ -655,21 +657,21 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   box-shadow:0 2px 40px rgba($secondBackgroundColor,.2);
   text-align: center;
   border-top: solid 3px $colorWhite;
-  
+
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  
+
   width: 100%;
   position: relative;
 }
 /*
 
 .PricingItem:nth-child(2) {
-  
+
   z-index:10;
 }
 
@@ -718,7 +720,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 
 .js_price {
   @include transition(all 300ms ease);
-  
+
   text-align:center;
 }
 
@@ -761,7 +763,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 .PricingItem-pack2 {
   font-weight:bold;
   text-transform:uppercase;
-  
+
 }
 
 .PricingItem-content {
@@ -793,7 +795,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 /*
  * Page : About us
  */
- 
+
 
 
 .Members {
@@ -817,7 +819,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   display: -ms-flexbox !important;
   display: flex !important;
 
-  
+
   @include transition(all 300ms ease)
 }
 
@@ -840,7 +842,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   margin:0;
   background-repeat:no-repeat;
   background-position:center center;
-  background-size:cover;  
+  background-size:cover;
 }
 
 .MembersItem-name {
@@ -889,7 +891,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   background-size:16px;
   background-repeat:no-repeat;
   opacity:.3;
-  
+
   @include transition(all 300ms ease);
 }
 
@@ -963,7 +965,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   padding:4px 8px;
   border-radius:$global-radius;
   display:block;
-  
+
   @include transition(all 300ms ease);
 }
 
@@ -980,7 +982,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 .Article-titleLink h1,
 .Article-titleLink h3 {
   color:$colorDarkest;
-  
+
   @include transition(all 100ms ease);
 }
 
@@ -1035,9 +1037,9 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   padding-top: 0;
   margin-top: 15px;
   margin-bottom: 20px;
-  
+
   @extend .textType-articleTitle;
-  @extend .textSize-title-medium; 
+  @extend .textSize-title-medium;
 }
 
 .Article-content h2 {
@@ -1046,17 +1048,17 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   padding-top:25px;
   margin-top:15px;
   margin-bottom:20px;
-  
+
   @extend .textType-articleTitle;
-  @extend .textSize-title-xsmall; 
+  @extend .textSize-title-xsmall;
 }
 
 .Article-content h3 {
   text-align:left;
   margin-top:25px;
-  
+
   @extend .textType-articleTitle;
-  @extend .textSize-txt-xlarge; 
+  @extend .textSize-txt-xlarge;
 }
 
 .Article-content a {
@@ -1064,7 +1066,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   background:$colorLighterGray;
   padding:3px 7px;
   border-radius:$global-radius;
-  
+
   @include transition(all 300ms ease);
 }
 
@@ -1079,14 +1081,14 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 }
 
 .Article-content ul li {
-  
+
 }
 
 .Article-leaveComment {
   background:$blocSecondBackgroundColor;
   padding:20px 100px 50px;
   display:block;
-  
+
   @include transition(all 300ms ease);
 }
 
@@ -1109,7 +1111,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   letter-spacing:2px;
   font-weight:bold;
   background:$blocSecondBackgroundColor;
-  
+
   @include transition(all 300ms ease);
 }
 
@@ -1132,7 +1134,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 .BlogPagination-item:hover {
   color:$colorWhite;
 
-  background-color:rgba($blocSecondBackgroundColor,.2);  
+  background-color:rgba($blocSecondBackgroundColor,.2);
 
 }
 
@@ -1162,7 +1164,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 /*
  * Page : FAQ
  */
- 
+
 
 
 .Question {
@@ -1211,11 +1213,11 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 /*
  * Page : Thanks
  */
- 
+
 .Thanks-content {
   font-size:0;
-} 
- 
+}
+
 .AwesomeBacker {
   display:inline-block;
   position:relative;
@@ -1252,7 +1254,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 
 .Fonts {
   clear:both;
-  
+
   margin-top:30px;
 }
 
@@ -1318,4 +1320,3 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 .FontsDownload {
   margin-top:20px
 }
-
