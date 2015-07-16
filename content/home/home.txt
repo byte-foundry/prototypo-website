@@ -138,11 +138,11 @@ Newsletternameplaceholder: Your name
 
 ----
 
-Newslettermailplaceholder: Your mail
+Newslettermailplaceholder: Your email
 
 ----
 
-Newslettersubmitlabel: Keep me tuned
+Newslettersubmitlabel: Keep me posted
 
 ----
 

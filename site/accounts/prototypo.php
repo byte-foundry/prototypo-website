@@ -6,10 +6,10 @@ password: >
   $2a$10$monrLEQiaT7b6n1CSEbi/e5VvUkLD6gd7LWuXL3OzTFq6rMnNKBkW
 language: en
 role: admin
-token: 5b0678c98af4d2d764e91c7cafa6d7690b6ef0e9
+token: b2cef431fcc9025ed73883012f889248ae74809d
 history:
+  - home
   - pricing
   - about
-  - home
   - null
   - faq
