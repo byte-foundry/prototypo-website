@@ -200,6 +200,14 @@
   @include transform(rotateZ(-45deg) skew(18.5deg,0));
 }
 
+#DemoCanvas {
+    position: absolute;
+    top: 50px;
+    left: 260px;
+     width: 350px;
+     height: 300px;
+}
+
 .DemoHome-windowBackground {
   position:absolute;
 
