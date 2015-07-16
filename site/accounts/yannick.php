@@ -12,3 +12,4 @@ history:
   - faq/when-the-v1-0-will-be-available
   - null
   - home
+token: ed7748bbc023a623c13835568cb55e777a2823cb
