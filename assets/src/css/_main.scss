@@ -269,43 +269,113 @@
 }
 
 .DemoControls-Potentiometer {
-  position:absolute;
-  border-radius:10px;
-  cursor:pointer;
-
-  left:25px;
-  top:0;
-  width:150px;
-  height:13px;
-  background:$potentiometerBackgroundColor;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 6px;
+  left: 25px;
+  width: 150px;
+  height: 17px;
+  margin: -4px 0;
+  border-radius: 9px;
+  cursor: pointer;
+  background-image: linear-gradient( to right, $potentiometerBarBackgroundColor 0%, $potentiometerBackgroundColor 0.01% );
 }
 
-.DemoControls-PotentiometerBar {
-  position:relative;
-
-  width:60px;
-  height:17px;
-  margin:-2px 0 0 -2px;
-  border-radius:10px;
-  background:$potentiometerBarBackgroundColor;
+.DemoControls-Potentiometer:focus {
+  outline: none;
+}
+.DemoControls-Potentiometer::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 17px;
+}
+.DemoControls-Potentiometer::-webkit-slider-thumb {
+  border: 4px solid $potentiometerBarBackgroundColor;
+  height: 17px;
+  width: 17px;
+  border-radius: 9px;
+  background: $potentiometerBarHandlerBackgroundColor;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+// .DemoControls-Potentiometer:focus::-webkit-slider-runnable-track {
+//   background: #5fe7b3;
+// }
+.DemoControls-Potentiometer::-moz-range-track {
+  background: transparent;
+  height: 17px;
+}
+.DemoControls-Potentiometer::-moz-range-thumb {
+  border: 4px solid $potentiometerBarBackgroundColor;
+  height: 9px;
+  width: 9px;
+  border-radius: 9px;
+  background: $potentiometerBarHandlerBackgroundColor;
+  cursor: pointer;
+}
+.DemoControls-Potentiometer::-ms-track {
+  background: transparent;
+}
+.DemoControls-Potentiometer::-ms-fill-lower {
+  background: $potentiometerBarBackgroundColor;
+  border-radius: 18px;
+}
+.DemoControls-Potentiometer::-ms-fill-upper {
+  background: $potentiometerBackgroundColor;
+  border-radius: 18px;
+}
+.DemoControls-Potentiometer::-ms-thumb {
+  border: 4px solid $potentiometerBarBackgroundColor;
+  width: 9px;
+  border-radius: 9px;
+  background: $potentiometerBarHandlerBackgroundColor;
+  cursor: pointer;
+  height: 9px;
+}
+.DemoControls-Potentiometer:focus::-ms-fill-lower {
+  background: #5fe7b3;
+}
+.DemoControls-Potentiometer:focus::-ms-fill-upper {
+  background: #5fe7b3;
 }
 
-.DemoControls-PotentiometerItem:nth-child(1) .DemoControls-PotentiometerBar { width: 30px }
-.DemoControls-PotentiometerItem:nth-child(2) .DemoControls-PotentiometerBar { width: 80px }
-.DemoControls-PotentiometerItem:nth-child(3) .DemoControls-PotentiometerBar { width: 62px }
-.DemoControls-PotentiometerItem:nth-child(4) .DemoControls-PotentiometerBar { width: 92px }
-
-.DemoControls-PotentiometerBar:after {
-  content:"";
-  position:absolute;
-
-  right:4px;
-  top:4px;
-  width:9px;
-  height:9px;
-  border-radius:10px;
-  background:$potentiometerBarHandlerBackgroundColor;
-}
+// .DemoControls-Potentiometer {
+//   position:absolute;
+//   border-radius:10px;
+//   cursor:pointer;
+//
+//   left:25px;
+//   top:0;
+//   width:150px;
+//   height:13px;
+//   background:$potentiometerBackgroundColor;
+// }
+//
+// .DemoControls-PotentiometerBar {
+//   position:relative;
+//
+//   width:60px;
+//   height:17px;
+//   margin:-2px 0 0 -2px;
+//   border-radius:10px;
+//   background:$potentiometerBarBackgroundColor;
+// }
+//
+// .DemoControls-PotentiometerItem:nth-child(1) .DemoControls-PotentiometerBar { width: 30px }
+// .DemoControls-PotentiometerItem:nth-child(2) .DemoControls-PotentiometerBar { width: 80px }
+// .DemoControls-PotentiometerItem:nth-child(3) .DemoControls-PotentiometerBar { width: 62px }
+// .DemoControls-PotentiometerItem:nth-child(4) .DemoControls-PotentiometerBar { width: 92px }
+//
+// .DemoControls-PotentiometerBar:after {
+//   content:"";
+//   position:absolute;
+//
+//   right:4px;
+//   top:4px;
+//   width:9px;
+//   height:9px;
+//   border-radius:10px;
+//   background:$potentiometerBarHandlerBackgroundColor;
+// }
 
 
 

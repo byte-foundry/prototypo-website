@@ -4,17 +4,16 @@ Title: Prototypo
 
 Infobox1: 
 
-Move these cursors
-to custom your font
-on the right…
+Customize more
+than twenty parameters…
 
 ----
 
 Infobox2: 
 
-…and get the render
-of your font instantly
-& ready to use!
+…see your own
+font take shape 
+in real time!
 
 ----
 
@@ -38,7 +37,7 @@ Section1subtitle: Sketch ideas, export fonts
 
 ----
 
-Section1txt: Design a typeface is long and hard task. Prototypo allows to produce quickly some strong basis to design your own custom font. Each parameter is defined to operate specific changes...Fusce dapibus, tellus ac cursus commodo, tortor mauris condim entum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue.
+Section1txt: Type design should not be a tedious and repetitive activity. Prototypo includes over twenty parameters to modify all built-in glyphs at once. Hobbyist and professional type designers can play, experiment and refine a wide range of body text fonts.
 
 ----
 
@@ -76,11 +75,11 @@ Downloadbuttonlabel: Download this font!
 
 ----
 
-Section2title: A bunch of great features
+Section2title: Upcoming features
 
 ----
 
-Section2subtitle: Available in Prototypo 0.9 & about to land
+Section2subtitle: We're hard at work, launching next fall!
 
 ----
 
@@ -90,10 +89,9 @@ Features:
   featureimg: pictofeaturescharactersset.svg
   featurename: Characters set
   featuredescription: >
-    Works with all the latin basic
-    characters set. It includes uppercases,
-    lowercases, smallcaps, figures and
-    punctuation!
+    Works with a basic Latin character set.
+    Includes uppercase, lowercase,
+    smallcaps, figures and punctuation!
 - 
   featureimg: pictofeaturesexportfonts.svg
   featurename: Export fonts
