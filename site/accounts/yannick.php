@@ -9,5 +9,6 @@ password: >
 language: en
 role: admin
 history:
+  - faq/when-the-v1-0-will-be-available
   - null
   - home
