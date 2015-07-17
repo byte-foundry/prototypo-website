@@ -155,6 +155,31 @@ Section4subtitle:
 Theytalkaboutus: 
 
 - 
+  ttauimg: gray-mashable.png
+  ttauname: Mashable
+  ttauurl: >
+    http://mashable.com/2014/05/04/prototypo-fonts/
+- 
+  ttauimg: gray-wired.png
+  ttauname: WIRED
+  ttauurl: >
+    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
+- 
+  ttauimg: gray-mouv.png
+  ttauname: "Mouv'"
+  ttauurl: >
+    http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo
+- 
+  ttauimg: gray-creapills.png
+  ttauname: Creapills
+  ttauurl: >
+    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
+- 
+  ttauimg: gray-linuxfr.png
+  ttauname: LinuxFR
+  ttauurl: >
+    http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
+- 
   ttauimg: gray-framasoft.png
   ttauname: Framasoft
   ttauurl: >
@@ -164,28 +189,3 @@ Theytalkaboutus:
   ttauname: Creanum
   ttauurl: >
     http://www.creanum.fr/news/toutes-les-news/id/1829/prototypo-io-une-application-web-pour-dessiner-des-polices.aspx
-- 
-  ttauimg: gray-mashable.png
-  ttauname: Mashable
-  ttauurl: >
-    http://mashable.com/2014/05/04/prototypo-fonts/
-- 
-  ttauimg: gray-linuxfr.png
-  ttauname: LinuxFR
-  ttauurl: >
-    http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
-- 
-  ttauimg: gray-creapills.png
-  ttauname: Creapills
-  ttauurl: >
-    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
-- 
-  ttauimg: gray-mouv.png
-  ttauname: "Mouv'"
-  ttauurl: >
-    http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo
-- 
-  ttauimg: gray-wired.png
-  ttauname: WIRED
-  ttauurl: >
-    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/

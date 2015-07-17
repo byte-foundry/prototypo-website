@@ -11,7 +11,7 @@
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400italic|Roboto+Slab:300|PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -32,39 +32,42 @@
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
   <meta name="theme-color" content="#232323">
 
-  <?php echo css('assets/styles.min.css') ?>
+  <?php
+    // poor man's env variables (serve dev files when php-cli is used)
+    snippet( php_sapi_name() === 'cli-server' ? 'dev/styles' : 'prod/styles' ); 
+  ?>
 
 </head>
 <body>
-  
+
   <header class="Header" role="banner">
 
     <nav class="Nav" role="navigation">
-    
+
       <a href="<?php echo url('home'); ?>" class="Nav-logo">
         <span class="Nav-logoPicto keep-styles-for-print"></span>
         <span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
       </a>
-      
+
       <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
         		<span class="show-for-medium-up">Create your font now!</span>
         		<span class="show-for-small-only text-center">Get started!</span>
       </a>
-    
-      <?php snippet('menu') ?>     
-    			
+
+      <?php snippet('menu') ?>
+
   		<div class="Social">
   			<a href="<?php echo $site->facebook()->html() ?>" class="Social-item Social-itemFacebook">
     			<span class="show-for-sr">Facebook</span>
     		</a>
-    		
+
     		<a href="<?php echo $site->twitter()->html() ?>" class="Social-item Social-itemTwitter">
       		<span class="show-for-sr">Twitter</span>
         </a>
   		</div>
-    
+
     </nav>
-    
+
     <button id="toggleMainNav" class="ToggleSwitch ToggleSwitch-hamburgerToCross Nav-hamburgerMenuHandler">
       <span class="ToggleSwitch-inner">Toggle menu</span>
     </button>
