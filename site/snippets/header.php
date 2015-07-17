@@ -12,8 +12,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400italic|Roboto+Slab:300|PT+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -34,7 +32,7 @@
 
   <?php
     // poor man's env variables (serve dev files when php-cli is used)
-    snippet( php_sapi_name() === 'cli-server' ? 'dev/styles' : 'prod/styles' ); 
+    snippet( php_sapi_name() === 'cli-server' ? 'dev/styles' : 'prod/styles' );
   ?>
 
 </head>
