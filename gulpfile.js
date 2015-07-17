@@ -37,12 +37,7 @@ gulp.task('sass', function() {
 gulp.task('build', ['sass'], function() {
     var assets = useref.assets({
             searchPath: '/'
-        }),
-        // add a .gz extension befeore the file extension
-        gzPreExt = function( filename ) {
-            return ( typeof filename === 'string' ? filename : filename[0] )
-                        .replace(/(\.js|\.css)$/, '.gz$1');
-        };
+        });
 
     // clean dist
     rimraf('./assets/dist/', console.error);
@@ -56,9 +51,13 @@ gulp.task('build', ['sass'], function() {
         .pipe(useref())
         .pipe(revReplace({
             replaceInExtensions: ['.php'],
-            modifyReved: gzPreExt
+            // add a .gz extension befeore the file extension
+            // modifyReved: function( filename ) {
+            //     return ( typeof filename === 'string' ? filename : filename[0] )
+            //                 .replace(/(\.js|\.css)$/, '.gz$1');
+            // };
         }))
-        .pipe(gulpif(/(\.js|\.css)$/, gzip({ preExtension: 'gz' })))
+        // .pipe(gulpif(/(\.js|\.css)$/, gzip({ preExtension: 'gz' })))
         .pipe(gulpif(/(\.js|\.css)$/, gulp.dest('./')))
         .pipe(gulpif('*.php', gulp.dest('./site/snippets/prod')));
 });

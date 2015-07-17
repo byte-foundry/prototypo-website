@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  *	Kevin Vennitti @kevinvennitti for Prototypo
  *  http://prototypo.io
@@ -7400,6 +7401,13 @@ input[type="password"]:focus {
   -webkit-transform: rotateZ(-45deg) skew(18.5deg, 0);
   transform: rotateZ(-45deg) skew(18.5deg, 0); }
 
+#DemoCanvas {
+  position: absolute;
+  top: 50px;
+  left: 260px;
+  width: 350px;
+  height: 300px; }
+
 .DemoHome-windowBackground {
   position: absolute;
   top: 0;
@@ -8509,11 +8517,12 @@ input[type="password"]:focus {
   .Question-content {
     padding-left: 60px; }
   .Section {
-    padding: 35px 0 30px 0; }
+    padding: 35px 0 30px; }
   .Section-featuresPictoWrap {
     margin-left: 0; }
   .Section-homepageGetStartedLineSubtitle {
-    display: none; }
+    display: none;
+    /* Can't use .hide-for-small-only because of display:inline-block ≠ display:block (foundation 5 current issue) */ }
   .Section-homepageGetStartedLineTitle {
     margin-right: 15px; }
   .small-full-width {
@@ -8528,16 +8537,16 @@ input[type="password"]:focus {
     margin-bottom: 10px;
     display: block; }
   .Article-leaveComment {
-    padding: 20px 30px 20px; }
+    padding: 20px 30px; }
   .Section-homepage {
     height: auto;
-    min-height: 810px; }
+    position: relative; }
   .Section-homepageWrap {
     top: 10px;
     margin-top: 0;
     height: 550px; }
   .BlogPagination-before {
-    margin-top: 0px; }
+    margin-top: 0; }
   .BlogPagination-item {
     display: block; }
   .BlogPagination-prev,
@@ -8554,14 +8563,16 @@ input[type="password"]:focus {
     display: none; }
   .BlogPagination-prev {
     float: left;
-    background: url(img/pictos/pictoArrowToLeftWhite.svg) no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
+    background: url("img/pictos/pictoArrowToLeftWhite.svg") no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
   .BlogPagination-next {
     float: right;
-    background: url(img/pictos/pictoArrowToRightWhite.svg) no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
+    background: url("img/pictos/pictoArrowToRightWhite.svg") no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
   .Section-homepageGetStartedLine {
     display: none; }
   .DemoHome {
-    margin-top: 80px; } }
+    margin-top: 40px; }
+  .SectionNewsletterIn {
+    padding-top: 0; } }
 
 @media only screen and (max-width: 768px) {
   .DemoHome {
@@ -8599,7 +8610,14 @@ input[type="password"]:focus {
     text-align: center; }
   .Social {
     left: 50%;
-    margin-left: -30px; } }
+    margin-left: -30px; }
+  .DemoHome {
+    height: 470px; }
+  .DemoControls {
+    top: 340px;
+    left: 50px; }
+  #DemoCanvas {
+    left: -65px; } }
 
 @media only screen and (max-width: 280px) {
   .Nav-callToActionCreateYourFont {
@@ -8625,7 +8643,7 @@ input[type="password"]:focus {
     height: 65px; }
   .Social {
     position: absolute;
-    right: 0px;
+    right: 0;
     top: 5px;
     height: 80px;
     width: auto;
@@ -8636,9 +8654,9 @@ input[type="password"]:focus {
   .Social-item[href]:after {
     content: attr(href) !important; }
   .Social-itemTwitter {
-    background: url(img/pictos/pictoSocialTwitterDark.svg) no-repeat left center/20px !important; }
+    background: url("img/pictos/pictoSocialTwitterDark.svg") no-repeat left center/20px !important; }
   .Social-itemFacebook {
-    background: url(img/pictos/pictoSocialFacebookDark.svg) no-repeat left center/20px !important; }
+    background: url("img/pictos/pictoSocialFacebookDark.svg") no-repeat left center/20px !important; }
   .Section-fontsItem {
     width: 33%;
     padding: 0; }
@@ -8653,15 +8671,15 @@ input[type="password"]:focus {
     display: inline-block;
     width: 65px;
     height: 65px;
-    background: url(img/prototypoIconWhite.svg) center center no-repeat #141414 !important;
+    background: url("img/prototypoIconWhite.svg") center center no-repeat #141414 !important;
     background-size: 26px !important; }
   .Section {
-    padding: 0px;
+    padding: 0;
     margin-top: 20px; }
   .Section-fonts {
     margin-top: 30px;
     border-top: none;
-    padding-top: 0px; }
+    padding-top: 0; }
   .SectionHeader {
     border-top: solid 1px #dfdfdf;
     margin-top: 20px;
@@ -8709,12 +8727,14 @@ input[type="password"]:focus {
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid; }
   img {
     max-width: 100% !important; }
@@ -8728,3 +8748,33 @@ input[type="password"]:focus {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  #DemoCanvas {
+    width: 290px !important;
+    height: 250px !important;
+    left: 200px; }
+  .Section-homepage {
+    min-height: 720px; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .DemoHome {
+    height: 470px; }
+  .DemoControls {
+    top: 340px;
+    left: 70px; }
+  #DemoCanvas {
+    left: -35px; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+  #DemoCanvas {
+    width: 330px;
+    height: 280px; }
+  .DemoControls {
+    top: 140px; }
+  #DemoCanvas {
+    left: 245px; }
+  .Section-homepageWrap {
+    top: 40%; }
+  .Section-homepage {
+    min-height: 1010px; } }

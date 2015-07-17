@@ -1,1 +1,1 @@
-<script src="/assets/dist/scripts.min-a15668dc60.gz.js"></script>
+<script src="/assets/dist/scripts.min-a15668dc60.js"></script>
