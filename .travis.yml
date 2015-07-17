@@ -12,4 +12,4 @@ deploy:
     develop: develop
   domain: prototypo
   on:
-    repo: byte-foundry/prototypo-website
+    all_branches: true
