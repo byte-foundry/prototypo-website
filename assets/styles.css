@@ -7276,7 +7276,7 @@ input[type="password"]:focus {
   background: linear-gradient(to bottom right, #e3bf92, #dfe392); }
 
 .Thanks {
-  background: url("img/ourAwesomeBackers.png") repeat-x #141414; }
+  background: url("/assets/img/ourAwesomeBackers.png") repeat-x #141414; }
 
 .Gallery {
   background: linear-gradient(to bottom right, #eeeeee, #f0f0f0); }
@@ -7359,7 +7359,7 @@ input[type="password"]:focus {
 
 .Section-homepageGetStartedLineCallToAction {
   padding-right: 50px;
-  background-image: url(img/pictos/pictoArrowToRightWhite.svg) !important;
+  background-image: url(/assets/img/pictos/pictoArrowToRightWhite.svg) !important;
   background-repeat: no-repeat !important;
   background-position: 112px center;
   background-size: 18px !important;
@@ -7618,7 +7618,7 @@ input[type="password"]:focus {
   right: -5px;
   width: 70px;
   height: 70px;
-  background: url(img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  background: url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
   box-shadow: 0 2px 40px rgba(73, 197, 228, 0.4);
   border-radius: 50%;
   z-index: 10; }
@@ -8005,25 +8005,25 @@ input[type="password"]:focus {
   opacity: 1; }
 
 .MembersItem-linksItem-query {
-  background-image: url(img/pictos/pictoSocialQueryDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialQueryDark.svg); }
 
 .MembersItem-linksItem-facebook {
-  background-image: url(img/pictos/pictoSocialFacebookLightDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialFacebookLightDark.svg); }
 
 .MembersItem-linksItem-twitter {
-  background-image: url(img/pictos/pictoSocialTwitterDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialTwitterDark.svg); }
 
 .MembersItem-linksItem-github {
-  background-image: url(img/pictos/pictoSocialGitHubDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialGitHubDark.svg); }
 
 .MembersItem-linksItem-vimeo {
-  background-image: url(img/pictos/pictoSocialVimeoDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialVimeoDark.svg); }
 
 .MembersItem-linksItem-website {
-  background-image: url(img/pictos/pictoSocialWebsiteDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialWebsiteDark.svg); }
 
 .MembersItem-linksItem-mail {
-  background-image: url(img/pictos/pictoSocialMailDark.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialMailDark.svg); }
 
 .MembersItem-infos {
   background: #f0f0f0;
@@ -8055,7 +8055,7 @@ input[type="password"]:focus {
 
 .Article-header {
   padding: 45px 100px 35px 100px;
-  background: url(img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right rgba(0, 0, 0, 0.05); }
+  background: url(/assets/img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right rgba(0, 0, 0, 0.05); }
 
 .Article-tags {
   display: inline-block;
@@ -8243,7 +8243,7 @@ input[type="password"]:focus {
 
 .Question-header {
   padding: 15px 40px 15px 70px;
-  background: url(img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px white;
+  background: url(/assets/img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px white;
   cursor: pointer;
   position: relative; }
 
@@ -8311,7 +8311,7 @@ input[type="password"]:focus {
   right:-5px;
   width:70px;
   height:70px;
-  background:url(img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  background:url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
   box-shadow:0 2px 40px rgba(adjust-hue($mainBackgroundColor, 35deg),.4);
   border-radius:50%;
   z-index:10
