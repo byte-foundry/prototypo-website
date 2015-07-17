@@ -3,16 +3,18 @@ php:
   - 5.4
 script: ls
 deploy:
-  provider: openshift
-  user: francois.poizat@gmail.com
-  password:
-    secure: Ax8daNhJjTTq5/dD6pCSKz/grpWkFiwye9Dpci2hd284ko69rs+10YQYjn/NUYKTrxF6YohZ1V0dkHiaaP0Fv930zip+D6vpZVt1+sr8yfLDBD5fhRim//lE3Je7sUrc9gyINjIxGC6LJQUrfCPISTQ8//ne5Ab4jxTcHQo9m6o=
-  app: website
-  domain: prototypo
-  on:
-    repo: byte-foundry/prototypo-website
-after_success:
-  - git config --global user.email "travis@localhost.localdomain"
-  - git config --global user.name "Travis CI"
-  - git add --all
-  - git commit -am "Travis change"
+  - provider: openshift
+    user: francois.poizat@gmail.com
+    password:
+      secure: Ax8daNhJjTTq5/dD6pCSKz/grpWkFiwye9Dpci2hd284ko69rs+10YQYjn/NUYKTrxF6YohZ1V0dkHiaaP0Fv930zip+D6vpZVt1+sr8yfLDBD5fhRim//lE3Je7sUrc9gyINjIxGC6LJQUrfCPISTQ8//ne5Ab4jxTcHQo9m6o=
+    app: website
+    domain: prototypo
+    on: master
+  - provider: openshift
+    user: francois.poizat@gmail.com
+    password:
+      secure: Ax8daNhJjTTq5/dD6pCSKz/grpWkFiwye9Dpci2hd284ko69rs+10YQYjn/NUYKTrxF6YohZ1V0dkHiaaP0Fv930zip+D6vpZVt1+sr8yfLDBD5fhRim//lE3Je7sUrc9gyINjIxGC6LJQUrfCPISTQ8//ne5Ab4jxTcHQo9m6o=
+    app: develop
+    domain: prototypo
+    on: develop
+    deployment_branch: develop
