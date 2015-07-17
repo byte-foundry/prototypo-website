@@ -45,7 +45,9 @@ gulp.task('build', ['sass'], function() {
     return gulp.src("./site/snippets/dev/*.php")
         .pipe(assets)
         .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', cssmin()))
+        .pipe(gulpif('*.css', cssmin({
+            rebase: false
+        })))
         .pipe(rev())
         .pipe(assets.restore())
         .pipe(useref())
