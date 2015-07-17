@@ -7060,10 +7060,10 @@ input[type="password"]:focus {
   height: 30px; }
 
 .Social-itemTwitter {
-  background-image: url(img/pictos/pictoSocialTwitter.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialTwitter.svg); }
 
 .Social-itemFacebook {
-  background-image: url(img/pictos/pictoSocialFacebook.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialFacebook.svg); }
 
 .Nav-layout {
   display: inline-block;
@@ -7118,7 +7118,7 @@ input[type="password"]:focus {
   display: inline-block;
   width: 65px;
   height: 65px;
-  background: url(img/prototypoIconWhite.svg) center center no-repeat #141414;
+  background: url(/assets/img/prototypoIconWhite.svg) center center no-repeat #141414;
   background-size: 26px; }
 
 .Nav-logoInner {
@@ -7184,10 +7184,10 @@ input[type="password"]:focus {
   opacity: .3; }
 
 .Footer-socialItem-Twitter {
-  background-image: url(img/pictos/pictoSocialTwitter.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialTwitter.svg); }
 
 .Footer-socialItem-Facebook {
-  background-image: url(img/pictos/pictoSocialFacebook.svg); }
+  background-image: url(/assets/img/pictos/pictoSocialFacebook.svg); }
 
 .Footer-Nav-layout {
   display: inline-block;
@@ -8563,10 +8563,10 @@ input[type="password"]:focus {
     display: none; }
   .BlogPagination-prev {
     float: left;
-    background: url("img/pictos/pictoArrowToLeftWhite.svg") no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
+    background: url("/assets/img/pictos/pictoArrowToLeftWhite.svg") no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
   .BlogPagination-next {
     float: right;
-    background: url("img/pictos/pictoArrowToRightWhite.svg") no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
+    background: url("/assets/img/pictos/pictoArrowToRightWhite.svg") no-repeat 50% 12px/20px rgba(0, 0, 0, 0.05); }
   .Section-homepageGetStartedLine {
     display: none; }
   .DemoHome {
@@ -8654,9 +8654,9 @@ input[type="password"]:focus {
   .Social-item[href]:after {
     content: attr(href) !important; }
   .Social-itemTwitter {
-    background: url("img/pictos/pictoSocialTwitterDark.svg") no-repeat left center/20px !important; }
+    background: url("/assets/img/pictos/pictoSocialTwitterDark.svg") no-repeat left center/20px !important; }
   .Social-itemFacebook {
-    background: url("img/pictos/pictoSocialFacebookDark.svg") no-repeat left center/20px !important; }
+    background: url("/assets/img/pictos/pictoSocialFacebookDark.svg") no-repeat left center/20px !important; }
   .Section-fontsItem {
     width: 33%;
     padding: 0; }
@@ -8671,7 +8671,7 @@ input[type="password"]:focus {
     display: inline-block;
     width: 65px;
     height: 65px;
-    background: url("img/prototypoIconWhite.svg") center center no-repeat #141414 !important;
+    background: url("/assets/img/prototypoIconWhite.svg") center center no-repeat #141414 !important;
     background-size: 26px !important; }
   .Section {
     padding: 0;
