@@ -17,7 +17,7 @@ in real time!
 
 ----
 
-Textlineunderdemo: Discover all Prototypo features
+Textlineunderdemo: <a href="https://vimeo.com/86406495" style="color: white" target="_blank">Watch the video of Prototypo presentation on Vimeo</a>
 
 ----
 
@@ -44,12 +44,12 @@ Section1txt: Type design should not be a tedious and repetitive activity. Protot
 Fonts: 
 
 - 
-  fontfile: pt_sans-web-bold.ttf
-  fontname: Garamond
+  fontfile: prototypo-venus-8.otf
+  fontname: Venus
   fontdescription: >
     The perfect sans serif, now with
     infinite variations.
-  fontstring: Az
+  fontstring: G2
   fontsize: 100
   fontlineheight: 120
 - 

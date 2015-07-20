@@ -487,7 +487,9 @@
   position:relative;
 }
 
-.Section-fontsItem:after {
+
+// Remove for the pre-release website
+/* .Section-fontsItem:after {
   content:"";
   position:absolute;
   top:-10px;
@@ -499,7 +501,7 @@
   border-radius:50%;
   z-index:10
 }
-
+ */
 .Section-fontsItemWrap {
   background:$colorWhite;
   border-radius:$global-radius;

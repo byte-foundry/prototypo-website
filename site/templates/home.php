@@ -131,10 +131,11 @@
 
 			<div class="Section-fontsInfos">
 				<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[0][fontdescription]; ?></div>
+				<!-- Remove for the pre-release website
 				<a href="<?php if (!empty($fonts[0][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]) ?>"
 				 class="callToAction Section-fontsDownload text-center">
 				<?php echo $page->downloadButtonLabel()->kirbytext(); ?>
-				</a>
+				</a> -->
 			</div>
 			</div>
 		</li>
@@ -146,10 +147,11 @@
 
 			<div class="Section-fontsInfos">
 				<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[1][fontdescription]; ?></div>
+				<!-- Remove for the pre-release website
 				<a href="<?php if (!empty($fonts[1][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]) ?>"
 				 class="callToAction Section-fontsDownload text-center">
 				<?php echo $page->downloadButtonLabel()->kirbytext(); ?>
-				</a>
+				</a> -->
 			</div>
 			</div>
 		</li>
@@ -161,10 +163,11 @@
 
 			<div class="Section-fontsInfos">
 				<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[2][fontdescription]; ?></div>
+				<!-- Remove for the pre-release website
 				<a href="<?php if (!empty($fonts[2][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]) ?>"
 				 class="callToAction Section-fontsDownload text-center">
 				<?php echo $page->downloadButtonLabel()->kirbytext(); ?>
-				</a>
+				</a> -->
 			</div>
 			</div>
 		</li>
