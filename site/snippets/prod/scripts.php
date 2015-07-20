@@ -1,4 +1,4 @@
-<script src="/assets/dist/scripts.min-a15668dc60.js"></script>
+<script src="/assets/dist/scripts.min-ea6797b45d.js"></script>
 
 <script type="text/javascript">
   WebFontConfig = {
