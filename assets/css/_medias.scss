@@ -144,9 +144,9 @@ only screen and (min-resolution:144dpi) {
 		right: 65px;
 		top: 0;
 	}
-	.Section-homepageDiscoverFeaturesLine {
-		display: none;
-	}
+	// .Section-homepageDiscoverFeaturesLine {
+	// 	display: none;
+	// }
 	.Article-content,
 	.Article-header {
 		padding-left: 50px;
@@ -289,9 +289,9 @@ only screen and (min-resolution:144dpi) {
 	}
 }
 @media only screen and (max-width:480px) {
-	.Nav-logoInner {
-		display: none;
-	}
+	// .Nav-logoInner {
+	// 	display: none;
+	// }
 	.Nav-callToActionCreateYourFont {
 		left: 75px;
 		right: 75px;

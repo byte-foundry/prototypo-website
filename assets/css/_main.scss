@@ -22,7 +22,8 @@
                              $colorWhite);
 }
 
-.Section-newsletter {
+.Section-newsletter,
+.Section-subscribed {
   background:linear-gradient(to bottom right,
                              adjust-hue($mainBackgroundColor, 35deg),
                              adjust-hue($mainBackgroundColor,0deg));
@@ -455,6 +456,13 @@
   margin-top:30px
 }
 
+.switch-label {
+    font-weight: bold;
+    position: relative;
+    margin-right: 7px;
+    top: -7px;
+}
+
 .SectionNewsletterIn {
   margin-top:30px;
   border-top:solid 1px rgba($colorBright,.2);
@@ -468,11 +476,15 @@
   margin-bottom: 20px;
 }
 
-
-
-
-
-
+#subscribed {
+    display: none;
+    &:target {
+        display: block;
+        & + .Section-newsletter {
+            display: none;
+        }
+    }
+}
 
 
 .Section-fonts {
@@ -526,11 +538,11 @@
 .Section-fontsName {
   margin-top:5px;
 }
-
-.Section-fontsDescription {
-  border-bottom:solid 1px $colorLightGray;
-  padding-bottom:20px;
-}
+//
+// .Section-fontsDescription {
+//   border-bottom:solid 1px $colorLightGray;
+//   padding-bottom:20px;
+// }
 
 .Section-fontsDownload {
   margin-top:20px

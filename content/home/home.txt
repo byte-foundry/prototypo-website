@@ -44,7 +44,7 @@ Section1txt: Type design should not be a tedious and repetitive activity. Protot
 Fonts: 
 
 - 
-  fontfile: prototypo-venus-8.otf
+  fontfile: venus-preview.svg
   fontname: Venus
   fontdescription: >
     The perfect sans serif, now with
@@ -53,18 +53,16 @@ Fonts:
   fontsize: 100
   fontlineheight: 120
 - 
-  fontfile: comic.ttf
-  fontname: Comic Sans
+  fontfile: john-fell-preview.svg
+  fontname: John Fell
   fontdescription: "Yes, you can. But you shouldn't."
-  fontstring: Xy
-  fontsize: 100
+  fontstring: Qn
+  fontsize: 14
   fontlineheight: 120
 - 
-  fontfile:
-  fontname: Helvetica
-  fontdescription: >
-    The beautiful font, rebuilt with
-    Prototypo
+  fontfile: dunno-preview.png
+  fontname: The next typeface
+  fontdescription: Prototypo will include a third font!
   fontstring: Abc
   fontsize: 100
   fontlineheight: 150
@@ -189,3 +187,11 @@ Theytalkaboutus:
   ttauname: Creanum
   ttauurl: >
     http://www.creanum.fr/news/toutes-les-news/id/1829/prototypo-io-une-application-web-pour-dessiner-des-polices.aspx
+
+----
+
+Sectionsubscribedtitle: Thank you for subscribing : )
+
+----
+
+Sectionsubscribedsubtitle: We also post more frequent updates on <a href="https://twitter.com/prototypoApp" target="_blank">Twitter, <a href="https://www.facebook.com/prototypoApp" target="_blank">Facebook</a> and our <a href="/blog">blog</a>.

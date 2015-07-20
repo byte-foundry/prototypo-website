@@ -55,8 +55,8 @@
   color: rgba(0, 0, 0, 0.03); }
 
 /*
-  
-  
+
+
   border-radius:3px;
   background:white;
   outline:none;
@@ -67,7 +67,7 @@
   display:inline-block;
   border:none;
   border-bottom:solid 3px white
-  
+
   */
 meta.foundation-version {
   font-family: "/5.5.1/"; }
@@ -3743,7 +3743,7 @@ button:focus {
   -ms-user-select: none;
   user-select: none; }
   .switch label {
-    background: #DDDDDD;
+    background: white;
     color: transparent;
     cursor: pointer;
     display: block;
@@ -3763,7 +3763,7 @@ button:focus {
       margin-left: 0;
       margin-right: 0; }
   .switch label:after {
-    background: #FFFFFF;
+    background: #49e4a9;
     content: "";
     display: block;
     height: 1.5rem;
@@ -3781,7 +3781,7 @@ button:focus {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .switch input:checked + label {
-    background: #008CBA; }
+    background: white; }
   .switch input:checked + label:after {
     left: 2.25rem; }
   .switch label {
@@ -3794,11 +3794,11 @@ button:focus {
     left: 2.25rem; }
   .switch label {
     color: transparent;
-    background: #DDDDDD; }
+    background: white; }
   .switch label:after {
-    background: #FFFFFF; }
+    background: #49e4a9; }
   .switch input:checked + label {
-    background: #008CBA; }
+    background: white; }
   .switch.large label {
     height: 2.5rem;
     width: 5rem; }
@@ -7260,7 +7260,8 @@ input[type="password"]:focus {
 .Section-theytalkaboutus {
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), white); }
 
-.Section-newsletter {
+.Section-newsletter,
+.Section-subscribed {
   background: linear-gradient(to bottom right, #49c5e4, #49e4a9); }
 
 .Pricing {
@@ -7591,6 +7592,12 @@ input[type="password"]:focus {
   font-weight: 400;
   margin-top: 30px; }
 
+.switch-label {
+  font-weight: bold;
+  position: relative;
+  margin-right: 7px;
+  top: -7px; }
+
 .SectionNewsletterIn {
   margin-top: 30px;
   border-top: solid 1px rgba(255, 255, 255, 0.2);
@@ -7601,6 +7608,13 @@ input[type="password"]:focus {
 .SectionNewsletterInHeader {
   margin-top: 20px;
   margin-bottom: 20px; }
+
+#subscribed {
+  display: none; }
+  #subscribed:target {
+    display: block; }
+    #subscribed:target + .Section-newsletter {
+      display: none; }
 
 .Section-fonts {
   clear: both;
@@ -7645,10 +7659,6 @@ input[type="password"]:focus {
 
 .Section-fontsName {
   margin-top: 5px; }
-
-.Section-fontsDescription {
-  border-bottom: solid 1px gainsboro;
-  padding-bottom: 20px; }
 
 .Section-fontsDownload {
   margin-top: 20px; }
@@ -8473,8 +8483,6 @@ input[type="password"]:focus {
     position: absolute;
     right: 65px;
     top: 0; }
-  .Section-homepageDiscoverFeaturesLine {
-    display: none; }
   .Article-content,
   .Article-header {
     padding-left: 50px;
@@ -8582,8 +8590,6 @@ input[type="password"]:focus {
     display: none; } }
 
 @media only screen and (max-width: 480px) {
-  .Nav-logoInner {
-    display: none; }
   .Nav-callToActionCreateYourFont {
     left: 75px;
     right: 75px;
