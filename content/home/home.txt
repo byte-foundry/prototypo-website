@@ -47,15 +47,15 @@ Fonts:
   fontfile: venus-preview.svg
   fontname: Venus
   fontdescription: >
-    The perfect sans serif, now with
-    infinite variations.
+    A perfect sans serif, with infinite
+    variations.
   fontstring: G2
   fontsize: 100
   fontlineheight: 120
 - 
   fontfile: john-fell-preview.svg
   fontname: John Fell
-  fontdescription: "Yes, you can. But you shouldn't."
+  fontdescription: An Elzevir as we all like it.
   fontstring: Qn
   fontsize: 14
   fontlineheight: 120
