@@ -500,8 +500,7 @@
 }
 
 
-// Remove for the pre-release website
-/* .Section-fontsItem:after {
+ .Section-fontsItem:after {
   content:"";
   position:absolute;
   top:-10px;
@@ -513,7 +512,7 @@
   border-radius:50%;
   z-index:10
 }
- */
+
 .Section-fontsItemWrap {
   background:$colorWhite;
   border-radius:$global-radius;
@@ -538,11 +537,11 @@
 .Section-fontsName {
   margin-top:5px;
 }
-//
-// .Section-fontsDescription {
-//   border-bottom:solid 1px $colorLightGray;
-//   padding-bottom:20px;
-// }
+
+.Section-fontsDescription {
+  border-bottom:solid 1px $colorLightGray;
+  padding-bottom:20px;
+}
 
 .Section-fontsDownload {
   margin-top:20px

@@ -7625,19 +7625,18 @@ input[type="password"]:focus {
 .Section-fontsItem {
   position: relative; }
 
-/* .Section-fontsItem:after {
-  content:"";
-  position:absolute;
-  top:-10px;
-  right:-5px;
-  width:70px;
-  height:70px;
-  background:url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
-  box-shadow:0 2px 40px rgba(adjust-hue($mainBackgroundColor, 35deg),.4);
-  border-radius:50%;
-  z-index:10
-}
- */
+.Section-fontsItem:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  width: 70px;
+  height: 70px;
+  background: url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  box-shadow: 0 2px 40px rgba(73, 197, 228, 0.4);
+  border-radius: 50%;
+  z-index: 10; }
+
 .Section-fontsItemWrap {
   background: white;
   border-radius: 3px;
@@ -7659,6 +7658,10 @@ input[type="password"]:focus {
 
 .Section-fontsName {
   margin-top: 5px; }
+
+.Section-fontsDescription {
+  border-bottom: solid 1px gainsboro;
+  padding-bottom: 20px; }
 
 .Section-fontsDownload {
   margin-top: 20px; }
