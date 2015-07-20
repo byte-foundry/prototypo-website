@@ -33,7 +33,7 @@
 
 					<div class="DemoControls">
 						<div class="DemoControls-PotentiometerItem">
-							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
+							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
 							<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
 						</div>
 
@@ -43,7 +43,7 @@
 						</div>
 
 						<div class="DemoControls-PotentiometerItem">
-							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
+							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
 							<input type="range" data-param="serifHeight" class="DemoControls-Potentiometer" min="0" max="70" value="20" step="1" />
 						</div>
 

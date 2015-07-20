@@ -55,7 +55,9 @@ Fonts:
 - 
   fontfile: john-fell-preview.svg
   fontname: John Fell
-  fontdescription: An Elzevir as we all like it.
+  fontdescription: >
+    An Elzevir as we all like it, move it,
+    move it.
   fontstring: Qn
   fontsize: 14
   fontlineheight: 120

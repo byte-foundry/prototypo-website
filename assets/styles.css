@@ -7465,7 +7465,7 @@ input[type="password"]:focus {
 .DemoControls-PotentiometerPicto {
   position: absolute;
   width: 12px;
-  top: -3px;
+  top: -1px;
   left: 0; }
 
 .DemoControls-Potentiometer {
