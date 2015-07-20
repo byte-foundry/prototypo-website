@@ -9,7 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - home
   - faq/when-the-v1-0-will-be-available
   - null
   - home
-token: ed7748bbc023a623c13835568cb55e777a2823cb
+token: 69bc9e54d930dd48533458a4b83eb165cefb5bd1

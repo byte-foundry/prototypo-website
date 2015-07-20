@@ -144,9 +144,9 @@ only screen and (min-resolution:144dpi) {
 		right: 65px;
 		top: 0;
 	}
-	.Section-homepageDiscoverFeaturesLine {
-		display: none;
-	}
+	// .Section-homepageDiscoverFeaturesLine {
+	// 	display: none;
+	// }
 	.Article-content,
 	.Article-header {
 		padding-left: 50px;
@@ -264,11 +264,11 @@ only screen and (min-resolution:144dpi) {
 	}
 	.BlogPagination-prev {
 		float: left;
-		background: url("img/pictos/pictoArrowToLeftWhite.svg") no-repeat 50% 12px / 20px $blocSecondBackgroundColor;
+		background: url("/assets/img/pictos/pictoArrowToLeftWhite.svg") no-repeat 50% 12px / 20px $blocSecondBackgroundColor;
 	}
 	.BlogPagination-next {
 		float: right;
-		background: url("img/pictos/pictoArrowToRightWhite.svg") no-repeat 50% 12px / 20px $blocSecondBackgroundColor;
+		background: url("/assets/img/pictos/pictoArrowToRightWhite.svg") no-repeat 50% 12px / 20px $blocSecondBackgroundColor;
 	}
 	.Section-homepageGetStartedLine {
 		display: none;
@@ -289,9 +289,9 @@ only screen and (min-resolution:144dpi) {
 	}
 }
 @media only screen and (max-width:480px) {
-	.Nav-logoInner {
-		display: none;
-	}
+	// .Nav-logoInner {
+	// 	display: none;
+	// }
 	.Nav-callToActionCreateYourFont {
 		left: 75px;
 		right: 75px;
@@ -383,10 +383,10 @@ only screen and (min-resolution:144dpi) {
 		content: attr(href) !important;
 	}
 	.Social-itemTwitter {
-		background: url("img/pictos/pictoSocialTwitterDark.svg") no-repeat left center / 20px !important;
+		background: url("/assets/img/pictos/pictoSocialTwitterDark.svg") no-repeat left center / 20px !important;
 	}
 	.Social-itemFacebook {
-		background: url("img/pictos/pictoSocialFacebookDark.svg") no-repeat left center / 20px !important;
+		background: url("/assets/img/pictos/pictoSocialFacebookDark.svg") no-repeat left center / 20px !important;
 	}
 	.Section-fontsItem {
 		width: 33%;
@@ -405,7 +405,7 @@ only screen and (min-resolution:144dpi) {
 		display: inline-block;
 		width: 65px;
 		height: 65px;
-		background: url("img/prototypoIconWhite.svg") center center no-repeat $colorBlack !important;
+		background: url("/assets/img/prototypoIconWhite.svg") center center no-repeat $colorBlack !important;
 		background-size: 26px !important;
 	}
 	.Section {

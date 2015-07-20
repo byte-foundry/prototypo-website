@@ -22,7 +22,8 @@
                              $colorWhite);
 }
 
-.Section-newsletter {
+.Section-newsletter,
+.Section-subscribed {
   background:linear-gradient(to bottom right,
                              adjust-hue($mainBackgroundColor, 35deg),
                              adjust-hue($mainBackgroundColor,0deg));
@@ -53,7 +54,7 @@
 }
 
 .Thanks {
-  background:url('img/ourAwesomeBackers.png') repeat-x rgb(20,20,20);
+  background:url('/assets/img/ourAwesomeBackers.png') repeat-x rgb(20,20,20);
 }
 
 .Gallery {
@@ -161,7 +162,7 @@
 
 .Section-homepageGetStartedLineCallToAction {
   padding-right:50px;
-  background-image:url(img/pictos/pictoArrowToRightWhite.svg) !important;
+  background-image:url(/assets/img/pictos/pictoArrowToRightWhite.svg) !important;
   background-repeat:no-repeat !important;
   background-position:112px center;
   background-size:18px !important;
@@ -272,7 +273,7 @@
   position:absolute;
 
   width:12px;
-  top:-3px;
+  top:-1px;
   left:0;
 }
 
@@ -281,7 +282,7 @@
   position: absolute;
   top: 6px;
   left: 25px;
-  width: 150px;
+  width: 200px;
   height: 17px;
   margin: -4px 0;
   border-radius: 9px;
@@ -455,6 +456,13 @@
   margin-top:30px
 }
 
+.switch-label {
+    font-weight: bold;
+    position: relative;
+    margin-right: 7px;
+    top: -7px;
+}
+
 .SectionNewsletterIn {
   margin-top:30px;
   border-top:solid 1px rgba($colorBright,.2);
@@ -468,11 +476,15 @@
   margin-bottom: 20px;
 }
 
-
-
-
-
-
+#subscribed {
+    display: none;
+    &:target {
+        display: block;
+        & + .Section-newsletter {
+            display: none;
+        }
+    }
+}
 
 
 .Section-fonts {
@@ -487,19 +499,21 @@
   position:relative;
 }
 
-.Section-fontsItem:after {
+
+// Remove for the pre-release website
+/* .Section-fontsItem:after {
   content:"";
   position:absolute;
   top:-10px;
   right:-5px;
   width:70px;
   height:70px;
-  background:url(img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  background:url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
   box-shadow:0 2px 40px rgba(adjust-hue($mainBackgroundColor, 35deg),.4);
   border-radius:50%;
   z-index:10
 }
-
+ */
 .Section-fontsItemWrap {
   background:$colorWhite;
   border-radius:$global-radius;
@@ -524,11 +538,11 @@
 .Section-fontsName {
   margin-top:5px;
 }
-
-.Section-fontsDescription {
-  border-bottom:solid 1px $colorLightGray;
-  padding-bottom:20px;
-}
+//
+// .Section-fontsDescription {
+//   border-bottom:solid 1px $colorLightGray;
+//   padding-bottom:20px;
+// }
 
 .Section-fontsDownload {
   margin-top:20px
@@ -597,11 +611,6 @@
   vertical-align: middle;
     max-height: 100px;
     max-width: 100%;
-
-  -webkit-filter: grayscale(100%);
-filter: grayscale(100%);
-filter: gray;
-filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
 }
 
 .Section-theytalkaboutusTitle {
@@ -978,13 +987,13 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   opacity:1;
 }
 
-.MembersItem-linksItem-query { background-image:url(img/pictos/pictoSocialQueryDark.svg); }
-.MembersItem-linksItem-facebook { background-image:url(img/pictos/pictoSocialFacebookLightDark.svg); }
-.MembersItem-linksItem-twitter { background-image:url(img/pictos/pictoSocialTwitterDark.svg); }
-.MembersItem-linksItem-github { background-image:url(img/pictos/pictoSocialGitHubDark.svg); }
-.MembersItem-linksItem-vimeo { background-image:url(img/pictos/pictoSocialVimeoDark.svg); }
-.MembersItem-linksItem-website { background-image:url(img/pictos/pictoSocialWebsiteDark.svg); }
-.MembersItem-linksItem-mail { background-image:url(img/pictos/pictoSocialMailDark.svg); }
+.MembersItem-linksItem-query { background-image:url(/assets/img/pictos/pictoSocialQueryDark.svg); }
+.MembersItem-linksItem-facebook { background-image:url(/assets/img/pictos/pictoSocialFacebookLightDark.svg); }
+.MembersItem-linksItem-twitter { background-image:url(/assets/img/pictos/pictoSocialTwitterDark.svg); }
+.MembersItem-linksItem-github { background-image:url(/assets/img/pictos/pictoSocialGitHubDark.svg); }
+.MembersItem-linksItem-vimeo { background-image:url(/assets/img/pictos/pictoSocialVimeoDark.svg); }
+.MembersItem-linksItem-website { background-image:url(/assets/img/pictos/pictoSocialWebsiteDark.svg); }
+.MembersItem-linksItem-mail { background-image:url(/assets/img/pictos/pictoSocialMailDark.svg); }
 
 .MembersItem-infos {
   background:$colorLighterGray;
@@ -1026,7 +1035,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 
 .Article-header {
   padding:45px 100px 35px 100px;
-  background:url(img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right $blocSecondBackgroundColor;
+  background:url(/assets/img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right $blocSecondBackgroundColor;
 }
 
 .Article-tags {
@@ -1267,7 +1276,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
 
 .Question-header {
   padding:15px 40px 15px 70px;
-  background:url(img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px $colorWhite;
+  background:url(/assets/img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px $colorWhite;
   cursor:pointer;
   position:relative;
 }
@@ -1351,7 +1360,7 @@ filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org
   right:-5px;
   width:70px;
   height:70px;
-  background:url(img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  background:url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
   box-shadow:0 2px 40px rgba(adjust-hue($mainBackgroundColor, 35deg),.4);
   border-radius:50%;
   z-index:10

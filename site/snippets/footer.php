@@ -2,7 +2,7 @@
 
     <img class="Footer-logo" src="<?php echo url('assets/img/byteFoundryLogoWhite.svg'); ?>" alt="Byte-Foundry">
 
-      <?php snippet('menu', array('prefixe'=>'Footer-')) ?>
+
 
     <div class="Footer-copyright"><?php echo $site->copyright()->kirbytext() ?></div>
 
@@ -13,8 +13,10 @@
 
   </footer>
 
-
-  <?php echo js('assets/scripts.min.js') ?>
+  <?php
+      // poor man's env variables (serve dev files when php-cli is used)
+      snippet( php_sapi_name() === 'cli-server' ? 'dev/scripts' : 'prod/scripts' );
+  ?>
 
 </body>
 </html>

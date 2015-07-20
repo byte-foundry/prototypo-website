@@ -17,7 +17,7 @@ in real time!
 
 ----
 
-Textlineunderdemo: Discover all Prototypo features
+Textlineunderdemo: <a href="https://vimeo.com/86406495" style="color: white" target="_blank">Watch the video of Prototypo presentation on Vimeo</a>
 
 ----
 
@@ -44,27 +44,27 @@ Section1txt: Type design should not be a tedious and repetitive activity. Protot
 Fonts: 
 
 - 
-  fontfile: pt_sans-web-bold.ttf
-  fontname: Garamond
+  fontfile: venus-preview.svg
+  fontname: Venus
   fontdescription: >
-    The perfect sans serif, now with
-    infinite variations.
-  fontstring: Az
+    A perfect sans serif, with infinite
+    variations.
+  fontstring: G2
   fontsize: 100
   fontlineheight: 120
 - 
-  fontfile: comic.ttf
-  fontname: Comic Sans
-  fontdescription: "Yes, you can. But you shouldn't."
-  fontstring: Xy
-  fontsize: 100
+  fontfile: john-fell-preview.svg
+  fontname: John Fell
+  fontdescription: >
+    An Elzevir as we all like it, move it,
+    move it.
+  fontstring: Qn
+  fontsize: 14
   fontlineheight: 120
 - 
-  fontfile:
-  fontname: Helvetica
-  fontdescription: >
-    The beautiful font, rebuilt with
-    Prototypo
+  fontfile: dunno-preview.png
+  fontname: The next typeface
+  fontdescription: Prototypo will include a third font!
   fontstring: Abc
   fontsize: 100
   fontlineheight: 150
@@ -155,6 +155,31 @@ Section4subtitle:
 Theytalkaboutus: 
 
 - 
+  ttauimg: gray-mashable.png
+  ttauname: Mashable
+  ttauurl: >
+    http://mashable.com/2014/05/04/prototypo-fonts/
+- 
+  ttauimg: gray-wired.png
+  ttauname: WIRED
+  ttauurl: >
+    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
+- 
+  ttauimg: gray-mouv.png
+  ttauname: "Mouv'"
+  ttauurl: >
+    http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo
+- 
+  ttauimg: gray-creapills.png
+  ttauname: Creapills
+  ttauurl: >
+    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
+- 
+  ttauimg: gray-linuxfr.png
+  ttauname: LinuxFR
+  ttauurl: >
+    http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
+- 
   ttauimg: gray-framasoft.png
   ttauname: Framasoft
   ttauurl: >
@@ -164,28 +189,11 @@ Theytalkaboutus:
   ttauname: Creanum
   ttauurl: >
     http://www.creanum.fr/news/toutes-les-news/id/1829/prototypo-io-une-application-web-pour-dessiner-des-polices.aspx
-- 
-  ttauimg: gray-mashable.png
-  ttauname: Mashable
-  ttauurl: >
-    http://mashable.com/2014/05/04/prototypo-fonts/
-- 
-  ttauimg: gray-linuxfr.png
-  ttauname: LinuxFR
-  ttauurl: >
-    http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
-- 
-  ttauimg: gray-creapills.png
-  ttauname: Creapills
-  ttauurl: >
-    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
-- 
-  ttauimg: gray-mouv.png
-  ttauname: "Mouv'"
-  ttauurl: >
-    http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo
-- 
-  ttauimg: gray-wired.png
-  ttauname: WIRED
-  ttauurl: >
-    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
+
+----
+
+Sectionsubscribedtitle: Thank you for subscribing : )
+
+----
+
+Sectionsubscribedsubtitle: We also post more frequent updates on <a href="https://twitter.com/prototypoApp" target="_blank">Twitter, <a href="https://www.facebook.com/prototypoApp" target="_blank">Facebook</a> and our <a href="/blog">blog</a>.

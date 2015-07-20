@@ -625,8 +625,8 @@ $large-down: "#{$screen} and (max-width:#{lower-bound($large-range)})";
 // $form-spacing: rem-calc(16);
 
 /*
-  
-  
+
+
   border-radius:3px;
   background:white;
   outline:none;
@@ -637,7 +637,7 @@ $large-down: "#{$screen} and (max-width:#{lower-bound($large-range)})";
   display:inline-block;
   border:none;
   border-bottom:solid 3px white
-  
+
   */
 
 // We use these to style the labels in different ways
@@ -1275,7 +1275,7 @@ $large-down: "#{$screen} and (max-width:#{lower-bound($large-range)})";
 // $include-html-form-classes: $include-html-classes;
 
 // Controlling background color for the switch container
-// $switch-bg: $gainsboro;
+$switch-bg: white;
 
 // We use these to control the switch heights for our default classes
 // $switch-height-tny: 1.5rem;
@@ -1285,10 +1285,10 @@ $large-down: "#{$screen} and (max-width:#{lower-bound($large-range)})";
 // $switch-bottom-margin: 1.5rem;
 
 // We use these to style the switch-paddle
-// $switch-paddle-bg: $white;
+$switch-paddle-bg: #49e4a9;
 // $switch-paddle-transition-speed: .15s;
 // $switch-paddle-transition-ease: ease-out;
-// $switch-active-color: $primary-color;
+$switch-active-color: white;
 
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -

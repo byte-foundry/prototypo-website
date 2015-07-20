@@ -10,5 +10,5 @@ language: en
 role: admin
 token: 6c632fa64e20f748c31601cbccbbd76cad271bf6
 history:
-  - null
   - home
+  - null
