@@ -6834,7 +6834,8 @@ input:focus {
 .textType-subtitle {
   font-family: "Playfair Display", inherit;
   font-weight: normal;
-  font-style: italic; }
+  font-style: italic;
+  margin-top: 0.5em; }
 
 .textType-txt {
   font-family: "PT Sans", inherit; }

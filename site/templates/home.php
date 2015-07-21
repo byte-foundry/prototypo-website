@@ -70,7 +70,7 @@
 
 
 			<div class="Section-homepageDiscoverFeaturesLine text-center textSize-txt-large">
-				<?php echo $page->textLineUnderDemo()->kirbytext(); ?>
+				<!-- <?php echo $page->textLineUnderDemo()->kirbytext(); ?> -->
 				<fieldset class="switch round large marginTop30" tabindex="0">
 					<span class="switch-label">Demo</span>
 					<input id="switchDemo" class="switchAction" type="checkbox">
@@ -85,7 +85,7 @@
 
 				<header class="SectionNewsletterInHeader text-center fitToContent">
 					<h1 class="textType-title textSize-title-small colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
-				<h3 class="textType-subtitle textSize-txt-xlarge colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
+					<h3 class="textType-subtitle textSize-txt-xlarge colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
 				</header>
 
 				<div class="Section-wrapTxt textType-txt fitToContent">

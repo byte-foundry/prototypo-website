@@ -33,11 +33,11 @@ Section1title: A parametric type design tool
 
 ----
 
-Section1subtitle: Sketch ideas, export fonts
+Section1subtitle: Two parametric typefaces to start with
 
 ----
 
-Section1txt: Type design should not be a tedious and repetitive activity. Prototypo includes over twenty parameters to modify all built-in glyphs at once. Hobbyist and professional type designers can play, experiment and refine a wide range of body text fonts.
+Section1txt: 
 
 ----
 
@@ -63,8 +63,10 @@ Fonts:
   fontlineheight: 120
 - 
   fontfile: dunno-preview.png
-  fontname: The next typeface
-  fontdescription: Prototypo will include a third font!
+  fontname: And more to come!
+  fontdescription: >
+    More styles will be added in future
+    versions.
   fontstring: Abc
   fontsize: 100
   fontlineheight: 150
@@ -120,7 +122,7 @@ Features:
   featuredescription: >
     We work on more advanced great features,
     like spacing/kerning, individualize
-    parameters, and more! See our roadmap.
+    parameters, and more!
 
 ----
 

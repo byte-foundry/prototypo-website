@@ -9,10 +9,10 @@ password: >
 language: en
 role: admin
 history:
+  - null
+  - home
   - blog/second-article
   - >
     blog/prototypo-update-4-overcoming-dilemmas
   - blog/prototypo-update-3-first-fonts
-  - blog/prototypo-update-1
-  - blog/i-didnt-shoot-the-serif
 token: 69bc9e54d930dd48533458a4b83eb165cefb5bd1

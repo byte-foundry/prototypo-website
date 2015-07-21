@@ -55,11 +55,11 @@
       <?php snippet('menu') ?>
 
   		<div class="Social">
-  			<a href="<?php echo $site->facebook()->html() ?>" class="Social-item Social-itemFacebook">
+  			<a href="<?php echo $site->facebook()->html() ?>" target="_blank" class="Social-item Social-itemFacebook">
     			<span class="show-for-sr">Facebook</span>
     		</a>
 
-    		<a href="<?php echo $site->twitter()->html() ?>" class="Social-item Social-itemTwitter">
+    		<a href="<?php echo $site->twitter()->html() ?>" target="_blank" class="Social-item Social-itemTwitter">
       		<span class="show-for-sr">Twitter</span>
         </a>
   		</div>
