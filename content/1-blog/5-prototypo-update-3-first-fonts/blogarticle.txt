@@ -1,0 +1,31 @@
+Title: Prototypo Update #3, First fonts
+
+----
+
+Tags: update
+
+----
+
+Date: 2014-02-03
+
+----
+
+Subtitle: Prototypo can now be used to start designing a font and the first beta invites have been sent.
+
+----
+
+Contentarticle: 
+
+(image: capture-decran-2015-07-20-a-17.21.59.png)
+
+The above texts use fonts that have been exported from Prototypo, using only the built-in presets. Prototypo currently only exports .svg font files, so modifying them with another type design software might require conversion to .otf  using (link: http://fontforge.github.io/en-US/ text: fontforge) or the online service (link: http://www.freefontconverter.com/ text: freefontconverter). (link: https://en.wikipedia.org/wiki/Letter-spacing text: Spacing) and (link: https://en.wikipedia.org/wiki/Kerning text: Kerning) (problematic in Chrome, investigations underway) have then been tuned using FontLab and exported to .otf, finally a complete webfont package has been generated on (link: http://www.fontsquirrel.com/tools/webfont-generator text: fontsquirrel).
+
+### From beta to 1.0
+
+Prototypo will never replace a type designer but it is already a useful font prototyping tool (hence the name), allowing to quickly experiment and play with glyph shapes, regardless of a users’ knowledge or experience in type design. This was the milestone set for the first beta.
+
+The road to 1.0 consists in reducing the number of extra steps and tools required between prototyping the font and using it professionally. The workflow will not only be streamlined, but it will also allow users to iterate on their work: once outline and spacing modification becomes possible right inside Prototypo, it will be possible to go back and forth between prototyping and tuning phases.
+
+### Public beta is coming
+
+A limited number of beta invites have been sent to make sure that Prototypo is not only useful but also easy to use, before it is released. Work is already underway to address early feedback, and as soon as the main issues are solved, the focus will shift on preparing an effective campaign to fund the development of Prototypo 1.0

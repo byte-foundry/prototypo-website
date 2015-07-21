@@ -1,0 +1,58 @@
+Title: I didn’t shoot the serif
+
+----
+
+Tags: design principle
+
+----
+
+Date: 2013-11-01
+
+----
+
+Subtitle: A serif is one of the most significant characteristic to identify a typeface or define its style.
+
+----
+
+Contentarticle: 
+
+Although many more variables are involved in each class of the Vox-ATypI classification1, such as the thickness ratio or just the drawing itself, a different kind of serif immediately gives a new look to the letter, the word and the paragraph.
+
+In light of this observation began the search for a method to draw a structure able to morph into all styles of serif and produce infinite variations between them.
+
+## Pimp My Serif
+
+The first version developed by YM in 2009, “Pimp My Serif”, allowed to do just that.
+
+(image: pimp-my-serif-1.png)
+
+You can already give this mini-app a try with downloading the desktop version: (file: pimpmyserif_osx.zip) / (file: pimpmyserif_windows.zip)
+
+As rough as it was, rendering was satisfying enough, even when it resulted in abstract shapes, far from historical serifs canons.
+
+(image: mustache-serif.png)
+
+As a character has its own parameters (stylistic variations such as thickness or functional variants with X-height), we had to determine which variables could be applied to a serif in order to generate a lot of different styles, sometimes very far from each others.
+
+Besides the obvious parameters such as the width or height of a serif, more technical parameters were added. The curviness is the perfect example as it is not simply a matter of a horizontal or vertical translation: the function needs to change the coordinates of the segment endpoints and vary the relationship between the vector anchors. It also needs to handle the influence that these changes may have on neighboring points.
+
+After some trials and errors, here is the current model:
+
+(image: serif2.gif)
+
+*The growing complexity of serif-structure in Prototypo Beta*
+ 
+
+This model could be improved, but it already allows for a large number of styles.
+
+## Dude, you draw 11 dots for a grotesk?
+
+Of course not.
+
+This is the beauty of code generated fonts: all points that do not affect a segment or that overlap each others, are automatically removed before export. The final outline remains clean.
+
+(image: serif-before-export.png)
+
+The version 1.0 of Prototypo should allow users to edit this serif template or create their owns to suit their needs.
+
+Stay tuned!

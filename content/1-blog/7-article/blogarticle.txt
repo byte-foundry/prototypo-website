@@ -1,0 +1,89 @@
+Title: Lookatme Interview of Prototypo
+
+----
+
+Tags: interview
+
+----
+
+Date: 2014-05-09
+
+----
+
+Subtitle: 
+
+----
+
+Contentarticle: 
+
+*We’ve been interviewed by Artem Luchko about Prototypo, and our answers have been published on the russian blog (link: http://www.lookatme.ru/mag/live/opinion/203811-prototypo text: LookAtMe.ru). We are posting them here in English.*
+
+### At first, when I saw your project, I thought how simple and cool it is, and I was surprised why nobody did it before. Tell please, how the idea came to you? Where did you get your passion for fonts? And what was your inspiration?
+
+Yannick got into type design and programming during his final year at the ESAD Strasbourg. Students and beginners often start by modifying existing typefaces or build modular fonts (assembling font pieces like Lego bricks), but there are legal issues to the first approach and modular fonts are usually limited to titles. Since type design starts with repetitive tasks governed by a set of rules (historical and legibility rules), Yannick realized that there was another way: he could use code to draw original letters quickly.
+
+(image: pimp-my-serif-1.png)
+​
+
+Drawing serifs for all letters of the alphabet is one of the most repetitive tasks in type design. So his first experiment, “Pimp My Serif”, allowed to do just that: draw almost any shape of serif using seven sliders. Satisfied by the result, Yannick decided that his final year project would be to create an application able to modify whole letters of a complete alphabet.
+
+(image: prototyp-0-1.jpg)
+​
+​
+​The result was rather impressive ((link: https://vimeo.com/72371197 text: see the video)). Yannick graduated with honors and got invited to different events to present “prototyp-0″, as it was named at the time. (then Louis-Rémi joined the adventure and Prototypo was redesigned as a webapp)
+
+### Why people need this tool if there are so many fonts?
+
+Why do people still write books when there are whole libraries full of them? Because there will always be authors willing to create, and there will always be people looking for novelty.
+
+There are also people ready to look at hundreds of fonts before picking the right one for their latest graphic design. We hope that some day it will be faster to create their own custom font with Prototypo.
+
+### Don’t you think that the fonts basically decreased in value nowadays and your tool is emphasizing it?
+
+It’s true that there are a lot of fonts available for free out there. But original fonts of good quality will always stand out and be worth paying for. We don’t think Prototypo will change this situation significantly. Just like any other tool, it will be able to produce average fonts and better ones, depending on the authors’ experience and work.
+
+### As I understand, it will be more useful for beginners than for professionals. If I haven’t learned anything about serifs, side-bearings, and kerning, could I create fair font with Prototypo?
+
+There’s still work to do before spacing and kerning is applied automatically and correctly in Prototypo. And we also need to let users modify them manually, as well as letters outline themselves. Once that’s done, we believe that Prototypo will be suited for beginners and professionals alike.
+
+### Actually I think this tool will not make me a font designer as well as Instagram couldn’t make me a good photographer, – how do you think?
+
+There’s an effective way to make people good at any creative activity:
+
+- make it look fun, not scary, so that they actually give it a try;
+- provide guidance so that they can improve,
+- offer sources of inspiration so that they stay motivated and keep experimenting.
+
+We believe Prototypo can be a valuable tool along that path.
+
+### What professional community think about your initiative? Have you faced with criticism?
+
+We’ve received very positive feedback from major French and international professionals such as Jean-Baptiste Levée, Jean-François Porchez or Erik Spiekermann. But we also have to face a healthy dose of skepticism and criticism: we’ve been told that a generated font couldn’t be as good as a manually crafted one, and that this app would lead to the production of a large quantity of poorly designed typefaces.
+Of course, a skilled type designer will make the difference, Prototypo is just a tool that aims at streamlining the creation process. And we will work hard so that it encourages the creation of good fonts with a large support of accented characters and non-Latin alphabets.
+
+### Why did you decide to start open-source project?
+
+It was a very natural choice. Louis-Rémi has always published the code he produced on his spare time under open-source licenses, because he always developed using open-source software. And Yannick got into programming with Processing, which has a vibrant community very inclined to share.
+
+### What is the main challenge to create Prototypo? What are the difficulties (except funding) did you faced to?
+
+Currently we are displaying letters in the application not as normal text but as vector shapes. It’s easy to do and efficient enough to work in most browsers, but it cannot be used to display complete paragraphs or pages. The big challenge is to display normal text instead, but it implies generating font files in real time, right in the browser. Luckily enough we’ve been able to join forces with other open-source developers and we have good hopes that it will soon be feasible.
+
+On the design side, our focus will be on improving the design of the default font and extending the character set. It’s a long term, maybe endless task.
+ 
+### Tell please about your team? How many people are involved in Prototypo? What were their previous projects?
+
+There are currently two person working full-time on the project:
+
+- Yannick, the inventor of the concept, is mainly a “graphic designer who can code” and he used to create websites before re-launching Prototypo. Recently he developped a mini-website to present the super family Panorama by Jean-Baptiste Levée.
+- Louis-Rémi, a web developer who has previously worked on large open-source projects such as jQuery (one of the most widely used piece of software across websites) and MDN, the wiki for web authors by Mozilla.
+
+### Are you happy with how is crowdfunding campaign is going? What do you think about Kickstarter and the opportunity it gives — is it helpfull or maybe overrated?
+
+We were really surprised that the initial goal of 12,000£ as reached in less than three days, and we are really happy that it didn’t stop there. We’re now over 200% with a few days left. This extra money will allow us to add more features to the app, and maybe welcome interns in the team.
+
+KickStarter was definitely the right choice, they really have the largest community, whose participation becomes very significant after the initial launch phase of the campaign.
+
+### What are your future plans?
+
+Once the campaign ends we will send invitations to all backers so that they can access the online development version of Prototypo. We’ll keep on improving it according to our plans and the feedback we receive. Prototypo 1.0 should be released around September. After that we’ll work on the stretch-goals that we defined during the campaign: the ability to import your own fonts and turn them into parametric typefaces, and the possibility to host fonts in the cloud and use them easily on any website.

@@ -1,0 +1,52 @@
+Title: Prototypo Update #1
+
+----
+
+Tags: ui
+
+----
+
+Date: 2013-11-08
+
+----
+
+Subtitle: This week YM has been working on a complete UI revamp of the app, LRB has been improving the reliability of the app and MJ has gone viral. Also, there is now a deadline!
+
+----
+
+Contentarticle: 
+
+### User Interface
+
+(image: prototypo-ui.jpg)
+*Focus on the functional settings tab*
+
+As explained (link: /blog/prototypo-update-0 text: in the introductory post), Prototypo is a 3 years old project. YM decided that this reboot was a good opportunity to refresh the UI, with three axes of improvements in mind:
+
+- Guiding the type design process by presenting all parameters that determine the usage context of the typeface first, then those that define its stylistic aspect and serifs, and finally allow to refine all particular attributes.
+- Keeping the application easy to use and enjoyable for typography beginners while preparing the inclusion of advanced features for professionals who need a deep level of customization for each glyph independently.
+- Acknowledging that creation no longer happens only at work on a desktop computer: the app should be usable during a client meeting on a tablet too.
+
+*Create your rough instantly wherever you are, make hard decisions later,* that’s the spirit of Prototypo. The redesign is ongoing and the different parts of the UI will be presented as the related features get implemented.
+
+### Unit Tests
+
+In addition to making Prototypo more pleasant and easier to use, the team is working on making the application more reliable. Users encounter bugs when the developers haven’t tested their software sufficiently. But testing an app only once isn’t enough: the complete application should be tested after even the slightest modification, to ensure no regression has sneaked in. This is why LRB is currently writing numerous (link: https://en.wikipedia.org/wiki/Unit_testing text: unit tests) for Prototypo: small tests run automatically after every code-change which can detect and locate broken features of the app.
+
+(image: p0-tests-or8.png)
+*Unit tests gave the green light!*
+
+This is a time-consuming  never-ending task, and there are ALWAYS bugs to be found in such a complex app. But it’s a task worth undertaking in order to reach the level of quality that users rightfully expect from Prototypo.
+
+### Unexpected Help
+
+The humans have been hard at work this week and they didn’t have much time to pet me (me, (link: /about text: MJ,) the cat writing these posts). I got bored so I created a lolcat and it was featured (link: http://9gag.com/gag/aWZxYBn text: on the front page of 9gag) ; here it is for those who haven’t seen it yet.
+
+(image: mjlolbw.jpg)
+*MJ pretending to be fixing bugz*
+
+### Premiere of the Prototypo web-app
+
+There is still a lot of work to do before having something worth putting in the hands of users. But the team has been invited to present Prototypo on December 18th at Paris HTML5 meetup. It means that a usable version has to be produced by this date. Parisians are invited to meet the team and be the first to give the app a try. The beta and the crowd-funding campaign will follow shortly after (although December 24th to January 1st probably isn’t a good timing to get people’s attention ;^).
+
+Typography is an effervescent field and we have a lot of ideas for Prototypo 1.0 and beyond. We’ll unveil some of them in the coming weeks ; we hope that you’ll be surprised and as excited as we are :^)
