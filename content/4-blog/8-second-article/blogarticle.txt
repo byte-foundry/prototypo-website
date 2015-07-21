@@ -87,4 +87,4 @@ Date: 2014-09-19
 
 ----
 
-Tags: new,version,prototypo
+Tags: design principle,v1
