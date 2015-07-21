@@ -1,0 +1,38 @@
+Title: Prototypo Update #2 + HTML5 Meetup Slides
+
+----
+
+Tags: video,talk
+
+----
+
+Date: 2013-12-19
+
+----
+
+Subtitle: The team is more motivated than ever after a successful introduction of the new Prototypo to a live audience, but a little more patience will be required before the release of the beta.
+
+----
+
+Contentarticle: 
+
+<iframe width="600" height="370" src="https://www.youtube.com/embed/A5DARr90HWc" frameborder="0" allowfullscreen></iframe>
+
+
+It’s been six long weeks since the last update. The team has been busy preparing Prototypo for its first public presentation during yesterday’s HTML5 Meetup hosted by Microsoft in Paris (many thanks to (link: https://twitter.com/sylvainw text: @sylvainw) for inviting us, and to (link: https://twitter.com/johnkarp text: @johnkarp) for taking care of us and allowing us to use his picture of the event).
+
+Two weeks ago, Prototypo had almost no user interface: YM was writing parametric glyph formulas and LRB was writing the interpreter that turns them into letter shapes on the screen. During the past ten days, the UI has taken shape before their eyes and Prototypo started to get real, just in time for this first public event. As always, it is very rewarding to listen to people’s feedback and encouragements, especially after the additional stress put on the team’s shoulders.
+
+
+The version used for the demo isn’t ready for prime time, though. It lacks many features and has too many bugs. Here’s the list of what still needs to be done before the official beta is released:
+
+- Presets allowing to instantly switch between two (link: https://en.wikipedia.org/wiki/Vox-ATypI_classification text: classes of typefaces).
+- Font export to .svg and “svg in .otf” (to be used on the web).
+- Load / Save different fonts.
+- Completing the list of basic glyphs (A-Z a-z 0-9 and basic punctuation).
+
+The team will take some time off and come back in 2014 fully recharged to finish the beta and prepare the launch of the crowd-funding campaign. This is a project on its own, expect to see more blog posts on that subject soon.
+
+The slides of the presentation (link: https://docs.google.com/presentation/d/1LcWg1-GVzoJxqqPq7mAh1mq2WyRwBvA3YxqurDtFZzo/present?slide=id.g25cdc78dc_079 text: are available,) as some people asked for them. The video is included below but it’s in French.
+
+<iframe width="600" height="370" src="https://www.youtube.com/embed/S-DsRUh_AQo" frameborder="0" allowfullscreen></iframe>

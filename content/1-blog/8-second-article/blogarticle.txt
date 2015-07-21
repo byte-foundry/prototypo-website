@@ -1,8 +1,8 @@
-Title: New Prototypo website!
+Title: On the roadmap again ♪
 
 ----
 
-Subtitle: Brace yourself, v2 is coming…
+Subtitle: 
 
 ----
 
@@ -26,16 +26,16 @@ It is a long and fastidious task, so we have an obligation to take a step back f
 
 This approach allowed us to quickly (figure of speech, obviously) put in place what we have currently in Prototypo. It revealed some important issues of conception though:
 
-The calculation of the relationship between points is sometimes complex,
-The glyph rendering is not always satisfying in the extreme,
-Modify a glyph template is a too difficult mental gymnastics, even more for a non-initiate.
+- The calculation of the relationship between points is sometimes complex,
+- The glyph rendering is not always satisfying in the extreme,
+- Modify a glyph template is a too difficult mental gymnastics, even more for a non-initiate.
 You’ve understood it, this approach was easier to build the first experimentations, but have its limits and simulating the pen angle is a hard thing.
 
 (image: m-bug.png)
 
 For a better design, there is the calligraphic approach, which in itself would be more logical with regard to the history of type design. However, it does not allow to reproduce all typographic shapes, and especially cross styles.
 
-##What is the right way to draw parametric glyphs?
+## What is the right way to draw parametric glyphs?
 
 Actually, there is no one unique way, but obviously several, and we work on the possibility to juggle between all of it when we make a letter’s template. As you will have understood, each glyph and each curve are unique and have its own constraints, and it would be absurd to homogenize the design process.
 
@@ -43,7 +43,7 @@ We already have a contour approach to deal with details, serifs and cross histor
 
 A “fancy” curve can be calculated, and must be rules by tension and offcurves positioning. To achieve this, different algorythms exist and can be used:
 
-###Custom method
+### Custom method
 
 Two simple principles allow to draw fancy curves:
 - Start and end points must be at the top of two consecutive curves,
@@ -51,7 +51,7 @@ Two simple principles allow to draw fancy curves:
 
 Obviously, this method is not efficient in all cases, and it is sometimes necessary to modify angle and positioning of offcurves.
 
-###Hobby splines
+### Hobby splines
 
 (image: curves.png)
 
@@ -65,7 +65,7 @@ We want to make a next blog post about these particularities and deep constraint
 
 (image: RD.png)
 
-##When the v1 will be released?
+## When the v1 will be released?
 
 We’re on it! Everyday, from the the early morning to late at nights… and we love it! We really would like to release an official version at the end of the year or early 2015, but what is sure it’s we do not want to rush things, because like you, we wish a functional tool and not something half-baked.
 
@@ -73,7 +73,7 @@ We had a lot of feedback from our early-adopters on missing features int the dev
 
 We have received many words of encouragement, and some of you expect more from us: well, that’s good, so do we! The v1 will have a better glyphs design, more easily editable for the most advanced users, and a lot of new features. We look forward to have your feedback on it!
 
-##Access to the dev version + shirts
+## Access to the dev version + shirts
 
 Normally, all backers who chose rewards with a tee-shirts should have received it. If not, don’t hesitate to send us an email through the kickstarter mailbox, and we will contact our provider.
 
@@ -83,7 +83,7 @@ Cheers!
 
 ----
 
-Date: 2015-04-08
+Date: 2014-09-19
 
 ----
 

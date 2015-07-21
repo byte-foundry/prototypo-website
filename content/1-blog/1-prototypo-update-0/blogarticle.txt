@@ -1,0 +1,55 @@
+Title: Prototypo Update #0
+
+----
+
+Tags: team
+
+----
+
+Date: 2013-10-22
+
+----
+
+Subtitle: A post about coincidences, dedication, delays and a set of tasks.
+
+----
+
+Contentarticle: 
+
+(image: stickers-skyview-black.jpg)
+
+Starting this week, YM & LRB are working full-time on building a user-friendly parameter-based font generator: Prototypo.
+
+### What has happened so far
+
+YM started Prototypo as a graphic-design final-year project back in 2009. The original app was written in (link: https://processing.org/ text: Processing) and he learned programming along the way. Although this v0.0 had a lot of working features (as demonstrated (link: https://vimeo.com/72371197 text: in the video)), the complexity of the code and the number of bugs had grown exponentially. YM decided not to publish his work and tried to restart from a cleaner base.
+
+Last summer, LRB found a video of Prototypo (thanks to (link: http://matthieusalvaggio.fr/ text: Mathieu Salvagio), another font-lover) and was very impressed. He decided to contact YM to get fresh news on the project and discovered two astounding facts worth noting:
+
+- the max physical distance between two humans on earth is 20.000km (~12.400mi, based on the 40.000km of the earth’s circumference, (link: https://en.wikipedia.org/wiki/Earth text: see Earth on Wikipedia)), but YM & LRB live 3km (~1.9mi) apart,
+- (link: https://en.wikipedia.org/wiki/Six_degrees_of_separation text: the max degrees of separation between two humans on earth is 6 people,) but theirs was 0, as they had already helped moving a common relation home.
+
+(image: ym-lrb-annotated.jpg)
+
+LRB had a decent experience building web-applications so he proposed his help to make Prototypo real. The pair started working on a reboot of the application using modern technologies, building on the connected and interoperable nature of the web.
+
+Soon enough, a basic prototype was created. It was the proof that they could work together and that the copy could be built much faster than the original. They realized that this project required full-time commitment and that they were both willing to do it. To make it sustainable and involve as much people as early as possible, they decided to opt for the open-source and crowdfunding models.
+
+#### Their initial plan was to:
+- quit their jobs by the end of September (which meant “finishing all signed contracts”, as they both are freelance designers/web-devs),
+- (co)work on the beta during October,
+- by the end of October, release the beta and launch a campaign to crowd-fund the development of the first stable version of Prototypo,
+- in the meantime, get people excited about the project.
+Completing all of their projects took a little longer than expected, the last weeks being pretty intense, but they eventually got there. As a result, the crowd-funding and the beta won’t be published in October. The idea is to show what the actual app is going to look like first, and make sure people pledging money can get their hands on it as soon as the campaign succeeds.
+
+(image: office.jpg)
+
+The feedback they have received on the web has been positively overwhelming: in two month of time (link: https://twitter.com/prototypoApp text: @prototypoApp) went from 0 to 1.400+ followers and the newsletter grew from 0 to 7.000+ subscribers!
+
+### What will happen next
+
+YM is working on user interface mockups and LRB is refining the language used to create glyphs that react to user interactions. More posts will also be written about the technologies in use, the philosophy of the team, the goals and rewards of the crowd-funding campaign, the advancement of the project as well as the difficulties and choices that have to be faced.
+
+### How you can help
+
+It is too early to invite anyone to suggest features, test the app or contribute code for now. But if you want to be the first to learn when this becomes possible, you should subscribe to the newsletter and follow protoypoApp on Twitter or Facebook using the buttons at the top if this page. Getting the word out about Prototypo is the most helpful contribution that can be made currently.
