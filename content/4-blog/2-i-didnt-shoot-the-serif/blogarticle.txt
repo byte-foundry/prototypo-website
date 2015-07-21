@@ -14,7 +14,7 @@ Subtitle: A serif is one of the most significant characteristic to identify a ty
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
 Although many more variables are involved in each class of the Vox-ATypI classification1, such as the thickness ratio or just the drawing itself, a different kind of serif immediately gives a new look to the letter, the word and the paragraph.
 
@@ -41,7 +41,7 @@ After some trials and errors, here is the current model:
 (image: serif2.gif)
 
 *The growing complexity of serif-structure in Prototypo Beta*
- 
+
 
 This model could be improved, but it already allows for a large number of styles.
 
