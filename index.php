@@ -2,8 +2,9 @@
 
 define('DS', DIRECTORY_SEPARATOR);
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// uncomment to enable error reporting on prod
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 // load kirby
 require(__DIR__ . DS . 'kirby' . DS . 'bootstrap.php');

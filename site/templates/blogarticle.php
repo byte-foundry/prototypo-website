@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
   <main class="PageContent Blog" role="main">
-  
+
     <header class="PageHeader text-left fitToContent">
       <a href="<?php echo url('blog'); ?>">
     		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->parent()->section1Title()->kirbytext(); ?></h1>
@@ -10,13 +10,13 @@
 		</header>
 
     <div class="fitToContent">
-  	
+
       <nav class="BlogPagination BlogPagination-before">
-        <a class="BlogPagination-item BlogPagination-back textType-txt textSize-txt-small" href="<?php echo url('blog'); ?>">Back to blog</a> 
+        <a class="BlogPagination-item BlogPagination-back textType-txt textSize-txt-small" href="<?php echo url('blog'); ?>">Back to blog</a>
       </nav>
-      
+
   		<article class="Article">
-        
+
         <header class="Article-header">
           <a class="Article-titleLink" href="<?php echo $page->url(); ?>">
             <h1 class="Article-title textType-title textSize-title-small"><?php echo $page->title()->html() ?></h1>
@@ -26,7 +26,7 @@
           <div class="Article-infos textType-txt textSize-txt-small">
             <?php echo $page->date('F j, Y') ?>
 
-            <?php if (!empty($page->tags())) : $tags = explode(',',$page->tags()); ?>
+            <?php if ( $page->tags() ) : $tags = explode(',',$page->tags()); ?>
 
             <ul class="Article-tags">
               <?php foreach($tags as $tag): ?>
@@ -42,18 +42,18 @@
 
           </div>
         </header>
-        
+
         <div class="Article-content textType-txt textSize-txt-medium">
-          
+
           <?php echo nl2br($page->contentarticle()->kirbytext()); ?>
         </div>
-        
+
         <div class="Disqus text-center textType-txt textSize-txt-small colorDark" id="Disqus">
           <?php snippet('disqus', array('disqus_shortname' => 'myawesomeblog', 'disqus_developer' => true)) ?>
         </div>
-        
+
       </article>
-      
+
     </div>
 
   </main>
