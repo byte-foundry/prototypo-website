@@ -44,8 +44,7 @@ RewriteRule ^(.*) index.php [L]
 #
 # php_flag short_open_tag on
 
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^dev.prototypo.io
+RewriteCond %{HTTP_HOST} ^blog.prototypo.io
 RewriteRule ^(.*)$ http://www.prototypo.io/blog/$1 [R=301,L]
 
 # Redirects to preserve SEO from previous site
