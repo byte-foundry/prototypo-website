@@ -198,4 +198,4 @@ Sectionsubscribedtitle: Thank you for subscribing : )
 
 ----
 
-Sectionsubscribedsubtitle: We also post more frequent updates on <a href="https://twitter.com/prototypoApp" target="_blank">Twitter, <a href="https://www.facebook.com/prototypoApp" target="_blank">Facebook</a> and our <a href="/blog">blog</a>.
+Sectionsubscribedsubtitle: We also post more frequent updates on <a href="https://twitter.com/prototypoApp" target="_blank">Twitter</a>, <a href="https://www.facebook.com/prototypoApp" target="_blank">Facebook</a> and our <a href="/blog">blog</a>.

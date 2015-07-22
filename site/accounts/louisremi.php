@@ -8,7 +8,7 @@ password: >
   $2a$10$M7VZX.sBwSVQasJgJ5byLeG4Dk2Ktqv.0K7gt.Izi2UzptFqOu.HC
 language: en
 role: admin
-token: 5024dc90c32af6a81156ff827488873a66075c59
+token: 57ab361293709894c6ec79b701e65f94027853a0
 history:
   - home
   - null

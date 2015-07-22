@@ -17,21 +17,21 @@ var rimraf      = require('rimraf');
 gulp.task('serve', ['sass'], function() {
 
     phpconnect.server({}, function() {
-        connect.server({
-            port: 8001,
-            middleware: function() {
-                return ['prout'];
-            }
-        }, function() {
+        // connect.server({
+        //     port: 8001,
+        //     middleware: function() {
+        //         return ['prout'];
+        //     }
+        // }, function() {
             browserSync.init({
-                proxy: 'localhost:8001'
+                proxy: 'localhost:8000'
             });
-        });
+        // });
     });
 
-    // gulp.watch("./assets/css/**/*.scss", ['sass']);
-    // gulp.watch("./assets/js/*.js").on('change', browserSync.reload);
-    // gulp.watch("./site/**/*.php").on('change', browserSync.reload);
+    gulp.watch("./assets/css/**/*.scss", ['sass']);
+    gulp.watch("./assets/js/*.js").on('change', browserSync.reload);
+    gulp.watch("./site/**/*.php").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
