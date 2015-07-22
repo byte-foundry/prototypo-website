@@ -43,16 +43,3 @@ RewriteRule ^(.*) index.php [L]
 # AddDefaultCharset UTF-8
 #
 # php_flag short_open_tag on
-
-RewriteCond %{HTTP_HOST} ^blog.prototypo.io
-RewriteRule ^(.*)$ http://www.prototypo.io/blog/$1 [R=301,L]
-
-# Redirects to preserve SEO from previous site
-RedirectMatch 301 ^/on-the-roadmap-again-%E2%99%AA/?$			/blog/on-the-roadmap-again
-RedirectMatch 301 ^/lookatme-interview-of-prototypo/?$ 			/blog/lookatme-interview-of-prototypo
-RedirectMatch 301 ^/prototypo-update-4-overcoming-dilemmas/?$ 	/blog/prototypo-update-4-overcoming-dilemmas
-RedirectMatch 301 ^/prototypo-update-3-first-fonts/?$ 			/blog/prototypo-update-3-first-fonts
-RedirectMatch 301 ^/prototypo-update-2/?$ 						/blog/prototypo-update-2-html5-meetup-slides
-RedirectMatch 301 ^/prototypo-update-1/?$ 						/blog/prototypo-update-1
-RedirectMatch 301 ^/i-didnt-shoot-the-serif/?$					/blog/i-didnt-shoot-the-serif
-RedirectMatch 301 ^/prototypo-update-0/?$						/blog/prototypo-update-0
