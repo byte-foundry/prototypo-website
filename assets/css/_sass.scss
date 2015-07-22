@@ -1,11 +1,10 @@
 /*
  *  SASS variables & functions
  */
- 
-$mainFont:            'PT Sans';
-$secondFont:          'Playfair Display';
-$thirdFont:           'Roboto Slab';
- 
+
+$mainFont:            'PT Sans', sans-serif;
+$thirdFont:           'Roboto Slab', serif;
+
 $colorWhite:          white;
 $colorBrightest:      rgba($colorWhite, .8);
 $colorBright:         rgba($colorWhite, .6);
@@ -89,7 +88,7 @@ $potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
     }
     @return $result;
 }
- 
+
 @function trans-prefix($transition, $prefix: moz) {
     $prefixed: ();
     @each $trans in $transition {
@@ -98,23 +97,23 @@ $potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
         $prop-vals: nth($trans, 2);
         $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
     }
-    
+
     @return $prefixed;
 }
- 
-@mixin transition($values...) { 
+
+@mixin transition($values...) {
     $transitions: ();
     @each $declaration in $values {
         $prop: nth($declaration, 1);
         $prop-opts: ();
         $length: length($declaration);
         @for $i from 2 through $length {
-            $prop-opts: append($prop-opts, nth($declaration, $i));   
+            $prop-opts: append($prop-opts, nth($declaration, $i));
         }
         $trans: ($prop, $prop-opts);
         $transitions: append($transitions, $trans, comma);
     }
-      
+
     -webkit-transition: trans-prefix($transitions, webkit);
     -moz-transition: trans-prefix($transitions, moz);
     -o-transition: trans-prefix($transitions, o);
@@ -139,10 +138,10 @@ $potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
 @mixin animation($animate...) {
   $max: length($animate);
   $animations: '';
-  
+
   @for $i from 1 through $max {
       $animations: #{$animations + nth($animate, $i)};
-  
+
       @if $i < $max {
           $animations: #{$animations + ", "};
       }
@@ -168,5 +167,3 @@ $potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
 	-webkit-transform-origin: $origin;
           transform-origin: $origin;
 }
-
-

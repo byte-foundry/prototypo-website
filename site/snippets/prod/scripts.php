@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
   WebFontConfig = {
-    google: { families: [ 'Playfair+Display:400italic:latin', 'Roboto+Slab:300:latin', 'PT+Sans:400,400italic,700italic,700:latin' ] }
+    google: { families: [ 'Roboto+Slab:300:latin', 'PT+Sans:400,400italic,700italic,700:latin' ] },
 	timeout: 2000
   };
   (function() {
