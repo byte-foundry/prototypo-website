@@ -235,6 +235,7 @@ only screen and (min-resolution:144dpi) {
 	.Section-homepage {
 		height: auto;
 		position: relative;
+		min-height: 950px;
 	}
 	.Section-homepageWrap {
 		top: 10px;
@@ -287,7 +288,41 @@ only screen and (min-resolution:144dpi) {
 	.DemoHome:after {
 		display: none;
 	}
+	.DemoHome {
+		height: 470px;
+	}
+	.DemoControls {
+		top: 340px;
+		left: 70px;
+	}
+	#DemoCanvas {
+		left: -35px;
+	}
 }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+	.DemoHome {
+		width: 90%;
+	}
+	.DemoHome:after {
+		display: none;
+	}
+	.DemoHome {
+		height: 470px;
+	}
+	.DemoControls {
+		top: 150px;
+		left: 30px;
+	}
+	#DemoCanvas {
+		left: 280px;
+		top: 120px;
+	}
+}
+
 @media only screen and (max-width:480px) {
 	// .Nav-logoInner {
 	// 	display: none;
@@ -508,6 +543,7 @@ only screen and (min-resolution:144dpi) {
 		page-break-after: avoid;
 	}
 }
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
 	#DemoCanvas {
 		width: 290px !important;
@@ -524,7 +560,7 @@ only screen and (min-resolution:144dpi) {
 	}
 	.DemoControls {
 		top: 340px;
-		left: 70px;
+		left: 50px;
 	}
 	#DemoCanvas {
 		left: -35px;
@@ -546,5 +582,66 @@ only screen and (min-resolution:144dpi) {
 	}
 	.Section-homepage {
 		min-height: 1010px;
+	}
+}
+
+// iphone5 landscape
+@media only screen
+	and (min-device-width : 320px)
+	and (max-device-width : 568px)
+	and (orientation : landscape) {
+		.DemoControls {
+			left: 20px;
+		}
+		.DemoControls-Potentiometer {
+			width: 150px;
+		}
+		#DemoCanvas {
+			left: 185px;
+		}
+		.Section-homepageWrap {
+			top: 0;
+		}
+		.Section-homepage {
+			min-height: 780px;
+		}
+		.DemoHome {
+			height: 330px;
+		}
+}
+
+// iphone 6 plus landscape
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape) {
+	#DemoCanvas {
+		position: absolute;
+		top: 80px;
+		left: 210px;
+	}
+	.DemoControls {
+		top: 150px;
+		left: 30px;
+	}
+	.DemoHome {
+		height: 400px;
+	}
+}
+
+// iphone 4 landscape
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : landscape) {
+	#DemoCanvas {
+		top: 40px;
+		left: 120px;
+	}
+	.DemoHome {
+		height: 280px;
+	}
+	.DemoControls {
+		z-index: 10000;
 	}
 }

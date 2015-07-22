@@ -8550,7 +8550,8 @@ input[type="password"]:focus {
     padding: 20px 30px; }
   .Section-homepage {
     height: auto;
-    position: relative; }
+    position: relative;
+    min-height: 950px; }
   .Section-homepageWrap {
     top: 10px;
     margin-top: 0;
@@ -8588,7 +8589,28 @@ input[type="password"]:focus {
   .DemoHome {
     width: 90%; }
   .DemoHome:after {
-    display: none; } }
+    display: none; }
+  .DemoHome {
+    height: 470px; }
+  .DemoControls {
+    top: 340px;
+    left: 70px; }
+  #DemoCanvas {
+    left: -35px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .DemoHome {
+    width: 90%; }
+  .DemoHome:after {
+    display: none; }
+  .DemoHome {
+    height: 470px; }
+  .DemoControls {
+    top: 150px;
+    left: 30px; }
+  #DemoCanvas {
+    left: 280px;
+    top: 120px; } }
 
 @media only screen and (max-width: 480px) {
   .Nav-callToActionCreateYourFont {
@@ -8770,7 +8792,7 @@ input[type="password"]:focus {
     height: 470px; }
   .DemoControls {
     top: 340px;
-    left: 70px; }
+    left: 50px; }
   #DemoCanvas {
     left: -35px; } }
 
@@ -8786,3 +8808,37 @@ input[type="password"]:focus {
     top: 40%; }
   .Section-homepage {
     min-height: 1010px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  .DemoControls {
+    left: 20px; }
+  .DemoControls-Potentiometer {
+    width: 150px; }
+  #DemoCanvas {
+    left: 185px; }
+  .Section-homepageWrap {
+    top: 0; }
+  .Section-homepage {
+    min-height: 780px; }
+  .DemoHome {
+    height: 330px; } }
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
+  #DemoCanvas {
+    position: absolute;
+    top: 80px;
+    left: 210px; }
+  .DemoControls {
+    top: 150px;
+    left: 30px; }
+  .DemoHome {
+    height: 400px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
+  #DemoCanvas {
+    top: 40px;
+    left: 120px; }
+  .DemoHome {
+    height: 280px; }
+  .DemoControls {
+    z-index: 10000; } }
