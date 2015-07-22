@@ -1,5 +1,6 @@
 var gulp        = require('gulp');
-var connect     = require('gulp-connect-php');
+var phpconnect  = require('gulp-connect-php');
+var connect     = require('gulp-connect');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var rev         = require('gulp-rev');
@@ -15,15 +16,22 @@ var rimraf      = require('rimraf');
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
-    connect.server({}, function() {
-        browserSync.init({
-            proxy: 'localhost:8000'
+    phpconnect.server({}, function() {
+        connect.server({
+            port: 8001,
+            middleware: function() {
+                return ['prout'];
+            }
+        }, function() {
+            browserSync.init({
+                proxy: 'localhost:8001'
+            });
         });
     });
 
-    gulp.watch("./assets/css/**/*.scss", ['sass']);
-    gulp.watch("./assets/js/*.js").on('change', browserSync.reload);
-    gulp.watch("./site/**/*.php").on('change', browserSync.reload);
+    // gulp.watch("./assets/css/**/*.scss", ['sass']);
+    // gulp.watch("./assets/js/*.js").on('change', browserSync.reload);
+    // gulp.watch("./site/**/*.php").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers

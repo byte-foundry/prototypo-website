@@ -5,10 +5,10 @@ $pathinfo = pathinfo( $_SERVER["REQUEST_URI"] );
 
 // static assets have an extension and it's not .php
 if ( !isset($pathinfo['extension']) || $pathinfo['extension'] !== 'php' ) {
-	header("Location: http://example.com/myOtherPage.php");
+	header("Location: http://localhost:8001" . $_SERVER["REQUEST_URI"]);
 	die();
 
 } else {
-
+	return true;
 }
 ?>
