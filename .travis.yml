@@ -6,14 +6,14 @@ deploy:
   - provider: openshift
     user: francois.poizat@gmail.com
     password:
-      secure: Ax8daNhJjTTq5/dD6pCSKz/grpWkFiwye9Dpci2hd284ko69rs+10YQYjn/NUYKTrxF6YohZ1V0dkHiaaP0Fv930zip+D6vpZVt1+sr8yfLDBD5fhRim//lE3Je7sUrc9gyINjIxGC6LJQUrfCPISTQ8//ne5Ab4jxTcHQo9m6o=
+      secure: BiDezma7feWy9I8XjtGHog6axgtFApJ+bNS7E/EepUoDpHZR6Mk7bGiTSiVRhEm42cinyi7WT2zflGSCyvWUHJ07pcn3zMdPgtOloZCKI5k7SFc4JWZbcuvIFco/EXCd61wshZN5thsCKc/cH/fm4avoJ4OG9RkJ4vQRZJNpLeM=
     app: website
     domain: prototypo
     on: master
   - provider: openshift
     user: francois.poizat@gmail.com
     password:
-      secure: Ax8daNhJjTTq5/dD6pCSKz/grpWkFiwye9Dpci2hd284ko69rs+10YQYjn/NUYKTrxF6YohZ1V0dkHiaaP0Fv930zip+D6vpZVt1+sr8yfLDBD5fhRim//lE3Je7sUrc9gyINjIxGC6LJQUrfCPISTQ8//ne5Ab4jxTcHQo9m6o=
+      secure: BiDezma7feWy9I8XjtGHog6axgtFApJ+bNS7E/EepUoDpHZR6Mk7bGiTSiVRhEm42cinyi7WT2zflGSCyvWUHJ07pcn3zMdPgtOloZCKI5k7SFc4JWZbcuvIFco/EXCd61wshZN5thsCKc/cH/fm4avoJ4OG9RkJ4vQRZJNpLeM=
     app: develop
     domain: prototypo
     on: develop
