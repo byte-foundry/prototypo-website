@@ -37,7 +37,7 @@ Section1subtitle: Two parametric typefaces to start with
 
 ----
 
-Section1txt: 
+Section1txt: Fonts powered by (link: https://productiontype.com text: Production Type popup: yes)
 
 ----
 
@@ -45,7 +45,7 @@ Fonts:
 
 - 
   fontfile: venus-preview.svg
-  fontname: Venus
+  fontname: Prototypo Venus
   fontdescription: >
     A perfect sans serif, with infinite
     variations.
@@ -54,7 +54,7 @@ Fonts:
   fontlineheight: 120
 - 
   fontfile: john-fell-preview.svg
-  fontname: John Fell
+  fontname: Prototypo John Fell
   fontdescription: >
     An Elzevir as we all like it, move it,
     move it.
@@ -167,16 +167,6 @@ Theytalkaboutus:
   ttauurl: >
     http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
 - 
-  ttauimg: gray-mouv.png
-  ttauname: "Mouv'"
-  ttauurl: >
-    http://www.mouv.fr/video-prototypo-the-font-generator-beta-demo
-- 
-  ttauimg: gray-creapills.png
-  ttauname: Creapills
-  ttauurl: >
-    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
-- 
   ttauimg: gray-linuxfr.png
   ttauname: LinuxFR
   ttauurl: >
@@ -187,10 +177,10 @@ Theytalkaboutus:
   ttauurl: >
     http://framablog.org/2014/04/22/prototypo-vos-polices-sur-mesure/
 - 
-  ttauimg: gray-creanum.png
-  ttauname: Creanum
+  ttauimg: gray-creapills.png
+  ttauname: Creapills
   ttauurl: >
-    http://www.creanum.fr/news/toutes-les-news/id/1829/prototypo-io-une-application-web-pour-dessiner-des-polices.aspx
+    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
 
 ----
 

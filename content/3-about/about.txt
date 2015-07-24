@@ -14,17 +14,20 @@ Members:
 
 - 
   membername: Yannick Mathey
+  memberjob: Co-founder, art director
   memberdescription: 'YM is specialist in nothing and curious about everything. It was during his last year of studies at ESAD Strasbourg that he discovered his passion for type design, a mix between two different but complementary educations: the classic type design and historical perspectives by Pierre Roesch and self-taught approach, more free but equally refined with Pierre Di Sciullo. His final year of studies gave him a year of "free time" to learn the basics of letters & code, and develop the alpha version of prototypo.'
   memberquery: 'https://www.google.fr/search?safe=off&site=&tbm=isch&source=hp&biw=1629&bih=1271&q=cheese&oq=cheese&gs_l=img.3..0l10.1905.2702.0.5822.6.5.0.1.1.0.143.427.4j1.5.0....0...1ac.1.29.img..1.5.334.5X3spjq-vfg'
   memberfacebook: >
-    http://www.mes-coloriages-preferes.net/Images/Large/Personnages-celebres-Troll-face-Y-U-NO-guy-139731.png
+    https://www.facebook.com/yannick.mathey.9
   membergithub: https://github.com/yannickmathey
   membertwitter: https://twitter.com/_____________y
   memberwebsite: http://yannickmathey.com/
   membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=contact@prototypo.io&su=Hi%20YM!'
+  membervimeo:
   memberphoto: ym-300x196.jpg
 - 
   membername: Louis-Rémi Babé
+  memberjob: Co-founder, lead developer
   memberdescription: "LRB 's passion is to create websites and web-apps. He fell in love with JS in 2004 and has contributed patches and features to jQuery 1.X (if you have browsed the web in the past 9 years, you've used some code he wrote). He's an active mozillian since 2009 and was an intern at Mozilla Paris in 2011. He's helped start a local JS meetup: lyonJS."
   memberquery: 'https://www.google.fr/search?q=flan+de+courge&tbm=isch'
   memberfacebook: https://www.facebook.com/lrbabe
@@ -32,9 +35,23 @@ Members:
   membertwitter: http://twitter.com/louis_remi
   memberwebsite: http://louisremi.com/
   membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=lrbabe@gmail.com&su=Hi%20LRB!'
+  membervimeo:
   memberphoto: lrb-300x197.jpg
 - 
+  membername: Jean-Baptiste Levée
+  memberjob: Associate type advisor
+  memberdescription: 'Jean-Baptiste Levée runs the digital type foundry Production Type. As a typeface designer he has designed over a hundred typefaces for industry, moving pictures, fashion and publishing. His work has won multiple awards and has been shown internationally in group and solo shows, and is featured in the permanent collections of the French national library (BnF) and the National Center of arts (Cnap); of the Newberry Library in Chicago, and several printing museums in Europe. He is also a board member at ATypI (Association Typographique Internationale). Levée curates exhibitions on typeface design, organizes research symposiums and teaches typeface design at the Amiens school of Arts & Design.'
+  memberquery:
+  memberfacebook: https://www.facebook.com/productiontype
+  membergithub:
+  membertwitter: https://twitter.com/productiontype
+  memberwebsite: https://www.productiontype.com/
+  membermail: jeanbaptiste@prototypo.io
+  membervimeo:
+  memberphoto: jbl_slanted_.jpg
+- 
   membername: MJ
+  memberjob: Community manager
   memberdescription: "MJ is my name, and I've been kind enough to accept the role of author on this blog and community manager for Prototypo. You have to excuse my English because I'm just a cat, and keyboards aren't really meant for paws. When I'm not tweeting, I enjoy chasing mouse cursors, chewing headphone cables, making a mess in YM's houseplants, causing LRB to sneeze, and sleeping on people's lap without their consent."
   memberquery: 'https://www.google.fr/search?q=lizard+sushi&tbm=isch'
   memberfacebook: http://facebook.com/prototypoApp
@@ -47,7 +64,7 @@ Members:
 
 ----
 
-Section1txt: Prototypo is a user-friendly parameter-based font generator being built by a team of three fiery font and code lovers. You can learn more about the project on its (link: http://prototypo.io/ text: home page).
+Section1txt: Prototypo is a user-friendly parameter-based font generator being built by a team of fiery font and code lovers. You can learn more about the project on its (link: http://prototypo.io/ text: home page).
 
 ----
 
