@@ -68,7 +68,7 @@
 
 			<div class="Section-homepageDiscoverFeaturesLine text-center textSize-txt-large">
 				<!-- <?php echo $page->textLineUnderDemo()->kirbytext(); ?> -->
-				<fieldset class="switch round large marginTop30" tabindex="0">
+				<fieldset class="switch round large override marginTop30" tabindex="0">
 					<span class="switch-label">Demo</span>
 					<input id="switchDemo" class="switchAction" type="checkbox">
 					<label for="switchDemo"></label>

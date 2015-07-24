@@ -6230,6 +6230,14 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+.switch.large.override label:after {
+  height: 1.9rem;
+  width: 1.9rem; }
+
+.switch label:after {
+  left: .3rem;
+  top: .3rem; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
