@@ -115,20 +115,20 @@
 			<!-- <?php $fonts = yaml($page->fonts());?>
 
 			<style>
-				<?php if (!empty($fonts[0][fontfile])): ?>
+				<?php if (!empty($fonts[0]['fontfile'])): ?>
 					@font-face {
 						font-family: "Font1";
-						src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]); ?>');
+						src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[0]['fontfile']); ?>');
 					}
-					<?php endif; if (!empty($fonts[1][fontfile])): ?>
+				<?php endif; if (!empty($fonts[1]['fontfile'])): ?>
 					@font-face {
 						font-family: "Font2";
-						src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]); ?>');
+						src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[1]['fontfile']); ?>');
 					}
-					<?php endif; if (!empty($fonts[2][fontfile])): ?>
+				<?php endif; if (!empty($fonts[2]['fontfile'])): ?>
 					@font-face {
 						font-family: "Font3";
-						src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]) ?>');
+						src: url('<?php echo url('/content/'.$page->dirname().'/'.$fonts[2]['fontfile']) ?>');
 					}
 				<?php endif; ?>
 			</style> -->
@@ -136,16 +136,16 @@
 		<ul class="Section-fonts small-block-grid-1 medium-block-grid-3 large-block-grid-3">
 			<li class="Section-fontsItem text-center">
 				<div class="Section-fontsItemWrap radius">
-					<!-- <div class="Section-fontsView colorDarkest" style="font-family:'Font1', inherit; font-size:<?php echo $fonts[0][fontsize]; ?>px; line-height:<?php echo $fonts[0][fontlineheight]; ?>px"><?php echo $fonts[0][fontstring]; ?></div> -->
+					<!-- <div class="Section-fontsView colorDarkest" style="font-family:'Font1', inherit; font-size:<?php echo $fonts[0]['fontsize']; ?>px; line-height:<?php echo $fonts[0]['fontlineheight']; ?>px"><?php echo $fonts[0]['fontstring']; ?></div> -->
 					<div class="Section-fontsView colorDarkest">
-						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]); ?>" alt="<?php echo $fonts[0][fontname]; ?>" />
+						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[0]['fontfile']); ?>" alt="<?php echo $fonts[0]['fontname']; ?>" />
 					</div>
-					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0][fontname]; ?></h6>
+					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0]['fontname']; ?></h6>
 
 					<div class="Section-fontsInfos">
-						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[0][fontdescription]; ?></div>
+						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[0]['fontdescription']; ?></div>
 						<!-- Remove for the pre-release website
-						<a href="<?php if (!empty($fonts[0][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[0][fontfile]) ?>"
+						<a href="<?php if (!empty($fonts[0]['fontfile'])) echo url('/content/'.$page->dirname().'/'.$fonts[0]['fontfile']) ?>"
 						 class="callToAction Section-fontsDownload text-center">
 						<?php echo $page->downloadButtonLabel()->kirbytext(); ?>
 						</a> -->
@@ -155,16 +155,16 @@
 
 			<li class="Section-fontsItem text-center">
 				<div class="Section-fontsItemWrap">
-					<!-- <div class="Section-fontsView colorDarkest" style="font-family:'Font2', inherit; font-size:<?php echo $fonts[1][fontsize]; ?>px; line-height:<?php echo $fonts[1][fontlineheight]; ?>px"><?php echo $fonts[1][fontstring]; ?></div> -->
+					<!-- <div class="Section-fontsView colorDarkest" style="font-family:'Font2', inherit; font-size:<?php echo $fonts[1]['fontsize']; ?>px; line-height:<?php echo $fonts[1]['fontlineheight']; ?>px"><?php echo $fonts[1]['fontstring']; ?></div> -->
 					<div class="Section-fontsView colorDarkest">
-						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]); ?>" alt="<?php echo $fonts[1][fontname]; ?>" />
+						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[1]['fontfile']); ?>" alt="<?php echo $fonts[1]['fontname']; ?>" />
 					</div>
-					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1][fontname]; ?></h6>
+					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1]['fontname']; ?></h6>
 
 					<div class="Section-fontsInfos">
-						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[1][fontdescription]; ?></div>
+						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[1]['fontdescription']; ?></div>
 						<!-- Remove for the pre-release website
-						<a href="<?php if (!empty($fonts[1][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[1][fontfile]) ?>"
+						<a href="<?php if (!empty($fonts[1]['fontfile'])) echo url('/content/'.$page->dirname().'/'.$fonts[1]['fontfile']) ?>"
 						 class="callToAction Section-fontsDownload text-center">
 						<?php echo $page->downloadButtonLabel()->kirbytext(); ?>
 						</a> -->
@@ -174,16 +174,16 @@
 
 			<li class="Section-fontsItem text-center">
 				<div class="Section-fontsItemWrap">
-					<!-- <div class="Section-fontsView colorDarkest" style="font-family:'Font2', inherit; font-size:<?php echo $fonts[2][fontsize]; ?>px; line-height:<?php echo $fonts[2][fontlineheight]; ?>px"><?php echo $fonts[2][fontstring]; ?></div> -->
+					<!-- <div class="Section-fontsView colorDarkest" style="font-family:'Font2', inherit; font-size:<?php echo $fonts[2]['fontsize']; ?>px; line-height:<?php echo $fonts[2]['fontlineheight']; ?>px"><?php echo $fonts[2]['fontstring']; ?></div> -->
 					<div class="Section-fontsView colorDarkest">
-						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]); ?>" alt="<?php echo $fonts[2][fontname]; ?>" />
+						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[2]['fontfile']); ?>" alt="<?php echo $fonts[2]['fontname']; ?>" />
 					</div>
-					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2][fontname]; ?></h6>
+					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2]['fontname']; ?></h6>
 
 				<div class="Section-fontsInfos">
-					<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[2][fontdescription]; ?></div>
+					<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[2]['fontdescription']; ?></div>
 					<!-- Remove for the pre-release website
-					<a href="<?php if (!empty($fonts[2][fontfile])) echo url('/content/'.$page->dirname().'/'.$fonts[2][fontfile]) ?>"
+					<a href="<?php if (!empty($fonts[2]['fontfile'])) echo url('/content/'.$page->dirname().'/'.$fonts[2]['fontfile']) ?>"
 					 class="callToAction Section-fontsDownload text-center">
 					<?php echo $page->downloadButtonLabel()->kirbytext(); ?>
 					</a> -->
@@ -217,11 +217,11 @@
 
 			<li class="Section-featuresItem text-center">
 				<div class="Section-featuresPictoWrap">
-					<img src="<?php echo url('content/'.$page->dirname().'/'.$feature[featureimg]); ?>" class="Section-featuresPicto">
+					<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto">
 				</div>
-				<h5 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large"><?php echo $feature[featurename]; ?></h5>
+				<h5 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large"><?php echo $feature['featurename']; ?></h5>
 				<div class="Section-featuresDescription textType-subtxt textSize-txt-small colorBrightest">
-					<?php echo $feature[featuredescription]; ?>
+					<?php echo $feature['featuredescription']; ?>
 				</div>
 			</li>
 
@@ -251,9 +251,9 @@
 			?>
 
 				<li class="Section-theytalkaboutusItem text-center">
-					<a class="Section-theytalkaboutusPictoWrap" href="<?php echo $ttau[ttauurl]; ?>" target="_blank">
+					<a class="Section-theytalkaboutusPictoWrap" href="<?php echo $ttau['ttauurl']; ?>" target="_blank">
 						<span class="Section-theytalkaboutusHelper"></span>
-						<img src="<?php echo url('content/'.$page->dirname().'/'.$ttau[ttauimg]); ?>" class="Section-theytalkaboutusPicto">
+						<img src="<?php echo url('content/'.$page->dirname().'/'.$ttau['ttauimg']); ?>" class="Section-theytalkaboutusPicto">
 					</a>
 				</li>
 

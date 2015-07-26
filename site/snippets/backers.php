@@ -1,13 +1,9 @@
 <?php
-    $backers = json_decode(file_get_contents($json));
-    echo count($backers);
-    echo "\n";
-    echo $json;
-    foreach($backers as $backer) :
-        if ($backer->url != '') :
-          $displayUrl = parse_url($backer->url);
-          $displayUrl = $displayUrl['host'];
-        endif;
+  foreach(json_decode(file_get_contents($json)) as $backer) :
+    if ($backer->url != '') :
+    //   $displayUrl = parse_url($backer->url);
+    //   $displayUrl = $displayUrl['host'];
+    endif;
 ?>
 
   <li class="AwesomeBacker">

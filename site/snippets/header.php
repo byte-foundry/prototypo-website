@@ -31,8 +31,7 @@
   <meta name="theme-color" content="#232323">
 
   <?php
-    // poor man's env variables (serve dev files when php-cli is used)
-    snippet( php_sapi_name() === 'cli-server' ? 'dev/styles' : 'prod/styles' );
+    snippet( c::get('env') . '/styles' );
   ?>
 
 </head>

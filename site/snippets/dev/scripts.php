@@ -1,4 +1,4 @@
-<!-- build:js /assets/dist/scripts.min.js -->
+<!-- build:js /assets/scripts.min.js -->
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/prototypo.js"></script>
 <script src="/assets/js/prototypo-canvas.js"></script>

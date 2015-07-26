@@ -16,10 +16,7 @@
     </footer>
 </main>
 
-<?php
-// poor man's env variables (serve dev files when php-cli is used)
-snippet( php_sapi_name() === 'cli-server' ? 'dev/scripts' : 'prod/scripts' );
-?>
+<?php snippet( c::get('env') . '/scripts' ); ?>
 
 </body>
 </html>

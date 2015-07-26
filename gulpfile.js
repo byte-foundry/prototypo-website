@@ -12,45 +12,59 @@ var cssmin      = require('gulp-minify-css');
 var debug       = require('gulp-debug');
 var gzip        = require('gulp-gzip');
 var rimraf      = require('rimraf');
+var modrewrite  = require('connect-modrewrite');
+var replace     = require('gulp-replace');
+var shell       = require('gulp-shell');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
 
-    phpconnect.server({}, function() {
-        // connect.server({
-        //     port: 8001,
-        //     middleware: function() {
-        //         return ['prout'];
-        //     }
-        // }, function() {
-            browserSync.init({
-                proxy: 'localhost:8000'
-            });
-        // });
+    phpconnect.server({
+        port: 8000
+    }, function() {
+        // connect is required to serve static assets from multiple roots
+        connect.server({
+            port: 8001,
+            root: ['.', '.tmp', 'node_modules'],
+            middleware: function() {
+                return [
+                    // urls without extensions or with php extension should
+                    // be proxied to php. This prevents dots in urls, though.
+                    modrewrite([
+                        '^([^.]*|.*?\.php)$ http://localhost:8000$1 [P,NC]'
+                    ])
+                ];
+            }
+        });
+        browserSync.init({
+            port: 8002,
+            proxy: 'localhost:8001'
+        });
     });
 
     gulp.watch("./assets/css/**/*.scss", ['sass']);
-    gulp.watch("./assets/js/*.js").on('change', browserSync.reload);
+    gulp.watch("./assets/js/**/*.js").on('change', browserSync.reload);
     gulp.watch("./site/**/*.php").on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    gulp.src('./assets/css/*.scss')
+    return gulp.src('./assets/css/*.scss')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./assets'))
+      .pipe(gulp.dest('./.tmp/assets'))
       .pipe(browserSync.stream());
 });
 
-gulp.task('build', ['sass'], function() {
+gulp.task('clean:dist', function(cb) {
+    rimraf('./dist', cb);
+});
+
+gulp.task('build:assets', ['sass', 'clean:dist'], function() {
     var assets = useref.assets({
             searchPath: '/'
         });
 
-    // clean dist
-    rimraf('./assets/dist/', console.error);
-
-    return gulp.src("./site/snippets/dev/*.php")
+    return gulp.src('./site/snippets/dev/*.php')
         .pipe(assets)
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', cssmin({
@@ -60,14 +74,30 @@ gulp.task('build', ['sass'], function() {
         .pipe(assets.restore())
         .pipe(useref())
         .pipe(revReplace({
-            replaceInExtensions: ['.php'],
-            // add a .gz extension befeore the file extension
-            // modifyReved: function( filename ) {
-            //     return ( typeof filename === 'string' ? filename : filename[0] )
-            //                 .replace(/(\.js|\.css)$/, '.gz$1');
-            // };
+            replaceInExtensions: ['.php']
         }))
-        // .pipe(gulpif(/(\.js|\.css)$/, gzip({ preExtension: 'gz' })))
         .pipe(gulpif(/(\.js|\.css)$/, gulp.dest('./')))
         .pipe(gulpif('*.php', gulp.dest('./site/snippets/prod')));
 });
+
+gulp.task('build:server', ['build:assets'], function(done) {
+    phpconnect.server({
+        port: 8003
+    }, done);
+});
+
+gulp.task('build:static', ['build:server'], function(done) {
+    return gulp.src('')
+            .pipe(shell([
+                'wget http://localhost:8003 --recursive --adjust-extension --convert-links --no-host-directories --directory-prefix dist/'
+            ]));
+});
+
+// fix `page:1.html` kind of links to avoid confusion with protocol
+gulp.task('build:fix', ['build:static'], function() {
+    return gulp.src('./dist/**/*.html')
+        .pipe(replace(/href="(page|tag):/g, 'href="./$1:'))
+        .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('build', ['build:fix']);
