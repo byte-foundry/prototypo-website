@@ -22,7 +22,7 @@ Members:
   membergithub: https://github.com/yannickmathey
   membertwitter: https://twitter.com/_____________y
   memberwebsite: http://yannickmathey.com/
-  membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=contact@prototypo.io&su=Hi%20YM!'
+  membermail: mailto:yannick@prototypo.io
   membervimeo:
   memberphoto: ym-300x196.jpg
 - 
@@ -34,7 +34,7 @@ Members:
   membergithub: https://github.com/louisremi/
   membertwitter: http://twitter.com/louis_remi
   memberwebsite: http://louisremi.com/
-  membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=lrbabe@gmail.com&su=Hi%20LRB!'
+  membermail: mailto:louisremi@prototypo.io
   membervimeo:
   memberphoto: lrb-300x197.jpg
 - 
@@ -46,7 +46,7 @@ Members:
   membergithub:
   membertwitter: https://twitter.com/productiontype
   memberwebsite: https://www.productiontype.com/
-  membermail: jeanbaptiste@prototypo.io
+  membermail: mailto:jeanbaptiste@prototypo.io
   membervimeo:
   memberphoto: jbl_slanted_.jpg
 - 
@@ -58,7 +58,7 @@ Members:
   membergithub:
   membertwitter: http://twitter.com/prototypoApp
   memberwebsite: http://blog.prototypo.io/
-  membermail: 'https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=contact+mj@prototypo.io&su=Hi%20MJ!'
+  membermail: mailto:contact@prototypo.io
   membervimeo: https://vimeo.com/user4849193
   memberphoto: mj.jpg
 

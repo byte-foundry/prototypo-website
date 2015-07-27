@@ -15,6 +15,7 @@ var rimraf      = require('rimraf');
 var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
+var run         = require('gulp-run');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -80,16 +81,19 @@ gulp.task('build:assets', ['sass', 'clean:dist'], function() {
         .pipe(gulpif('*.php', gulp.dest('./site/snippets/prod')));
 });
 
-gulp.task('build:server', ['build:assets'], function(done) {
+var buildPort = 8003;
+gulp.task('build:server', [/*'build:assets'*/], function(done) {
     phpconnect.server({
-        port: 8003
+        port: buildPort
     }, done);
 });
 
 gulp.task('build:static', ['build:server'], function(done) {
     return gulp.src('')
             .pipe(shell([
-                'wget http://localhost:8003 --recursive --adjust-extension --convert-links --no-host-directories --directory-prefix dist/'
+                'wget http://localhost:' + buildPort + ' --recursive --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
+                // kill php server
+                'fuser -k ' + buildPort + '/tcp'
             ]));
 });
 
