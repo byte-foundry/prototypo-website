@@ -27,7 +27,7 @@
 
         <li class="MembersItem">
           <div class="MembersItem-wrap text-center">
-            <div class="MembersItem-photo" style="background-image:url(<?php echo url('content/'.$page->dirname().'/'.$member[memberphoto]); ?>)"></div>
+            <div class="MembersItem-photo" style="background-image:url(<?php echo url('content/'.$page->dirname().'/'.$member['memberphoto']); ?>)"></div>
 
             <div class="MembersItem-bloc">
               <h3 class="MembersItem-name textType-subtitle textSize-title-medium"><?php echo $member['membername']; ?></h3>
@@ -36,7 +36,7 @@
               <ul class="MembersItem-links text-center">
                 <?php if (!empty($member['memberquery'])) : ?>
                 <li class="MembersItem-linksItem textSize-small">
-                  <a href="<?php echo $member[memberquery]; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-query">
+                  <a href="<?php echo $member['memberquery']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-query">
                   <span class="show-for-sr">Query</span>
                   </a>
                 </li>

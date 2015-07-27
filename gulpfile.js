@@ -15,7 +15,6 @@ var rimraf      = require('rimraf');
 var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
-var run         = require('gulp-run');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
