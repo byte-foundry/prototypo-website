@@ -81,7 +81,7 @@ gulp.task('build:assets', ['sass', 'clean:dist'], function() {
 });
 
 var buildPort = 8003;
-gulp.task('build:server', [/*'build:assets'*/], function(done) {
+gulp.task('build:server', ['build:assets'], function(done) {
     phpconnect.server({
         port: buildPort
     }, done);
