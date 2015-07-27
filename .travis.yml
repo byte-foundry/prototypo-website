@@ -7,8 +7,8 @@ before_script:
 - npm install
 script:
 - gulp build
-deploy:
-  - surge --project ./dist --domain www.prototypo.io
+after_script:
+- surge --project ./dist --domain www.prototypo.io
 # deploy:
 #   - provider: openshift
 #     user: francois.poizat@gmail.com
