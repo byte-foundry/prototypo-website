@@ -90,9 +90,7 @@ gulp.task('build:server', ['build:assets'], function(done) {
 gulp.task('build:static', ['build:server'], function(done) {
     return gulp.src('')
             .pipe(shell([
-                'wget http://localhost:' + buildPort + ' --recursive --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
-                // kill php server
-                'fuser -k ' + buildPort + '/tcp'
+                'wget http://localhost:' + buildPort + ' --recursive --adjust-extension --convert-links --no-host-directories --directory-prefix dist/'
             ]));
 });
 
@@ -100,7 +98,9 @@ gulp.task('build:static', ['build:server'], function(done) {
 gulp.task('build:fix', ['build:static'], function() {
     return gulp.src('./dist/**/*.html')
         .pipe(replace(/href="(page|tag):/g, 'href="./$1:'))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'))
+        // kill php server
+        .pipe(shell([ 'fuser -k ' + buildPort + '/tcp' ]));
 });
 
 gulp.task('build', ['build:fix']);

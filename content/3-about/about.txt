@@ -15,7 +15,7 @@ Members:
 - 
   membername: Yannick Mathey
   memberjob: Co-founder, art director
-  memberdescription: 'YM is specialist in nothing and curious about everything. It was during his last year of studies at ESAD Strasbourg that he discovered his passion for type design, a mix between two different but complementary educations: the classic type design and historical perspectives by Pierre Roesch and self-taught approach, more free but equally refined with Pierre Di Sciullo. His final year of studies gave him a year of "free time" to learn the basics of letters & code, and develop the alpha version of prototypo.'
+  memberdescription: 'YM is specialist in nothing and curious about everything. It was during his last year of studies at ESAD Strasbourg that he discovered his passion for type design. His final year of studies gave him a year of "free time" to learn the basics of letters & code, and develop the alpha version of prototypo with <a href="https://processing.org" target="_blank" class="colorDarkest ">Processing</a>.'
   memberquery: 'https://www.google.fr/search?safe=off&site=&tbm=isch&source=hp&biw=1629&bih=1271&q=cheese&oq=cheese&gs_l=img.3..0l10.1905.2702.0.5822.6.5.0.1.1.0.143.427.4j1.5.0....0...1ac.1.29.img..1.5.334.5X3spjq-vfg'
   memberfacebook: >
     https://www.facebook.com/yannick.mathey.9
@@ -49,6 +49,26 @@ Members:
   membermail: mailto:jeanbaptiste@prototypo.io
   membervimeo:
   memberphoto: jbl_slanted_.jpg
+- 
+  membername: Antoine Heber-Suffrin
+  memberjob: Head of marketing
+  memberdescription: >
+    Antoine is passionate about bringing
+    digital products and business to market.
+    A 3-times entrepreneur, he acquired the
+    skills needed to market digital products
+    at Google in Paris and, since 2013, in
+    Silicon Valley start ups. He joined the
+    Prototypo team in 2015 to help launch
+    the product and develop the business.
+  memberquery:
+  memberfacebook:
+  membergithub:
+  membertwitter: https://twitter.com/ahebersuffrin
+  memberwebsite: https://www.linkedin.com/in/antoinehs
+  membermail: mailto:antoine@prototypo.io
+  membervimeo:
+  memberphoto: antoinehsleweb.jpg
 - 
   membername: MJ
   memberjob: Community manager
