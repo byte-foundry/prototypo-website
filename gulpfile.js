@@ -92,7 +92,7 @@ gulp.task('build:static', ['build:server'], function(done) {
             .pipe(shell([
                 'wget http://localhost:' + buildPort + ' --recursive --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
                 // kill php server
-                'fuser -s -k ' + buildPort + '/tcp'
+                'fuser -k ' + buildPort + '/tcp'
             ]));
 });
 

@@ -1,6 +1,21 @@
 $(function() {
+    /* Analytics events */
+    // track users subscribing to the newsletter
+    $(document.body).on('submit', '[action$="subscribe"]', function(e) {
+        ga('send', 'event', 'newsletter', 'subscribe');
+    });
 
-    // Button click handler
+    // track subscribtions once user is redirected (just to make sure)
+    if ( window.location.hash === '#subscribed' ) {
+        ga('send', 'event', 'newsletter', 'subscribed');
+    }
+
+    // track clicks on outbount links
+    $(document.body).on('click', '[target="_blank"]', function(e) {
+        ga( 'send', 'event', 'outbound', 'click', e.target.href );
+    });
+
+    /* Demo/Video switch */
     $('.switchAction').on('click', function(e) {
         $('.toggleSwitch').toggle();
     });
@@ -10,15 +25,15 @@ $(function() {
         $(this).toggleClass('active');
     });
 
+    /* FAQ Code */
     $('.Question-header').not('.Question-anchor').on('click', function() {
         $(this).parent().find('.Question-content').slideToggle(200);
     });
 
-
-    $('.Question-anchor').on('click', function() {
-        window.location.reload();
-    });
-
+    // What's the point of this reload?
+    // $('.Question-anchor').on('click', function() {
+    //     window.location.reload();
+    // });
 
     function FAQ__checkIfAnchorToQuestion() {
         if (window.location.hash) {
@@ -39,6 +54,7 @@ $(function() {
         $('.Pricing').removeClass('showAnnualBilling').addClass('showMonthlyBilling');
     });
 
+    /* Prototypo Demo in Canvas */
     var instance = new PrototypoCanvas({
             canvas: document.querySelector('#DemoCanvas'),
             jQueryListeners: false,
