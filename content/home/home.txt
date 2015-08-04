@@ -45,7 +45,7 @@ Fonts:
 
 - 
   fontfile: venus-preview.svg
-  fontname: Prototypo Venus
+  fontname: Prototypo Grotesk
   fontdescription: >
     A perfect sans serif, with infinite
     variations.

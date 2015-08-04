@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - about
   - home
+  - about
   - null
   - >
     blog/prototypo-update-4-overcoming-dilemmas
