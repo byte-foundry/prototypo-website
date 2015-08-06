@@ -15,7 +15,7 @@
 			<div class="DemoHome">
 
 				<div class="toggleSwitch hide" style="width:100%; height: 100%;">
-					<iframe src="https://player.vimeo.com/video/86406495" style="width:100%; height: 100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<iframe id="videoplayer" data-src="//player.vimeo.com/video/86406495?badge=0&byline=0&color=49E4A9&autoplay=1" src="" style="width:100%; height: 100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 
 				<div class="toggleSwitch">

@@ -15,9 +15,22 @@ $(function() {
         ga( 'send', 'event', 'outbound', 'click', e.target.href );
     });
 
+    // track users playing with the demo
+    $(document.body).one('input', '.DemoControls input', function() {
+        ga( 'send', 'event', 'try-demo', 'click' );
+    });
+
+    // track users playing the video
+    $('.switchAction').one('click', function() {
+        ga( 'send', 'event', 'play-video', 'click' );
+    });
+
     /* Demo/Video switch */
     $('.switchAction').on('click', function(e) {
+        $videoplayer = $('#videoplayer');
         $('.toggleSwitch').toggle();
+        $videoplayer.attr('src', $videoplayer.attr('src') !== '' ?
+            '' : $videoplayer.attr('data-src') );
     });
 
     $('#toggleMainNav').on('click', function() {
