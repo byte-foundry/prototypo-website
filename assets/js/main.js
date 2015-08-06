@@ -2,12 +2,12 @@ $(function() {
     /* Analytics events */
     // track users subscribing to the newsletter
     $(document.body).on('submit', '[action$="subscribe"]', function(e) {
-        ga('send', 'event', 'newsletter', 'subscribe');
+        ga( 'send', 'event', 'newsletter', 'subscribe' );
     });
 
     // track subscribtions once user is redirected (just to make sure)
     if ( window.location.hash === '#subscribed' ) {
-        ga('send', 'event', 'newsletter', 'subscribed');
+        ga( 'send', 'event', 'newsletter', 'subscribed' );
     }
 
     // track clicks on outbount links
@@ -29,7 +29,7 @@ $(function() {
     $('.switchAction').on('click', function(e) {
         $videoplayer = $('#videoplayer');
         $('.toggleSwitch').toggle();
-        $videoplayer.attr('src', $videoplayer.attr('src') !== '' ?
+        $videoplayer.attr('src', $videoplayer.attr('src') ?
             '' : $videoplayer.attr('data-src') );
     });
 
