@@ -63,7 +63,7 @@ gulp.task('clean:dist', function(cb) {
 
 gulp.task('build:assets', ['sass', 'clean:dist'], function() {
     var assets = useref.assets({
-            searchPath: '/'
+            searchPath: './'
         });
 
     return gulp.src('./site/snippets/dev/*.php')
