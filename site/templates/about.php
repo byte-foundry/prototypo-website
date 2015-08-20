@@ -10,7 +10,7 @@
   		</header>
 
   		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
-        <?php echo $page->section1Txt()->kirbytext(); ?>
+        <?php echo $page->text()->kirbytext(); ?>
   		</div>
 
 

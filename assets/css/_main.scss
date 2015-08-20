@@ -485,6 +485,18 @@
   margin-bottom: 20px;
 }
 
+.support-newsletter {
+    background: white;
+    margin-top: 4em;
+    h3 {
+        color: #222;
+    }
+    input[type=text] {
+        background-color: lighten(#fbe173, 20%);
+        padding: 16px 22px;
+    }
+}
+
 #subscribed {
     display: none;
     &:target {

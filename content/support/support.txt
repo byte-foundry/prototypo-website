@@ -1,0 +1,14 @@
+Title: You want to support us?
+
+----
+
+Text: 
+
+*Our Kickstarter campaign is over, but we would say a great Thank You!*
+
+If you want to support this project, there are many options:
+-
+- You can contribute on our (link: https://github.com/byte-foundry/prototypo/ text: GitHub page project  popup: yes) with submitting issues, proposing new options, debugging, etc.
+- Subscribe to our newsletter to be notified when we launch in September 2015.
+- Spread the word on (link: https://twitter.com/prototypoApp text: Twitter  popup: yes) and (link: https://www.facebook.com/prototypoApp text: Facebook  popup: yes) : )
+- When we will launch the application, come to say Hello and subscribe to one of our pack!
