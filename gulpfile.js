@@ -42,9 +42,11 @@ gulp.task('serve', ['sass'], function() {
         });
     });
 
-    gulp.watch("./assets/css/**/*.scss", ['sass']);
-    gulp.watch("./assets/js/**/*.js").on('change', browserSync.reload);
-    gulp.watch("./site/**/*.php").on('change', browserSync.reload);
+    gulp.watch('./assets/css/**/*.scss', ['sass']);
+    gulp.watch([
+        './assets/js/**/*.js',
+        './site/**/*.php'
+    ]).on('change', browserSync.reload);
 });
 
 // Compile sass into CSS & auto-inject into browsers
