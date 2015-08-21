@@ -1328,6 +1328,13 @@
 
 .Thanks-content {
   font-size:0;
+  .textType-txt p {
+      color: grey;
+      margin-bottom: 2em;
+      a {
+          color: white;
+      }
+  }
 }
 
 .AwesomeBacker {

@@ -9,10 +9,9 @@ password: >
 language: en
 role: admin
 history:
+  - thanks
   - support
   - home
   - about
   - null
-  - >
-    blog/prototypo-update-4-overcoming-dilemmas
 token: 8582de2619e6452ae43542499ee9a53dfb316357
