@@ -92,14 +92,18 @@ gulp.task('build:server', ['build:assets'], function(done) {
 gulp.task('build:static', ['build:server'], function(done) {
     return gulp.src('')
             .pipe(shell([
-                [ 'wget',
-                    'http://localhost:' + buildPort,
-                    'http://localhost:' + buildPort + '/support',
-                    '--recursive --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/'
-                ].join(' '),
+                'wget http://localhost:' + buildPort + ' ' +
+                    '--recursive --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
+            ]))
+            .pipe(shell([
+                'wget http://localhost:' + buildPort + '/404 ' +
+                    '--content-on-error --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
                 // kill php server
                 'fuser -k ' + buildPort + '/tcp'
-            ]));
+            ], {
+                // the second wget will always error. Ignore that
+                ignoreErrors: true
+            }));
 });
 
 // fix `page:1.html` kind of links to avoid confusion with protocol
