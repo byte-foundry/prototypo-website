@@ -6230,14 +6230,6 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
-.switch.large.override label:after {
-  height: 1.9rem;
-  width: 1.9rem; }
-
-.switch label:after {
-  left: .3rem;
-  top: .3rem; }
-
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -6739,7 +6731,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "PT Sans", sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #444;
   padding-top: 65px;
   background: #141414;
@@ -6832,27 +6824,26 @@ input:focus {
   line-height: 14px; }
 
 .textType-articleTitle, .Article-content h1, .Article-content h2, .Article-content h3 {
-  font-family: "Roboto Slab", serif, inherit;
+  font-family: "Roboto Slab", inherit;
   font-weight: normal; }
 
 .textType-title {
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "PT Sans", inherit;
   font-weight: bold; }
 
 .textType-subtitle {
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "Playfair Display", inherit;
   font-weight: normal;
-  font-style: italic;
-  margin-top: 0.5em; }
+  font-style: italic; }
 
 .textType-txt {
-  font-family: "PT Sans", sans-serif, inherit; }
+  font-family: "PT Sans", inherit; }
 
 .textType-subtxt {
-  font-family: "PT Sans", sans-serif, inherit; }
+  font-family: "PT Sans", inherit; }
 
 .textType-callTo, .callToAction, .Infobox {
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "PT Sans", inherit;
   font-weight: bold;
   font-style: italic; }
 
@@ -6863,7 +6854,7 @@ input[type="password"] {
   outline: none;
   color: #787878;
   font-size: 16px;
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "PT Sans", inherit;
   padding: 10px 18px 7px 18px;
   display: inline-block;
   border: none;
@@ -6887,9 +6878,6 @@ input[type="password"]:focus {
 
 .width100 {
   width: 100%; }
-
-.marginTop15 {
-  margin-top: 15px; }
 
 .marginTop30 {
   margin-top: 30px; }
@@ -7333,24 +7321,17 @@ input[type="password"]:focus {
   height: 100%;
   min-height: 880px; }
 
-.Section-homepage:before {
-  content: 'a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z';
+.Section-backgroundFonts {
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   font-size: 42px;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Playfair Display", inherit;
   font-style: italic;
   letter-spacing: -5px;
-  color: rgba(0, 0, 0, 0.02);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+  color: rgba(0, 0, 0, 0.02); }
 
 .Section-homepageWrap {
   position: absolute;
@@ -7365,14 +7346,14 @@ input[type="password"]:focus {
 
 .Section-homepageGetStartedLineTitle {
   display: inline-block;
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "PT Sans", inherit;
   font-size: 24px;
   font-weight: 700; }
 
 .Section-homepageGetStartedLineSubtitle {
   display: inline-block;
   margin: 0 15px;
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "PT Sans", inherit;
   font-size: 22px;
   font-weight: 400;
   font-style: italic; }
@@ -7606,7 +7587,7 @@ input[type="password"]:focus {
   position: relative;
   z-index: 20;
   color: white;
-  font-family: "PT Sans", sans-serif, inherit;
+  font-family: "PT Sans", inherit;
   font-style: italic;
   font-weight: 400;
   margin-top: 30px; }
@@ -7644,19 +7625,18 @@ input[type="password"]:focus {
 .Section-fontsItem {
   position: relative; }
 
-/* .Section-fontsItem:after {
-  content:"";
-  position:absolute;
-  top:-10px;
-  right:-5px;
-  width:70px;
-  height:70px;
-  background:url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
-  box-shadow:0 2px 40px rgba(adjust-hue($mainBackgroundColor, 35deg),.4);
-  border-radius:50%;
-  z-index:10
-}
- */
+.Section-fontsItem:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  width: 70px;
+  height: 70px;
+  background: url(/assets/img/pictos/pictoBadgeMadeWithPrototypo.svg) no-repeat center center;
+  box-shadow: 0 2px 40px rgba(73, 197, 228, 0.4);
+  border-radius: 50%;
+  z-index: 10; }
+
 .Section-fontsItemWrap {
   background: white;
   border-radius: 3px;
@@ -7678,6 +7658,10 @@ input[type="password"]:focus {
 
 .Section-fontsName {
   margin-top: 5px; }
+
+.Section-fontsDescription {
+  border-bottom: solid 1px gainsboro;
+  padding-bottom: 20px; }
 
 .Section-fontsDownload {
   margin-top: 20px; }
@@ -7990,10 +7974,6 @@ input[type="password"]:focus {
 
 .MembersItem-name {
   padding: 0; }
-
-.MembersItem-job {
-  font-size: 14px;
-  color: #c8c8c8; }
 
 .MembersItem-bloc {
   background: white;
@@ -8572,8 +8552,7 @@ input[type="password"]:focus {
     padding: 20px 30px; }
   .Section-homepage {
     height: auto;
-    position: relative;
-    min-height: 950px; }
+    position: relative; }
   .Section-homepageWrap {
     top: 10px;
     margin-top: 0;
@@ -8611,28 +8590,7 @@ input[type="password"]:focus {
   .DemoHome {
     width: 90%; }
   .DemoHome:after {
-    display: none; }
-  .DemoHome {
-    height: 470px; }
-  .DemoControls {
-    top: 340px;
-    left: 70px; }
-  #DemoCanvas {
-    left: -35px; } }
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .DemoHome {
-    width: 90%; }
-  .DemoHome:after {
-    display: none; }
-  .DemoHome {
-    height: 470px; }
-  .DemoControls {
-    top: 150px;
-    left: 30px; }
-  #DemoCanvas {
-    left: 280px;
-    top: 120px; } }
+    display: none; } }
 
 @media only screen and (max-width: 480px) {
   .Nav-callToActionCreateYourFont {
@@ -8667,7 +8625,7 @@ input[type="password"]:focus {
     height: 470px; }
   .DemoControls {
     top: 340px;
-    left: 30px; }
+    left: 50px; }
   #DemoCanvas {
     left: -65px; } }
 
@@ -8814,7 +8772,7 @@ input[type="password"]:focus {
     height: 470px; }
   .DemoControls {
     top: 340px;
-    left: 50px; }
+    left: 70px; }
   #DemoCanvas {
     left: -35px; } }
 
@@ -8830,37 +8788,3 @@ input[type="password"]:focus {
     top: 40%; }
   .Section-homepage {
     min-height: 1010px; } }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-  .DemoControls {
-    left: 20px; }
-  .DemoControls-Potentiometer {
-    width: 150px; }
-  #DemoCanvas {
-    left: 185px; }
-  .Section-homepageWrap {
-    top: 0; }
-  .Section-homepage {
-    min-height: 780px; }
-  .DemoHome {
-    height: 330px; } }
-
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation: landscape) {
-  #DemoCanvas {
-    position: absolute;
-    top: 80px;
-    left: 210px; }
-  .DemoControls {
-    top: 150px;
-    left: 30px; }
-  .DemoHome {
-    height: 400px; } }
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
-  #DemoCanvas {
-    top: 40px;
-    left: 120px; }
-  .DemoHome {
-    height: 280px; }
-  .DemoControls {
-    z-index: 10000; } }

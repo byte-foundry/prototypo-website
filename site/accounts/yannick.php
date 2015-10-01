@@ -9,6 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - pricing
+  - subscribe
+  - thanks
+  - support
   - home
-token: 33f216a17cae53bb87c497c1816c264a1d3432e0
+  - about
