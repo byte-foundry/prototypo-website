@@ -9,9 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - subscribe
   - thanks
   - support
   - home
   - about
-  - null
-token: 8582de2619e6452ae43542499ee9a53dfb316357

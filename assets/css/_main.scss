@@ -1,359 +1,288 @@
 .Section-homepage {
-  background:linear-gradient(to bottom right,
-                             $mainBackgroundColor,
-                             adjust-hue($mainBackgroundColor, 35deg));
+	background: linear-gradient(to bottom right, $mainBackgroundColor, adjust-hue($mainBackgroundColor, 35deg));
 }
-
 .Section-parametricDesignTool {
-  background:linear-gradient(to bottom right,
-                             $thirdBackgroundColor,
-                             adjust-hue($thirdBackgroundColor,-15deg));
+	background: linear-gradient(to bottom right, $thirdBackgroundColor, adjust-hue($thirdBackgroundColor,-15deg));
 }
-
 .Section-features {
-  background:linear-gradient(to bottom right,
-                             $colorDarkest,
-                             $colorLightBlack);
+	background: linear-gradient(to bottom right, $colorDarkest, $colorLightBlack);
 }
-
 .Section-theytalkaboutus {
-  background:linear-gradient(to bottom right,
-                             $colorBrightest,
-                             $colorWhite);
+	background: linear-gradient(to bottom right, $colorBrightest, $colorWhite);
 }
-
 .Section-newsletter,
 .Section-subscribed {
-  background:linear-gradient(to bottom right,
-                             adjust-hue($mainBackgroundColor, 35deg),
-                             adjust-hue($mainBackgroundColor,0deg));
+	background: linear-gradient(to bottom right, adjust-hue($mainBackgroundColor, 35deg), adjust-hue($mainBackgroundColor,0deg));
 }
-
 .Pricing {
-  background:linear-gradient(to bottom right,
-                             adjust-hue($secondBackgroundColor, 0deg),
-                             adjust-hue($secondBackgroundColor, 40deg));
+	background: linear-gradient(to bottom right, adjust-hue($secondBackgroundColor, 0deg), adjust-hue($secondBackgroundColor, 40deg));
 }
-
 .About {
-  background:linear-gradient(to bottom right,
-                             $colorDarkest,
-                             $colorLightBlack);
+	background: linear-gradient(to bottom right, $colorDarkest, $colorLightBlack);
 }
-
 .Blog {
-  background:linear-gradient(to bottom right,
-                             adjust-hue(#a2e392, 355deg),
-                             adjust-hue(#a2e392, 325deg));
+	background: linear-gradient(to bottom right, adjust-hue(#a2e392, 355deg), adjust-hue(#a2e392, 325deg));
 }
-
 .FAQ {
-  background:linear-gradient(to bottom right,
-                             adjust-hue(#a2e392, 285deg),
-                             adjust-hue(#a2e392, 315deg));
+	background: linear-gradient(to bottom right, adjust-hue(#a2e392, 285deg), adjust-hue(#a2e392, 315deg));
 }
-
 .Thanks {
-  background:url('/assets/img/ourAwesomeBackers.png') repeat-x rgb(20,20,20);
+	background: url("/assets/img/ourAwesomeBackers.png") repeat-x rgb(20,20,20);
 }
-
 .Gallery {
-  background:linear-gradient(to bottom right,
-                             adjust-hue(#eee, 285deg),
-                             adjust-hue($colorLighterGray, 315deg));
+	background: linear-gradient(to bottom right, adjust-hue(#eee, 285deg), adjust-hue($colorLighterGray, 315deg));
 }
 
 /*
  *  Page: home
  */
-
 .Section {
-  position:relative;
-
-  width:100%;
-  padding: 65px 0 60px;
+	position: relative;
+	width: 100%;
+	padding: 65px 0 60px;
 }
-
 .SectionHeader {
-  margin-top:20px;
-  margin-bottom:60px
+	margin-top: 20px;
+	margin-bottom: 60px;
 }
-
 .Section-wrapTxt a {
-  color:$colorBrightest;
+	color: $colorBrightest;
 }
-
 .Section-wrapTxt a:hover {
-  color:$colorWhite;
-	text-decoration:underline;
+	color: $colorWhite;
+	text-decoration: underline;
 }
-
 .Section-wrapTxt.colorDarkGray a,
 .Section-wrapTxt.colorLightBlack a,
 .Section-wrapTxt.colorBlack a,
 .Section-wrapTxt.colorDark a,
 .Section-wrapTxt.colorDarkest a {
-  color:$colorDark;
+	color: $colorDark;
 }
-
-
 .Section-wrapTxt.colorDarkGray a:hover,
 .Section-wrapTxt.colorLightBlack a:hover,
 .Section-wrapTxt.colorBlack a:hover,
 .Section-wrapTxt.colorDark a:hover,
 .Section-wrapTxt.colorDarkest a:hover {
-  color:$colorDarkest;
-	text-decoration:underline;
+	color: $colorDarkest;
+	text-decoration: underline;
 }
-
-
 .Section-homepage {
-  overflow:hidden;
-  height:100%;
-  min-height:880px;
+	overflow: hidden;
+	height: 100%;
+	min-height: 880px;
 }
-
 .Section-homepage:before {
-  content: 'a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z';
-
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-
-  font-size:42px;
-  font-family: $mainFont;
-  font-style:italic;
-  letter-spacing:-5px;
-
-  color:rgba($colorDark,.02);
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	content: 'a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 42px;
+	font-family: $mainFont;
+	font-style: italic;
+	letter-spacing: -5px;
+	color: rgba($colorDark,.02);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
-
 .Section-homepageWrap {
-  position: absolute;
-
-  margin-top: -390px;
-  height: 600px;
-  top: 50%;
-  left: 0;
-  right: 0;
+	position: absolute;
+	margin-top: -390px;
+	height: 600px;
+	top: 50%;
+	left: 0;
+	right: 0;
 }
-
 .Section-homepageGetStartedLine {
-  margin:30px 0 20px 0;
+	margin: 30px 0 20px;
 }
-
 .Section-homepageGetStartedLineTitle {
-  display:inline-block;
-
-  font-family:$mainFont, inherit;
-  font-size:24px;
-  font-weight:700
+	display: inline-block;
+	font-family: $mainFont, inherit;
+	font-size: 24px;
+	font-weight: 700;
 }
-
 .Section-homepageGetStartedLineSubtitle {
-  display:inline-block;
-
-  margin:0 15px;
-  font-family:$mainFont, inherit;
-  font-size:22px;
-  font-weight:400;
-  font-style:italic;
+	display: inline-block;
+	margin: 0 15px;
+	font-family: $mainFont, inherit;
+	font-size: 22px;
+	font-weight: 400;
+	font-style: italic;
 }
-
 .Section-homepageGetStartedLineCallToAction {
-  padding-right:50px;
-  background-image:url(/assets/img/pictos/pictoArrowToRightWhite.svg) !important;
-  background-repeat:no-repeat !important;
-  background-position:112px center;
-  background-size:18px !important;
-
-  @include transition(all 300ms ease);
+	padding-right: 50px;
+	background-image: url("/assets/img/pictos/pictoArrowToRightWhite.svg") !important;
+	background-repeat: no-repeat !important;
+	background-position: 112px center;
+	background-size: 18px !important;
+	@include transition(all 300ms ease);
 }
-
 .Section-homepageGetStartedLineCallToAction:hover {
-  background-position:117px center;
+	background-position: 117px center;
 }
-
 .DemoHome {
-  position:relative;
-  width:700px;
-  height:350px;
-  margin:0 auto;
-  z-index:1;
-
-  background:$colorWhite;
-  box-shadow:0px 5px 45px rgba(0,0,0,.4);
-  border-radius:$global-radius;
+	position: relative;
+	width: 700px;
+	height: 350px;
+	margin: 0 auto;
+	z-index: 1;
+	background: $colorWhite;
+	box-shadow: 0 5px 45px rgba(0,0,0,.4);
+	border-radius: $global-radius;
 }
-
 .DemoHome:after {
-  content:"";
-  position:absolute;
-  z-index:-1;
-
-  background:linear-gradient(to left, rgba(0,0,0,.08), transparent);
-  width:900px;
-  height:742px;
-  right:700px;
-  top:-0;
-
-  @include transform-origin(top right);
-  @include transform(rotateZ(-45deg) skew(18.5deg,0));
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background: linear-gradient(to left, rgba(0,0,0,.08), transparent);
+	width: 900px;
+	height: 742px;
+	right: 700px;
+	top: -0;
+	@include transform-origin(top right);
+	@include transform(rotateZ(-45deg) skew(18.5deg,0));
 }
-
 #DemoCanvas {
-    position: absolute;
-    top: 50px;
-    left: 260px;
-     width: 350px;
-     height: 300px;
+	position: absolute;
+	top: 50px;
+	left: 260px;
+	width: 350px;
+	height: 300px;
 }
-
 .DemoHome-windowBackground {
-  position:absolute;
-
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:$colorWhite;
-  border-radius:$global-radius;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $colorWhite;
+	border-radius: $global-radius;
 }
-
 .DemoHome-windowTopBar {
-  position:absolute;
-
-  top:0;
-  left:0;
-  right:0;
-  border-top:solid 30px rgb(230,230,230);
-  border-radius:$global-radius $global-radius 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-top: solid 30px rgb(230,230,230);
+	border-radius: $global-radius $global-radius 0 0;
 }
-
 .DemoHome-windowLogo {
-  position:absolute;
-
-  top:60px;
-  left:30px;
-  opacity:.2;
+	position: absolute;
+	top: 60px;
+	left: 30px;
+	opacity: 0.2;
 }
-
 .DemoHome-windowButton {
-  position:absolute;
-  display:inline-block;
-
-  top:9px;
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  background:$colorWhite;
+	position: absolute;
+	display: inline-block;
+	top: 9px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: $colorWhite;
 }
-
-.DemoHome-windowButtonRed       { left: 12px }
-.DemoHome-windowButtonYellow    { left: 32px }
-.DemoHome-windowButtonGreen     { left: 52px }
-
+.DemoHome-windowButtonRed {
+	left: 12px;
+}
+.DemoHome-windowButtonYellow {
+	left: 32px;
+}
+.DemoHome-windowButtonGreen {
+	left: 52px;
+}
 .DemoControls {
-  position:absolute;
-
-  top:150px;
-  left:30px;
-  width:130px;
-  height:200px
+	position: absolute;
+	top: 150px;
+	left: 30px;
+	width: 130px;
+	height: 200px;
 }
-
 .DemoControls-PotentiometerItem {
-  position:relative;
-
-  height:15px;
-  margin-bottom:12px;
+	position: relative;
+	height: 15px;
+	margin-bottom: 12px;
 }
-
 .DemoControls-PotentiometerPicto {
-  position:absolute;
-
-  width:12px;
-  top:-1px;
-  left:0;
+	position: absolute;
+	width: 12px;
+	top: -1px;
+	left: 0;
 }
-
 .DemoControls-Potentiometer {
-  -webkit-appearance: none;
-  position: absolute;
-  top: 6px;
-  left: 25px;
-  width: 200px;
-  height: 17px;
-  margin: -4px 0;
-  border-radius: 9px;
-  cursor: pointer;
-  background-image: linear-gradient( to right, $potentiometerBarBackgroundColor 0%, $potentiometerBackgroundColor 0.01% );
+	-webkit-appearance: none;
+	position: absolute;
+	top: 6px;
+	left: 25px;
+	width: 200px;
+	height: 17px;
+	margin: -4px 0;
+	border-radius: 9px;
+	cursor: pointer;
+	background-image: linear-gradient( to right, $potentiometerBarBackgroundColor 0%, $potentiometerBackgroundColor 0.01% );
 }
-
 .DemoControls-Potentiometer:focus {
-  outline: none;
+	outline: none;
 }
 .DemoControls-Potentiometer::-webkit-slider-runnable-track {
-  background: transparent;
-  height: 17px;
+	background: transparent;
+	height: 17px;
 }
 .DemoControls-Potentiometer::-webkit-slider-thumb {
-  border: 4px solid $potentiometerBarBackgroundColor;
-  height: 17px;
-  width: 17px;
-  border-radius: 9px;
-  background: $potentiometerBarHandlerBackgroundColor;
-  cursor: pointer;
-  -webkit-appearance: none;
+	border: 4px solid $potentiometerBarBackgroundColor;
+	height: 17px;
+	width: 17px;
+	border-radius: 9px;
+	background: $potentiometerBarHandlerBackgroundColor;
+	cursor: pointer;
+	-webkit-appearance: none;
 }
+
 // .DemoControls-Potentiometer:focus::-webkit-slider-runnable-track {
 //   background: #5fe7b3;
 // }
 .DemoControls-Potentiometer::-moz-range-track {
-  background: transparent;
-  height: 17px;
+	background: transparent;
+	height: 17px;
 }
 .DemoControls-Potentiometer::-moz-range-thumb {
-  border: 4px solid $potentiometerBarBackgroundColor;
-  height: 9px;
-  width: 9px;
-  border-radius: 9px;
-  background: $potentiometerBarHandlerBackgroundColor;
-  cursor: pointer;
+	border: 4px solid $potentiometerBarBackgroundColor;
+	height: 9px;
+	width: 9px;
+	border-radius: 9px;
+	background: $potentiometerBarHandlerBackgroundColor;
+	cursor: pointer;
 }
 .DemoControls-Potentiometer::-ms-track {
-  background: transparent;
+	background: transparent;
 }
 .DemoControls-Potentiometer::-ms-fill-lower {
-  background: $potentiometerBarBackgroundColor;
-  border-radius: 18px;
+	background: $potentiometerBarBackgroundColor;
+	border-radius: 18px;
 }
 .DemoControls-Potentiometer::-ms-fill-upper {
-  background: $potentiometerBackgroundColor;
-  border-radius: 18px;
+	background: $potentiometerBackgroundColor;
+	border-radius: 18px;
 }
 .DemoControls-Potentiometer::-ms-thumb {
-  border: 4px solid $potentiometerBarBackgroundColor;
-  width: 9px;
-  border-radius: 9px;
-  background: $potentiometerBarHandlerBackgroundColor;
-  cursor: pointer;
-  height: 9px;
+	border: 4px solid $potentiometerBarBackgroundColor;
+	width: 9px;
+	border-radius: 9px;
+	background: $potentiometerBarHandlerBackgroundColor;
+	cursor: pointer;
+	height: 9px;
 }
 .DemoControls-Potentiometer:focus::-ms-fill-lower {
-  background: #5fe7b3;
+	background: #5fe7b3;
 }
 .DemoControls-Potentiometer:focus::-ms-fill-upper {
-  background: #5fe7b3;
+	background: #5fe7b3;
 }
 
 // .DemoControls-Potentiometer {
@@ -394,132 +323,106 @@
 //   border-radius:10px;
 //   background:$potentiometerBarHandlerBackgroundColor;
 // }
-
-
-
 .Infobox {
-  position:absolute;
-  padding:20px 24px;
-  z-index:90;
-
-  background:$infoboxBackgroundColor;
-  border-radius:$global-radius;
-  color:$infoboxTextColor;
-  font-size:$infoboxTextSize;
-  line-height:$infoboxLineHeight;
-
-  @extend .textType-callTo;
+	position: absolute;
+	padding: 20px 24px;
+	z-index: 90;
+	background: $infoboxBackgroundColor;
+	border-radius: $global-radius;
+	color: $infoboxTextColor;
+	font-size: $infoboxTextSize;
+	line-height: $infoboxLineHeight;
+	@extend .textType-callTo;
 }
-
 .Infobox-DemoHomeInfoboxLeft {
-  left: -190px;
-  top: 145px;
-  width: 200px;
-  height: 105px;
-
-  @include animation('DemoHomeInfoboxLeftAnimation 1300ms ease infinite');
+	left: -190px;
+	top: 145px;
+	width: 200px;
+	height: 105px;
+	@include animation('DemoHomeInfoboxLeftAnimation 1300ms ease infinite');
 }
-
-
 .Infobox-DemoHomeInfoboxLeft:after {
-  position: absolute;
-  content: "";
-
-  right: -9px;
-  top: 30px;
-  border-left: 20px solid $infoboxBackgroundColor;
-  border-radius: 52px;
-  border-top: solid 20px rgba(0, 0, 0, 0);
-  border-bottom: solid 20px rgba(0, 0, 0, 0);
+	position: absolute;
+	content: "";
+	right: -9px;
+	top: 30px;
+	border-left: 20px solid $infoboxBackgroundColor;
+	border-radius: 52px;
+	border-top: solid 20px rgba(0, 0, 0, 0);
+	border-bottom: solid 20px rgba(0, 0, 0, 0);
 }
-
 .Infobox-DemoHomeInfoboxRight {
-  right: -190px;
-  top: 105px;
-  width: 210px;
-  height: 105px;
-
-  @include animation('DemoHomeInfoboxRightAnimation 1300ms ease infinite');
+	right: -190px;
+	top: 105px;
+	width: 210px;
+	height: 105px;
+	@include animation('DemoHomeInfoboxRightAnimation 1300ms ease infinite');
 }
-
 .Infobox-DemoHomeInfoboxRight:after {
-  position: absolute;
-  content: "";
-
-  left: -9px;
-  top: 30px;
-  border-right: 20px solid $infoboxBackgroundColor;
-  border-radius: 52px;
-  border-top: solid 20px rgba(0, 0, 0, 0);
-  border-bottom: solid 20px rgba(0, 0, 0, 0);
+	position: absolute;
+	content: "";
+	left: -9px;
+	top: 30px;
+	border-right: 20px solid $infoboxBackgroundColor;
+	border-radius: 52px;
+	border-top: solid 20px rgba(0, 0, 0, 0);
+	border-bottom: solid 20px rgba(0, 0, 0, 0);
 }
-
 .Section-homepageDiscoverFeaturesLine {
-  position:relative;
-
-  z-index:20;
-  color:$colorWhite;
-  font-family:$mainFont, inherit;
-  font-style:italic;
-  font-weight:400;
-  margin-top:30px
+	position: relative;
+	z-index: 20;
+	color: $colorWhite;
+	font-family: $mainFont, inherit;
+	font-style: italic;
+	font-weight: 400;
+	margin-top: 30px;
 }
-
 .switch-label {
-    font-weight: bold;
-    position: relative;
-    margin-right: 7px;
-    top: -7px;
+	font-weight: bold;
+	position: relative;
+	margin-right: 7px;
+	top: -7px;
 }
-
 .SectionNewsletterIn {
-  margin-top:30px;
-  border-top:solid 1px rgba($colorBright,.2);
-  padding-top:30px;
-  position: relative;
-  z-index: 90;
+	margin-top: 30px;
+	border-top: solid 1px rgba($colorBright,.2);
+	padding-top: 30px;
+	position: relative;
+	z-index: 90;
 }
-
 .SectionNewsletterInHeader {
-  margin-top: 20px;
-  margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
-
 .support-newsletter {
-    background: white;
-    margin-top: 4em;
-    h3 {
-        color: #222;
-    }
-    input[type=text] {
-        background-color: lighten(#fbe173, 20%);
-        padding: 16px 22px;
-    }
+	background: white;
+	margin-top: 4em;
+	h3 {
+		color: #222;
+	}
+	input[type=text] {
+		background-color: lighten(#fbe173, 20%);
+		padding: 16px 22px;
+	}
 }
-
 #subscribed {
-    display: none;
-    &:target {
-        display: block;
-        & + .Section-newsletter {
-            display: none;
-        }
-    }
+	display: none;
+	&:target {
+		display: block;
+		& + .Section-newsletter {
+			display: none;
+		}
+	}
 }
-
-
 .Section-fonts {
-  clear:both;
-
-  margin-top:30px;
-  border-top:solid 1px $lineBorderColor;
-  padding-top:30px;
+	clear: both;
+	margin-top: 30px;
+	border-top: solid 1px $lineBorderColor;
+	padding-top: 30px;
 }
-
 .Section-fontsItem {
-  position:relative;
+	position: relative;
 }
-
 
 // Remove for the pre-release website
 /* .Section-fontsItem:after {
@@ -536,246 +439,192 @@
 }
  */
 .Section-fontsItemWrap {
-  background:$colorWhite;
-  border-radius:$global-radius;
-  padding:20px 30px 30px 30px !important; /* foundation */
-  margin:5px;
-  overflow:hidden;
-  box-shadow:0 2px 40px rgba($secondBackgroundColor,.5);
+	background: $colorWhite;
+	border-radius: $global-radius;
+    padding: 20px 30px 30px!important;
+	/* foundation */
+	margin: 5px;
+	overflow: hidden;
+	box-shadow: 0 2px 40px rgba($secondBackgroundColor,.5);
 }
-
 .Section-fontsView {
-  font-size:100px;
-  line-height:120px;
-  height:150px
+	font-size: 100px;
+	line-height: 120px;
+	height: 150px;
 }
-
 .Section-fontsInfos {
-  margin:30px -30px -30px -30px;
-  background:$colorLighterGray;
-  padding:30px;
+	margin: 30px -30px -30px;
+	background: $colorLighterGray;
+	padding: 30px;
+}
+.Section-fontsName {
+	margin-top: 5px;
 }
 
-.Section-fontsName {
-  margin-top:5px;
-}
 //
 // .Section-fontsDescription {
 //   border-bottom:solid 1px $colorLightGray;
 //   padding-bottom:20px;
 // }
-
 .Section-fontsDownload {
-  margin-top:20px
+	margin-top: 20px;
 }
-
-
-
-
-
-
-
 .Section-featuresItem {
-  padding:0 20px 50px 20px !important;
+	padding: 0 20px 50px!important
 }
-
 .Section-featuresPictoWrap {
-  width:80%;
-  height:150px;
-  margin:0 0 25px 0;
-  display:inline-block;
-  vertical-align:middle
+	width: 80%;
+	height: 150px;
+	margin: 0 0 25px;
+	display: inline-block;
+	vertical-align: middle;
 }
-
 .Section-featuresPicto {
-  height:100%;
-  display:inline-block;
-  vertical-align:bottom
+	height: 100%;
+	display: inline-block;
+	vertical-align: bottom;
 }
-
 .Section-featuresTitle {
-  margin-bottom:10px;
+	margin-bottom: 10px;
 }
-
 .Section-featuresDescription {
 
 }
-
-
-
-
-
-
-
 .Section-theytalkaboutusItem {
-  padding:0 20px 5px 20px !important;
-  height:100px !important;
+	padding: 0;
+	height: 100px !important;
 }
-
 .Section-theytalkaboutusPictoWrap {
-
-  height: 100px;      /* equals max image height */
-  width: 80%;
-  white-space: nowrap;
-
-  text-align: center;
-  margin: 0 auto;
+	height: 100px;
+	/* equals max image height */
+	width: 80%;
+	white-space: nowrap;
+	text-align: center;
+	margin: 0 auto;
 }
-
 .Section-theytalkaboutusHelper {
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
-
 .Section-theytalkaboutusPicto {
-  vertical-align: middle;
-    max-height: 100px;
-    max-width: 100%;
+	vertical-align: middle;
+	max-height: 100px;
+	max-width: 100%;
 }
-
 .Section-theytalkaboutusTitle {
-  margin-bottom:10px;
+	margin-bottom: 10px;
 }
-
-
-
-
-
 .Newsletter {
-  letter-spacing:10px
+	letter-spacing: 10px;
 }
-
 .NewsletterInput-submit {
-  display:inline-block;
-  border:none;
+	display: inline-block;
+	border: none;
 }
-
 
 /*
  *  Page: Pricing
  */
-
-
-
 .Pricing {
-//   padding-top:30px;
-}
 
+	//   padding-top:30px;
+}
 .PricingPageHeader {
-   padding-top:65px;
+	padding-top: 65px;
 }
-
 .PricingItemFree {
-  z-index:9;
-  position:relative;
-  display: block !important;
-  background:#333333;
-  padding-bottom:50px;
-  /*width:98.7% !important;*/
-  background-size:cover;
-  background-position:center center;
-  background-attachment: fixed;
-
-  @include transition(all 300ms ease)
+	z-index: 9;
+	position: relative;
+	display: block !important;
+	background: #333;
+	padding-bottom: 50px;
+	/*width:98.7% !important;*/
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	@include transition(all 300ms ease);
 }
-
 .PricingItemFree-wrap {
-  margin:0;
- /* padding:15px 15px 15px 30px;*/
-  padding:15px;/*
+	margin: 0;
+	/* padding:15px 15px 15px 30px;*/
+	padding: 15px;
+	/*
 
   border-radius:$global-radius;
   box-shadow:0 2px 40px rgba($secondBackgroundColor,.2);
   border: solid 2px $colorWhite;
 */
- /* width: 100%; */
-  text-align:center;
-  position: relative;
+	/* width: 100%; */
+	text-align: center;
+	position: relative;
 }
-
 .PricingItemFree-wrapIn {
-  margin:0;
-  float:left
+	margin: 0;
+	float: left;
 }
-
 .PricingItemFree-pack {
-  margin:13px 0 0 0
+	margin: 13px 0 0;
 }
-
 .PricingItemFree-title {
-}
 
+}
 .PricingItemFree-getStarted {
-  float:right
+	float: right;
 }
-
 .PricingSwitch {
-  color:$colorBrightest;
-  margin-top:20px;
+	color: $colorBrightest;
+	margin-top: 20px;
 }
-
 .PricingSwitch-item {
-  display:inline-block;
-  padding:5px 15px;
-  border-radius:$global-radius;
-  border: 1px solid white;
-  cursor:pointer;
-  margin-left: 0.7rem;
-
-  @include transition(all 300ms ease);
+	display: inline-block;
+	padding: 5px 15px;
+	border-radius: $global-radius;
+	border: 1px solid white;
+	cursor: pointer;
+	margin-left: 0.7rem;
+	@include transition(all 300ms ease);
 }
-
 .showAnnualBilling .PricingSwitch-item.js_annualBilling,
 .showMonthlyBilling .PricingSwitch-item.js_monthlyBilling,
 .PricingSwitch-item:hover {
-  color:$colorDark;
-  background:white;
+	color: $colorDark;
+	background: white;
 }
-
-
 .PricingTable {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
-
 .PricingTable:before {
-  content:"";
-  display:none !important;
+	content: "";
+	display: none !important;
 }
-
 .PricingItem {
-  z-index:9;
-  position:relative;
-  display: flex !important;
-
-  @include transition(all 300ms ease)
+	z-index: 9;
+	position: relative;
+	display: flex !important;
+	@include transition(all 300ms ease);
 }
-
 .PricingItem-wrap {
-
-  margin:0;
-  padding: 35px 0px 0;
-  background:$colorWhite;
-  border-radius:$global-radius;
-  box-shadow:0 2px 40px rgba($secondBackgroundColor,.2);
-  text-align: center;
-  border-top: solid 3px $colorWhite;
-
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-
-  width: 100%;
-  position: relative;
+	margin: 0;
+	padding: 35px 0 0;
+	background: $colorWhite;
+	border-radius: $global-radius;
+	box-shadow: 0 2px 40px rgba($secondBackgroundColor,.2);
+	text-align: center;
+	border-top: solid 3px $colorWhite;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
 }
 /*
 
@@ -791,64 +640,53 @@
 
 */
 .PricingItem:hover {
-  @include transform(scale(1.05,1.05));
-  z-index:10
+	@include transform(scale(1.05,1.05));
+	z-index: 10;
 }
-
-
 .PricingItem-wrap.disabled * {
-  opacity:.6
+	opacity: 0.6;
 }
-
 .PricingItem-packtitle {
-  text-transform:uppercase;
-  letter-spacing:1px;
-  font-weight:bold;
-  color:$secondBackgroundColor;
-  margin-bottom:20px
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: $secondBackgroundColor;
+	margin-bottom: 20px;
 }
-
 .PricingItem-title {
-  text-transform:lowercase;
+	text-transform: lowercase;
 }
-
 .PricingItem-priceBefore {
-  margin-top:4px;
-  display:inline-block;
-  vertical-align:top;
-  opacity:.6
+	margin-top: 4px;
+	display: inline-block;
+	vertical-align: top;
+	opacity: 0.6;
 }
-
 .PricingItem-price {
-  letter-spacing:-2px;
-  display:inline-block;
-  width: 80px;
-  height: 58px;
-  overflow: hidden;
+	letter-spacing: -2px;
+	display: inline-block;
+	width: 80px;
+	height: 58px;
+	overflow: hidden;
 }
-
 .js_price {
-  @include transition(all 300ms ease);
-
-  text-align:center;
+	@include transition(all 300ms ease);
+	text-align: center;
 }
-
 .showMonthlyBilling .js_price {
-  margin-top:-66px
+	margin-top: -66px;
 }
-
 .PricingItem-priceAfter {
-  margin-right:-17px;
-  display:inline-block;
-  opacity:.6
+	margin-right: -17px;
+	display: inline-block;
+	opacity: 0.6;
 }
-
 .PricingItem-infos {
-  background:$colorLighterGray;
-  margin: 25px 0px 0;
-  padding: 25px 10px 80px;
-  flex: 1;
-  position:relative;
+	background: $colorLighterGray;
+	margin: 25px 0 0;
+	padding: 25px 10px 80px;
+	flex: 1;
+	position: relative;
 }
 /*
 
@@ -864,523 +702,423 @@
   border-top: solid 15px rgb(255, 255, 255);
 }
 */
-
 .PricingItem-pack {
-  font-weight:bold;
+	font-weight: bold;
 }
-
 .PricingItem-pack2 {
-  font-weight:bold;
-  text-transform:uppercase;
-
+	font-weight: bold;
+	text-transform: uppercase;
 }
-
 .PricingItem-content {
-  margin-top:8px;
-  border-top:solid 1px $colorLightGray;
-  margin-top:25px;
-  padding-top:25px;
+	margin-top: 8px;
+	border-top: solid 1px $colorLightGray;
+	margin-top: 25px;
+	padding-top: 25px;
 }
-
 .PricingItem-getStarted {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
-
 .PricingItem-getStarted .callToAction {
-  display:block;
-  border-radius:0 0 2px 2px !important
+	display: block;
+	border-radius: 0 0 2px 2px !important;
 }
-
 .PricingItem-getStarted .callToAction:hover {
-  transform:scale(1)!important;
+	transform: scale(1)!important;
 }
-
-
-
 
 /*
  * Page : About us
  */
-
-
-
 .Members {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
 }
-
 .Members:before {
-  content:"";
-  display:none !important
+	content: "";
+	display: none !important;
 }
-
 .MembersItem {
-  z-index:9;
-  position:relative;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-
-
-  @include transition(all 300ms ease)
+	z-index: 9;
+	position: relative;
+	display: -webkit-flex !important;
+	display: -ms-flexbox !important;
+	display: flex !important;
+	@include transition(all 300ms ease);
 }
-
 .MembersItem-wrap {
 
-  /*margin:0 5px;*/
-
-  padding:0;
-  border-radius:$global-radius;
-  box-shadow:0 2px 40px rgba($colorBlack,.2);
-  overflow:hidden;
-
-  display: flex;
-  flex-direction: column;
-
+	/*margin:0 5px;*/
+	padding: 0;
+	border-radius: $global-radius;
+	box-shadow: 0 2px 40px rgba($colorBlack,.2);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
-
 .MembersItem-photo {
-  height:200px;
-  margin:0;
-  background-repeat:no-repeat;
-  background-position:center center;
-  background-size:cover;
+	height: 200px;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
-
 .MembersItem-name {
-  padding:0
+	padding: 0;
 }
-
 .MembersItem-job {
-  font-size: 14px;
-  color: $colorGray;
+	font-size: 14px;
+	color: $colorGray;
 }
-
 .MembersItem-bloc {
-  background:$colorWhite;
-
-  padding:40px 25px 35px;
+	background: $colorWhite;
+	padding: 40px 25px 35px;
 }
-
 .MembersItem-links {
-  margin:30px 0 0 0;
-
-  padding-top:0;
-  border-top:solid 1px rgba($lineBorderColor,.1);
-  font-size:0;
+	margin: 30px 0 0;
+	padding-top: 0;
+	border-top: solid 1px rgba($lineBorderColor,.1);
+	font-size: 0;
 }
-
 .MembersItem-linksItem:first-child {
-  border-left:solid 5px $colorWhite;
-  width:35px;
+	border-left: solid 5px $colorWhite;
+	width: 35px;
 }
-
 .MembersItem-linksItem:last-child {
-  border-right:solid 5px $colorWhite;
-  width:35px;
+	border-right: solid 5px $colorWhite;
+	width: 35px;
 }
-
 .MembersItem-linksItem {
-  display:inline-block;
-  vertical-align:middle;
-  width:30px;
-  height:30px;
-  margin:-15px 0 0 0;
-  background:$colorWhite;
-  border-radius:50%;
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	margin: -15px 0 0;
+	background: $colorWhite;
+	border-radius: 50%;
 }
-
 .MembersItem-linksItemLink {
-  display:block;
-  width:100%;
-  height:100%;
-  background-position:center center;
-  background-size:16px;
-  background-repeat:no-repeat;
-  opacity:.3;
-
-  @include transition(all 300ms ease);
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-size: 16px;
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	@include transition(all 300ms ease);
 }
-
 .MembersItem-linksItemLink:hover {
-  opacity:1;
+	opacity: 1;
 }
-
-.MembersItem-linksItem-query { background-image:url(/assets/img/pictos/pictoSocialQueryDark.svg); }
-.MembersItem-linksItem-facebook { background-image:url(/assets/img/pictos/pictoSocialFacebookLightDark.svg); }
-.MembersItem-linksItem-twitter { background-image:url(/assets/img/pictos/pictoSocialTwitterDark.svg); }
-.MembersItem-linksItem-github { background-image:url(/assets/img/pictos/pictoSocialGitHubDark.svg); }
-.MembersItem-linksItem-vimeo { background-image:url(/assets/img/pictos/pictoSocialVimeoDark.svg); }
-.MembersItem-linksItem-website { background-image:url(/assets/img/pictos/pictoSocialWebsiteDark.svg); }
-.MembersItem-linksItem-mail { background-image:url(/assets/img/pictos/pictoSocialMailDark.svg); }
-
+.MembersItem-linksItem-query {
+	background-image: url("/assets/img/pictos/pictoSocialQueryDark.svg");
+}
+.MembersItem-linksItem-facebook {
+	background-image: url("/assets/img/pictos/pictoSocialFacebookLightDark.svg");
+}
+.MembersItem-linksItem-twitter {
+	background-image: url("/assets/img/pictos/pictoSocialTwitterDark.svg");
+}
+.MembersItem-linksItem-github {
+	background-image: url("/assets/img/pictos/pictoSocialGitHubDark.svg");
+}
+.MembersItem-linksItem-vimeo {
+	background-image: url("/assets/img/pictos/pictoSocialVimeoDark.svg");
+}
+.MembersItem-linksItem-website {
+	background-image: url("/assets/img/pictos/pictoSocialWebsiteDark.svg");
+}
+.MembersItem-linksItem-mail {
+	background-image: url("/assets/img/pictos/pictoSocialMailDark.svg");
+}
 .MembersItem-infos {
-  background:$colorLighterGray;
-  margin:0;
-  padding:30px 25px 35px 25px;
-
-  flex: 1;
+	background: $colorLighterGray;
+	margin: 0;
+	padding: 30px 25px 35px;
+	flex: 1;
 }
-
 .Members-thankstobackers {
-  border-radius:2px;
-  padding:140px 25px;
-  margin-bottom:-90px;
-  display:block;
-  background-size:cover;
-  background-color:rgb(25,25,25);
+	border-radius: 2px;
+	padding: 140px 25px;
+	margin-bottom: -90px;
+	display: block;
+	background-size: cover;
+	background-color: rgb(25,25,25);
 }
-
-
-
 
 /*
  * Page : Blog
  */
-
-
 .Article {
-  background:$colorWhite;
-  border-radius:$global-radius;
-  margin-bottom:20px;
-  box-shadow:0 2px 40px rgba(darken(adjust-hue(#a2e392, 355deg),10%),.5);
-  clear:both;
-  overflow:hidden;
+	background: $colorWhite;
+	border-radius: $global-radius;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 40px rgba(darken(adjust-hue(#a2e392, 355deg),10%),.5);
+	clear: both;
+	overflow: hidden;
 }
-
 .Article:last-of-type {
-  margin-bottom:0;
+	margin-bottom: 0;
 }
-
 .Article-header {
-  padding:45px 100px 35px 100px;
-  background:url(/assets/img/pictos/pictoPrototypoArticleHeader.svg) no-repeat top right $blocSecondBackgroundColor;
+	padding: 45px 100px 35px;
+	background: url("/assets/img/pictos/pictoPrototypoArticleHeader.svg") no-repeat top right $blocSecondBackgroundColor;
 }
-
 .Article-tags {
-  display:inline-block;
-  margin-left:20px;
-  float:right
+	display: inline-block;
+	margin-left: 20px;
+	float: right;
 }
-
 .Article-tag {
-  display:inline-block;
+	display: inline-block;
 }
-
 .Article-tagLink {
-  background:$secondBackgroundColor;
-  padding:4px 8px;
-  border-radius:$global-radius;
-  display:block;
-
-  @include transition(all 300ms ease);
+	background: $secondBackgroundColor;
+	padding: 4px 8px;
+	border-radius: $global-radius;
+	display: block;
+	@include transition(all 300ms ease);
 }
-
-
 .Article-tagLink:hover {
-  background:$colorWhite;
-  color:$secondBackgroundColor;
+	background: $colorWhite;
+	color: $secondBackgroundColor;
 }
-
 .Article-title {
-  margin:0;
+	margin: 0;
 }
-
 .Article-titleLink h1,
 .Article-titleLink h3 {
-  color:$colorDarkest;
-
-  @include transition(all 100ms ease);
+	color: $colorDarkest;
+	@include transition(all 100ms ease);
 }
-
 .Article-titleLink:hover h1,
 .Article-titleLink:hover h3 {
-  color:$secondBackgroundColor !important;
+	color: $secondBackgroundColor !important;
 }
-
 .Article-subtitle {
-  margin:5px 0 0 0;
+	margin: 5px 0 0;
 }
-
 .Article-infos {
-  border-top:solid 1px $lineBorderColor;
-  margin-top:15px;
-  padding-top:15px;
+	border-top: solid 1px $lineBorderColor;
+	margin-top: 15px;
+	padding-top: 15px;
 }
-
-
 .Article-infos:after {
-  content:"";
-  clear:both;
-  height:1px;
-  position:relative
+	content: "";
+	clear: both;
+	height: 1px;
+	position: relative;
 }
-
-
 .Article-content {
-  padding:85px 100px;
-  text-align:justify;
-  position:relative;
-  clear:both;
+	padding: 85px 100px;
+	text-align: justify;
+	position: relative;
+	clear: both;
 }
-
 .Article-content:before {
-  content:"";
-  position:absolute;
-  top:-30px;
-  left:50%;
-  margin-left:-15px;
-  border:solid 15px transparent;
-  border-bottom:solid 15px $colorWhite
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	margin-left: -15px;
+	border: solid 15px transparent;
+	border-bottom: solid 15px $colorWhite;
 }
-
 .Article-content img {
-  margin:0 auto;
-  display:block
+	margin: 0 auto;
+	display: block;
 }
-
 .Article-content h1 {
-  text-align: left;
-  padding-top: 0;
-  margin-top: 15px;
-  margin-bottom: 20px;
-
-  @extend .textType-articleTitle;
-  @extend .textSize-title-medium;
+	text-align: left;
+	padding-top: 0;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	@extend .textType-articleTitle;
+	@extend .textSize-title-medium;
 }
-
 .Article-content h2 {
-  text-align:left;
-  border-top:solid 1px $lineBorderColor;
-  padding-top:25px;
-  margin-top:15px;
-  margin-bottom:20px;
-
-  @extend .textType-articleTitle;
-  @extend .textSize-title-xsmall;
+	text-align: left;
+	border-top: solid 1px $lineBorderColor;
+	padding-top: 25px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	@extend .textType-articleTitle;
+	@extend .textSize-title-xsmall;
 }
-
 .Article-content h3 {
-  text-align:left;
-  margin-top:25px;
-
-  @extend .textType-articleTitle;
-  @extend .textSize-txt-xlarge;
+	text-align: left;
+	margin-top: 25px;
+	@extend .textType-articleTitle;
+	@extend .textSize-txt-xlarge;
 }
-
 .Article-content a {
-  color:$colorDark;
-  background:$colorLighterGray;
-  padding:3px 7px;
-  border-radius:$global-radius;
-
-  @include transition(all 300ms ease);
+	color: $colorDark;
+	background: $colorLighterGray;
+	padding: 3px 7px;
+	border-radius: $global-radius;
+	@include transition(all 300ms ease);
 }
-
 .Article-content a:hover {
-  color:$colorBrightest;
-  background:$colorDark;
+	color: $colorBrightest;
+	background: $colorDark;
 }
-
 .Article-content ul {
-  list-style-type:square;
-  padding-left:20px
+	list-style-type: square;
+	padding-left: 20px;
 }
-
 .Article-content ul li {
 
 }
-
 .Article-leaveComment {
-  background:$blocSecondBackgroundColor;
-  padding:20px 100px 50px;
-  display:block;
-
-  @include transition(all 300ms ease);
+	background: $blocSecondBackgroundColor;
+	padding: 20px 100px 50px;
+	display: block;
+	@include transition(all 300ms ease);
 }
-
 .Article-leaveComment:hover {
-  background:$colorDarkest;
-  color:$colorWhite;
+	background: $colorDarkest;
+	color: $colorWhite;
 }
-
 .BlogPagination {
-  margin:0 10px
+	margin: 0 10px;
 }
-
 .BlogPagination-item {
-  display:inline-block;
-  padding:13px 30px 10px 30px;
-  color:$colorWhite;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-weight:bold;
-  background:$blocSecondBackgroundColor;
-
-  @include transition(all 300ms ease);
+	display: inline-block;
+	padding: 13px 30px 10px;
+	color: $colorWhite;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	background: $blocSecondBackgroundColor;
+	@include transition(all 300ms ease);
 }
-
 .BlogPagination-before {
-  margin-top:-40px;
+	margin-top: -40px;
 }
-
 .BlogPagination-before .BlogPagination-item {
-  padding-top:13px;
-  padding-bottom:10px;
-  border-bottom:solid 3px $lineBorderColor;
+	padding-top: 13px;
+	padding-bottom: 10px;
+	border-bottom: solid 3px $lineBorderColor;
 }
-
 .BlogPagination-after .BlogPagination-item {
-  padding-bottom:13px;
-  padding-top:10px;
-  border-top:solid 3px $lineBorderColor;
+	padding-bottom: 13px;
+	padding-top: 10px;
+	border-top: solid 3px $lineBorderColor;
 }
-
 .BlogPagination-item:hover {
-  color:$colorWhite;
-
-  background-color:rgba($blocSecondBackgroundColor,.2);
-
+	color: $colorWhite;
+	background-color: rgba($blocSecondBackgroundColor,.2);
 }
-
 .BlogPagination-prev {
-  padding-left:90px;
+	padding-left: 90px;
 }
-
 .BlogPagination-next {
-  float:right;
-  padding-right:90px;
+	float: right;
+	padding-right: 90px;
 }
-
-
-
 .Disqus {
-  background:$blocSecondBackgroundColor;
-  padding:50px 100px;
+	background: $blocSecondBackgroundColor;
+	padding: 50px 100px;
 }
-
 .Disqus a {
-  color:$secondBackgroundColor !important;
+	color: $secondBackgroundColor !important;
 }
-
-
-
 
 /*
  * Page : FAQ
  */
-
-
-
 .Question {
-  background:$colorWhite;
-  border-radius:$global-radius;
-  margin-bottom:10px;
-  box-shadow:0 2px 40px rgba(darken(adjust-hue(#a2e392, 285deg),10%),.5);
-  clear:both;
-  overflow:hidden;
+	background: $colorWhite;
+	border-radius: $global-radius;
+	margin-bottom: 10px;
+	box-shadow: 0 2px 40px rgba(darken(adjust-hue(#a2e392, 285deg),10%),.5);
+	clear: both;
+	overflow: hidden;
 }
-
 .Question:last-of-type {
-  margin-bottom:0;
+	margin-bottom: 0;
 }
-
 .Question.focus {
-  box-shadow:0 2px 40px rgba(darken(adjust-hue(#a2e392, 285deg),10%),.9);
-  border:solid 5px $secondBackgroundColor;
-  margin:20px -5px 20px -5px
+	box-shadow: 0 2px 40px rgba(darken(adjust-hue(#a2e392, 285deg),10%),.9);
+	border: solid 5px $secondBackgroundColor;
+	margin: 20px -5px;
 }
-
 .Question-header {
-  padding:15px 40px 15px 70px;
-  background:url(/assets/img/pictos/pictoFAQQuestionPrototypo.svg) no-repeat 20px 18px $colorWhite;
-  cursor:pointer;
-  position:relative;
+	padding: 15px 40px 15px 70px;
+	background: url("/assets/img/pictos/pictoFAQQuestionPrototypo.svg") no-repeat 20px 18px $colorWhite;
+	cursor: pointer;
+	position: relative;
 }
-
 .Question-anchor {
-  position:absolute;
-  top:17px;
-  right:17px;
+	position: absolute;
+	top: 17px;
+	right: 17px;
 }
-
 .Question-title {
-  margin:0;
+	margin: 0;
 }
-
 .Question-content {
-  padding:15px 40px 15px 70px;
-  background:$blocSecondBackgroundColor;
-  display:none
+	padding: 15px 40px 15px 70px;
+	background: $blocSecondBackgroundColor;
+	display: none;
 }
-
 
 /*
  * Page : Thanks
  */
-
 .Thanks-content {
-  font-size:0;
-  .textType-txt p {
-      color: grey;
-      margin-bottom: 2em;
-      a {
-          color: white;
-      }
-  }
+	font-size: 0;
+	.textType-txt p {
+		color: grey;
+		margin-bottom: 2em;
+		a {
+			color: white;
+		}
+	}
 }
-
 .AwesomeBacker {
-  display:inline-block;
-  position:relative;
+	display: inline-block;
+	position: relative;
 }
-
 .AwesomeBacker-avatar {
-  width:35px;
-  height:35px;
-  float:left;
-  margin-right:12px
+	width: 35px;
+	height: 35px;
+	float: left;
+	margin-right: 12px;
 }
-
 .AwesomeBacker-name {
-  width: 75%;
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 21px;
-  white-space:nowrap
+	width: 75%;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 21px;
+	white-space: nowrap;
 }
-
 .AwesomeBacker-url {
-  width: 75%;
-  display: block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 14px;
-  text-transform:lowercase
+	width: 75%;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 14px;
+	text-transform: lowercase;
 }
-
 
 /*
  * Page : Gallery
  */
-
 .Fonts {
-  clear:both;
-
-  margin-top:30px;
+	clear: both;
+	margin-top: 30px;
 }
-
 .FontsItem {
-  position:relative;
-  padding:0 !important;
+	position: relative;
+	padding: 0 !important;
 }
 
 /*
@@ -1397,46 +1135,40 @@
   z-index:10
 }
 */
-
 .FontsItemWrap {
-  background:$colorWhite;
-  padding:20px 30px 30px 30px !important; /* foundation */
-  margin:0;
-  overflow:hidden;
-  outline:solid 1px $colorLighterGray
+	background: $colorWhite;
+    border-radius: 3px;
+    padding: 200px 30px 30px!important;
+    margin: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 40px rgba(255,114,94,.5);
 }
-
 .FontsView {
-  font-size:100px;
-  line-height:120px;
-  height:130px;
+	font-size: 100px;
+	line-height: 120px;
+	height: 130px;
 }
-
 .FontsInfos {
-  margin:30px -30px -30px -30px;
-  background:$colorLighterGray;
-  padding:30px;
+	margin: 30px -30px -30px;
+	background: $colorLighterGray;
+	padding: 30px;
 }
-
 .FontsName {
-  margin-top:5px;
-  border-top: solid 1px rgb(240, 240, 240);
-  padding-top: 15px;
+	margin-top: 5px;
+	border-top: solid 1px rgb(240, 240, 240);
+	padding-top: 15px;
 }
-
 .FontsDescription {
-  border-bottom:solid 1px $colorLightGray;
-  padding-bottom:20px;
+	border-bottom: solid 1px $colorLightGray;
+	padding-bottom: 20px;
 }
-
 .FontsNumberVariants {
-  color:$colorGray;
-  font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-weight:bold;
+	color: $colorGray;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
 }
-
 .FontsDownload {
-  margin-top:20px
+	margin-top: 20px;
 }

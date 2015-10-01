@@ -16,5 +16,7 @@ if(file_exists(__DIR__ . DS . 'site.php')) {
   $kirby = kirby();
 }
 
+//Please call 911
+
 // render
 echo $kirby->launch();

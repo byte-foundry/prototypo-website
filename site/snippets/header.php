@@ -69,10 +69,10 @@
         <span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
       </a>
 
-      <!-- <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
+      <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
     		<span class="show-for-medium-up">Create your font now!</span>
     		<span class="show-for-small-only text-center">Get started!</span>
-      </a> -->
+      </a>
 
       <?php snippet('menu') ?>
 

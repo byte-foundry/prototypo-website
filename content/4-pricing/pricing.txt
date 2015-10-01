@@ -24,7 +24,9 @@ Packs:
   packname: professional
   packprice: 15
   packprice2: 13
-  packservices: Unlimited fonts
+  packservices: |
+    Unlimited fonts
+    All parameters
   packservices2:
   packstate: available
   packbuttonlabel: Get started!
@@ -32,7 +34,9 @@ Packs:
   packname: agency
   packprice: 59
   packprice2: 45
-  packservices: Unlimited fonts
+  packservices: |
+    Unlimited fonts
+    All parameters
   packservices2: Up to 5 users
   packstate: available
   packbuttonlabel: Get started!
@@ -40,7 +44,9 @@ Packs:
   packname: Want more?
   packprice:
   packprice2: 60
-  packservices: Unlimited fonts
+  packservices: |
+    Unlimited fonts
+    All parameters
   packservices2: |
     Unlimited users
     Collaborative tools
