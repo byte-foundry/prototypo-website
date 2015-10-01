@@ -8402,6 +8402,83 @@ input[type="password"]:focus {
 .FontsDownload {
   margin-top: 20px; }
 
+.subscribe {
+  margin-top: 3em;
+  position: relative;
+  width: 100%; }
+  .subscribe p {
+    margin-bottom: .5em; }
+  .subscribe .radio {
+    display: inline-block;
+    width: 49%;
+    padding: 50px 30px;
+    cursor: pointer;
+    position: relative;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.8); }
+    .subscribe .radio:hover input::before {
+      background-color: #fbe173; }
+    .subscribe .radio input::before {
+      content: "";
+      background-color: #f0f0f0;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      cursor: pointer;
+      z-index: 0;
+      transition: .2s; }
+    .subscribe .radio input:checked::before {
+      background-color: #fdf1bd; }
+    .subscribe .radio .plan {
+      position: relative;
+      z-index: 1;
+      margin-top: -20px; }
+      .subscribe .radio .plan .type {
+        font-size: 1em;
+        margin-bottom: 20px; }
+      .subscribe .radio .plan .price {
+        font-size: 4em;
+        font-weight: bold;
+        position: relative; }
+        .subscribe .radio .plan .price::before {
+          content: "$";
+          font-size: .5em;
+          top: .3em;
+          left: -.5em;
+          position: absolute; }
+  .subscribe input[type="email"],
+  .subscribe input[type="text"],
+  .subscribe input[type="number"],
+  .subscribe select {
+    width: 100%;
+    background-color: #f0f0f0;
+    height: 4em;
+    border-radius: 3px;
+    outline: none;
+    color: #787878;
+    font-size: 16px;
+    font-family: "PT Sans", sans-serif, inherit;
+    padding: 10px 18px 7px 18px;
+    display: inline-block;
+    border: none;
+    border-bottom: solid 3px white;
+    margin: 0 0 20px 0; }
+  .subscribe select,
+  .subscribe input.small {
+    width: calc(50% - 20px);
+    margin-right: 10px;
+    display: inline; }
+  .subscribe label {
+    font-size: 1.2em;
+    margin-bottom: 1em; }
+  .subscribe .callToAction {
+    background-color: #49e4a9; }
+    .subscribe .callToAction:hover {
+      color: #141414 !important; }
+
 /*
  *  Media queries
  */

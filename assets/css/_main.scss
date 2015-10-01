@@ -1172,3 +1172,109 @@
 .FontsDownload {
 	margin-top: 20px;
 }
+
+.subscribe {
+	margin-top: 3em;
+	position: relative;
+	width: 100%;
+
+	p {
+		margin-bottom: .5em;
+	}
+
+	.radio {
+		display: inline-block;
+		width: 49%;
+		padding: 50px 30px;
+		cursor: pointer;
+		position: relative;
+		font-size: 2em;
+		color: $colorDarkest;
+
+		&:hover {
+			input::before {
+				background-color: $thirdBackgroundColor;
+			}
+		}
+		input {
+			&::before {
+				content: "";
+				background-color: $colorLighterGray;
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				cursor: pointer;
+				z-index: 0;
+				transition: .2s;
+			}
+		}
+		input:checked {
+			&::before {
+				background-color: lighten($thirdBackgroundColor, 15%);
+			}
+		}
+		.plan {
+			position: relative;
+			z-index: 1;
+			margin-top: -20px;
+			.type {
+				font-size: 1em;
+				margin-bottom: 20px;
+			}
+			.price {
+				font-size: 4em;
+				font-weight: bold;
+				position: relative;
+				&::before{
+					content: "$";
+					font-size: .5em;
+					top: .3em;
+					left: -.5em;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	input[type="email"],
+	input[type="text"],
+	input[type="number"],
+	select {
+		width: 100%;
+		background-color: $colorLighterGray;
+		height: 4em;
+
+		border-radius: 3px;
+	    outline: none;
+	    color: #787878;
+	    font-size: 16px;
+	    font-family: "PT Sans", sans-serif, inherit;
+	    padding: 10px 18px 7px 18px;
+	    display: inline-block;
+	    border: none;
+	    border-bottom: solid 3px white;
+	    margin: 0 0 20px 0;
+	}
+
+	select,
+	input.small {
+		width: calc(50% - 20px);
+		margin-right: 10px;
+		display: inline;
+	}
+
+	label {
+		font-size: 1.2em;
+		margin-bottom: 1em;
+	}
+
+	.callToAction {
+		background-color: $mainBackgroundColor;
+		&:hover {
+			color: $colorBlack!important;
+		}
+	}
+}
