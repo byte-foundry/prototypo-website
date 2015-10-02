@@ -18,5 +18,7 @@
 
 <?php snippet( c::get('env') . '/scripts' ); ?>
 
+<script type="text/javascript" src="https://api.taxamo.com/js/v1/taxamo.all.nojquery.js"></script>
+
 </body>
 </html>

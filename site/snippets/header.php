@@ -35,7 +35,7 @@
   ?>
 
 </head>
-<body>
+<body class="<?= $page->id(); ?>">
 <script>
   WebFontConfig = {
     google: { families: [ 'Roboto+Slab:300:latin', 'PT+Sans:400,400italic,700italic,700:latin' ] },
@@ -69,7 +69,7 @@
         <span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
       </a>
 
-      <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
+      <a href="/pricing" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
     		<span class="show-for-medium-up">Create your font now!</span>
     		<span class="show-for-small-only text-center">Get started!</span>
       </a>

@@ -721,12 +721,29 @@
 	left: 0;
 	right: 0;
 }
+
+
 .PricingItem-getStarted .callToAction {
 	display: block;
 	border-radius: 0 0 2px 2px !important;
 }
 .PricingItem-getStarted .callToAction:hover {
 	transform: scale(1)!important;
+}
+
+.callToAction {
+    &.call-success {
+        background-color: $mainBackgroundColor;
+    }
+    &.call-danger {
+        background-color: $thirdBackgroundColor;
+    }
+    &.call-error {
+        background-color: $secondBackgroundColor;
+    }
+    &.call-noAnim {
+        transform: none;
+    }
 }
 
 /*
@@ -1193,11 +1210,11 @@
 
 		&:hover {
 			input::before {
-				background-color: $thirdBackgroundColor;
+				background-color:lighten($thirdBackgroundColor, 15%);
 			}
 		}
 		input {
-			&::before {
+			&:before {
 				content: "";
 				background-color: $colorLighterGray;
 				display: block;
@@ -1209,11 +1226,12 @@
 				cursor: pointer;
 				z-index: 0;
 				transition: .2s;
+                min-height: 228px;
 			}
 		}
 		input:checked {
-			&::before {
-				background-color: lighten($thirdBackgroundColor, 15%);
+			&:before {
+				background-color: $thirdBackgroundColor;
 			}
 		}
 		.plan {
@@ -1228,12 +1246,22 @@
 				font-size: 4em;
 				font-weight: bold;
 				position: relative;
-				&::before{
+
+				&:before{
 					content: "$";
 					font-size: .5em;
 					top: .3em;
 					left: -.5em;
 					position: absolute;
+				}
+                &:after{
+					content: " VAT incl. *";
+                    position: absolute;
+					font-size: .15em;
+                    margin-right: -40px;
+                    opacity: .7;
+                    top: 1em;
+                    width: 5em;
 				}
 			}
 		}
@@ -1266,15 +1294,33 @@
 		display: inline;
 	}
 
+    select.plan {
+        width: calc(50% - 5px);
+        text-transform: capitalize;
+    }
+
 	label {
 		font-size: 1.2em;
 		margin-bottom: 1em;
 	}
+}
 
-	.callToAction {
-		background-color: $mainBackgroundColor;
-		&:hover {
-			color: $colorBlack!important;
-		}
-	}
+.validateCountry {
+    margin-right: 10px;
+}
+.countryName {
+    font-weight: bold;
+}
+.listCountry {
+    cursor: pointer;
+}
+
+.notabene {
+    color: $colorDark;
+    font-size: 16px;
+    &:before {
+        content: "*";
+        display: inline-block;
+        float: left;
+    }
 }

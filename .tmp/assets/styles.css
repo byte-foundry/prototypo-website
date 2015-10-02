@@ -7955,6 +7955,18 @@ input[type="password"]:focus {
 .PricingItem-getStarted .callToAction:hover {
   transform: scale(1) !important; }
 
+.callToAction.call-success {
+  background-color: #49e4a9; }
+
+.callToAction.call-danger {
+  background-color: #fbe173; }
+
+.callToAction.call-error {
+  background-color: #ff725e; }
+
+.callToAction.call-noAnim {
+  transform: none; }
+
 /*
  * Page : About us
  */
@@ -8417,8 +8429,8 @@ input[type="password"]:focus {
     font-size: 2em;
     color: rgba(0, 0, 0, 0.8); }
     .subscribe .radio:hover input::before {
-      background-color: #fbe173; }
-    .subscribe .radio input::before {
+      background-color: #fdf1bd; }
+    .subscribe .radio input:before {
       content: "";
       background-color: #f0f0f0;
       display: block;
@@ -8429,9 +8441,10 @@ input[type="password"]:focus {
       right: 0;
       cursor: pointer;
       z-index: 0;
-      transition: .2s; }
-    .subscribe .radio input:checked::before {
-      background-color: #fdf1bd; }
+      transition: .2s;
+      min-height: 228px; }
+    .subscribe .radio input:checked:before {
+      background-color: #fbe173; }
     .subscribe .radio .plan {
       position: relative;
       z-index: 1;
@@ -8443,12 +8456,20 @@ input[type="password"]:focus {
         font-size: 4em;
         font-weight: bold;
         position: relative; }
-        .subscribe .radio .plan .price::before {
+        .subscribe .radio .plan .price:before {
           content: "$";
           font-size: .5em;
           top: .3em;
           left: -.5em;
           position: absolute; }
+        .subscribe .radio .plan .price:after {
+          content: " VAT incl. *";
+          position: absolute;
+          font-size: .15em;
+          margin-right: -40px;
+          opacity: .7;
+          top: 1em;
+          width: 5em; }
   .subscribe input[type="email"],
   .subscribe input[type="text"],
   .subscribe input[type="number"],
@@ -8471,13 +8492,29 @@ input[type="password"]:focus {
     width: calc(50% - 20px);
     margin-right: 10px;
     display: inline; }
+  .subscribe select.plan {
+    width: calc(50% - 5px);
+    text-transform: capitalize; }
   .subscribe label {
     font-size: 1.2em;
     margin-bottom: 1em; }
-  .subscribe .callToAction {
-    background-color: #49e4a9; }
-    .subscribe .callToAction:hover {
-      color: #141414 !important; }
+
+.validateCountry {
+  margin-right: 10px; }
+
+.countryName {
+  font-weight: bold; }
+
+.listCountry {
+  cursor: pointer; }
+
+.notabene {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px; }
+  .notabene:before {
+    content: "*";
+    display: inline-block;
+    float: left; }
 
 /*
  *  Media queries

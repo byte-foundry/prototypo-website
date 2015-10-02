@@ -16,14 +16,18 @@ Packs:
   packname: free
   packprice: 0
   packprice2: 0
+  packpricettc: 0
+  packprice2ttc: 0
   packservices: One font
   packservices2:
   packstate:
   packbuttonlabel: Get started!
 - 
   packname: professional
-  packprice: 15
-  packprice2: 13
+  packprice: 12
+  packprice2: 10
+  packpricettc: 15
+  packprice2ttc: 12
   packservices: |
     Unlimited fonts
     All parameters
@@ -32,8 +36,10 @@ Packs:
   packbuttonlabel: Get started!
 - 
   packname: agency
-  packprice: 59
-  packprice2: 45
+  packprice: 49
+  packprice2: 39
+  packpricettc: 59
+  packprice2ttc: 48
   packservices: |
     Unlimited fonts
     All parameters
@@ -55,7 +61,10 @@ Packs:
 
 ----
 
-Section1txtafter: (email: contact@prototypo.io text: Feel free to contact us) if you have any question about your needs.
+Section1txtafter: 
+
+(email: contact@prototypo.io text: Feel free to contact us) if you have any question about your needs. 
+\* Prices may vary according to your local VAT.
 
 ----
 

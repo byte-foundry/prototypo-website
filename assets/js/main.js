@@ -1,4 +1,5 @@
 $(function() {
+
     /* Analytics events */
     // track users subscribing to the newsletter
     $(document.body).on('submit', '[action$="subscribe"]', function(e) {
@@ -61,10 +62,16 @@ $(function() {
 
     $('.js_annualBilling').on('mousedown', function() {
         $('.Pricing').removeClass('showMonthlyBilling').addClass('showAnnualBilling');
+        $('.billing').each(function() {
+            $( this ).attr('href', '/pricing/subscribe?plan=' + $( this ).attr('plan') + '&billing=annual');
+        });
     });
 
     $('.js_monthlyBilling').on('mousedown', function() {
         $('.Pricing').removeClass('showAnnualBilling').addClass('showMonthlyBilling');
+        $('.billing').each(function() {
+            $( this ).attr('href', '/pricing/subscribe?plan=' + $( this ).attr('plan') + '&billing=monthly');
+        });
     });
 
     /* Prototypo Demo in Canvas */
@@ -136,5 +143,77 @@ $(function() {
     $('.DemoControls-Potentiometer').each(function() {
         updateSliderBg(this);
     });
+});
 
+function calcTax( amount, country ) {
+    var transaction = Taxamo.transaction()
+        .forceCountryCode( country || window.code || 'FR')
+        .buyerTaxNumber(null)
+        .currencyCode('EUR')
+        .transactionLine('line1') //first line
+            .amount(amount)
+        .done(); //go back to transaction context
+
+    // Taxamo.options.hideCountryOverlay = true;
+
+    Taxamo.calculateTax(
+        transaction,
+        function(data) {
+            // if VAT is not defined (US) replace 'undefined' by 0
+            window.taxRate = data.transaction.transaction_lines[0].tax_rate || 0;
+            $('.priceMonth').html( $('#' + $('#plan').val()).attr('month') * ( 100 + window.taxRate ) / 100 );
+            $('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') * ( 100 + window.taxRate ) / 100 );
+        },
+        function(data) {
+            console.log('Error TAXAMO');
+        }
+    );
+}
+
+$( window ).load(function() {
+    // $('#taxamo-confirm-country-overlay').css('right', 10000);
+
+    if ( $("body").hasClass("pricing/subscribe") ) {
+
+        // load taxamo
+        Taxamo.initialize('public_test_gkQnEFf8SpuGAijwkX3ustMv5cfAfoWuNdlvPXZsqvg');
+        Taxamo.detectCountry();
+
+        calcTax( parseInt( $('#' + $('#plan').val()).attr('month') ));
+
+        // Detect current country
+        Taxamo.subscribe('taxamo.country.detected', function(data) {
+            $('.countryName').html(data.countries.by_ip.name);
+            $('#taxamo-country-select option[value="' + data.countries.by_ip.code + '"]').prop('selected', true);
+            window.code = data.countries.by_ip.code;
+        });
+
+        // default load prices
+        $('.priceMonth').html( $('#' + $('#plan').val()).attr('month') * ( 100 + window.taxRate ) / 100  );
+        $('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') * ( 100 + window.taxRate ) / 100  );
+    }
+});
+
+$('.listCountry').on('click', function() {
+    $('.taxamo-country').slideToggle();
+});
+
+// if user change country
+$('#validateCountry').on('click', function() {
+    var country = $('#taxamo-country-select').val();
+    calcTax( parseInt( $('#' + $('#plan').val()).attr('month')), country );
+    $('.taxamo-country').slideToggle();
+});
+
+$('#outsideEU').on('click', function() {
+    var country = 'US';
+    console.log(country);
+    calcTax( parseInt( $('#' + $('#plan').val()).attr('month')), country );
+    $('.taxamo-country').slideToggle();
+});
+
+
+$('#plan').on('change', function() {
+    $('.priceMonth').html( $('#' + $('#plan').val()).attr('month') * ( 100 + taxRate ) / 100 );
+    $('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') * ( 100 + taxRate ) / 100 );
 });
