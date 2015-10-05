@@ -39,13 +39,13 @@
 								</select>
 							</div>
 
-							<div class="clearfix">
-								<label class="radio text-center">
-									<input class="" type="radio" name="monthYearSwitch" value="monthly" <?php if( $billing == 'monthly' || !$billing ) { echo 'checked'; } ?>>
+							<div class="clearfix radio-wrap">
+								<input id="monthly" type="radio" name="monthYearSwitch" value="monthly" <?php if( $billing == 'monthly' || !$billing ) { echo 'checked'; } ?>>
+								<label class="radio text-center" for="monthly">
 									<div class="plan"><div class="type">Monthly billing: </div><span class="price priceMonth">-</span></div>
 								</label>
-								<label class="radio text-center">
-									<input class="" type="radio" name="monthYearSwitch" value="annual"  <?php if( $billing == 'annual' ) { echo 'checked'; } ?>>
+								<input id="annual" type="radio" name="monthYearSwitch" value="annual"  <?php if( $billing == 'annual' ) { echo 'checked'; } ?>>
+								<label class="radio text-center" for="annual">
 									<div class="plan"><div class="type">Annual billing: </div><span class="price priceAnnual">-</span></div>
 								</label>
 							</div>
@@ -103,15 +103,21 @@
 							</div>
 
 							<p class="textSize-title-small marginTop60 ">Your details:</p>
-							<label for="email">Your email</label>
-							<input class="" type="email" name="email" id="email" placeholder="mj@domain.com" required="required">
+							<div class="w50 left">
+								<label for="email">Your email</label>
+								<input type="email" name="email" id="email" placeholder="mj@domain.com" required="required">
+							</div>
+							<div class="w50 left">
+								<label for="email">Your password</label>
+								<input type="password" name="password" id="email" placeholder="abc123" required="required">
+							</div>
 							<label for="VAT">Your VAT number (optionnal)</label>
-							<input class="" type="text" name="VAT" id="VAT" placeholder="AB01234567890">
+							<input type="text" name="VAT" id="VAT" placeholder="AB01234567890">
 							<p class="textSize-title-small mb20">Payment details:</p>
 							<label for="buyerNameInput">Cardholder name</label>
-							<input class="" type="text" name="buyerNameInput" id="buyerNameInput" placeholder="MJ Cat" required="required">
+							<input type="text" name="buyerNameInput" id="buyerNameInput" placeholder="MJ Cat" required="required">
 							<label for="cardNumberInput">Credit card number</label>
-							<input class="" type="number" name="cardNumberInput" id="cardNumberInput" placeholder="1234 5678 9012 3456" required="required">
+							<input type="number" name="cardNumberInput" id="cardNumberInput" placeholder="1234 5678 9012 3456" required="required">
 							<div class="width50 left">
 								<label class="small" for="creditCardExpMonthInput">Expiration date</label>
 								<select class="small" name="creditCardExpMonthInput" id="creditCardExpMonthInput" placeholder="01" required="required">

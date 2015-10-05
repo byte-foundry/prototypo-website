@@ -8420,6 +8420,14 @@ input[type="password"]:focus {
   width: 100%; }
   .subscribe p {
     margin-bottom: .5em; }
+  .subscribe .radio-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 2em; }
+  .subscribe input:checked + label {
+    background-color: #fbe173 !important; }
+  .subscribe input[type="radio"] {
+    display: none; }
   .subscribe .radio {
     display: inline-block;
     width: 49%;
@@ -8427,58 +8435,47 @@ input[type="password"]:focus {
     cursor: pointer;
     position: relative;
     font-size: 2em;
-    color: rgba(0, 0, 0, 0.8); }
-    .subscribe .radio:hover input::before {
+    color: rgba(0, 0, 0, 0.8);
+    background-color: #f0f0f0;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 0;
+    transition: .2s;
+    min-height: 228px;
+    cursor: pointer; }
+    .subscribe .radio:hover {
       background-color: #fdf1bd; }
-    .subscribe .radio input:before {
-      content: "";
-      background-color: #f0f0f0;
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      cursor: pointer;
-      z-index: 0;
-      transition: .2s;
-      min-height: 228px; }
-    .subscribe .radio input:checked:before {
-      background-color: #fbe173; }
-    .subscribe .radio .plan {
+    .subscribe .radio .plan .type {
+      font-size: 1em;
+      margin-bottom: 20px; }
+    .subscribe .radio .plan .price {
+      font-size: 4em;
+      font-weight: bold;
       position: relative;
-      z-index: 1;
-      margin-top: -20px; }
-      .subscribe .radio .plan .type {
-        font-size: 1em;
-        margin-bottom: 20px; }
-      .subscribe .radio .plan .price {
-        font-size: 4em;
-        font-weight: bold;
-        position: relative;
-        margin-left: -10px; }
-        .subscribe .radio .plan .price:before {
-          content: "€";
-          position: absolute;
-          font-size: .5em;
-          top: 1em;
-          left: 100%; }
-        .subscribe .radio .plan .price:after {
-          content: " VAT incl. *";
-          position: absolute;
-          font-size: .15em;
-          margin-right: -40px;
-          opacity: .7;
-          top: 1em;
-          width: 5em; }
-      .subscribe .radio .plan .price.outsideEU {
-        margin-left: 0px; }
-        .subscribe .radio .plan .price.outsideEU:before {
-          content: "$";
-          top: .3em;
-          left: -.5em; }
+      margin-left: -10px; }
+      .subscribe .radio .plan .price::before {
+        content: "€";
+        position: absolute;
+        font-size: .5em;
+        top: 1em;
+        left: 100%; }
+      .subscribe .radio .plan .price::after {
+        content: " VAT incl. *";
+        position: absolute;
+        font-size: .15em;
+        margin-right: -40px;
+        opacity: .7;
+        top: 1em;
+        width: 5em; }
+    .subscribe .radio .plan .price.outsideEU {
+      margin-left: 0px; }
+      .subscribe .radio .plan .price.outsideEU:before {
+        content: "$";
+        top: .3em;
+        left: -.5em; }
   .subscribe input[type="email"],
   .subscribe input[type="text"],
+  .subscribe input[type="password"],
   .subscribe input[type="number"],
   .subscribe select {
     width: 100%;
@@ -8497,10 +8494,9 @@ input[type="password"]:focus {
   .subscribe select,
   .subscribe input.small {
     width: calc(50% - 20px);
-    margin-right: 10px;
-    display: inline; }
+    margin-right: 10px; }
   .subscribe select.plan {
-    width: calc(50% - 5px);
+    width: calc(50% - 15px);
     text-transform: capitalize; }
   .subscribe label {
     font-size: 1.2em;
@@ -8508,6 +8504,14 @@ input[type="password"]:focus {
   .subscribe .required {
     border-bottom: 5px solid #ff725e !important;
     background-color: #ffe2de !important; }
+
+.w50 {
+  width: calc(50% - 20px);
+  margin-right: 20px; }
+
+.w50 + .w50 {
+  width: 50%;
+  margin-right: 0; }
 
 .validateCountry {
   margin-right: 10px; }

@@ -1199,6 +1199,22 @@
 		margin-bottom: .5em;
 	}
 
+
+	.radio-wrap {
+		display: flex;
+		flex-flow: row nowrap;
+		margin-bottom: 2em;
+	}
+
+	input:checked + label {
+		background-color: $thirdBackgroundColor !important;
+	}
+
+
+	input[type="radio"] {
+		display: none;
+	}
+
 	.radio {
 		display: inline-block;
 		width: 49%;
@@ -1208,36 +1224,19 @@
 		font-size: 2em;
 		color: $colorDarkest;
 
+		background-color: $colorLighterGray;
+		display: inline-block;
+		cursor: pointer;
+		z-index: 0;
+		transition: .2s;
+		min-height: 228px;
+		cursor: pointer;
+
 		&:hover {
-			input::before {
-				background-color:lighten($thirdBackgroundColor, 15%);
-			}
+			background-color:lighten($thirdBackgroundColor, 15%);
 		}
-		input {
-			&:before {
-				content: "";
-				background-color: $colorLighterGray;
-				display: block;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				cursor: pointer;
-				z-index: 0;
-				transition: .2s;
-				min-height: 228px;
-			}
-		}
-		input:checked {
-			&:before {
-				background-color: $thirdBackgroundColor;
-			}
-		}
+
 		.plan {
-			position: relative;
-			z-index: 1;
-			margin-top: -20px;
 			.type {
 				font-size: 1em;
 				margin-bottom: 20px;
@@ -1248,14 +1247,14 @@
 				position: relative;
                 margin-left: -10px;
 
-				&:before{
+				&::before{
                     content: "€";
                     position: absolute;
 					font-size: .5em;
                     top: 1em;
                     left: 100%;
 				}
-				&:after{
+				&::after{
 					content: " VAT incl. *";
 					position: absolute;
 					font-size: .15em;
@@ -1278,6 +1277,7 @@
 
 	input[type="email"],
 	input[type="text"],
+	input[type="password"],
 	input[type="number"],
 	select {
 		width: 100%;
@@ -1300,11 +1300,10 @@
 	input.small {
 		width: calc(50% - 20px);
 		margin-right: 10px;
-		display: inline;
 	}
 
 	select.plan {
-		width: calc(50% - 5px);
+		width: calc(50% - 15px);
 		text-transform: capitalize;
 	}
 
@@ -1316,6 +1315,15 @@
         border-bottom: 5px solid $secondBackgroundColor !important;
         background-color: lighten($secondBackgroundColor, 25%) !important;
     }
+}
+
+.w50 {
+	width: calc(50% - 20px);
+	margin-right: 20px;
+}
+.w50 + .w50 {
+	width: 50%;
+	margin-right: 0;
 }
 
 .validateCountry {
