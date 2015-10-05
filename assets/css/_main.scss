@@ -441,7 +441,7 @@
 .Section-fontsItemWrap {
 	background: $colorWhite;
 	border-radius: $global-radius;
-    padding: 20px 30px 30px!important;
+	padding: 20px 30px 30px!important;
 	/* foundation */
 	margin: 5px;
 	overflow: hidden;
@@ -732,18 +732,18 @@
 }
 
 .callToAction {
-    &.call-success {
-        background-color: $mainBackgroundColor;
-    }
-    &.call-danger {
-        background-color: $thirdBackgroundColor;
-    }
-    &.call-error {
-        background-color: $secondBackgroundColor;
-    }
-    &.call-noAnim {
-        transform: none;
-    }
+	&.call-success {
+		background-color: $mainBackgroundColor;
+	}
+	&.call-danger {
+		background-color: $thirdBackgroundColor;
+	}
+	&.call-error {
+		background-color: $secondBackgroundColor;
+	}
+	&.call-noAnim {
+		transform: none;
+	}
 }
 
 /*
@@ -1154,11 +1154,11 @@
 */
 .FontsItemWrap {
 	background: $colorWhite;
-    border-radius: 3px;
-    padding: 200px 30px 30px!important;
-    margin: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 40px rgba(255,114,94,.5);
+	border-radius: 3px;
+	padding: 200px 30px 30px!important;
+	margin: 5px;
+	overflow: hidden;
+	box-shadow: 0 2px 40px rgba(255,114,94,.5);
 }
 .FontsView {
 	font-size: 100px;
@@ -1226,7 +1226,7 @@
 				cursor: pointer;
 				z-index: 0;
 				transition: .2s;
-                min-height: 228px;
+				min-height: 228px;
 			}
 		}
 		input:checked {
@@ -1246,24 +1246,33 @@
 				font-size: 4em;
 				font-weight: bold;
 				position: relative;
+                margin-left: -10px;
 
 				&:before{
-					content: "$";
-					font-size: .5em;
-					top: .3em;
-					left: -.5em;
-					position: absolute;
-				}
-                &:after{
-					content: " VAT incl. *";
+                    content: "€";
                     position: absolute;
-					font-size: .15em;
-                    margin-right: -40px;
-                    opacity: .7;
+					font-size: .5em;
                     top: 1em;
-                    width: 5em;
+                    left: 100%;
+				}
+				&:after{
+					content: " VAT incl. *";
+					position: absolute;
+					font-size: .15em;
+					margin-right: -40px;
+					opacity: .7;
+					top: 1em;
+					width: 5em;
 				}
 			}
+            .price.outsideEU {
+                margin-left: 0px;
+                &:before{
+                    content: "$";
+                    top: .3em;
+                    left: -.5em;
+                }
+            }
 		}
 	}
 
@@ -1276,15 +1285,15 @@
 		height: 4em;
 
 		border-radius: 3px;
-	    outline: none;
-	    color: #787878;
-	    font-size: 16px;
-	    font-family: "PT Sans", sans-serif, inherit;
-	    padding: 10px 18px 7px 18px;
-	    display: inline-block;
-	    border: none;
-	    border-bottom: solid 3px white;
-	    margin: 0 0 20px 0;
+		outline: none;
+		color: #787878;
+		font-size: 16px;
+		font-family: "PT Sans", sans-serif, inherit;
+		padding: 10px 18px 7px 18px;
+		display: inline-block;
+		border: none;
+		border-bottom: solid 3px white;
+		margin: 0 0 20px 0;
 	}
 
 	select,
@@ -1294,33 +1303,42 @@
 		display: inline;
 	}
 
-    select.plan {
-        width: calc(50% - 5px);
-        text-transform: capitalize;
-    }
+	select.plan {
+		width: calc(50% - 5px);
+		text-transform: capitalize;
+	}
 
 	label {
 		font-size: 1.2em;
 		margin-bottom: 1em;
 	}
+    .required {
+        border-bottom: 5px solid $secondBackgroundColor !important;
+        background-color: lighten($secondBackgroundColor, 25%) !important;
+    }
 }
 
 .validateCountry {
-    margin-right: 10px;
+	margin-right: 10px;
 }
 .countryName {
-    font-weight: bold;
+	font-weight: bold;
 }
 .listCountry {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .notabene {
-    color: $colorDark;
-    font-size: 16px;
-    &:before {
-        content: "*";
-        display: inline-block;
-        float: left;
-    }
+	color: $colorDark;
+	font-size: 16px;
+	&:before {
+		content: "*";
+		display: inline-block;
+		float: left;
+	}
+}
+
+#taxamo-confirm-country-overlay:hover {
+    opacity: 1 !important;
+    transition: 400ms ease;
 }

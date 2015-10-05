@@ -60,7 +60,7 @@
 						if ($state == 'disabled') echo 'colorGray';
 						else echo 'colorSecondBackgroundColor'; ?>">
 						<?php
-							if ($pack['packprice'] === ''): ?>
+							if ($pack['packpricettc'] === ''): ?>
 						<img src="<?php
 							echo url('assets/img/Enterprise.svg'); ?>">
 						<?php
@@ -70,9 +70,9 @@
 						<span class="PricingItem-price textSize-title-xlarge">
 							<!--
 								<span class="js_annualBilling_price"><?php
-									echo $pack['packprice2']; ?></span>
+									echo $pack['packprice2ttc']; ?></span>
 								<span class="js_monthlyBilling_price"><?php
-									echo $pack['packprice']; ?></span>
+									echo $pack['packpricettc']; ?></span>
 								-->
 							<div class="js_price"><?php
 								echo $pack['packprice2ttc']; ?><br /><?php
@@ -85,7 +85,7 @@
 					</h3>
 					<!--
 						<h6 class="PricingItem-price textType-txt textSize-txt-small colorDarkGray">Monthly billing: <?php
-							echo $pack['packprice']; ?></h6>
+							echo $pack['packpricettc']; ?></h6>
 						-->
 					<div class="PricingItem-infos textType-subtxt colorDarkGray">
 						<div class="PricingItem-pack textType-txt textSize-txt-medium"><?php

@@ -8455,13 +8455,14 @@ input[type="password"]:focus {
       .subscribe .radio .plan .price {
         font-size: 4em;
         font-weight: bold;
-        position: relative; }
+        position: relative;
+        margin-left: -10px; }
         .subscribe .radio .plan .price:before {
-          content: "$";
+          content: "€";
+          position: absolute;
           font-size: .5em;
-          top: .3em;
-          left: -.5em;
-          position: absolute; }
+          top: 1em;
+          left: 100%; }
         .subscribe .radio .plan .price:after {
           content: " VAT incl. *";
           position: absolute;
@@ -8470,6 +8471,12 @@ input[type="password"]:focus {
           opacity: .7;
           top: 1em;
           width: 5em; }
+      .subscribe .radio .plan .price.outsideEU {
+        margin-left: 0px; }
+        .subscribe .radio .plan .price.outsideEU:before {
+          content: "$";
+          top: .3em;
+          left: -.5em; }
   .subscribe input[type="email"],
   .subscribe input[type="text"],
   .subscribe input[type="number"],
@@ -8498,6 +8505,9 @@ input[type="password"]:focus {
   .subscribe label {
     font-size: 1.2em;
     margin-bottom: 1em; }
+  .subscribe .required {
+    border-bottom: 5px solid #ff725e !important;
+    background-color: #ffe2de !important; }
 
 .validateCountry {
   margin-right: 10px; }
@@ -8515,6 +8525,10 @@ input[type="password"]:focus {
     content: "*";
     display: inline-block;
     float: left; }
+
+#taxamo-confirm-country-overlay:hover {
+  opacity: 1 !important;
+  transition: 400ms ease; }
 
 /*
  *  Media queries

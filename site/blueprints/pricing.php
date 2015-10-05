@@ -90,14 +90,6 @@ fields:
         type: text
         label: Pack name
         placeholder: Pack name
-      packprice:
-          type: text
-          label: Pack price (monthly)
-          placeholder: Price/mo (monthly)
-      packprice2:
-          type: text
-          label: Pack price (annually)
-          placeholder: Price/mo (annually)
       packpricettc:
         type: text
         label: Pack price (monthly) TTC

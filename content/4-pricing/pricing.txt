@@ -14,8 +14,8 @@ Packs:
 
 - 
   packname: free
-  packprice: 0
-  packprice2: 0
+  packprice:
+  packprice2:
   packpricettc: 0
   packprice2ttc: 0
   packservices: One font
@@ -24,8 +24,8 @@ Packs:
   packbuttonlabel: Get started!
 - 
   packname: professional
-  packprice: 12
-  packprice2: 10
+  packprice:
+  packprice2:
   packpricettc: 15
   packprice2ttc: 12
   packservices: |
@@ -36,8 +36,8 @@ Packs:
   packbuttonlabel: Get started!
 - 
   packname: agency
-  packprice: 49
-  packprice2: 39
+  packprice:
+  packprice2:
   packpricettc: 59
   packprice2ttc: 48
   packservices: |
@@ -48,8 +48,8 @@ Packs:
   packbuttonlabel: Get started!
 - 
   packname: Want more?
-  packprice:
-  packprice2: 60
+  packpricettc:
+  packprice2ttc:
   packservices: |
     Unlimited fonts
     All parameters
