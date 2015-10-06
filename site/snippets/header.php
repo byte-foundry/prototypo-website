@@ -74,6 +74,10 @@
     		<span class="show-for-small-only text-center">Get started!</span>
       </a>
 
+	  <div class="Nav-callToAction">
+		   Welcome back <span id="hoodieUsername"></span><span class="show-for-medium-up logout">Logout</span>
+	  </div>
+
       <?php snippet('menu') ?>
 
   		<div class="Social">

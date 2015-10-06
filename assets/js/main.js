@@ -158,7 +158,7 @@ function calcTax( amount, country ) {
 		transaction,
 		function(data) {
             console.log(data);
-            var currency = 'USD';
+            window.currency = 'USD';
             if ( data.transaction.tax_region === 'EU' ) {
                 currency = 'EUR';
             }
@@ -183,9 +183,48 @@ function calcTax( amount, country ) {
 	);
 }
 
+
+var hoodie = new Hoodie('http://127.0.0.1:6007');
+var recurrence = 'monthly';
+
+function getHoodieInfo() {
+	hoodie.account.fetch()
+		.then(function(user) {
+			$('.logged-in-form').show();
+			$('.not-logged-in-form').hide();
+			$('#logged-in-email').text(hoodie.account.username);
+			$('#hoodieUsername').text(hoodie.account.username);
+			$('#logged-in-subscription').text(user.roles[user.roles.length - 1]);
+			$('#already-account').hide();
+			$('#no-account').hide();
+			window.hoodieUser = user;
+		})
+		.catch(function(err) {
+			$('.logged-in-form').hide();
+			$('.not-logged-in-form').show();
+			$('#already-account').show();
+			$('#no-account').hide();
+			window.notLoggedIn = true;
+		});
+}
+
+function selectedPlan( plan ) {
+	var selectedPlan;
+	if ( plan === 'free') {
+		selectedPlan = "free_" + recurrence + "_USD_taxfree";
+	} else {
+		selectedPlan = "launch_" + recurrence + "_USD_taxfree";
+	}
+	return selectedPlan;
+}
+
+getHoodieInfo();
+
 $( window ).load(function() {
 
 	if ( $("body").hasClass("pricing/subscribe") ) {
+
+		Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 
 		setTimeout(function(){
 			$('#taxamo-confirm-country-overlay').css('opacity', '.3');
@@ -204,6 +243,8 @@ $( window ).load(function() {
 			window.code = data.countries.by_ip.code;
 		});
 
+		selectedPlan();
+
 		// Default load prices
 		$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
 		$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
@@ -213,12 +254,71 @@ $( window ).load(function() {
 			Taxamo.setTaxNumber( $('#VAT').val().replace(/ /g,'') );
             calcTax( parseInt( $('#' + $('#plan').val()).attr('month')), $('#taxamo-country-select').val() )
 		});
+
+		function createToken() {
+			Stripe.card.createToken({
+				number: $('#cardNumberInput').val(),
+				cvc: $('#cvcInput').val(),
+				exp_month: $('#creditCardExpMonthInput').val(),
+				exp_year: $('#creditCardExpYearInput').val()
+			}, subscribe);
+		};
+
+		function subscribe(status, response) {
+			if (response.error) {
+				$('#stripe-error').text(response.error.message);
+				$('#stripe-error').show();
+			}
+			else {
+				$('#stripe-error').text('');
+				$('#stripe-error').hide();
+				hoodie.stripe.customers.create({
+					source: response.id,
+					taxNumber: undefined,
+					cardPrefix: $('#cardNumberInput').val().substr(0,9),
+					currencyCode: 'EUR',
+					plan: selectedPlan( $('#plan').val() ),
+				})
+				.then(function() {
+
+				});
+			}
+		}
+
+		$('#submit').on('click', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			if (hoodie.account.username) {
+				createToken();
+			}
+			else {
+				hoodie.account.signUp($('#email').val(), $('#password').val())
+					.done(createToken)
+					.fail(function(err) {
+						console.log(err);
+					});
+			}
+
+		});
 	}
+});
+
+$('.logout').on('click', function() {
+	hoodie.account.signOut()
+		.done(function() {
+			$('.not-logged-in-form').css('display', 'none');
+			getHoodieInfo();
+			window.notLoggedIn = true;
+		});
 });
 
 $('.listCountry').on('click', function() {
     calcTax( parseInt( $('#' + $('#plan').val()).attr('month')), window.code );
 	$('.taxamo-country').slideToggle();
+});
+
+$('.monthYearSwitch').on('click', function() {
+    recurrence = $(this).val();
 });
 
 // if user change country
@@ -238,4 +338,38 @@ $('#outsideEU').on('click', function() {
 $('#plan').on('change', function() {
 	$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') / ( ( 100 + window.taxRate ) / 100 ) );
 	$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') / ( ( 100 + window.taxRate ) / 100 ) );
+
+	if ($('#plan').val() === 'free') {
+		$('#card-form').css('display', 'none');
+	}
+	else {
+		$('#card-form').css('display', 'block');
+	}
+});
+
+$('#sign-me-in').on('click', function() {
+	hoodie.account.signIn($('#email-sign-in').val(), $('#password-sign-in').val())
+		.done(function() {
+			getHoodieInfo();
+			$('#signin-error').hide();
+			$('#signin-error').text('');
+		})
+		.fail(function(error) {
+			$('#signin-error').show();
+			$('#signin-error').text(error.message);
+		});
+});
+
+$('#already-account').on('click', function() {
+	$(this).css('display','none');
+	$('#no-account').css('display','block');
+	$('.signin').css('display','block');
+	$('.register').css('display','none');
+});
+
+$('#no-account').on('click', function() {
+	$(this).css('display','none');
+	$('#already-account').css('display','block');
+	$('.register').css('display','block');
+	$('.signin').css('display','none');
 });

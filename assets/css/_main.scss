@@ -643,7 +643,9 @@
 	@include transform(scale(1.05,1.05));
 	z-index: 10;
 }
-.PricingItem-wrap.disabled * {
+.PricingItem-wrap.plan-disabled * {
+	pointer-events: none;
+	cursor: default;
 	opacity: 0.6;
 }
 .PricingItem-packtitle {
@@ -1349,4 +1351,17 @@
 #taxamo-confirm-country-overlay:hover {
     opacity: 1 !important;
     transition: 400ms ease;
+}
+
+.not-logged-in-form, .logged-in-form, .signin, #no-account, #already-account {
+	display:none;
+}
+
+.user-infos {
+	background-color: lighten($mainBackgroundColor, 35%);
+	border: 2px solid $mainBackgroundColor;
+	color: $mainBackgroundColor;
+	padding: 1em;
+	border-radius: 5px;
+	font-size: 1.8em !important;
 }

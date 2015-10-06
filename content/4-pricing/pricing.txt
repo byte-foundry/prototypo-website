@@ -36,15 +36,13 @@ Packs:
   packbuttonlabel: Get started!
 - 
   packname: agency
-  packprice:
-  packprice2:
   packpricettc: 59
   packprice2ttc: 48
   packservices: |
     Unlimited fonts
     All parameters
   packservices2: Up to 5 users
-  packstate: available
+  packstate: notavailable
   packbuttonlabel: Get started!
 - 
   packname: Want more?
@@ -56,7 +54,7 @@ Packs:
   packservices2: |
     Unlimited users
     Collaborative tools
-  packstate: available
+  packstate: notavailable
   packbuttonlabel: Contact us
 
 ----

@@ -49,7 +49,7 @@
 				$packs = yaml($page->packs());
 
 				foreach($packs as $id => $pack):
-					$state = ($pack['packstate'] == 'notavailable') ? 'disabled' : '';
+					$state = ($pack['packstate'] == 'notavailable') ? 'plan-disabled' : '';
 				?>
 			<li class="PricingItem">
 				<div class="PricingItem-wrap <?php

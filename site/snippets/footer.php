@@ -15,7 +15,7 @@
 
     </footer>
 </main>
-
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <?php snippet( c::get('env') . '/scripts' ); ?>
 
 <script type="text/javascript" src="https://api.taxamo.com/js/v1/taxamo.all.nojquery.js"></script>
