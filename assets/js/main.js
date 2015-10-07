@@ -49,7 +49,7 @@ $(function() {
 		});
 	});
 
-	window.hoodie = new Hoodie('http://127.0.0.1:6007');
+	window.hoodie = new Hoodie('https://prototypo.appback.com');
 	var recurrence = 'monthly';
 
 	window.getHoodieInfo = function() {

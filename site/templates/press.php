@@ -16,12 +16,12 @@
 
 
 						<div class="marginTop60">
-							<h2>Watch the demo</h2>
+							<h2>Show time!</h2>
 							<iframe src="//player.vimeo.com/video/140628893?badge=0&byline=0&color=49E4A9" style="width:100%; height: 100%; min-height:300px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 						</div>
 
 						<div class="demo">
-							<h2>Give a try to the demo!</h2>
+							<h2>A quick demo</h2>
 							<div class="DemoControls" style="position: relative; height: auto; margin-left: -60px;">
 								<div class="DemoControls-PotentiometerItem">
 									<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
@@ -48,7 +48,7 @@
 						</div>
 
 						<div class="marginTop60 pressDocs">
-							<h2>Download related documents</h2>
+							<h2>Downloadable assets and documentation</h2>
 							<?php foreach($page->files() as $file): ?>
 								<a href="<?php echo $file->url() ?>"><?php echo $file->filename() ?></a>
 							<?php endforeach ?>

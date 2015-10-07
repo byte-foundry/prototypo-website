@@ -27,10 +27,9 @@ $(function() {
 		hoodie.account.signUp($('#quick-email').val(), $('#quick-password1').val())
 			.done(function() {
 				tryCustomerCreate(function( data ) {
-					debugger;
 					window.location =
-						'http://dev.prototypo.io?bt=' +
-						data.authorization.replace(/^.? +/, '');
+						'http://app.prototypo.io?bt=' +
+						data.authorization.replace(/^.*? +/, '');
 				}, 0);
 			})
 			.fail(function(err) {
@@ -46,7 +45,7 @@ $(function() {
 		hoodie.stripe.customers.create({
 			plan: 'free_monthly_USD_taxfree',
 		})
-		.then(function( data ) {console.log(data);
+		.then(function( data ) {
 			cb( data );
 		})
 		.catch(function(err) {

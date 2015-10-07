@@ -10,6 +10,7 @@ language: en
 role: admin
 token: 57ab361293709894c6ec79b701e65f94027853a0
 history:
+  - press
   - home
   - blog/the-new-prototypo-is-here
   - about
