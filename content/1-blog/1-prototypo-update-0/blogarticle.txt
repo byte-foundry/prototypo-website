@@ -53,3 +53,5 @@ YM is working on user interface mockups and LRB is refining the language used to
 ### How you can help
 
 It is too early to invite anyone to suggest features, test the app or contribute code for now. But if you want to be the first to learn when this becomes possible, you should subscribe to the newsletter and follow protoypoApp on Twitter or Facebook using the buttons at the top if this page. Getting the word out about Prototypo is the most helpful contribution that can be made currently.
+
+(link: press text: press)

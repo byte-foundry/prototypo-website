@@ -1,6 +1,6 @@
 $(function() {
 
-	if ( $("body").hasClass("home") ) {
+	if ( $("body").hasClass("home") || $("body").hasClass("press") ) {
 
 			/* Prototypo Demo in Canvas */
 			var instance = new PrototypoCanvas({

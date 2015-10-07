@@ -1372,6 +1372,9 @@
 }
 
 .my-account {
+
+	display: none;
+
 	font-size: 1.4em;
 	vertical-align: top;
     margin-top: 15px;
@@ -1398,6 +1401,9 @@
 	}
 }
 .no-account {
+
+	display: none;
+
 	padding: 0;
 	a {
 		padding: 8px 22px;

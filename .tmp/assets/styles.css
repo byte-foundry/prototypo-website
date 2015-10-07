@@ -8560,6 +8560,7 @@ input[type="password"]:focus {
   font-size: 1.8em !important; }
 
 .my-account {
+  display: none;
   font-size: 1.4em;
   vertical-align: top;
   margin-top: 15px;
@@ -8582,6 +8583,7 @@ input[type="password"]:focus {
     margin-top: 0; }
 
 .no-account {
+  display: none;
   padding: 0; }
   .no-account a {
     padding: 8px 22px;
