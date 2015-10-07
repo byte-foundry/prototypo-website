@@ -1,0 +1,12 @@
+Title: Subscribe to Prototypo
+
+----
+
+Text: One more step to get in Prototypo!
+
+----
+
+Text0: 
+
+* VAT is automatically calculated depending on your country IP. Prices may vary according to your local VAT.
+We have detected that your computer is located in <span class="countryName">…</span>. If your country of residence is different, please select it from this <span class="listCountry"><u>list</u></span>.

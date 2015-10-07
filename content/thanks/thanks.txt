@@ -2,7 +2,7 @@ Title: Thanks to our awesome Backers
 
 ----
 
-Section1title: Our 1,670 awesome Backers
+Section1title: Our 1.670 awesome Backers
 
 ----
 
@@ -10,4 +10,4 @@ Section1subtitle: Thanks to everyone, Prototypo is here for you!
 
 ----
 
-Section1txt: 
+Section1txt: In May 2014, we launched a successful (link:http://www.kickstarter.com/projects/599698621/prototypo-streamlining-font-creation text: Kickstarter campaign popup: yes) and 1.670 people over the world helped us developing the first version of Prototypo. You missed this campaign and would like to help the project? Check (link:/support text: this out)!

@@ -15,7 +15,10 @@ for more information: http://getkirby.com/license
 
 */
 
-c::set('license', 'put your license key here');
+c::set('license', 'K2-PRO-a53d96d2213b6eee6cb82ebc7b7ed10f');
+c::set('url', '/');
+c::set('env', php_sapi_name() === 'cli-server' &&
+	!( isset($_SERVER['HTTP_USER_AGENT']) && preg_match('/^wget/i' , $_SERVER['HTTP_USER_AGENT'] ) ) ? 'dev' : 'prod' );
 
 /*
 

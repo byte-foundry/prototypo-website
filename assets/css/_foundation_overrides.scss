@@ -1,0 +1,9 @@
+.switch.large.override label:after {
+    height: 1.9rem;
+    width: 1.9rem;
+}
+
+.switch label:after {
+    left: .3rem;
+    top: .3rem;
+}

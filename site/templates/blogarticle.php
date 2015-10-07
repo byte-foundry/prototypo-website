@@ -49,7 +49,7 @@
         </div>
 
         <div class="Disqus text-center textType-txt textSize-txt-small colorDark" id="Disqus">
-          <?php snippet('disqus', array('disqus_shortname' => 'myawesomeblog', 'disqus_developer' => true)) ?>
+          <?php snippet('disqus', array('disqus_shortname' => 'prototypoapp', 'disqus_developer' => true)) ?>
         </div>
 
       </article>

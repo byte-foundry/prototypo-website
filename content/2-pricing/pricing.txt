@@ -1,0 +1,89 @@
+Title: Pricing
+
+----
+
+Section1title: Simple plans for everyone!
+
+----
+
+Section1subtitle: 4 packs that fit your needs
+
+----
+
+Packs: 
+
+- 
+  packname: free
+  packprice:
+  packprice2:
+  packpricettc: 0
+  packprice2ttc: 0
+  packservices: One font
+  packservices2:
+  packstate:
+  packbuttonlabel: Get started!
+- 
+  packname: professional
+  packprice:
+  packprice2:
+  packpricettc: 15
+  packprice2ttc: 12
+  packservices: |
+    Unlimited fonts
+    All parameters
+  packservices2:
+  packstate: available
+  packbuttonlabel: Get started!
+- 
+  packname: agency
+  packpricettc: 59
+  packprice2ttc: 48
+  packservices: |
+    Unlimited fonts
+    All parameters
+  packservices2: Up to 5 users
+  packstate: notavailable
+  packbuttonlabel: Get started!
+- 
+  packname: Want more?
+  packpricettc:
+  packprice2ttc:
+  packservices: |
+    Unlimited fonts
+    All parameters
+  packservices2: |
+    Unlimited users
+    Collaborative tools
+  packstate: notavailable
+  packbuttonlabel: Contact us
+
+----
+
+Section1txtafter: 
+
+(email: contact@prototypo.io text: Feel free to contact us) if you have any question about your needs. 
+\* Prices may vary according to your local VAT.
+
+----
+
+Section0title: Get access to Prototypo!
+
+----
+
+Section0subtitle: Try prototypo for free with the freemium version
+
+----
+
+Section0txt: 
+
+----
+
+Freemiumimg: prototypo.svg
+
+----
+
+Freemiumtos: By clicking "Try Prototypo!" I agree to (link: # text: Prototypo's Terms of Service.)
+
+----
+
+Freemiumsubmit: Try Prototypo!

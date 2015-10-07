@@ -31,26 +31,69 @@
   <meta name="theme-color" content="#232323">
 
   <?php
-    // poor man's env variables (serve dev files when php-cli is used)
-    snippet( php_sapi_name() === 'cli-server' ? 'dev/styles' : 'prod/styles' );
+    snippet( c::get('env') . '/styles' );
   ?>
 
 </head>
-<body>
+<body class="<?= $page->id(); ?>">
+<script>
+  WebFontConfig = {
+    google: { families: [ 'Roboto+Slab:300:latin', 'PT+Sans:400,400italic,700italic,700:latin' ] },
+    timeout: 2000
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.async = 1;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41962243-1', 'auto');
+  ga('send', 'pageview');
+</script>
 
   <header class="Header" role="banner">
 
     <nav class="Nav" role="navigation">
 
-      <a href="<?php echo url('home'); ?>" class="Nav-logo">
-        <span class="Nav-logoPicto keep-styles-for-print"></span>
-        <span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
-      </a>
+		<a href="<?php echo url('home'); ?>" class="Nav-logo">
+			<span class="Nav-logoPicto keep-styles-for-print"></span>
+			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
+		</a>
 
-      <!-- <a href="#" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
-    		<span class="show-for-medium-up">Create your font now!</span>
-    		<span class="show-for-small-only text-center">Get started!</span>
-      </a> -->
+		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont">
+			<div class="left">
+				<a href="http://app.prototypo.io" class="login">
+					Login
+				</a>
+			</div>
+			<div class="left">
+				<a href="/pricing" class="callToAction">
+					<span class="show-for-medium-up">Create your font now!</span>
+					<span class="show-for-small-only text-center">Get started!</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="my-account clearfix">
+			<div class="left hoodieUsername">
+				Welcome back <span class="" id="hoodieUsername"></span>
+			</div>
+			<div class="left show-for-medium-up logout">Logout</div>
+			<div class="left">
+				<a href="http://app.prototypo.io" class="callToAction call-success">
+					<span class="">App</span>
+				</a>
+			</div>
+		</div>
 
       <?php snippet('menu') ?>
 

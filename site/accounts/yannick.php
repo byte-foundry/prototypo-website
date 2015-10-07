@@ -9,10 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - null
-  - home
-  - blog/second-article
-  - >
-    blog/prototypo-update-4-overcoming-dilemmas
-  - blog/prototypo-update-3-first-fonts
-token: 69bc9e54d930dd48533458a4b83eb165cefb5bd1
+  - press
+  - blog/prototypo-update-0
+  - documentation
+  - gallery
+  - pricing
