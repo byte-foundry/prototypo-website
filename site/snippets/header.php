@@ -69,29 +69,33 @@
 			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
 		</a>
 
-		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont show-for-medium-up">
-			<div class="left">
-				<a href="http://app.prototypo.io" class="login">
-					Login
-				</a>
-			</div>
-			<div class="left">
-				<a href="/pricing" class="callToAction">
-					<span class="show-for-medium-up">Create your font now!</span>
-					<span class="show-for-small-only text-center">Get started!</span>
-				</a>
+		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont">
+			<div class="hide-for-small-only">
+				<div class="left">
+					<a href="http://app.prototypo.io" class="login">
+						Login
+					</a>
+				</div>
+				<div class="left">
+					<a href="/pricing" class="callToAction">
+						<span class="show-for-medium-up">Create your font now!</span>
+						<span class="show-for-small-only text-center">Get started!</span>
+					</a>
+				</div>
 			</div>
 		</div>
 
-		<div class="my-account clearfix show-for-medium-up">
-			<div class="left hoodieUsername">
-				Welcome back <span class="" id="hoodieUsername"></span>
-			</div>
-			<div class="left show-for-medium-up logout">Logout</div>
-			<div class="left">
-				<a href="http://app.prototypo.io" class="callToAction call-success">
-					<span class="">App</span>
-				</a>
+		<div class="my-account clearfix">
+			<div class="hide-for-small-only">
+				<div class="left hoodieUsername">
+					Welcome back <span class="" id="hoodieUsername"></span>
+				</div>
+				<div class="left show-for-medium-up logout">Logout</div>
+				<div class="left">
+					<a href="http://app.prototypo.io" class="callToAction call-success">
+						<span class="">App</span>
+					</a>
+				</div>
 			</div>
 		</div>
 

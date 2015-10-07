@@ -68,7 +68,7 @@ Section0title: Get access to Prototypo!
 
 ----
 
-Section0subtitle: Try prototypo for free with the free version
+Section0subtitle: Try prototypo with the free version
 
 ----
 
