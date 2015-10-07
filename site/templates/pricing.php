@@ -27,6 +27,7 @@
 				<input class="NewsletterInput-submit callToAction" type="submit" value="<?php
 					echo $page->freemiumSubmit()->kirbyText(); ?>">
 			</form>
+			<label class="marginTop15 textSize-txt-medium hidden error" id="signup-error"></label>
 			<div class="Section-wrapTxt textType-txt textSize-txt-medium marginTop30 colorBright text-center">
 				<?php
 					echo $page->freemiumToS()->kirbytext(); ?>
