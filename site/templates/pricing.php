@@ -1,5 +1,4 @@
-<?php
-	snippet('header') ?>
+<?php snippet('header') ?>
 <main class="PageContent Pricing showAnnualBilling" role="main">
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->freemiumImg())->url(); ?>)">
@@ -108,5 +107,4 @@
 		</div>
 	</div>
 </main>
-<?php
-	snippet('footer') ?>
+<?php snippet('footer') ?>
