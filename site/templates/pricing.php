@@ -16,8 +16,9 @@
 					echo $page->section0Txt()->kirbytext(); ?>
 			</div>
 			<div class="PricingItemFree-wrapIn">
-				<div class="PricingItemFree-pack textType-txt text-center textSize-txt-large colorWhite"><?php
-					echo nl2br($pack['packservices']); ?></div>
+				<div class="PricingItemFree-pack textType-txt text-center textSize-txt-large colorWhite">
+					<?php //echo nl2br($pack['packservices']); ?>
+				</div>
 			</div>
 			<form id="quick-signup" class="Newsletter text-center">
 				<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" name="quick-email" id="quick-email" placeholder="email" value="">
