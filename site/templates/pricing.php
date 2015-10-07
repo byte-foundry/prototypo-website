@@ -2,14 +2,13 @@
 <main class="PageContent Pricing showAnnualBilling" role="main">
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->freemiumImg())->url(); ?>)">
-		<div class="PricingItemFree-wrap">
-			<header class="PageHeader text-center fitToContent marginTop60">
-				<h1 class="textType-title textSize-title-large colorWhite">
-					<?php echo $page->section1Title()->kirbytext(); ?>
-				</h1>
-				<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
-					Hurry up! The special launch offer will only last until the 27th of November.
-				</h3>
+		<div class="PricingItemFree-wrap <?php
+			//echo $state; ?>">
+			<header class="PageHeader text-center PricingPageHeader">
+				<h1 class="textType-title textSize-title-large colorWhite"><?php
+					echo $page->section0Title()->kirbytext(); ?></h1>
+				<h3 class="textType-subtitle textSize-title-small colorBright"><?php
+					echo $page->section0Subtitle()->kirbytext(); ?></h3>
 			</header>
 		</div>
 	</div>
