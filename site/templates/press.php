@@ -47,10 +47,10 @@
 							<canvas id="DemoCanvas" class="DemoCanvas" style="position: relative; top: 0; left: 40%"></canvas>
 						</div>
 
-						<div class="marginTop60">
+						<div class="marginTop60 pressDocs">
 							<h2>Download related documents</h2>
 							<?php foreach($page->files() as $file): ?>
-								<a href="<?php echo $file->url() ?>"><?php echo $file->name() ?></a>
+								<a href="<?php echo $file->url() ?>"><?php echo $file->filename() ?></a>
 							<?php endforeach ?>
 						</div>
 
