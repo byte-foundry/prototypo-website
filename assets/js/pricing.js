@@ -19,19 +19,19 @@ $(function() {
 		event.preventDefault();
 
 		if ( $('#quick-password1').val() === '' ) {
-			return showError('password empty');
+			return showError('Your password cannot be empty');
 		}
 
 		if ( $('#quick-password1').val() !== $('#quick-password2').val() ) {
-			return showError('password mismatch');
+			return showError('Your confirmation password does not match your password');
 		}
 
 		if ( !/.*@.*/.test($('#quick-email').val()) ) {
-			return showError('invalid email');
+			return showError('Your email is invalid');
 		}
 
 		if ( hoodie.account.username ) {
-			return showError('already logged in');
+			return showError('You\'re already signed in. Go directly to app.prototypo.io');
 		}
 
 		hoodie.account.signUp($('#quick-email').val(), $('#quick-password1').val())
@@ -44,7 +44,7 @@ $(function() {
 			})
 			.fail(function(err) {
 				if ( err.status === 409 && err.message.indexOf('already exists') !== -1 ) {
-					return alert('Username already in use');
+					showError('Username already in use');
 				}
 
 				ga( 'send', 'event', 'js-error', err.message, err.status );

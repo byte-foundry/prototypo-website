@@ -6,7 +6,7 @@ function stripeAPI(hoodie) {
 					contentType: 'application/json',
 					dataType: 'json',
 					xhrFields: {
-						withCredentials: false
+						withCredentials: true,
 					},
 					data: JSON.stringify({
 						method: 'ping',
@@ -20,7 +20,7 @@ function stripeAPI(hoodie) {
 						contentType: 'application/json',
 						dataType: 'json',
 						xhrFields: {
-							withCredentials: false
+							withCredentials: false,
 						},
 						data: JSON.stringify({
 							method: 'customers.create',
@@ -33,7 +33,7 @@ function stripeAPI(hoodie) {
 						contentType: 'application/json',
 						dataType: 'json',
 						xhrFields: {
-							withCredentials: false
+							withCredentials: false,
 						},
 						data: JSON.stringify({
 							method: 'customers.update',
