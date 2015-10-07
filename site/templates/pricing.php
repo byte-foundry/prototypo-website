@@ -4,7 +4,7 @@
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->freemiumImg())->url(); ?>)">
 		<div class="PricingItemFree-wrap <?php
-			echo $state; ?>">
+			//echo $state; ?>">
 			<header class="PageHeader text-center PricingPageHeader">
 				<h1 class="textType-title textSize-title-large colorWhite"><?php
 					echo $page->section0Title()->kirbytext(); ?></h1>
