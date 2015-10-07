@@ -22,7 +22,7 @@
 
 						<div class="demo">
 							<h2>Give a try to the demo!</h2>
-							<div class="DemoControls" style="position: relative; height: auto;">
+							<div class="DemoControls" style="position: relative; height: auto; margin-left: -60px;">
 								<div class="DemoControls-PotentiometerItem">
 									<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
 									<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
@@ -44,7 +44,7 @@
 								</div>
 							</div><!-- .DemoControls -->
 
-							<canvas id="DemoCanvas" class="DemoCanvas" style="position: relative; top: 0; left: 30%"></canvas>
+							<canvas id="DemoCanvas" class="DemoCanvas" style="position: relative; top: 0; left: 40%"></canvas>
 						</div>
 
 						<div class="marginTop60">
