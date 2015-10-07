@@ -667,14 +667,37 @@
 .PricingItem-price {
 	letter-spacing: -2px;
 	display: inline-block;
-	width: 80px;
+	width: 90px;
 	height: 58px;
 	overflow: hidden;
 }
 .js_price {
 	@include transition(all 300ms ease);
 	text-align: center;
+	position: relative;
 }
+
+.solded {
+	font-size: .4em;
+	position: absolute;
+	left: -3px;
+	top: -15px;
+	font-weight: bold;
+	&:before {
+		content: "";
+		display: block;
+		width: 200%;
+		color: red;
+		position: absolute;
+		font-size: 1.2em;
+		font-weight: 100;
+		border-top: 1px solid red;
+		transform: rotate(-45deg);
+		top: 23px;
+		left: -3px;
+	}
+}
+
 .showMonthlyBilling .js_price {
 	margin-top: -66px;
 }

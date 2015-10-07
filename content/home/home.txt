@@ -126,11 +126,11 @@ Features:
 
 ----
 
-Section3title: Be notified when we launch in October 2015!
+Section3title: We've just released the official Beta!
 
 ----
 
-Section3subtitle: Subscribe to our newsletter
+Section3subtitle: Subscribe to our newsletter for more news about the V1.0
 
 ----
 

@@ -159,6 +159,10 @@ $( window ).load(function() {
 		$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
 		$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
 
+		if( $('#plan').val() === 'free' ) {
+			$('#card-form').css('display', 'none');
+		}
+
 		// Validate VAT number
 		$('#VAT').on('blur', function() {
 			Taxamo.setTaxNumber( $('#VAT').val().replace(/ /g,'') );

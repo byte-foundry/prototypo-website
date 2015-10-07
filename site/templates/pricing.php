@@ -68,15 +68,29 @@
 						<span class="PricingItem-priceBefore textSize-txt-large">$</span><!--
 							-->
 						<span class="PricingItem-price textSize-title-xlarge">
+
+							<?php if ($pack['packpricelaunch'] != ''): ?>
+								<div class="js_price">
+									<?php
+										echo '<span class="solded">' . $pack['packpricettc'] . '</span>';
+										echo $pack['packpricelaunch'].'<br/>';
+										echo '-';
+									?>
+								</div>
+							<?php else: ?>
 							<!--
-								<span class="js_annualBilling_price"><?php
-									echo $pack['packprice2ttc']; ?></span>
-								<span class="js_monthlyBilling_price"><?php
-									echo $pack['packpricettc']; ?></span>
-								-->
+								<span class="js_annualBilling_price">
+									<?php 	echo $pack['packprice2ttc']; ?>
+								</span>
+								<span class="js_monthlyBilling_price">
+									<?php echo $pack['packpricettc']; ?>
+								</span>
+							-->
 							<div class="js_price"><?php
 								echo $pack['packprice2ttc']; ?><br /><?php
 								echo $pack['packpricettc']; ?></div>
+							<?php endif; ?>
+
 						</span>
 						<!--
                         --><span class="PricingItem-priceAfter textSize-txt-medium">/mo. *</span>

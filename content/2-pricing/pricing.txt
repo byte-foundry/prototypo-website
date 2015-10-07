@@ -23,16 +23,15 @@ Packs:
   packstate:
   packbuttonlabel: Get started!
 - 
-  packname: professional
-  packprice:
-  packprice2:
+  packname: launch
   packpricettc: 15
   packprice2ttc: 12
+  packpricelaunch: 8
   packservices: |
     Unlimited fonts
     All parameters
   packservices2:
-  packstate: available
+  packstate: notavailable
   packbuttonlabel: Get started!
 - 
   packname: agency

@@ -96,8 +96,12 @@ fields:
         placeholder: Price/mo (monthly)
       packprice2ttc:
         type: text
-        label: Pack price (annually) TTC
-        placeholder: Price/mo (annually)
+        label: Pack price (annual) TTC
+        placeholder: Price/mo (annual)
+      packpricelaunch:
+        type: text
+        label: Pack price launch TTC
+        placeholder: Price/mo (monthly)
       packservices:
         type: textarea
         label: Pack service

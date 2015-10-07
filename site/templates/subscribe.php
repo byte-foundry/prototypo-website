@@ -34,7 +34,7 @@
 							<div class="textSize-title-small mb20 clearfix">Your plan:
 								<select id="plan" class="plan right" name="creditCardExpMonthInput" id="creditCardExpMonthInput" placeholder="2018" required="required">
 									<option value="<?= $packs[0]['packname'] ?>" <?php if( $plan == 'free' ) { echo 'selected'; } ?> ><?= $packs[0]['packname'] ?></option>
-									<option value="<?= $packs[1]['packname'] ?>" <?php if( $plan == 'professional' || !$plan ) { echo 'selected'; } ?> ><?= $packs[1]['packname'] ?></option>
+									<option value="<?= $packs[1]['packname'] ?>" <?php if( $plan == 'professional' || !$plan ) { echo 'selected'; } ?> disabled><?= $packs[1]['packname'] ?></option>
 									<option value="<?= $packs[2]['packname'] ?>" <?php if( $plan == 'agency' ) { echo 'selected'; } ?> disabled ><?= $packs[2]['packname'] ?></option>
 								</select>
 							</div>
