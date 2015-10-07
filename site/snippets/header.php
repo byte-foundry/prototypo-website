@@ -69,7 +69,7 @@
 			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
 		</a>
 
-		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont">
+		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont show-for-medium-up">
 			<div class="left">
 				<a href="http://app.prototypo.io" class="login">
 					Login
@@ -83,7 +83,7 @@
 			</div>
 		</div>
 
-		<div class="my-account clearfix">
+		<div class="my-account clearfix show-for-medium-up">
 			<div class="left hoodieUsername">
 				Welcome back <span class="" id="hoodieUsername"></span>
 			</div>

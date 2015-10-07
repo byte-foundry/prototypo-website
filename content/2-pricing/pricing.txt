@@ -14,13 +14,12 @@ Packs:
 
 - 
   packname: free
-  packprice:
-  packprice2:
   packpricettc: 0
   packprice2ttc: 0
+  packpricelaunch:
   packservices: One font
   packservices2:
-  packstate:
+  packstate: notavailable
   packbuttonlabel: Get started!
 - 
   packname: launch
@@ -69,11 +68,11 @@ Section0title: Get access to Prototypo!
 
 ----
 
-Section0subtitle: Try prototypo for free with the freemium version
+Section0subtitle: Try prototypo for free with the free version
 
 ----
 
-Section0txt: 
+Section0txt: For few days, all parameters are available in the free version!
 
 ----
 

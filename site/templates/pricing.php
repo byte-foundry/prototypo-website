@@ -11,7 +11,7 @@
 				<h3 class="textType-subtitle textSize-title-small colorBright"><?php
 					echo $page->section0Subtitle()->kirbytext(); ?></h3>
 			</header>
-			<div class="Section-wrapTxt textType-txt marginTop30 colorBrightest text-center">
+			<div class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
 				<?php
 					echo $page->section0Txt()->kirbytext(); ?>
 			</div>
