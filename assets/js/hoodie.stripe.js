@@ -5,6 +5,9 @@ function stripeAPI(hoodie) {
 			return hoodie.request('post', hoodie.stripe.apiUrl, {
 					contentType: 'application/json',
 					dataType: 'json',
+					xhrFields: {
+						withCredentials: false
+					},
 					data: JSON.stringify({
 						method: 'ping',
 						data: data,
@@ -16,6 +19,9 @@ function stripeAPI(hoodie) {
 				return hoodie.request('post', hoodie.stripe.apiUrl, {
 						contentType: 'application/json',
 						dataType: 'json',
+						xhrFields: {
+							withCredentials: false
+						},
 						data: JSON.stringify({
 							method: 'customers.create',
 							args: [ args ],
@@ -26,6 +32,9 @@ function stripeAPI(hoodie) {
 				return hoodie.request('post', hoodie.stripe.apiUrl, {
 						contentType: 'application/json',
 						dataType: 'json',
+						xhrFields: {
+							withCredentials: false
+						},
 						data: JSON.stringify({
 							method: 'customers.update',
 							args: [ args ],
