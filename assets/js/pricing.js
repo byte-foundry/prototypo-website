@@ -3,25 +3,35 @@ $(function() {
 		return;
 	}
 
+	function showError(error) {
+		$('#signup-error').show();
+		$('#signup-error').text(error);
+	}
+
+	function hideError() {
+		$('#signup-error').hide();
+		$('#signup-error').text('');
+	}
+
 	$('#quick-signup input[type!=submit]').val('');
 
 	$('#quick-signup').on('submit', function(event) {
 		event.preventDefault();
 
 		if ( $('#quick-password1').val() === '' ) {
-			return alert('password empty');
+			return showError('password empty');
 		}
 
 		if ( $('#quick-password1').val() !== $('#quick-password2').val() ) {
-			return alert('password mismatch');
+			return showError('password mismatch');
 		}
 
 		if ( !/.*@.*/.test($('#quick-email').val()) ) {
-			return alert('invalid email');
+			return showError('invalid email');
 		}
 
 		if ( hoodie.account.username ) {
-			return alert('already logged in');
+			return showError('already logged in');
 		}
 
 		hoodie.account.signUp($('#quick-email').val(), $('#quick-password1').val())
