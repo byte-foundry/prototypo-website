@@ -1277,6 +1277,11 @@
 		}
 	}
 
+	input:focus,
+	select:focus {
+		border-bottom: 3px solid $mainBackgroundColor !important;
+	}
+
 	input[type="email"],
 	input[type="text"],
 	input[type="password"],
@@ -1364,4 +1369,54 @@
 	padding: 1em;
 	border-radius: 5px;
 	font-size: 1.8em !important;
+}
+
+.my-account {
+	font-size: 1.4em;
+	vertical-align: top;
+    margin-top: 15px;
+    margin-right: 16px;
+    float: right;
+	.hoodieUsername {
+		padding: 10px 22px;
+	}
+	.logout {
+		padding: 8px 22px;
+		border-radius: 3px;
+		cursor: pointer;
+		border: 2px solid $secondBackgroundColor;
+		color: $secondBackgroundColor;
+		&:hover {
+			background-color: $secondBackgroundColor;
+			color: white;
+		}
+	}
+	a {
+		margin-left: 16px;
+		padding: 8px 22px;
+		margin-top: 0;
+	}
+}
+.no-account {
+	padding: 0;
+	a {
+		padding: 8px 22px;
+		margin-top: 0;
+	}
+	.login {
+		display: inline-block;
+		font-size: 1.3em;
+		text-transform: uppercase;
+	    margin-right: 16px;
+		padding: 10px 22px 6px;
+		font-weight: bold;
+		border-radius: 3px;
+		cursor: pointer;
+		border: 2px solid $mainBackgroundColor;
+		color: $mainBackgroundColor;
+		&:hover {
+			background-color: $mainBackgroundColor;
+			color: white;
+		}
+	}
 }

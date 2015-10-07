@@ -6,4 +6,6 @@
 <script src="/assets/js/prototypo-canvas.js"></script>
 <script src="/assets/js/font.js"></script>
 <script src="/assets/js/main.js"></script>
+<script src="/assets/js/analytics.js"></script>
+<script src="/assets/js/demo.js"></script>
 <!-- endbuild -->

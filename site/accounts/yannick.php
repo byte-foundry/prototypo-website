@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - documentation
+  - gallery
   - pricing
   - pricing/subscribe
   - thanks
-  - support
-  - home

@@ -8484,6 +8484,9 @@ input[type="password"]:focus {
         content: "$";
         top: .3em;
         left: -.5em; }
+  .subscribe input:focus,
+  .subscribe select:focus {
+    border-bottom: 3px solid #49e4a9 !important; }
   .subscribe input[type="email"],
   .subscribe input[type="text"],
   .subscribe input[type="password"],
@@ -8555,6 +8558,48 @@ input[type="password"]:focus {
   padding: 1em;
   border-radius: 5px;
   font-size: 1.8em !important; }
+
+.my-account {
+  font-size: 1.4em;
+  vertical-align: top;
+  margin-top: 15px;
+  margin-right: 16px;
+  float: right; }
+  .my-account .hoodieUsername {
+    padding: 10px 22px; }
+  .my-account .logout {
+    padding: 8px 22px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid #ff725e;
+    color: #ff725e; }
+    .my-account .logout:hover {
+      background-color: #ff725e;
+      color: white; }
+  .my-account a {
+    margin-left: 16px;
+    padding: 8px 22px;
+    margin-top: 0; }
+
+.no-account {
+  padding: 0; }
+  .no-account a {
+    padding: 8px 22px;
+    margin-top: 0; }
+  .no-account .login {
+    display: inline-block;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-right: 16px;
+    padding: 10px 22px 6px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 2px solid #49e4a9;
+    color: #49e4a9; }
+    .no-account .login:hover {
+      background-color: #49e4a9;
+      color: white; }
 
 /*
  *  Media queries

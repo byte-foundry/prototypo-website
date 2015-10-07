@@ -64,19 +64,36 @@
 
     <nav class="Nav" role="navigation">
 
-      <a href="<?php echo url('home'); ?>" class="Nav-logo">
-        <span class="Nav-logoPicto keep-styles-for-print"></span>
-        <span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
-      </a>
+		<a href="<?php echo url('home'); ?>" class="Nav-logo">
+			<span class="Nav-logoPicto keep-styles-for-print"></span>
+			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
+		</a>
 
-      <a href="/pricing" class="Nav-callToAction Nav-callToActionCreateYourFont callToAction">
-    		<span class="show-for-medium-up">Create your font now!</span>
-    		<span class="show-for-small-only text-center">Get started!</span>
-      </a>
+		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont">
+			<div class="left">
+				<a href="http://app.prototypo.io" class="login">
+					Login
+				</a>
+			</div>
+			<div class="left">
+				<a href="/pricing" class="callToAction">
+					<span class="show-for-medium-up">Create your font now!</span>
+					<span class="show-for-small-only text-center">Get started!</span>
+				</a>
+			</div>
+		</div>
 
-	  <div class="Nav-callToAction">
-		   Welcome back <span id="hoodieUsername"></span><span class="show-for-medium-up logout">Logout</span>
-	  </div>
+		<div class="my-account clearfix">
+			<div class="left hoodieUsername">
+				Welcome back <span class="" id="hoodieUsername"></span>
+			</div>
+			<div class="left show-for-medium-up logout">Logout</div>
+			<div class="left">
+				<a href="http://app.prototypo.io" class="callToAction call-success">
+					<span class="">App</span>
+				</a>
+			</div>
+		</div>
 
       <?php snippet('menu') ?>
 
