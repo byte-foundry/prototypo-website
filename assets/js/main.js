@@ -49,4 +49,33 @@ $(function() {
 		});
 	});
 
+	window.hoodie = new Hoodie('http://127.0.0.1:6007');
+	var recurrence = 'monthly';
+
+	window.getHoodieInfo = function() {
+		hoodie.account.fetch()
+			.then(function(user) {
+				$('.my-account').show();
+				$('.no-account').hide();
+				$('.logged-in-form').show();
+				$('.not-logged-in-form').hide();
+				$('#logged-in-email').text(hoodie.account.username);
+				$('#hoodieUsername').text(hoodie.account.username);
+				$('#logged-in-subscription').text(user.roles[user.roles.length - 1]);
+				$('#already-account').hide();
+				$('#no-account').hide();
+				window.hoodieUser = user;
+			})
+			.catch(function(err) {
+				$('.my-account').hide();
+				$('.no-account').show();
+				$('.logged-in-form').hide();
+				$('.not-logged-in-form').show();
+				$('#already-account').show();
+				$('#no-account').hide();
+				window.notLoggedIn = true;
+			});
+	}
+	getHoodieInfo();
+
 });

@@ -12,6 +12,7 @@ $(function() {
 			.transactionLine('line1') //first line
 				.amount(amount)
 			.done(); //go back to transaction context
+		}
 
 	Taxamo.calculateTax(
 		transaction,
@@ -41,33 +42,7 @@ $(function() {
 		}
 	);
 
-	var hoodie = new Hoodie('http://127.0.0.1:6007');
 	var recurrence = 'monthly';
-
-	function getHoodieInfo() {
-		hoodie.account.fetch()
-			.then(function(user) {
-				$('.my-account').show();
-				$('.no-account').hide();
-				$('.logged-in-form').show();
-				$('.not-logged-in-form').hide();
-				$('#logged-in-email').text(hoodie.account.username);
-				$('#hoodieUsername').text(hoodie.account.username);
-				$('#logged-in-subscription').text(user.roles[user.roles.length - 1]);
-				$('#already-account').hide();
-				$('#no-account').hide();
-				window.hoodieUser = user;
-			})
-			.catch(function(err) {
-				$('.my-account').hide();
-				$('.no-account').show();
-				$('.logged-in-form').hide();
-				$('.not-logged-in-form').show();
-				$('#already-account').show();
-				$('#no-account').hide();
-				window.notLoggedIn = true;
-			});
-	}
 
 	function selectedPlan( plan ) {
 		var selectedPlan;
@@ -78,10 +53,6 @@ $(function() {
 		}
 		return selectedPlan;
 	}
-
-	getHoodieInfo();
-
-
 
 	Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 

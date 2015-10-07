@@ -3,8 +3,6 @@ $(function() {
 		return;
 	}
 
-	var hoodie = new Hoodie('https://prototypo-dev.appback.com');
-
 	$('#quick-signup input[type!=submit]').val('');
 
 	$('#quick-signup').on('submit', function(event) {
@@ -59,6 +57,4 @@ $(function() {
 			}
 		});
 	}
-
-
 });
