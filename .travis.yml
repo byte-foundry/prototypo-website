@@ -1,20 +1,16 @@
 sudo: false
 language: php
 php:
-- 5.4
-script: ls
-deploy:
-  - provider: openshift
-    user: francois.poizat@gmail.com
-    password:
-      secure: bXDxc0af2Uf6Mn7E6KnTtNSKaeotSVITOjlUFAaSCUwQbcK9hkrNoiob4oTHOmijXl8qZV4mWSlHpSFIE//2Lby20+o4xkRMSQUg0dE514ncZYjuLNf5W73k6lT8bSfTlPR63SExv0MiG4LmA3hLtGgissNVoQrNcC1II7QUaWc=
-    app: website
-    domain: prototypo
-    on: master
-  - provider: openshift
-    user: francois.poizat@gmail.com
-    password:
-      secure: bXDxc0af2Uf6Mn7E6KnTtNSKaeotSVITOjlUFAaSCUwQbcK9hkrNoiob4oTHOmijXl8qZV4mWSlHpSFIE//2Lby20+o4xkRMSQUg0dE514ncZYjuLNf5W73k6lT8bSfTlPR63SExv0MiG4LmA3hLtGgissNVoQrNcC1II7QUaWc=
-    app: develop
-    domain: prototypo
-    on: develop
+  - 5.4
+before_script:
+- npm install -g gulp surge
+- npm install
+script:
+- gulp build
+after_script:
+- '[ $TRAVIS_BRANCH == master ] && surge --project ./dist --domain www.prototypo.io'
+- '[ $TRAVIS_BRANCH == develop ] && surge --project ./dist --domain devvv.prototypo.io'
+branches:
+  only:
+    - master
+    - develop
