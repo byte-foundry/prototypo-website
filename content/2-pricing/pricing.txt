@@ -72,7 +72,7 @@ Section0subtitle: Try prototypo with the free version
 
 ----
 
-Section0txt: For few days, all parameters are available in the free version!
+Section0txt: For few days, all features are available in the free version!
 
 ----
 
