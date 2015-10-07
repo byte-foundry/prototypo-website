@@ -19,10 +19,10 @@
 				<div class="PricingItemFree-pack textType-txt text-center textSize-txt-large colorWhite"><?php
 					echo nl2br($pack['packservices']); ?></div>
 			</div>
-			<form class="Newsletter text-center">
-				<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" placeholder="Your name">
-				<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" placeholder="Your email">
-				<input class="Newsletter-email NewsletterInput-text small-full-width" type="password" placeholder="Set a password">
+			<form id="quick-signup" class="Newsletter text-center">
+				<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" name="quick-email" id="quick-email" placeholder="email" value="">
+				<input class="Newsletter-email NewsletterInput-text small-full-width" type="password" name="quick-password1" id="quick-password1" placeholder="password" value="">
+				<input class="Newsletter-email NewsletterInput-text small-full-width" type="password" name="quick-password2" id="quick-password2" placeholder="repeat password" value="">
 				<input class="NewsletterInput-submit callToAction" type="submit" value="<?php
 					echo $page->freemiumSubmit()->kirbyText(); ?>">
 			</form>

@@ -58,6 +58,10 @@
 
   ga('create', 'UA-41962243-1', 'auto');
   ga('send', 'pageview');
+
+  window.addEventListener('error', function(e) {
+    ga( 'send', 'event', 'js-error', e.message, e.filename + ':  ' + e.lineno );
+  });
 </script>
 
   <header class="Header" role="banner">
