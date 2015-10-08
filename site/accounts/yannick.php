@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - pricing
   - press
+  - pricing
   - home
   - blog/prototypo-update-0
   - documentation
