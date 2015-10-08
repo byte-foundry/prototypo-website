@@ -33,6 +33,11 @@ fields:
     placeholder: eg. Get started
     default: Get started
 
+  getintothefullapp:
+    label: Tagline for a direct signup
+    type:  text
+    placeholder: eg. Signin to the app
+    default: want more?
 
 
   line-a:

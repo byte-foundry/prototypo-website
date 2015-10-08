@@ -1,5 +1,13 @@
 $(function() {
 
+	/* Get email from the homepage pre-fill input */
+	$('#get-app-submit').on('click', function(e) {
+		sessionStorage.setItem("get-app-email", $('#get-app-email').val() );
+	});
+	if ( sessionStorage.getItem("get-app-email") ) {
+		$('#quick-email').val( sessionStorage.getItem("get-app-email") );
+		$('#email').val( sessionStorage.getItem("get-app-email") );
+	}
 
 	/* Demo/Video switch */
 	$('.switchAction').on('click', function(e) {

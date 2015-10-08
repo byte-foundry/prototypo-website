@@ -13,7 +13,7 @@ $(function() {
 		$('#signup-error').text('');
 	}
 
-	$('#quick-signup input[type!=submit]').val('');
+	$('#quick-signup input[type=password]').val('');
 
 	$('#quick-signup').on('submit', function(event) {
 		event.preventDefault();

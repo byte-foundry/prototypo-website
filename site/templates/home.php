@@ -9,7 +9,6 @@
 			<div class="Section-homepageGetStartedLine text-center">
 				<h1 class="Section-homepageGetStartedLineTitle colorWhite"><?php echo $page->title()->kirbytext(); ?></h1>
 				<h3 class="Section-homepageGetStartedLineSubtitle colorBrightest"><?php echo $page->getStartedTagline()->kirbytext(); ?></h3>
-				<!-- <a href="#" class="Section-homepageGetStartedLineCallToAction callToAction"><?php echo $page->getStartedButtonLabel()->kirbytext(); ?></a> -->
 			</div>
 
 			<div class="DemoHome">
@@ -74,29 +73,22 @@
 					<label for="switchDemo"></label>
 					<span class="switch-label">Video</span>
 				</fieldset>
+
+				<div class="textSize-txt-large text-center marginTop60">
+					<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->getintothefullapp()->kirbytext(); ?></h3>
+					<div class="marginTop30">
+						<form class="" action="http://sendy.kuem.me.uk/subscribe" method="post">
+							<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="get-app-email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
+							<input type="hidden" name="list" value="KokibYEZQXsvsf8OkSnUww">
+							<input class="NewsletterInput-submit callToAction" type="submit" id="get-app-submit" name="submit" value="<?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?>">
+						</form>
+					</div>
+				</div>
 			</div>
 
-			<div class="clear"></div>
-
-			<div class="SectionNewsletterIn">
-
-				<header class="SectionNewsletterInHeader text-center fitToContent">
-					<h1 class="textType-title textSize-title-small colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
-					<h3 class="textType-subtitle textSize-txt-xlarge colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
-				</header>
-
-				<div class="Section-wrapTxt textType-txt fitToContent">
-					<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="Newsletter text-center">
-						<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" name="name" id="name" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
-						<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
-						<input type="hidden" name="list" value="ytAwOnCM1u2l9ak9zwB7bw">
-						<input class="NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
-					</form>
-				</div>
-
-			</div><!-- .SectionNewsletterIn -->
-
 		</div>
+
+
 
 	</section>
 
