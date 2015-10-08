@@ -17,7 +17,9 @@ Packs:
   packpricettc: 0
   packprice2ttc: 0
   packpricelaunch:
-  packservices: One font
+  packservices: |
+    Limited parameters
+    One project per template
   packservices2:
   packstate: notavailable
   packbuttonlabel: Get started!
@@ -29,6 +31,7 @@ Packs:
   packservices: |
     Unlimited fonts
     All parameters
+    Fifteen projects
   packservices2:
   packstate: notavailable
   packbuttonlabel: Get started!
