@@ -14,11 +14,11 @@ The web application Prototypo gives anyone the possibility to create personalize
 
 ## An international community 
 
-Since May 2014, date of their first fundraising on the crowdfunding platform “Kickstarter”, more than 1.800 people from all over the world pre-ordered one year access to the web-app. Today, they count 3.000 followers on twitter, 3.500 fans on Facebook and 18.000 subscribers to their newsletter mainly in the US. This first step strengthened the ambitions of their creators: “our first users come from over 35 different countries, which represents a pool of more than one million graphic designers. Going forward, we want to help them create the perfect font by bringing Prototypo closer to their creation: the first step is to provide the ability to instantly preview their font on any website.” said Louis-Rémi Babé the lead developer and cofounder of Prototypo.
+Since May 2014, date of their first fundraising on the crowdfunding platform (link: https://www.kickstarter.com/projects/599698621/prototypo-streamlining-font-creation text: “Kickstarter”), more than 1.800 people from all over the world pre-ordered one year access to the web-app. Today, they count 3.000 followers on twitter, 3.500 fans on Facebook and 18.000 subscribers to their newsletter mainly in the US. This first step strengthened the ambitions of their creators: “our first users come from over 35 different countries, which represents a pool of more than one million graphic designers. Going forward, we want to help them create the perfect font by bringing Prototypo closer to their creation: the first step is to provide the ability to instantly preview their font on any website.” said Louis-Rémi Babé the lead developer and cofounder of Prototypo.
 
 ## Launching online! 
 
-After a year of R&D and private beta testing, Prototypo is now publicly available with a launch price of $9.99 per month!
+After a year of R&D and private beta testing, Prototypo is now publicly available with a launch price of $8 per month and it comes with 2 parametrics typefaces designed by our partner (link: https://www.productiontype.com/ text: Production Type)!
 
 ## About the creators
 
