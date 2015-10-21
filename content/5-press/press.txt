@@ -22,7 +22,7 @@ After a year of R&D and private beta testing, Prototypo is now publicly availabl
 
 ## About the creators
 
-Created in May 2013 by Yannick Mathey and Louis-Rémi Babé in Lyon, Prototypo is a startup which provides the first real time and easy font creation software. Their successful fundraising on kickstarter brought them three times the amount they expected and allowed them to establish and grow a popularity development in the graphic and type designers’ community as well as typography enthusiasts’ community.
+Created in May 2013 by Yannick Mathey and Louis-Rémi Babé in Lyon, Prototypo is a startup which provides the first real time and easy font creation software. Their successful fundraising on kickstarter brought them three times the amount they expected (around 50.000€) and allowed them to establish and grow a popularity development in the graphic and type designers’ community as well as typography enthusiasts’ community.
 
 
 Enjoy,

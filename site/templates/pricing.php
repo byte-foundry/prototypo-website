@@ -3,45 +3,21 @@
 <main class="PageContent Pricing showAnnualBilling" role="main">
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->freemiumImg())->url(); ?>)">
-		<div class="PricingItemFree-wrap <?php
-			echo $state; ?>">
-			<header class="PageHeader text-center PricingPageHeader">
+		<div class="PricingItemFree-wrap">
+			<header class="PageHeader text-center fitToContent marginTop60">
 				<h1 class="textType-title textSize-title-large colorWhite"><?php
-					echo $page->section0Title()->kirbytext(); ?></h1>
-				<h3 class="textType-subtitle textSize-title-small colorBright"><?php
-					echo $page->section0Subtitle()->kirbytext(); ?></h3>
+					echo $page->section1Title()->kirbytext(); ?></h1>
+				<!-- <h3 class="textType-subtitle textSize-title-small colorBright"><?php
+					echo $page->section1Subtitle()->kirbytext(); ?></h3> -->
+				<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+					Hurry up! The special launch offer will only last until the 27th of November.
+				</h3>
 			</header>
-			<div class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
-				<?php
-					echo $page->section0Txt()->kirbytext(); ?>
-			</div>
-			<div class="PricingItemFree-wrapIn">
-				<div class="PricingItemFree-pack textType-txt text-center textSize-txt-large colorWhite">
-					<?php //echo nl2br($pack['packservices']); ?>
-				</div>
-			</div>
-			<form id="quick-signup" class="Newsletter text-center">
-				<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" name="quick-email" id="quick-email" placeholder="email" value="">
-				<input class="Newsletter-email NewsletterInput-text small-full-width" type="password" name="quick-password1" id="quick-password1" placeholder="password" value="">
-				<input class="Newsletter-email NewsletterInput-text small-full-width" type="password" name="quick-password2" id="quick-password2" placeholder="repeat password" value="">
-				<input class="NewsletterInput-submit callToAction" type="submit" value="<?php
-					echo $page->freemiumSubmit()->kirbyText(); ?>">
-			</form>
-			<div class="Section-wrapTxt textType-txt textSize-txt-medium marginTop30 colorBright text-center">
-				<?php
-					echo $page->freemiumToS()->kirbytext(); ?>
-			</div>
-			<div class="clear"></div>
 		</div>
 	</div>
 	<div class="fitToContent">
-		<header class="PageHeader text-center fitToContent">
-			<h1 class="textType-title textSize-title-large colorWhite"><?php
-				echo $page->section1Title()->kirbytext(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-small colorBright"><?php
-				echo $page->section1Subtitle()->kirbytext(); ?></h3>
-		</header>
-		<div class="Section-wrapTxt textType-txt marginTop30 colorBrightest text-center">
+
+		<div class="Section-wrapTxt textType-txt marginTop60 colorBrightest text-center">
 			<?php
 				echo $page->section1Txt()->kirbytext(); ?>
 		</div>
@@ -115,7 +91,7 @@
                                     echo '<a href="mailto:contact@prototypo.io" class="callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
                                 }
                                 else {
-        							echo '<a href="/pricing/subscribe?plan=' . $pack['packname'] .'&billing=annual" plan="' . $pack['packname'] . '" class="billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
+        							echo '<a href="/pricing/subscribe?plan=' . $pack['packname'] .'&billing=annual" plan="' . $pack['packname'] . '" class="subscribe-page billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
                                 }
                             ?>
 						</div>

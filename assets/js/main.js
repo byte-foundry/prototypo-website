@@ -1,5 +1,7 @@
 $(function() {
 
+	Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
+
 	/* Get email from the homepage pre-fill input */
 	$('#get-app-submit').on('click', function(e) {
 		sessionStorage.setItem("get-app-email", $('#get-app-email').val() );
@@ -43,47 +45,96 @@ $(function() {
 
 	FAQ__checkIfAnchorToQuestion();
 
+	window.hoodie = new Hoodie('http://localhost:6007');
+
+	// If user is logged in, redirect to account Page
+	var subscriptionPage = 'pricing/subscribe';
+	if ( hoodie.account.username && $(".subscribe-page")[0] ) {
+		subscriptionPage = $('.subscribe-page').attr('href').replace('pricing/subscribe', 'account');
+		$('.subscribe-page').attr('href', subscriptionPage);
+	}
+
 	$('.js_annualBilling').on('mousedown', function() {
 		$('.Pricing').removeClass('showMonthlyBilling').addClass('showAnnualBilling');
-		$('.billing').each(function() {
-			$( this ).attr('href', '/pricing/subscribe?plan=' + $( this ).attr('plan') + '&billing=annual');
-		});
+		if (!hoodie.account.username) {
+			$('.billing').each(function() {
+				$( this ).attr('href', '/pricing/subscribe?plan=' + $( this ).attr('plan') + '&billing=annual');
+			});
+		}
 	});
 
 	$('.js_monthlyBilling').on('mousedown', function() {
 		$('.Pricing').removeClass('showAnnualBilling').addClass('showMonthlyBilling');
-		$('.billing').each(function() {
-			$( this ).attr('href', '/pricing/subscribe?plan=' + $( this ).attr('plan') + '&billing=monthly');
-		});
+		if (!hoodie.account.username) {
+			$('.billing').each(function() {
+				$( this ).attr('href', '/pricing/subscribe?plan=' + $( this ).attr('plan') + '&billing=monthly');
+			});
+		}
 	});
 
-	window.hoodie = new Hoodie('https://prototypo.appback.com');
+
 	var recurrence = 'monthly';
+
+	window.selectedPlan = function( plan, recurrence ) {
+		var selectedPlan;
+		if ( plan === 'free') {
+			selectedPlan = "free_monthly_USD_taxfree";
+		} else {
+			selectedPlan = "launch_" + recurrence + "_USD_taxfree";
+		}
+		return selectedPlan;
+	}
+
 
 	window.getHoodieInfo = function() {
 		hoodie.account.fetch()
 			.then(function(user) {
-				$('.my-account').show();
-				$('.no-account').hide();
-				$('.logged-in-form').show();
-				$('.not-logged-in-form').hide();
+				if ( $("body").hasClass("pricing/subscribe") ) {
+					location.href = '/account';
+				}
+
+				$('.subscribe-page').attr('href','/account');
+
+				$('.hoodie-account').show();
+				$('.no-hoodie-account').hide();
 				$('#logged-in-email').text(hoodie.account.username);
 				$('#hoodieUsername').text(hoodie.account.username);
-				$('#logged-in-subscription').text(user.roles[user.roles.length - 1]);
-				$('#already-account').hide();
-				$('#no-account').hide();
+
+				var plan = user.roles[user.roles.length - 1];
+				if (plan.indexOf('stripe') === -1 || plan.indexOf('free_') !== -1) {
+					plan = 'Free plan';
+				}
+				$('#logged-in-subscription').text(plan);
 				window.hoodieUser = user;
+				hoodie.stripe.customers.retrieve()
+					.then(function(response) {
+						$('#last-four').text(response.sources.data[0].last4);
+						$('#card-month').text(response.sources.data[0].exp_month);
+						$('#card-year').text(response.sources.data[0].exp_year);
+
+						if (!(plan.indexOf('stripe') === -1 || plan.indexOf('free_') !== -1)) {
+							$('.subscription-date').show();
+							$('#subscription-date').text(moment.unix(response.subscriptions.data[0].current_period_end).format('L'));
+						} else {
+							$('.subscription-date').hide();
+						}
+					});
 			})
 			.catch(function(err) {
-				$('.my-account').hide();
-				$('.no-account').show();
-				$('.logged-in-form').hide();
-				$('.not-logged-in-form').show();
-				$('#already-account').show();
-				$('#no-account').hide();
+				$('.hoodie-account').hide();
+				$('.no-hoodie-account').show();
 				window.notLoggedIn = true;
 			});
 	}
 	getHoodieInfo();
+
+	$('.logout').on('click', function() {
+		hoodie.account.signOut()
+			.done(function() {
+				$('.not-logged-in-form').css('display', 'none');
+				getHoodieInfo();
+				window.notLoggedIn = true;
+			});
+	});
 
 });

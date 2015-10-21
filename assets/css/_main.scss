@@ -33,6 +33,27 @@
 	background: linear-gradient(to bottom right, adjust-hue(#eee, 285deg), adjust-hue($colorLighterGray, 315deg));
 }
 
+
+.hidden {
+	display: none;
+}
+
+.wrap-success-message {
+	position:relative;
+}
+
+.success {
+	position:absolute;
+	height:100%;
+	top:0;
+	width:100%;
+	align-items: center;
+	justify-content: center;
+	font-size:30px;
+	color: white;
+	background-color: $mainBackgroundColor;
+}
+
 /*
  *  Page: home
  */
@@ -44,6 +65,12 @@
 .SectionHeader {
 	margin-top: 20px;
 	margin-bottom: 60px;
+}
+
+header {
+	.logout {
+		margin-left: 15px;
+	}
 }
 .Section-wrapTxt a {
 	color: $colorBrightest;
@@ -771,6 +798,19 @@
 	}
 }
 
+.general-infos {
+	border: 3px solid $thirdBackgroundColor;
+	border-radius: 5px;
+	color: $colorDarkGray;
+	background-color: lighten($thirdBackgroundColor, 20%);
+	padding: 1.5em;
+	clear: both;
+	margin: 1.5em 0;
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
 /*
  * Page : About us
  */
@@ -1220,15 +1260,11 @@
 	position: relative;
 	width: 100%;
 
-	p {
-		margin-bottom: .5em;
-	}
-
-
 	.radio-wrap {
 		display: flex;
 		flex-flow: row nowrap;
 		margin-bottom: 2em;
+		justify-content: space-between;
 	}
 
 	input:checked + label {
@@ -1240,9 +1276,18 @@
 		display: none;
 	}
 
+	.radio:first-of-type {
+		align-self: flex-start;
+	}
+
+	.radio:last-of-type {
+		align-self: flex-end;
+	}
+
 	.radio {
-		display: inline-block;
-		width: 49%;
+		flex: 0 1 49%;
+		box-sizing: border-box;
+		margin:0;
 		padding: 50px 30px;
 		cursor: pointer;
 		position: relative;
@@ -1250,15 +1295,30 @@
 		color: $colorDarkest;
 
 		background-color: $colorLighterGray;
-		display: inline-block;
 		cursor: pointer;
 		z-index: 0;
 		transition: .2s;
 		min-height: 228px;
 		cursor: pointer;
 
+		&.is-disabled {
+			opacity: .4;
+			cursor: default;
+			&:hover {
+				background-color: transparent;
+			}
+		}
+
 		&:hover {
 			background-color:lighten($thirdBackgroundColor, 15%);
+		}
+
+		.launch-infos {
+			position: absolute;
+			bottom: 1em;
+			text-align: center;
+			left: 0;
+			right: 0;
 		}
 
 		.plan {
@@ -1272,13 +1332,18 @@
 				position: relative;
                 margin-left: -10px;
 
-				&::before{
-                    content: "€";
-                    position: absolute;
+				&::before {
 					font-size: .5em;
-                    top: 1em;
-                    left: 100%;
+					top: 1em;
 				}
+
+				&.outsideEU {
+
+					&::before {
+						top:.3em;
+					}
+				}
+
 				&::after{
 					content: " VAT incl. *";
 					position: absolute;
@@ -1289,14 +1354,26 @@
 					width: 5em;
 				}
 			}
-            .price.outsideEU {
-                margin-left: 0px;
-                &:before{
-                    content: "$";
-                    top: .3em;
-                    left: -.5em;
-                }
-            }
+		}
+	}
+
+	.currency {
+		position:relative;
+		margin-right:10px;
+
+		&::before{
+			content: "€";
+			position: absolute;
+			left: 100%;
+		}
+
+		&.outsideEU {
+			margin-left:10px;
+			margin-right: 0px;
+			&:before{
+				content: "$";
+				left: -.5em;
+			}
 		}
 	}
 
@@ -1338,8 +1415,11 @@
 	}
 
 	label {
-		font-size: 1.2em;
+		font-size: 16px;
 		margin-bottom: 1em;
+		&.error {
+			font-size: 20px;
+		}
 	}
     .required {
         border-bottom: 5px solid $secondBackgroundColor !important;
@@ -1448,6 +1528,27 @@
 			color: white;
 		}
 	}
+}
+
+#alert-wrong-country {
+	display: none;
+}
+
+#account-card-form {
+	display:none;
+}
+
+a.tos-link {
+	color: $secondBackgroundColor;
+	&:hover {
+		color: $secondBackgroundColor;
+		text-decoration: underline;
+	}
+}
+
+.tos-text {
+	margin-left: 5px;
+	font-size:13px;
 }
 
 .pressDocs {

@@ -4,76 +4,11 @@ $(function() {
 		return;
 	}
 
-	function calcTax( amount, country ) {
-		var transaction = Taxamo.transaction()
-			.forceCountryCode( country || window.code || 'FR')
-			.buyerTaxNumber( Taxamo.defaultTransaction.buyer_tax_number )
-			.currencyCode('EUR')
-			.transactionLine('line1') //first line
-				.amount(amount)
-			.done(); //go back to transaction context
-		}
-
-	Taxamo.calculateTax(
-		transaction,
-		function(data) {
-	        console.log(data);
-	        window.currency = 'USD';
-	        if ( data.transaction.tax_region === 'EU' ) {
-	            currency = 'EUR';
-	        }
-	        window.taxRate = 0;
-	        if (data.transaction.buyer_tax_number_valid) {
-	            window.taxRate = data.transaction.transaction_lines[0].tax_rate;
-	        }
-			$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') / ( ( 100 + window.taxRate ) / 100 ) );
-			$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') / ( ( 100 + window.taxRate ) / 100 ) );
-
-	        if ( data.transaction.tax_region === 'EU' ) {
-	            $('.price').removeClass('outsideEU');
-	        }
-	        else {
-	            $('.price').addClass('outsideEU');
-	        }
-		},
-		function(data) {
-	        console.log(data);
-			console.log('Error TAXAMO');
-		}
-	);
-
 	var recurrence = 'monthly';
-
-	function selectedPlan( plan ) {
-		var selectedPlan;
-		if ( plan === 'free') {
-			selectedPlan = "free_" + recurrence + "_USD_taxfree";
-		} else {
-			selectedPlan = "launch_" + recurrence + "_USD_taxfree";
-		}
-		return selectedPlan;
-	}
-
-	Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 
 	setTimeout(function(){
 		$('#taxamo-confirm-country-overlay').css('opacity', '.3');
 	}, 1000);
-
-	// Load taxamo
-	Taxamo.initialize('public_test_gkQnEFf8SpuGAijwkX3ustMv5cfAfoWuNdlvPXZsqvg');
-	Taxamo.detectCountry();
-
-	calcTax( parseInt( $('#' + $('#plan').val()).attr('month') ));
-
-	// Detect current country
-	Taxamo.subscribe('taxamo.country.detected', function(data) {
-		$('.countryName').html(data.countries.by_ip.name);
-		$('#taxamo-country-select option[value="' + data.countries.by_ip.code + '"]').prop('selected', true);
-		window.code = data.countries.by_ip.code;
-	});
-
-	selectedPlan();
 
 	// Default load prices
 	$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
@@ -81,19 +16,15 @@ $(function() {
 
 	if( $('#plan').val() === 'free' ) {
 		$('#card-form').css('display', 'none');
+		$('#select-plan-wrap').css('display', 'none');
 	}
 
-	// Validate VAT number
-	$('#VAT').on('blur', function() {
-		Taxamo.setTaxNumber( $('#VAT').val().replace(/ /g,'') );
-		calcTax( parseInt( $('#' + $('#plan').val()).attr('month')), $('#taxamo-country-select').val() )
-	});
-
 	function createToken() {
-		if (selectedPlan( $('#plan').val() ).indexOf('free') !== -1) {
+		if (selectedPlan( $('#plan').val(), recurrence ).indexOf('free') === 0) {
 			subscribe(null, {id: undefined});
 		}
 		else {
+
 			Stripe.card.createToken({
 				number: $('#cardNumberInput').val(),
 				cvc: $('#cvcInput').val(),
@@ -103,7 +34,41 @@ $(function() {
 		}
 	};
 
+	var euCountryCode = [
+		"AT",
+		"BE",
+		"BG",
+		"CY",
+		"CZ",
+		"DE",
+		"DK",
+		"EE",
+		"EL",
+		"GR",
+		"ES",
+		"FI",
+		"FR",
+		"HR",
+		"HU",
+		"IE",
+		"IT",
+		"LT",
+		"LU",
+		"LV",
+		"MT",
+		"NL",
+		"PL",
+		"PT",
+		"RO",
+		"SE",
+		"SI",
+		"SK",
+		"UK",
+		"GB"
+	]
+
 	function subscribe(status, response) {
+
 		if (response.error) {
 			$('#stripe-error').text(response.error.message);
 			$('#stripe-error').show();
@@ -111,42 +76,103 @@ $(function() {
 		else {
 			$('#stripe-error').text('');
 			$('#stripe-error').hide();
+
+			if (response.card && euCountryCode.indexOf(response.card.country) !== -1 && currency === 'USD') {
+				return alertShouldPayInEuro();
+			}
+
 			hoodie.stripe.customers.create({
 				source: response.id,
 				taxNumber: undefined,
 				cardPrefix: $('#cardNumberInput').val().substr(0,9),
 				currencyCode: 'EUR',
-				plan: selectedPlan( $('#plan').val() ),
+				plan: selectedPlan( $('#plan').val() , recurrence),
 			})
 			.then(function() {
 				getHoodieInfo();
+			})
+			.catch(function(err) {
+				$('#stripe-error').text(err.message);
+				$('#stripe-error').show();
 			});
+		}
+	}
+
+	function alertShouldPayInEuro() {
+		$("#alert-wrong-country").show();
+	}
+
+	function showStripeError(condition, message) {
+		if (condition) {
+			$('#stripe-error').text(message);
+			$('#stripe-error').show();
+			return true;
 		}
 	}
 
 	$('#submit').on('click', function(e) {
 		e.stopPropagation();
 		e.preventDefault();
+
+		$('#stripe-error').text("");
+		$('#stripe-error').hide();
+		$('#signin-error').text("");
+		$('#signin-error').hide();
+
+		if ($('#password').val().length < 6) {
+			$('#signin-error').text('Your password must be at least 6 characters long');
+			$('#signin-error').show();
+			return;
+		}
+
+		if (!/^.*?@.*?\..*?/.test($('#email').val())) {
+			$('#signin-error').text('Your email is not a valid email address');
+			$('#signin-error').show();
+			return;
+		}
+
+		if (!$('#tos-checkbox').prop('checked')) {
+			$('#signin-error').text('You have to agree with the term of services');
+			$('#signin-error').show();
+			return;
+		}
+
+		if (selectedPlan( $('#plan').val(), recurrence ).indexOf('free_') === -1) {
+			var error = false;
+			error = error || showStripeError($('#cardNumberInput').val().length < 13, "Your card number seems too short");
+			error = error || showStripeError(!$('#creditCardExpMonthInput').val(), "You did not choose an expiration month");
+			error = error || showStripeError(($('#creditCardExpMonthInput').val() || "dirtydatehere").length > 2 , "Your expiration month is invalid");
+			error = error || showStripeError(!$('#creditCardExpYearInput').val(), "You did not choose an expiration year");
+			error = error || showStripeError(($('#creditCardExpYearInput').val() || "dirtydatehere").length  > 4 , "Your expiration year is invalid");
+			error = error || showStripeError(moment("01/" + $('#creditCardExpMonthInput').val() + "/" + $('#creditCardExpYearInput')
+				.val(), 'DD/MM/YYYY')
+				.endOf('month')
+				.isBefore(moment()), "Your expiration date is earlier than today");
+			error = error || showStripeError($('#cvcInput').val().length < 3 , "Your cvc seems too short");
+
+			if (error) {
+				return;
+			}
+		}
+
 		if (hoodie.account.username) {
 			createToken();
 		}
 		else {
 			hoodie.account.signUp($('#email').val(), $('#password').val())
-				.done(createToken)
+				.done(function() {
+					$('#signin-error').text('');
+					$('#signin-error').hide();
+					getHoodieInfo();
+					createToken();
+				})
 				.fail(function(err) {
 					console.log(err);
+					$('#signin-error').text(err.message);
+					$('#signin-error').show();
 				});
 		}
 
-	});
-
-	$('.logout').on('click', function() {
-		hoodie.account.signOut()
-			.done(function() {
-				$('.not-logged-in-form').css('display', 'none');
-				getHoodieInfo();
-				window.notLoggedIn = true;
-			});
 	});
 
 	$('.listCountry').on('click', function() {
@@ -178,9 +204,11 @@ $(function() {
 
 		if ($('#plan').val() === 'free') {
 			$('#card-form').css('display', 'none');
+			$('#select-plan-wrap').css('display', 'none');
 		}
 		else {
 			$('#card-form').css('display', 'block');
+			$('#select-plan-wrap').css('display', 'block');
 		}
 	});
 

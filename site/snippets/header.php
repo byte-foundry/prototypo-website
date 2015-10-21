@@ -73,11 +73,11 @@
 			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
 		</a>
 
-		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont">
+		<div class="no-account no-hoodie-account Nav-callToAction Nav-callToActionCreateYourFont">
 			<div class="hide-for-small-only">
 				<div class="left">
-					<a href="http://app.prototypo.io" class="login">
-						Login
+					<a href="/account" class="login">
+						Sign in
 					</a>
 				</div>
 				<div class="left">
@@ -89,17 +89,22 @@
 			</div>
 		</div>
 
-		<div class="my-account clearfix">
+		<div class="my-account hoodie-account clearfix">
 			<div class="hide-for-small-only">
 				<div class="left hoodieUsername">
 					Welcome back <span class="" id="hoodieUsername"></span>
 				</div>
-				<div class="left show-for-medium-up logout">Logout</div>
+				<div class="left">
+					<a href="/account" class="callToAction call-success">
+						<span class="">My account</span>
+					</a>
+				</div>
 				<div class="left">
 					<a href="http://app.prototypo.io" class="callToAction call-success">
 						<span class="">App</span>
 					</a>
 				</div>
+				<div class="left show-for-medium-up logout">Logout</div>
 			</div>
 		</div>
 
