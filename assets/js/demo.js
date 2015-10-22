@@ -73,7 +73,9 @@ $(function() {
 			});
 
 			$('.DemoHome').on('mouseenter', function() {
-				$('.Infobox').css('opacity', 0);
+				$('.Infobox').animate({
+					'opacity': 0
+				}, 600 );
 				$('#test-me').removeClass('test-me');
 			}).on("mouseleave", function(){
 				$('#test-me').addClass('test-me');
