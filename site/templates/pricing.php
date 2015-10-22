@@ -29,69 +29,66 @@
 					$state = ($pack['packstate'] == 'notavailable') ? 'plan-disabled' : '';
 				?>
 			<li class="PricingItem">
-				<div class="PricingItem-wrap <?php
-					echo $state; ?>">
-					<h3 class="PricingItem-packtitle textType-txt textSize-txt-small"><?php
-						echo $pack['packname']; ?></h3>
-					<h3 class="PricingItem-title textType-txt textSize-title-small <?php
+				<div class="PricingItem-wrap <?php echo $state; ?>">
+
+					<h3 class="PricingItem-packtitle textType-txt textSize-txt-small">
+						<?php echo $pack['packname']; ?>
+					</h3>
+
+					<h3 class="PricingItem-title textType-txt textSize-title-small
+					<?php
 						if ($state == 'disabled') echo 'colorGray';
 						else echo 'colorSecondBackgroundColor'; ?>">
-						<?php
-							if ($pack['packpricettc'] === ''): ?>
-						<img src="<?php
-							echo url('assets/img/Enterprise.svg'); ?>">
-						<?php
-							else: ?>
-						<span class="PricingItem-priceBefore textSize-txt-large">$</span><!--
-							-->
+						<?php if ($pack['packpricettc'] === ''): ?>
+						<img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
+						<?php else: ?>
+						<span class="PricingItem-priceBefore textSize-txt-large">$</span>
+
 						<span class="PricingItem-price textSize-title-xlarge">
 
 							<?php if ($pack['packpricelaunch'] != ''): ?>
+
 								<div class="js_price">
 									<?php
-										echo '<span class="solded">' . $pack['packpricettc'] . '</span>';
-										echo $pack['packpricelaunch'].'<br/>';
-										echo '-';
+									echo '<span class="solded">' . $pack['packprice2ttc'] . '</span>';
+									echo $pack['packpricelaunch'].'<br/>';
+									echo '<span class="solded solded-year">' . $pack['packpricettc'] . '</span>';
+									echo $pack['packpricelaunch'];
 									?>
 								</div>
+
 							<?php else: ?>
-							<!--
-								<span class="js_annualBilling_price">
-									<?php 	echo $pack['packprice2ttc']; ?>
-								</span>
-								<span class="js_monthlyBilling_price">
-									<?php echo $pack['packpricettc']; ?>
-								</span>
-							-->
-							<div class="js_price"><?php
-								echo $pack['packprice2ttc']; ?><br /><?php
-								echo $pack['packpricettc']; ?></div>
+
+								<div class="js_price">
+									<?php echo $pack['packprice2ttc']; ?><br /> <!-- MONTH -->
+									<?php echo $pack['packpricettc']; ?>		<!-- YEAR  -->
+								</div>
+
 							<?php endif; ?>
 
 						</span>
-						<!--
-                        --><span class="PricingItem-priceAfter textSize-txt-medium">/mo. *</span>
-						<?php
-							endif; ?>
+
+						<span class="PricingItem-priceAfter textSize-txt-medium">/mo. *</span>
+						<?php endif; ?>
 					</h3>
-					<!--
-						<h6 class="PricingItem-price textType-txt textSize-txt-small colorDarkGray">Monthly billing: <?php
-							echo $pack['packpricettc']; ?></h6>
-						-->
+
 					<div class="PricingItem-infos textType-subtxt colorDarkGray">
-						<div class="PricingItem-pack textType-txt textSize-txt-medium"><?php
-							echo nl2br($pack['packservices']); ?></div>
-						<div class="PricingItem-pack textType-txt textSize-txt-medium"><?php
-							echo nl2br($pack['packservices2']); ?></div>
-						<!--               <div class="PricingItem-content textType-txt textSize-txt-small"><?php
-							echo nl2br($pack['packdescription']); ?></div> -->
+
+						<div class="PricingItem-pack textType-txt textSize-txt-medium">
+							<?php echo nl2br($pack['packservices']); ?>
+						</div>
+
+						<div class="PricingItem-pack textType-txt textSize-txt-medium">
+							<?php echo nl2br($pack['packservices2']); ?>
+						</div>
+
 						<div class="PricingItem-getStarted">
                             <?php
                                 if( $pack['packname'] === 'Want more?') {
                                     echo '<a href="mailto:contact@prototypo.io" class="callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
                                 }
                                 else {
-        							echo '<a href="/pricing/subscribe?plan=' . $pack['packname'] .'&billing=annual" plan="' . $pack['packname'] . '" class="subscribe-page billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
+        							echo '<a href="/pricing/subscribe" name="' . $pack['packname'] . '" class="choose-plan subscribe-page billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
                                 }
                             ?>
 						</div>
@@ -103,8 +100,8 @@
 				?>
 		</ul>
 		<div class="PricingSwitch text-center textType-txt textSize-txt-medium">
-			<span class="PricingSwitch-item js_annualBilling">Annual billing</span>
-			<span class="PricingSwitch-item js_monthlyBilling">Monthly billing</span>
+			<span class="PricingSwitch-item js_annualBilling" name="annual">Annual billing</span>
+			<span class="PricingSwitch-item js_monthlyBilling" name="monthly">Monthly billing</span>
 		</div>
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
 			<?php

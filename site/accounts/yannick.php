@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - about
   - press
   - pricing
   - cgu
   - account
-  - pricing/subscribe

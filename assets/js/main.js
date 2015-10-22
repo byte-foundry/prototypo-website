@@ -11,6 +11,30 @@ $(function() {
 		$('#email').val( sessionStorage.getItem("get-app-email") );
 	}
 
+	/* Get recurrence and plan from pricing page */
+	$('.PricingSwitch-item').on('click', function(e) {
+		sessionStorage.setItem("recurrence", $(this).attr('name') );
+	});
+	$('.choose-plan').on('click', function(e) {
+		sessionStorage.setItem("plan", $(this).attr('name') );
+	});
+	/* pre-fill inputs with sessionStorage */
+	if ( $("body").hasClass("pricing/subscribe") || $("body").hasClass("account") ) {
+		// plan selector
+		$('#plan').find('option').each( function() {
+			if( $(this).val() === sessionStorage.getItem('plan') ) {
+				$(this).prop('selected', true);
+			};
+		});
+		// radio button recurrence
+		$('#recurrence-selector').find('input').each( function() {
+			if( $(this).val() === sessionStorage.getItem('recurrence') ) {
+				$(this).prop('checked', true);
+			};
+		});
+	}
+
+
 	/* Demo/Video switch */
 	$('.switchAction').on('click', function(e) {
 		$videoplayer = $('#videoplayer');

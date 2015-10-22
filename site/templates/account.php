@@ -61,9 +61,6 @@
 
 							<div id="account-plan" class="subscribe hidden account-plan-toggle-target">
 								<?php
-									$plan = $_GET['plan'];
-									$billing = $_GET['billing'];
-
 									$packs = yaml($page->packs());
 								?>
 								<?php snippet('plans', array('packs' => $packs)) ?>

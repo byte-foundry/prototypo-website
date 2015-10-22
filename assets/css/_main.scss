@@ -713,15 +713,14 @@ header {
 	&:before {
 		content: "";
 		display: block;
-		width: 200%;
-		color: red;
+		width: 220%;
 		position: absolute;
-		font-size: 1.2em;
-		font-weight: 100;
-		border-top: 1px solid red;
-		transform: rotate(-45deg);
-		top: 23px;
-		left: -3px;
+		border-top: 1px solid $secondBackgroundColor;
+		transform: rotate(-45deg) translateX(-23px);
+		top: 21px;
+	}
+	&.solded-year {
+		top: 52px;
 	}
 }
 
