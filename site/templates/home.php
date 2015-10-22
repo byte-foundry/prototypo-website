@@ -77,11 +77,12 @@
 				<div class="textSize-txt-large text-center marginTop60">
 					<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->getintothefullapp()->kirbytext(); ?></h3>
 					<div class="marginTop30">
-						<form class="" action="http://sendy.kuem.me.uk/subscribe" method="post">
+						<!-- <form class="" action="http://sendy.kuem.me.uk/subscribe" method="post">
 							<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="get-app-email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
 							<input type="hidden" name="list" value="KokibYEZQXsvsf8OkSnUww">
 							<input class="NewsletterInput-submit callToAction" type="submit" id="get-app-submit" name="submit" value="<?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?>">
-						</form>
+						</form> -->
+						<a href="pricing" class="NewsletterInput-submit callToAction" id="get-app-submit"><?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?></a>
 					</div>
 				</div>
 			</div>
