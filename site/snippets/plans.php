@@ -25,7 +25,7 @@
 	<div class="radio-wrap" id="recurrence-selector">
 		<input id="monthly" type="radio" name="monthYearSwitch" class="monthYearSwitch" value="monthly">
 		<label class="radio text-center" for="monthly">
-			<div class="plan"><div class="type">Monthly billing: <div class="launch-infos">The first 6 month, after <span class="currency">15</span></div></div><span class="price currency priceMonth">-</span></div>
+			<div class="plan"><div class="type">Monthly billing: <div class="launch-infos">The first 6 month, <span class="currency">15</span> after</div></div><span class="price currency priceMonth">-</span></div>
 		</label>
 		<input id="annual" type="radio" name="monthYearSwitch" class="monthYearSwitch" value="annual" checked>
 		<label class="radio text-center" for="annual">

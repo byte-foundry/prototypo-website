@@ -271,6 +271,7 @@ header {
 	-webkit-appearance: none;
 }
 
+
 // .DemoControls-Potentiometer:focus::-webkit-slider-runnable-track {
 //   background: #5fe7b3;
 // }
@@ -310,6 +311,21 @@ header {
 }
 .DemoControls-Potentiometer:focus::-ms-fill-upper {
 	background: #5fe7b3;
+}
+
+
+.test-me {
+	&::after {
+		@include animation('DemoHomeInfoboxLeftAnimation 1300ms ease infinite');
+		position: absolute;
+		content: "";
+		left: 80%;
+		bottom: calc(100% + 10px);
+		border-top: 10px solid $infoboxBackgroundColor;
+		border-radius: 52px;
+		border-left: solid 10px rgba(0, 0, 0, 0);
+		border-right: solid 10px rgba(0, 0, 0, 0);
+	}
 }
 
 // .DemoControls-Potentiometer {

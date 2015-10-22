@@ -30,7 +30,9 @@
 					<div class="DemoControls">
 						<div class="DemoControls-PotentiometerItem">
 							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
-							<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
+							<div  id="test-me" class="test-me">
+								<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
+							</div>
 						</div>
 
 						<div class="DemoControls-PotentiometerItem">
@@ -48,6 +50,8 @@
 							<input type="range" data-param="serifWidth" class="DemoControls-Potentiometer" min="0" max="100" value="65" step="1" />
 						</div>
 					</div><!-- .DemoControls -->
+
+
 
 					<canvas id="DemoCanvas" class="DemoCanvas"></canvas>
 
