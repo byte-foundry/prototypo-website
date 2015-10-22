@@ -1455,9 +1455,8 @@ header {
 	}
 }
 
-#taxamo-confirm-country-overlay:hover {
-    opacity: 1 !important;
-    transition: 400ms ease;
+#taxamo-confirm-country-overlay {
+	left: 5000px;
 }
 
 .not-logged-in-form, .logged-in-form, .signin, #no-account, #already-account {

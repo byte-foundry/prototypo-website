@@ -6,10 +6,6 @@ $(function() {
 
 	var recurrence = 'monthly';
 
-	setTimeout(function(){
-		$('#taxamo-confirm-country-overlay').css('opacity', '.3');
-	}, 1000);
-
 	// Default load prices
 	$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
 	$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
