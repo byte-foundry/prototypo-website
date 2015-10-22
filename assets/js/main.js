@@ -69,7 +69,8 @@ $(function() {
 
 	FAQ__checkIfAnchorToQuestion();
 
-	window.hoodie = new Hoodie('http://localhost:6007');
+	// window.hoodie = new Hoodie('http://localhost:6007');
+	window.hoodie = new Hoodie('https://prototypo-dev.appback.com/_api');
 
 	// If user is logged in, redirect to account Page
 	var subscriptionPage = 'pricing/subscribe';
