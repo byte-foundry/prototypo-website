@@ -5,10 +5,9 @@
 		echo $page->file($page->freemiumImg())->url(); ?>)">
 		<div class="PricingItemFree-wrap">
 			<header class="PageHeader text-center fitToContent marginTop60">
-				<h1 class="textType-title textSize-title-large colorWhite"><?php
-					echo $page->section1Title()->kirbytext(); ?></h1>
-				<!-- <h3 class="textType-subtitle textSize-title-small colorBright"><?php
-					echo $page->section1Subtitle()->kirbytext(); ?></h3> -->
+				<h1 class="textType-title textSize-title-large colorWhite">
+					<?php echo $page->section1Title()->kirbytext(); ?>
+				</h1>
 				<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
 					Hurry up! The special launch offer will only last until the 27th of November.
 				</h3>
@@ -18,16 +17,16 @@
 	<div class="fitToContent">
 
 		<div class="Section-wrapTxt textType-txt marginTop60 colorBrightest text-center">
-			<?php
-				echo $page->section1Txt()->kirbytext(); ?>
+			<?php echo $page->section1Txt()->kirbytext(); ?>
 		</div>
+
 		<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4 PricingTable">
 			<?php
 				$packs = yaml($page->packs());
 
 				foreach($packs as $id => $pack):
 					$state = ($pack['packstate'] == 'notavailable') ? 'plan-disabled' : '';
-				?>
+			?>
 			<li class="PricingItem">
 				<div class="PricingItem-wrap <?php echo $state; ?>">
 
@@ -39,30 +38,30 @@
 					<?php
 						if ($state == 'disabled') echo 'colorGray';
 						else echo 'colorSecondBackgroundColor'; ?>">
-						<?php if ($pack['packpricettc'] === ''): ?>
-						<img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
-						<?php else: ?>
-						<span class="PricingItem-priceBefore textSize-txt-large">$</span>
-
-						<span class="PricingItem-price textSize-title-xlarge">
-
-							<?php if ($pack['packpricelaunch'] != ''): ?>
-
-								<div class="js_price">
-									<?php
-									echo '<span class="solded">' . $pack['packprice2ttc'] . '</span>';
-									echo $pack['packpricelaunch'].'<br/>';
-									echo '<span class="solded solded-year">' . $pack['packpricettc'] . '</span>';
-									echo $pack['packpricelaunch'];
-									?>
-								</div>
-
+							<?php if ($pack['packpricettc'] === ''): ?>
+							<img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
 							<?php else: ?>
+								<span class="PricingItem-priceBefore textSize-txt-large">$</span>
 
-								<div class="js_price">
-									<?php echo $pack['packprice2ttc']; ?><br /> <!-- MONTH -->
-									<?php echo $pack['packpricettc']; ?>		<!-- YEAR  -->
-								</div>
+								<span class="PricingItem-price textSize-title-xlarge">
+
+									<?php if (isset( $pack['packpricelaunch'] )): ?>
+
+										<div class="js_price">
+											<?php
+											echo '<span class="solded">' . $pack['packprice2ttc'] . '</span>';
+											echo $pack['packpricelaunch'].'<br/>';
+											echo '<span class="solded solded-year">' . $pack['packpricettc'] . '</span>';
+											echo $pack['packpricelaunch'];
+											?>
+										</div>
+
+									<?php else: ?>
+
+										<div class="js_price">
+											<?php echo $pack['packprice2ttc']; ?><br /> <!-- MONTH -->
+											<?php echo $pack['packpricettc']; ?>		<!-- YEAR  -->
+										</div>
 
 							<?php endif; ?>
 
