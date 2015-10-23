@@ -45,7 +45,7 @@
 
 								<span class="PricingItem-price textSize-title-xlarge">
 
-									<?php if (isset( $pack['packpricelaunch'] )): ?>
+									<?php if (isset( $pack['packpricelaunch'] ) && $pack['packpricelaunch'] != '' ): ?>
 
 										<div class="js_price">
 											<?php
