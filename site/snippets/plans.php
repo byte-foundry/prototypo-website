@@ -34,54 +34,6 @@
 	</div>
 
 	<div class="textType-txt textSize-txt-large notabene">
-		<?php echo $page->text0()->kirbytext() ?>
-
-		<div class="marginTop30 hide taxamo-country">
-			<button class="listCountry callToAction call-success" style="width: 100%">I confirm that my country of
-				residence is <span class="countryName">…</span>.
-			</button>
-
-			<div class="marginTop30">
-				<select id="taxamo-country-select" class="width50">
-					<option value="FR">FR - France</option>
-					<option value="AT">AT - Austria</option>
-					<option value="BE">BE - Belgium</option>
-					<option value="BG">BG - Bulgaria</option>
-					<option value="HR">HR - Croatia</option>
-					<option value="CY">CY - Cyprus</option>
-					<option value="CZ">CZ - Czech Republic</option>
-					<option value="DK">DK - Denmark</option>
-					<option value="EE">EE - Estonia</option>
-					<option value="FI">FI - Finland</option>
-					<option value="DE">DE - Germany</option>
-					<option value="GR">GR - Greece</option>
-					<option value="HU">HU - Hungary</option>
-					<option value="IE">IE - Ireland</option>
-					<option value="IT">IT - Italy</option>
-					<option value="JP">JP - Japan</option>
-					<option value="LV">LV - Latvia</option>
-					<option value="LT">LT - Lithuania</option>
-					<option value="LU">LU - Luxembourg</option>
-					<option value="MT">MT - Malta</option>
-					<option value="MC">MC - Monaco</option>
-					<option value="NL">NL - Netherlands</option>
-					<option value="NO">NO - Norway</option>
-					<option value="PL">PL - Poland</option>
-					<option value="PT">PT - Portugal</option>
-					<option value="RO">RO - Romania</option>
-					<option value="SK">SK - Slovakia</option>
-					<option value="SI">SI - Slovenia</option>
-					<option value="ES">ES - Spain</option>
-					<option value="SE">SE - Sweden</option>
-					<option value="GB">GB - United Kingdom</option>
-					<option value="US">US - United States</option>
-				</select>
-				<button class="callToAction call-danger validateCountry" id="validateCountry">Confirm selection</button>
-				<button class="callToAction call-danger validateCountry" id="outsideEU">I live outside of EU</button>
-			</div>
-
-			<p>If you are a resident of a different country, you will need to provide additional evidence, such as card number prefix.</p>
-		</div>
-
+		<?php echo $page->parent()->section1TxtAfter()->kirbytext(); ?>
 	</div>
 </div>

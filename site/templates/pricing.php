@@ -101,8 +101,7 @@
 			<span class="PricingSwitch-item js_monthlyBilling" name="monthly">Monthly billing</span>
 		</div>
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
-			<?php
-				echo $page->section1TxtAfter()->kirbytext(); ?>
+			<?php echo $page->section1TxtAfter()->kirbytext(); ?>
 		</div>
 	</div>
 </main>

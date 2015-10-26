@@ -78,11 +78,11 @@ $(function() {
 			}
 
 			hoodie.stripe.customers.create({
-				source: response.id,
-				taxNumber: undefined,
-				cardPrefix: $('#cardNumberInput').val().substr(0,9),
-				currencyCode: 'EUR',
-				plan: selectedPlan( $('#plan').val() , recurrence),
+				'source': response.id,
+				'buyer_tax_number': undefined,
+				'buyer_credit_card_prefix': $('#cardNumberInput').val().substr(0,9),
+				'currency_code': 'EUR',
+				'plan': selectedPlan( $('#plan').val() , recurrence),
 			})
 			.then(function() {
 				getHoodieInfo();

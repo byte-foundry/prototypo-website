@@ -60,10 +60,7 @@ Packs:
 
 ----
 
-Section1txtafter: 
-
-(email: contact@prototypo.io text: Feel free to contact us) if you have any question about your needs. 
-\* Prices may vary according to your local VAT.
+Section1txtafter: \* Taxes are offered to private individual customers. Available currency ultimately depends on the country where your payment card was issued.
 
 ----
 

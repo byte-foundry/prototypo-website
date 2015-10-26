@@ -1360,7 +1360,7 @@ header {
 				}
 
 				&::after{
-					content: " VAT incl. *";
+					content: " *";
 					position: absolute;
 					font-size: .15em;
 					margin-right: -40px;
@@ -1464,11 +1464,6 @@ header {
 .notabene {
 	color: $colorDark;
 	font-size: 16px;
-	&:before {
-		content: "*";
-		display: inline-block;
-		float: left;
-	}
 }
 
 #taxamo-confirm-country-overlay {
