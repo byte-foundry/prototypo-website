@@ -7,6 +7,13 @@ $(function() {
 		$('.countryName').html(data.countries.by_ip.name);
 		$('#taxamo-country-select option[value="' + data.countries.by_ip.code + '"]').prop('selected', true);
 		window.code = data.countries.by_ip.code;
+
+		if (euCountryCode.indexOf(window.code) !== -1) {
+			$('.currency').removeClass('outsideEU');
+		}
+		else {
+			$('.currency').addClass('outsideEU');
+		}
 	});
 
 	// Validate VAT number
@@ -27,21 +34,14 @@ $(function() {
 		Taxamo.calculateTax(
 			transaction,
 			function(data) {
-		        window.currency = 'USD';
-		        window.taxRate = 0;
-		        if (data.transaction.buyer_tax_number_valid) {
-		            window.taxRate = data.transaction.transaction_lines[0].tax_rate;
-		        }
-				$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') / ( ( 100 + window.taxRate ) / 100 ) );
-				$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') / ( ( 100 + window.taxRate ) / 100 ) );
-
-		        if ( data.transaction.tax_region === 'EU' ) {
+				window.currency = 'USD';
+				if ( data.transaction.tax_region === 'EU' ) {
 					window.currency ='EUR';
-		            $('.currency').removeClass('outsideEU');
-		        }
-		        else {
-		            $('.currency').addClass('outsideEU');
-		        }
+					$('.currency').removeClass('outsideEU');
+				}
+				else {
+					$('.currency').addClass('outsideEU');
+				}
 			},
 			function(data) {
 				console.log('Error TAXAMO');

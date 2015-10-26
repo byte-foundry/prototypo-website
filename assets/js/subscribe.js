@@ -30,39 +30,6 @@ $(function() {
 		}
 	};
 
-	var euCountryCode = [
-		"AT",
-		"BE",
-		"BG",
-		"CY",
-		"CZ",
-		"DE",
-		"DK",
-		"EE",
-		"EL",
-		"GR",
-		"ES",
-		"FI",
-		"FR",
-		"HR",
-		"HU",
-		"IE",
-		"IT",
-		"LT",
-		"LU",
-		"LV",
-		"MT",
-		"NL",
-		"PL",
-		"PT",
-		"RO",
-		"SE",
-		"SI",
-		"SK",
-		"UK",
-		"GB"
-	]
-
 	function subscribe(status, response) {
 
 		if (response.error) {
@@ -96,6 +63,7 @@ $(function() {
 
 	function alertShouldPayInEuro() {
 		$("#alert-wrong-country").show();
+		$('.currency').removeClass('outsideEU');
 	}
 
 	function showStripeError(condition, message) {
@@ -127,11 +95,11 @@ $(function() {
 			return;
 		}
 
-		if (!$('#tos-checkbox').prop('checked')) {
-			$('#signin-error').text('You have to agree with the term of services');
-			$('#signin-error').show();
-			return;
-		}
+		// if (!$('#tos-checkbox').prop('checked')) {
+		// 	$('#signin-error').text('You have to agree with the term of services');
+		// 	$('#signin-error').show();
+		// 	return;
+		// }
 
 		if (selectedPlan( $('#plan').val(), recurrence ).indexOf('free_') === -1) {
 			var error = false;
@@ -195,9 +163,6 @@ $(function() {
 
 
 	$('#plan').on('change', function() {
-		$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') / ( ( 100 + window.taxRate ) / 100 ) );
-		$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') / ( ( 100 + window.taxRate ) / 100 ) );
-
 		if ($('#plan').val() === 'free') {
 			$('#card-form').css('display', 'none');
 			$('#select-plan-wrap').css('display', 'none');

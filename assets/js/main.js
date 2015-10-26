@@ -97,6 +97,38 @@ $(function() {
 		}
 	});
 
+	window.euCountryCode = [
+		"AT",
+		"BE",
+		"BG",
+		"CY",
+		"CZ",
+		"DE",
+		"DK",
+		"EE",
+		"EL",
+		"GR",
+		"ES",
+		"FI",
+		"FR",
+		"HR",
+		"HU",
+		"IE",
+		"IT",
+		"LT",
+		"LU",
+		"LV",
+		"MT",
+		"NL",
+		"PL",
+		"PT",
+		"RO",
+		"SE",
+		"SI",
+		"SK",
+		"UK",
+		"GB"
+	]
 
 	var recurrence = 'monthly';
 
@@ -114,9 +146,9 @@ $(function() {
 	window.getHoodieInfo = function() {
 		hoodie.account.fetch()
 			.then(function(user) {
-				if ( $("body").hasClass("pricing/subscribe") ) {
-					location.href = '/account';
-				}
+				// if ( $("body").hasClass("pricing/subscribe") ) {
+				// 	location.href = '/account';
+				// }
 
 				$('.subscribe-page').attr('href','/account');
 

@@ -37,9 +37,6 @@ $(function() {
 	});
 
 	$('#plan').on('change', function() {
-		$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') / ( ( 100 + window.taxRate ) / 100 ) );
-		$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') / ( ( 100 + window.taxRate ) / 100 ) );
-
 		if ($('#plan').val() === 'free') {
 			$('#card-form').css('display', 'none');
 			$('#select-plan-wrap').css('display', 'none');

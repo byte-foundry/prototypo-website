@@ -1,4 +1,3 @@
-<label id="alert-wrong-country" class="error hidden">Your card seems to be european. You have to pay your subscription in euros.</label>
 <label for="buyerNameInput">Cardholder name</label>
 <input type="text" name="buyerNameInput" id="buyerNameInput" placeholder="MJ Cat" required="required">
 <label for="cardNumberInput">Credit card number</label>
@@ -34,3 +33,4 @@
 	<label for="cvcInput">CVC</label>
 	<input class="small" type="number" name="cvcInput" id="cvcInput" placeholder="123" required="required">
 </div>
+<label id="alert-wrong-country" class="error hidden">Your card has been issued by an EU located bank. Currency has been switched to euro.</label>
