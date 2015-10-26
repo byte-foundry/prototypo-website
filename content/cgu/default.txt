@@ -2,9 +2,9 @@ Title: CGU
 
 ----
 
-Text:
+Text: 
 
- ** CONDITIONS GENERALES D'UTILISATION DE PROTOTYPO **
+** CONDITIONS GENERALES D'UTILISATION DE PROTOTYPO **
 
 
 
@@ -39,8 +39,7 @@ Les Services sont accessibles, sous réserve des restrictions prévues sur le si
 
 ## Acceptation des conditions générales
 
-L'acceptation des présentes conditions générales est matérialisée par une case à cocher dans le formulaire d'inscription. Cette acceptation ne peut être que pleine et entière. Toute adhésion sous réserve est considérée comme nulle et non avenue. L'Utilisateur qui n'accepte pas d'être lié par les présentes conditions générales ne doit pas utiliser les Services.
-
+L'acceptation des présentes conditions générales est matérialisée par la validation du formulaire d'inscription effectuée en cliquant sur le bouton de souscription. Cette acceptation ne peut être que pleine et entière. Toute adhésion sous réserve est considérée comme nulle et non avenue. L'Utilisateur qui n'accepte pas d'être lié par les présentes conditions générales ne doit pas utiliser les Services.
 
 ## Inscription sur le site
 
@@ -68,11 +67,10 @@ L'Utilisateur a accès aux Services décrits sur le site, sous une forme et selo
 
 ## Services gratuits et payants
 
-Les Services de la version freemium sont fournis à titre gratuit.
+Les Services de la version gratuite sont fournis à titre gratuit.
 
 
 ### ** Prix **
-###
 
 Le prix des Services est indiqué sur le site.
 
@@ -81,7 +79,6 @@ Sauf mention contraire, ils sont exprimés en euros et toutes taxes françaises 
  ** Prototypo ** se réserve le droit, à sa libre discrétion et selon des modalités dont elle sera seule juge, de proposer des offres promotionnelles ou réductions de prix.
 
 ### ** Révision des prix **
-###
 
 Le prix de Services peut faire l'objet d'une révision par ** Prototypo ** à tout moment, à sa libre discrétion.
 
@@ -90,23 +87,20 @@ L'Utilisateur sera informé de ces modifications par ** Prototypo ** par email s
 L'Utilisateur qui n'accepte pas les nouveaux prix doit mettre fin à son utilisation des Services selon les modalités prévues à l'article 18. A défaut, il sera réputé avoir accepté les nouveaux tarifs.
 
 ### ** Facturation **
-###
 
 Les Services font l'objet de factures qui sont communiquées à l'Utilisateur par tout moyen utile.
 
 ### ** Modalités de paiement **
-###
 
 Les modalités de paiement du prix des Services sont décrites sur le site.
 
 Le paiement s'effectue par prélèvement automatique à partir du numéro de carte bancaire de l'Utilisateur.
 
-Le prélèvement est mis en œuvre par le prestataire de paiement désigné sur le site,qui seul conserve les coordonnées bancaires de l'Utilisateur à cette fin. ** Prototypo ** ne conserve aucune coordonnée bancaire.
+Le prélèvement est mis en œuvre par le prestataire de paiement désigné sur le site, qui seul conserve les coordonnées bancaires de l'Utilisateur à cette fin. ** Prototypo ** ne conserve aucune coordonnée bancaire.
 
 L'Utilisateur garantit à ** Prototypo ** qu'il dispose des autorisations nécessaires pour utiliser le mode de paiement choisi. Il s'engage à prendre les mesures nécessaires afin que le prélèvement automatique du prix des Services puisse être effectué.
 
 ### ** Retards et incidents de paiement **
-###
 
 L'Utilisateur est informé et accepte expressément que tout retard de paiement de tout ou partie d'une somme due à son échéance entraînera automatiquement, sans préjudice des dispositions de l'article 12 et sans mise en demeure préalable :
 
@@ -137,8 +131,6 @@ Sans préjudice des autres obligations prévues aux présentes, l'Utilisateur s'
 Il est notamment seul responsable du bon accomplissement de toutes les formalités notamment administratives, fiscales et/ ou sociales et de tous les paiements de cotisations, taxes ou impôts de toutes natures qui lui incombent, le cas échéant, en relation avec son utilisation des Services. La responsabilité de ** Prototypo ** ne pourra en aucun cas être engagée à ce titre.
 
 - L'Utilisateur reconnaît avoir pris connaissance sur le site des caractéristiques et contraintes, notamment techniques, de l'ensemble des Services. Il est seul responsable de son utilisation des Services.
-
-- L'Utilisateur est informé et accepte que la mise en œuvre des Services nécessite qu'il soit connecté à internet et que la qualité des Services dépend directement de cette connexion, dont il est seul responsable.
 
 - L'Utilisateur est également seul responsable des relations qu'il pourra nouer avec les autres Utilisateurs et des informations qu'il leur communique dans le cadre des Services. Il lui appartient d'exercer la prudence et le discernement appropriés dans ces relations et communications. L'Utilisateur s'engage en outre, dans ses échanges avec les autres Utilisateurs, à respecter les règles usuelles de politesse et de courtoisie.
 
@@ -206,19 +198,19 @@ En cas de manquement à l'une quelconque des dispositions des présentes conditi
 ## Responsabilité et garantie de Prototypo
 
 ### ** Prototypo ** s'engage à fournir les Services avec diligence et selon les règles de l'art, étant précisé qu'il pèse sur elle une obligation de moyens, à l'exclusion de toute obligation de résultat, ce que les Utilisateurs reconnaissent et acceptent expressément.
-###
+
 
 ### ** Prototypo ** n'a pas connaissance des Contenus mis en ligne par les Utilisateurs dans le cadre des Services, sur lesquels elle n'effectue aucune modération, sélection, vérification ou contrôle d'aucune sorte et à l'égard desquels elle n'intervient qu'en tant que prestataire d'hébergement.
-###
+
 
 En conséquence, ** Prototypo ** ne peut être tenue pour responsable des Contenus, dont les auteurs sont des tiers, toute réclamation éventuelle devant être dirigée en premier lieu vers l'auteur des Contenus en question.
 
 Les Contenus préjudiciables à un tiers peuvent faire l'objet d'une notification à ** Prototypo ** selon les modalités prévues par l'article 6 I 5 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, ** Prototypo ** se réservant de prendre les mesures décrites à l'article 12.
 
 ### ** Prototypo ** décline toute responsabilité en cas de perte éventuelle des informations accessibles dans l'Espace Personnel de l'Utilisateur, celui-ci devant en sauvegarder une copie et ne pouvant prétendre à aucun dédommagement à ce titre.
-###
 
-### ** Prototypo ** s'engage à procéder régulièrement à des contrôles afin de vérifier le fonctionnement et l'accessibilité du site. A ce titre ** , ** ** Prototypo ** se réserve la faculté d'interrompre momentanément l'accès au site pour des raisons de maintenance. De même, ** Prototypo ** ne saurait être tenue responsable des difficultés ou impossibilités momentanées d'accès au site qui auraient pour origine des circonstances qui lui sont extérieures, la force majeure, ou encore qui seraient dues à des perturbations des réseaux de télécommunication.
+
+### ** Prototypo ** s'engage à procéder régulièrement à des contrôles afin de vérifier le fonctionnement et l'accessibilité du site. A ce titre,  ** Prototypo ** se réserve la faculté d'interrompre momentanément l'accès au site pour des raisons de maintenance. De même, ** Prototypo ** ne saurait être tenue responsable des difficultés ou impossibilités momentanées d'accès au site qui auraient pour origine des circonstances qui lui sont extérieures, la force majeure, ou encore qui seraient dues à des perturbations des réseaux de télécommunication.
 ###
 
 ### ** Prototypo ** ne garantit pas aux Utilisateurs (i) que les Services, soumis à une recherche constante pour en améliorer notamment la performance et le progrès, seront totalement exempts d'erreurs, de vices ou défauts, (ii) que les Services, étant standard et nullement proposés à la seule intention d'un Utilisateur donné en fonction de ses propres contraintes personnelles, répondront spécifiquement à ses besoins et attentes.
@@ -280,9 +272,9 @@ Dans l'hypothèse d'une traduction des présentes conditions générales dans un
 
 Les présentes conditions générales sont régies par la loi française.
 
-En cas de contestation sur la validité, l'interprétation et/ou l'exécution des présentes conditions générales, les parties conviennent que les tribunaux de Paris seront exclusivement compétents pour en juger, sauf règles de procédure impératives contraires.
+En cas de contestation sur la validité, l'interprétation et/ou l'exécution des présentes conditions générales, les parties conviennent que les tribunaux de Lyon seront exclusivement compétents pour en juger, sauf règles de procédure impératives contraires.
 
 
 ## Entrée en vigueur
 
-Les présentes conditions générales sont entrées en vigueur le ** 1er septembre 2015 ** ** . **
+Les présentes conditions générales sont entrées en vigueur le **1er septembre 2015**.
