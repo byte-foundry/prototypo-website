@@ -4,7 +4,7 @@
     <a class="<?php echo @$prefixe; ?>Nav-layoutItemLink<?php e($p->isOpen(), ' active') ?>" href="<?php echo $p->url() ?>"><?php echo $p->title()->html() ?></a>
   </li>
   <?php endforeach ?>
-  
+
   <?php /* ?>
   <li class="Nav-layoutItem Nav-layoutItemLogin">
     <a href="" class="Nav-layoutItemLoginLink Nav-layoutItemLink">

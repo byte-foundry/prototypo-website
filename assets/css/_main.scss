@@ -1486,6 +1486,8 @@ header {
 	padding: 1em;
 	border-radius: 5px;
 	font-size: 1.8em !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .my-account {

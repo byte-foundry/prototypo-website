@@ -47,7 +47,7 @@
 								</div>
 							</div>
 							<div class="logged-in-form clearfix hoodie-account subscribe">
-								<p class="textSize-title-small mb20">Your details:</p>
+								<p class="textSize-title-small ">Your details:</p>
 								<div class="marginTop15">
 									<div class="w50 left">
 										<label for="email">Your email</label>

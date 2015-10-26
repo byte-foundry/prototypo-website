@@ -3,7 +3,7 @@
 <div id="<?= $packs[2]['packname'] ?>" class="infoPricing" month="<?= $packs[2]['packpricettc'] ?>" annual="<?= $packs[2]['packprice2ttc'] ?>"></div>
 
 
-<div class="textSize-title-small mb20 clearfix">Your plan:
+<div class="textSize-title-small marginBottom15 clearfix">Your plan:
 	<select id="plan" class="plan right" name="creditCardExpMonthInput" id="creditCardExpMonthInput" placeholder="2018" required="required" style="margin-right: 0">
 		<option value="<?= $packs[0]['packname'] ?>" ><?= $packs[0]['packname'] ?></option>
 		<option value="<?= $packs[1]['packname'] ?>" selected><?= $packs[1]['packname'] ?></option>

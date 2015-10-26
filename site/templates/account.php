@@ -87,7 +87,7 @@
 							</div>
 							<div id="account-card-form" class="subscribe account-card-form-toggle-target">
 								<div id="card-form">
-									<p class="textSize-title-small mb20">Change Card:</p>
+									<p class="textSize-title-small ">Change Card:</p>
 									<?php snippet('card') ?>
 									<button id="change-card-submit" class="call-success callToAction marginTop30">Change my card</button>
 								</div>

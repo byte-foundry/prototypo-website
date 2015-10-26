@@ -348,6 +348,31 @@ and (orientation : portrait) {
 	.Footer-Nav-layoutItem {
 		display: block;
 	}
+	.subscribe {
+		select,
+		select.plan,
+		.callToAction,
+		input.small,
+		.user-infos {
+			width: 100%;
+			margin: 10px 0;
+			text-align: center;
+		}
+		.user-infos {
+			text-align: inherit;
+		}
+		.radio-wrap {
+			display: block;
+		}
+		.radio {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		.w50,
+		.width50 {
+			width: 100%;
+		}
+	}
 }
 @media only screen and (max-width:330px) {
 	.Nav-logo {
