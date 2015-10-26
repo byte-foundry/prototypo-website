@@ -102,21 +102,6 @@ $potentiometerBarHandlerBackgroundColor:    darken($mainBackgroundColor,20%);
 }
 
 @mixin transition($values...) {
-    $transitions: ();
-    @each $declaration in $values {
-        $prop: nth($declaration, 1);
-        $prop-opts: ();
-        $length: length($declaration);
-        @for $i from 2 through $length {
-            $prop-opts: append($prop-opts, nth($declaration, $i));
-        }
-        $trans: ($prop, $prop-opts);
-        $transitions: append($transitions, $trans, comma);
-    }
-
-    -webkit-transition: trans-prefix($transitions, webkit);
-    -moz-transition: trans-prefix($transitions, moz);
-    -o-transition: trans-prefix($transitions, o);
     transition: $values;
 }
 

@@ -39,9 +39,6 @@
 										</div>
 										<label for="VAT">Your VAT number (optionnal)</label>
 										<input type="text" name="VAT" id="VAT" placeholder="AB01234567890">
-										<div class="marginTop15 marginBottom15">
-											<input type="checkbox" id="tos-checkbox"></input><span class="tos-text">I agree with the <a href="/cgu" class="tos-link">terms of services</a></span>
-										</div>
 										<label class="hidden error" id="signin-error"></label>
 									</div>
 								</div>
@@ -65,7 +62,10 @@
 								<?php snippet('card') ?>
 							</div>
 							<label class="hidden error" id="stripe-error"></label>
-							<button class="NewsletterInput-submit right width100 callToAction call-success" id="submit" name="submit" >Subscribe to Prototypo</button>
+							<button class="NewsletterInput-submit width100 callToAction call-success" id="submit" name="submit" >Subscribe to Prototypo</button>
+							<div class="marginTop15 marginBottom15">
+								<span class="tos-text">By clicking on <i>Subscribe</i>, I agree with the <a href="/cgu" class="tos-link">terms of services</a></span>
+							</div>
 						</form>
 					</div>
 
