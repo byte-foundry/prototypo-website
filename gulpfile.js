@@ -1,4 +1,5 @@
 var gulp        = require('gulp');
+var gutil       = require('gulp-util');
 var phpconnect  = require('gulp-connect-php');
 var connect     = require('gulp-connect');
 var browserSync = require('browser-sync').create();
@@ -15,6 +16,11 @@ var rimraf      = require('rimraf');
 var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
+var babelify    = require('babelify');
+var browserify  = require('browserify');
+var watchify    = require('watchify');
+var exorcist    = require('exorcist');
+var source      = require('vinyl-source-stream');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -25,7 +31,7 @@ gulp.task('serve', ['sass'], function() {
         // connect is required to serve static assets from multiple roots
         connect.server({
             port: 8001,
-            root: ['.', '.tmp', 'node_modules'],
+            root: [__dirname, './.tmp', 'node_modules'],
             middleware: function() {
                 return [
                     // urls without extensions or with php extension should
@@ -47,6 +53,37 @@ gulp.task('serve', ['sass'], function() {
         './assets/js/**/*.js',
         './site/**/*.php'
     ]).on('change', browserSync.reload);
+});
+
+watchify.args.debug = true;
+var bundler = watchify(browserify('./assets/js/app.jsx', watchify.args));
+
+// Babel transform
+bundler.transform(babelify.configure({
+    sourceMapRelative: '.'
+}));
+
+// On updates recompile
+bundler.on('update', bundle);
+
+function bundle() {
+    gutil.log('Compiling JS...');
+
+    return bundler.bundle()
+        .on('error', function (err) {
+            gutil.log(err.message);
+            browserSync.notify('Browserify Error!');
+            this.emit('end');
+        })
+        .pipe(exorcist('./assets/js/bundle.js.map'))
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest('./assets/js/'))
+        .pipe(browserSync.stream({once: true}));
+}
+
+// gulp task alias
+gulp.task('bundle', function () {
+    return bundle();
 });
 
 // Compile sass into CSS & auto-inject into browsers

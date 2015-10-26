@@ -60,7 +60,7 @@ Packs:
 
 ----
 
-Section1txtafter: \* Taxes are offered to private individual customers. Available currency ultimately depends on the country where your payment card was issued.
+Section1txtafter: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued.
 
 ----
 
@@ -80,16 +80,8 @@ Freemiumimg: prototypo.svg
 
 ----
 
-Freemiumtos: By clicking "Try Prototypo!" I agree to (link: cgu text: Prototypo's Terms of Service.)
+Freemiumtos: By clicking on Subscribe, I agree to (link: cgu text: Prototypo's Terms of Services.)
 
 ----
 
 Freemiumsubmit: Try Prototypo!
-
-----
-
-Ogdescription: Prototypo is available online with monthly and annual plans. You can also try Prototypo for free!
-
-----
-
-Ogimage: /content/2-pricing/pricing-screenshot.png

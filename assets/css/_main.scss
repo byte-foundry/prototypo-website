@@ -1339,14 +1339,14 @@ header {
 				font-size: 4em;
 				font-weight: bold;
 				position: relative;
-                margin-left: -10px;
+				margin-left: -10px;
 
 				&::before {
 					font-size: .5em;
 					top: 1em;
 				}
 
-				&.outsideEU {
+				&.usd {
 
 					&::before {
 						top:.3em;
@@ -1376,7 +1376,7 @@ header {
 			left: 100%;
 		}
 
-		&.outsideEU {
+		&.usd {
 			margin-left:10px;
 			margin-right: 0px;
 			&:before{
@@ -1462,7 +1462,7 @@ header {
 }
 
 #taxamo-confirm-country-overlay {
-	left: 5000px;
+	/*left: 5000px;*/
 }
 
 .not-logged-in-form, .logged-in-form, .signin, #no-account, #already-account {

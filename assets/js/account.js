@@ -148,8 +148,12 @@ $(function() {
 
 			hoodie.stripe.customers.update({
 				source: response.id,
+<<<<<<< HEAD
 				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9),
 				currency_code: sessionStorage.payInEuro ? 'EUR' : 'USD'
+=======
+				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9)
+>>>>>>> Rewriting subscription from with React
 			}).then(function(response) {
 				$('#success-card-message').show();
 				$('.account-card-form-toggle-target').hide();
@@ -161,4 +165,31 @@ $(function() {
 			});
 		});
 	})
+
+	$('#no-account').on('click', function() {
+		$(this).css('display','none');
+		$('#already-account').css('display','block');
+		$('.register').css('display','block');
+		$('.signin').css('display','none');
+	});
+
+	$('#sign-me-in').on('click', function() {
+		hoodie.account.signIn($('#email-sign-in').val(), $('#password-sign-in').val())
+			.done(function() {
+				getHoodieInfo();
+				$('#signin-error').hide();
+				$('#signin-error').text('');
+			})
+			.fail(function(error) {
+				$('#signin-error').show();
+				$('#signin-error').text(error.message);
+			});
+	});
+
+	$('#already-account').on('click', function() {
+		$(this).css('display','none');
+		$('#no-account').css('display','block');
+		$('.signin').css('display','block');
+		$('.register').css('display','none');
+	});
 });

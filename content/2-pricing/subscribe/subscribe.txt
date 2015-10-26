@@ -6,7 +6,7 @@ Text: One more step to get in Prototypo!
 
 ----
 
-Text0: * VAT is automatically calculated depending on your country IP. Price in euro is slightly higher than price in US dollars because we offer VAT in all european country.
+Text0: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued.
 
 ----
 
