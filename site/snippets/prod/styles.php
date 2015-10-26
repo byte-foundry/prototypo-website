@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="/assets/dist/styles.min-5c2dd5267d.css">
+<link rel="stylesheet" href="/assets/styles.min-5614eb9421.css">

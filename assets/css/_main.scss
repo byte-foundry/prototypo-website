@@ -149,7 +149,7 @@ header {
 	background-repeat: no-repeat !important;
 	background-position: 112px center;
 	background-size: 18px !important;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .Section-homepageGetStartedLineCallToAction:hover {
 	background-position: 117px center;
@@ -586,7 +586,7 @@ header {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .PricingItemFree-wrap {
 	margin: 0;
@@ -626,7 +626,7 @@ header {
 	border: 1px solid white;
 	cursor: pointer;
 	margin-left: 0.7rem;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .showAnnualBilling .PricingSwitch-item.js_annualBilling,
 .showMonthlyBilling .PricingSwitch-item.js_monthlyBilling,
@@ -650,7 +650,7 @@ header {
 	z-index: 9;
 	position: relative;
 	display: flex !important;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .PricingItem-wrap {
 	margin: 0;
@@ -715,7 +715,7 @@ header {
 	overflow: hidden;
 }
 .js_price {
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 	text-align: center;
 	position: relative;
 }
@@ -847,7 +847,7 @@ header {
 	display: -webkit-flex !important;
 	display: -ms-flexbox !important;
 	display: flex !important;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .MembersItem-wrap {
 
@@ -908,7 +908,7 @@ header {
 	background-size: 16px;
 	background-repeat: no-repeat;
 	opacity: 0.3;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .MembersItem-linksItemLink:hover {
 	opacity: 1;
@@ -980,7 +980,7 @@ header {
 	padding: 4px 8px;
 	border-radius: $global-radius;
 	display: block;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .Article-tagLink:hover {
 	background: $colorWhite;
@@ -992,7 +992,7 @@ header {
 .Article-titleLink h1,
 .Article-titleLink h3 {
 	color: $colorDarkest;
-	@include transition(all 100ms ease);
+	transition: all 100ms ease;
 }
 .Article-titleLink:hover h1,
 .Article-titleLink:hover h3 {
@@ -1059,7 +1059,7 @@ header {
 	background: $colorLighterGray;
 	padding: 3px 7px;
 	border-radius: $global-radius;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .Article-content a:hover {
 	color: $colorBrightest;
@@ -1076,7 +1076,7 @@ header {
 	background: $blocSecondBackgroundColor;
 	padding: 20px 100px 50px;
 	display: block;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .Article-leaveComment:hover {
 	background: $colorDarkest;
@@ -1093,7 +1093,7 @@ header {
 	letter-spacing: 2px;
 	font-weight: bold;
 	background: $blocSecondBackgroundColor;
-	@include transition(all 300ms ease);
+	transition: all 300ms ease;
 }
 .BlogPagination-before {
 	margin-top: -40px;
