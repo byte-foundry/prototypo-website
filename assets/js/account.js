@@ -4,7 +4,7 @@ $(function() {
 		return;
 	}
 
-	var recurrence = 'monthly';
+	var recurrence = sessionStorage.recurrence || 'annual';
 
 	getHoodieInfo();
 
@@ -24,6 +24,11 @@ $(function() {
 			});
 	});
 
+	if (sessionStorage.errorCreateCustomer) {
+		delete sessionStorage.errorCreateCustomer;
+		$('#error-create-customer').show();
+	}
+
 	$('.change-card-toggle').on('click', function() {
 		$('.account-card-form-toggle-target').toggle();
 	});
@@ -34,6 +39,12 @@ $(function() {
 
 	$('.change-subscription-toggle').on('click', function() {
 		$('.account-plan-toggle-target').toggle();
+		if (sessionStorage.payInEuro === "true") {
+			$('.currency').removeClass('outsideEU');
+		}
+		else {
+			$('.currency').addClass('outsideEU');
+		}
 	});
 
 	$('#plan').on('change', function() {
@@ -48,10 +59,14 @@ $(function() {
 			$('#free-plan-infos').hide();
 		}
 	});
+	$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
+	$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
 
 	$('#submit-subscription').on('click', function() {
+		var subInfo = selectedPlan($('#plan').val(), recurrence);
 		hoodie.stripe.customers.updateSubscription({
-			plan: selectedPlan($('#plan').val(), recurrence)
+			plan: subInfo.plan,
+			coupon: subInfo.coupon
 		}).then(function() {
 			getHoodieInfo();
 			$('.account-plan-toggle-target').toggle();
@@ -76,9 +91,9 @@ $(function() {
 		}, function( status, response ) {
 			hoodie.stripe.customers.update({
 				source: response.id,
-				cardPrefix: $('#cardNumberInput').val().substr(0,9)
+				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9)
 			}).then(function(response) {
-					getHoodieInfo();
+				getHoodieInfo();
 			})
 		});
 	})

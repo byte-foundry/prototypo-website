@@ -80,6 +80,7 @@ $(function() {
 	}
 
 	$('.js_annualBilling').on('mousedown', function() {
+		sessionStorage.recurrence = 'annual';
 		$('.Pricing').removeClass('showMonthlyBilling').addClass('showAnnualBilling');
 		if (!hoodie.account.username) {
 			$('.billing').each(function() {
@@ -89,6 +90,7 @@ $(function() {
 	});
 
 	$('.js_monthlyBilling').on('mousedown', function() {
+		sessionStorage.recurrence = 'monthly';
 		$('.Pricing').removeClass('showAnnualBilling').addClass('showMonthlyBilling');
 		if (!hoodie.account.username) {
 			$('.billing').each(function() {
@@ -134,21 +136,31 @@ $(function() {
 
 	window.selectedPlan = function( plan, recurrence ) {
 		var selectedPlan;
+		var coupon;
 		if ( plan === 'free') {
 			selectedPlan = "free_monthly_USD_taxfree";
 		} else {
-			selectedPlan = "launch_" + recurrence + "_USD_taxfree";
+			var currency = sessionStorage.payInEuro === "true" ? 'EUR' : 'USD';
+			selectedPlan = "personal_" + recurrence + "_" + currency + "_taxfree";
+			coupon = "launch_" + recurrence + "_" + currency;
 		}
-		return selectedPlan;
+		return {
+			plan:selectedPlan,
+			coupon: coupon,
+		}
+	}
+
+	function pad(number) {
+		return (number < 10) ? '0' + number.toString() : number.toString();
 	}
 
 
 	window.getHoodieInfo = function() {
 		hoodie.account.fetch()
 			.then(function(user) {
-				// if ( $("body").hasClass("pricing/subscribe") ) {
-				// 	location.href = '/account';
-				// }
+				if ( $("body").hasClass("pricing/subscribe") ) {
+					location.href = '/account';
+				}
 
 				$('.subscribe-page').attr('href','/account');
 
@@ -166,7 +178,7 @@ $(function() {
 				hoodie.stripe.customers.retrieve()
 					.then(function(response) {
 						$('#last-four').text(response.sources.data[0].last4);
-						$('#card-month').text(response.sources.data[0].exp_month);
+						$('#card-month').text(pad(response.sources.data[0].exp_month));
 						$('#card-year').text(response.sources.data[0].exp_year);
 
 						if (!(plan.indexOf('stripe') === -1 || plan.indexOf('free_') !== -1)) {
@@ -175,6 +187,25 @@ $(function() {
 						} else {
 							$('.subscription-date').hide();
 						}
+
+						sessionStorage.payInEuro = euCountryCode.indexOf(response.sources.data[0].country) !== -1 ? true : false;
+
+						if (sessionStorage.payInEuro === "true") {
+							$('.currency').removeClass('outsideEU');
+						}
+						else {
+							$('.currency').addClass('outsideEU');
+						}
+						$('#card-details').show();
+						$('#no-card').hide();
+						$('#no-card-plan').hide();
+						$('#change-subscription').show();
+					})
+					.catch(function(err) {
+						$('#card-details').hide();
+						$('#no-card').show();
+						$('#no-card-plan').show();
+						$('#change-subscription').hide();
 					});
 			})
 			.catch(function(err) {

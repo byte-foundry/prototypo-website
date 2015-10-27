@@ -33,4 +33,5 @@
 	<label for="cvcInput">CVC</label>
 	<input class="small" type="number" name="cvcInput" id="cvcInput" placeholder="123" required="required">
 </div>
-<label id="alert-wrong-country" class="error hidden">Your card has been issued by an EU located bank. Currency has been switched to euro.</label>
+<label id="alert-wrong-country-eu" class="error hidden">Your card has been issued by a bank located inside the EU. Currency has been switched to euro.</label>
+<label id="alert-wrong-country-us" class="error hidden">Your card has been issued by a bank located outside the EU. Currency has been switched to US Dollars.</label>

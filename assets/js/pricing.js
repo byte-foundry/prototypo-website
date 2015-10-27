@@ -13,6 +13,8 @@ $(function() {
 		$('#signup-error').text('');
 	}
 
+	sessionStorage.recurrence = 'annual';
+
 	$('#quick-signup input[type!=submit]').val('');
 
 	$('#quick-signup').on('submit', function(event) {

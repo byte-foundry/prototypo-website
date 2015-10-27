@@ -4,7 +4,7 @@ $(function() {
 		return;
 	}
 
-	var recurrence = 'monthly';
+	var recurrence = sessionStorage.recurrence || 'annual';
 
 	// Default load prices
 	$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
@@ -15,9 +15,9 @@ $(function() {
 		$('#select-plan-wrap').css('display', 'none');
 	}
 
-	function createToken() {
-		if (selectedPlan( $('#plan').val(), recurrence ).indexOf('free') === 0) {
-			subscribe(null, {id: undefined});
+	function createToken(cb) {
+		if (selectedPlan( $('#plan').val(), recurrence ).plan.indexOf('free') === 0) {
+			cb(null, {id: undefined});
 		}
 		else {
 
@@ -26,11 +26,64 @@ $(function() {
 				cvc: $('#cvcInput').val(),
 				exp_month: $('#creditCardExpMonthInput').val(),
 				exp_year: $('#creditCardExpYearInput').val()
-			}, subscribe);
+			}, cb);
 		}
 	};
 
-	function subscribe(status, response) {
+	function subscribe(response) {
+
+
+		var subInfo = selectedPlan( $('#plan').val() , recurrence);
+
+		hoodie.stripe.customers.create({
+			'source': response.id,
+			'buyer_tax_number': $('#VAT').val(),
+			'buyer_credit_card_prefix': $('#cardNumberInput').val().substr(0,9),
+			'currency_code': currency,
+			'plan': subInfo.plan,
+			'coupon': subInfo.coupon
+		})
+		.then(function() {
+			getHoodieInfo();
+		})
+		.catch(function(err) {
+			hoodie.stripe.customers.create({
+				'buyer_tax_number': undefined,
+				'plan': selectedPlan( 'free' , recurrence).plan,
+			})
+			.then(function() {
+				sessionStorage.errorCreateCustomer = true;
+				getHoodieInfo();
+			})
+			.catch(function(err) {
+				showStripeError(true,err.message);
+			});
+		});
+	}
+
+	function alertShouldPayInEuro() {
+		currency = 'EUR';
+		sessionStorage.payInEuro = true;
+		$("#alert-wrong-country-eu").show();
+		$('.currency').removeClass('outsideEU');
+	}
+
+	function alertShouldPayInUSD() {
+		currency = 'USD';
+		sessionStorage.payInEuro = false;
+		$("#alert-wrong-country-us").show();
+		$('.currency').addClass('outsideEU');
+	}
+
+	function showStripeError(condition, message) {
+		if (condition) {
+			$('#stripe-error').text(message);
+			$('#stripe-error').show();
+			return true;
+		}
+	}
+
+	function signUp(status, response) {
 
 		if (response.error) {
 			$('#stripe-error').text(response.error.message);
@@ -43,34 +96,21 @@ $(function() {
 			if (response.card && euCountryCode.indexOf(response.card.country) !== -1 && currency === 'USD') {
 				return alertShouldPayInEuro();
 			}
+			else if (response.card && euCountryCode.indexOf(response.card.countre) === -1 && currency === 'EUR') {
+				return alertShouldPayInUSD();
+			}
 
-			hoodie.stripe.customers.create({
-				'source': response.id,
-				'buyer_tax_number': undefined,
-				'buyer_credit_card_prefix': $('#cardNumberInput').val().substr(0,9),
-				'currency_code': 'EUR',
-				'plan': selectedPlan( $('#plan').val() , recurrence),
-			})
-			.then(function() {
-				getHoodieInfo();
-			})
-			.catch(function(err) {
-				$('#stripe-error').text(err.message);
-				$('#stripe-error').show();
-			});
-		}
-	}
-
-	function alertShouldPayInEuro() {
-		$("#alert-wrong-country").show();
-		$('.currency').removeClass('outsideEU');
-	}
-
-	function showStripeError(condition, message) {
-		if (condition) {
-			$('#stripe-error').text(message);
-			$('#stripe-error').show();
-			return true;
+			hoodie.account.signUp($('#email').val(), $('#password').val())
+				.done(function() {
+					$('#signin-error').text('');
+					$('#signin-error').hide();
+					subscribe(response);
+				})
+				.fail(function(err) {
+					console.log(err);
+					$('#signin-error').text(err.message);
+					$('#signin-error').show();
+				});
 		}
 	}
 
@@ -101,7 +141,7 @@ $(function() {
 		// 	return;
 		// }
 
-		if (selectedPlan( $('#plan').val(), recurrence ).indexOf('free_') === -1) {
+		if (selectedPlan( $('#plan').val(), recurrence ).plan.indexOf('free_') === -1) {
 			var error = false;
 			error = error || showStripeError($('#cardNumberInput').val().length < 13, "Your card number seems too short");
 			error = error || showStripeError(!$('#creditCardExpMonthInput').val(), "You did not choose an expiration month");
@@ -123,18 +163,7 @@ $(function() {
 			createToken();
 		}
 		else {
-			hoodie.account.signUp($('#email').val(), $('#password').val())
-				.done(function() {
-					$('#signin-error').text('');
-					$('#signin-error').hide();
-					getHoodieInfo();
-					createToken();
-				})
-				.fail(function(err) {
-					console.log(err);
-					$('#signin-error').text(err.message);
-					$('#signin-error').show();
-				});
+			createToken(signUp);
 		}
 
 	});

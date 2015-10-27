@@ -55,6 +55,9 @@
 										<label for="subscription">Subscription turnaroundeedoo</label>
 										<div class="user-infos marginTop15" id="subscription-date"></div>
 									</div>
+									<div id="error-create-customer" class="textType-txt textSize-txt-large marginBottom30 general-infos hidden">
+										There was an error during your subscription. We've subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.
+									</div>
 									<button id="change-subscription" class="change-subscription-toggle call-danger callToAction marginTop30 right clearfix account-plan-toggle-target">Change subscription</button>
 								</div>
 							</div>
@@ -66,15 +69,18 @@
 								<?php snippet('plans', array('packs' => $packs)) ?>
 
 							</div>
+							<div id="no-card-plan" class="hidden textType-txt textSize-txt-large marginBottom30 general-infos">
+								You cannot change subscription without first setting up a payment card.
+							</div>
 							<label id="success-message" for="" class="success hidden">success!</label>
 							<button id="submit-subscription" class="account-plan-toggle-target hidden call-success callToAction marginTop30 right clearfix hidden marginLeft15">Change my subscription</button>
-							<button id="" class="change-subscription-toggle account-plan-toggle-target hidden call-error callToAction marginTop30 right clearfix hidden">Cancel</button>
+							<button class="change-subscription-toggle account-plan-toggle-target hidden call-error callToAction marginTop30 right clearfix hidden">Cancel</button>
 						</div>
 
 
 						<div class="marginTop30 subscribe">
 							<p class="textSize-title-small marginBottom15">Payment details:</p>
-							<div class="card-info clearfix">
+							<div class="card-info clearfix" id="card-details">
 								<div class="w50 left">
 									<label>Card number</label>
 									<div class="user-infos marginTop15">**** **** **** <span id="last-four">4242</span></div>
@@ -84,6 +90,10 @@
 									<div class="user-infos marginTop15"><span id="card-month">10</span>/<span id="card-year">2044</span></div>
 								</div>
 								<button id="change-card" class="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
+							</div>
+							<div id="no-card">
+								You don't have any cards registered.
+								<button id="change-card" class="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add a card</button>
 							</div>
 							<div id="account-card-form" class="subscribe account-card-form-toggle-target">
 								<div id="card-form">

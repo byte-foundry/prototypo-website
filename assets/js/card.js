@@ -9,9 +9,11 @@ $(function() {
 		window.code = data.countries.by_ip.code;
 
 		if (euCountryCode.indexOf(window.code) !== -1) {
+			sessionStorage.payInEuro = true;
 			$('.currency').removeClass('outsideEU');
 		}
 		else {
+			sessionStorage.payInEuro = false;
 			$('.currency').addClass('outsideEU');
 		}
 	});
