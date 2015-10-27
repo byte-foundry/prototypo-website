@@ -16,8 +16,13 @@
   <meta property="og:title" content="<?php echo $page->title(); ?>"/>
   <meta property="og:type" content="website"/>
   <meta property="og:description" content="<?php echo $page->ogDescription(); ?>"/>
-  <meta property="og:image" content="<?php echo $page->ogImage(); ?>"/>
-  <link rel="image" type="image/png" href="<?php echo $page->ogImage(); ?>">
+  <meta property="og:image" content="<?php
+    $ogImage = $page->ogImage(); echo strpos( $ogImage, 'http:' ) === 0 ?
+        $ogImage :
+        'https://www.prototypo.io' . $ogImage;
+  ?>"/>
+  <?php // The following link is just here to make sure wget downloads local thumbnails ?>
+  <link rel="image" type="image/png" href="<?php echo $ogImage; ?>">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
