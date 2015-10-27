@@ -24,6 +24,9 @@ function stripeAPI(hoodie) {
 			return hoodie.request('post', hoodie.stripe.apiUrl, {
 					contentType: 'application/json',
 					dataType: 'json',
+					xhrFields: {
+						withCredentials: true
+					},
 					data: JSON.stringify({
 						method: method,
 						args: Array.prototype.slice.call( arguments, 0 ),
