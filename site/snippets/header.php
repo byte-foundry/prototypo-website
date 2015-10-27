@@ -12,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:url" content="https://www.prototypo.io/<?php echo $page->uri(); ?>"/>
+  <meta property="og:url" content="https://www.prototypo.io/<?php if ( $page->uri() !== 'home' ) { echo $page->uri(); } ?>"/>
   <meta property="og:title" content="<?php echo $page->title(); ?>"/>
   <meta property="og:type" content="website"/>
   <meta property="og:description" content="<?php echo $page->ogDescription(); ?>"/>
