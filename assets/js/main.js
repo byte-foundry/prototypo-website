@@ -225,4 +225,13 @@ $(function() {
 			});
 	});
 
+	if ( '_hoodie_config' in localStorage ) {
+		var bt = JSON.parse( localStorage._hoodie_config )['_account.bearerToken'];
+		if ( bt ) {
+			$('a[href$="app.prototypo.io"]').each(function() {
+				$(this).attr('href', $(this).attr('href') + '?bt=' + encodeURIComponent(bt));
+			});
+		}
+	}
+
 });
