@@ -70,12 +70,7 @@ $(function() {
 		}).then(function() {
 			getHoodieInfo();
 			$('.account-plan-toggle-target').toggle();
-
-			$('#success-message').css('display', 'flex').css('opacity', 1).animate({
-				opacity: 0
-			}, 3000, function() {
-				$('#success-message').hide().css('opacity', 1);
-			});
+			$('#success-plan-message').show();
 
 		}).catch(function(err) {
 

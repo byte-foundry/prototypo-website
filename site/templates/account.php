@@ -37,7 +37,7 @@
 						</div>
 
 
-						<div class="clearfix wrap-success-message">
+						<div class="clearfix">
 							<div class="logged-in-form clearfix hoodie-account subscribe">
 								<p class="textSize-title-small">Your details:</p>
 								<div class="marginTop15">
@@ -72,7 +72,7 @@
 							<div id="no-card-plan" class="hidden textType-txt textSize-txt-large marginBottom30 general-infos">
 								You cannot change subscription without first setting up a payment card.
 							</div>
-							<label id="success-message" for="" class="success hidden">success!</label>
+							<label id="success-plan-message" for="" class="success-message hidden">You've successfuly changed your plan!</label>
 							<button id="submit-subscription" class="account-plan-toggle-target hidden call-success callToAction marginTop30 right clearfix hidden marginLeft15">Change my subscription</button>
 							<button class="change-subscription-toggle account-plan-toggle-target hidden call-error callToAction marginTop30 right clearfix hidden">Cancel</button>
 						</div>
