@@ -95,14 +95,16 @@ $(function() {
 			$('#stripe-error').text('');
 			$('#stripe-error').hide();
 
+			sessionStorage.payInEuro = currency === 'USD' ? false : true;
+
 			if (response.card && euCountryCode.indexOf(response.card.country) !== -1 && currency === 'USD') {
 				return alertShouldPayInEuro();
 			}
-			else if (response.card && euCountryCode.indexOf(response.card.countre) === -1 && currency === 'EUR') {
+			else if (response.card && euCountryCode.indexOf(response.card.country) === -1 && currency === 'EUR') {
 				return alertShouldPayInUSD();
 			}
 
-			hoodie.account.signUp($('#email').val(), $('#password').val())
+			hoodie.account.signUp($('#email').val().toLowerCase(), $('#password').val())
 				.done(function() {
 					$('#signin-error').text('');
 					$('#signin-error').hide();
