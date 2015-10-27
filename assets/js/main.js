@@ -224,6 +224,9 @@ $(function() {
 				$('.hoodie-account').hide();
 				$('.no-hoodie-account').show();
 				window.notLoggedIn = true;
+				if (hoodie.account.username) {
+					hoodie.account.signOut();
+				}
 				window.Intercom('boot', {
 					  app_id: "mnph1bst"
 				});

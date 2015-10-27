@@ -17,6 +17,7 @@
 							<input type="password" id="password-sign-in" name="password" placeholder="abc123"></input>
 							<label id="signin-error" for="" class="error hidden"></label>
 							<div id="sign-me-in" class="call-success callToAction marginBottom30">Sign in</div>
+							<div class="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style="color:white">Sign up</a></div>
 						</div>
 					</section>
 				</div>
