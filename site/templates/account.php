@@ -89,6 +89,7 @@
 									<label>Expiration date</label>
 									<div class="user-infos marginTop15"><span id="card-month">10</span>/<span id="card-year">2044</span></div>
 								</div>
+								<div class="success-message hidden" id="success-card-message">Card successfuly submitted</div>
 								<button id="change-card" class="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
 							</div>
 							<div id="no-card">

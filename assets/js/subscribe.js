@@ -76,6 +76,7 @@ $(function() {
 	}
 
 	function showStripeError(condition, message) {
+		window.Intercom('update',{error:1});
 		if (condition) {
 			$('#stripe-error').text(message);
 			$('#stripe-error').show();
@@ -86,6 +87,7 @@ $(function() {
 	function signUp(status, response) {
 
 		if (response.error) {
+			window.Intercom('update',{error:1});
 			$('#stripe-error').text(response.error.message);
 			$('#stripe-error').show();
 		}
@@ -107,6 +109,7 @@ $(function() {
 					subscribe(response);
 				})
 				.fail(function(err) {
+					window.Intercom('update',{error:1});
 					console.log(err);
 					$('#signin-error').text(err.message);
 					$('#signin-error').show();

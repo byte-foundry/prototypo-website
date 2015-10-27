@@ -88,6 +88,8 @@ $(function() {
 				source: response.id,
 				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9)
 			}).then(function(response) {
+				$('#success-card-message').show();
+				$('.account-card-form-toggle-target').hide();
 				getHoodieInfo();
 			})
 		});

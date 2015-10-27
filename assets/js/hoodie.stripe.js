@@ -5,9 +5,6 @@ function stripeAPI(hoodie) {
 			return hoodie.request('post', hoodie.stripe.apiUrl, {
 					contentType: 'application/json',
 					dataType: 'json',
-					xhrFields: {
-						withCredentials: false,
-					},
 					data: JSON.stringify({
 						method: 'ping',
 						data: data,
@@ -28,7 +25,7 @@ function stripeAPI(hoodie) {
 					contentType: 'application/json',
 					dataType: 'json',
 					xhrFields: {
-						withCredentials: false,
+						withCredentials: false
 					},
 					data: JSON.stringify({
 						method: method,

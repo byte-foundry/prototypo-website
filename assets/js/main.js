@@ -156,6 +156,7 @@ $(function() {
 
 
 	window.getHoodieInfo = function() {
+		window.Intercom('shutdown');
 		hoodie.account.fetch()
 			.then(function(user) {
 				if ( $("body").hasClass("pricing/subscribe") ) {
@@ -175,6 +176,10 @@ $(function() {
 				}
 				$('#logged-in-subscription').text(plan);
 				window.hoodieUser = user;
+				window.Intercom('boot', {
+					  app_id: "mnph1bst",
+					  email: user.name.split('/')[1], // TODO: The current logged in user's email address.
+				});
 				hoodie.stripe.customers.retrieve()
 					.then(function(response) {
 						$('#last-four').text(response.sources.data[0].last4);
@@ -212,6 +217,9 @@ $(function() {
 				$('.hoodie-account').hide();
 				$('.no-hoodie-account').show();
 				window.notLoggedIn = true;
+				window.Intercom('boot', {
+					  app_id: "mnph1bst"
+				});
 			});
 	}
 	getHoodieInfo();
@@ -219,6 +227,7 @@ $(function() {
 	$('.logout').on('click', function() {
 		hoodie.account.signOut()
 			.done(function() {
+				window.Intercom('shutdown');
 				$('.not-logged-in-form').css('display', 'none');
 				getHoodieInfo();
 				window.notLoggedIn = true;
