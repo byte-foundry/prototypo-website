@@ -1013,8 +1013,7 @@ header {
 	position: relative;
 }
 .Article-content {
-	padding: 85px 100px;
-	text-align: justify;
+	padding: 85px 60px;
 	position: relative;
 	clear: both;
 }
@@ -1066,11 +1065,12 @@ header {
 	background: $colorDark;
 }
 .Article-content ul {
+	margin-left: -20px;
 	list-style-type: square;
 	padding-left: 20px;
 }
-.Article-content ul li {
-
+.Article-content p {
+	margin-bottom: .5em;
 }
 .Article-leaveComment {
 	background: $blocSecondBackgroundColor;

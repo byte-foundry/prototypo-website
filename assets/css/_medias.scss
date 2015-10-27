@@ -157,6 +157,10 @@ only screen and (min-resolution:144dpi) {
 	}
 }
 @media #{$medium-down} {
+	.Article-content h2 {
+		font-size: 22px;
+		line-height: 28px;
+	}
 	.textSize-title-large {
 		font-size: 30px;
 		line-height: 36px;
@@ -177,6 +181,10 @@ only screen and (min-resolution:144dpi) {
 	.Section-featuresDescription {
 		width: 80%;
 		margin-left: 10%;
+	}
+	.Section-fontsItemWrap {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
 	}
 	.Article-content,
 	.Article-header {

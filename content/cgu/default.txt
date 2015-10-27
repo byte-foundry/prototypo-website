@@ -10,16 +10,14 @@ Text:
 
 ## Objet
 
-Les présentes conditions générales ont pour objet de définir les modalités et conditions d'utilisation des services proposés sur le site (ci-après : les « Services ** ** »), ainsi que de définir les droits et obligations des parties dans ce cadre.
-
-Elles sont notamment accessibles et imprimables à tout moment par un lien direct en bas de la page d'accueil du site.
+Les présentes conditions générales ont pour objet de définir les modalités et conditions d'utilisation des services proposés sur le site (ci-après : les «Services»), ainsi que de définir les droits et obligations des parties dans ce cadre.
 
 Elles peuvent être complétées, le cas échéant, par des conditions d'utilisation particulières à certains Services. En cas de contradiction, les conditions particulières prévalent sur ces conditions générales.
 
 
 ## Exploitant des Services
 
-Les Services sont exploités par la société ** Prototypo ** , ** SAS ** au capital social de ** 5.000 ** euros, immatriculée au RCS de ** Lyon ** sous le n° ** 812 750 297 ** , dont le siège social est situé ** 111, Bld de la Croix-Rousse, 69004 Lyon, France ** (ci-après : « Prototypo ** ** »).
+Les Services sont exploités par la société ** Prototypo ** , ** SAS ** au capital social de ** 5.000 ** euros, immatriculée au RCS de ** Lyon ** sous le n° ** 812 750 297 ** , dont le siège social est situé ** 111, Bld de la Croix-Rousse, 69004 Lyon, France ** (ci-après : «Prototypo»).
 
  ** Prototypo ** peut être contactée aux coordonnées suivantes :
 
@@ -45,7 +43,7 @@ L'acceptation des présentes conditions générales est matérialisée par la va
 
 - L'utilisation des Services nécessite que l'Utilisateur s'inscrive sur le site, en remplissant le formulaire prévu à cet effet. L'Utilisateur doit fournir l'ensemble des informations marquées comme obligatoires. Toute inscription incomplète ne sera pas validée.
 
-L'inscription entraîne automatiquement l'ouverture d'un compte au nom de l'Utilisateur (ci-après : le « Compte »), lui donnant accès à un espace personnel (ci-après : l'« Espace Personnel ») qui lui permet de gérer son utilisation des Services sous une forme et selon les moyens techniques que ** Prototypo ** juge les plus appropriés pour rendre lesdits Services.
+L'inscription entraîne automatiquement l'ouverture d'un compte au nom de l'Utilisateur (ci-après : le «Compte»), lui donnant accès à un espace personnel (ci-après : l'«Espace Personnel») qui lui permet de gérer son utilisation des Services sous une forme et selon les moyens techniques que ** Prototypo ** juge les plus appropriés pour rendre lesdits Services.
 
 L'Utilisateur garantit que toutes les informations qu'il donne dans le formulaire d'inscription sont exactes, à jour et sincères et ne sont entachées d'aucun caractère trompeur.
 
@@ -96,7 +94,7 @@ Les modalités de paiement du prix des Services sont décrites sur le site.
 
 Le paiement s'effectue par prélèvement automatique à partir du numéro de carte bancaire de l'Utilisateur.
 
-Le prélèvement est mis en œuvre par le prestataire de paiement désigné sur le site, qui seul conserve les coordonnées bancaires de l'Utilisateur à cette fin. ** Prototypo ** ne conserve aucune coordonnée bancaire.
+Le prélèvement est mis en œuvre par le prestataire de paiement désigné sur le site, qui seul conserve les coordonnées bancaires de l'Utilisateur à cette fin. ** Prototypo ** ne conserve aucune coordonnées bancaires.
 
 L'Utilisateur garantit à ** Prototypo ** qu'il dispose des autorisations nécessaires pour utiliser le mode de paiement choisi. Il s'engage à prendre les mesures nécessaires afin que le prélèvement automatique du prix des Services puisse être effectué.
 
@@ -138,7 +136,7 @@ Il est notamment seul responsable du bon accomplissement de toutes les formalit�
 
 - L'Utilisateur s'engage à fournir à ** Prototypo ** toutes les informations nécessaires à la bonne exécution des Services. Plus généralement, l'Utilisateur s'engage à coopérer activement avec ** Prototypo ** en vue de la bonne exécution des présentes.
 
-- L'Utilisateur est seul responsable des contenus de toute nature (rédactionnels, graphiques, audiovisuels ou autres, en ce compris la dénomination et/ou l'image éventuellement choisies par l'Utilisateur pour l'identifier sur le site) qu'il diffuse dans le cadre des Services (ci-après désignés : les « Contenus »).
+- L'Utilisateur est seul responsable des contenus de toute nature (rédactionnels, graphiques, audiovisuels ou autres, en ce compris la dénomination et/ou l'image éventuellement choisies par l'Utilisateur pour l'identifier sur le site) qu'il diffuse dans le cadre des Services (ci-après désignés : les «Contenus»).
 
 Il garantit à ** Prototypo ** qu'il dispose de tous les droits et autorisations nécessaires à la diffusion de ces Contenus.
 
@@ -180,7 +178,7 @@ Il s'engage à indemniser ** Prototypo ** de tout préjudice qu'elle subirait et
 
 - Il est strictement interdit aux Utilisateurs de copier et/ou de détourner à leurs fins ou à celles de tiers le concept, les technologies ou tout autre élément du site de ** Prototypo. **
 
-- Sont également strictement interdits : (i) tous comportements de nature à interrompre, suspendre, ralentir ou empêcher la continuité des Services, (ii) toutes intrusions ou tentatives d'intrusions dans les systèmes de ** Prototypo ** , (iii) tous détournements des ressources système du site, (iv) toutes actions de nature à imposer une charge disproportionnée sur les infrastructures de ce dernier, (v) toutes atteintes aux mesures de sécurité et d'authentification, (vi) tous actes de nature à porter atteinte aux droits et intérêts financiers, commerciaux ou moraux de ** Prototypo ** ou des usagers de son site, et enfin plus généralement (vii) tout manquement aux présentes conditions générales.
+- Sont également strictement interdits : (I) tous comportements de nature à interrompre, suspendre, ralentir ou empêcher la continuité des Services, (I) toutes intrusions ou tentatives d'intrusions dans les systèmes de ** Prototypo ** , (III) tous détournements des ressources système du site, (IV) toutes actions de nature à imposer une charge disproportionnée sur les infrastructures de ce dernier, (V) toutes atteintes aux mesures de sécurité et d'authentification, (VI) tous actes de nature à porter atteinte aux droits et intérêts financiers, commerciaux ou moraux de ** Prototypo ** ou des usagers de son site, et enfin plus généralement (VII) tout manquement aux présentes conditions générales.
 
 - Il est strictement interdit de monnayer, vendre ou concéder tout ou partie de l'accès aux Services ou au site, ainsi qu'aux informations qui y sont hébergées et/ou partagées.
 
@@ -197,24 +195,22 @@ En cas de manquement à l'une quelconque des dispositions des présentes conditi
 
 ## Responsabilité et garantie de Prototypo
 
-### ** Prototypo ** s'engage à fournir les Services avec diligence et selon les règles de l'art, étant précisé qu'il pèse sur elle une obligation de moyens, à l'exclusion de toute obligation de résultat, ce que les Utilisateurs reconnaissent et acceptent expressément.
+** Prototypo ** s'engage à fournir les Services avec diligence et selon les règles de l'art, étant précisé qu'il pèse sur elle une obligation de moyens, à l'exclusion de toute obligation de résultat, ce que les Utilisateurs reconnaissent et acceptent expressément.
 
 
-### ** Prototypo ** n'a pas connaissance des Contenus mis en ligne par les Utilisateurs dans le cadre des Services, sur lesquels elle n'effectue aucune modération, sélection, vérification ou contrôle d'aucune sorte et à l'égard desquels elle n'intervient qu'en tant que prestataire d'hébergement.
+** Prototypo ** n'a pas connaissance des Contenus mis en ligne par les Utilisateurs dans le cadre des Services, sur lesquels elle n'effectue aucune modération, sélection, vérification ou contrôle d'aucune sorte et à l'égard desquels elle n'intervient qu'en tant que prestataire d'hébergement.
 
 
 En conséquence, ** Prototypo ** ne peut être tenue pour responsable des Contenus, dont les auteurs sont des tiers, toute réclamation éventuelle devant être dirigée en premier lieu vers l'auteur des Contenus en question.
 
 Les Contenus préjudiciables à un tiers peuvent faire l'objet d'une notification à ** Prototypo ** selon les modalités prévues par l'article 6 I 5 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, ** Prototypo ** se réservant de prendre les mesures décrites à l'article 12.
 
-### ** Prototypo ** décline toute responsabilité en cas de perte éventuelle des informations accessibles dans l'Espace Personnel de l'Utilisateur, celui-ci devant en sauvegarder une copie et ne pouvant prétendre à aucun dédommagement à ce titre.
+** Prototypo ** décline toute responsabilité en cas de perte éventuelle des informations accessibles dans l'Espace Personnel de l'Utilisateur, celui-ci devant en sauvegarder une copie et ne pouvant prétendre à aucun dédommagement à ce titre.
 
 
-### ** Prototypo ** s'engage à procéder régulièrement à des contrôles afin de vérifier le fonctionnement et l'accessibilité du site. A ce titre,  ** Prototypo ** se réserve la faculté d'interrompre momentanément l'accès au site pour des raisons de maintenance. De même, ** Prototypo ** ne saurait être tenue responsable des difficultés ou impossibilités momentanées d'accès au site qui auraient pour origine des circonstances qui lui sont extérieures, la force majeure, ou encore qui seraient dues à des perturbations des réseaux de télécommunication.
-###
+** Prototypo ** s'engage à procéder régulièrement à des contrôles afin de vérifier le fonctionnement et l'accessibilité du site. A ce titre,  ** Prototypo ** se réserve la faculté d'interrompre momentanément l'accès au site pour des raisons de maintenance. De même, ** Prototypo ** ne saurait être tenue responsable des difficultés ou impossibilités momentanées d'accès au site qui auraient pour origine des circonstances qui lui sont extérieures, la force majeure, ou encore qui seraient dues à des perturbations des réseaux de télécommunication.
 
-### ** Prototypo ** ne garantit pas aux Utilisateurs (i) que les Services, soumis à une recherche constante pour en améliorer notamment la performance et le progrès, seront totalement exempts d'erreurs, de vices ou défauts, (ii) que les Services, étant standard et nullement proposés à la seule intention d'un Utilisateur donné en fonction de ses propres contraintes personnelles, répondront spécifiquement à ses besoins et attentes.
-###
+** Prototypo ** ne garantit pas aux Utilisateurs (I) que les Services, soumis à une recherche constante pour en améliorer notamment la performance et le progrès, seront totalement exempts d'erreurs, de vices ou défauts, (I) que les Services, étant standard et nullement proposés à la seule intention d'un Utilisateur donné en fonction de ses propres contraintes personnelles, répondront spécifiquement à ses besoins et attentes.
 
 - En tout état de cause, la responsabilité susceptible d'être encourue par ** Prototypo ** au titre des présentes est expressément limitée aux seuls dommages directs avérés subis par l'Utilisateur.
 
@@ -223,10 +219,16 @@ Les Contenus préjudiciables à un tiers peuvent faire l'objet d'une notificatio
 
 Les systèmes, logiciels, structures, infrastructures, bases de données et contenus de toute nature (textes, images, visuels, musiques, logos, marques, base de données, etc …) exploités par ** Prototypo ** au sein du site sont protégés par tous droits de propriété intellectuelle ou droits des producteurs de bases de données en vigueur. Tous désassemblages, décompilations, décryptages, extractions, réutilisations, copies et plus généralement, tous actes de reproduction, représentation, diffusion et utilisation de l'un quelconque de ces éléments, en tout ou partie, sans l'autorisation de ** Prototypo ** sont strictement interdits et pourront faire l'objet de poursuites judiciaires.
 
+Les polices de caractères exportées depuis les Services de **Prototypo** sont sous licence (link: https://creativecommons.org/publicdomain/zero/1.0/legalcode text:CC0), ce qui signifie que l'Utilisateur peut copier, modifier, distribuer et représenter l’œuvre, même à des fins commerciales, sans avoir besoin de demander l’autorisation.
+
+Les brevets et droits de marque commerciale qui peuvent être détenus par autrui ne sont en aucune façon affectés par CC0, de même pour les droits que pourraient détenir d’autres personnes sur l’œuvre ou sur la façon dont elle est utilisée, comme le droit à l’image ou à la vie privée.
+À moins d’une mention expresse contraire, la personne qui a identifié une œuvre à cette notice ne concède aucune garantie sur l’œuvre et décline toute responsabilité de toute utilisation de l’œuvre, dans la mesure permise par la loi.
+Lorsque l'Utilisateur utilise ou cite l’œuvre, il ne peut sous-entendre le soutien de l’auteur ou de la personne qui affirme.
+
 
 ## Données à caractère personnel
 
- ** Prototypo ** pratique une politique de protection des données personnelles dont les caractéristiques sont explicitées dans le document intitulé _« __Charte de confidentialité »__ ,_ dont l'Utilisateur est expressément invité à prendre connaissance sur le site.
+ ** Prototypo ** pratique une politique de protection des données personnelles dont les caractéristiques sont explicitées dans le document intitulé (link:cgu/charte-de-confidentialite text:_«__Charte de confidentialité»__ ),_ dont l'Utilisateur est expressément invité à prendre connaissance sur le site.
 
 
 ## Publicité
