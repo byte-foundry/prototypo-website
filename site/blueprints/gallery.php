@@ -19,8 +19,13 @@ fields:
     placeholder: Pricing
     default: Pricing
 
+  ogDescription:
+    label: description of the page
+    type:  textarea
 
-
+  ogImage:
+    label: Page thumbnail
+    type:  text
 
   line-a:
     type:line
@@ -83,7 +88,7 @@ fields:
         type: number
         placeholder: Line height
         default: 120px
-        
+
   downloadButtonLabel:
     type: text
     label: Download button label

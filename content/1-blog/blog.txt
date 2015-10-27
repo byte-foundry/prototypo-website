@@ -11,3 +11,11 @@ Section1subtitle: Stay tuned!
 ----
 
 Section1txt: 
+
+----
+
+Ogdescription: We regularly write articles about the improvements we make to Prototypo, and we also like to talk about design, technical and business topics related to font creation.
+
+----
+
+Ogimage: /content/1-blog/blog-screenshot.png

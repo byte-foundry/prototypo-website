@@ -13,7 +13,9 @@ $(function() {
 		$('#signup-error').text('');
 	}
 
-	$('#quick-signup input[type=password]').val('');
+	sessionStorage.recurrence = 'annual';
+
+	$('#quick-signup input[type!=submit]').val('');
 
 	$('#quick-signup').on('submit', function(event) {
 		event.preventDefault();

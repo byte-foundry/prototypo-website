@@ -9,8 +9,15 @@
 
   <meta name="description" content="<?php echo $site->description()->html() ?>">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="og:url" content="https://www.prototypo.io/<?php echo $page->uri(); ?>"/>
+  <meta property="og:title" content="<?php echo $page->title(); ?>"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:description" content="<?php echo $page->ogDescription(); ?>"/>
+  <meta property="og:image" content="<?php echo $page->ogImage(); ?>"/>
+  <link rel="image" type="image/png" href="<?php echo $page->ogImage(); ?>">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -73,11 +80,11 @@
 			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
 		</a>
 
-		<div class="no-account Nav-callToAction Nav-callToActionCreateYourFont">
+		<div class="no-account no-hoodie-account Nav-callToAction Nav-callToActionCreateYourFont">
 			<div class="hide-for-small-only">
 				<div class="left">
-					<a href="http://app.prototypo.io" class="login">
-						Login
+					<a href="/account" class="login">
+						Sign in
 					</a>
 				</div>
 				<div class="left">
@@ -89,17 +96,22 @@
 			</div>
 		</div>
 
-		<div class="my-account clearfix">
+		<div class="my-account hoodie-account clearfix">
 			<div class="hide-for-small-only">
 				<div class="left hoodieUsername">
 					Welcome back <span class="" id="hoodieUsername"></span>
 				</div>
-				<div class="left show-for-medium-up logout">Logout</div>
+				<div class="left">
+					<a href="/account" class="callToAction call-success">
+						<span class="">My account</span>
+					</a>
+				</div>
 				<div class="left">
 					<a href="http://app.prototypo.io" class="callToAction call-success">
 						<span class="">App</span>
 					</a>
 				</div>
+				<div class="left show-for-medium-up logout">Logout</div>
 			</div>
 		</div>
 

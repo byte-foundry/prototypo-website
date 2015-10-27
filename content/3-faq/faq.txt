@@ -18,3 +18,11 @@ Section1txtafter:
 
 (email: contact@prototypo.io text: Feel free to contact us) if you have any question or issue with Prototypo.
 You also can (link: https://github.com/byte-foundry/prototypo text: check the Github project) for other known issues.
+
+----
+
+Ogdescription: If you have a question, chances are you will find the answer on this Freqently Asked Questions page.
+
+----
+
+Ogimage: /content/3-faq/faq-screenshot.png

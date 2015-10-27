@@ -6,3 +6,4 @@ dist
 assets/*.*
 site/snippets/prod
 site/templates/pricing copie.php
+*.swp

@@ -30,7 +30,9 @@
 					<div class="DemoControls">
 						<div class="DemoControls-PotentiometerItem">
 							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
-							<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
+							<div  id="test-me" class="test-me">
+								<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
+							</div>
 						</div>
 
 						<div class="DemoControls-PotentiometerItem">
@@ -48,6 +50,8 @@
 							<input type="range" data-param="serifWidth" class="DemoControls-Potentiometer" min="0" max="100" value="65" step="1" />
 						</div>
 					</div><!-- .DemoControls -->
+
+
 
 					<canvas id="DemoCanvas" class="DemoCanvas"></canvas>
 
@@ -77,11 +81,12 @@
 				<div class="textSize-txt-large text-center marginTop60">
 					<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->getintothefullapp()->kirbytext(); ?></h3>
 					<div class="marginTop30">
-						<form class="" action="http://sendy.kuem.me.uk/subscribe" method="post">
+						<!-- <form class="" action="http://sendy.kuem.me.uk/subscribe" method="post">
 							<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="get-app-email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
 							<input type="hidden" name="list" value="KokibYEZQXsvsf8OkSnUww">
 							<input class="NewsletterInput-submit callToAction" type="submit" id="get-app-submit" name="submit" value="<?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?>">
-						</form>
+						</form> -->
+						<a href="pricing" class="NewsletterInput-submit callToAction" id="get-app-submit"><?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?></a>
 					</div>
 				</div>
 			</div>

@@ -1,13 +1,10 @@
 function stripeAPI(hoodie) {
 	return hoodie.stripe = {
-		apiUrl: '/_plugins/stripe-taxamo/_api',
+		apiUrl: '/_plugins/stripe-subscriptions/_api',
 		ping: function( data ) {
 			return hoodie.request('post', hoodie.stripe.apiUrl, {
 					contentType: 'application/json',
 					dataType: 'json',
-					xhrFields: {
-						withCredentials: true,
-					},
 					data: JSON.stringify({
 						method: 'ping',
 						data: data,
@@ -15,34 +12,28 @@ function stripeAPI(hoodie) {
 				});
 		},
 		customers: {
-			create: function(args) {
-				return hoodie.request('post', hoodie.stripe.apiUrl, {
-						contentType: 'application/json',
-						dataType: 'json',
-						xhrFields: {
-							withCredentials: false,
-						},
-						data: JSON.stringify({
-							method: 'customers.create',
-							args: [ args ],
-						}),
-					});
-			},
-			updateSubscription: function(args) {
-				return hoodie.request('post', hoodie.stripe.apiUrl, {
-						contentType: 'application/json',
-						dataType: 'json',
-						xhrFields: {
-							withCredentials: false,
-						},
-						data: JSON.stringify({
-							method: 'customers.update',
-							args: [ args ],
-						}),
-					});
-			},
+			create: requester('customers.create'),
+			update: requester('customers.update'),
+			retrieve: requester('customers.retrieve'),
+			updateSubscription: requester('customers.updateSubscription'),
 		},
 	};
+
+	function requester( method ) {
+		return function() {
+			return hoodie.request('post', hoodie.stripe.apiUrl, {
+					contentType: 'application/json',
+					dataType: 'json',
+					xhrFields: {
+						withCredentials: false
+					},
+					data: JSON.stringify({
+						method: method,
+						args: Array.prototype.slice.call( arguments, 0 ),
+					}),
+				});
+		}
+	}
 }
 
 if ( typeof Hoodie !== 'undefined' ) {

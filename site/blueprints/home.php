@@ -19,6 +19,14 @@ fields:
     placeholder: Prototypo
     default: Prototypo
 
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   getStartedTagline:
     label: Tagline of the website
     type:  text
@@ -131,10 +139,6 @@ fields:
     label: Download button label
     placeholder: eg. Download this font
     default: Download this font
-
-
-
-
 
   line-c:
     type: line

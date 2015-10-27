@@ -18,17 +18,25 @@ fields:
     type:  text
     placeholder: Page name
     default: Blog
-    
+
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   section1Title:
     type: text
     placeholder: Title of the section
     default: « I'm sorry Dave, I'm afraid I can't do that. »
-    
+
   section1Subtitle:
     type: text
     placeholder: Subtitle of the section
     default: The page you're looking for can not be found…
-    
+
   section1Txt:
     type: textarea
     placeholder: Text content of the section

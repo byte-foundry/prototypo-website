@@ -1,12 +1,20 @@
-Title: Pricing
+Title: Account
 
 ----
 
-Section1title: Simple plans for everyone!
+Text0: * VAT is automatically calculated depending on your country IP. Price in euro is slightly higher than price in US dollars because we offer VAT in all european country.
 
 ----
 
-Section1subtitle: 4 packs that fit your needs
+Aboutlaunchdate: This is a special launch offer that will end on the 27th of november 2015.
+
+----
+
+Switchplans: 
+
+Free subscription gives you access to the Prototypo app with a limited set of features. You'll be able to use six parameters and create one family per template.
+
+If you already have a paid subscription and change to a free subscription you'll still have access to all the features of the application until the end of your subscription.
 
 ----
 
@@ -57,39 +65,3 @@ Packs:
     Collaborative tools
   packstate: notavailable
   packbuttonlabel: Contact us
-
-----
-
-Section1txtafter: \* Taxes are offered to private individual customers. Available currency ultimately depends on the country where your payment card was issued.
-
-----
-
-Section0title: Get access to Prototypo!
-
-----
-
-Section0subtitle: Try prototypo with the free version
-
-----
-
-Section0txt: For a few days, all features are available in the free version!
-
-----
-
-Freemiumimg: prototypo.svg
-
-----
-
-Freemiumtos: By clicking "Try Prototypo!" I agree to (link: cgu text: Prototypo's Terms of Service.)
-
-----
-
-Freemiumsubmit: Try Prototypo!
-
-----
-
-Ogdescription: Prototypo is available online with monthly and annual plans. You can also try Prototypo for free!
-
-----
-
-Ogimage: /content/2-pricing/pricing-screenshot.png

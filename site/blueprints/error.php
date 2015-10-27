@@ -19,32 +19,37 @@ fields:
     placeholder: Page name
     default: We're sorry but…
 
-    
-    
-    
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   line-a:
     type:line
-    
+
   section1Info:
     type: info
     text: >
       **Section : Page not found**
-    
+
   errorImage:
     type:select
     label: Error illustration
-    options: files  
-    
+    options: files
+
   section1Title:
     type: textarea
     placeholder: Title of the section
     default: « I'm sorry Dave, I'm afraid I can't do that. »
-    
+
   section1Subtitle:
     type: text
     placeholder: Subtitle of the section
     default: The page you're looking for can not be found…
-    
+
   section1Txt:
     type: textarea
     placeholder: Text content of the section

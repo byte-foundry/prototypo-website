@@ -19,6 +19,14 @@ fields:
     placeholder: Page name
     default: FAQ
 
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   section1Title:
     type: text
     placeholder: Title of the section

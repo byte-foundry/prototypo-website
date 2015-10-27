@@ -84,7 +84,7 @@ Members:
 
 ----
 
-Section1txt: Prototypo is a user-friendly parameter-based font generator being built by a team of fiery font and code lovers. You can learn more about the project on its (link: http://prototypo.io/ text: home page).
+Section1txt: Prototypo is a user-friendly parameter-based font generator being built by a team of fiery font and code lovers. You can learn more about the project on its (link: http://prototypo.io/ text: home page) or (email: contact@prototypo.io text: contact us at contact@prototypo.io).
 
 ----
 
@@ -97,3 +97,11 @@ Backerstitle: …and we're 1 670 more in the team!
 ----
 
 Backerssubtitle: Check our awesome backers!
+
+----
+
+Ogdescription: Prototypo is a user-friendly parameter-based font generator being built by a team of fiery font and code lovers. Meet the people behind the tool.
+
+----
+
+Ogimage: /content/4-about/about-screenshot.png

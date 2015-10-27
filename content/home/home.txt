@@ -193,3 +193,11 @@ Sectionsubscribedsubtitle: We also post more frequent updates on <a href="https:
 ----
 
 Getintothefullapp: Want more? Get the full app!
+
+----
+
+Ogdescription: Prototypo is an online application that allows to create beautiful fonts in minutes. Start with one of our templates, customize it with more than twenty sliders, and download your font to use it on the Web or on your desktop.
+
+----
+
+Ogimage: /content/home/home-screenshot.png

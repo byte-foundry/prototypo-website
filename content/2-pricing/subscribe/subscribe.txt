@@ -6,7 +6,8 @@ Text: One more step to get in Prototypo!
 
 ----
 
-Text0: 
+Text0: * VAT is automatically calculated depending on your country IP. Price in euro is slightly higher than price in US dollars because we offer VAT in all european country.
 
-* VAT is automatically calculated depending on your country IP. Prices may vary according to your local VAT.
-We have detected that your computer is located in <span class="countryName">…</span>. If your country of residence is different, please select it from this <span class="listCountry"><u>list</u></span>.
+----
+
+Aboutlaunchdate: This is a special launch offer that will end on the 27th of november 2015.

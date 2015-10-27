@@ -15,8 +15,8 @@ fields:
   title:
     label: Page name
     type:  text
-    placeholder: Pricing
-    default: Pricing
+    placeholder: Account
+    default: Account
 
   ogDescription:
     label: description of the page
@@ -26,61 +26,17 @@ fields:
     label: Page thumbnail
     type:  text
 
-  line-a:
-    type:line
+  text0:
+    label: Note à propos de la TVA
+    type:  textarea
 
-  section0Info:
-    type: info
-    text: >
-      **Section : Get access to Prototypo**
+  aboutlaunchdate:
+    label: Note à propos de l'offre launch
+    type:  textarea
 
-      **Content** : Access to freemium.
-
-  section0Title:
-    type: text
-    placeholder: Title of the section
-    default: Get access to Prototypo
-
-  section0Subtitle:
-    type: text
-    placeholder: Subtitle of the section
-    default: Try prototypo for free with the freemium version
-
-  section0Txt:
-    type: textarea
-    placeholder: Text content of the section
-
-  freemiumImg:
-    type: select
-    label: Image of freemium version
-    options: files
-
-  freemiumToS:
-    type: textarea
-    label: Terms of Service
-
-  freemiumSubmit:
-    type: text
-    label: Try Prototypo button label
-
-
-
-  section1Info:
-    type: info
-    text: >
-      **Section : Your Prototypo is here**
-
-      **Content** : Three pricing packs.
-
-  section1Title:
-    type: text
-    placeholder: Title of the section
-    default: Your Prototypo is here
-
-  section1Subtitle:
-    type: text
-    placeholder: Subtitle of the section
-    default: 3 packs that fit your needs
+  switchplans:
+    label: Note à propos du changement de plan
+    type:  textarea
 
   packs:
     label: Pricing packs
@@ -122,9 +78,3 @@ fields:
         type: text
         label: Button label
         placeholder: "Get started now!" or "Available soon"
-
-
-
-  section1TxtAfter:
-    type: textarea
-    placeholder: Text content after the pricing packs
