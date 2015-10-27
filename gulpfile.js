@@ -61,6 +61,13 @@ gulp.task('clean:dist', function(cb) {
     rimraf('./dist', cb);
 });
 
+// This task can be used instead of clean:dist to make sure all root images
+// are copied over to dist.
+gulp.task('copy:images', ['clean:dist'], function(cb) {
+    return gulp.src('./*.png')
+        .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('build:assets', ['sass', 'clean:dist'], function() {
     var assets = useref.assets({
             searchPath: './'

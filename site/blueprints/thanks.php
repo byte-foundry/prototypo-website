@@ -18,15 +18,23 @@ fields:
     type:  text
     placeholder: Page name
     default: Thanks
-    
+
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   section1Title:
     type: text
     placeholder: Title of the section
-    
+
   section1Subtitle:
     type: text
     placeholder: Subtitle of the section
-    
+
   section1Txt:
     type: textarea
     placeholder: Text content of the section

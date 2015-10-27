@@ -18,6 +18,14 @@ fields:
     placeholder: Account
     default: Account
 
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   text0:
     label: Note à propos de la TVA
     type:  textarea

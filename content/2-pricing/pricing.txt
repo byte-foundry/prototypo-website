@@ -85,3 +85,11 @@ Freemiumtos: By clicking "Try Prototypo!" I agree to (link: cgu text: Prototypo'
 ----
 
 Freemiumsubmit: Try Prototypo!
+
+----
+
+Ogdescription: Prototypo is available online with monthly and annual plans. You can also try Prototypo for free!
+
+----
+
+Ogimage: /content/2-pricing/pricing-screenshot.png

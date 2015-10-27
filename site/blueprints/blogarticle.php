@@ -17,24 +17,29 @@ fields:
     label: Article name
     type:  text
     placeholder: Blog article name
-    
+
+  ogDescription:
+    label: description of the page
+    type:  textarea
+
+  ogImage:
+    label: Page thumbnail
+    type:  text
+
   tags:
     label: Tags
     type: tags
     width:1/2
-    
+
   Date:
     label: Date
     type: date
     width:1/2
-    
+
   subtitle:
     type: text
     placeholder: Subtitle of the article
-    
+
   contentarticle:
     type: textarea
     placeholder: Content of the article
-    
-    
-    

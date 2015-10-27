@@ -10,8 +10,8 @@ language: en
 role: admin
 token: 57ab361293709894c6ec79b701e65f94027853a0
 history:
-  - cgu
+  - faq
   - pricing
-  - press
-  - home
+  - blog
+  - about
   - blog/the-new-prototypo-is-here

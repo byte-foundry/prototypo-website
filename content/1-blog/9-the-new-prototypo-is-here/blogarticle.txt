@@ -29,3 +29,11 @@ Here's what we just posted on our [KickStarter blog](https://www.kickstarter.com
 > More than a year has passed since the end of our KickStarter campaign and the release of the first beta. We quickly realized that a lot of work was still required to meet designers’ needs: a tool that is easy to use, that allows to create original and personal typefaces of high quality.
 
 Head over to the [original article](https://www.kickstarter.com/projects/599698621/prototypo-streamlining-font-creation/posts/1347003) to learn about everything we changed, and all we've got in mind for the future of Prototypo!
+
+----
+
+Ogdescription: The new Prototypo is here. We've rebuilt it from scratch, adding some feature and beautiful font templates along the way.
+
+----
+
+Ogimage: https://ksr-ugc.imgix.net/assets/004/461/666/5ed96e49333556d753cc17a561a53533_original.gif

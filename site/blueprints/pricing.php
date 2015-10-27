@@ -18,8 +18,13 @@ fields:
     placeholder: Pricing
     default: Pricing
 
+  ogDescription:
+    label: description of the page
+    type:  textarea
 
-
+  ogImage:
+    label: Page thumbnail
+    type:  text
 
   line-a:
     type:line
