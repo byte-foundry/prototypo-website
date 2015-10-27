@@ -114,7 +114,7 @@ $(function() {
 		}
 	}
 
-	$('#submit').on('click', function(e) {
+	$('#subscribe-form').on('submit', function(e) {
 		e.stopPropagation();
 		e.preventDefault();
 

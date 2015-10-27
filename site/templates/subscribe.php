@@ -16,7 +16,7 @@
 					</div>
 
 					<div class="Section-wrapTxt textType-txt">
-						<form action="" method="POST" accept-charset="utf-8" class="subscribe">
+						<form id="subscribe-form" action="" method="POST" accept-charset="utf-8" class="subscribe">
 							<?php
 								$pricing = $page->parent();
 								$packs = yaml($pricing->packs());
