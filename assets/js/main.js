@@ -174,6 +174,13 @@ $(function() {
 				if (plan.indexOf('stripe') === -1 || plan.indexOf('free_') !== -1) {
 					plan = 'Free plan';
 				}
+				else if (plan.indexOf('personal') !== -1 && plan.indexOf('monthly') !== -1) {
+					plan = 'Pro Monthly';
+				}
+				else if (plan.indexOf('personal') !== -1 && plan.indexOf('annual') !== -1) {
+					plan = 'Pro Yearly';
+				}
+
 				$('#logged-in-subscription').text(plan);
 				window.hoodieUser = user;
 				window.Intercom('boot', {

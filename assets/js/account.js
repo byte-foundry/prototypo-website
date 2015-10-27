@@ -58,6 +58,8 @@ $(function() {
 			$('#select-plan-wrap').css('display', 'block');
 			$('#free-plan-infos').hide();
 		}
+		$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
+		$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
 	});
 	$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
 	$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
@@ -71,9 +73,8 @@ $(function() {
 			getHoodieInfo();
 			$('.account-plan-toggle-target').toggle();
 			$('#success-plan-message').show();
-
 		}).catch(function(err) {
-
+			window.Intercom('update',{email:hoodie.account.username, error:1});
 		});
 	})
 
@@ -84,6 +85,10 @@ $(function() {
 			exp_month: $('#creditCardExpMonthInput').val(),
 			exp_year: $('#creditCardExpYearInput').val()
 		}, function( status, response ) {
+			if (response.error) {
+				return window.Intercom('update',{email:hoodie.account.username, error:1});
+			}
+
 			hoodie.stripe.customers.update({
 				source: response.id,
 				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9)
@@ -91,7 +96,11 @@ $(function() {
 				$('#success-card-message').show();
 				$('.account-card-form-toggle-target').hide();
 				getHoodieInfo();
-			})
+				$('.priceMonth').html( $('#' + $('#plan').val()).attr('month') );
+				$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
+			}).catch(function(err) {
+				window.Intercom('update',{email:hoodie.account.username, error:1});
+			});
 		});
 	})
 });
