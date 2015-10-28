@@ -6,7 +6,7 @@ Text:
 
 # Prototypo | Create your own font in just a few clicks
 
-## The first real times font creation software with no drawing skills required
+## The first real time font creation software with no drawing skills required
 
 The web application Prototypo gives anyone the possibility to create personalized fonts and export them to use on their website or desktop application such as Word or InDesign.
 
