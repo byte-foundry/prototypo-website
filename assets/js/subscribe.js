@@ -16,7 +16,7 @@ $(function() {
 	}
 
 	function createToken(cb) {
-		if (selectedPlan( $('#plan').val(), recurrence ).plan.indexOf('free') === 0) {
+		if (!selectedPlan( $('#plan').val(), recurrence ).plan) {
 			cb(null, {id: undefined});
 		}
 		else {
@@ -35,30 +35,45 @@ $(function() {
 
 		var subInfo = selectedPlan( $('#plan').val() , recurrence);
 
-		hoodie.stripe.customers.create({
-			'source': response.id,
-			'buyer_tax_number': $('#VAT').val(),
-			'buyer_credit_card_prefix': $('#cardNumberInput').val().substr(0,9),
-			'currency_code': currency,
-			'plan': subInfo.plan,
-			'coupon': subInfo.coupon
-		})
-		.then(function() {
-			getHoodieInfo();
-		})
-		.catch(function(err) {
+		if (subInfo.plan) {
+
 			hoodie.stripe.customers.create({
-				'buyer_tax_number': undefined,
-				'plan': selectedPlan( 'free' , recurrence).plan,
+				'source': response.id,
+				'buyer_tax_number': $('#VAT').val(),
+				'buyer_credit_card_prefix': $('#cardNumberInput').val().substr(0,9),
+				'currency_code': currency,
+				'plan': subInfo.plan,
+				'coupon': subInfo.coupon
 			})
 			.then(function() {
-				sessionStorage.errorCreateCustomer = true;
 				getHoodieInfo();
 			})
 			.catch(function(err) {
-				showStripeError(true,err.message);
+				hoodie.stripe.customers.create({
+					'buyer_tax_number': undefined,
+					'plan': selectedPlan( 'free' , recurrence).plan,
+				})
+				.then(function() {
+					sessionStorage.errorCreateCustomer = true;
+					getHoodieInfo();
+				})
+				.catch(function(err) {
+					showStripeError(true,err.message);
+				});
 			});
-		});
+		}
+		else {
+				hoodie.stripe.customers.create({
+					'buyer_tax_number': undefined,
+					'plan': selectedPlan( 'free' , recurrence).plan,
+				})
+				.then(function() {
+					getHoodieInfo();
+				})
+				.catch(function(err) {
+					showStripeError(true,err.message);
+				});
+		}
 	}
 
 	function alertShouldPayInEuro() {
@@ -146,7 +161,7 @@ $(function() {
 		// 	return;
 		// }
 
-		if (selectedPlan( $('#plan').val(), recurrence ).plan.indexOf('free_') === -1) {
+		if (selectedPlan( $('#plan').val(), recurrence ).plan) {
 			var error = false;
 			error = error || showStripeError($('#cardNumberInput').val().length < 13, "Your card number seems too short");
 			error = error || showStripeError(!$('#creditCardExpMonthInput').val(), "You did not choose an expiration month");

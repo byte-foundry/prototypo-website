@@ -65,7 +65,7 @@ $(function() {
 	$('.priceAnnual').html( $('#' + $('#plan').val()).attr('annual') );
 
 	$('#submit-subscription').on('click', function() {
-		var subInfo = selectedPlan($('#plan').val(), recurrence);
+		var subInfo = selectedPlan($('#plan').val(), recurrence, sessionStorage.payInEuro);
 		hoodie.stripe.customers.updateSubscription({
 			plan: subInfo.plan,
 			coupon: subInfo.coupon

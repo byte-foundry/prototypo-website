@@ -1,6 +1,7 @@
 $(function() {
 
 	Stripe.setPublishableKey('pk_live_CVrzdDZTEowrAZaRizc4G14c');
+	//Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 
 	/* Get email from the homepage pre-fill input */
 	$('#get-app-submit').on('click', function(e) {
@@ -134,11 +135,19 @@ $(function() {
 
 	var recurrence = 'monthly';
 
-	window.selectedPlan = function( plan, recurrence ) {
+	window.selectedPlan = function( plan, recurrence, payInEuro ) {
 		var selectedPlan;
 		var coupon;
 		if ( plan === 'free') {
-			selectedPlan = undefined;
+			if (payInEuro === 'true') {
+				selectedPlan = 'free_monthly_EUR_taxfree';
+			}
+			else if (payInEuro === 'false') {
+				selectedPlan = 'free_monthly_USD_taxfree';
+			}
+			else {
+				selectedPlan = undefined;
+			}
 		} else {
 			var currency = sessionStorage.payInEuro === "true" ? 'EUR' : 'USD';
 			selectedPlan = "personal_" + recurrence + "_" + currency + "_taxfree";
