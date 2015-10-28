@@ -1,7 +1,6 @@
 $(function() {
 
 	Stripe.setPublishableKey('pk_live_CVrzdDZTEowrAZaRizc4G14c');
-	//Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 
 	/* Get email from the homepage pre-fill input */
 	$('#get-app-submit').on('click', function(e) {

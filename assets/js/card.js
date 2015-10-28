@@ -1,6 +1,5 @@
 $(function() {
 	Taxamo.initialize('public_zb1StvrkVbh8izNkCWapQsgJMvN7xURCQh1QJWQTg3I');
-	//Taxamo.initialize('public_test_gkQnEFf8SpuGAijwkX3ustMv5cfAfoWuNdlvPXZsqvg');
 	Taxamo.detectCountry();
 
 	// Detect current country
