@@ -8,7 +8,7 @@ $(function() {
 	});
 	if ( sessionStorage.getItem("get-app-email") ) {
 		$('#quick-email').val( sessionStorage.getItem("get-app-email") );
-		$('#email').val( sessionStorage.getItem("get-app-email") );
+		// $('#email').val( sessionStorage.getItem("get-app-email") );
 	}
 
 	/* Get recurrence and plan from pricing page */
