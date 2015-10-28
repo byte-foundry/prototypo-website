@@ -138,7 +138,7 @@ $(function() {
 		var selectedPlan;
 		var coupon;
 		if ( plan === 'free') {
-			selectedPlan = "free_monthly_USD_taxfree";
+			selectedPlan = undefined;
 		} else {
 			var currency = sessionStorage.payInEuro === "true" ? 'EUR' : 'USD';
 			selectedPlan = "personal_" + recurrence + "_" + currency + "_taxfree";
