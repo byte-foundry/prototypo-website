@@ -43,6 +43,11 @@
 	color: $mainBackgroundColor;
 }
 
+p {
+	line-height: 1.4;
+	margin-bottom: .5em;
+}
+
 /*
  *  Page: home
  */
@@ -1421,6 +1426,7 @@ header {
 	label {
 		font-size: 16px;
 		margin-bottom: 1em;
+		line-height: 1.4;
 		&.error {
 			font-size: 20px;
 		}

@@ -24,6 +24,26 @@ $(function() {
 			});
 	});
 
+	$('.reset-password-toggle').on('click', function() {
+		$('#wrap-reset-password').slideToggle();
+		$('#wrap-sign-in').slideToggle();
+	});
+
+	$('#reset-password').on('click', function() {
+		hoodie.account.resetPassword($('#email-reset-password').val())
+			.done(function(success) {
+				$('#hoodie-error').hide();
+				$('#reset-password-actions').hide();
+				$('#hoodie-error').text('');
+				$('#hoodie-success').show();
+				$('#user-email').text($('#email-reset-password').val());
+			})
+			.fail(function(error) {
+				$('#hoodie-error').show();
+				$('#hoodie-error').text(error.message);
+			})
+	});
+
 	if (sessionStorage.errorCreateCustomer) {
 		delete sessionStorage.errorCreateCustomer;
 		$('#error-create-customer').show();

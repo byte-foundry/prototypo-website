@@ -10,14 +10,31 @@
 					</header>
 
 					<section class="Article Section-fontsItemWrap">
-						<div class="signin subscribe no-account  no-hoodie-account">
+						<div id="wrap-sign-in" class="signin subscribe no-account no-hoodie-account">
 							<label for="login">Your email</label>
 							<input type="text" id="email-sign-in" name="login" placeholder="mj@domain.com"></input>
 							<label for="login">Password</label>
 							<input type="password" id="password-sign-in" name="password" placeholder="abc123"></input>
 							<label id="signin-error" for="" class="error hidden"></label>
-							<div id="sign-me-in" class="call-success callToAction marginBottom30">Sign in</div>
-							<div class="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style="color:white">Sign up</a></div>
+							<label class="reset-password-toggle right marginBottom30 textSize-title-small colorGray">Forgotten your password?</label>
+							<div class="marginTop30">
+								<div id="sign-me-in" class="call-success callToAction marginBottom30 marginRight15">Sign in</div>
+								<div class="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style="color:white">Sign up</a></div>
+							</div>
+						</div>
+						<div id="wrap-reset-password" class="hidden subscribe">
+							<label>Please fill the following input with the email address you've used to register.</label>
+							<input type="text" id="email-reset-password" name="login" placeholder="mj@domain.com"></input>
+							<label>We will send you a new password, and you will be able to change your password once connected in the profile panel.</label>
+							<label id="hoodie-error" for="" class="error hidden"></label>
+							<div id="hoodie-success" class="marginTop30 hidden">
+								<label for="" class="success-message">A new password was sent to <span id="user-email"><span></label>
+								<div class="reset-password-toggle call-success callToAction marginBottom30 marginRight15">Sign in</div>
+							</div>
+							<div id="reset-password-actions" class="marginTop30">
+								<div class="reset-password-toggle call-danger callToAction marginBottom30 marginRight15">Cancel</div>
+								<div id="reset-password" class="call-error callToAction marginBottom30 marginRight15">Reset</div>
+							</div>
 						</div>
 					</section>
 				</div>
