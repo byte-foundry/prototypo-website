@@ -76,7 +76,33 @@
 									<div id="error-create-customer" class="textType-txt textSize-txt-large marginBottom30 general-infos hidden">
 										There was an error during your subscription. We've subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.
 									</div>
-									<button id="change-subscription" class="change-subscription-toggle call-danger callToAction marginTop30 right clearfix account-plan-toggle-target">Change subscription</button>
+
+									<div id="wrap-change-password" class="change-password-toggle-target hidden subscribe marginBottom30 clearfix">
+										<label for="current-password">Please fill your current password</label>
+										<input type="password" id="current-password" name="current-password" placeholder="******"></input>
+										<div class="w50 left">
+											<label for="change-password-1">New password (at least 6 characters)</label>
+											<input type="password" id="new-password-1" name="change-password-1" placeholder="abc123"></input>
+										</div>
+										<div class="w50 left">
+											<label for="change-password-2">Type your new password again, as confirmation</label>
+											<input type="password" id="new-password-2" name="change-password-2" placeholder="abc123"></input>
+										</div>
+										<label id="password-success" for="" class="success-message hidden"></label>
+										<label id="password-error" for="" class="error hidden"></label>
+										<div class="change-password-actions clearfix right marginTop15">
+											<button class="change-password-toggle call-error callToAction marginRight15 account-plan-toggle-target">Cancel</button>
+											<button id="change-password" class="call-success callToAction account-plan-toggle-target">Submit new password</button>
+										</div>
+										<div class="change-password-actions hidden clearfix right marginTop15">
+											<button class="change-password-toggle call-error callToAction account-plan-toggle-target">Close</button>
+										</div>
+									</div>
+
+									<div class="clearfix right marginTop30">
+										<button class="change-password-toggle call-danger callToAction marginRight15 change-password-toggle-target">Change password</button>
+										<button id="change-subscription" class="change-subscription-toggle call-danger callToAction account-plan-toggle-target">Change subscription</button>
+									</div>
 								</div>
 							</div>
 
