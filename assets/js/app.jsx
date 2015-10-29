@@ -23,7 +23,7 @@ var SubscribeForm = React.createClass({
 								<label htmlFor="password">Your password</label>
 								<input type="password" name="password" id="password" placeholder="abc123" required="required"></input>
 							</div>
-							<label htmlFor="VAT">Your VAT number (optionnal)</label>
+							<label htmlFor="VAT">Your VAT number (optional)</label>
 							<input type="text" name="VAT" id="VAT" placeholder="AB01234567890"></input>
 							<label className="hidden error" id="signin-error"></label>
 						</div>

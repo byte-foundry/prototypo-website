@@ -37,7 +37,7 @@
 											<label for="password">Your password</label>
 											<input type="password" name="password" id="password" placeholder="abc123" required="required">
 										</div>
-										<label for="VAT">Your VAT number (optionnal)</label>
+										<label for="VAT">Your VAT number (optional)</label>
 										<input type="text" name="VAT" id="VAT" placeholder="AB01234567890">
 										<label class="hidden error" id="signin-error"></label>
 									</div>
