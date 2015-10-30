@@ -42,6 +42,7 @@ $(function() {
 				'buyer_tax_number': $('#VAT').val(),
 				'buyer_credit_card_prefix': $('#cardNumberInput').val().substr(0,9),
 				'buyer_email': hoodie.account.username,
+				'email': hoodie.account.username,
 				'currency_code': currency,
 				'plan': subInfo.plan,
 				'coupon': subInfo.coupon
@@ -53,6 +54,7 @@ $(function() {
 				hoodie.stripe.customers.create({
 					'buyer_tax_number': $('#VAT').val(),
 					'buyer_email': hoodie.account.username,
+					'email': hoodie.account.username,
 					'plan': selectedPlan( 'free' , recurrence).plan
 				})
 				.then(function() {
@@ -68,6 +70,7 @@ $(function() {
 				hoodie.stripe.customers.create({
 					'buyer_tax_number': $('#VAT').val(),
 					'buyer_email': hoodie.account.username,
+					'email': hoodie.account.username,
 					'plan': selectedPlan( 'free' , recurrence).plan
 				})
 				.then(function() {
