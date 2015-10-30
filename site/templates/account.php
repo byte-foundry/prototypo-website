@@ -10,14 +10,31 @@
 					</header>
 
 					<section class="Article Section-fontsItemWrap">
-						<div class="signin subscribe no-account  no-hoodie-account">
+						<div id="wrap-sign-in" class="signin subscribe no-account no-hoodie-account">
 							<label for="login">Your email</label>
 							<input type="text" id="email-sign-in" name="login" placeholder="mj@domain.com"></input>
 							<label for="login">Password</label>
 							<input type="password" id="password-sign-in" name="password" placeholder="abc123"></input>
 							<label id="signin-error" for="" class="error hidden"></label>
-							<div id="sign-me-in" class="call-success callToAction marginBottom30">Sign in</div>
-							<div class="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style="color:white">Sign up</a></div>
+							<label class="reset-password-toggle right marginBottom30 textSize-title-small colorGray">Forgotten your password?</label>
+							<div class="marginTop30">
+								<div id="sign-me-in" class="call-success callToAction marginBottom30 marginRight15">Sign in</div>
+								<div class="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style="color:white">Sign up</a></div>
+							</div>
+						</div>
+						<div id="wrap-reset-password" class="hidden subscribe">
+							<label>Please fill the following input with the email address you've used to register.</label>
+							<input type="text" id="email-reset-password" name="login" placeholder="mj@domain.com"></input>
+							<label>We will send you a new password, and you will be able to change your password once connected in the profile panel.</label>
+							<label id="hoodie-error" for="" class="error hidden"></label>
+							<div id="hoodie-success" class="marginTop30 hidden">
+								<label for="" class="success-message">A new password was sent to <span id="user-email"><span></label>
+								<div class="reset-password-toggle call-success callToAction marginBottom30 marginRight15">Sign in</div>
+							</div>
+							<div id="reset-password-actions" class="marginTop30">
+								<div class="reset-password-toggle call-danger callToAction marginBottom30 marginRight15">Cancel</div>
+								<div id="reset-password" class="call-error callToAction marginBottom30 marginRight15">Reset</div>
+							</div>
 						</div>
 					</section>
 				</div>
@@ -59,7 +76,33 @@
 									<div id="error-create-customer" class="textType-txt textSize-txt-large marginBottom30 general-infos hidden">
 										There was an error during your subscription. We've subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.
 									</div>
-									<button id="change-subscription" class="change-subscription-toggle call-danger callToAction marginTop30 right clearfix account-plan-toggle-target">Change subscription</button>
+
+									<div id="wrap-change-password" class="change-password-toggle-target hidden subscribe marginBottom30 clearfix">
+										<label for="current-password">Please fill your current password</label>
+										<input type="password" id="current-password" name="current-password" placeholder="******"></input>
+										<div class="w50 left">
+											<label for="change-password-1">New password (at least 6 characters)</label>
+											<input type="password" id="new-password-1" name="change-password-1" placeholder="abc123"></input>
+										</div>
+										<div class="w50 left">
+											<label for="change-password-2">Type your new password again, as confirmation</label>
+											<input type="password" id="new-password-2" name="change-password-2" placeholder="abc123"></input>
+										</div>
+										<label id="password-success" for="" class="success-message hidden"></label>
+										<label id="password-error" for="" class="error hidden"></label>
+										<div class="change-password-actions clearfix right marginTop15">
+											<button class="change-password-toggle call-error callToAction marginRight15 account-plan-toggle-target">Cancel</button>
+											<button id="change-password" class="call-success callToAction account-plan-toggle-target">Submit new password</button>
+										</div>
+										<div class="change-password-actions hidden clearfix right marginTop15">
+											<button class="change-password-toggle call-error callToAction account-plan-toggle-target">Close</button>
+										</div>
+									</div>
+
+									<div class="clearfix right marginTop30">
+										<button class="change-password-toggle call-danger callToAction marginRight15 change-password-toggle-target">Change password</button>
+										<button id="change-subscription" class="change-subscription-toggle call-danger callToAction account-plan-toggle-target">Change subscription</button>
+									</div>
 								</div>
 							</div>
 

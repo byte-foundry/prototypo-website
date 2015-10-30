@@ -24,6 +24,63 @@ $(function() {
 			});
 	});
 
+	$('.reset-password-toggle').on('click', function() {
+		$('#wrap-reset-password').slideToggle();
+		$('#wrap-sign-in').slideToggle();
+	});
+
+	$('#reset-password').on('click', function() {
+		hoodie.account.resetPassword($('#email-reset-password').val())
+			.done(function(success) {
+				$('#hoodie-error').hide();
+				$('#reset-password-actions').hide();
+				$('#hoodie-error').text('');
+				$('#hoodie-success').show();
+				$('#user-email').text($('#email-reset-password').val());
+			})
+			.fail(function(error) {
+				$('#hoodie-error').show();
+				$('#hoodie-error').text(error.message);
+			})
+	});
+
+	$('.change-password-toggle').on('click', function() {
+		$('.change-password-toggle-target').slideToggle();
+	});
+
+	$('#change-password').on('click', function() {
+		$('#password-error').hide();
+		if ($('#new-password-1').val() === $('#new-password-2').val()) {
+			if ($('#new-password-1').val().length < 6) {
+				$('#password-error').show();
+				$('#password-error').text('Password must be at least 6 characters.');
+			} else {
+				hoodie.account.changePassword($('#current-password').val(), $('#new-password-1').val())
+					.done(function(success) {
+						$('#password-error').hide();
+						$('#password-error').text('');
+						$('#password-success').show();
+						$('#password-success').text('Your password was successfully changed.');
+						$('.change-password-actions').toggle();
+						hoodie.email.send({
+							from: "Prototypo <contact@prototypo.io>",
+							to: hoodie.account.username,
+							subject: "Your password was successfully changed.",
+							html: '<div style="font-size: 20px; margin-bottom: 50px;"><img src="https://pbs.twimg.com/profile_images/378800000637635122/9c0c585b61aed84d4f2684b9a455024a.png" width="100" height="100"/><br/><br/><br/><b>You’ve successfully changed your Prototypo password.</b><br/><br/>If you hadn’t request this change, please contact us.</div>'
+						});
+					})
+					.fail(function(error) {
+						$('#password-success').hide();
+						$('#password-error').show();
+						$('#password-error').text(error.message);
+					});
+			}
+		} else {
+			$('#password-error').show();
+			$('#password-error').text('Passwords do not match, please try again.');
+		}
+	});
+
 	if (sessionStorage.errorCreateCustomer) {
 		delete sessionStorage.errorCreateCustomer;
 		$('#error-create-customer').show();
