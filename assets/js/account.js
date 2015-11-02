@@ -24,6 +24,16 @@ $(function() {
 			});
 	});
 
+	$('.account-tabs-list li').on('click', function() {
+		var target = $(this).attr('id');
+		$('.account-tabs-list-item').removeClass('active');
+		$(this).addClass('active');
+		console.log(target);
+		$('.target-tab').hide();
+		$('#target-' + target).show();
+	});
+
+
 	$('.reset-password-toggle').on('click', function() {
 		$('#wrap-reset-password').slideToggle();
 		$('#wrap-sign-in').slideToggle();

@@ -947,6 +947,7 @@ header {
  * Page : Blog
  */
 .Article {
+	position: relative;
 	background: $colorWhite;
 	border-radius: $global-radius;
 	margin-bottom: 20px;
@@ -1614,6 +1615,79 @@ a.tos-link {
 		&:hover {
 			background-color: $mainBackgroundColor;
 			color: white;
+		}
+	}
+}
+
+body.account .Article {
+	padding: 20px 30px 30px !important;
+	box-shadow: 0 2px 20px #ccc;
+}
+
+.account-tabs {
+	&-list {
+		display: block;
+		float: right;
+		&-item {
+			font-size: 16px;
+			padding: 1em 2em;
+			background-color: white;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			display: inline-block;
+			margin-left: 5px;
+			position: relative;
+			&:hover {
+				background-color: $mainBackgroundColor;
+				color: white;
+				cursor: pointer;
+				font-weight: bold;
+			}
+			&.active {
+				z-index: 10;
+				font-weight: bold;
+			}
+		}
+	}
+}
+.target-tab {
+	display: none;
+}
+#target-tab-user {
+	display: block;
+}
+
+.list {
+	border: 1px solid $mainBackgroundColor;
+	&-item:nth-child(odd) {
+		background-color: lighten($mainBackgroundColor, 40%);
+	}
+	&-item {
+		background-color: lighten($mainBackgroundColor, 35%);
+		color: $mainBackgroundColor;
+		padding: 1em;
+		font-size: 1.8em !important;
+		&-date {
+			display: inline-block;
+			width: 20%;
+		}
+		&-text {
+
+		}
+		&-download {
+			float: right;
+			font-size: .8em;
+			&:hover {
+				font-weight: bold;
+				cursor: pointer;
+				&:after {
+					content: "⇧";
+					display: inline-block;
+					transform: rotate(180deg);
+					font-family: sans-serif;
+					margin-left: .5em;
+				}
+			}
 		}
 	}
 }
