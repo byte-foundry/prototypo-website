@@ -41,7 +41,7 @@ export default class BreadCrumb extends React.Component {
 				<Crumb label="Sign up" state="signup" current={this.state.current}/>
 				<Crumb label="Add a card" state="card" current={this.state.current} disabled={!this.state.user}/>
 				<Crumb label="Choose a plan" state="plan" current={this.state.current} disabled={!this.state.card}/>
-				<Crumb label="Confirmation" state="confirmation" current={this.state.current} disabled={!this.state.plan}/>
+				<Crumb label="Confirmation" state="confirmation" current={this.state.current} disabled={!this.state.plan || !this.state.card}/>
 			</div>
 		)
 	}

@@ -148,12 +148,8 @@ $(function() {
 
 			hoodie.stripe.customers.update({
 				source: response.id,
-<<<<<<< HEAD
 				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9),
 				currency_code: sessionStorage.payInEuro ? 'EUR' : 'USD'
-=======
-				buyer_credit_card_prefix: $('#cardNumberInput').val().substr(0,9)
->>>>>>> Rewriting subscription from with React
 			}).then(function(response) {
 				$('#success-card-message').show();
 				$('.account-card-form-toggle-target').hide();

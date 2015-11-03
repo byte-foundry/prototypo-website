@@ -37,6 +37,10 @@ export default class ConfirmationPanel extends React.Component {
 		})
 	}
 
+	componentWillUnmount() {
+		this.lifespan.release();
+	}
+
 	subscribe() {
 		this.client.dispatchAction('/subscribe');
 	}
