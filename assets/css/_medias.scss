@@ -101,7 +101,7 @@ only screen and (min-resolution:144dpi) {
 		background: lighten($colorBlack,20%);
 		overflow: hidden;
 		font-size: 0;
-		@include transition(all 400ms ease);
+		 transition:all 400ms ease;
 	}
 	.js-showMainNav .Nav-layout {
 		background: $colorBlack;

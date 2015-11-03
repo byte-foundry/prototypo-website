@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel": "^6.0.15",
+    "babel-polyfill": "^6.0.16",
+    "lifespan": "FranzPoize/lifespan#master",
+    "nexus-flux": "FranzPoize/nexus-flux#master",
+    "react-router": "^1.0.0-rc3",
+    "remutable": "FranzPoize/remutable#master"
+  },
   "devDependencies": {
     "babelify": "^6.4.0",
     "browser-sync": "^2.7.13",

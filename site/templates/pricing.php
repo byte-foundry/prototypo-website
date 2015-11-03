@@ -86,7 +86,7 @@
                                     echo '<a href="mailto:contact@prototypo.io" class="callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
                                 }
                                 else {
-        							echo '<a href="/pricing/subscribe" name="' . $pack['packname'] . '" class="choose-plan subscribe-page billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
+        							echo '<a href="/pricing/subscribe#/signup" name="' . $pack['packname'] . '" class="choose-plan subscribe-page billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
                                 }
                             ?>
 						</div>

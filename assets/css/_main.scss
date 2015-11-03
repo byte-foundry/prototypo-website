@@ -143,7 +143,7 @@ header {
 	background-repeat: no-repeat !important;
 	background-position: 112px center;
 	background-size: 18px !important;
-	transition: all 300ms ease;
+	 transition:all 300ms ease;
 }
 .Section-homepageGetStartedLineCallToAction:hover {
 	background-position: 117px center;
@@ -1484,56 +1484,9 @@ header {
 
 	display: none;
 
-	font-size: 1.4em;
-	vertical-align: top;
-    margin-top: 15px;
-    margin-right: 16px;
-    float: right;
-	.hoodieUsername {
-		padding: 10px 22px;
-	}
-	.logout {
-		padding: 8px 22px;
-		border-radius: 3px;
-		cursor: pointer;
-		border: 2px solid $secondBackgroundColor;
-		color: $secondBackgroundColor;
-		&:hover {
-			background-color: $secondBackgroundColor;
-			color: white;
-		}
-	}
-	a {
-		margin-left: 16px;
-		padding: 8px 22px;
-		margin-top: 0;
-	}
 }
 .no-account {
 
-	display: none;
-
-	padding: 0;
-	a {
-		padding: 8px 22px;
-		margin-top: 0;
-	}
-	.login {
-		display: inline-block;
-		font-size: 1.3em;
-		text-transform: uppercase;
-	    margin-right: 16px;
-		padding: 10px 22px 6px;
-		font-weight: bold;
-		border-radius: 3px;
-		cursor: pointer;
-		border: 2px solid $mainBackgroundColor;
-		color: $mainBackgroundColor;
-		&:hover {
-			background-color: $mainBackgroundColor;
-			color: white;
-		}
-	}
 }
 
 #alert-wrong-country {
@@ -1583,5 +1536,89 @@ a.tos-link {
 				color: $colorWhite;
 			}
 		}
+	}
+}
+
+.offline {
+	flex:0 0 350px;
+}
+
+.online {
+	flex:0 0 600px;
+}
+
+.header {
+	width: 350px;
+	transition: all .2s ease;
+	overflow: hidden;
+
+	&.is-online {
+		width:500px;
+	}
+
+	&-window {
+		display:flex;
+		flex-flow: row nowrap;
+		position:relative;
+		transition: all .2s ease;
+		
+		&.is-online {
+			left:-350px;
+		}
+	}
+
+	&-part {
+		display:flex;
+		flex-flow:row nowrap;
+
+		&-button {
+			padding: 8px 22px;
+			margin-top: 0;
+			margin-left: 16px;
+		}
+	}
+
+	
+	.login {
+		display: inline-block;
+		font-size: 1.3em;
+		text-transform: uppercase;
+		padding: 10px 22px 6px;
+		font-weight: bold;
+		border-radius: 3px;
+		cursor: pointer;
+		border: 2px solid $mainBackgroundColor;
+		color: $mainBackgroundColor;
+		&:hover {
+			background-color: $mainBackgroundColor;
+			color: white;
+		}
+	}
+}
+
+.bread-crumb {
+	display:flex;
+	flex-flow: row nowrap;
+	padding:10px 0;
+	font-size:16px;
+}
+
+.crumb {
+
+	margin-right:10px;
+
+	&-link {
+		color:black !important;
+	}
+
+	&.is-disabled {
+		background-color:darkgrey;
+		a {
+			pointer-events: none;
+		}
+	}
+
+	&.is-active {
+		background-color:orange;
 	}
 }

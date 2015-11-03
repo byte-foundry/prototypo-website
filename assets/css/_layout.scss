@@ -246,7 +246,7 @@ input[type="password"]:focus {
 
   @extend .hide-for-print;
   @extend .textType-callTo;
-  @include transition(all 200ms ease);
+   transition:all 200ms ease;
 }
 
 .callToAction:hover {
@@ -399,7 +399,7 @@ input[type="password"]:focus {
 	background:$colorWhite;
 	box-shadow:0 2px 0px rgba(0, 0, 0, 0.05);
 
-	@include transition(all 300ms ease)
+	 transition:all 300ms ease
 }
 
 .Social {
@@ -452,7 +452,7 @@ input[type="password"]:focus {
   letter-spacing: 1px;
   color: $colorDarkGray;
 
-  @include transition(all 300ms ease);
+   transition:all 300ms ease;
 }
 
 .Nav-layoutItemLink:hover,
@@ -466,7 +466,7 @@ input[type="password"]:focus {
   border-radius: $global-radius;
   border: solid 1px $colorLighterGray;
 
-  @include transition(all 300ms ease);
+   transition:all 300ms ease;
 }
 
 .Nav-layoutItemLoginLink:hover {
@@ -544,7 +544,7 @@ input[type="password"]:focus {
 .Footer-copyright a {
   color:$colorDarkGray;
 
-  @include transition(all 300ms ease);
+   transition:all 300ms ease;
 }
 
 .Footer-copyright a:hover {
@@ -596,7 +596,7 @@ input[type="password"]:focus {
   letter-spacing: 1px;
   color: $colorDarkGray;
 
-  @include transition(all 300ms ease);
+   transition:all 300ms ease;
 }
 
 .Footer-Nav-layoutItem {
@@ -615,7 +615,7 @@ input[type="password"]:focus {
   border-radius: $global-radius;
   border: solid 1px $colorLighterGray;
 
-  @include transition(all 300ms ease);
+   transition:all 300ms ease;
 }
 
 .Footer-Nav-layoutItemLoginLink:hover {

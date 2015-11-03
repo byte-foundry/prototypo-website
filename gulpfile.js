@@ -56,11 +56,14 @@ gulp.task('serve', ['sass'], function() {
 });
 
 watchify.args.debug = true;
+watchify.args.extensions = ['.jsx', '.js'];
 var bundler = watchify(browserify('./assets/js/app.jsx', watchify.args));
 
 // Babel transform
 bundler.transform(babelify.configure({
-    sourceMapRelative: '.'
+	sourceMapRelative: '.',
+	stage: 0,
+	extensions: ['.jsx', '.js']
 }));
 
 // On updates recompile
