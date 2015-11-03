@@ -174,22 +174,22 @@ input:focus {
 }
 
 
-input[type="text"],
-input[type="password"] {
-  border-radius:$global-radius;
-  background:$colorWhite;
-  outline:none;
-  color:$colorDarkGray;
-  font-size:16px;
-  font-family:$mainFont, inherit;
-  padding:10px 18px 7px 18px;
-  display:inline-block;
-  border:none;
-  border-bottom:solid 3px $colorWhite;
-  height:auto;
-  margin:0 0 10px 0;
-  width:auto;
-}
+// input[type="text"],
+// input[type="password"] {
+//   border-radius:$global-radius;
+//   background:$colorWhite;
+//   outline:none;
+//   color:$colorDarkGray;
+//   font-size:16px;
+//   font-family:$mainFont, inherit;
+//   padding:10px 18px 7px 18px;
+//   display:inline-block;
+//   border:none;
+//   border-bottom:solid 3px $colorWhite;
+//   height:auto;
+//   margin:0 0 10px 0;
+//   width:auto;
+// }
 
 
 input[type="text"]:focus,
@@ -428,6 +428,9 @@ input[type="password"]:focus {
 }
 
 
+.Nav {
+	height: inherit;
+}
 
 .Nav-layout {
   display: inline-block;

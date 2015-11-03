@@ -1,0 +1,19 @@
+.input {
+	&[type="text"],
+	input[type="password"] {
+		width: 100%;
+		background-color: $colorLighterGray;
+		height: 4em;
+
+		border-radius: 3px;
+		outline: none;
+		color: #787878;
+		font-size: 16px;
+		font-family: "PT Sans", sans-serif, inherit;
+		padding: 10px 18px 7px 18px;
+		display: inline-block;
+		border: none;
+		border-bottom: solid 3px white;
+		margin: 0 0 20px 0;
+	}
+}

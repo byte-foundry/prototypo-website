@@ -1391,26 +1391,26 @@ header {
 		border-bottom: 3px solid $mainBackgroundColor !important;
 	}
 
-	input[type="email"],
-	input[type="text"],
-	input[type="password"],
-	input[type="number"],
-	select {
-		width: 100%;
-		background-color: $colorLighterGray;
-		height: 4em;
-
-		border-radius: 3px;
-		outline: none;
-		color: #787878;
-		font-size: 16px;
-		font-family: "PT Sans", sans-serif, inherit;
-		padding: 10px 18px 7px 18px;
-		display: inline-block;
-		border: none;
-		border-bottom: solid 3px white;
-		margin: 0 0 20px 0;
-	}
+	// input[type="email"],
+	// input[type="text"],
+	// input[type="password"],
+	// input[type="number"],
+	// select {
+	// 	width: 100%;
+	// 	background-color: $colorLighterGray;
+	// 	height: 4em;
+	//
+	// 	border-radius: 3px;
+	// 	outline: none;
+	// 	color: #787878;
+	// 	font-size: 16px;
+	// 	font-family: "PT Sans", sans-serif, inherit;
+	// 	padding: 10px 18px 7px 18px;
+	// 	display: inline-block;
+	// 	border: none;
+	// 	border-bottom: solid 3px white;
+	// 	margin: 0 0 20px 0;
+	// }
 
 	select,
 	input.small {
@@ -1547,10 +1547,15 @@ a.tos-link {
 	flex:0 0 600px;
 }
 
+#header-container {
+	height: inherit;
+}
+
 .header {
 	width: 350px;
 	transition: all .2s ease;
 	overflow: hidden;
+	height: 100%;
 
 	&.is-online {
 		width:500px;
@@ -1559,9 +1564,12 @@ a.tos-link {
 	&-window {
 		display:flex;
 		flex-flow: row nowrap;
+		height: 100%;
+		align-items: center;
+
 		position:relative;
 		transition: all .2s ease;
-		
+
 		&.is-online {
 			left:-350px;
 		}
@@ -1578,7 +1586,7 @@ a.tos-link {
 		}
 	}
 
-	
+
 	.login {
 		display: inline-block;
 		font-size: 1.3em;

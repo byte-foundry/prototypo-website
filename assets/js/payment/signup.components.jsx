@@ -61,15 +61,15 @@ export default class SignupPanel extends React.Component {
 			)
 		}
 
-		const error = this.state.errors ? 
+		const error = this.state.errors ?
 					<p className="signup-panel-error">{this.state.errors.message}</p> : false;
 		return (
 			<div className="signup-panel">
 				<form onSubmit={(e) => {this.signUp(e)}}>
 					<label htmlFor="username">Username</label>
-					<input id="username" name="username" ref="username" type="text"></input>
+					<input className="input" id="username" name="username" ref="username" type="text"></input>
 					<label htmlFor="password">Password</label>
-					<input id="password" name="password" ref="password" type="password"></input>
+					<input className="input" id="password" name="password" ref="password" type="password"></input>
 					{error}
 					<button type="submit">Sign up</button>
 				</form>

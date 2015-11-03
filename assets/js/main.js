@@ -94,5 +94,4 @@ $(function() {
 		return (number < 10) ? '0' + number.toString() : number.toString();
 	}
 
-	window.setupPayment();
 });

@@ -4,5 +4,6 @@ $(function() {
 		return;
 	}
 
+	window.setupPayment();
 
 });
