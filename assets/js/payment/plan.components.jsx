@@ -126,8 +126,8 @@ export default class PlanPanel extends React.Component {
 						</label>
 					</div>
 				</div>
-				{error}
-				<button onClick={() => { this.confirmPlan() }}>Checkout</button>
+				<p className="message message-error">{error}</p>
+				<button className="form-label btn-success marginTop30" onClick={() => { this.confirmPlan() }}>Checkout</button>
 			</div>
 		)
 	}

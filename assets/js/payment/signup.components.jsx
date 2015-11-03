@@ -55,7 +55,7 @@ export default class SignupPanel extends React.Component {
 		if (this.state.username) {
 			return (
 				<div className="signedin-panel">
-					<p>You're already signed in as {this.state.username}</p>
+					<p className="message message-success">You're already signed in as {this.state.username}</p>
 					<a href="#/card">Add a card now</a><a href={`http://app.prototypo.io`}>Or try the app for free now</a>
 				</div>
 			)
@@ -66,12 +66,12 @@ export default class SignupPanel extends React.Component {
 		return (
 			<div className="signup-panel">
 				<form onSubmit={(e) => {this.signUp(e)}}>
-					<label htmlFor="username">Username</label>
-					<input className="input" id="username" name="username" ref="username" type="text"></input>
-					<label htmlFor="password">Password</label>
-					<input className="input" id="password" name="password" ref="password" type="password"></input>
-					{error}
-					<button type="submit">Sign up</button>
+					<label className="form-label" htmlFor="username">Username</label>
+					<input className="form-input" id="username" name="username" ref="username" type="text"></input>
+					<label className="form-label" htmlFor="password">Password</label>
+					<input className="form-input" id="password" name="password" ref="password" type="password"></input>
+					<p className="message message-error">{error}</p>
+					<button className="form-input btn-success marginTop30" type="submit">Sign up</button>
 				</form>
 			</div>
 		)

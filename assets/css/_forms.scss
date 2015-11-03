@@ -1,19 +1,118 @@
-.input {
-	&[type="text"],
-	input[type="password"] {
-		width: 100%;
-		background-color: $colorLighterGray;
-		height: 4em;
+.form-label {
+	margin-bottom: 1em;
+	line-height: 1.4;
 
-		border-radius: 3px;
+	font-size: 16px;
+	font-family: "PT Sans", sans-serif, inherit;
+	color: $colorDarkGray;
+	background-color: transparent;
+
+	&.error {
+		font-size: 20px;
+	}
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="number"],
+select {
+
+	&.form-input {
+
+		// remove chrome autocompletion color
+		&:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0px 1000px $colorLighterGray inset;
+		}
+
+		border-radius: 5px;
 		outline: none;
+		width: 100%;
+		height: 4em;
+		background-color: $colorLighterGray;
+
 		color: #787878;
 		font-size: 16px;
 		font-family: "PT Sans", sans-serif, inherit;
-		padding: 10px 18px 7px 18px;
+		padding: 8px 18px;
 		display: inline-block;
 		border: none;
 		border-bottom: solid 3px white;
 		margin: 0 0 20px 0;
+
+		&.small {
+			width: calc(50% - 20px);
+			margin-right: 10px;
+		}
+	}
+}
+
+.btn {
+
+	&.link {
+		padding: 1.5em 3em;
+		height: auto;
+		text-decoration: none !important;
+		&:hover {
+			background-color: white;
+			color: $mainBackgroundColor;
+			border: 3px solid $mainBackgroundColor;
+		}
+	}
+
+	&-success,
+	&-success[type="submit"],
+	&-danger,
+	&-danger[type="submit"] {
+		display: inline-block;
+		width: auto;
+		height: 4em;
+		border-radius: 5px;
+		margin-right: 15px;
+
+		font-size: 16px;
+		font-weight: bold;
+		color: $colorDark;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	&-success,
+	&-success[type="submit"],
+	&-success &.link {
+		background-color: $mainBackgroundColor;
+		border: 3px solid transparent;
+
+		&:hover {
+			background-color: white;
+			color: $mainBackgroundColor;
+			border: 3px solid $mainBackgroundColor;
+		}
+	}
+
+
+
+	&-danger,
+	&-danger[type="submit"] {
+		background-color: $thirdBackgroundColor;
+		border: 3px solid transparent;
+
+		&:hover {
+			background-color: white;
+			color: $thirdBackgroundColor;
+			border: 3px solid $thirdBackgroundColor;
+		}
+	}
+}
+
+.message {
+	font-size: 24px;
+
+	&-success {
+		color: $mainBackgroundColor;
+	}
+
+	&-error {
+		color: $secondBackgroundColor;
 	}
 }

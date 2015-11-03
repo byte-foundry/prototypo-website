@@ -57,7 +57,7 @@ export default class Header extends React.Component {
 					</div>
 					<div className="header-part online hide-for-small-only">
 						<div className="hoodie-part-username">
-							Welcome back <span className="" id="hoodieUsername">{this.state.username}</span>
+							Welcome back <span className="" id="hoodieUsername">{this.state.username}!</span>
 						</div>
 						<div className="hoodie-part-success">
 							<a href="/account" className="callToAction call-success header-part-button">

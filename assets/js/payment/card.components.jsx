@@ -61,12 +61,16 @@ export default class CardPanel extends React.Component {
 		if (this.state.card) {
 			return (
 				<div className="card-panel">
-					<p>You already added a card</p>
-					<p>Card number</p>
-					<p>**** **** **** {this.state.card.last4}</p>
-					<p>Exp. date</p>
-					<p>{this.state.card.exp_month}/{this.state.card.exp_year}</p>
-					<a href="#/plan">Now choose a plan</a>
+					<p className="message message-success">You already added a card</p>
+					<div className="w50 left">
+						<p className="form-label">Card number</p>
+						<p className="user-infos">**** **** **** {this.state.card.last4}</p>
+					</div>
+					<div className="w50 left">
+						<p className="form-label">Expiration date</p>
+						<p className="user-infos">{this.state.card.exp_month}/{this.state.card.exp_year}</p>
+					</div>
+					<a className="btn link btn-success marginTop30" href="#/plan">Now choose a plan</a>
 				</div>
 			)
 		}
@@ -77,38 +81,46 @@ export default class CardPanel extends React.Component {
 		return (
 			<div className="card-panel">
 				<form onSubmit={(e) => {this.createCard(e)}}>
-					<label htmlFor="card-number">Card number</label>
-					<input type="text" ref="cardNumber" id="card-number" name="card-number"></input>
-					<label>Exp. date</label>
-					<select ref="expMonth" className="small" name="creditCardExpMonthInput" id="creditCardExpMonthInput" placeholder="01" required="required">
-						<option value="" disabled selected>Month</option>
-						<option value="1">01</option>
-						<option value="2">02</option>
-						<option value="3">03</option>
-						<option value="4">04</option>
-						<option value="5">05</option>
-						<option value="6">06</option>
-						<option value="7">07</option>
-						<option value="8">08</option>
-						<option value="9">09</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-					</select>
-					<select ref="expYear" className="small" name="creditCardExpYearInput" id="creditCardExpYearInput" placeholder="2018" required="required">
-						<option value="" disabled selected>Year</option>
-						<option value="2015">2015</option>
-						<option value="2016">2016</option>
-						<option value="2017">2017</option>
-						<option value="2018">2018</option>
-						<option value="2019">2019</option>
-						<option value="2020">2020</option>
-					</select>
-					<label for="cvcInput">CVC</label>
-					<input className="small" ref="cvc" type="number" name="cvcInput" id="cvcInput" placeholder="123" required="required"></input>
-					{error}
-					<button type="submit">Add my card</button>
-					<button onClick={(e) => { this.tryForFree(e)}}>I just want to try for free !</button>
+					<label className="form-label" htmlFor="card-number">Card number</label>
+					<input className="form-input" type="text" ref="cardNumber" id="card-number" name="card-number"></input>
+					<div className="clearfix">
+						<div className="w50 left">
+							<label className="form-label">Exp. date</label>
+							<select ref="expMonth" className="form-input small" name="creditCardExpMonthInput" id="creditCardExpMonthInput" placeholder="01" required="required">
+								<option value="" disabled selected>Month</option>
+								<option value="1">01</option>
+								<option value="2">02</option>
+								<option value="3">03</option>
+								<option value="4">04</option>
+								<option value="5">05</option>
+								<option value="6">06</option>
+								<option value="7">07</option>
+								<option value="8">08</option>
+								<option value="9">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<select ref="expYear" className="form-input small" name="creditCardExpYearInput" id="creditCardExpYearInput" placeholder="2018" required="required">
+								<option value="" disabled selected>Year</option>
+								<option value="2015">2015</option>
+								<option value="2016">2016</option>
+								<option value="2017">2017</option>
+								<option value="2018">2018</option>
+								<option value="2019">2019</option>
+								<option value="2020">2020</option>
+							</select>
+						</div>
+						<div className="w50 left">
+							<label className="form-label" for="cvcInput">CVC</label>
+							<input className="form-input small" ref="cvc" type="number" name="cvcInput" id="cvcInput" placeholder="123" required="required"></input>
+						</div>
+					</div>
+					<p className="message message-error">{error}</p>
+					<div className="marginTop30">
+						<button className="form-label btn-success" type="submit">Add my card</button>
+						<button className="form-label btn-danger" onClick={(e) => { this.tryForFree(e)}}>I just want to try for free!</button>
+					</div>
 				</form>
 			</div>
 		)

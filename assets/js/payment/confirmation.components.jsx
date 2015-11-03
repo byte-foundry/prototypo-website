@@ -47,25 +47,28 @@ export default class ConfirmationPanel extends React.Component {
 
 	render() {
 		const error = this.state.error ? (
-			<div className="errors">{this.state.error.message}</div>
+			<div className="message message-error">{this.state.error.message}</div>
 		) : false;
 
 		return (
 			<div className="confirmation-panel">
 				<div className="confirmation-panel-subscription">
-					<p>You chose {this.state.plan.name}.</p>
-					<p>You will be charged every {this.state.plan.recurrence} the following amount :</p>
-					<p>{this.state.plan.realAmount}</p>
+					<p className="message message-success marginBottom30">You chose {this.state.plan.name}.</p>
+					<p className="form-label">You will be charged every {this.state.plan.recurrence} the following amount :</p>
+					<p className="user-infos">{this.state.plan.realAmount}</p>
 				</div>
-				<div className="confirmation-panel-card">
-					<p>This is the card that will be used</p>
-					<p>Card number</p>
-					<p>**** **** **** {this.state.card.last4}</p>
-					<p>Exp. date</p>
-					<p>{this.state.card.exp_month}/{this.state.card.exp_year}</p>
+				<div className="confirmation-panel-card clearfix marginTop30">
+					<div className="w50 left">
+						<p className="form-label">Card number</p>
+						<p className="user-infos">**** **** **** {this.state.card.last4}</p>
+					</div>
+					<div className="w50 left">
+						<p className="form-label">Expiration date</p>
+						<p className="user-infos">{this.state.card.exp_month}/{this.state.card.exp_year}</p>
+					</div>
 				</div>
-				{error}
-				<button onClick={() => { this.subscribe() }} >Subscribe to prototypo</button>
+				<p className="message message-error">{error}</p>
+				<button className="form-label btn-success marginTop30" onClick={() => { this.subscribe() }} >Subscribe to prototypo</button>
 			</div>
 		)
 	}

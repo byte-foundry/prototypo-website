@@ -38,10 +38,10 @@ export default class BreadCrumb extends React.Component {
 	render() {
 		return (
 			<div className="bread-crumb">
-				<Crumb label="Sign up" state="signup" current={this.state.current}/>
-				<Crumb label="Add a card" state="card" current={this.state.current} disabled={!this.state.user}/>
-				<Crumb label="Choose a plan" state="plan" current={this.state.current} disabled={!this.state.card}/>
-				<Crumb label="Confirmation" state="confirmation" current={this.state.current} disabled={!this.state.plan || !this.state.card}/>
+				<Crumb step="1" label="Sign up" state="signup" current={this.state.current}/>
+				<Crumb step="2" label="Add a card" state="card" current={this.state.current} disabled={!this.state.user}/>
+				<Crumb step="3" label="Choose a plan" state="plan" current={this.state.current} disabled={!this.state.card}/>
+				<Crumb step="4" label="Confirmation" state="confirmation" current={this.state.current} disabled={!this.state.plan || !this.state.card}/>
 			</div>
 		)
 	}
@@ -56,11 +56,12 @@ class Crumb extends React.Component {
 		});
 
 		return (
-			<div className={classes}>
-				<a className="crumb-link" href={`#/${this.props.state}`}>
+			<a className={classes} href={`#/${this.props.state}`}>
+				<span className="crumb-step">{this.props.step}</span>
+				<div className="crumb-link">
 					{this.props.label}
-				</a>
-			</div>
+				</div>
+			</a>
 		)
 	}
 }

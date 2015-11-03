@@ -37,11 +37,11 @@
 .hidden {
 	display: none;
 }
-
-.success-message {
-	font-size: 20px;
-	color: $mainBackgroundColor;
-}
+//
+// .success-message {
+// 	font-size: 20px;
+// 	color: $mainBackgroundColor;
+// }
 
 p {
 	line-height: 1.4;
@@ -1567,6 +1567,8 @@ a.tos-link {
 		height: 100%;
 		align-items: center;
 
+		font-size: 16px;
+
 		position:relative;
 		transition: all .2s ease;
 
@@ -1578,11 +1580,23 @@ a.tos-link {
 	&-part {
 		display:flex;
 		flex-flow:row nowrap;
+		height: 100%;
+		align-items: center;
 
 		&-button {
 			padding: 8px 22px;
 			margin-top: 0;
 			margin-left: 16px;
+		}
+
+		.hoodie {
+			&-part {
+				&-username {
+					max-width: 150px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+			}
 		}
 	}
 
@@ -1607,26 +1621,70 @@ a.tos-link {
 .bread-crumb {
 	display:flex;
 	flex-flow: row nowrap;
-	padding:10px 0;
+	padding: 30px 0 50px;
 	font-size:16px;
+	flex-wrap: wrap;
 }
 
 .crumb {
 
-	margin-right:10px;
+	flex-grow: 1;
+	&:last-child {
+		margin-right: 0;
+	}
+
+	margin-right: 20px;
+	border-radius: 5px;
+	position: relative;
+	padding: 1.5em;
+	background-color: lighten($mainBackgroundColor, 35%);
+
+	&:hover {
+		background-color: lighten($mainBackgroundColor, 15%);
+		text-decoration: none !important;
+	}
+
+	&-step {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		padding: 1.5em 1em;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+
+		background-color: $mainBackgroundColor;
+		font-weight: bold;
+		color: white;
+	}
 
 	&-link {
-		color:black !important;
+		color: $colorDark !important;
+		margin-left: 2.2em;
 	}
 
 	&.is-disabled {
-		background-color:darkgrey;
-		a {
+		background-color: $colorLighterGray;
+		.crumb-step {
+			color: white;
+			background-color: lighten($mainBackgroundColor, 25%);
+		}
+		&-link {
 			pointer-events: none;
+		}
+		&:hover {
+			cursor: default;
 		}
 	}
 
 	&.is-active {
-		background-color:orange;
+		background-color: lighten($mainBackgroundColor, 15%);
+		.crumb-step {
+			color: white;
+			background-color: $mainBackgroundColor;
+		}
+		&-link {
+			font-weight: bold;
+		}
 	}
 }
