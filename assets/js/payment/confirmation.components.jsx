@@ -52,10 +52,14 @@ export default class ConfirmationPanel extends React.Component {
 
 		return (
 			<div className="confirmation-panel">
-				<div className="confirmation-panel-subscription">
+				<div className="confirmation-panel-subscription marginBottom30 clearfix">
 					<p className="message message-success marginBottom30">You chose {this.state.plan.name}.</p>
-					<p className="form-label">You will be charged every {this.state.plan.recurrence} the following amount :</p>
-					<p className="user-infos">{this.state.plan.realAmount}</p>
+					<div className="w50 left">
+						<p className="form-label">You will be charged every {this.state.plan.recurrence} the following amount :</p>
+					</div>
+					<div className="w50 left">
+						<p className="user-infos">{this.state.plan.realAmount}</p>
+					</div>
 				</div>
 				<div className="confirmation-panel-card clearfix marginTop30">
 					<div className="w50 left">
@@ -68,7 +72,7 @@ export default class ConfirmationPanel extends React.Component {
 					</div>
 				</div>
 				<p className="message message-error">{error}</p>
-				<button className="form-label btn-success marginTop30" onClick={() => { this.subscribe() }} >Subscribe to prototypo</button>
+				<button className="form-label btn-success marginTop30" onClick={() => { this.subscribe() }} >I confirm my subscription</button>
 			</div>
 		)
 	}

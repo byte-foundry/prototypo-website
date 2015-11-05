@@ -881,9 +881,9 @@ var ConfirmationPanel = (function (_React$Component) {
 
 			var error = this.state.error ? _react2['default'].createElement('div', { className: 'message message-error' }, this.state.error.message) : false;
 
-			return _react2['default'].createElement('div', { className: 'confirmation-panel' }, _react2['default'].createElement('div', { className: 'confirmation-panel-subscription' }, _react2['default'].createElement('p', { className: 'message message-success marginBottom30' }, 'You chose ', this.state.plan.name, '.'), _react2['default'].createElement('p', { className: 'form-label' }, 'You will be charged every ', this.state.plan.recurrence, ' the following amount :'), _react2['default'].createElement('p', { className: 'user-infos' }, this.state.plan.realAmount)), _react2['default'].createElement('div', { className: 'confirmation-panel-card clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Card number'), _react2['default'].createElement('p', { className: 'user-infos' }, '**** **** **** ', this.state.card.last4)), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Expiration date'), _react2['default'].createElement('p', { className: 'user-infos' }, this.state.card.exp_month, '/', this.state.card.exp_year))), _react2['default'].createElement('p', { className: 'message message-error' }, error), _react2['default'].createElement('button', { className: 'form-label btn-success marginTop30', onClick: function onClick() {
+			return _react2['default'].createElement('div', { className: 'confirmation-panel' }, _react2['default'].createElement('div', { className: 'confirmation-panel-subscription marginBottom30 clearfix' }, _react2['default'].createElement('p', { className: 'message message-success marginBottom30' }, 'You chose ', this.state.plan.name, '.'), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'You will be charged every ', this.state.plan.recurrence, ' the following amount :')), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'user-infos' }, this.state.plan.realAmount))), _react2['default'].createElement('div', { className: 'confirmation-panel-card clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Card number'), _react2['default'].createElement('p', { className: 'user-infos' }, '**** **** **** ', this.state.card.last4)), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Expiration date'), _react2['default'].createElement('p', { className: 'user-infos' }, this.state.card.exp_month, '/', this.state.card.exp_year))), _react2['default'].createElement('p', { className: 'message message-error' }, error), _react2['default'].createElement('button', { className: 'form-label btn-success marginTop30', onClick: function onClick() {
 					_this2.subscribe();
-				} }, 'Subscribe to prototypo'));
+				} }, 'I confirm my subscription'));
 		}
 	}]);
 
@@ -1254,7 +1254,7 @@ var SignupPanel = (function (_React$Component) {
 			var _this2 = this;
 
 			if (this.state.username) {
-				return _react2['default'].createElement('div', { className: 'signedin-panel' }, _react2['default'].createElement('p', { className: 'message message-success' }, 'You\'re already signed in as ', this.state.username), _react2['default'].createElement('a', { href: '#/card' }, 'Add a card now'), _react2['default'].createElement('a', { href: 'http://app.prototypo.io' }, 'Or try the app for free now'));
+				return _react2['default'].createElement('div', { className: 'signedin-panel' }, _react2['default'].createElement('p', { className: 'message message-success' }, 'You\'re already signed in as ', this.state.username), _react2['default'].createElement('p', { className: 'message marginTop30' }, _react2['default'].createElement('a', { className: 'btn btn-success link', href: '#/card' }, 'Add a card now'), 'Or', _react2['default'].createElement('a', { className: 'btn btn-danger link marginLeft15', href: 'http://app.prototypo.io' }, 'Try the app for free now')));
 			}
 
 			var error = this.state.errors ? _react2['default'].createElement('p', { className: 'signup-panel-error' }, this.state.errors.message) : false;
@@ -1341,7 +1341,7 @@ var SuccessPanel = (function (_React$Component) {
 		value: function render() {
 
 			var bt = JSON.parse(localStorage._hoodie_config)['_account.bearerToken'];
-			return _react2['default'].createElement('div', { className: 'success-panel' }, _react2['default'].createElement('p', { className: 'message message-success' }, 'Thank you for subscribing to Prototypo!'), _react2['default'].createElement('a', { href: 'http://app.prototypo.io?bt=' + bt }, 'Access Prototypo now'));
+			return _react2['default'].createElement('div', { className: 'success-panel' }, _react2['default'].createElement('p', { className: 'message message-success' }, 'Thank you for subscribing to Prototypo!'), _react2['default'].createElement('a', { className: 'btn btn-success link marginTop30', href: 'http://app.prototypo.io?bt=' + bt }, 'Access Prototypo now'));
 		}
 	}]);
 

@@ -15,7 +15,7 @@
 						<?php echo $page->text()->kirbytext() ?>
 					</div>
 
-					<div id="payment-container" class="Section-wrapTxt textType-txt">
+					<div id="payment-container" class="textType-txt">
 					</div>
 
 				</section>
