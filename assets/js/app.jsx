@@ -1,7 +1,7 @@
 require('babel-polyfill');
 import React from 'react';
 import {render} from 'react-dom';
-import {Router, Route, Link} from 'react-router';
+import {Router, Route, IndexRoute} from 'react-router';
 import SignupPanel from './payment/signup.components.jsx';
 import BreadCrumb from './payment/breadcrumb.components.jsx';
 import CardPanel from './payment/card.components.jsx';
@@ -12,6 +12,10 @@ import Remutable from 'remutable';
 import {LocalClient, LocalServer} from './stores/local-client-server.stores.jsx';
 import Header from './account/header.components.jsx';
 import currencyService from './services/currency.services.jsx';
+import Account from './account/account.components.jsx';
+import UserPanel from './account/user.components.jsx';
+import SubscriptionPanel from './account/subscription.components.jsx';
+import FontPanel from './account/font.components.jsx';
 
 Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
@@ -102,6 +106,42 @@ const actions = {
 				const patch = errors.set('signup', err).commit();
 				localServer.dispatchUpdate('/errors', patch);
 			});
+	},
+	'/sign-in': ({username, password}) => {
+		hoodie.account.signIn(username, password)
+			.done((username) => {
+
+				hoodie.stripe.customers.retrieve()
+					.then((data) => {
+						const patch = userInfos
+							.set('card', data.sources.data ? data.sources.data[0] : undefined)
+							.set('plan',``)
+							.set('username', hoodie.account.username)
+							.commit();
+						localServer.dispatchUpdate('/userInfos', patch);
+					})
+					.catch((err) => {
+						const patch = errors.set('signin', err).commit();
+						localServer.dispatchUpdate('/errors', patch);
+					});
+			})
+			.fail((err) => {
+				const patch = errors.set('signin', err).commit();
+				localServer.dispatchUpdate('/errors', patch);
+			});
+	},
+	'/reset-password': ({username}) => {
+		hoodie.account.resetPassword(username)
+		.then(() => {
+			const patchError = errors.set('passwordReset', undefined).commit();
+			localServer.dispatchUpdate('/errors', patchError);
+			const patch = userInfos.set('passwordReset', true).commit();
+			localServer.dispatchUpdate('/userInfos', patch);
+		})
+		.catch((err) => {
+			const patch = errors.set('passwordReset', err).commit();
+			localServer.dispatchUpdate('/errors', patch);
+		});
 	},
 	'/logout': () => {
 		hoodie.account.signOut()
@@ -257,4 +297,17 @@ window.setupPayment = () => {
 			</Route>
 		</Router>
 	), document.getElementById('payment-container'));
+}
+
+window.setupAccount = () => {
+	render((
+		<Router>
+			<Route path="/" component={Account}>
+				<IndexRoute component={UserPanel}/>
+				<Route path="user" component={UserPanel}/>
+				<Route path="account" component={SubscriptionPanel}/>
+				<Route path="app" component={FontPanel}/>
+			</Route>
+		</Router>
+	), document.getElementById('account-container'));
 }

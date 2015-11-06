@@ -4,7 +4,9 @@
 		<section class="Section Section-parametricDesignTool">
 
 			<div class="fitToContent clearfix">
-				<div class="no-account no-hoodie-account">
+				<div id="account-container">
+				</div>
+				<!--<div class="no-account no-hoodie-account">
 					<header class="PageHeader text-left fitToContent">
 						<h1 class="textType-title textSize-title-large">Sign in</h1>
 					</header>
@@ -226,7 +228,7 @@
 						</section>
 
 					</div>
-				</div>
+				</div>-->
 
 			</div>
 

@@ -4,7 +4,9 @@ $(function() {
 		return;
 	}
 
-	var recurrence = sessionStorage.recurrence || 'annual';
+	window.setupAccount();
+
+	/*var recurrence = sessionStorage.recurrence || 'annual';
 
 	getHoodieInfo();
 
@@ -197,5 +199,5 @@ $(function() {
 		$('#no-account').css('display','block');
 		$('.signin').css('display','block');
 		$('.register').css('display','none');
-	});
+		});*/
 });
