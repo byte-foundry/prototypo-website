@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import Lifespan from 'lifespan';
 
@@ -16,6 +17,10 @@ export default class UserPanel extends React.Component {
 			.onUpdate(({head}) => {
 				this.setState({
 					user: head.toJS().username || false,
+					lastName: head.toJS().lastName,
+					firstName: head.toJS().firstName,
+					website: head.toJS().website,
+					twitter: head.toJS().twitter,
 				});
 			})
 			.onDelete(() => {
@@ -27,15 +32,32 @@ export default class UserPanel extends React.Component {
 		this.lifespan.release();
 	}
 
+	updateUser(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		this.client.dispatchAction('/update-user', {
+			firstName: ReactDOM.findDOMNode(this.refs.firstName).value,
+			lastName: ReactDOM.findDOMNode(this.refs.lastName).value,
+			website: ReactDOM.findDOMNode(this.refs.website).value,
+			twitter: ReactDOM.findDOMNode(this.refs.twitter).value,
+		});
+	}
+
+	handleUserChange(e, name) {
+		this.setState({
+			[name]: e.target.value,
+		});
+	}
+
 	render() {
 		return (
 			<div className="user-panel">
 				<div className="clearfix">
 					<div className="clearfix subscribe">
-						<p className="textSize-title-small">Your details:</p>
+						<p className="textSize-title-small">Your details</p>
 						<div className="marginTop15">
 							<div className="clearfix">
-								<label for="email">Your email:</label>
+								<label for="email">Your email</label>
 								<div className="user-infos marginTop15 marginBottom15" id="logged-in-email">{this.state.user}</div>
 							</div>
 
@@ -61,29 +83,32 @@ export default class UserPanel extends React.Component {
 								</div>
 							</div>
 
-							<p className="textSize-title-xsmall marginTop30 marginBottom30 colorDarkGray">All following details are optional:</p>
-							<div className="clearfix ">
-								<div className="w50 left">
-									<label for="first-name">First name:</label>
-									<input type="text" id="first-name" name="first-name" placeholder="MJ"></input>
+							<p className="textSize-title-xsmall marginTop30 marginBottom30 colorDarkGray">All following details are optional</p>
+							<form onSubmit={(e) => { this.updateUser(e) }}>
+								<div className="clearfix ">
+									<div className="w50 left">
+										<label for="first-name" className="form-label">First name</label>
+										<input type="text" ref="firstName" id="first-name" name="first-name" className="form-input" placeholder="MJ" value={this.state.firstName} onChange={(e) => {this.handleUserChange(e, 'firstName')}}></input>
+									</div>
+									<div className="w50 left">
+										<label for="last-name" className="form-label">Last name</label>
+										<input type="text" ref="lastName" id="last-name" name="last-name" className="form-input" placeholder="Cat" value={this.state.lastName} onChange={(e) => {this.handleUserChange(e, 'lastName')}}></input>
+									</div>
 								</div>
 								<div className="w50 left">
-									<label for="last-name">Last name:</label>
-									<input type="text" id="last-name" name="last-name" placeholder="Cat"></input>
+									<label for="user-website" className="form-label">Your website</label>
+									<input type="text" ref="website" id="user-website" name="user-website" className="form-input" placeholder="www.mywebsite.com" value={this.state.website} onChange={(e) => {this.handleUserChange(e, 'website')}}></input>
 								</div>
-							</div>
-							<div className="w50 left">
-								<label for="user-website">Your website:</label>
-								<input type="text" id="user-website" name="user-website" placeholder="www.mywebsite.com"></input>
-							</div>
-							<div className="w50 left">
-								<label for="user-twitter">Your Twitter:</label>
-								<input type="text" id="user-twitter" name="user-twitter" placeholder="@mytwitter"></input>
-							</div>
+								<div className="w50 left">
+									<label for="user-twitter" className="form-label">Your Twitter</label>
+									<input type="text" ref="twitter" id="user-twitter" name="user-twitter" className="form-input" placeholder="@mytwitter" value={this.state.twitter} onChange={(e) => {this.handleUserChange(e, 'twitter')}}></input>
+								</div>
 
-							<div className="clearfix right marginTop30">
-								<button className="change-password-toggle call-danger callToAction change-password-toggle-target">Change password</button>
-							</div>
+								<div className="clearfix right marginTop30">
+									<button className="change-password-toggle callToAction call-success" type="submit">Save</button>
+									<button className="change-password-toggle call-danger callToAction change-password-toggle-target">Change password</button>
+								</div>
+							</form>
 
 						</div>
 					</div>

@@ -40,7 +40,9 @@ export default class Account extends React.Component {
 		this.lifespan.release();
 	}
 
-	signIn() {
+	signIn(e) {
+		e.preventDefault();
+		e.stopPropagation();
 		this.client.dispatchAction('/sign-in', {
 			username: ReactDOM.findDOMNode(this.refs.username).value,
 			password: ReactDOM.findDOMNode(this.refs.password).value,
@@ -71,9 +73,9 @@ export default class Account extends React.Component {
 
 		const resetPassword = this.state.resetPassword ? (
 			<div id="wrap-reset-password" className="subscribe">
-				<label>Please fill the following input with the email address you've used to register.</label>
-				<input type="text" id="email-reset-password" name="login" ref="resetPassword" placeholder="mj@domain.com"></input>
-				<label>We will send you a new password, and you will be able to change your password once connected in the profile panel.</label>
+				<label className="form-label">Please fill the following input with the email address you've used to register.</label>
+				<input type="text" className="form-input" id="email-reset-password" name="login" ref="resetPassword" placeholder="mj@domain.com"></input>
+				<label className="form-label">We will send you a new password, and you will be able to change your password once connected in the profile panel.</label>
 				{errorReset}
 				{resetPasswordSuccess}
 				<div id="reset-password-actions" className="marginTop30">
@@ -85,16 +87,18 @@ export default class Account extends React.Component {
 
 		const signin = !this.state.resetPassword ? (
 			<div id="wrap-sign-in" className="subscribe">
-				<label htmlFor="login">Your email:</label>
-				<input type="text" id="email-sign-in" name="login" ref="username" placeholder="mj@domain.com"></input>
-				<label htmlFor="login">Password:</label>
-				<input type="password" id="password-sign-in" name="password" ref="password" placeholder="abc123"></input>
-				<label id="signin-error" htmlFor="" className="error hidden"></label>
-				<label className="reset-password-toggle right marginBottom30 textSize-title-small colorGray" onClick={() => {this.setState({resetPassword:true})}}>Forgotten your password?</label>
-				<div className="marginTop30">
-					<div id="sign-me-in" className="call-success callToAction marginBottom30 marginRight15" onClick={() => {this.signIn()}}>Sign in</div>
-					<div className="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style={{color:'white'}}>Sign up</a></div>
-				</div>
+				<form onSubmit={(e) => {this.signIn(e)}}>
+					<label htmlFor="login" className="form-label">Your email</label>
+					<input type="text" id="email-sign-in" name="login" ref="username" className="form-input" placeholder="mj@domain.com"></input>
+					<label htmlFor="password" className="form-label">Password</label>
+					<input type="password" id="password-sign-in" className="form-input" name="password" ref="password" placeholder="abc123"></input>
+					<label id="signin-error" htmlFor="" className="error hidden"></label>
+					<label className="reset-password-toggle right marginBottom30 textSize-title-small colorGray" onClick={() => {this.setState({resetPassword:true})}}>Forgotten your password?</label>
+					<div className="marginTop30">
+						<button id="sign-me-in" className="call-success callToAction marginBottom30 marginRight15" type="submit">Sign in</button>
+						<div className="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style={{color:'white'}}>Sign up</a></div>
+					</div>
+				</form>
 			</div>
 		) : false;
 

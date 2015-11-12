@@ -1,25 +1,83 @@
 import React from 'react';
+import Lifespan from 'lifespan';
+import moment from 'moment';
+
+import {LocalClient} from '../stores/local-client-server.stores.jsx';
+
+import ShowCard from '../components/show-card.components.jsx';
+import ChoosePlan from '../components/choose-plan.components.jsx';
+import InvoiceAddress from '../components/invoice-address.components.jsx';
 
 export default class SubscriptionPanel extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			plan: {},
+		};
+	}
+	async componentWillMount() {
+		this.client = LocalClient.instance();
+		this.lifespan = new Lifespan();
+
+		const noPlan = {
+			name: 'You do not have a subscription',
+		}
+
+		const plansInfos = await this.client.fetch('/plansInfos');
+		
+		this.setState({
+			plan: plansInfos.head.toJS()[this.state.planId] || noPlan,
+		});
+
+		this.client.getStore('/userInfos', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					card: head.toJS().card,
+					subscription: head.toJS().subscription,
+					plan: plansInfos.head.toJS()[head.toJS().subscription.plan.id] || noPlan,
+					endDate: moment.unix(head.toJS().subscription.current_period_end).format('L'),
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+	}
+
+	componentWillUnmount() {
+		this.lifespan.release();
+	}
 	render() {
+		const card = this.state.card ? (
+			<div className="card-info clearfix">
+				<ShowCard card={this.state.card}/>
+				<div className="success-message hidden" id="success-card-message">Card successfuly submitted</div>
+				<button id="change-card" className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
+			</div>
+		) : (
+			<div>
+				You don't have any cards registered.
+				<button id="change-card" className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add a card</button>
+			</div>
+		);
+
+		const endDate = this.state.endDate ? (
+			<div className="subscription-date">
+				<label htmlFor="subscription" className="form-label">End of subscription period</label>
+				<div className="user-infos marginTop15">{this.state.endDate}</div>
+			</div>
+		) : false;
+
+		const changeSub = <ChoosePlan />
+
 		return (
 			<div className="subscription-panel">
 				<div id="target-tab-account" className="clearfix">
 					<div className="subscribe">
 
 						<div className="clearfix">
-							<label htmlFor="subscription">Your current subscription</label>
-							<div className="user-infos marginTop15 marginBottom15" id="logged-in-subscription"></div>
-							<div className="subscription-date hidden">
-								<label htmlFor="subscription">Subscription turnaround</label>
-								<div className="user-infos marginTop15" id="subscription-date"></div>
-							</div>
-						</div>
-
-						<div id="account-plan" className="subscribe hidden account-plan-toggle-target">
-						</div>
-						<div id="no-card-plan" className="hidden textType-txt textSize-txt-large marginBottom30 general-infos">
-							You cannot change subscription without first setting up a payment card.
+							<p className="textSize-title-small marginTop30 marginBottom15">Your current subscription</p>
+							<div className="user-infos marginTop15 marginBottom15" id="logged-in-subscription">{this.state.plan.name}</div>
+							{endDate}
 						</div>
 
 						<div className="clearfix marginTop30">
@@ -36,34 +94,21 @@ export default class SubscriptionPanel extends React.Component {
 						</div>
 
 						<div className="clearfix marginTop30">
-							<p className="textSize-title-small marginTop30 marginBottom15">Payment details:</p>
-							<div className="card-info clearfix" id="card-details">
-								<div className="w50 left">
-									<label>Card number</label>
-									<div className="user-infos marginTop15">**** **** **** <span id="last-four">4242</span></div>
-								</div>
-								<div className="w50 left">
-									<label>Expiration date</label>
-									<div className="user-infos marginTop15"><span id="card-month">10</span>/<span id="card-year">2044</span></div>
-								</div>
-								<div className="success-message hidden" id="success-card-message">Card successfuly submitted</div>
-								<button id="change-card" className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
-							</div>
-							<div id="no-card">
-								You don't have any cards registered.
-								<button id="change-card" className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add a card</button>
-							</div>
+							<p className="textSize-title-small marginTop30 marginBottom15">Payment details</p>
+							{card}
 							<div id="account-card-form" className="subscribe account-card-form-toggle-target">
 								<div id="card-form">
-									<p className="textSize-title-small ">Change Card:</p>
+									<p className="textSize-title-small ">Change Card</p>
 									<button id="change-card-submit" className="call-success callToAction marginTop30 right">Change my card</button>
 									<button id="" className="account-card-form-toggle-target change-card-toggle account-card-form-toggle-target hidden call-error callToAction marginRight15 marginTop30 right">Cancel</button>
 								</div>
 							</div>
 						</div>
+						
+						<InvoiceAddress />
 
 						<div className="clearfix marginTop30">
-							<p className="textSize-title-small marginBottom15">Your invoices:</p>
+							<p className="textSize-title-small marginBottom15">Your invoices</p>
 							<ul className="list marginTop30">
 								<li className="list-item">
 									<span className="list-item-date">Dec. 2015</span>

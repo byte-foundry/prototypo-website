@@ -1,7 +1,10 @@
 import React from 'react';
+import Lifespan from 'lifespan';
+
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import CurrencyService from '../services/currency.services.jsx';
-import Lifespan from 'lifespan';
+
+import ShowInvoiceAddress from '../components/show-invoice-address.components.jsx';
 
 export default class ConfirmationPanel extends React.Component {
 	constructor(props) {
@@ -34,6 +37,8 @@ export default class ConfirmationPanel extends React.Component {
 		this.setState({
 			plan: plansInfos.head.toJS()[userInfos.head.toJS().plan],
 			card: userInfos.head.toJS().card,
+			'invoice_address':  userInfos.get('invoice_address'),
+			'buyer_name': userInfos.get('buyer_name'),
 		})
 	}
 
@@ -48,6 +53,10 @@ export default class ConfirmationPanel extends React.Component {
 	render() {
 		const error = this.state.error ? (
 			<div className="message message-error">{this.state.error.message}</div>
+		) : false;
+
+		const address = this.state.invoice_address ? (
+			<ShowInvoiceAddress  buyerName={this.state.buyer_name} invoice={this.state.invoice_address}/>
 		) : false;
 
 		return (
@@ -71,6 +80,7 @@ export default class ConfirmationPanel extends React.Component {
 						<p className="user-infos">{this.state.card.exp_month}/{this.state.card.exp_year}</p>
 					</div>
 				</div>
+				{address}
 				<p className="message message-error">{error}</p>
 				<button className="form-label btn-success marginTop30" onClick={() => { this.subscribe() }} >I confirm my subscription</button>
 			</div>

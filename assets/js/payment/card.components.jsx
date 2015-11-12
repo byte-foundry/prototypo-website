@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import Lifespan from 'lifespan';
+
+import {LocalClient} from '../stores/local-client-server.stores.jsx';
+
+import ShowCard from '../components/show-card.components.jsx';
+import AddCard from '../components/add-card.components.jsx';
+import InvoiceAddress from '../components/invoice-address.components.jsx';
 
 export default class CardPanel extends React.Component {
 	constructor(props) {
@@ -41,12 +46,27 @@ export default class CardPanel extends React.Component {
 	createCard(e) {
 		e.preventDefault();
 		e.stopPropagation();
+		const card = {
+			number: this.state.cardNumber,
+			cvc: this.state.cvc,
+			exp_month: this.state.expMonth,
+			exp_year: this.state.expYear,
+		}
+
+		const invoice_address = {
+			building_number: this.state.building_number,
+			street_name: this.state.street_name,
+			address_detail: this.state.address_detail,
+			city: this.state.city,
+			postal_code: this.state.postal_code,
+			region: this.state.region,
+			country: this.state.country,
+		}
 
 		this.client.dispatchAction('/add-card', {
-			number: ReactDOM.findDOMNode(this.refs.cardNumber).value,
-			cvc: ReactDOM.findDOMNode(this.refs.cvc).value,
-			exp_month: ReactDOM.findDOMNode(this.refs.expMonth).value,
-			exp_year: ReactDOM.findDOMNode(this.refs.expYear).value,
+			card,
+			invoice_address,
+			buyer_name: this.state.buyer_name,
 		});
 	}
 
@@ -57,19 +77,30 @@ export default class CardPanel extends React.Component {
 		this.client.dispatchAction('/to-the-app',{});
 	}
 
+	handleCardChange(e, name) {
+		this.setState({
+			[name]: e.target.value,
+		})
+	}
+
+	handleAddressChange(e, name) {
+		this.setState({
+			[name]: e.target.value,
+		});
+	}
+
+	handleNameChange(e) {
+		this.setState({
+			'buyer_name': e.target.value,
+		});
+	}
+
 	render() {
 		if (this.state.card) {
 			return (
 				<div className="card-panel">
 					<p className="message message-success">You already added a card</p>
-					<div className="w50 left">
-						<p className="form-label">Card number</p>
-						<p className="user-infos">**** **** **** {this.state.card.last4}</p>
-					</div>
-					<div className="w50 left">
-						<p className="form-label">Expiration date</p>
-						<p className="user-infos">{this.state.card.exp_month}/{this.state.card.exp_year}</p>
-					</div>
+					<ShowCard card={this.state.card}/>
 					<a className="btn link btn-success marginTop30" href="#/plan">Now choose a plan</a>
 				</div>
 			)
@@ -78,45 +109,18 @@ export default class CardPanel extends React.Component {
 		const error = this.state.error ? (
 			<div className="card-panel-error">{this.state.error.message}</div>
 		) : false;
+
+		const invoiceAddress = this.state.toggleAddress ? (
+			<InvoiceAddress handleChange={(e,name) => { this.handleAddressChange(e, name) }} handleNameChange={(e) => { this.handleNameChange(e)}}/>
+		) : false;
+
 		return (
 			<div className="card-panel">
 				<form onSubmit={(e) => {this.createCard(e)}}>
-					<label className="form-label" htmlFor="card-number">Card number</label>
-					<input className="form-input" type="text" ref="cardNumber" id="card-number" name="card-number"></input>
-					<div className="clearfix">
-						<div className="w50 left">
-							<label className="form-label">Exp. date</label>
-							<select ref="expMonth" className="form-input small" name="creditCardExpMonthInput" id="creditCardExpMonthInput" placeholder="01" required="required">
-								<option value="" disabled selected>Month</option>
-								<option value="1">01</option>
-								<option value="2">02</option>
-								<option value="3">03</option>
-								<option value="4">04</option>
-								<option value="5">05</option>
-								<option value="6">06</option>
-								<option value="7">07</option>
-								<option value="8">08</option>
-								<option value="9">09</option>
-								<option value="10">10</option>
-								<option value="11">11</option>
-								<option value="12">12</option>
-							</select>
-							<select ref="expYear" className="form-input small" name="creditCardExpYearInput" id="creditCardExpYearInput" placeholder="2018" required="required">
-								<option value="" disabled selected>Year</option>
-								<option value="2015">2015</option>
-								<option value="2016">2016</option>
-								<option value="2017">2017</option>
-								<option value="2018">2018</option>
-								<option value="2019">2019</option>
-								<option value="2020">2020</option>
-							</select>
-						</div>
-						<div className="w50 left">
-							<label className="form-label" for="cvcInput">CVC</label>
-							<input className="form-input small" ref="cvc" type="number" name="cvcInput" id="cvcInput" placeholder="123" required="required"></input>
-						</div>
-					</div>
-					<p className="message message-error">{error}</p>
+					<AddCard handleChange={(e, name) => {this.handleCardChange(e,name)}}/>
+					<div className="message message-error">{error}</div>
+					<button className="form-label btn-danger" onClick={(e) => { e.preventDefault(); this.setState({toggleAddress: !this.state.toggleAddress})}}>Add an invoicing address</button>
+					{invoiceAddress}
 					<div className="marginTop30">
 						<button className="form-label btn-success" type="submit">Add my card</button>
 						<button className="form-label btn-danger" onClick={(e) => { this.tryForFree(e)}}>I just want to try for free!</button>
