@@ -56,7 +56,10 @@ export default class ConfirmationPanel extends React.Component {
 		) : false;
 
 		const address = this.state.invoice_address ? (
-			<ShowInvoiceAddress  buyerName={this.state.buyer_name} invoice={this.state.invoice_address}/>
+			<div className="confirmation-panel-address">
+				<p className="form-label">Your invoicing address</p>
+				<ShowInvoiceAddress  buyerName={this.state.buyer_name} invoice={this.state.invoice_address}/>
+			</div>
 		) : false;
 
 		return (

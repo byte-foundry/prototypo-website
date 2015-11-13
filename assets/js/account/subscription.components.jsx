@@ -7,6 +7,8 @@ import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import ShowCard from '../components/show-card.components.jsx';
 import ChoosePlan from '../components/choose-plan.components.jsx';
 import InvoiceAddress from '../components/invoice-address.components.jsx';
+import ShowInvoiceAddress from '../components/show-invoice-address.components.jsx';
+import InvoiceList from '../components/invoice-list.components.jsx';
 
 export default class SubscriptionPanel extends React.Component {
 	constructor(props) {
@@ -34,8 +36,11 @@ export default class SubscriptionPanel extends React.Component {
 				this.setState({
 					card: head.toJS().card,
 					subscription: head.toJS().subscription,
-					plan: plansInfos.head.toJS()[head.toJS().subscription.plan.id] || noPlan,
-					endDate: moment.unix(head.toJS().subscription.current_period_end).format('L'),
+					plan: head.toJS().subscription ? plansInfos.head.toJS()[head.toJS().subscription.plan.id] : noPlan,
+					endDate: head.toJS().subscription ? moment.unix(head.toJS().subscription.current_period_end).format('L') : undefined,
+					'invoice_address': head.toJS().invoice_address,
+					'buyer_name': head.toJS().buyer_name,
+					charges: head.toJS().charges,
 				});
 			})
 			.onDelete(() => {
@@ -51,12 +56,10 @@ export default class SubscriptionPanel extends React.Component {
 			<div className="card-info clearfix">
 				<ShowCard card={this.state.card}/>
 				<div className="success-message hidden" id="success-card-message">Card successfuly submitted</div>
-				<button id="change-card" className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
 			</div>
 		) : (
 			<div>
 				You don't have any cards registered.
-				<button id="change-card" className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add a card</button>
 			</div>
 		);
 
@@ -68,6 +71,20 @@ export default class SubscriptionPanel extends React.Component {
 		) : false;
 
 		const changeSub = <ChoosePlan />
+
+		const invoiceAddress = this.state.invoice_address ? (
+			<div className="clearfix marginTop30">
+				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
+				<ShowInvoiceAddress invoice={this.state.invoice_address} buyerName={this.state.buyer_name}/>
+				<button id="change-card" onClick={() => { location.hash = '#/change-card'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change address</button>
+			</div>
+		) : (
+			<div className="clearfix marginTop30">
+				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
+				<p>You do not have an invoicing address right now</p>
+				<button id="change-card" onClick={() => { location.hash = '#/change-address'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add invoicing address</button>
+			</div>
+		);
 
 		return (
 			<div className="subscription-panel">
@@ -83,9 +100,7 @@ export default class SubscriptionPanel extends React.Component {
 						<div className="clearfix marginTop30">
 							<div className="right">
 								<label id="success-plan-message" htmlFor="" className="success-message hidden">You've successfuly changed your plan!</label>
-								<button id="submit-subscription" className="account-plan-toggle-target hidden call-success callToAction marginTop30 right clearfix hidden marginLeft15">Change my subscription</button>
-								<button className="change-subscription-toggle account-plan-toggle-target hidden call-error callToAction marginTop30 right clearfix hidden">Cancel</button>
-								<button id="change-subscription" className="change-subscription-toggle call-danger callToAction account-plan-toggle-target">Change subscription</button>
+								<button id="change-subscription" className="change-subscription-toggle call-danger callToAction account-plan-toggle-target" onClick={() => {location.hash = '#/change-sub'}}>Change subscription</button>
 							</div>
 						</div>
 
@@ -96,36 +111,14 @@ export default class SubscriptionPanel extends React.Component {
 						<div className="clearfix marginTop30">
 							<p className="textSize-title-small marginTop30 marginBottom15">Payment details</p>
 							{card}
-							<div id="account-card-form" className="subscribe account-card-form-toggle-target">
-								<div id="card-form">
-									<p className="textSize-title-small ">Change Card</p>
-									<button id="change-card-submit" className="call-success callToAction marginTop30 right">Change my card</button>
-									<button id="" className="account-card-form-toggle-target change-card-toggle account-card-form-toggle-target hidden call-error callToAction marginRight15 marginTop30 right">Cancel</button>
-								</div>
-							</div>
+							<button id="change-card" onClick={() => { location.hash = '#/change-card'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
 						</div>
-						
-						<InvoiceAddress />
+
+						{invoiceAddress}	
 
 						<div className="clearfix marginTop30">
 							<p className="textSize-title-small marginBottom15">Your invoices</p>
-							<ul className="list marginTop30">
-								<li className="list-item">
-									<span className="list-item-date">Dec. 2015</span>
-									<span className="list-item-text">in_171eCfEHNnZkutNMRKWwAHPN</span>
-									<span className="list-item-download">Download</span>
-								</li>
-								<li className="list-item">
-									<span className="list-item-date">Nov. 2015</span>
-									<span className="list-item-text">in_171eCfEHNnZkutNMRKWwAHPN</span>
-									<span className="list-item-download">Download</span>
-								</li>
-								<li className="list-item">
-									<span className="list-item-date">Oct. 2015</span>
-									<span className="list-item-text">in_171eCfEHNnZkutNMRKWwAHPN</span>
-									<span className="list-item-download">Download</span>
-								</li>
-							</ul>
+							<InvoiceList invoices={this.state.charges}/>
 						</div>
 
 					</div>

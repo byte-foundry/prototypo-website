@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Classnames from 'classnames';
+
 import currencyService from '../services/currency.services.jsx';
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
-import Classnames from 'classnames';
 
 export default class ChoosePlan extends React.Component {
 	componentWillMount() {
 		this.client = LocalClient.instance();
 	}
+
 	choosePlan(plan) {
 		ReactDOM.findDOMNode(this.refs[plan]).checked = true;
 		this.client.dispatchAction('/choose-plan', {

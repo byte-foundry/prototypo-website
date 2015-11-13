@@ -128,7 +128,6 @@ export default class Account extends React.Component {
 							<ul className="account-tabs-list clearfix">
 								<li id="tab-user" className="account-tabs-list-item active"><a href="#/user">User</a></li>
 								<li id="tab-account" className="account-tabs-list-item"><a href="#/account">Account</a></li>
-								<li id="tab-app" className="account-tabs-list-item"><a href="#/app">App</a></li>
 							</ul>
 						</div>
 

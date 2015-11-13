@@ -1,22 +1,30 @@
 require('babel-polyfill');
 import React from 'react';
 import {render} from 'react-dom';
+import Remutable from 'remutable';
 import {Router, Route, IndexRoute} from 'react-router';
+import _ from 'lodash';
+
+import {LocalClient, LocalServer} from './stores/local-client-server.stores.jsx';
+
+import currencyService from './services/currency.services.jsx';
+import {UserValues} from './services/values.services.jsx';
+
 import SignupPanel from './payment/signup.components.jsx';
 import BreadCrumb from './payment/breadcrumb.components.jsx';
 import CardPanel from './payment/card.components.jsx';
 import PlanPanel from './payment/plan.components.jsx';
 import SuccessPanel from './payment/success.components.jsx';
 import ConfirmationPanel from './payment/confirmation.components.jsx';
-import Remutable from 'remutable';
-import {LocalClient, LocalServer} from './stores/local-client-server.stores.jsx';
+
 import Header from './account/header.components.jsx';
-import currencyService from './services/currency.services.jsx';
 import Account from './account/account.components.jsx';
 import UserPanel from './account/user.components.jsx';
 import SubscriptionPanel from './account/subscription.components.jsx';
 import FontPanel from './account/font.components.jsx';
-import {UserValues} from './services/values.services.jsx';
+import ChangeCardPanel from './account/change-card-panel.components.jsx';
+import ChangeSubPanel from './account/change-sub-panel.components.jsx';
+import ChangeSubConfirmationPanel from './account/change-sub-confirmation-panel.components.jsx';
 
 Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
@@ -51,21 +59,25 @@ const plansInfos = stores['/plansInfos'] = new Remutable({
 		name: 'Prototypo professional annual USD subscription',
 		recurrence: 'year',
 		realAmount: '$96.00',
+		discount: -4800,
 	},
 	'personal_annual_EUR_taxfree': {
 		name: 'Prototypo professional annual EUR subscription',
 		recurrence: 'year',
 		realAmount: '96.00€',
+		discount: -4800,
 	},
 	'personal_monthly_USD_taxfree': {
 		name: 'Prototypo professional monthly USD subscription',
 		recurrence: 'month',
 		realAmount: '$8.00',
+		discount: -700,
 	},
 	'personal_monthly_EUR_taxfree': {
 		name: 'Prototypo professional monthly EUR subscription',
 		recurrence: 'month',
 		realAmount: '8.00€',
+		discount: -700,
 	}
 });
 
@@ -78,6 +90,24 @@ const errors = stores['/errors'] = new Remutable({});
 const success = stores['/success'] = new Remutable({});
 
 const userInfos = stores['/userInfos'] = new Remutable({});
+
+const upcomingInvoice = stores['/upcomingInvoice'] = new Remutable({});
+
+function saveUserValues(newValues, cb, err) {
+	const oldValues = {
+		firstName: userInfos.get('firstName'),
+		lastName: userInfos.get('lastName'),
+		website: userInfos.get('website'),
+		twitter: userInfos.get('twitter'),
+		'invoice_address': userInfos.get('invoice_address'),
+		'buyer_name': userInfos.get('buyer_name'),
+	}
+
+	const values = _.assign(oldValues, newValues);
+	UserValues.save({values, typeface: 'default'})
+		.then(cb)
+		.catch(err);
+}
 
 const actions = {
 	'/set-breadcrumb': (state) => {
@@ -114,12 +144,14 @@ const actions = {
 		hoodie.account.signIn(username, password)
 			.done((username) => {
 
-				hoodie.stripe.customers.retrieve()
+				hoodie.stripe.customers.retrieve({includeCharges:true})
 					.then((data) => {
 						const patch = userInfos
 							.set('card', data.sources.data ? data.sources.data[0] : undefined)
 							.set('plan',``)
 							.set('username', hoodie.account.username)
+							.set('charges', data.charges.data ? data.charges.data : undefined)
+							.set('subscription', data.subscriptions ? data.subscriptions.data[0] : undefined)
 							.commit();
 						localServer.dispatchUpdate('/userInfos', patch);
 					})
@@ -127,6 +159,18 @@ const actions = {
 						const patch = errors.set('signin', err).commit();
 						localServer.dispatchUpdate('/errors', patch);
 					});
+
+				UserValues.get({typeface: 'default'})
+					.then(({values}) => {
+						const patch = userInfos
+							.set('firstName', values.firstName)
+							.set('lastName', values.lastName)
+							.set('website', values.website)
+							.set('twitter', values.twitter)
+							.commit();
+
+						localServer.dispatchUpdate('/userInfos', patch);
+				});
 			})
 			.fail((err) => {
 				const patch = errors.set('signin', err).commit();
@@ -159,7 +203,7 @@ const actions = {
 			.fail(() => {
 			});
 	},
-	'/add-card': ({card, invoice_address, buyer_name}) => {
+	'/add-card': ({card, invoice_address, buyer_name, cb}) => {
 		Stripe.card.createToken(card , (status, data) => {
 			if (data.error) {
 				const patch = errors.set('card', data.error).commit();
@@ -167,35 +211,36 @@ const actions = {
 			}
 
 			hoodie.stripe.customers.retrieve()
-				.then(() => {
+				.then((dataCustomer) => {
 					hoodie.stripe.customers.update({
 						source: data.id,
 						invoice_address,
 						buyer_name,
 						buyer_credit_card_prefix: card.number.substr(0,9),
 					})
-					.then(() => {
-						location.hash = '#/plan';
+					.then((dataUpdate) => {
 						const patchCard = userInfos
 							.set('card', data.card)
-							.set('plan',`personal_${sessionStorage.plan}_${ currencyService.getCurrency(data.card.country)}_taxfree`)
+							.set('plan', dataUpdate.plan)
 							.set('invoice_address', invoice_address)
 							.set('buyer_name', buyer_name)
+							.set('subscription', dataCustomer.subscriptions ? dataCustomer.subscriptions.data[0] : undefined)
 							.commit();
 						localServer.dispatchUpdate('/userInfos', patchCard);
 
-						UserValues.save({
-							values: {
-								invoice_address,
-								buyer_name,
-							}, typeface: 'default'})
-							.catch((err) => {
+						saveUserValues({
+							invoice_address,
+							buyer_name,
+						}, () => {}, (err) => {
 								const patch = errors.set('invoiceAddress', err).commit();
 								localServer.dispatchUpdate('/errors', patch);
 							});
 
+
 						const patch = errors.set('card', undefined).commit();
-						return localServer.dispatchUpdate('/errors', patch);
+						localServer.dispatchUpdate('/errors', patch);
+
+						return cb();
 					})
 					.catch((err) => {
 						const patch = errors.set('card', err).commit();
@@ -268,17 +313,37 @@ const actions = {
 		});
 	},
 	'/update-user': (values) => {
-		UserValues.save({values, typeface: 'default'})
-			.then(() => {
+		saveUserValues(values, () => {
 				const patch = success.set('accountUser', true).commit();
 				localServer.dispatchUpdate('/success', patch);
 				const patchError = errors.set('accountUser', undefined).commit();
 				localServer.dispatchUpdate('/errors', patchError);
-			})
-			.catch((err) => {
+			}, (err) => {
 				const patch = errors.set('accountUser', err).commit();
 				localServer.dispatchUpdate('/errors', patch);
 			});
+	},
+	'/calc-invoice': ({plan}) => {
+		if (userInfos.get('subscription') && plan === userInfos.get('subscription').plan.id) {
+			const patch = upcomingInvoice.set('invoice', undefined).commit();
+			localServer.dispatchUpdate('/upcomingInvoice', patch);
+
+			location.hash = '#/change-sub-confirmation';
+		}
+		else {
+			hoodie.stripe.invoices.retrieveUpcoming({
+				'subscription_plan':plan,
+			})
+			.then((data) => {
+				const patch = upcomingInvoice.set('invoice', data).commit();
+				localServer.dispatchUpdate('/upcomingInvoice', patch);
+
+				location.hash = '#/change-sub-confirmation';
+			})
+			.catch((err) => {
+				
+			});
+		}
 	},
 }
 
@@ -307,12 +372,13 @@ class App extends React.Component {
 	}
 }
 
-hoodie.stripe.customers.retrieve()
+hoodie.stripe.customers.retrieve({includeCharges:true})
 	.then((data) => {
 		const patch = userInfos
 			.set('card', data.sources.data[0])
 			.set('plan',`personal_${sessionStorage.recurrence}_${ currencyService.getCurrency(data.sources.data[0])}_taxfree`)
 			.set('subscription', data.subscriptions.data[0])
+			.set('charges', data.charges.data ? data.charges.data : undefined)
 			.commit();
 		localServer.dispatchUpdate('/userInfos', patch);
 	});
@@ -324,6 +390,8 @@ UserValues.get({typeface: 'default'})
 			.set('lastName', values.lastName)
 			.set('website', values.website)
 			.set('twitter', values.twitter)
+			.set('invoice_address', values.invoice_address)
+			.set('buyer_name', values.buyer_name)
 			.commit();
 
 		localServer.dispatchUpdate('/userInfos', patch);
@@ -361,6 +429,9 @@ window.setupAccount = () => {
 				<Route path="user" component={UserPanel}/>
 				<Route path="account" component={SubscriptionPanel}/>
 				<Route path="app" component={FontPanel}/>
+				<Route path="change-sub" component={ChangeSubPanel}/>
+				<Route path="change-sub-confirmation" component={ChangeSubConfirmationPanel}/>
+				<Route path="change-card" component={ChangeCardPanel}/>
 			</Route>
 		</Router>
 	), document.getElementById('account-container'));

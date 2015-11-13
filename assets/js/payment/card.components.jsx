@@ -13,6 +13,7 @@ export default class CardPanel extends React.Component {
 		super(props);
 		this.state = {};
 	}
+
 	componentWillMount() {
 		this.client = LocalClient.instance();
 		this.lifespan = new Lifespan();
@@ -67,6 +68,7 @@ export default class CardPanel extends React.Component {
 			card,
 			invoice_address,
 			buyer_name: this.state.buyer_name,
+			cb: () => { location.hash = '#/plan';},
 		});
 	}
 
