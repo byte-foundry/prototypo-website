@@ -114,21 +114,11 @@
 										<div class="w50 left">
 											<label for="user-twitter">Your Twitter:</label>
 											<input type="text" id="user-twitter" name="user-twitter" placeholder="@mytwitter"></input>
-<<<<<<< HEAD
 										</div>
 
 										<div class="clearfix right marginTop30">
 											<button class="change-password-toggle call-danger callToAction change-password-toggle-target">Change password</button>
 										</div>
-
-=======
-										</div>
-
-										<div class="clearfix right marginTop30">
-											<button class="change-password-toggle call-danger callToAction change-password-toggle-target">Change password</button>
-										</div>
-
->>>>>>> Some design over account page
 									</div>
 								</div>
 							</div>
@@ -237,12 +227,7 @@
 						</section>
 
 					</div>
-<<<<<<< HEAD
 				</div>-->
-=======
-				</div>
->>>>>>> Some design over account page
-
 			</div>
 
 		</section>
