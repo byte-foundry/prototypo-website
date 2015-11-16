@@ -22,7 +22,7 @@ export default class ChangeSubPanel extends React.Component {
 		const paymentStore = await this.client.fetch('/paymentStore');
 		const userInfos = await this.client.fetch('/userInfos');
 		const plansInfos = await this.client.fetch('/plansInfos');
-		
+
 		const plans = plansStore.head.toJS();
 		const card = userInfos.head.toJS().card;
 
@@ -68,9 +68,10 @@ export default class ChangeSubPanel extends React.Component {
 
 		return (
 			<div className="change-sub-panel">
+				<p className="textSize-title-small marginBottom30">Change the subscription</p>
 				<p>You're currently subscribed to {this.state.plan ? this.state.plan.name : ''}</p>
 				<ChoosePlan plans={this.state.plans} plan="launch" card={this.state.card} monthlyState={monthlyState} annualState={annualState}/>
-				<button disabled={!this.state.planId} className="form-label btn-success marginTop30" onClick={() => { this.client.dispatchAction('/calc-invoice',{plan: this.state.planId})}}>Change subscription</button>
+				<button disabled={!this.state.planId} className="form-label btn-success marginTop30 marginRight15" onClick={() => { this.client.dispatchAction('/calc-invoice',{plan: this.state.planId})}}>Change subscription</button>
 				<button className="form-label btn-danger marginTop30" onClick={() => { this.client.dispatchAction('/calc-invoice',{plan: this.state.freePlan})}}>Cancel subscription</button>
 			</div>
 		)

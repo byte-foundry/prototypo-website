@@ -56,25 +56,25 @@ const plans = stores['/plans'] = new Remutable({
 
 const plansInfos = stores['/plansInfos'] = new Remutable({
 	'personal_annual_USD_taxfree': {
-		name: 'Prototypo professional annual USD subscription',
+		name: 'Prototypo professional annual subscription',
 		recurrence: 'year',
 		realAmount: '$96.00',
 		discount: -4800,
 	},
 	'personal_annual_EUR_taxfree': {
-		name: 'Prototypo professional annual EUR subscription',
+		name: 'Prototypo professional annual subscription',
 		recurrence: 'year',
 		realAmount: '96.00€',
 		discount: -4800,
 	},
 	'personal_monthly_USD_taxfree': {
-		name: 'Prototypo professional monthly USD subscription',
+		name: 'Prototypo professional monthly subscription',
 		recurrence: 'month',
 		realAmount: '$8.00',
 		discount: -700,
 	},
 	'personal_monthly_EUR_taxfree': {
-		name: 'Prototypo professional monthly EUR subscription',
+		name: 'Prototypo professional monthly subscription',
 		recurrence: 'month',
 		realAmount: '8.00€',
 		discount: -700,
@@ -341,7 +341,7 @@ const actions = {
 				location.hash = '#/change-sub-confirmation';
 			})
 			.catch((err) => {
-				
+
 			});
 		}
 	},

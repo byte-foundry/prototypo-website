@@ -154,15 +154,15 @@ var Account = (function (_React$Component) {
 				return false;
 			}
 
-			var resetPasswordSuccess = this.state.passwordReset ? _react2['default'].createElement('div', { id: 'hoodie-success', className: 'marginTop30' }, _react2['default'].createElement('label', { htmlFor: '', className: 'success-message' }, 'A new password was sent to ', _react2['default'].createElement('span', { id: 'user-email' })), _react2['default'].createElement('div', { className: 'reset-password-toggle call-success callToAction marginBottom30 marginRight15', onClick: function onClick() {
+			var resetPasswordSuccess = this.state.passwordReset ? _react2['default'].createElement('div', { id: 'hoodie-success', className: 'marginTop30' }, _react2['default'].createElement('label', { htmlFor: '', className: 'success-message' }, 'A new password was sent to ', _react2['default'].createElement('span', { id: 'user-email' })), _react2['default'].createElement('div', { className: 'reset-password-toggle form-label btn-success marginBottom30 marginRight15', onClick: function onClick() {
 					_this2.setState({ resetPassword: false });
 				} }, 'Sign in')) : false;
 
 			var errorReset = this.state.resetError ? _react2['default'].createElement('label', { id: 'hoodie-error', htmlFor: '', className: 'error' }, this.state.resetError.message) : false;
 
-			var resetPassword = this.state.resetPassword ? _react2['default'].createElement('div', { id: 'wrap-reset-password', className: 'subscribe' }, _react2['default'].createElement('label', { className: 'form-label' }, 'Please fill the following input with the email address you\'ve used to register.'), _react2['default'].createElement('input', { type: 'text', className: 'form-input', id: 'email-reset-password', name: 'login', ref: 'resetPassword', placeholder: 'mj@domain.com' }), _react2['default'].createElement('label', { className: 'form-label' }, 'We will send you a new password, and you will be able to change your password once connected in the profile panel.'), errorReset, resetPasswordSuccess, _react2['default'].createElement('div', { id: 'reset-password-actions', className: 'marginTop30' }, _react2['default'].createElement('div', { className: 'reset-password-toggle call-danger callToAction marginBottom30 marginRight15', onClick: function onClick() {
+			var resetPassword = this.state.resetPassword ? _react2['default'].createElement('div', { id: 'wrap-reset-password', className: 'subscribe' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginBottom30' }, 'Reset your password'), _react2['default'].createElement('label', { className: 'form-label' }, 'Please fill the following input with the email address you\'ve used to register.'), _react2['default'].createElement('input', { type: 'text', className: 'form-input', id: 'email-reset-password', name: 'login', ref: 'resetPassword', placeholder: 'mj@domain.com' }), _react2['default'].createElement('label', { className: 'form-label marginTop30' }, 'We will send you a new password, and you will be able to change your password once connected in the profile panel.'), errorReset, resetPasswordSuccess, _react2['default'].createElement('div', { id: 'reset-password-actions', className: 'marginTop30' }, _react2['default'].createElement('button', { className: 'reset-password-toggle form-label btn-danger marginRight15', onClick: function onClick() {
 					_this2.setState({ resetPassword: false });
-				} }, 'Cancel'), _react2['default'].createElement('div', { id: 'reset-password', className: 'call-error callToAction marginBottom30 marginRight15', onClick: function onClick() {
+				} }, 'Cancel'), _react2['default'].createElement('button', { id: 'reset-password', className: 'form-label btn-error', onClick: function onClick() {
 					_this2.resetPassword();
 				} }, 'Reset'))) : false;
 
@@ -170,7 +170,7 @@ var Account = (function (_React$Component) {
 					_this2.signIn(e);
 				} }, _react2['default'].createElement('label', { htmlFor: 'login', className: 'form-label' }, 'Your email'), _react2['default'].createElement('input', { type: 'text', id: 'email-sign-in', name: 'login', ref: 'username', className: 'form-input', placeholder: 'mj@domain.com' }), _react2['default'].createElement('label', { htmlFor: 'password', className: 'form-label' }, 'Password'), _react2['default'].createElement('input', { type: 'password', id: 'password-sign-in', className: 'form-input', name: 'password', ref: 'password', placeholder: 'abc123' }), _react2['default'].createElement('label', { id: 'signin-error', htmlFor: '', className: 'error hidden' }), _react2['default'].createElement('label', { className: 'reset-password-toggle right marginBottom30 textSize-title-small colorGray', onClick: function onClick() {
 					_this2.setState({ resetPassword: true });
-				} }, 'Forgotten your password?'), _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement('button', { id: 'sign-me-in', className: 'call-success callToAction marginBottom30 marginRight15', type: 'submit' }, 'Sign in'), _react2['default'].createElement('div', { className: 'call-danger callToAction marginBottom30' }, _react2['default'].createElement('a', { href: '/pricing/subscribe', style: { color: 'white' } }, 'Sign up'))))) : false;
+				} }, 'Forgotten your password?'), _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement('button', { id: 'sign-me-in', className: 'form-label btn-success marginBottom30 marginRight15', type: 'submit' }, 'Sign in'), _react2['default'].createElement('button', { className: 'form-label btn-danger marginBottom30' }, _react2['default'].createElement('a', { href: '/pricing/subscribe' }, 'Sign up'))))) : false;
 
 			if (!this.state.user) {
 				return _react2['default'].createElement('div', null, _react2['default'].createElement('header', { className: 'PageHeader text-left fitToContent' }, _react2['default'].createElement('h1', { className: 'textType-title textSize-title-large' }, 'Sign in')), _react2['default'].createElement('section', { className: 'Article Section-fontsItemWrap' }, signin, resetPassword));
@@ -305,7 +305,7 @@ var ChangeCardPanel = (function (_React$Component) {
 					_this.createCard(e);
 				} }, _react2['default'].createElement(_componentsAddCardComponentsJsx2['default'], { handleChange: function handleChange(e, name) {
 					_this.handleCardChange(e, name);
-				} }), _react2['default'].createElement('button', { type: 'submit' }, 'Change card')));
+				} }), _react2['default'].createElement('button', { className: 'form-label btn-success marginTop30', type: 'submit' }, 'Change card')));
 		}
 	}]);
 
@@ -421,11 +421,11 @@ var ChangeSubConfirmationPanel = (function (_React$Component) {
 			var _this2 = this;
 
 			if (this.state.invoice) {
-				return _react2['default'].createElement('div', { className: 'change-sub-confirmation' }, _react2['default'].createElement('p', null, 'This is the invoice you will get when you change your subscription'), _react2['default'].createElement(Invoice, { invoice: this.state.invoice }), _react2['default'].createElement('button', { className: 'form-label btn-success', onClick: function onClick() {
+				return _react2['default'].createElement('div', { className: 'change-sub-confirmation' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30' }, 'Confirm subscription change'), _react2['default'].createElement('p', { className: 'marginTop30 message' }, 'This is the invoice you will get when you change your subscription'), _react2['default'].createElement(Invoice, { invoice: this.state.invoice }), _react2['default'].createElement('button', { className: 'form-label btn-success marginTop30', onClick: function onClick() {
 						_this2.client.dispatchAction('/subscribe');
 					} }, 'Confirm subscription change'));
 			} else {
-				return _react2['default'].createElement('div', { className: 'change-sub-confirmation' }, _react2['default'].createElement('div', null, 'You did not change subscription because the plan you are already subscribed to.'), _react2['default'].createElement('button', { className: 'form-label btn-success', onClick: function onClick() {
+				return _react2['default'].createElement('div', { className: 'change-sub-confirmation' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30' }, 'Please try again'), _react2['default'].createElement('p', { className: 'marginTop30 message' }, 'You did not change subscription because the plan you are already subscribed to.'), _react2['default'].createElement('button', { className: 'form-label btn-success marginTop30', onClick: function onClick() {
 						location.hash = '#/account';
 					} }, 'Back to account'));
 			}
@@ -513,7 +513,7 @@ var Invoice = (function (_React$Component2) {
 				return _react2['default'].createElement(InvoiceLine, { line: line });
 			});
 
-			return _react2['default'].createElement('table', null, _react2['default'].createElement('thead', null, _react2['default'].createElement('tr', null, _react2['default'].createElement('th', null, 'Description'), _react2['default'].createElement('th', null, 'Amount'))), _react2['default'].createElement('tbody', null, lines, _react2['default'].createElement('tr', null, _react2['default'].createElement('td', null, 'Total'), _react2['default'].createElement('td', null, (total / 100).toFixed(2)))));
+			return _react2['default'].createElement('table', { className: 'invoice' }, _react2['default'].createElement('thead', null, _react2['default'].createElement('tr', null, _react2['default'].createElement('th', null, 'Description'), _react2['default'].createElement('th', null, 'Amount'))), _react2['default'].createElement('tbody', null, lines, _react2['default'].createElement('tr', { className: 'invoice-total' }, _react2['default'].createElement('td', { className: 'invoice-total-label' }, 'Total'), _react2['default'].createElement('td', { className: 'invoice-total-amount' }, (total / 100).toFixed(2)))));
 		}
 	}]);
 
@@ -532,7 +532,7 @@ var InvoiceLine = (function (_React$Component3) {
 	_createClass(InvoiceLine, [{
 		key: 'render',
 		value: function render() {
-			return _react2['default'].createElement('tr', null, _react2['default'].createElement('td', null, this.props.line.description), _react2['default'].createElement('td', null, (this.props.line.amount / 100).toFixed(2)));
+			return _react2['default'].createElement('tr', { className: 'invoice-line' }, _react2['default'].createElement('td', null, this.props.line.description), _react2['default'].createElement('td', null, (this.props.line.amount / 100).toFixed(2)));
 		}
 	}]);
 
@@ -706,7 +706,7 @@ var ChangeSubPanel = (function (_React$Component) {
 				}
 			}
 
-			return _react2['default'].createElement('div', { className: 'change-sub-panel' }, _react2['default'].createElement('p', null, 'You\'re currently subscribed to ', this.state.plan ? this.state.plan.name : ''), _react2['default'].createElement(_componentsChoosePlanComponentsJsx2['default'], { plans: this.state.plans, plan: 'launch', card: this.state.card, monthlyState: monthlyState, annualState: annualState }), _react2['default'].createElement('button', { disabled: !this.state.planId, className: 'form-label btn-success marginTop30', onClick: function onClick() {
+			return _react2['default'].createElement('div', { className: 'change-sub-panel' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginBottom30' }, 'Change the subscription'), _react2['default'].createElement('p', null, 'You\'re currently subscribed to ', this.state.plan ? this.state.plan.name : ''), _react2['default'].createElement(_componentsChoosePlanComponentsJsx2['default'], { plans: this.state.plans, plan: 'launch', card: this.state.card, monthlyState: monthlyState, annualState: annualState }), _react2['default'].createElement('button', { disabled: !this.state.planId, className: 'form-label btn-success marginTop30 marginRight15', onClick: function onClick() {
 					_this2.client.dispatchAction('/calc-invoice', { plan: _this2.state.planId });
 				} }, 'Change subscription'), _react2['default'].createElement('button', { className: 'form-label btn-danger marginTop30', onClick: function onClick() {
 					_this2.client.dispatchAction('/calc-invoice', { plan: _this2.state.freePlan });
@@ -1080,7 +1080,7 @@ var SubscriptionPanel = (function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var card = this.state.card ? _react2['default'].createElement('div', { className: 'card-info clearfix' }, _react2['default'].createElement(_componentsShowCardComponentsJsx2['default'], { card: this.state.card }), _react2['default'].createElement('div', { className: 'success-message hidden', id: 'success-card-message' }, 'Card successfuly submitted')) : _react2['default'].createElement('div', null, 'You don\'t have any cards registered.');
+			var card = this.state.card ? _react2['default'].createElement('div', { className: 'card-info clearfix' }, _react2['default'].createElement(_componentsShowCardComponentsJsx2['default'], { card: this.state.card }), _react2['default'].createElement('div', { className: 'success-message hidden', id: 'success-card-message' }, 'Card successfuly submitted')) : _react2['default'].createElement('p', { className: 'message-error' }, 'You don\'t have any cards registered.');
 
 			var endDate = this.state.endDate ? _react2['default'].createElement('div', { className: 'subscription-date' }, _react2['default'].createElement('label', { htmlFor: 'subscription', className: 'form-label' }, 'End of subscription period'), _react2['default'].createElement('div', { className: 'user-infos marginTop15' }, this.state.endDate)) : false;
 
@@ -1088,15 +1088,15 @@ var SubscriptionPanel = (function (_React$Component) {
 
 			var invoiceAddress = this.state.invoice_address ? _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Invoicing address'), _react2['default'].createElement(_componentsShowInvoiceAddressComponentsJsx2['default'], { invoice: this.state.invoice_address, buyerName: this.state.buyer_name }), _react2['default'].createElement('button', { id: 'change-card', onClick: function onClick() {
 					location.hash = '#/change-card';
-				}, className: 'account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right' }, 'Change address')) : _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Invoicing address'), _react2['default'].createElement('p', null, 'You do not have an invoicing address right now'), _react2['default'].createElement('button', { id: 'change-card', onClick: function onClick() {
+				}, className: 'account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right' }, 'Change address')) : _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Invoicing address'), _react2['default'].createElement('p', { className: 'message' }, 'You do not have an invoicing address right now'), _react2['default'].createElement('button', { id: 'change-card', onClick: function onClick() {
 					location.hash = '#/change-address';
-				}, className: 'account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right' }, 'Add invoicing address'));
+				}, className: 'account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right' }, 'Add invoicing address'));
 
-			return _react2['default'].createElement('div', { className: 'subscription-panel' }, _react2['default'].createElement('div', { id: 'target-tab-account', className: 'clearfix' }, _react2['default'].createElement('div', { className: 'subscribe' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Your current subscription'), _react2['default'].createElement('div', { className: 'user-infos marginTop15 marginBottom15', id: 'logged-in-subscription' }, this.state.plan.name), endDate), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'right' }, _react2['default'].createElement('label', { id: 'success-plan-message', htmlFor: '', className: 'success-message hidden' }, 'You\'ve successfuly changed your plan!'), _react2['default'].createElement('button', { id: 'change-subscription', className: 'change-subscription-toggle call-danger callToAction account-plan-toggle-target', onClick: function onClick() {
+			return _react2['default'].createElement('div', { className: 'subscription-panel' }, _react2['default'].createElement('div', { id: 'target-tab-account', className: 'clearfix' }, _react2['default'].createElement('div', { className: 'subscribe' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Your current subscription'), _react2['default'].createElement('label', { className: 'form-label marginTop15' }, 'Your plan'), _react2['default'].createElement('div', { className: 'user-infos marginTop15 marginBottom15', id: 'logged-in-subscription' }, this.state.plan.name), endDate), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'right' }, _react2['default'].createElement('label', { id: 'success-plan-message', htmlFor: '', className: 'success-message hidden' }, 'You\'ve successfuly changed your plan!'), _react2['default'].createElement('button', { id: 'change-subscription', className: 'change-subscription-toggle form-label btn-danger account-plan-toggle-target', onClick: function onClick() {
 					location.hash = '#/change-sub';
 				} }, 'Change subscription'))), _react2['default'].createElement('div', { id: 'error-create-customer', className: 'textType-txt textSize-txt-large marginBottom30 general-infos hidden' }, 'There was an error during your subscription. We\'ve subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.'), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Payment details'), card, _react2['default'].createElement('button', { id: 'change-card', onClick: function onClick() {
 					location.hash = '#/change-card';
-				}, className: 'account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right' }, 'Change card')), invoiceAddress, _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginBottom15' }, 'Your invoices'), _react2['default'].createElement(_componentsInvoiceListComponentsJsx2['default'], { invoices: this.state.charges })))));
+				}, className: 'account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right' }, 'Change card')), invoiceAddress, _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginBottom15' }, 'Your invoices'), _react2['default'].createElement(_componentsInvoiceListComponentsJsx2['default'], { invoices: this.state.charges })))));
 		}
 	}]);
 
@@ -1250,7 +1250,7 @@ var UserPanel = (function (_React$Component) {
 					_this2.handleUserChange(e, 'website');
 				} })), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { 'for': 'user-twitter', className: 'form-label' }, 'Your Twitter'), _react2['default'].createElement('input', { type: 'text', ref: 'twitter', id: 'user-twitter', name: 'user-twitter', className: 'form-input', placeholder: '@mytwitter', value: this.state.twitter, onChange: function onChange(e) {
 					_this2.handleUserChange(e, 'twitter');
-				} })), _react2['default'].createElement('div', { className: 'clearfix right marginTop30' }, _react2['default'].createElement('button', { className: 'change-password-toggle callToAction call-success', type: 'submit' }, 'Save'), _react2['default'].createElement('button', { className: 'change-password-toggle call-danger callToAction change-password-toggle-target' }, 'Change password')))))));
+				} })), _react2['default'].createElement('div', { className: 'clearfix right marginTop30' }, _react2['default'].createElement('button', { className: 'change-password-toggle form-label btn-success', type: 'submit' }, 'Save'), _react2['default'].createElement('button', { className: 'change-password-toggle form-label btn-danger change-password-toggle-target marginLeft15' }, 'Change password')))))));
 		}
 	}]);
 
@@ -1421,25 +1421,25 @@ var plans = stores['/plans'] = new _remutable2['default']({
 
 var plansInfos = stores['/plansInfos'] = new _remutable2['default']({
 	'personal_annual_USD_taxfree': {
-		name: 'Prototypo professional annual USD subscription',
+		name: 'Prototypo professional annual subscription',
 		recurrence: 'year',
 		realAmount: '$96.00',
 		discount: -4800
 	},
 	'personal_annual_EUR_taxfree': {
-		name: 'Prototypo professional annual EUR subscription',
+		name: 'Prototypo professional annual subscription',
 		recurrence: 'year',
 		realAmount: '96.00€',
 		discount: -4800
 	},
 	'personal_monthly_USD_taxfree': {
-		name: 'Prototypo professional monthly USD subscription',
+		name: 'Prototypo professional monthly subscription',
 		recurrence: 'month',
 		realAmount: '$8.00',
 		discount: -700
 	},
 	'personal_monthly_EUR_taxfree': {
-		name: 'Prototypo professional monthly EUR subscription',
+		name: 'Prototypo professional monthly subscription',
 		recurrence: 'month',
 		realAmount: '8.00€',
 		discount: -700
@@ -1804,13 +1804,13 @@ var AddCard = (function (_React$Component) {
 		value: function render() {
 			var _this = this;
 
-			return _react2["default"].createElement("div", null, _react2["default"].createElement("label", { className: "form-label", htmlFor: "card-number" }, "Card number"), _react2["default"].createElement("input", { className: "form-input", type: "text", ref: "cardNumber", id: "card-number", name: "card-number", onChange: function onChange(e) {
+			return _react2["default"].createElement("div", null, _react2["default"].createElement("p", { className: "textSize-title-small marginBottom30" }, "New card"), _react2["default"].createElement("label", { className: "form-label", htmlFor: "card-number" }, "Card number"), _react2["default"].createElement("input", { className: "form-input", type: "text", ref: "cardNumber", id: "card-number", name: "card-number", placeholder: "1111222233334444", onChange: function onChange(e) {
 					_this.props.handleChange(e, 'cardNumber');
 				} }), _react2["default"].createElement("div", { className: "clearfix" }, _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { className: "form-label" }, "Exp. date"), _react2["default"].createElement("select", { ref: "expMonth", className: "form-input small", name: "creditCardExpMonthInput", id: "creditCardExpMonthInput", placeholder: "01", required: "required", onChange: function onChange(e) {
 					_this.props.handleChange(e, 'expMonth');
 				} }, _react2["default"].createElement("option", { value: "", disabled: true, selected: true }, "Month"), _react2["default"].createElement("option", { value: "1" }, "01"), _react2["default"].createElement("option", { value: "2" }, "02"), _react2["default"].createElement("option", { value: "3" }, "03"), _react2["default"].createElement("option", { value: "4" }, "04"), _react2["default"].createElement("option", { value: "5" }, "05"), _react2["default"].createElement("option", { value: "6" }, "06"), _react2["default"].createElement("option", { value: "7" }, "07"), _react2["default"].createElement("option", { value: "8" }, "08"), _react2["default"].createElement("option", { value: "9" }, "09"), _react2["default"].createElement("option", { value: "10" }, "10"), _react2["default"].createElement("option", { value: "11" }, "11"), _react2["default"].createElement("option", { value: "12" }, "12")), _react2["default"].createElement("select", { ref: "expYear", className: "form-input small", name: "creditCardExpYearInput", id: "creditCardExpYearInput", placeholder: "2018", required: "required", onChange: function onChange(e) {
 					_this.props.handleChange(e, 'expYear');
-				} }, _react2["default"].createElement("option", { value: "", disabled: true, selected: true }, "Year"), _react2["default"].createElement("option", { value: "2015" }, "2015"), _react2["default"].createElement("option", { value: "2016" }, "2016"), _react2["default"].createElement("option", { value: "2017" }, "2017"), _react2["default"].createElement("option", { value: "2018" }, "2018"), _react2["default"].createElement("option", { value: "2019" }, "2019"), _react2["default"].createElement("option", { value: "2020" }, "2020"))), _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { className: "form-label", "for": "cvcInput" }, "CVC"), _react2["default"].createElement("input", { className: "form-input small", ref: "cvc", type: "number", name: "cvcInput", id: "cvcInput", placeholder: "123", required: "required", onChange: function onChange(e) {
+				} }, _react2["default"].createElement("option", { value: "", disabled: true, selected: true }, "Year"), _react2["default"].createElement("option", { value: "2015" }, "2015"), _react2["default"].createElement("option", { value: "2016" }, "2016"), _react2["default"].createElement("option", { value: "2017" }, "2017"), _react2["default"].createElement("option", { value: "2018" }, "2018"), _react2["default"].createElement("option", { value: "2019" }, "2019"), _react2["default"].createElement("option", { value: "2020" }, "2020"), _react2["default"].createElement("option", { value: "2021" }, "2021"), _react2["default"].createElement("option", { value: "2022" }, "2022"), _react2["default"].createElement("option", { value: "2023" }, "2023"), _react2["default"].createElement("option", { value: "2024" }, "2024"), _react2["default"].createElement("option", { value: "2025" }, "2025"), _react2["default"].createElement("option", { value: "2026" }, "2026"), _react2["default"].createElement("option", { value: "2027" }, "2027"), _react2["default"].createElement("option", { value: "2028" }, "2028"))), _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { className: "form-label", "for": "cvcInput" }, "CVC"), _react2["default"].createElement("input", { className: "form-input small", ref: "cvc", type: "number", name: "cvcInput", id: "cvcInput", placeholder: "123", required: "required", onChange: function onChange(e) {
 					_this.props.handleChange(e, 'cvc');
 				} }))));
 		}

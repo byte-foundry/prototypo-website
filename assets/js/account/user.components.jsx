@@ -105,8 +105,8 @@ export default class UserPanel extends React.Component {
 								</div>
 
 								<div className="clearfix right marginTop30">
-									<button className="change-password-toggle callToAction call-success" type="submit">Save</button>
-									<button className="change-password-toggle call-danger callToAction change-password-toggle-target">Change password</button>
+									<button className="change-password-toggle form-label btn-success" type="submit">Save</button>
+									<button className="change-password-toggle form-label btn-danger change-password-toggle-target marginLeft15">Change password</button>
 								</div>
 							</form>
 

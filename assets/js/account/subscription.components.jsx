@@ -26,7 +26,7 @@ export default class SubscriptionPanel extends React.Component {
 		}
 
 		const plansInfos = await this.client.fetch('/plansInfos');
-		
+
 		this.setState({
 			plan: plansInfos.head.toJS()[this.state.planId] || noPlan,
 		});
@@ -58,9 +58,9 @@ export default class SubscriptionPanel extends React.Component {
 				<div className="success-message hidden" id="success-card-message">Card successfuly submitted</div>
 			</div>
 		) : (
-			<div>
+			<p className="message-error">
 				You don't have any cards registered.
-			</div>
+			</p>
 		);
 
 		const endDate = this.state.endDate ? (
@@ -81,8 +81,8 @@ export default class SubscriptionPanel extends React.Component {
 		) : (
 			<div className="clearfix marginTop30">
 				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
-				<p>You do not have an invoicing address right now</p>
-				<button id="change-card" onClick={() => { location.hash = '#/change-address'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add invoicing address</button>
+				<p className="message">You do not have an invoicing address right now</p>
+				<button id="change-card" onClick={() => { location.hash = '#/change-address'}} className="account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right">Add invoicing address</button>
 			</div>
 		);
 
@@ -93,6 +93,7 @@ export default class SubscriptionPanel extends React.Component {
 
 						<div className="clearfix">
 							<p className="textSize-title-small marginTop30 marginBottom15">Your current subscription</p>
+							<label className="form-label marginTop15">Your plan</label>
 							<div className="user-infos marginTop15 marginBottom15" id="logged-in-subscription">{this.state.plan.name}</div>
 							{endDate}
 						</div>
@@ -100,7 +101,7 @@ export default class SubscriptionPanel extends React.Component {
 						<div className="clearfix marginTop30">
 							<div className="right">
 								<label id="success-plan-message" htmlFor="" className="success-message hidden">You've successfuly changed your plan!</label>
-								<button id="change-subscription" className="change-subscription-toggle call-danger callToAction account-plan-toggle-target" onClick={() => {location.hash = '#/change-sub'}}>Change subscription</button>
+								<button id="change-subscription" className="change-subscription-toggle form-label btn-danger account-plan-toggle-target" onClick={() => {location.hash = '#/change-sub'}}>Change subscription</button>
 							</div>
 						</div>
 
@@ -111,10 +112,10 @@ export default class SubscriptionPanel extends React.Component {
 						<div className="clearfix marginTop30">
 							<p className="textSize-title-small marginTop30 marginBottom15">Payment details</p>
 							{card}
-							<button id="change-card" onClick={() => { location.hash = '#/change-card'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change card</button>
+							<button id="change-card" onClick={() => { location.hash = '#/change-card'}} className="account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right">Change card</button>
 						</div>
 
-						{invoiceAddress}	
+						{invoiceAddress}
 
 						<div className="clearfix marginTop30">
 							<p className="textSize-title-small marginBottom15">Your invoices</p>

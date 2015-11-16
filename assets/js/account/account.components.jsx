@@ -63,7 +63,7 @@ export default class Account extends React.Component {
 		const resetPasswordSuccess = this.state.passwordReset ? (
 				<div id="hoodie-success" className="marginTop30">
 					<label htmlFor="" className="success-message">A new password was sent to <span id="user-email"></span></label>
-					<div className="reset-password-toggle call-success callToAction marginBottom30 marginRight15" onClick={() => {this.setState({resetPassword:false})}}>Sign in</div>
+					<div className="reset-password-toggle form-label btn-success marginBottom30 marginRight15" onClick={() => {this.setState({resetPassword:false})}}>Sign in</div>
 				</div>
 		) : false;
 
@@ -73,14 +73,15 @@ export default class Account extends React.Component {
 
 		const resetPassword = this.state.resetPassword ? (
 			<div id="wrap-reset-password" className="subscribe">
+				<p className="textSize-title-small marginBottom30">Reset your password</p>
 				<label className="form-label">Please fill the following input with the email address you've used to register.</label>
 				<input type="text" className="form-input" id="email-reset-password" name="login" ref="resetPassword" placeholder="mj@domain.com"></input>
-				<label className="form-label">We will send you a new password, and you will be able to change your password once connected in the profile panel.</label>
+				<label className="form-label marginTop30">We will send you a new password, and you will be able to change your password once connected in the profile panel.</label>
 				{errorReset}
 				{resetPasswordSuccess}
 				<div id="reset-password-actions" className="marginTop30">
-					<div className="reset-password-toggle call-danger callToAction marginBottom30 marginRight15" onClick={() => {this.setState({resetPassword:false})}}>Cancel</div>
-					<div id="reset-password" className="call-error callToAction marginBottom30 marginRight15" onClick={() => {this.resetPassword()}}>Reset</div>
+					<button className="reset-password-toggle form-label btn-danger marginRight15" onClick={() => {this.setState({resetPassword:false})}}>Cancel</button>
+					<button id="reset-password" className="form-label btn-error" onClick={() => {this.resetPassword()}}>Reset</button>
 				</div>
 			</div>
 		) : false;
@@ -95,8 +96,8 @@ export default class Account extends React.Component {
 					<label id="signin-error" htmlFor="" className="error hidden"></label>
 					<label className="reset-password-toggle right marginBottom30 textSize-title-small colorGray" onClick={() => {this.setState({resetPassword:true})}}>Forgotten your password?</label>
 					<div className="marginTop30">
-						<button id="sign-me-in" className="call-success callToAction marginBottom30 marginRight15" type="submit">Sign in</button>
-						<div className="call-danger callToAction marginBottom30"><a href="/pricing/subscribe" style={{color:'white'}}>Sign up</a></div>
+						<button id="sign-me-in" className="form-label btn-success marginBottom30 marginRight15" type="submit">Sign in</button>
+						<button className="form-label btn-danger marginBottom30"><a href="/pricing/subscribe">Sign up</a></button>
 					</div>
 				</form>
 			</div>

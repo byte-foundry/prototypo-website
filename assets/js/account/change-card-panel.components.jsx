@@ -39,7 +39,7 @@ export default class ChangeCardPanel extends React.Component {
 			<div className="change-card-panel">
 				<form onSubmit={(e) => { this.createCard(e) }}>
 					<AddCard handleChange={(e, name) => {this.handleCardChange(e,name)}}/>
-					<button type="submit">Change card</button>
+					<button className="form-label btn-success marginTop30" type="submit">Change card</button>
 				</form>
 			</div>
 		)

@@ -44,8 +44,13 @@
 // }
 
 p {
+	font-size: 16px;
 	line-height: 1.4;
 	margin-bottom: .5em;
+}
+
+a {
+	color: inherit;
 }
 
 /*
@@ -1472,13 +1477,14 @@ header {
 
 .user-infos {
 	background-color: lighten($mainBackgroundColor, 35%);
-	border: 2px solid $mainBackgroundColor;
-	color: $mainBackgroundColor;
-	padding: 1em;
+	color: $colorDarkGray;
+	padding: 1.5em;
 	border-radius: 5px;
 	font-size: 1.8em !important;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	font-style: italic;
+	cursor: default;
 }
 
 .my-account {
@@ -1605,7 +1611,6 @@ a.tos-link {
 
 	.login {
 		display: inline-block;
-		font-size: 1.3em;
 		text-transform: uppercase;
 		padding: 10px 22px 6px;
 		font-weight: bold;
@@ -1631,7 +1636,6 @@ body.account .Article {
 		float: right;
 		&-item {
 			font-size: 16px;
-			padding: 1em 2em;
 			background-color: white;
 			border-top-left-radius: 5px;
 			border-top-right-radius: 5px;
@@ -1647,6 +1651,10 @@ body.account .Article {
 			&.active {
 				z-index: 10;
 				font-weight: bold;
+			}
+			a {
+				display: block;
+				padding: 1em 2em;
 			}
 		}
 	}

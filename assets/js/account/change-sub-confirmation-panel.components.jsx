@@ -33,19 +33,23 @@ export default class ChangeSubConfirmationPanel extends React.Component {
 		if (this.state.invoice) {
 			return (
 				<div className="change-sub-confirmation">
-					<p>This is the invoice you will get when you change your subscription</p>
+					<p className="textSize-title-small marginTop30">Confirm subscription change</p>
+					<p className="marginTop30 message">
+						This is the invoice you will get when you change your subscription
+					</p>
 					<Invoice invoice={this.state.invoice}/>
-					<button className="form-label btn-success" onClick={() => {this.client.dispatchAction('/subscribe')}}>Confirm subscription change</button>
+					<button className="form-label btn-success marginTop30" onClick={() => {this.client.dispatchAction('/subscribe')}}>Confirm subscription change</button>
 				</div>
 			)
 		}
 		else {
 			return (
 				<div className="change-sub-confirmation">
-					<div>
+					<p className="textSize-title-small marginTop30">Please try again</p>
+					<p className="marginTop30 message">
 						You did not change subscription because the plan you are already subscribed to.
-					</div>
-					<button className="form-label btn-success" onClick={() => {location.hash = '#/account'}}>Back to account</button>
+					</p>
+					<button className="form-label btn-success marginTop30" onClick={() => {location.hash = '#/account'}}>Back to account</button>
 				</div>
 			)
 		}
@@ -106,7 +110,7 @@ class Invoice extends React.Component {
 		});
 
 		return (
-			<table>
+			<table className="invoice">
 				<thead>
 					<tr>
 						<th>Description</th>
@@ -115,9 +119,9 @@ class Invoice extends React.Component {
 				</thead>
 				<tbody>
 					{lines}
-					<tr>
-						<td>Total</td>
-						<td>{(total/100).toFixed(2)}</td>
+					<tr className="invoice-total">
+						<td className="invoice-total-label">Total</td>
+						<td className="invoice-total-amount">{(total/100).toFixed(2)}</td>
 					</tr>
 				</tbody>
 			</table>
@@ -128,7 +132,7 @@ class Invoice extends React.Component {
 class InvoiceLine extends React.Component {
 	render() {
 		return (
-			<tr>
+			<tr className="invoice-line">
 				<td>{this.props.line.description}</td>
 				<td>{(this.props.line.amount/100).toFixed(2)}</td>
 			</tr>
