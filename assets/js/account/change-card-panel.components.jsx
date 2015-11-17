@@ -1,6 +1,9 @@
 import React from 'react';
-import AddCard from '../components/add-card.components.jsx';
+import Lifespan from 'lifespan';
+
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
+
+import AddCard from '../components/add-card.components.jsx';
 
 export default class ChangeCardPanel extends React.Component {
 	constructor(props) {
@@ -10,6 +13,21 @@ export default class ChangeCardPanel extends React.Component {
 
 	componentWillMount() {
 		this.client = LocalClient.instance();
+		this.lifespan = new Lifespan();
+
+		this.client.getStore('/errors', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					error: head.toJS().card,
+				})
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+	}
+
+	componentWillUnmount() {
+		this.lifespan.release();
 	}
 
 	handleCardChange(e, name) {
@@ -30,15 +48,20 @@ export default class ChangeCardPanel extends React.Component {
 
 		this.client.dispatchAction('/add-card', {
 			card,
-			cb:() => { location.hash = '#/account';},
+			cb:() => { location.hash = '#/success';},
 		});
 	}
-
+	
 	render() {
+		const error = this.state.error ? (
+			<p className="message-error">{this.state.error.message}</p>
+		) : false;
+
 		return (
 			<div className="change-card-panel">
 				<form onSubmit={(e) => { this.createCard(e) }}>
 					<AddCard handleChange={(e, name) => {this.handleCardChange(e,name)}}/>
+					{error}
 					<button className="form-label btn-success marginTop30" type="submit">Change card</button>
 				</form>
 			</div>

@@ -26,6 +26,8 @@ export default class UserPanel extends React.Component {
 			.onDelete(() => {
 				this.setState(undefined);
 			});
+
+		this.client.dispatchAction('/current-tab', 'user');
 	}
 
 	componentWillUnmount() {
@@ -61,28 +63,6 @@ export default class UserPanel extends React.Component {
 								<div className="user-infos marginTop15 marginBottom15" id="logged-in-email">{this.state.user}</div>
 							</div>
 
-							<div id="wrap-change-password" className="change-password-toggle-target hidden subscribe marginBottom30 clearfix">
-								<label for="current-password">Please fill your current password:</label>
-								<input type="password" id="current-password" name="current-password" placeholder="******"></input>
-								<div className="w50 left">
-									<label for="change-password-1">New password (at least 6 characters):</label>
-									<input type="password" id="new-password-1" name="change-password-1" placeholder="abc123"></input>
-								</div>
-								<div className="w50 left">
-									<label for="change-password-2">Type your new password again, as confirmation:</label>
-									<input type="password" id="new-password-2" name="change-password-2" placeholder="abc123"></input>
-								</div>
-								<label id="password-success" for="" className="success-message hidden"></label>
-								<label id="password-error" for="" className="error hidden"></label>
-								<div className="change-password-actions clearfix right marginTop15">
-									<button className="change-password-toggle call-error callToAction marginRight15 account-plan-toggle-target">Cancel</button>
-									<button id="change-password" className="call-success callToAction account-plan-toggle-target">Submit new password</button>
-								</div>
-								<div className="change-password-actions hidden clearfix right marginTop15">
-									<button className="change-password-toggle call-error callToAction account-plan-toggle-target">Close</button>
-								</div>
-							</div>
-
 							<p className="textSize-title-xsmall marginTop30 marginBottom30 colorDarkGray">All following details are optional</p>
 							<form onSubmit={(e) => { this.updateUser(e) }}>
 								<div className="clearfix ">
@@ -106,7 +86,7 @@ export default class UserPanel extends React.Component {
 
 								<div className="clearfix right marginTop30">
 									<button className="change-password-toggle form-label btn-success" type="submit">Save</button>
-									<button className="change-password-toggle form-label btn-danger change-password-toggle-target marginLeft15">Change password</button>
+									<button className="change-password-toggle form-label btn-danger change-password-toggle-target marginLeft15" onClick={() => {location.hash = '#/change-password'}}>Change password</button>
 								</div>
 							</form>
 

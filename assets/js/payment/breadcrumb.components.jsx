@@ -48,6 +48,12 @@ export default class BreadCrumb extends React.Component {
 }
 
 class Crumb extends React.Component {
+	goToStep() {
+		if (!this.props.disabled && !this.props.active) {
+			location.hash = `#/${this.props.state}`;
+		}
+	}
+
 	render() {
 		const classes = Classnames({
 			crumb: true,
@@ -56,12 +62,12 @@ class Crumb extends React.Component {
 		});
 
 		return (
-			<a className={classes} href={`#/${this.props.state}`}>
+			<div className={classes} onClick={() => { this.goToStep()}}>
 				<span className="crumb-step">{this.props.step}</span>
 				<div className="crumb-link">
 					{this.props.label}
 				</div>
-			</a>
+			</div>
 		)
 	}
 }

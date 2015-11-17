@@ -21,6 +21,8 @@ export default class SubscriptionPanel extends React.Component {
 		this.client = LocalClient.instance();
 		this.lifespan = new Lifespan();
 
+		this.client.dispatchAction('/current-tab', 'account');
+
 		const noPlan = {
 			name: 'You do not have a subscription',
 		}
@@ -76,13 +78,11 @@ export default class SubscriptionPanel extends React.Component {
 			<div className="clearfix marginTop30">
 				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
 				<ShowInvoiceAddress invoice={this.state.invoice_address} buyerName={this.state.buyer_name}/>
-				<button onClick={() => { location.hash = '#/change-invoice-address'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change address</button>
 			</div>
 		) : (
 			<div className="clearfix marginTop30">
 				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
 				<p className="message">You do not have an invoicing address right now</p>
-				<button onClick={() => { location.hash = '#/change-invoice-address'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add invoicing address</button>
 			</div>
 		);
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import Lifespan from 'lifespan';
+import Classnames from 'classnames';
+
+import {LocalClient} from '../stores/local-client-server.stores.jsx';
 
 export default class Account extends React.Component {
 
@@ -14,6 +16,16 @@ export default class Account extends React.Component {
 				this.setState({
 					user: head.toJS().username || false,
 					passwordReset: head.toJS().passwordReset,
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+
+		this.client.getStore('/tabs', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					current: head.toJS().current,
 				});
 			})
 			.onDelete(() => {
@@ -118,6 +130,16 @@ export default class Account extends React.Component {
 			)
 		}
 
+		const userClass = Classnames({
+			'account-tabs-list-item':true,
+			active: this.state.current === 'user',
+		});
+
+		const accountClass = Classnames({
+			'account-tabs-list-item':true,
+			active: this.state.current === 'account',
+		});
+
 		return (
 				<div>
 					<header className="PageHeader text-left fitToContent">
@@ -127,8 +149,8 @@ export default class Account extends React.Component {
 					<div>
 						<div className="account-tabs">
 							<ul className="account-tabs-list clearfix">
-								<li id="tab-user" className="account-tabs-list-item active"><a href="#/user">User</a></li>
-								<li id="tab-account" className="account-tabs-list-item"><a href="#/account">Account</a></li>
+								<li id="tab-user" className={userClass}><a href="#/user">User</a></li>
+								<li id="tab-account" className={accountClass}><a href="#/account">Account</a></li>
 							</ul>
 						</div>
 
