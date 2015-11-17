@@ -67,6 +67,7 @@ export default class CardPanel extends React.Component {
 		this.client.dispatchAction('/add-card', {
 			card,
 			invoice_address,
+			buyer_tax_number: this.state.buyer_tax_number,
 			buyer_name: this.state.buyer_name,
 			cb: () => { location.hash = '#/plan';},
 		});
@@ -79,13 +80,7 @@ export default class CardPanel extends React.Component {
 		this.client.dispatchAction('/to-the-app',{});
 	}
 
-	handleCardChange(e, name) {
-		this.setState({
-			[name]: e.target.value,
-		})
-	}
-
-	handleAddressChange(e, name) {
+	handleStateChange(e, name) {
 		this.setState({
 			[name]: e.target.value,
 		});
@@ -113,14 +108,16 @@ export default class CardPanel extends React.Component {
 		) : false;
 
 		const invoiceAddress = this.state.toggleAddress ? (
-			<InvoiceAddress handleChange={(e,name) => { this.handleAddressChange(e, name) }} handleNameChange={(e) => { this.handleNameChange(e)}}/>
+			<InvoiceAddress handleChange={(e,name) => { this.handleStateChange(e, name) }} handleNameChange={(e) => { this.handleNameChange(e)}}/>
 		) : false;
 
 		return (
 			<div className="card-panel">
 				<form onSubmit={(e) => {this.createCard(e)}}>
-					<AddCard handleChange={(e, name) => {this.handleCardChange(e,name)}}/>
+					<AddCard handleChange={(e, name) => {this.handleStateChange(e,name)}}/>
 					<div className="message message-error">{error}</div>
+					<label className="form-label">VAT number</label>
+					<input className="form-input" type="text" onChange={(e) => { this.handleStateChange(e,'buyer_tax_number')}}></input>
 					<button className="form-label btn-danger" onClick={(e) => { e.preventDefault(); this.setState({toggleAddress: !this.state.toggleAddress})}}>Add an invoicing address</button>
 					{invoiceAddress}
 					<div className="marginTop30">

@@ -72,17 +72,17 @@ export default class SubscriptionPanel extends React.Component {
 
 		const changeSub = <ChoosePlan />
 
-		const invoiceAddress = this.state.invoice_address ? (
+		const invoiceAddress = this.state.invoice_address && Object.keys(this.state.invoice_address).length > 0 ? (
 			<div className="clearfix marginTop30">
 				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
 				<ShowInvoiceAddress invoice={this.state.invoice_address} buyerName={this.state.buyer_name}/>
-				<button id="change-card" onClick={() => { location.hash = '#/change-card'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change address</button>
+				<button onClick={() => { location.hash = '#/change-invoice-address'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Change address</button>
 			</div>
 		) : (
 			<div className="clearfix marginTop30">
 				<p className="textSize-title-small marginTop30 marginBottom15">Invoicing address</p>
 				<p className="message">You do not have an invoicing address right now</p>
-				<button id="change-card" onClick={() => { location.hash = '#/change-address'}} className="account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right">Add invoicing address</button>
+				<button onClick={() => { location.hash = '#/change-invoice-address'}} className="account-card-form-toggle-target change-card-toggle call-danger callToAction marginTop30 right">Add invoicing address</button>
 			</div>
 		);
 

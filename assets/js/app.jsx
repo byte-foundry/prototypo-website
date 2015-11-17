@@ -25,6 +25,7 @@ import FontPanel from './account/font.components.jsx';
 import ChangeCardPanel from './account/change-card-panel.components.jsx';
 import ChangeSubPanel from './account/change-sub-panel.components.jsx';
 import ChangeSubConfirmationPanel from './account/change-sub-confirmation-panel.components.jsx';
+import ChangeInvoiceAddress from './account/change-invoice-address.components.jsx';
 
 Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
 window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
@@ -345,6 +346,22 @@ const actions = {
 			});
 		}
 	},
+	'/change-address': ({invoice_address, buyer_name}) => {
+		hoodie.stripe.customers.update({
+			invoice_address,
+			buyer_name,
+		})
+		.then((data) => {
+			const patch = userInfos
+				.set('invoice_address', invoice_address)
+				.set('buyer_name', buyer_name)
+				.commit();
+
+			localServer.dispatchUpdate('/userInfos', patch);
+		})
+		.catch((err) => {
+		});
+	},
 }
 
 if (hoodie.account.username) {
@@ -411,6 +428,7 @@ window.setupPayment = () => {
 	render((
 		<Router>
 			<Route path="/" component={App}>
+				<IndexRoute component={SignupPanel}/>
 				<Route path="signup" component={SignupPanel}/>
 				<Route path="card" component={CardPanel}/>
 				<Route path="plan" component={PlanPanel}/>
@@ -432,6 +450,7 @@ window.setupAccount = () => {
 				<Route path="change-sub" component={ChangeSubPanel}/>
 				<Route path="change-sub-confirmation" component={ChangeSubConfirmationPanel}/>
 				<Route path="change-card" component={ChangeCardPanel}/>
+				<Route path="change-invoice-address" component={ChangeInvoiceAddress}/>
 			</Route>
 		</Router>
 	), document.getElementById('account-container'));
