@@ -36,7 +36,14 @@ export default class ChangePassword extends React.Component {
 		const newPassword = ReactDOM.findDOMNode(this.refs.newPassword).value;
 		const oldPassword = ReactDOM.findDOMNode(this.refs.oldPassword).value;
 
-		if (newPassword !== ReactDOM.findDOMNode(this.refs.confirmPassword).value ) {
+		if (newPassword.length < 6) {
+			return this.setState({
+				error: {
+					message: `Password must be 6 characters long at least`,
+				},
+			});
+		}
+		else if (newPassword !== ReactDOM.findDOMNode(this.refs.confirmPassword).value ) {
 			return this.setState({
 				error: {
 					message: `Passwords don't match`,

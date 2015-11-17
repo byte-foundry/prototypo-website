@@ -344,6 +344,15 @@ const actions = {
 				localServer.dispatchUpdate('/success', patch);
 				const patchError = errors.set('accountUser', undefined).commit();
 				localServer.dispatchUpdate('/errors', patchError);
+
+				const patchUser = userInfos
+					.set('firstName', values.firstName)
+					.set('lastName', values.lastName)
+					.set('website', values.website)
+					.set('twitter', values.twitter)
+					.commit();
+
+				localServer.dispatchUpdate('/userInfos', patchUser);
 			}, (err) => {
 				const patch = errors.set('accountUser', err).commit();
 				localServer.dispatchUpdate('/errors', patch);
