@@ -5,7 +5,7 @@
 		<div class="PricingItemFree-wrap">
 			<header class="PageHeader text-center fitToContent marginTop60">
 				<h1 class="textType-title textSize-title-large colorWhite">
-					<?php echo $page->section1Title()->kirbytext(); ?>
+					<?php echo $page->section1Title()->kirbytextSans(); ?>
 				</h1>
 				<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
 					Hurry up! The special launch offer will only last until the 27th of November.

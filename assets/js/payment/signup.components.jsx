@@ -57,7 +57,7 @@ export default class SignupPanel extends React.Component {
 				<div className="signedin-panel">
 					<p className="message message-success">You're already signed in as {this.state.username}</p>
 					<p className="message marginTop30">
-						<a className="btn btn-success link" href="#/card">Add a card now</a>
+						<a className="btn btn-success link marginRight15" href="#/card">Add a card now</a>
 						Or
 						<a className="btn btn-danger link marginLeft15" href={`http://app.prototypo.io`}>Try the app for free now</a>
 					</p>

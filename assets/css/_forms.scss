@@ -41,6 +41,11 @@ a {
 		border-bottom: solid 3px white;
 		margin: 0 0 20px 0;
 
+		&:focus,
+		&:focus {
+			border-bottom: 3px solid $mainBackgroundColor !important;
+		}
+
 		&.small {
 			width: calc(50% - 20px);
 			margin-right: 10px;
@@ -118,6 +123,17 @@ a {
 			color: $secondBackgroundColor;
 			border: 3px solid $secondBackgroundColor;
 		}
+	}
+}
+
+button[disabled] {
+	background-color: $colorGray;
+	border-color: $colorGray;
+	color: $colorDarkGray;
+	&:hover{
+		background-color: $colorGray;
+		border-color: $colorGray;
+		color: $colorDarkGray;
 	}
 }
 

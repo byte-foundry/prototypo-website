@@ -104,7 +104,7 @@ export default class CardPanel extends React.Component {
 		}
 
 		const error = this.state.error ? (
-			<div className="card-panel-error">{this.state.error.message}</div>
+			<div className="card-panel-error marginBottom15">{this.state.error.message}</div>
 		) : false;
 
 		const invoiceAddress = this.state.toggleAddress ? (
@@ -121,7 +121,7 @@ export default class CardPanel extends React.Component {
 					<button className="form-label btn-danger" onClick={(e) => { e.preventDefault(); this.setState({toggleAddress: !this.state.toggleAddress})}}>Add an invoicing address</button>
 					{invoiceAddress}
 					<div className="marginTop30">
-						<button className="form-label btn-success" type="submit">Add my card</button>
+						<button className="form-label btn-success marginRight15" type="submit">Add my card</button>
 						<button className="form-label btn-danger" onClick={(e) => { this.tryForFree(e)}}>I just want to try for free!</button>
 					</div>
 				</form>
