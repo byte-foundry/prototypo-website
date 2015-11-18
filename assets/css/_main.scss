@@ -1775,3 +1775,48 @@ body.account .Article {
 	}
 
 }
+
+.wait-for-load {
+	display:flex;
+	align-items:center;
+	height:100%;
+}
+
+$spinkit-spinner-margin: 0 auto !default;
+$spinkit-spinner-color: $mainBackgroundColor !default;
+
+.sk-secondary-color {
+	div {
+		background-color:$colorWhite !important;
+	}
+}
+
+.sk-spinner-wave {
+  &.sk-spinner {
+    margin: $spinkit-spinner-margin;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  div {
+    background-color: $spinkit-spinner-color;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    margin:0 1px;
+
+    animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+  }
+
+  .sk-rect2 { animation-delay: -1.1s }
+  .sk-rect3 { animation-delay: -1.0s }
+  .sk-rect4 { animation-delay: -0.9s }
+  .sk-rect5 { animation-delay: -0.8s }
+}
+
+@keyframes sk-waveStretchDelay {
+  0%, 40%, 100% { transform: scaleY(0.4) }
+  20% { transform: scaleY(1.0) }
+}

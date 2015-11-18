@@ -4,6 +4,7 @@ import Lifespan from 'lifespan';
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
 
 import AddCard from '../components/add-card.components.jsx';
+import WaitForLoad from '../components/wait-for-load.components.jsx';
 
 export default class ChangeCardPanel extends React.Component {
 	constructor(props) {
@@ -19,6 +20,16 @@ export default class ChangeCardPanel extends React.Component {
 			.onUpdate(({head}) => {
 				this.setState({
 					error: head.toJS().card,
+				})
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+
+		this.client.getStore('/loading', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					loading: head.toJS().loading,
 				})
 			})
 			.onDelete(() => {
@@ -62,7 +73,9 @@ export default class ChangeCardPanel extends React.Component {
 				<form onSubmit={(e) => { this.createCard(e) }}>
 					<AddCard handleChange={(e, name) => {this.handleCardChange(e,name)}}/>
 					{error}
-					<button className="form-label btn-success marginTop30" type="submit">Change card</button>
+					<WaitForLoad loaded={!this.state.loading}>
+						<button className="form-label btn-success marginTop30" type="submit">Change card</button>
+					</WaitForLoad>
 				</form>
 			</div>
 		)

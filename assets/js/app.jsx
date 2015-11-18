@@ -96,6 +96,8 @@ const userInfos = stores['/userInfos'] = new Remutable({});
 
 const upcomingInvoice = stores['/upcomingInvoice'] = new Remutable({});
 
+const loading = stores['/loading'] = new Remutable({});
+
 const tabs = stores['/tabs'] = new Remutable({
 	current: 'user',
 });
@@ -123,6 +125,14 @@ const actions = {
 		localServer.dispatchUpdate('/breadcrumb', patch);
 	},
 	'/sign-up': ({username, password}) => {
+		if (!/\S+?@\S+?\.\S+?/.test(username)) {
+			const patch = errors.set('signup', {message: 'You have to enter an email address'}).commit();
+			return localServer.dispatchUpdate('/errors', patch);
+		}
+
+		const loadPatch = loading.set('loading', true).commit();
+		localServer.dispatchUpdate('/loading', loadPatch);
+
 		hoodie.account.signUp(username, password)
 			.done((data) => {
 				const patch = userInfos.set('username', hoodie.account.username).commit();
@@ -135,16 +145,26 @@ const actions = {
 					.then(() => {
 						const patch = errors.set('signup', undefined).commit();
 						localServer.dispatchUpdate('/errors', patch);
+
+						const loadedPatch = loading.set('loading', false).commit();
+						localServer.dispatchUpdate('/loading', loadedPatch);
+
 						location.hash = '#/card';
 					})
 					.catch((err) => {
 						const patch = errors.set('signup', err).commit();
 						localServer.dispatchUpdate('/errors', patch);
+
+						const loadedPatch = loading.set('loading', false).commit();
+						localServer.dispatchUpdate('/loading', loadedPatch);
 					});
 			})
 			.fail((err) => {
 				const patch = errors.set('signup', err).commit();
 				localServer.dispatchUpdate('/errors', patch);
+
+				const loadedPatch = loading.set('loading', false).commit();
+				localServer.dispatchUpdate('/loading', loadedPatch);
 			});
 	},
 	'/sign-in': ({username, password}) => {
@@ -211,6 +231,9 @@ const actions = {
 			});
 	},
 	'/add-card': ({card, invoice_address, buyer_name, cb}) => {
+		const loadPatch = loading.set('loading', true).commit();
+		localServer.dispatchUpdate('/loading', loadPatch);
+
 		Stripe.card.createToken(card , (status, data) => {
 			if (data.error) {
 				const patch = errors.set('card', data.error).commit();
@@ -250,11 +273,17 @@ const actions = {
 						const patchSuccess = success.set('message', `You successufully changed your card`).commit();
 						localServer.dispatchUpdate('/success', patchSuccess);
 
+						const loadedPatch = loading.set('loading', false).commit();
+						localServer.dispatchUpdate('/loading', loadedPatch);
+
 						return cb();
 					})
 					.catch((err) => {
 						const patch = errors.set('card', err).commit();
 						localServer.dispatchUpdate('/errors', patch);
+
+						const loadedPatch = loading.set('loading', false).commit();
+						localServer.dispatchUpdate('/loading', loadedPatch);
 					});
 				})
 				.catch((err) => {
@@ -280,11 +309,17 @@ const actions = {
 						const patchSuccess = success.set('message', `You successufully changed your card`).commit();
 						localServer.dispatchUpdate('/success', patchSuccess);
 
+						const loadedPatch = loading.set('loading', false).commit();
+						localServer.dispatchUpdate('/loading', loadedPatch);
+
 						return cb();
 					})
 					.catch((err) => {
 						const patch = errors.set('card', err).commit();
 						localServer.dispatchUpdate('/errors', patch);
+
+						const loadedPatch = loading.set('loading', false).commit();
+						localServer.dispatchUpdate('/loading', loadedPatch);
 					});
 				});
 
@@ -314,6 +349,9 @@ const actions = {
 		}
 	},
 	'/subscribe': () => {
+		const loadPatch = loading.set('loading', true).commit();
+		localServer.dispatchUpdate('/loading', loadPatch);
+
 		hoodie.stripe.customers.updateSubscription({
 			plan: userInfos.get('plan'),
 			coupon: userInfos.get('coupon'),
@@ -330,18 +368,31 @@ const actions = {
 					const patchSuccess = success.set('message', `You successufully changed your subscription`).commit();
 					localServer.dispatchUpdate('/success', patchSuccess);
 
+					const loadedPatch = loading.set('loading', false).commit();
+					localServer.dispatchUpdate('/loading', loadedPatch);
+
 					location.hash = '#/success';
 				});
 		})
 		.catch((err) => {
 			const patch = errors.set('confirmation', err).commit();
 			localServer.dispatchUpdate('/errors', patch);
+
+			const loadedPatch = loading.set('loading', false).commit();
+			localServer.dispatchUpdate('/loading', loadedPatch);
 		});
 	},
 	'/update-user': (values) => {
+		const loadPatch = loading.set('loading', true).commit();
+		localServer.dispatchUpdate('/loading', loadPatch);
+
 		saveUserValues(values, () => {
 				const patch = success.set('accountUser', true).commit();
 				localServer.dispatchUpdate('/success', patch);
+				setTimeout(() => {
+					const patch = success.set('accountUser', false).commit();
+					localServer.dispatchUpdate('/success', patch);
+				},2000);
 				const patchError = errors.set('accountUser', undefined).commit();
 				localServer.dispatchUpdate('/errors', patchError);
 
@@ -353,12 +404,21 @@ const actions = {
 					.commit();
 
 				localServer.dispatchUpdate('/userInfos', patchUser);
+
+				const loadedPatch = loading.set('loading', false).commit();
+				localServer.dispatchUpdate('/loading', loadedPatch);
 			}, (err) => {
 				const patch = errors.set('accountUser', err).commit();
 				localServer.dispatchUpdate('/errors', patch);
+
+				const loadedPatch = loading.set('loading', false).commit();
+				localServer.dispatchUpdate('/loading', loadedPatch);
 			});
 	},
 	'/calc-invoice': ({plan}) => {
+		const loadPatch = loading.set('loading', true).commit();
+		localServer.dispatchUpdate('/loading', loadPatch);
+
 		if (userInfos.get('subscription') && plan === userInfos.get('subscription').plan.id) {
 			const patch = upcomingInvoice.set('invoice', undefined).commit();
 			localServer.dispatchUpdate('/upcomingInvoice', patch);
@@ -373,10 +433,14 @@ const actions = {
 				const patch = upcomingInvoice.set('invoice', data).commit();
 				localServer.dispatchUpdate('/upcomingInvoice', patch);
 
+				const loadedPatch = loading.set('loading', false).commit();
+				localServer.dispatchUpdate('/loading', loadedPatch);
+
 				location.hash = '#/change-sub-confirmation';
 			})
 			.catch((err) => {
-
+				const loadedPatch = loading.set('loading', false).commit();
+				localServer.dispatchUpdate('/loading', loadedPatch);
 			});
 		}
 	},

@@ -4,6 +4,8 @@ import _ from 'lodash';
 
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
 
+import WaitForLoad from '../components/wait-for-load.components.jsx';
+
 export default class ChangeSubConfirmationPanel extends React.Component {
 	constructor(props) {
 		super(props);
@@ -23,6 +25,16 @@ export default class ChangeSubConfirmationPanel extends React.Component {
 			.onDelete(() => {
 				this.setState(undefined);
 			});
+
+		this.client.getStore('/loading', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					loading: head.toJS().loading,
+				})
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
 	}
 
 	componentWillUnmoun() {
@@ -38,7 +50,9 @@ export default class ChangeSubConfirmationPanel extends React.Component {
 						This is the invoice you will get when you change your subscription
 					</p>
 					<Invoice invoice={this.state.invoice}/>
-					<button className="form-label btn-success marginTop30" onClick={() => {this.client.dispatchAction('/subscribe')}}>Confirm subscription change</button>
+					<WaitForLoad loaded={!this.state.loading}>
+						<button className="form-label btn-success marginTop30" onClick={() => {this.client.dispatchAction('/subscribe')}}>Confirm subscription change</button>
+					</WaitForLoad>
 				</div>
 			)
 		}

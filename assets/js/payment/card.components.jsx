@@ -7,6 +7,7 @@ import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import ShowCard from '../components/show-card.components.jsx';
 import AddCard from '../components/add-card.components.jsx';
 import InvoiceAddress from '../components/invoice-address.components.jsx';
+import WaitForLoad from '../components/wait-for-load.components.jsx';
 
 export default class CardPanel extends React.Component {
 	constructor(props) {
@@ -33,6 +34,16 @@ export default class CardPanel extends React.Component {
 			.onUpdate(({head}) => {
 				this.setState({
 					card: head.toJS().card,
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+
+		this.client.getStore('/loading', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					loading: head.toJS().loading,
 				});
 			})
 			.onDelete(() => {
@@ -121,8 +132,10 @@ export default class CardPanel extends React.Component {
 					<button className="form-label btn-danger" onClick={(e) => { e.preventDefault(); this.setState({toggleAddress: !this.state.toggleAddress})}}>Add an invoicing address</button>
 					{invoiceAddress}
 					<div className="marginTop30">
-						<button className="form-label btn-success marginRight15" type="submit">Add my card</button>
-						<button className="form-label btn-danger" onClick={(e) => { this.tryForFree(e)}}>I just want to try for free!</button>
+						<WaitForLoad loaded={!this.state.loading}>
+							<button className="form-label btn-success marginRight15" type="submit">Add my card</button>
+							<button className="form-label btn-danger" onClick={(e) => { this.tryForFree(e)}}>I just want to try for free!</button>
+						</WaitForLoad>
 					</div>
 				</form>
 			</div>

@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import Lifespan from 'lifespan';
+
+import {LocalClient} from '../stores/local-client-server.stores.jsx';
+
+import WaitForLoad from '../components/wait-for-load.components.jsx';
 
 export default class SignupPanel extends React.Component {
 	constructor(props) {
@@ -32,6 +35,16 @@ export default class SignupPanel extends React.Component {
 			.onDelete(() => {
 				this.setState(undefined);
 			});
+
+		this.client.getStore('/loading', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					loading: head.toJS().loading,
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
 	}
 
 	componentWillUnmount() {
@@ -56,11 +69,13 @@ export default class SignupPanel extends React.Component {
 			return (
 				<div className="signedin-panel">
 					<p className="message message-success">You're already signed in as {this.state.username}</p>
-					<p className="message marginTop30">
-						<a className="btn btn-success link marginRight15" href="#/card">Add a card now</a>
-						Or
-						<a className="btn btn-danger link marginLeft15" href={`http://app.prototypo.io`}>Try the app for free now</a>
-					</p>
+					<div className="message marginTop30">
+						<WaitForLoad loaded={!this.state.loading}>
+							<a className="btn btn-success link marginRight15" href="#/card">Add a card now</a>
+							Or
+							<a className="btn btn-danger link marginLeft15" href={`http://app.prototypo.io`}>Try the app for free now</a>
+						</WaitForLoad>
+					</div>
 				</div>
 			)
 		}
@@ -75,7 +90,9 @@ export default class SignupPanel extends React.Component {
 					<label className="form-label" htmlFor="password">Password</label>
 					<input className="form-input" id="password" name="password" ref="password" type="password"></input>
 					<p className="message message-error">{error}</p>
-					<button className="form-input btn-success marginTop30" type="submit">Sign up</button>
+					<WaitForLoad loaded={!this.state.loading}>
+						<button className="form-input btn-success marginTop30" type="submit">Sign up</button>
+					</WaitForLoad>
 				</form>
 			</div>
 		)

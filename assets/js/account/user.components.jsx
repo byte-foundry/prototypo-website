@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import Lifespan from 'lifespan';
+
+import {LocalClient} from '../stores/local-client-server.stores.jsx';
+
+import WaitForLoad from '../components/wait-for-load.components.jsx';
 
 export default class UserPanel extends React.Component {
 	constructor(props) {
@@ -21,6 +24,26 @@ export default class UserPanel extends React.Component {
 					firstName: head.toJS().firstName,
 					website: head.toJS().website,
 					twitter: head.toJS().twitter,
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+
+		this.client.getStore('/loading', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					loading: head.toJS().loading,
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+
+		this.client.getStore('/success', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					accountUser: head.toJS().accountUser,
 				});
 			})
 			.onDelete(() => {
@@ -52,6 +75,10 @@ export default class UserPanel extends React.Component {
 	}
 
 	render() {
+		const success = this.state.accountUser ? (
+			<p className="message-success">Your data have been saved</p>
+		) : false;
+
 		return (
 			<div className="user-panel">
 				<div className="clearfix">
@@ -83,10 +110,12 @@ export default class UserPanel extends React.Component {
 									<label for="user-twitter" className="form-label">Your Twitter</label>
 									<input type="text" ref="twitter" id="user-twitter" name="user-twitter" className="form-input" placeholder="@mytwitter" value={this.state.twitter} onChange={(e) => {this.handleUserChange(e, 'twitter')}}></input>
 								</div>
-
+								{success}
 								<div className="clearfix right marginTop30">
-									<button className="change-password-toggle form-label btn-success" type="submit">Save</button>
-									<button className="change-password-toggle form-label btn-danger change-password-toggle-target marginLeft15" onClick={() => {location.hash = '#/change-password'}}>Change password</button>
+									<WaitForLoad loaded={!this.state.loading}>
+										<button className="change-password-toggle form-label btn-success" type="submit">Save</button>
+										<button className="change-password-toggle form-label btn-danger change-password-toggle-target marginLeft15" onClick={() => {location.hash = '#/change-password'}}>Change password</button>
+									</WaitForLoad>
 								</div>
 							</form>
 

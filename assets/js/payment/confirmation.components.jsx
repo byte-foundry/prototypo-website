@@ -5,6 +5,7 @@ import {LocalClient} from '../stores/local-client-server.stores.jsx';
 import CurrencyService from '../services/currency.services.jsx';
 
 import ShowInvoiceAddress from '../components/show-invoice-address.components.jsx';
+import WaitForLoad from '../components/wait-for-load.components.jsx';
 
 export default class ConfirmationPanel extends React.Component {
 	constructor(props) {
@@ -24,6 +25,16 @@ export default class ConfirmationPanel extends React.Component {
 			.onUpdate(({head}) => {
 				this.setState({
 					error: head.toJS().confirmation,
+				});
+			})
+			.onDelete(() => {
+				this.setState(undefined);
+			});
+
+		this.client.getStore('/loading', this.lifespan)
+			.onUpdate(({head}) => {
+				this.setState({
+					loading: head.toJS().loading,
 				});
 			})
 			.onDelete(() => {
@@ -85,7 +96,9 @@ export default class ConfirmationPanel extends React.Component {
 				</div>
 				{address}
 				<p className="message message-error">{error}</p>
-				<button className="form-label btn-success marginTop30" onClick={() => { this.subscribe() }} >I confirm my subscription</button>
+				<WaitForLoad loaded={!this.state.loading}>
+					<button className="form-label btn-success marginTop30" onClick={() => { this.subscribe() }} >I confirm my subscription</button>
+				</WaitForLoad>
 			</div>
 		)
 	}
