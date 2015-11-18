@@ -237,7 +237,10 @@ const actions = {
 		Stripe.card.createToken(card , (status, data) => {
 			if (data.error) {
 				const patch = errors.set('card', data.error).commit();
-				return localServer.dispatchUpdate('/errors', patch);
+				localServer.dispatchUpdate('/errors', patch);
+
+				const loadedPatch = loading.set('loading', false).commit();
+				return localServer.dispatchUpdate('/loading', loadedPatch);
 			}
 
 			hoodie.stripe.customers.retrieve()
