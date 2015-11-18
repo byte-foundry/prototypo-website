@@ -41,7 +41,6 @@ a {
 		border-bottom: solid 3px white;
 		margin: 0 0 20px 0;
 
-		&:focus,
 		&:focus {
 			border-bottom: 3px solid $mainBackgroundColor !important;
 		}
@@ -191,6 +190,29 @@ button[disabled] {
 		}
 		&-amount {
 			font-weight: bold;
+		}
+	}
+}
+
+.form-newsletter {
+	&-input {
+		width: auto !important;
+		height: auto !important;
+		padding: 10px 18px 7px !important;
+		&[type="text"] {
+			background-color: $white !important;
+			&.form-input {
+				&:focus {
+					border-bottom: 3px solid $secondBackgroundColor !important;
+				}
+			}
+			&.bg-grey {
+				background-color: lighten($thirdBackgroundColor, 25%) !important;
+			}
+		}
+		&[type="submit"] {
+			padding: 8px 18px !important;
+			height: 3em !important;
 		}
 	}
 }

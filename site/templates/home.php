@@ -6,9 +6,9 @@
 
 		<div class="Section-homepageWrap">
 
-			<div class="Section-homepageGetStartedLine text-center">
-				<h1 class="Section-homepageGetStartedLineTitle colorWhite"><?php echo $page->title()->kirbytext(); ?></h1>
-				<h3 class="Section-homepageGetStartedLineSubtitle colorBrightest"><?php echo $page->getStartedTagline()->kirbytext(); ?></h3>
+			<div class="Section-homepageGetStartedLine text-center marginBottom30">
+				<h1 class="Section-homepageGetStartedLineTitle colorWhite marginBottom30"><?php echo $page->title()->kirbytextSans(); ?></h1>
+				<h3 class="Section-homepageGetStartedLineSubtitle colorBrightest marginBottom30"><?php echo $page->getStartedTagline()->kirbytextSans(); ?></h3>
 			</div>
 
 			<div class="DemoHome">
@@ -56,11 +56,11 @@
 					<canvas id="DemoCanvas" class="DemoCanvas"></canvas>
 
 					<div class="Infobox Infobox-DemoHomeInfoboxLeft text-center hide-for-small-only">
-						<?php echo $page->infobox1()->kirbytext() ?>
+						<?php echo $page->infobox1()->kirbytextSans() ?>
 					</div>
 
 					<div class="Infobox Infobox-DemoHomeInfoboxRight text-center hide-for-small-only">
-						<?php echo $page->infobox2()->kirbytext() ?>
+						<?php echo $page->infobox2()->kirbytextSans() ?>
 					</div>
 				</div>
 
@@ -79,7 +79,7 @@
 				</fieldset>
 
 				<div class="textSize-txt-large text-center marginTop60">
-					<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->getintothefullapp()->kirbytext(); ?></h3>
+					<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->getintothefullapp()->kirbytextSans(); ?></h3>
 					<div class="marginTop30">
 						<!-- <form class="" action="http://sendy.kuem.me.uk/subscribe" method="post">
 							<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="get-app-email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
@@ -102,8 +102,8 @@
 
 	<section class="Section Section-parametricDesignTool colorDarkest text-center">
 		<header class="SectionHeader fitToContent">
-			<h1 class="textType-title textSize-title-large"><?php echo $page->section1Title()->kirbytext(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytext(); ?></h3>
+			<h1 class="textType-title textSize-title-large"><?php echo $page->section1Title()->kirbytextSans(); ?></h1>
+			<h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h3>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorDarkest fitToContent">
@@ -199,8 +199,8 @@
 		<section class="Section Section-features">
 
 		<header class="SectionHeader text-left fitToContent">
-			<h1 class="textType-title textSize-title-large colorLighterGray small-only-text-center"><?php echo $page->section2Title()->kirbytext(); ?></h1>
-		<h3 class="textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytext(); ?></h3>
+			<h1 class="textType-title textSize-title-large colorLighterGray small-only-text-center"><?php echo $page->section2Title()->kirbytextSans(); ?></h1>
+		<h3 class="textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytextSans(); ?></h3>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt fitToContent">
@@ -234,8 +234,8 @@
 		<section class="Section Section-theytalkaboutus">
 
 		<div class="text-center fitToContent">
-			<h1 class="textType-title textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Title()->kirbytext(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytext(); ?></h3>
+			<h1 class="textType-title textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Title()->kirbytextSans(); ?></h1>
+			<h3 class="textType-subtitle textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytextSans(); ?></h3>
 		</div>
 
 		<div class="Section-wrapTxt textType-txt fitToContent text-center">
@@ -265,25 +265,25 @@
 		<div class="Section-sepa Section-sepaAfter"></div>
 
 		<section id="subscribed" class="Section Section-subscribed hide-for-print text-center">
-			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->sectionSubscribedTitle()->kirbytext(); ?></h1>
+			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->sectionSubscribedTitle()->kirbytextSans(); ?></h1>
 			<h3 class="textType-subtitle textSize-title-small colorBrightest marginTop30">
-				<?php echo $page->SectionSubscribedSubtitle()->kirbytext(); ?>
+				<?php echo $page->SectionSubscribedSubtitle()->kirbytextSans(); ?>
 			</h3>
 		</section>
 
 		<section class="Section Section-newsletter hide-for-print">
 
 		<header class="SectionHeader text-center fitToContent">
-			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->section3Title()->kirbytext(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytext(); ?></h3>
+			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->section3Title()->kirbytextSans(); ?></h1>
+			<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytextSans(); ?></h3>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt fitToContent">
-			<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="Newsletter text-center">
-				<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" name="name" id="name" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
-				<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
+			<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="form-small Newsletter text-center">
+				<input class="form-input form-newsletter-input Newsletter-name" type="text" name="name" id="name" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
+				<input class="form-input form-newsletter-input Newsletter-email" type="text" name="email" id="email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
 				<input type="hidden" name="list" value="ytAwOnCM1u2l9ak9zwB7bw">
-				<input class="NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
+				<input class="form-newsletter-input NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
 			</form>
 		</div>
 

@@ -65,12 +65,12 @@
             		</header>
 
             		<div class="Section-wrapTxt textType-txt fitToContent">
-            			<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="Newsletter text-center">
-            				<input class="Newsletter-name NewsletterInput-text small-full-width" type="text" name="name" id="name" placeholder="Your name">
-            				<input class="Newsletter-email NewsletterInput-text small-full-width" type="text" name="email" id="email" placeholder="Your email">
-            				<input type="hidden" name="list" value="ytAwOnCM1u2l9ak9zwB7bw">
-            				<input class="NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="Keep me posted">
-            			</form>
+						<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="form-small Newsletter text-center">
+							<input class="form-input form-newsletter-input bg-grey Newsletter-name" type="text" name="name" id="name" placeholder="Your name">
+							<input class="form-input form-newsletter-input bg-grey Newsletter-email" type="text" name="email" id="email" placeholder="Your email">
+							<input type="hidden" name="list" value="ytAwOnCM1u2l9ak9zwB7bw">
+							<input class="form-newsletter-input NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="Keep me posted">
+						</form>
             		</div>
 
         		</section>
