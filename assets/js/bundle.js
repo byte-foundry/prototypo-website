@@ -2130,7 +2130,10 @@ var actions = {
 		Stripe.card.createToken(card, function (status, data) {
 			if (data.error) {
 				var patch = errors.set('card', data.error).commit();
-				return localServer.dispatchUpdate('/errors', patch);
+				localServer.dispatchUpdate('/errors', patch);
+
+				var loadedPatch = loading.set('loading', false).commit();
+				return localServer.dispatchUpdate('/loading', loadedPatch);
 			}
 
 			hoodie.stripe.customers.retrieve().then(function (dataCustomer) {

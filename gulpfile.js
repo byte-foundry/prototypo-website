@@ -21,6 +21,7 @@ var browserify  = require('browserify');
 var watchify    = require('watchify');
 var exorcist    = require('exorcist');
 var source      = require('vinyl-source-stream');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -93,6 +94,7 @@ gulp.task('bundle', function () {
 gulp.task('sass', function() {
     return gulp.src('./assets/css/*.scss')
       .pipe(sass().on('error', sass.logError))
+	  .pipe(autoprefixer())
       .pipe(gulp.dest('./.tmp/assets'))
       .pipe(browserSync.stream());
 });
