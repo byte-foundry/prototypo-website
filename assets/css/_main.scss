@@ -1710,7 +1710,7 @@ body.account .Article {
 
 .crumb {
 
-	flex-grow: 1;
+	flex: 1 1;
 	&:last-child {
 		margin-right: 0;
 	}
@@ -1720,6 +1720,8 @@ body.account .Article {
 	position: relative;
 	padding: 1.5em;
 	background-color: lighten($mainBackgroundColor, 35%);
+	display:flex;
+	align-items:center;
 
 	&:hover {
 		background-color: lighten($mainBackgroundColor, 15%);
@@ -1729,7 +1731,7 @@ body.account .Article {
 	&-step {
 		border-top-left-radius: 5px;
 		border-bottom-left-radius: 5px;
-		padding: 1.5em 1em;
+		padding: 1.6em 1em;
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -1742,7 +1744,8 @@ body.account .Article {
 
 	&-link {
 		color: $colorDark !important;
-		margin-left: 2.2em;
+		margin-left: 25px;
+		font-size:13px;
 	}
 
 	&.is-disabled {

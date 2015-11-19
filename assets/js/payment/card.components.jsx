@@ -80,7 +80,7 @@ export default class CardPanel extends React.Component {
 			invoice_address,
 			buyer_tax_number: this.state.buyer_tax_number,
 			buyer_name: this.state.buyer_name,
-			cb: () => { location.hash = '#/plan';},
+			cb: () => { location.hash = '#/address';},
 		});
 	}
 
@@ -118,10 +118,6 @@ export default class CardPanel extends React.Component {
 			<div className="card-panel-error marginBottom15">{this.state.error.message}</div>
 		) : false;
 
-		const invoiceAddress = this.state.toggleAddress ? (
-			<InvoiceAddress handleChange={(e,name) => { this.handleStateChange(e, name) }} handleNameChange={(e) => { this.handleNameChange(e)}}/>
-		) : false;
-
 		return (
 			<div className="card-panel">
 				<form onSubmit={(e) => {this.createCard(e)}}>
@@ -129,8 +125,6 @@ export default class CardPanel extends React.Component {
 					<div className="message message-error">{error}</div>
 					<label className="form-label">VAT number</label>
 					<input className="form-input" type="text" onChange={(e) => { this.handleStateChange(e,'buyer_tax_number')}}></input>
-					<button className="form-label btn-danger" onClick={(e) => { e.preventDefault(); this.setState({toggleAddress: !this.state.toggleAddress})}}>Add an invoicing address</button>
-					{invoiceAddress}
 					<div className="marginTop30">
 						<WaitForLoad loaded={!this.state.loading}>
 							<button className="form-label btn-success marginRight15" type="submit">Add my card</button>

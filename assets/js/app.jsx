@@ -13,6 +13,7 @@ import {UserValues} from './services/values.services.jsx';
 import SignupPanel from './payment/signup.components.jsx';
 import BreadCrumb from './payment/breadcrumb.components.jsx';
 import CardPanel from './payment/card.components.jsx';
+import AddressPanel from './payment/address.components.jsx';
 import PlanPanel from './payment/plan.components.jsx';
 import SuccessPanel from './payment/success.components.jsx';
 import ConfirmationPanel from './payment/confirmation.components.jsx';
@@ -550,6 +551,7 @@ window.setupPayment = () => {
 				<IndexRoute component={SignupPanel}/>
 				<Route path="signup" component={SignupPanel}/>
 				<Route path="card" component={CardPanel}/>
+				<Route path="address" component={AddressPanel}/>
 				<Route path="plan" component={PlanPanel}/>
 				<Route path="confirmation" component={ConfirmationPanel}/>
 				<Route path="success" component={SuccessPanel}/>
