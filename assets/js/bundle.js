@@ -184,7 +184,9 @@ var Account = (function (_React$Component) {
 					_this2.signIn(e);
 				} }, _react2['default'].createElement('label', { htmlFor: 'login', className: 'form-label' }, 'Your email'), _react2['default'].createElement('input', { type: 'text', id: 'email-sign-in', name: 'login', ref: 'username', className: 'form-input', placeholder: 'mj@domain.com' }), _react2['default'].createElement('label', { htmlFor: 'password', className: 'form-label' }, 'Password'), _react2['default'].createElement('input', { type: 'password', id: 'password-sign-in', className: 'form-input', name: 'password', ref: 'password', placeholder: 'abc123' }), _react2['default'].createElement('label', { id: 'signin-error', htmlFor: '', className: 'error hidden' }), _react2['default'].createElement('label', { className: 'reset-password-toggle right marginBottom30 textSize-title-small colorGray', onClick: function onClick() {
 					_this2.setState({ resetPassword: true });
-				} }, 'Forgotten your password?'), _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement('button', { id: 'sign-me-in', className: 'form-label btn-success marginBottom30 marginRight15', type: 'submit' }, 'Sign in'), _react2['default'].createElement('button', { className: 'form-label btn-danger marginBottom30' }, _react2['default'].createElement('a', { href: '/pricing/subscribe' }, 'Sign up'))))) : false;
+				} }, 'Forgotten your password?'), _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement('button', { id: 'sign-me-in', className: 'form-label btn-success marginBottom30 marginRight15', type: 'submit' }, 'Sign in'), _react2['default'].createElement('button', { className: 'form-label btn-danger marginBottom30', onClick: function onClick(e) {
+					e.preventDefault();location.href = "/pricing/subscribe";
+				} }, 'Sign up')))) : false;
 
 			if (!this.state.user) {
 				return _react2['default'].createElement('div', null, _react2['default'].createElement('header', { className: 'PageHeader text-left fitToContent' }, _react2['default'].createElement('h1', { className: 'textType-title textSize-title-large' }, 'Sign in')), _react2['default'].createElement('section', { className: 'Article Section-fontsItemWrap' }, signin, resetPassword));
@@ -200,7 +202,9 @@ var Account = (function (_React$Component) {
 				active: this.state.current === 'account'
 			});
 
-			return _react2['default'].createElement('div', null, _react2['default'].createElement('header', { className: 'PageHeader text-left fitToContent' }, _react2['default'].createElement('h1', { className: 'textType-title textSize-title-large' }, 'Account')), _react2['default'].createElement('div', null, _react2['default'].createElement('div', { className: 'account-tabs' }, _react2['default'].createElement('ul', { className: 'account-tabs-list clearfix' }, _react2['default'].createElement('li', { id: 'tab-user', className: userClass }, _react2['default'].createElement('a', { href: '#/user' }, 'User')), _react2['default'].createElement('li', { id: 'tab-account', className: accountClass }, _react2['default'].createElement('a', { href: '#/account' }, 'Account')))), _react2['default'].createElement('section', { className: 'Article' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('a', { href: 'http://app.prototypo.io', className: 'NewsletterInput-submit marginTop15 right callToAction call-success' }, 'Go to Prototypo App')), this.props.children)));
+			var bt = JSON.parse(localStorage._hoodie_config)['_account.bearerToken'];
+
+			return _react2['default'].createElement('div', null, _react2['default'].createElement('header', { className: 'PageHeader text-left fitToContent' }, _react2['default'].createElement('h1', { className: 'textType-title textSize-title-large' }, 'Account')), _react2['default'].createElement('div', null, _react2['default'].createElement('div', { className: 'account-tabs' }, _react2['default'].createElement('ul', { className: 'account-tabs-list clearfix' }, _react2['default'].createElement('li', { id: 'tab-user', className: userClass }, _react2['default'].createElement('a', { href: '#/user' }, 'User')), _react2['default'].createElement('li', { id: 'tab-account', className: accountClass }, _react2['default'].createElement('a', { href: '#/account' }, 'Account')))), _react2['default'].createElement('section', { className: 'Article' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('a', { href: 'http://app.prototypo.io?bt=' + bt, className: 'NewsletterInput-submit marginTop15 right callToAction call-success' }, 'Go to Prototypo App')), this.props.children)));
 		}
 	}]);
 
@@ -1947,8 +1951,8 @@ var _accountChangePasswordComponentsJsx2 = _interopRequireDefault(_accountChange
 
 require('babel-polyfill');
 
-Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
-window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
+Stripe.setPublishableKey('pk_live_CVrzdDZTEowrAZaRizc4G14c');
+window.hoodie = new Hoodie('https://prototypo.appback.com/');
 
 var stores = {};
 var localServer = new _storesLocalClientServerStoresJsx.LocalServer(stores).instance;
@@ -3050,7 +3054,7 @@ var ShowInvoiceAddress = (function (_React$Component) {
 	_createClass(ShowInvoiceAddress, [{
 		key: 'render',
 		value: function render() {
-			return _react2['default'].createElement('address', { className: 'show-invoice-address' }, this.props.buyerName, _react2['default'].createElement('br', null), this.props.invoice.building_number, ' ', this.props.invoice.street_name, _react2['default'].createElement('br', null), this.props.invoice.address_detail, _react2['default'].createElement('br', null), this.props.invoice.postal_code, ' ', this.props.invoice.city, this.props.invoice.region ? ', ' + this.props.invoice.region : '', _react2['default'].createElement('br', null), this.props.invoice.country, _react2['default'].createElement('br', null));
+			return _react2['default'].createElement('p', { className: 'user-infos show-invoice-address' }, this.props.buyerName, _react2['default'].createElement('br', null), this.props.invoice.building_number, ' ', this.props.invoice.street_name, _react2['default'].createElement('br', null), this.props.invoice.address_detail, _react2['default'].createElement('br', null), this.props.invoice.postal_code, ' ', this.props.invoice.city, this.props.invoice.region ? ', ' + this.props.invoice.region : '', _react2['default'].createElement('br', null), this.props.invoice.country, _react2['default'].createElement('br', null));
 		}
 	}]);
 
@@ -3705,7 +3709,7 @@ var CardPanel = (function (_React$Component) {
 					_this2.createCard(e);
 				} }, _react2['default'].createElement(_componentsAddCardComponentsJsx2['default'], { handleChange: function handleChange(e, name) {
 					_this2.handleStateChange(e, name);
-				} }), _react2['default'].createElement('div', { className: 'message message-error' }, error), _react2['default'].createElement('label', { className: 'form-label' }, 'VAT number'), _react2['default'].createElement('input', { className: 'form-input', type: 'text', onChange: function onChange(e) {
+				} }), _react2['default'].createElement('div', { className: 'message message-error' }, error), _react2['default'].createElement('label', { className: 'form-label' }, 'VAT number (optional)'), _react2['default'].createElement('input', { className: 'form-input', type: 'text', onChange: function onChange(e) {
 					_this2.handleStateChange(e, 'buyer_tax_number');
 				} }), _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement(_componentsWaitForLoadComponentsJsx2['default'], { loaded: !this.state.loading }, _react2['default'].createElement('button', { className: 'form-label btn-success marginRight15', type: 'submit' }, 'Add my card'), _react2['default'].createElement('button', { className: 'form-label btn-danger', onClick: function onClick(e) {
 					_this2.tryForFree(e);
@@ -4246,7 +4250,7 @@ var SignupPanel = (function (_React$Component) {
 			var error = this.state.errors ? _react2['default'].createElement('p', { className: 'signup-panel-error' }, this.state.errors.message) : false;
 			return _react2['default'].createElement('div', { className: 'signup-panel' }, _react2['default'].createElement('form', { onSubmit: function onSubmit(e) {
 					_this2.signUp(e);
-				} }, _react2['default'].createElement('label', { className: 'form-label', htmlFor: 'username' }, 'Username'), _react2['default'].createElement('input', { className: 'form-input', id: 'username', name: 'username', ref: 'username', type: 'text' }), _react2['default'].createElement('label', { className: 'form-label', htmlFor: 'password' }, 'Password'), _react2['default'].createElement('input', { className: 'form-input', id: 'password', name: 'password', ref: 'password', type: 'password' }), _react2['default'].createElement('p', { className: 'message message-error' }, error), _react2['default'].createElement(_componentsWaitForLoadComponentsJsx2['default'], { loaded: !this.state.loading }, _react2['default'].createElement('button', { className: 'form-input btn-success marginTop30', type: 'submit' }, 'Sign up'))));
+				} }, _react2['default'].createElement('label', { className: 'form-label', htmlFor: 'username' }, 'Email address'), _react2['default'].createElement('input', { className: 'form-input', id: 'username', name: 'username', ref: 'username', type: 'text' }), _react2['default'].createElement('label', { className: 'form-label', htmlFor: 'password' }, 'Password'), _react2['default'].createElement('input', { className: 'form-input', id: 'password', name: 'password', ref: 'password', type: 'password' }), _react2['default'].createElement('p', { className: 'message message-error' }, error), _react2['default'].createElement(_componentsWaitForLoadComponentsJsx2['default'], { loaded: !this.state.loading }, _react2['default'].createElement('button', { className: 'form-input btn-success marginTop30', type: 'submit' }, 'Sign up'))));
 		}
 	}]);
 
