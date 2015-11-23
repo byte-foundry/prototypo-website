@@ -30,8 +30,8 @@ import ChangeSubConfirmationPanel from './account/change-sub-confirmation-panel.
 import ChangeInvoiceAddress from './account/change-invoice-address.components.jsx';
 import ChangePassword from './account/change-password.components.jsx';
 
-Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
-window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
+Stripe.setPublishableKey('pk_live_CVrzdDZTEowrAZaRizc4G14c');
+window.hoodie = new Hoodie('https://prototypo.appback.com/');
 
 const stores = {};
 const localServer = new LocalServer(stores).instance;
