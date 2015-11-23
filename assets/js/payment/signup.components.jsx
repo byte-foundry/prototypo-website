@@ -85,7 +85,7 @@ export default class SignupPanel extends React.Component {
 		return (
 			<div className="signup-panel">
 				<form onSubmit={(e) => {this.signUp(e)}}>
-					<label className="form-label" htmlFor="username">Username</label>
+					<label className="form-label" htmlFor="username">Email address</label>
 					<input className="form-input" id="username" name="username" ref="username" type="text"></input>
 					<label className="form-label" htmlFor="password">Password</label>
 					<input className="form-input" id="password" name="password" ref="password" type="password"></input>

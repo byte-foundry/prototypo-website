@@ -11,10 +11,6 @@
 
 				<section class="Article Section-fontsItemWrap">
 
-					<div class="textType-txt textSize-txt-large marginTop30">
-						<?php echo $page->text()->kirbytext() ?>
-					</div>
-
 					<div id="payment-container" class="textType-txt">
 					</div>
 
