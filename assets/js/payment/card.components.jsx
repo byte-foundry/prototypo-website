@@ -123,7 +123,7 @@ export default class CardPanel extends React.Component {
 				<form onSubmit={(e) => {this.createCard(e)}}>
 					<AddCard handleChange={(e, name) => {this.handleStateChange(e,name)}}/>
 					<div className="message message-error">{error}</div>
-					<label className="form-label">VAT number</label>
+					<label className="form-label">VAT number (optional)</label>
 					<input className="form-input" type="text" onChange={(e) => { this.handleStateChange(e,'buyer_tax_number')}}></input>
 					<div className="marginTop30">
 						<WaitForLoad loaded={!this.state.loading}>

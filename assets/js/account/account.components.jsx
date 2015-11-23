@@ -109,7 +109,7 @@ export default class Account extends React.Component {
 					<label className="reset-password-toggle right marginBottom30 textSize-title-small colorGray" onClick={() => {this.setState({resetPassword:true})}}>Forgotten your password?</label>
 					<div className="marginTop30">
 						<button id="sign-me-in" className="form-label btn-success marginBottom30 marginRight15" type="submit">Sign in</button>
-						<button className="form-label btn-danger marginBottom30"><a href="/pricing/subscribe">Sign up</a></button>
+						<button className="form-label btn-danger marginBottom30" onClick={(e) => { e.preventDefault(); location.href = "/pricing/subscribe"}}>Sign up</button>
 					</div>
 				</form>
 			</div>
