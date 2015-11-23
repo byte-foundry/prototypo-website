@@ -140,6 +140,8 @@ export default class Account extends React.Component {
 			active: this.state.current === 'account',
 		});
 
+		const bt = JSON.parse(localStorage._hoodie_config)['_account.bearerToken'];
+
 		return (
 				<div>
 					<header className="PageHeader text-left fitToContent">
@@ -156,7 +158,7 @@ export default class Account extends React.Component {
 
 						<section className="Article">
 							<div className="clearfix">
-								<a href="http://app.prototypo.io" className="NewsletterInput-submit marginTop15 right callToAction call-success">Go to Prototypo App</a>
+								<a href={`http://app.prototypo.io?bt=${bt}`} className="NewsletterInput-submit marginTop15 right callToAction call-success">Go to Prototypo App</a>
 							</div>
 							{this.props.children}
 						</section>
