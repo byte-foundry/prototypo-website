@@ -3,6 +3,8 @@ language: php
 php:
   - 5.4
 before_script:
+- nvm install v0.12
+- nvm use v0.12
 - npm install -g gulp surge
 - npm install
 script:
