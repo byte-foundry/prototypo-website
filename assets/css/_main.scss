@@ -1710,49 +1710,56 @@ body.account .Article {
 
 .crumb {
 
-	flex: 1 1;
+	// flex: 1 1;
 	&:last-child {
 		margin-right: 0;
 	}
 
 	margin-right: 20px;
-	border-radius: 5px;
 	position: relative;
-	padding: 1.5em;
-	background-color: lighten($mainBackgroundColor, 35%);
 	display:flex;
 	align-items:center;
 
 	&:hover {
-		background-color: lighten($mainBackgroundColor, 15%);
 		text-decoration: none !important;
+		cursor: pointer;
+	}
+
+	&:hover &-step {
+		color: white;
+		background-color: $mainBackgroundColor;
+		border: 3px solid lighten($mainBackgroundColor, 25%);
 	}
 
 	&-step {
-		border-top-left-radius: 5px;
-		border-bottom-left-radius: 5px;
-		padding: 1.6em 1em;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
+		border: 3px solid $mainBackgroundColor;
+		border-radius: 50%;
 
-		background-color: $mainBackgroundColor;
+		width: 30px;
+		height: 30px;
+		margin-right: 5px;
+
+		text-align: center;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 		font-weight: bold;
-		color: white;
+		color: $mainBackgroundColor;
 	}
 
 	&-link {
 		color: $colorDark !important;
-		margin-left: 25px;
-		font-size:13px;
+		margin-left: 10px;
+		font-size: 15px;
 	}
 
 	&.is-disabled {
-		background-color: $colorLighterGray;
+
 		.crumb-step {
-			color: white;
-			background-color: lighten($mainBackgroundColor, 25%);
+			color: $colorGray;
+			border: 3px solid $colorGray;
 		}
 		&-link {
 			pointer-events: none;
@@ -1760,10 +1767,12 @@ body.account .Article {
 		&:hover {
 			cursor: default;
 		}
+		&:hover .crumb-step {
+			background-color: white;
+		}
 	}
 
 	&.is-active {
-		background-color: lighten($mainBackgroundColor, 15%);
 		.crumb-step {
 			color: white;
 			background-color: $mainBackgroundColor;
@@ -1772,7 +1781,6 @@ body.account .Article {
 			font-weight: bold;
 		}
 		&:hover {
-			background-color: $mainBackgroundColor;
 			color: white;
 		}
 	}
