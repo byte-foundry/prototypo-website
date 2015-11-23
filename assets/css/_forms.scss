@@ -41,6 +41,10 @@ a {
 		border-bottom: solid 3px white;
 		margin: 0 0 20px 0;
 
+		&.is-required {
+			border-bottom: solid 3px $thirdBackgroundColor;
+		}
+
 		&:focus {
 			border-bottom: 3px solid $mainBackgroundColor !important;
 		}

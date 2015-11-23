@@ -446,6 +446,10 @@ var _lifespan = require('lifespan');
 
 var _lifespan2 = _interopRequireDefault(_lifespan);
 
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 var _storesLocalClientServerStoresJsx = require('../stores/local-client-server.stores.jsx');
 
 var _componentsInvoiceAddressComponentsJsx = require('../components/invoice-address.components.jsx');
@@ -474,7 +478,8 @@ var ChangeInvoiceAddress = (function (_React$Component) {
 				var head = _ref.head;
 
 				_this.setState({
-					'invoice_address': head.toJS().invoice_address
+					invoice_address: head.toJS().invoice_address,
+					buyer_name: head.toJS().buyer_name
 				});
 			}).onDelete(function () {
 				_this.setState(undefined);
@@ -488,7 +493,10 @@ var ChangeInvoiceAddress = (function (_React$Component) {
 	}, {
 		key: 'handleAddressChange',
 		value: function handleAddressChange(e, name) {
-			this.setState(_defineProperty({}, name, e.target.value));
+			var invoice_address = _lodash2['default'].assign({}, this.state.invoice_address, _defineProperty({}, name, e.target.value));
+			this.setState({
+				invoice_address: invoice_address
+			});
 		}
 	}, {
 		key: 'handleNameChange',
@@ -502,19 +510,12 @@ var ChangeInvoiceAddress = (function (_React$Component) {
 		value: function changeInvoiceAddress(e) {
 			e.preventDefault();
 
-			var invoice_address = {
-				building_number: this.state.building_number,
-				street_name: this.state.street_name,
-				address_detail: this.state.address_detail,
-				city: this.state.city,
-				postal_code: this.state.postal_code,
-				region: this.state.region,
-				country: this.state.country
-			};
-
 			this.client.dispatchAction('/change-address', {
-				invoice_address: invoice_address,
-				buyer_name: this.state.buyer_name
+				invoice_address: this.state.invoice_address,
+				buyer_name: this.state.buyer_name,
+				cb: function cb() {
+					location.href = '#/success';
+				}
 			});
 		}
 	}, {
@@ -538,7 +539,7 @@ var ChangeInvoiceAddress = (function (_React$Component) {
 exports['default'] = ChangeInvoiceAddress;
 module.exports = exports['default'];
 
-},{"../components/invoice-address.components.jsx":15,"../stores/local-client-server.stores.jsx":29,"lifespan":326,"react":572}],4:[function(require,module,exports){
+},{"../components/invoice-address.components.jsx":15,"../stores/local-client-server.stores.jsx":29,"lifespan":326,"lodash":328,"react":572}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -1484,7 +1485,11 @@ var SubscriptionPanel = (function (_React$Component) {
 
 			var changeSub = _react2['default'].createElement(_componentsChoosePlanComponentsJsx2['default'], null);
 
-			var invoiceAddress = this.state.invoice_address && Object.keys(this.state.invoice_address).length > 0 ? _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Invoicing address'), _react2['default'].createElement(_componentsShowInvoiceAddressComponentsJsx2['default'], { invoice: this.state.invoice_address, buyerName: this.state.buyer_name })) : _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Invoicing address'), _react2['default'].createElement('p', { className: 'message' }, 'You do not have an invoicing address right now'));
+			var invoiceAddress = this.state.invoice_address && Object.keys(this.state.invoice_address).length > 0 ? _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Billing address'), _react2['default'].createElement(_componentsShowInvoiceAddressComponentsJsx2['default'], { invoice: this.state.invoice_address, buyerName: this.state.buyer_name }), _react2['default'].createElement('button', { onClick: function onClick() {
+					location.hash = '#/change-invoice-address';
+				}, className: 'account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right' }, 'Change billing address')) : _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Billing address'), _react2['default'].createElement('p', { className: 'message' }, 'You do not have an invoicing address right now'), _react2['default'].createElement('button', { onClick: function onClick() {
+					location.hash = '#/change-invoice-address';
+				}, className: 'account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right' }, 'Add billing address'));
 
 			return _react2['default'].createElement('div', { className: 'subscription-panel' }, _react2['default'].createElement('div', { id: 'target-tab-account', className: 'clearfix' }, _react2['default'].createElement('div', { className: 'subscribe' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Your current subscription'), _react2['default'].createElement('label', { className: 'form-label marginTop15' }, 'Your plan'), _react2['default'].createElement('div', { className: 'user-infos marginTop15 marginBottom15', id: 'logged-in-subscription' }, this.state.plan.name), endDate), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'right' }, _react2['default'].createElement('label', { id: 'success-plan-message', htmlFor: '', className: 'success-message hidden' }, 'You\'ve successfuly changed your plan!'), _react2['default'].createElement('button', { id: 'change-subscription', className: 'change-subscription-toggle form-label btn-danger account-plan-toggle-target', onClick: function onClick() {
 					location.hash = '#/change-sub';
@@ -2147,7 +2152,7 @@ var actions = {
 					buyer_name: buyer_name,
 					buyer_credit_card_prefix: card.number.substr(0, 9)
 				}).then(function (dataUpdate) {
-					var patchCard = userInfos.set('card', data.card).set('plan', dataUpdate.plan).set('invoice_address', invoice_address).set('buyer_name', buyer_name).set('subscription', dataCustomer.subscriptions ? dataCustomer.subscriptions.data[0] : undefined).commit();
+					var patchCard = userInfos.set('card', data.card).set('plan', dataUpdate.plan).set('subscription', dataCustomer.subscriptions ? dataCustomer.subscriptions.data[0] : undefined).commit();
 					localServer.dispatchUpdate('/userInfos', patchCard);
 
 					saveUserValues({
@@ -2317,15 +2322,56 @@ var actions = {
 	'/change-address': function changeAddress(_ref8) {
 		var invoice_address = _ref8.invoice_address;
 		var buyer_name = _ref8.buyer_name;
+		var cb = _ref8.cb;
 
-		hoodie.stripe.customers.update({
-			invoice_address: invoice_address,
-			buyer_name: buyer_name
-		}).then(function (data) {
-			var patch = userInfos.set('invoice_address', invoice_address).set('buyer_name', buyer_name).commit();
+		if (!buyer_name) {
+			var patch = errors.set('addressError', {
+				message: 'You have to supply a corporate name or your full name'
+			}).commit();
+			return localServer.dispatchUpdate('/errors', patch);
+		}
 
-			localServer.dispatchUpdate('/userInfos', patch);
-		})['catch'](function (err) {});
+		var valid = true;
+		['street_name', 'city', 'postal_code', 'country'].forEach(function (field) {
+			if (!invoice_address[field]) {
+				var patch = errors.set('addressError', {
+					message: 'You have to supply a ' + field.replace('_', ' ')
+				}).commit();
+				localServer.dispatchUpdate('/errors', patch);
+
+				valid = false;
+			}
+		});
+
+		if (valid) {
+
+			hoodie.stripe.customers.update({
+				invoice_address: invoice_address,
+				buyer_name: buyer_name
+			}).then(function (data) {
+				var patch = userInfos.set('invoice_address', invoice_address).set('buyer_name', buyer_name).commit();
+
+				localServer.dispatchUpdate('/userInfos', patch);
+
+				var patchSuccess = success.set('message', 'You successufully changed your address').commit();
+				localServer.dispatchUpdate('/success', patchSuccess);
+
+				saveUserValues({
+					invoice_address: invoice_address,
+					buyer_name: buyer_name
+				}, function () {}, function (err) {
+					var patch = errors.set('invoiceAddress', err).commit();
+					localServer.dispatchUpdate('/errors', patch);
+				});
+
+				if (cb) {
+					cb();
+				}
+			})['catch'](function (err) {
+				var patch = errors.set('addressError', err).commit();
+				localServer.dispatchUpdate('/errors', patch);
+			});
+		}
 	},
 	'/current-tab': function currentTab(name) {
 		var patch = tabs.set('current', name).commit();
@@ -2636,16 +2682,16 @@ exports['default'] = ChoosePlan;
 module.exports = exports['default'];
 
 },{"../services/currency.services.jsx":27,"../stores/local-client-server.stores.jsx":29,"classnames":303,"react":572,"react-dom":370}],15:[function(require,module,exports){
-"use strict";
+'use strict';
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
 	value: true
 });
 
 var _createClass = (function () {
 	function defineProperties(target, props) {
 		for (var i = 0; i < props.length; i++) {
-			var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+			var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ('value' in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
 		}
 	}return function (Constructor, protoProps, staticProps) {
 		if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
@@ -2662,7 +2708,7 @@ var _get = function get(_x, _x2, _x3) {
 			} else {
 				_x = parent;_x2 = property;_x3 = receiver;_again = true;desc = parent = undefined;continue _function;
 			}
-		} else if ("value" in desc) {
+		} else if ('value' in desc) {
 			return desc.value;
 		} else {
 			var getter = desc.get;if (getter === undefined) {
@@ -2673,18 +2719,18 @@ var _get = function get(_x, _x2, _x3) {
 };
 
 function _interopRequireDefault(obj) {
-	return obj && obj.__esModule ? obj : { "default": obj };
+	return obj && obj.__esModule ? obj : { 'default': obj };
 }
 
 function _classCallCheck(instance, Constructor) {
 	if (!(instance instanceof Constructor)) {
-		throw new TypeError("Cannot call a class as a function");
+		throw new TypeError('Cannot call a class as a function');
 	}
 }
 
 function _inherits(subClass, superClass) {
-	if (typeof superClass !== "function" && superClass !== null) {
-		throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+	if (typeof superClass !== 'function' && superClass !== null) {
+		throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
 	}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 }
 
@@ -2692,49 +2738,61 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _lodash = require('lodash');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
 var InvoiceAddress = (function (_React$Component) {
 	_inherits(InvoiceAddress, _React$Component);
 
 	function InvoiceAddress() {
 		_classCallCheck(this, InvoiceAddress);
 
-		_get(Object.getPrototypeOf(InvoiceAddress.prototype), "constructor", this).apply(this, arguments);
+		_get(Object.getPrototypeOf(InvoiceAddress.prototype), 'constructor', this).apply(this, arguments);
 	}
 
 	_createClass(InvoiceAddress, [{
-		key: "render",
+		key: 'render',
 		value: function render() {
 			var _this = this;
 
 			var invoice = this.props.invoice_address && Object.keys(this.props.invoice_address).length > 0 ? this.props.invoice_address : {};
 
-			return _react2["default"].createElement("div", { className: "clearfix marginTop30" }, _react2["default"].createElement("p", { className: "textSize-title-small marginTop30 marginBottom15" }, "Invoice address (all the fields are optional)"), _react2["default"].createElement("div", { className: "account-card-form-toggle-target" }, _react2["default"].createElement("div", null, _react2["default"].createElement("label", { htmlFor: "corporateName", className: "form-label" }, "Corporate name or full name"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "corporateName", name: "corporateName", placeholder: "My company inc.", values: this.props.buyer_name, onChange: function onChange(e) {
+			var countryArray = [{ "name": "Afghanistan", "alpha": "AF", "country-code": "004" }, { "name": "Åland Islands", "alpha": "AX", "country-code": "248" }, { "name": "Albania", "alpha": "AL", "country-code": "008" }, { "name": "Algeria", "alpha": "DZ", "country-code": "012" }, { "name": "American Samoa", "alpha": "AS", "country-code": "016" }, { "name": "Andorra", "alpha": "AD", "country-code": "020" }, { "name": "Angola", "alpha": "AO", "country-code": "024" }, { "name": "Anguilla", "alpha": "AI", "country-code": "660" }, { "name": "Antarctica", "alpha": "AQ", "country-code": "010" }, { "name": "Antigua and Barbuda", "alpha": "AG", "country-code": "028" }, { "name": "Argentina", "alpha": "AR", "country-code": "032" }, { "name": "Armenia", "alpha": "AM", "country-code": "051" }, { "name": "Aruba", "alpha": "AW", "country-code": "533" }, { "name": "Australia", "alpha": "AU", "country-code": "036" }, { "name": "Austria", "alpha": "AT", "country-code": "040" }, { "name": "Azerbaijan", "alpha": "AZ", "country-code": "031" }, { "name": "Bahamas", "alpha": "BS", "country-code": "044" }, { "name": "Bahrain", "alpha": "BH", "country-code": "048" }, { "name": "Bangladesh", "alpha": "BD", "country-code": "050" }, { "name": "Barbados", "alpha": "BB", "country-code": "052" }, { "name": "Belarus", "alpha": "BY", "country-code": "112" }, { "name": "Belgium", "alpha": "BE", "country-code": "056" }, { "name": "Belize", "alpha": "BZ", "country-code": "084" }, { "name": "Benin", "alpha": "BJ", "country-code": "204" }, { "name": "Bermuda", "alpha": "BM", "country-code": "060" }, { "name": "Bhutan", "alpha": "BT", "country-code": "064" }, { "name": "Bolivia (Plurinational State of)", "alpha": "BO", "country-code": "068" }, { "name": "Bonaire, Sint Eustatius and Saba", "alpha": "BQ", "country-code": "535" }, { "name": "Bosnia and Herzegovina", "alpha": "BA", "country-code": "070" }, { "name": "Botswana", "alpha": "BW", "country-code": "072" }, { "name": "Bouvet Island", "alpha": "BV", "country-code": "074" }, { "name": "Brazil", "alpha": "BR", "country-code": "076" }, { "name": "British Indian Ocean Territory", "alpha": "IO", "country-code": "086" }, { "name": "Brunei Darussalam", "alpha": "BN", "country-code": "096" }, { "name": "Bulgaria", "alpha": "BG", "country-code": "100" }, { "name": "Burkina Faso", "alpha": "BF", "country-code": "854" }, { "name": "Burundi", "alpha": "BI", "country-code": "108" }, { "name": "Cambodia", "alpha": "KH", "country-code": "116" }, { "name": "Cameroon", "alpha": "CM", "country-code": "120" }, { "name": "Canada", "alpha": "CA", "country-code": "124" }, { "name": "Cabo Verde", "alpha": "CV", "country-code": "132" }, { "name": "Cayman Islands", "alpha": "KY", "country-code": "136" }, { "name": "Central African Republic", "alpha": "CF", "country-code": "140" }, { "name": "Chad", "alpha": "TD", "country-code": "148" }, { "name": "Chile", "alpha": "CL", "country-code": "152" }, { "name": "China", "alpha": "CN", "country-code": "156" }, { "name": "Christmas Island", "alpha": "CX", "country-code": "162" }, { "name": "Cocos (Keeling) Islands", "alpha": "CC", "country-code": "166" }, { "name": "Colombia", "alpha": "CO", "country-code": "170" }, { "name": "Comoros", "alpha": "KM", "country-code": "174" }, { "name": "Congo", "alpha": "CG", "country-code": "178" }, { "name": "Congo (Democratic Republic of the)", "alpha": "CD", "country-code": "180" }, { "name": "Cook Islands", "alpha": "CK", "country-code": "184" }, { "name": "Costa Rica", "alpha": "CR", "country-code": "188" }, { "name": "Côte d'Ivoire", "alpha": "CI", "country-code": "384" }, { "name": "Croatia", "alpha": "HR", "country-code": "191" }, { "name": "Cuba", "alpha": "CU", "country-code": "192" }, { "name": "Curaçao", "alpha": "CW", "country-code": "531" }, { "name": "Cyprus", "alpha": "CY", "country-code": "196" }, { "name": "Czech Republic", "alpha": "CZ", "country-code": "203" }, { "name": "Denmark", "alpha": "DK", "country-code": "208" }, { "name": "Djibouti", "alpha": "DJ", "country-code": "262" }, { "name": "Dominica", "alpha": "DM", "country-code": "212" }, { "name": "Dominican Republic", "alpha": "DO", "country-code": "214" }, { "name": "Ecuador", "alpha": "EC", "country-code": "218" }, { "name": "Egypt", "alpha": "EG", "country-code": "818" }, { "name": "El Salvador", "alpha": "SV", "country-code": "222" }, { "name": "Equatorial Guinea", "alpha": "GQ", "country-code": "226" }, { "name": "Eritrea", "alpha": "ER", "country-code": "232" }, { "name": "Estonia", "alpha": "EE", "country-code": "233" }, { "name": "Ethiopia", "alpha": "ET", "country-code": "231" }, { "name": "Falkland Islands (Malvinas)", "alpha": "FK", "country-code": "238" }, { "name": "Faroe Islands", "alpha": "FO", "country-code": "234" }, { "name": "Fiji", "alpha": "FJ", "country-code": "242" }, { "name": "Finland", "alpha": "FI", "country-code": "246" }, { "name": "France", "alpha": "FR", "country-code": "250" }, { "name": "French Guiana", "alpha": "GF", "country-code": "254" }, { "name": "French Polynesia", "alpha": "PF", "country-code": "258" }, { "name": "French Southern Territories", "alpha": "TF", "country-code": "260" }, { "name": "Gabon", "alpha": "GA", "country-code": "266" }, { "name": "Gambia", "alpha": "GM", "country-code": "270" }, { "name": "Georgia", "alpha": "GE", "country-code": "268" }, { "name": "Germany", "alpha": "DE", "country-code": "276" }, { "name": "Ghana", "alpha": "GH", "country-code": "288" }, { "name": "Gibraltar", "alpha": "GI", "country-code": "292" }, { "name": "Greece", "alpha": "GR", "country-code": "300" }, { "name": "Greenland", "alpha": "GL", "country-code": "304" }, { "name": "Grenada", "alpha": "GD", "country-code": "308" }, { "name": "Guadeloupe", "alpha": "GP", "country-code": "312" }, { "name": "Guam", "alpha": "GU", "country-code": "316" }, { "name": "Guatemala", "alpha": "GT", "country-code": "320" }, { "name": "Guernsey", "alpha": "GG", "country-code": "831" }, { "name": "Guinea", "alpha": "GN", "country-code": "324" }, { "name": "Guinea-Bissau", "alpha": "GW", "country-code": "624" }, { "name": "Guyana", "alpha": "GY", "country-code": "328" }, { "name": "Haiti", "alpha": "HT", "country-code": "332" }, { "name": "Heard Island and McDonald Islands", "alpha": "HM", "country-code": "334" }, { "name": "Holy See", "alpha": "VA", "country-code": "336" }, { "name": "Honduras", "alpha": "HN", "country-code": "340" }, { "name": "Hong Kong", "alpha": "HK", "country-code": "344" }, { "name": "Hungary", "alpha": "HU", "country-code": "348" }, { "name": "Iceland", "alpha": "IS", "country-code": "352" }, { "name": "India", "alpha": "IN", "country-code": "356" }, { "name": "Indonesia", "alpha": "ID", "country-code": "360" }, { "name": "Iran (Islamic Republic of)", "alpha": "IR", "country-code": "364" }, { "name": "Iraq", "alpha": "IQ", "country-code": "368" }, { "name": "Ireland", "alpha": "IE", "country-code": "372" }, { "name": "Isle of Man", "alpha": "IM", "country-code": "833" }, { "name": "Israel", "alpha": "IL", "country-code": "376" }, { "name": "Italy", "alpha": "IT", "country-code": "380" }, { "name": "Jamaica", "alpha": "JM", "country-code": "388" }, { "name": "Japan", "alpha": "JP", "country-code": "392" }, { "name": "Jersey", "alpha": "JE", "country-code": "832" }, { "name": "Jordan", "alpha": "JO", "country-code": "400" }, { "name": "Kazakhstan", "alpha": "KZ", "country-code": "398" }, { "name": "Kenya", "alpha": "KE", "country-code": "404" }, { "name": "Kiribati", "alpha": "KI", "country-code": "296" }, { "name": "Korea (Democratic People's Republic of)", "alpha": "KP", "country-code": "408" }, { "name": "Korea (Republic of)", "alpha": "KR", "country-code": "410" }, { "name": "Kuwait", "alpha": "KW", "country-code": "414" }, { "name": "Kyrgyzstan", "alpha": "KG", "country-code": "417" }, { "name": "Lao People's Democratic Republic", "alpha": "LA", "country-code": "418" }, { "name": "Latvia", "alpha": "LV", "country-code": "428" }, { "name": "Lebanon", "alpha": "LB", "country-code": "422" }, { "name": "Lesotho", "alpha": "LS", "country-code": "426" }, { "name": "Liberia", "alpha": "LR", "country-code": "430" }, { "name": "Libya", "alpha": "LY", "country-code": "434" }, { "name": "Liechtenstein", "alpha": "LI", "country-code": "438" }, { "name": "Lithuania", "alpha": "LT", "country-code": "440" }, { "name": "Luxembourg", "alpha": "LU", "country-code": "442" }, { "name": "Macao", "alpha": "MO", "country-code": "446" }, { "name": "Macedonia (the former Yugoslav Republic of)", "alpha": "MK", "country-code": "807" }, { "name": "Madagascar", "alpha": "MG", "country-code": "450" }, { "name": "Malawi", "alpha": "MW", "country-code": "454" }, { "name": "Malaysia", "alpha": "MY", "country-code": "458" }, { "name": "Maldives", "alpha": "MV", "country-code": "462" }, { "name": "Mali", "alpha": "ML", "country-code": "466" }, { "name": "Malta", "alpha": "MT", "country-code": "470" }, { "name": "Marshall Islands", "alpha": "MH", "country-code": "584" }, { "name": "Martinique", "alpha": "MQ", "country-code": "474" }, { "name": "Mauritania", "alpha": "MR", "country-code": "478" }, { "name": "Mauritius", "alpha": "MU", "country-code": "480" }, { "name": "Mayotte", "alpha": "YT", "country-code": "175" }, { "name": "Mexico", "alpha": "MX", "country-code": "484" }, { "name": "Micronesia (Federated States of)", "alpha": "FM", "country-code": "583" }, { "name": "Moldova (Republic of)", "alpha": "MD", "country-code": "498" }, { "name": "Monaco", "alpha": "MC", "country-code": "492" }, { "name": "Mongolia", "alpha": "MN", "country-code": "496" }, { "name": "Montenegro", "alpha": "ME", "country-code": "499" }, { "name": "Montserrat", "alpha": "MS", "country-code": "500" }, { "name": "Morocco", "alpha": "MA", "country-code": "504" }, { "name": "Mozambique", "alpha": "MZ", "country-code": "508" }, { "name": "Myanmar", "alpha": "MM", "country-code": "104" }, { "name": "Namibia", "alpha": "NA", "country-code": "516" }, { "name": "Nauru", "alpha": "NR", "country-code": "520" }, { "name": "Nepal", "alpha": "NP", "country-code": "524" }, { "name": "Netherlands", "alpha": "NL", "country-code": "528" }, { "name": "New Caledonia", "alpha": "NC", "country-code": "540" }, { "name": "New Zealand", "alpha": "NZ", "country-code": "554" }, { "name": "Nicaragua", "alpha": "NI", "country-code": "558" }, { "name": "Niger", "alpha": "NE", "country-code": "562" }, { "name": "Nigeria", "alpha": "NG", "country-code": "566" }, { "name": "Niue", "alpha": "NU", "country-code": "570" }, { "name": "Norfolk Island", "alpha": "NF", "country-code": "574" }, { "name": "Northern Mariana Islands", "alpha": "MP", "country-code": "580" }, { "name": "Norway", "alpha": "NO", "country-code": "578" }, { "name": "Oman", "alpha": "OM", "country-code": "512" }, { "name": "Pakistan", "alpha": "PK", "country-code": "586" }, { "name": "Palau", "alpha": "PW", "country-code": "585" }, { "name": "Palestine, State of", "alpha": "PS", "country-code": "275" }, { "name": "Panama", "alpha": "PA", "country-code": "591" }, { "name": "Papua New Guinea", "alpha": "PG", "country-code": "598" }, { "name": "Paraguay", "alpha": "PY", "country-code": "600" }, { "name": "Peru", "alpha": "PE", "country-code": "604" }, { "name": "Philippines", "alpha": "PH", "country-code": "608" }, { "name": "Pitcairn", "alpha": "PN", "country-code": "612" }, { "name": "Poland", "alpha": "PL", "country-code": "616" }, { "name": "Portugal", "alpha": "PT", "country-code": "620" }, { "name": "Puerto Rico", "alpha": "PR", "country-code": "630" }, { "name": "Qatar", "alpha": "QA", "country-code": "634" }, { "name": "Réunion", "alpha": "RE", "country-code": "638" }, { "name": "Romania", "alpha": "RO", "country-code": "642" }, { "name": "Russian Federation", "alpha": "RU", "country-code": "643" }, { "name": "Rwanda", "alpha": "RW", "country-code": "646" }, { "name": "Saint Barthélemy", "alpha": "BL", "country-code": "652" }, { "name": "Saint Helena, Ascension and Tristan da Cunha", "alpha": "SH", "country-code": "654" }, { "name": "Saint Kitts and Nevis", "alpha": "KN", "country-code": "659" }, { "name": "Saint Lucia", "alpha": "LC", "country-code": "662" }, { "name": "Saint Martin (French part)", "alpha": "MF", "country-code": "663" }, { "name": "Saint Pierre and Miquelon", "alpha": "PM", "country-code": "666" }, { "name": "Saint Vincent and the Grenadines", "alpha": "VC", "country-code": "670" }, { "name": "Samoa", "alpha": "WS", "country-code": "882" }, { "name": "San Marino", "alpha": "SM", "country-code": "674" }, { "name": "Sao Tome and Principe", "alpha": "ST", "country-code": "678" }, { "name": "Saudi Arabia", "alpha": "SA", "country-code": "682" }, { "name": "Senegal", "alpha": "SN", "country-code": "686" }, { "name": "Serbia", "alpha": "RS", "country-code": "688" }, { "name": "Seychelles", "alpha": "SC", "country-code": "690" }, { "name": "Sierra Leone", "alpha": "SL", "country-code": "694" }, { "name": "Singapore", "alpha": "SG", "country-code": "702" }, { "name": "Sint Maarten (Dutch part)", "alpha": "SX", "country-code": "534" }, { "name": "Slovakia", "alpha": "SK", "country-code": "703" }, { "name": "Slovenia", "alpha": "SI", "country-code": "705" }, { "name": "Solomon Islands", "alpha": "SB", "country-code": "090" }, { "name": "Somalia", "alpha": "SO", "country-code": "706" }, { "name": "South Africa", "alpha": "ZA", "country-code": "710" }, { "name": "South Georgia and the South Sandwich Islands", "alpha": "GS", "country-code": "239" }, { "name": "South Sudan", "alpha": "SS", "country-code": "728" }, { "name": "Spain", "alpha": "ES", "country-code": "724" }, { "name": "Sri Lanka", "alpha": "LK", "country-code": "144" }, { "name": "Sudan", "alpha": "SD", "country-code": "729" }, { "name": "Suriname", "alpha": "SR", "country-code": "740" }, { "name": "Svalbard and Jan Mayen", "alpha": "SJ", "country-code": "744" }, { "name": "Swaziland", "alpha": "SZ", "country-code": "748" }, { "name": "Sweden", "alpha": "SE", "country-code": "752" }, { "name": "Switzerland", "alpha": "CH", "country-code": "756" }, { "name": "Syrian Arab Republic", "alpha": "SY", "country-code": "760" }, { "name": "Taiwan, Province of China", "alpha": "TW", "country-code": "158" }, { "name": "Tajikistan", "alpha": "TJ", "country-code": "762" }, { "name": "Tanzania, United Republic of", "alpha": "TZ", "country-code": "834" }, { "name": "Thailand", "alpha": "TH", "country-code": "764" }, { "name": "Timor-Leste", "alpha": "TL", "country-code": "626" }, { "name": "Togo", "alpha": "TG", "country-code": "768" }, { "name": "Tokelau", "alpha": "TK", "country-code": "772" }, { "name": "Tonga", "alpha": "TO", "country-code": "776" }, { "name": "Trinidad and Tobago", "alpha": "TT", "country-code": "780" }, { "name": "Tunisia", "alpha": "TN", "country-code": "788" }, { "name": "Turkey", "alpha": "TR", "country-code": "792" }, { "name": "Turkmenistan", "alpha": "TM", "country-code": "795" }, { "name": "Turks and Caicos Islands", "alpha": "TC", "country-code": "796" }, { "name": "Tuvalu", "alpha": "TV", "country-code": "798" }, { "name": "Uganda", "alpha": "UG", "country-code": "800" }, { "name": "Ukraine", "alpha": "UA", "country-code": "804" }, { "name": "United Arab Emirates", "alpha": "AE", "country-code": "784" }, { "name": "United Kingdom of Great Britain and Northern Ireland", "alpha": "GB", "country-code": "826" }, { "name": "United States of America", "alpha": "US", "country-code": "840" }, { "name": "United States Minor Outlying Islands", "alpha": "UM", "country-code": "581" }, { "name": "Uruguay", "alpha": "UY", "country-code": "858" }, { "name": "Uzbekistan", "alpha": "UZ", "country-code": "860" }, { "name": "Vanuatu", "alpha": "VU", "country-code": "548" }, { "name": "Venezuela (Bolivarian Republic of)", "alpha": "VE", "country-code": "862" }, { "name": "Viet Nam", "alpha": "VN", "country-code": "704" }, { "name": "Virgin Islands (British)", "alpha": "VG", "country-code": "092" }, { "name": "Virgin Islands (U.S.)", "alpha": "VI", "country-code": "850" }, { "name": "Wallis and Futuna", "alpha": "WF", "country-code": "876" }, { "name": "Western Sahara", "alpha": "EH", "country-code": "732" }, { "name": "Yemen", "alpha": "YE", "country-code": "887" }, { "name": "Zambia", "alpha": "ZM", "country-code": "894" }, { "name": "Zimbabwe", "alpha": "ZW", "country-code": "716" }];
+			var countryOptions = _lodash2['default'].map(countryArray, function (_ref) {
+				var name = _ref.name;
+				var alpha = _ref.alpha;
+
+				return _react2['default'].createElement('option', { value: alpha }, name);
+			});
+
+			return _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Billing address'), _react2['default'].createElement('p', null, 'Required fields are underlined in yellow'), _react2['default'].createElement('div', { className: 'account-card-form-toggle-target' }, _react2['default'].createElement('div', null, _react2['default'].createElement('label', { htmlFor: 'corporateName', className: 'form-label' }, 'Corporate name or full name'), _react2['default'].createElement('input', { className: 'form-input is-required', type: 'text', id: 'corporateName', name: 'corporateName', placeholder: 'My company inc.', value: this.props.buyer_name, onChange: function onChange(e) {
 					_this.props.handleNameChange(e);
-				} })), _react2["default"].createElement("div", null, _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { htmlFor: "buildingNumber", className: "form-label" }, "Bldg. #"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "buildingNumber", name: "buildingNumber", placeholder: "221B", values: invoice.building_number, onChange: function onChange(e) {
+				} })), _react2['default'].createElement('div', null, _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { htmlFor: 'buildingNumber', className: 'form-label' }, 'Bldg. #'), _react2['default'].createElement('input', { className: 'form-input', type: 'text', id: 'buildingNumber', name: 'buildingNumber', placeholder: '221B', value: invoice.building_number, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'building_number');
-				} })), _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { htmlFor: "streetName", className: "form-label" }, "Street name"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "streetName", name: "streetName", placeholder: "Baker St.", values: invoice.street_name, onChange: function onChange(e) {
+				} })), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { htmlFor: 'streetName', className: 'form-label' }, 'Street name'), _react2['default'].createElement('input', { className: 'form-input is-required', type: 'text', id: 'streetName', name: 'streetName', placeholder: 'Baker St.', value: invoice.street_name, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'street_name');
-				} }))), _react2["default"].createElement("label", { htmlFor: "addressDetails", className: "form-label" }, "Address details"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "addressDetails", name: "addressDetails", placeholder: "First floor", values: invoice.address_detail, onChange: function onChange(e) {
+				} }))), _react2['default'].createElement('label', { htmlFor: 'addressDetails', className: 'form-label' }, 'Address details'), _react2['default'].createElement('input', { className: 'form-input', type: 'text', id: 'addressDetails', name: 'addressDetails', placeholder: 'First floor', value: invoice.address_detail, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'address_detail');
-				} }), _react2["default"].createElement("div", null, _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { htmlFor: "city", className: "form-label" }, "City"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "city", name: "city", placeholder: "London", values: invoice.city, onChange: function onChange(e) {
+				} }), _react2['default'].createElement('div', null, _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { htmlFor: 'city', className: 'form-label' }, 'City'), _react2['default'].createElement('input', { className: 'form-input is-required', type: 'text', id: 'city', name: 'city', placeholder: 'London', value: invoice.city, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'city');
-				} })), _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { htmlFor: "postalCode", className: "form-label" }, "Postal code"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "postalCode", name: "postalCode", placeholder: "NW1 6XE", values: invoice.postal_code, onChange: function onChange(e) {
+				} })), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { htmlFor: 'postalCode', className: 'form-label' }, 'Postal code'), _react2['default'].createElement('input', { className: 'form-input is-required', type: 'text', id: 'postalCode', name: 'postalCode', placeholder: 'NW1 6XE', value: invoice.postal_code, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'postal_code');
-				} }))), _react2["default"].createElement("div", null, _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { htmlFor: "region", className: "form-label" }, "Region"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "region", name: "region", placeholder: "City of Westminster", values: invoice.region, onChange: function onChange(e) {
+				} }))), _react2['default'].createElement('div', null, _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { htmlFor: 'region', className: 'form-label' }, 'Region'), _react2['default'].createElement('input', { className: 'form-input', type: 'text', id: 'region', name: 'region', placeholder: 'City of Westminster', value: invoice.region, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'region');
-				} })), _react2["default"].createElement("div", { className: "w50 left" }, _react2["default"].createElement("label", { htmlFor: "country", className: "form-label" }, "Country"), _react2["default"].createElement("input", { className: "form-input", type: "text", id: "country", name: "country", placeholder: "United Kingdom", values: invoice.country, onChange: function onChange(e) {
+				} })), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('label', { htmlFor: 'country', className: 'form-label' }, 'Country'), _react2['default'].createElement('select', { className: 'form-input is-required', value: invoice.country, onChange: function onChange(e) {
 					_this.props.handleChange(e, 'country');
-				} })))));
+				} }, countryOptions)))));
 		}
 	}]);
 
 	return InvoiceAddress;
-})(_react2["default"].Component);
+})(_react2['default'].Component);
 
-exports["default"] = InvoiceAddress;
-module.exports = exports["default"];
+exports['default'] = InvoiceAddress;
+module.exports = exports['default'];
 
-},{"react":572}],16:[function(require,module,exports){
+},{"lodash":328,"react":572}],16:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3137,6 +3195,14 @@ function _interopRequireDefault(obj) {
 	return obj && obj.__esModule ? obj : { 'default': obj };
 }
 
+function _defineProperty(obj, key, value) {
+	if (key in obj) {
+		Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });
+	} else {
+		obj[key] = value;
+	}return obj;
+}
+
 function _classCallCheck(instance, Constructor) {
 	if (!(instance instanceof Constructor)) {
 		throw new TypeError('Cannot call a class as a function');
@@ -3162,6 +3228,10 @@ var _storesLocalClientServerStoresJsx = require('../stores/local-client-server.s
 var _componentsInvoiceAddressComponentsJsx = require('../components/invoice-address.components.jsx');
 
 var _componentsInvoiceAddressComponentsJsx2 = _interopRequireDefault(_componentsInvoiceAddressComponentsJsx);
+
+var _componentsWaitForLoadComponentsJsx = require('../components/wait-for-load.components.jsx');
+
+var _componentsWaitForLoadComponentsJsx2 = _interopRequireDefault(_componentsWaitForLoadComponentsJsx);
 
 var AddressPanel = (function (_React$Component) {
 	_inherits(AddressPanel, _React$Component);
@@ -3191,6 +3261,16 @@ var AddressPanel = (function (_React$Component) {
 			}).onDelete(function () {
 				_this.setState(undefined);
 			});
+
+			this.client.getStore('/errors', this.lifespan).onUpdate(function (_ref2) {
+				var head = _ref2.head;
+
+				_this.setState({
+					error: head.toJS().addressError
+				});
+			}).onDelete(function () {
+				_this.setState(undefined);
+			});
 		}
 	}, {
 		key: 'componentWillUnmount',
@@ -3198,13 +3278,54 @@ var AddressPanel = (function (_React$Component) {
 			this.lifespan.release();
 		}
 	}, {
+		key: 'addAddress',
+		value: function addAddress(e) {
+			e.preventDefault();
+
+			var invoice_address = {
+				building_number: this.state.building_number,
+				street_name: this.state.street_name,
+				address_detail: this.state.address_detail,
+				city: this.state.city,
+				postal_code: this.state.postal_code,
+				region: this.state.region,
+				country: this.state.country
+			};
+
+			this.client.dispatchAction('/change-address', {
+				invoice_address: invoice_address,
+				buyer_name: this.state.buyer_name,
+				cb: function cb() {
+					location.href = '#/plan';
+				}
+			});
+		}
+	}, {
+		key: 'handleAddressChange',
+		value: function handleAddressChange(e, name) {
+			this.setState(_defineProperty({}, name, e.target.value));
+		}
+	}, {
+		key: 'handleNameChange',
+		value: function handleNameChange(e) {
+			this.setState({
+				'buyer_name': e.target.value
+			});
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			var _this2 = this;
 
+			var error = this.state.error ? _react2['default'].createElement('p', { className: 'message-error' }, this.state.error.message) : false;
+
 			return _react2['default'].createElement('div', { className: 'invoice-address-panel' }, _react2['default'].createElement('form', { onSubmit: function onSubmit(e) {
 					_this2.addAddress(e);
-				} }, _react2['default'].createElement(_componentsInvoiceAddressComponentsJsx2['default'], null), _react2['default'].createElement(WaitForLoad, { loaded: !this.state.loading }, _react2['default'].createElement('button', { className: 'form-label btn-success marginRight15', type: 'submit' }, 'Add my address'))));
+				} }, _react2['default'].createElement(_componentsInvoiceAddressComponentsJsx2['default'], { invoice_address: this.state.invoice_address || {}, buyer_name: this.state.buyer_name, handleChange: function handleChange(e, name) {
+					_this2.handleAddressChange(e, name);
+				}, handleNameChange: function handleNameChange(e) {
+					_this2.handleNameChange(e);
+				} }), error, _react2['default'].createElement(_componentsWaitForLoadComponentsJsx2['default'], { loaded: !this.state.loading }, _react2['default'].createElement('button', { className: 'form-label btn-success marginRight15', type: 'submit' }, 'Add my address'))));
 		}
 	}]);
 
@@ -3214,7 +3335,7 @@ var AddressPanel = (function (_React$Component) {
 exports['default'] = AddressPanel;
 module.exports = exports['default'];
 
-},{"../components/invoice-address.components.jsx":15,"../stores/local-client-server.stores.jsx":29,"lifespan":326,"react":572}],21:[function(require,module,exports){
+},{"../components/invoice-address.components.jsx":15,"../components/wait-for-load.components.jsx":19,"../stores/local-client-server.stores.jsx":29,"lifespan":326,"react":572}],21:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -3315,7 +3436,8 @@ var BreadCrumb = (function (_React$Component) {
 				_this.setState({
 					user: head.toJS().username,
 					card: head.toJS().card,
-					plan: head.toJS().plan
+					plan: head.toJS().plan,
+					invoice_address: head.toJS().invoice_address
 				});
 			}).onDelete(function () {
 				_this.setState(undefined);
@@ -3324,7 +3446,7 @@ var BreadCrumb = (function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return _react2['default'].createElement('div', { className: 'bread-crumb' }, _react2['default'].createElement(Crumb, { step: '1', label: 'Sign up', state: 'signup', current: this.state.current }), _react2['default'].createElement(Crumb, { step: '2', label: 'Add a card', state: 'card', current: this.state.current, disabled: !this.state.user }), _react2['default'].createElement(Crumb, { step: '3', label: 'Invoicing address', state: 'address', current: this.state.current, disabled: !this.state.card }), _react2['default'].createElement(Crumb, { step: '4', label: 'Choose a plan', state: 'plan', current: this.state.current, disabled: !this.state.card }), _react2['default'].createElement(Crumb, { step: '5', label: 'Confirmation', state: 'confirmation', current: this.state.current, disabled: !this.state.plan || !this.state.card }));
+			return _react2['default'].createElement('div', { className: 'bread-crumb' }, _react2['default'].createElement(Crumb, { step: '1', label: 'Sign up', state: 'signup', current: this.state.current }), _react2['default'].createElement(Crumb, { step: '2', label: 'Add a card', state: 'card', current: this.state.current, disabled: !this.state.user }), _react2['default'].createElement(Crumb, { step: '3', label: 'Invoicing address', state: 'address', current: this.state.current, disabled: !this.state.card }), _react2['default'].createElement(Crumb, { step: '4', label: 'Choose a plan', state: 'plan', current: this.state.current, disabled: !this.state.invoice_address }), _react2['default'].createElement(Crumb, { step: '5', label: 'Confirmation', state: 'confirmation', current: this.state.current, disabled: !this.state.plan || !this.state.card }));
 		}
 	}]);
 
@@ -3759,7 +3881,7 @@ var ConfirmationPanel = (function (_React$Component) {
 
 			var error = this.state.error ? _react2['default'].createElement('div', { className: 'message message-error' }, this.state.error.message) : false;
 
-			var address = this.state.invoice_address ? _react2['default'].createElement('div', { className: 'confirmation-panel-address' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Your invoicing address'), _react2['default'].createElement(_componentsShowInvoiceAddressComponentsJsx2['default'], { buyerName: this.state.buyer_name, invoice: this.state.invoice_address })) : false;
+			var address = this.state.invoice_address ? _react2['default'].createElement('div', { className: 'confirmation-panel-address' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Your billing address'), _react2['default'].createElement(_componentsShowInvoiceAddressComponentsJsx2['default'], { buyerName: this.state.buyer_name, invoice: this.state.invoice_address })) : _react2['default'].createElement('p', null, 'You do not have a billing address');
 
 			return _react2['default'].createElement('div', { className: 'confirmation-panel' }, _react2['default'].createElement('div', { className: 'confirmation-panel-subscription marginBottom30 clearfix' }, _react2['default'].createElement('p', { className: 'message message-success marginBottom30' }, 'You chose ', this.state.plan.name, '.'), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'You will be charged every ', this.state.plan.recurrence, ' the following amount :')), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'user-infos' }, this.state.plan.realAmount))), _react2['default'].createElement('div', { className: 'confirmation-panel-card clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Card number'), _react2['default'].createElement('p', { className: 'user-infos' }, '**** **** **** ', this.state.card.last4)), _react2['default'].createElement('div', { className: 'w50 left' }, _react2['default'].createElement('p', { className: 'form-label' }, 'Expiration date'), _react2['default'].createElement('p', { className: 'user-infos' }, this.state.card.exp_month, '/', this.state.card.exp_year))), address, _react2['default'].createElement('p', { className: 'message message-error' }, error), _react2['default'].createElement(_componentsWaitForLoadComponentsJsx2['default'], { loaded: !this.state.loading }, _react2['default'].createElement('button', { className: 'form-label btn-success marginTop30', onClick: function onClick() {
 					_this2.subscribe();

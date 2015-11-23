@@ -256,8 +256,6 @@ const actions = {
 						const patchCard = userInfos
 							.set('card', data.card)
 							.set('plan', dataUpdate.plan)
-							.set('invoice_address', invoice_address)
-							.set('buyer_name', buyer_name)
 							.set('subscription', dataCustomer.subscriptions ? dataCustomer.subscriptions.data[0] : undefined)
 							.commit();
 						localServer.dispatchUpdate('/userInfos', patchCard);
@@ -448,21 +446,60 @@ const actions = {
 			});
 		}
 	},
-	'/change-address': ({invoice_address, buyer_name}) => {
-		hoodie.stripe.customers.update({
-			invoice_address,
-			buyer_name,
-		})
-		.then((data) => {
-			const patch = userInfos
-				.set('invoice_address', invoice_address)
-				.set('buyer_name', buyer_name)
-				.commit();
+	'/change-address': ({invoice_address, buyer_name, cb}) => {
+		if (!buyer_name) {
+			const patch = errors.set('addressError', {
+				message: 'You have to supply a corporate name or your full name'
+			}).commit();
+			return localServer.dispatchUpdate('/errors', patch);
+		}
+		
+		let valid = true;
+		['street_name', 'city', 'postal_code', 'country'].forEach((field) => {
+			if (!invoice_address[field]) {
+				const patch = errors.set('addressError', {
+					message: `You have to supply a ${field.replace('_', ' ')}`
+				}).commit();
+				localServer.dispatchUpdate('/errors', patch);
 
-			localServer.dispatchUpdate('/userInfos', patch);
-		})
-		.catch((err) => {
+				valid = false;
+			}
 		});
+
+		if (valid) {
+
+			hoodie.stripe.customers.update({
+				invoice_address,
+				buyer_name,
+			})
+			.then((data) => {
+				const patch = userInfos
+					.set('invoice_address', invoice_address)
+					.set('buyer_name', buyer_name)
+					.commit();
+
+				localServer.dispatchUpdate('/userInfos', patch);
+
+				const patchSuccess = success.set('message', `You successufully changed your address`).commit();
+				localServer.dispatchUpdate('/success', patchSuccess);
+
+				saveUserValues({
+					invoice_address,
+					buyer_name,
+				}, () => {}, (err) => {
+						const patch = errors.set('invoiceAddress', err).commit();
+						localServer.dispatchUpdate('/errors', patch);
+					});
+
+				if (cb) {
+					cb();
+				}
+			})
+			.catch((err) => {
+				const patch = errors.set('addressError', err).commit();
+				localServer.dispatchUpdate('/errors', patch);
+			});
+		}
 	},
 	'/current-tab': (name) => {
 		const patch = tabs.set('current', name).commit();

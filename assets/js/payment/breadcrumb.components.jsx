@@ -28,6 +28,7 @@ export default class BreadCrumb extends React.Component {
 					user: head.toJS().username,
 					card: head.toJS().card,
 					plan: head.toJS().plan,
+					invoice_address: head.toJS().invoice_address,
 				});
 			})
 			.onDelete(() => {
@@ -41,7 +42,7 @@ export default class BreadCrumb extends React.Component {
 				<Crumb step="1" label="Sign up" state="signup" current={this.state.current}/>
 				<Crumb step="2" label="Add a card" state="card" current={this.state.current} disabled={!this.state.user}/>
 				<Crumb step="3" label="Invoicing address" state="address" current={this.state.current} disabled={!this.state.card}/>
-				<Crumb step="4" label="Choose a plan" state="plan" current={this.state.current} disabled={!this.state.card}/>
+				<Crumb step="4" label="Choose a plan" state="plan" current={this.state.current} disabled={!this.state.invoice_address}/>
 				<Crumb step="5" label="Confirmation" state="confirmation" current={this.state.current} disabled={!this.state.plan || !this.state.card}/>
 			</div>
 		)

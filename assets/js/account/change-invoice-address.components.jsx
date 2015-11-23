@@ -1,5 +1,6 @@
 import React from 'react';
 import Lifespan from 'lifespan';
+import _ from 'lodash';
 
 import {LocalClient} from '../stores/local-client-server.stores.jsx';
 
@@ -18,7 +19,8 @@ export default class ChangeInvoiceAddress extends React.Component {
 		this.client.getStore('/userInfos', this.lifespan)
 			.onUpdate(({head}) => {
 				this.setState({
-					'invoice_address': head.toJS().invoice_address,
+					invoice_address: head.toJS().invoice_address,
+					buyer_name:head.toJS().buyer_name
 				});
 			})
 			.onDelete(() => {
@@ -31,8 +33,13 @@ export default class ChangeInvoiceAddress extends React.Component {
 	}
 
 	handleAddressChange(e, name) {
+		const invoice_address = _.assign(
+			{},
+			this.state.invoice_address,
+			{[name]: e.target.value}
+		);
 		this.setState({
-			[name]: e.target.value,
+			invoice_address
 		});
 	}
 
@@ -45,19 +52,12 @@ export default class ChangeInvoiceAddress extends React.Component {
 	changeInvoiceAddress(e) {
 		e.preventDefault();
 
-		const invoice_address = {
-			building_number: this.state.building_number,
-			street_name: this.state.street_name,
-			address_detail: this.state.address_detail,
-			city: this.state.city,
-			postal_code: this.state.postal_code,
-			region: this.state.region,
-			country: this.state.country,
-		}
-
 		this.client.dispatchAction('/change-address',{
-			invoice_address,
+			invoice_address: this.state.invoice_address,
 			buyer_name: this.state.buyer_name,
+			cb: () => {
+				location.href = '#/success';
+			}
 		});
 	}
 
