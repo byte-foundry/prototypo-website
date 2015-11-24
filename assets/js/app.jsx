@@ -82,7 +82,19 @@ const plansInfos = stores['/plansInfos'] = new Remutable({
 		recurrence: 'month',
 		realAmount: '8.00€',
 		discount: -700,
-	}
+	},
+	'free_monthly_EUR_taxfree': {
+		name: 'Prototypo Free plan',
+		recurrence: 'month',
+		realAmount: '0€',
+		discount: 0,
+	},
+	'free_monthly_USD_taxfree': {
+		name: 'Prototypo Free plan',
+		recurrence: 'month',
+		realAmount: '$0',
+		discount: 0,
+	},
 });
 
 const paymentStore = stores['/paymentStore'] = new Remutable({});

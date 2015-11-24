@@ -88,6 +88,12 @@ export default class SubscriptionPanel extends React.Component {
 			</div>
 		);
 
+		const changeSubBtn = this.state.card ? (
+			<button id="change-subscription" className="change-subscription-toggle form-label btn-danger account-plan-toggle-target" onClick={() => {location.hash = '#/change-sub'}}>Change subscription</button>
+		) : (
+			<p className="message">You have to add a card to switch subscription</p>
+		);
+
 		return (
 			<div className="subscription-panel">
 				<div id="target-tab-account" className="clearfix">
@@ -103,7 +109,7 @@ export default class SubscriptionPanel extends React.Component {
 						<div className="clearfix marginTop30">
 							<div className="right">
 								<label id="success-plan-message" htmlFor="" className="success-message hidden">You've successfuly changed your plan!</label>
-								<button id="change-subscription" className="change-subscription-toggle form-label btn-danger account-plan-toggle-target" onClick={() => {location.hash = '#/change-sub'}}>Change subscription</button>
+								{changeSubBtn}
 							</div>
 						</div>
 

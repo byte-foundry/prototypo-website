@@ -1502,9 +1502,11 @@ var SubscriptionPanel = (function (_React$Component) {
 					location.hash = '#/change-invoice-address';
 				}, className: 'account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right' }, 'Add billing address'));
 
-			return _react2['default'].createElement('div', { className: 'subscription-panel' }, _react2['default'].createElement('div', { id: 'target-tab-account', className: 'clearfix' }, _react2['default'].createElement('div', { className: 'subscribe' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Your current subscription'), _react2['default'].createElement('label', { className: 'form-label marginTop15' }, 'Your plan'), _react2['default'].createElement('div', { className: 'user-infos marginTop15 marginBottom15', id: 'logged-in-subscription' }, this.state.plan.name), endDate), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'right' }, _react2['default'].createElement('label', { id: 'success-plan-message', htmlFor: '', className: 'success-message hidden' }, 'You\'ve successfuly changed your plan!'), _react2['default'].createElement('button', { id: 'change-subscription', className: 'change-subscription-toggle form-label btn-danger account-plan-toggle-target', onClick: function onClick() {
+			var changeSubBtn = this.state.card ? _react2['default'].createElement('button', { id: 'change-subscription', className: 'change-subscription-toggle form-label btn-danger account-plan-toggle-target', onClick: function onClick() {
 					location.hash = '#/change-sub';
-				} }, 'Change subscription'))), _react2['default'].createElement('div', { id: 'error-create-customer', className: 'textType-txt textSize-txt-large marginBottom30 general-infos hidden' }, 'There was an error during your subscription. We\'ve subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.'), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Payment details'), card, _react2['default'].createElement('button', { id: 'change-card', onClick: function onClick() {
+				} }, 'Change subscription') : _react2['default'].createElement('p', { className: 'message' }, 'You have to add a card to switch subscription');
+
+			return _react2['default'].createElement('div', { className: 'subscription-panel' }, _react2['default'].createElement('div', { id: 'target-tab-account', className: 'clearfix' }, _react2['default'].createElement('div', { className: 'subscribe' }, _react2['default'].createElement('div', { className: 'clearfix' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Your current subscription'), _react2['default'].createElement('label', { className: 'form-label marginTop15' }, 'Your plan'), _react2['default'].createElement('div', { className: 'user-infos marginTop15 marginBottom15', id: 'logged-in-subscription' }, this.state.plan.name), endDate), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('div', { className: 'right' }, _react2['default'].createElement('label', { id: 'success-plan-message', htmlFor: '', className: 'success-message hidden' }, 'You\'ve successfuly changed your plan!'), changeSubBtn)), _react2['default'].createElement('div', { id: 'error-create-customer', className: 'textType-txt textSize-txt-large marginBottom30 general-infos hidden' }, 'There was an error during your subscription. We\'ve subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.'), _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginTop30 marginBottom15' }, 'Payment details'), card, _react2['default'].createElement('button', { id: 'change-card', onClick: function onClick() {
 					location.hash = '#/change-card';
 				}, className: 'account-card-form-toggle-target change-card-toggle form-label btn-danger marginTop30 right' }, 'Change card')), invoiceAddress, _react2['default'].createElement('div', { className: 'clearfix marginTop30' }, _react2['default'].createElement('p', { className: 'textSize-title-small marginBottom15' }, 'Your invoices'), _react2['default'].createElement(_componentsInvoiceListComponentsJsx2['default'], { invoices: this.state.charges })))));
 		}
@@ -2010,6 +2012,18 @@ var plansInfos = stores['/plansInfos'] = new _remutable2['default']({
 		recurrence: 'month',
 		realAmount: '8.00€',
 		discount: -700
+	},
+	'free_monthly_EUR_taxfree': {
+		name: 'Prototypo Free plan',
+		recurrence: 'month',
+		realAmount: '0€',
+		discount: 0
+	},
+	'free_monthly_USD_taxfree': {
+		name: 'Prototypo Free plan',
+		recurrence: 'month',
+		realAmount: '$0',
+		discount: 0
 	}
 });
 
