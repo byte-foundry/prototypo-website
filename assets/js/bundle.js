@@ -2261,7 +2261,8 @@ var actions = {
 
 		hoodie.stripe.customers.updateSubscription({
 			plan: userInfos.get('plan'),
-			coupon: userInfos.get('coupon')
+			coupon: userInfos.get('coupon'),
+			currency_code: /(EUR|USD)/.exec(userInfos.get('plan'))[0]
 		}).then(function () {
 
 			hoodie.stripe.customers.retrieve().then(function (data) {
