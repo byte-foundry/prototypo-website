@@ -39,6 +39,13 @@ export default class Header extends React.Component {
 			'is-online': this.state.username,
 		});
 
+		if (this.state.username) {
+			window.Intercom('boot', {
+				app_id: "mnph1bst",
+				email: hoodie.account.username, // TODO: The current logged in user's email address.
+			});
+		}
+
 		return (
 			<div className={classHeader}>
 				<div className={classWindow}>

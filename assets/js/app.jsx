@@ -138,6 +138,10 @@ const actions = {
 			.done((data) => {
 				const patch = userInfos.set('username', hoodie.account.username).commit();
 				localServer.dispatchUpdate('/userInfos', patch);
+				window.Intercom('boot', {
+					app_id: "mnph1bst",
+					email: username, // TODO: The current logged in user's email address.
+				});
 
 				hoodie.stripe.customers.create({
 						email: hoodie.account.username,
@@ -171,6 +175,10 @@ const actions = {
 	'/sign-in': ({username, password}) => {
 		hoodie.account.signIn(username, password)
 			.done((username) => {
+				window.Intercom('boot', {
+					app_id: "mnph1bst",
+					email: username, // TODO: The current logged in user's email address.
+				});
 
 				hoodie.stripe.customers.retrieve({includeCharges:true})
 					.then((data) => {
@@ -227,6 +235,8 @@ const actions = {
 					.set('plan', undefined)
 					.commit();
 				localServer.dispatchUpdate('/userInfos', patch);
+
+				window.Intercom('shutdown');
 			})
 			.fail(() => {
 			});

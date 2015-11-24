@@ -1315,6 +1315,13 @@ var Header = (function (_React$Component) {
 				'is-online': this.state.username
 			});
 
+			if (this.state.username) {
+				window.Intercom('boot', {
+					app_id: "mnph1bst",
+					email: hoodie.account.username });
+			}
+
+			// TODO: The current logged in user's email address.
 			return _react2['default'].createElement('div', { className: classHeader }, _react2['default'].createElement('div', { className: classWindow }, _react2['default'].createElement('div', { className: 'header-part offline hide-for-small-only' }, _react2['default'].createElement('div', null, _react2['default'].createElement('a', { href: '/account', className: 'login' }, 'Sign in')), _react2['default'].createElement('div', null, _react2['default'].createElement('a', { href: '/pricing', className: 'callToAction header-part-button' }, _react2['default'].createElement('span', { className: 'show-for-medium-up' }, 'Create your font now!'), _react2['default'].createElement('span', { className: 'show-for-small-only text-center' }, 'Get started!')))), _react2['default'].createElement('div', { className: 'header-part online hide-for-small-only' }, _react2['default'].createElement('div', { className: 'hoodie-part-username' }, 'Welcome back ', _react2['default'].createElement('span', { className: '', id: 'hoodieUsername' }, this.state.username, '!')), _react2['default'].createElement('div', { className: 'hoodie-part-success' }, _react2['default'].createElement('a', { href: '/account', className: 'callToAction call-success header-part-button' }, 'My account')), _react2['default'].createElement('div', { className: 'hoodie-part-success' }, _react2['default'].createElement('a', { href: 'http://app.prototypo.io', className: 'callToAction call-success header-part-button' }, 'App')), _react2['default'].createElement('div', { className: 'show-for-medium-up', onClick: function onClick() {
 					_this2.logout();
 				} }, _react2['default'].createElement('span', { className: 'callToAction header-part-button' }, 'Logout')))));
@@ -2059,7 +2066,11 @@ var actions = {
 		hoodie.account.signUp(username, password).done(function (data) {
 			var patch = userInfos.set('username', hoodie.account.username).commit();
 			localServer.dispatchUpdate('/userInfos', patch);
+			window.Intercom('boot', {
+				app_id: "mnph1bst",
+				email: username });
 
+			// TODO: The current logged in user's email address.
 			hoodie.stripe.customers.create({
 				email: hoodie.account.username,
 				'buyer_email': hoodie.account.username
@@ -2091,7 +2102,11 @@ var actions = {
 		var password = _ref2.password;
 
 		hoodie.account.signIn(username, password).done(function (username) {
+			window.Intercom('boot', {
+				app_id: "mnph1bst",
+				email: username });
 
+			// TODO: The current logged in user's email address.
 			hoodie.stripe.customers.retrieve({ includeCharges: true }).then(function (data) {
 				var patch = userInfos.set('card', data.sources.data ? data.sources.data[0] : undefined).set('plan', '').set('username', hoodie.account.username).set('charges', data.charges.data ? data.charges.data : undefined).set('subscription', data.subscriptions ? data.subscriptions.data[0] : undefined).commit();
 				localServer.dispatchUpdate('/userInfos', patch);
@@ -2129,6 +2144,8 @@ var actions = {
 		hoodie.account.signOut().done(function () {
 			var patch = userInfos.set('username', undefined).set('card', undefined).set('plan', undefined).commit();
 			localServer.dispatchUpdate('/userInfos', patch);
+
+			window.Intercom('shutdown');
 		}).fail(function () {});
 	},
 	'/add-card': function addCard(_ref5) {
