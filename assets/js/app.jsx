@@ -461,6 +461,9 @@ const actions = {
 				const loadedPatch = loading.set('loading', false).commit();
 				localServer.dispatchUpdate('/loading', loadedPatch);
 
+				const planPatch = userInfos.set('plan', plan).commit();
+				localServer.dispatchUpdate('/plan', planPatch);
+
 				location.hash = '#/change-sub-confirmation';
 			})
 			.catch((err) => {

@@ -2348,6 +2348,9 @@ var actions = {
 				var loadedPatch = loading.set('loading', false).commit();
 				localServer.dispatchUpdate('/loading', loadedPatch);
 
+				var planPatch = userInfos.set('plan', plan).commit();
+				localServer.dispatchUpdate('/plan', planPatch);
+
 				location.hash = '#/change-sub-confirmation';
 			})['catch'](function (err) {
 				var loadedPatch = loading.set('loading', false).commit();
