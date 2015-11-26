@@ -12,6 +12,7 @@ only screen and (min-resolution:144dpi) {
 
 }
 @media only screen and (max-width:1024px) {
+
 	.Nav-layoutItemLink {
 		padding-left: 9px;
 		padding-right: 9px;
@@ -68,6 +69,14 @@ only screen and (min-resolution:144dpi) {
 	}
 }
 @media #{$large-down} {
+
+	// #header-container {
+	// 	margin-right: 40px;
+	// }
+	// .header.is-online {
+	// 	width: 290px;
+	// }
+
 	/*@media only screen and (max-width:910px) {*/
 	.Article-leaveComment {
 		padding: 20px 50px 40px;
@@ -90,7 +99,7 @@ only screen and (min-resolution:144dpi) {
 		left: 0;
 		bottom: 0;
 		right: 0;
-		overflow: hidden;
+		// overflow: hidden;
 	}
 	.Nav-layout {
 		position: absolute;
@@ -157,6 +166,7 @@ only screen and (min-resolution:144dpi) {
 	}
 }
 @media #{$medium-down} {
+
 	.Article-content h2 {
 		font-size: 22px;
 		line-height: 28px;
@@ -306,6 +316,7 @@ only screen and (min-resolution:144dpi) {
 	#DemoCanvas {
 		left: -35px;
 	}
+
 }
 
 @media only screen
@@ -332,9 +343,39 @@ and (orientation : portrait) {
 }
 
 @media only screen and (max-width:480px) {
-	// .Nav-logoInner {
-	// 	display: none;
-	// }
+	.Nav-logoInner {
+		text-align: center;
+		font-size: 30px;
+	}
+
+	.Nav {
+		overflow: visible;
+		#header-container {
+			float: none !important;
+			margin-top: -2px;
+			z-index: 1000;
+		}
+		.header {
+			&-window {
+				&.is-online {
+					left: -320px;
+				}
+			}
+			&-part {
+				justify-content: center;
+				background-color: white;
+				&.offline,
+				&.online {
+					flex: 0 0 320px;
+				}
+				&-button {
+					margin-left: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
 	.Nav-callToActionCreateYourFont {
 		left: 75px;
 		right: 75px;
@@ -380,7 +421,54 @@ and (orientation : portrait) {
 		.width50 {
 			width: 100%;
 		}
+		.right,
+		.left {
+			float: none !important;
+		}
 	}
+	.w50,
+	.width50,
+	.w50 + .w50 {
+		width: 100%;
+	}
+
+	a[href="http://app.prototypo.io"],
+	input[type="text"].form-input.small,
+	input[type="password"].form-input.small,
+	input[type="submit"].form-input.small,
+	input[type="number"].form-input.small,
+	select.form-input.small,
+	a.form-input.small,
+	.btn-success,
+	.btn-success[type="submit"],
+	.btn-danger,
+	.btn-danger[type="submit"],
+	.btn-error,
+	.btn-error[type="submit"] {
+		text-align: center;
+		width: 100%;
+		&.marginLeft15,
+		&.marginRight15 {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.bread-crumb {
+		display: block;
+		padding: 10px 10px 0;
+		.crumb {
+			margin-bottom: 10px;
+		}
+	}
+
+	.marginTop30 {
+		margin-top: .5em;
+	}
+	.marginBottom30 {
+		margin-bottom: .5em;
+	}
+
 }
 @media only screen and (max-width:330px) {
 	.Nav-logo {
@@ -578,6 +666,8 @@ and (orientation : portrait) {
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+
+
 	#DemoCanvas {
 		width: 290px !important;
 		height: 250px !important;
@@ -600,6 +690,15 @@ and (orientation : portrait) {
 	}
 }
 @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation : landscape) {
+
+	#header-container {
+		margin-right: 40px;
+	}
+	.header,
+	.header.is-online {
+		width: 290px;
+	}
+
 	#DemoCanvas {
 		width: 330px;
 		height: 280px;
@@ -615,6 +714,139 @@ and (orientation : portrait) {
 	}
 	.Section-homepage {
 		min-height: 1010px;
+	}
+}
+
+// ipad landscape
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  {
+	.Nav {
+		#header-container {
+			margin-right: 70px;
+		}
+		.header,
+		.header.is-online {
+			width: 500px;
+		}
+		.header {
+			&-window {
+				&.is-online {
+					left: -500px;
+				}
+			}
+			&-part {
+				&.offline,
+				&.online {
+					flex: 0 0 500px;
+				}
+			}
+		}
+	}
+
+}
+
+// ipad mini portrait
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1)  {
+	.Nav {
+		#header-container {
+			margin-right: 70px;
+		}
+		.header,
+		.header.is-online {
+			width: 500px;
+		}
+		.header {
+			&-window {
+				&.is-online {
+					left: -500px;
+				}
+			}
+			&-part {
+				&.offline,
+				&.online {
+					flex: 0 0 500px;
+				}
+			}
+		}
+	}
+}
+
+// iphone 6 plus landscape
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape) {
+	#DemoCanvas {
+		position: absolute;
+		top: 80px;
+		left: 210px;
+	}
+	.DemoControls {
+		top: 150px;
+		left: 30px;
+	}
+	.DemoHome {
+		height: 400px;
+	}
+
+	.Nav {
+		#header-container {
+		}
+		.header,
+		.header.is-online {
+			width: 375px;
+		}
+		.header {
+			&-window {
+				&.is-online {
+					left: -375px;
+				}
+			}
+			&-part {
+				&.offline,
+				&.online {
+					flex: 0 0 375px;
+				}
+				.hoodie-part-username {
+					display: none !important;
+				}
+			}
+		}
+	}
+}
+
+// iPhone 6 in portrait
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+	.Nav {
+		#header-container {
+		}
+		.header,
+		.header.is-online {
+			width: 375px;
+		}
+		.header {
+			&-window {
+				&.is-online {
+					left: -375px;
+				}
+			}
+			&-part {
+				&.offline,
+				&.online {
+					flex: 0 0 375px;
+				}
+			}
+		}
 	}
 }
 
@@ -641,25 +873,32 @@ and (orientation : portrait) {
 		.DemoHome {
 			height: 330px;
 		}
-}
 
-// iphone 6 plus landscape
-@media only screen
-and (min-device-width : 414px)
-and (max-device-width : 736px)
-and (orientation : landscape) {
-	#DemoCanvas {
-		position: absolute;
-		top: 80px;
-		left: 210px;
-	}
-	.DemoControls {
-		top: 150px;
-		left: 30px;
-	}
-	.DemoHome {
-		height: 400px;
-	}
+		.Nav {
+			#header-container {
+				margin-right: 10px;
+			}
+			.header,
+			.header.is-online {
+				width: 320px;
+			}
+			.header {
+				&-window {
+					&.is-online {
+						left: -320px;
+					}
+				}
+				&-part {
+					&.offline,
+					&.online {
+						flex: 0 0 320px;
+					}
+					.hoodie-part-username {
+						display: none !important;
+					}
+				}
+			}
+		}
 }
 
 // iphone 4 landscape

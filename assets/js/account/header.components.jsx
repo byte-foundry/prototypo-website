@@ -42,7 +42,7 @@ export default class Header extends React.Component {
 		return (
 			<div className={classHeader}>
 				<div className={classWindow}>
-					<div className="header-part offline hide-for-small-only">
+					<div className="header-part offline">
 						<div>
 							<a href="/account" className="login">
 								Sign in
@@ -55,21 +55,21 @@ export default class Header extends React.Component {
 							</a>
 						</div>
 					</div>
-					<div className="header-part online hide-for-small-only">
-						<div className="hoodie-part-username">
-							Welcome back <span className="" id="hoodieUsername">{this.state.username}!</span>
+					<div className="header-part online">
+						<div className="hoodie-part-username show-for-medium-up">
+							Welcome back <span id="hoodieUsername">{this.state.username}!</span>
 						</div>
 						<div className="hoodie-part-success">
 							<a href="/account" className="callToAction call-success header-part-button">
 								My account
 							</a>
 						</div>
-						<div className="hoodie-part-success">
+						<div className="hoodie-part-success show-for-medium-up">
 							<a href="http://app.prototypo.io" className="callToAction call-success header-part-button">
 								App
 							</a>
 						</div>
-						<div className="show-for-medium-up" onClick={() => {this.logout()}}>
+						<div className="" onClick={() => {this.logout()}}>
 							<span className="callToAction header-part-button">Logout</span>
 						</div>
 					</div>

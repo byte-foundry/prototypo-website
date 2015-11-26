@@ -88,7 +88,7 @@
 		<div id="header-container" class="right"></div>
       <?php snippet('menu') ?>
 
-  		<div class="Social">
+  		<div class="Social hide-for-small-only">
   			<a href="<?php echo $site->facebook()->html() ?>" target="_blank" class="Social-item Social-itemFacebook">
     			<span class="show-for-sr">Facebook</span>
     		</a>
