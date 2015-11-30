@@ -10,4 +10,4 @@ Text0: \* Taxes are offered for private individuals. Currency ultimately depends
 
 ----
 
-Aboutlaunchdate: This is a special launch offer that will end on the 27th of november 2015.
+Aboutlaunchdate: This is a special launch offer that will end on the 27th of December 2015.

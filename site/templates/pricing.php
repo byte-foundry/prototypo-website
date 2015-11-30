@@ -8,7 +8,7 @@
 					<?php echo $page->section1Title()->kirbytextSans(); ?>
 				</h1>
 				<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
-					Hurry up! The special launch offer will only last until the 27th of November.
+					Hurry up! The special launch offer will only last until the 27th of December.
 				</h3>
 			</header>
 		</div>

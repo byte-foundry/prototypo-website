@@ -19,7 +19,7 @@ var Plans = React.createClass({
 				<div id="select-plan-wrap">
 
 					<p className="textType-txt textSize-txt-large marginBottom30 general-infos">
-						This is a special launch offer that will end on the 27th of november 2015.
+						This is a special launch offer that will end on the 27th of December 2015.
 					</p>
 
 					<div className="radio-wrap" id="recurrence-selector">
