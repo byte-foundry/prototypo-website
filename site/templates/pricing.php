@@ -40,7 +40,7 @@
 							<?php if ($pack['packpricettc'] === ''): ?>
 							<img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
 							<?php else: ?>
-								<span class="PricingItem-priceBefore textSize-txt-large">$</span>
+								<span class="PricingItem-priceBefore textSize-txt-large">€/$</span>
 
 								<span class="PricingItem-price textSize-title-xlarge">
 
