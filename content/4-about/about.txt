@@ -70,6 +70,19 @@ Members:
   membervimeo:
   memberphoto: antoinehsleweb.jpg
 - 
+  membername: François Poizat
+  memberjob: Developer
+  memberdescription: 'François is the hidden twin brother of wikipedia: he knows everything about everything, or he is just enough convincing to make his teammates to think it. A question about the Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. From his INSA’s engineer diploma, he worked in a lot of research projects in France and Japan. Ohayō François!'
+  memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&tbm=vid&q=mario+smash+bros+tournament'
+  memberfacebook: >
+    https://www.facebook.com/francois.poizat?fref=ts
+  membergithub: https://github.com/FranzPoize
+  membertwitter: https://twitter.com/FranzP
+  memberwebsite:
+  membermail: contact@prototypo.io
+  membervimeo:
+  memberphoto: franzp.jpg
+- 
   membername: MJ
   memberjob: Community manager
   memberdescription: "MJ is my name, and I've been kind enough to accept the role of author on this blog and community manager for Prototypo. You have to excuse my English because I'm just a cat, and keyboards aren't really meant for paws. When I'm not tweeting, I enjoy chasing mouse cursors, chewing headphone cables, making a mess in YM's houseplants, causing LRB to sneeze, and sleeping on people's lap without their consent."
