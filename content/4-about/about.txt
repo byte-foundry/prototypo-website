@@ -50,6 +50,21 @@ Members:
   membervimeo:
   memberphoto: jbl_slanted_.jpg
 - 
+  membername: François Poizat
+  memberjob: Developer
+  memberdescription: |
+    François is the hidden twin brother of Wikipedia: he knows everything about everything, or at least he knows just enough to convince his teammates that he does. A question about the Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. Since he got his engineer degree at INSA, he has been involved in many research projects in France and Japan. 
+    Ohayō François!
+  memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&tbm=vid&q=falcon+melee+tournament'
+  memberfacebook: >
+    https://www.facebook.com/francois.poizat?fref=ts
+  membergithub: https://github.com/FranzPoize
+  membertwitter: https://twitter.com/FranzP
+  memberwebsite:
+  membermail: mailto:contact@prototypo.io
+  membervimeo:
+  memberphoto: franzp.jpg
+- 
   membername: Antoine Heber-Suffrin
   memberjob: Head of marketing
   memberdescription: >
@@ -69,19 +84,6 @@ Members:
   membermail: mailto:antoine@prototypo.io
   membervimeo:
   memberphoto: antoinehsleweb.jpg
-- 
-  membername: François Poizat
-  memberjob: Developer
-  memberdescription: 'François is the hidden twin brother of wikipedia: he knows everything about everything, or he is just enough convincing to make his teammates to think it. A question about the Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. From his INSA’s engineer diploma, he worked in a lot of research projects in France and Japan. Ohayō François!'
-  memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&tbm=vid&q=mario+smash+bros+tournament'
-  memberfacebook: >
-    https://www.facebook.com/francois.poizat?fref=ts
-  membergithub: https://github.com/FranzPoize
-  membertwitter: https://twitter.com/FranzP
-  memberwebsite:
-  membermail: contact@prototypo.io
-  membervimeo:
-  memberphoto: franzp.jpg
 - 
   membername: MJ
   memberjob: Community manager

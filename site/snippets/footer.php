@@ -13,6 +13,7 @@
             <a class="Footer-socialItem Footer-socialItem-Twitter" target="_blank" href="<?php echo $site->twitter()->html() ?>"></a>
 		</div>
 		<a style="display:none;" href="/account">account</a>
+		<a style="display:none;" href="/robot.txt">account</a>
 
     </footer>
 </main>
