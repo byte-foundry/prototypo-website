@@ -2071,6 +2071,7 @@ var actions = {
 		var username = _ref.username;
 		var password = _ref.password;
 
+		twttr.conversion.trackPid('ntxe3', { tw_sale_amount: 0, tw_order_quantity: 0 });
 		if (!/\S+?@\S+?\.\S+?/.test(username)) {
 			var patch = errors.set('signup', { message: 'You have to enter an email address' }).commit();
 			return localServer.dispatchUpdate('/errors', patch);
@@ -2281,6 +2282,7 @@ var actions = {
 			currency_code: /(EUR|USD)/.exec(userInfos.get('plan'))[0]
 		}).then(function () {
 
+			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
 			hoodie.stripe.customers.retrieve().then(function (data) {
 				var patch = userInfos.set('subscription', data.subscriptions ? data.subscriptions.data[0] : undefined).commit();
 				localServer.dispatchUpdate('/userInfos', patch);

@@ -138,6 +138,7 @@ const actions = {
 		localServer.dispatchUpdate('/breadcrumb', patch);
 	},
 	'/sign-up': ({username, password}) => {
+		twttr.conversion.trackPid('ntxe3', { tw_sale_amount: 0, tw_order_quantity: 0 });
 		if (!/\S+?@\S+?\.\S+?/.test(username)) {
 			const patch = errors.set('signup', {message: 'You have to enter an email address'}).commit();
 			return localServer.dispatchUpdate('/errors', patch);
@@ -383,6 +384,7 @@ const actions = {
 		})
 		.then(() => {
 			
+			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
 			hoodie.stripe.customers.retrieve()
 				.then((data) => {
 					const patch = userInfos
