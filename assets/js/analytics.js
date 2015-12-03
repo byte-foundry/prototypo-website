@@ -25,12 +25,4 @@ $(function() {
 		ga( 'send', 'event', 'play-video', 'click' );
 	});
 
-	if (window.location.hash === '#/card' ) {
-		ga( 'send', 'event', 'app', 'subscribed' );
-	}
-
-	if (window.location.pathname.indexOf('subscribe') !== -1 && window.location.hash === '#/card' ) {
-		ga( 'send', 'event', 'app', 'paying' );
-	}
-
 });

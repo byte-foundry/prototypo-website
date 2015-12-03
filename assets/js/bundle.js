@@ -2071,7 +2071,6 @@ var actions = {
 		var username = _ref.username;
 		var password = _ref.password;
 
-		twttr.conversion.trackPid('ntxe3', { tw_sale_amount: 0, tw_order_quantity: 0 });
 		if (!/\S+?@\S+?\.\S+?/.test(username)) {
 			var patch = errors.set('signup', { message: 'You have to enter an email address' }).commit();
 			return localServer.dispatchUpdate('/errors', patch);
@@ -2086,8 +2085,10 @@ var actions = {
 			window.Intercom('boot', {
 				app_id: "mnph1bst",
 				email: username });
-
 			// TODO: The current logged in user's email address.
+			twttr.conversion.trackPid('ntxe3', { tw_sale_amount: 0, tw_order_quantity: 0 });
+			ga('send', 'event', 'app', 'subscribed');
+
 			hoodie.stripe.customers.create({
 				email: hoodie.account.username,
 				'buyer_email': hoodie.account.username
@@ -2283,6 +2284,7 @@ var actions = {
 		}).then(function () {
 
 			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
+			ga('send', 'event', 'app', 'paying');
 			hoodie.stripe.customers.retrieve().then(function (data) {
 				var patch = userInfos.set('subscription', data.subscriptions ? data.subscriptions.data[0] : undefined).commit();
 				localServer.dispatchUpdate('/userInfos', patch);

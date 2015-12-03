@@ -155,6 +155,7 @@ const actions = {
 					email: username, // TODO: The current logged in user's email address.
 				});
 				twttr.conversion.trackPid('ntxe3', { tw_sale_amount: 0, tw_order_quantity: 0 });
+				ga( 'send', 'event', 'app', 'subscribed' );
 
 				hoodie.stripe.customers.create({
 						email: hoodie.account.username,
@@ -385,6 +386,7 @@ const actions = {
 		.then(() => {
 			
 			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
+			ga( 'send', 'event', 'app', 'paying' );
 			hoodie.stripe.customers.retrieve()
 				.then((data) => {
 					const patch = userInfos
