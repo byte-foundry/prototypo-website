@@ -130,14 +130,14 @@ header {
 }
 .Section-homepageGetStartedLineTitle {
 	display: inline-block;
-	font-family: $mainFont, inherit;
+	font-family: $mainFont;
 	font-size: 24px;
 	font-weight: 700;
 }
 .Section-homepageGetStartedLineSubtitle {
 	display: inline-block;
 	margin: 0 15px;
-	font-family: $mainFont, inherit;
+	font-family: $mainFont;
 	font-size: 22px;
 	font-weight: 400;
 	font-style: italic;
@@ -414,7 +414,7 @@ header {
 	position: relative;
 	z-index: 20;
 	color: $colorWhite;
-	font-family: $mainFont, inherit;
+	font-family: $mainFont;
 	font-style: italic;
 	font-weight: 400;
 	margin-top: 30px;
@@ -1409,7 +1409,7 @@ header {
 	// 	outline: none;
 	// 	color: #787878;
 	// 	font-size: 16px;
-	// 	font-family: "PT Sans", sans-serif, inherit;
+	// 	font-family: "PT Sans", sans-serif;
 	// 	padding: 10px 18px 7px 18px;
 	// 	display: inline-block;
 	// 	border: none;

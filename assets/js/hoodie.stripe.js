@@ -11,6 +11,9 @@ function stripeAPI(hoodie) {
 		invoices: {
 			retrieveUpcoming: requester('invoices.retrieveUpcoming'),
 		},
+		usernames: {
+			exist: requester('usernames.exist'),
+		},
 	};
 
 	function requester( method ) {

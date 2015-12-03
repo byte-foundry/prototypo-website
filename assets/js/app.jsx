@@ -228,17 +228,30 @@ const actions = {
 			});
 	},
 	'/reset-password': ({username}) => {
-		hoodie.account.resetPassword(username)
-		.then(() => {
-			const patchError = errors.set('passwordReset', undefined).commit();
-			localServer.dispatchUpdate('/errors', patchError);
-			const patch = userInfos.set('passwordReset', true).commit();
-			localServer.dispatchUpdate('/userInfos', patch);
-		})
-		.catch((err) => {
-			const patch = errors.set('passwordReset', err).commit();
-			localServer.dispatchUpdate('/errors', patch);
-		});
+		// clear remaining error
+		const patchError = errors.set('passwordReset', undefined).commit();
+		localServer.dispatchUpdate('/errors', patchError);
+
+		hoodie.stripe.usernames.exist(username)
+			.then(( isExisting ) => {
+				if ( !isExisting ) {
+					throw new Error('No such username, cannot reset password.');
+				}
+
+				return hoodie.account.resetPassword(username)
+					.then(() => {
+						const patchError = errors
+							.set('passwordReset', undefined).commit();
+						localServer.dispatchUpdate('/errors', patchError);
+						const patch = userInfos
+							.set('passwordReset', true).commit();
+						localServer.dispatchUpdate('/userInfos', patch);
+					})
+			})
+			.catch((err) => {
+				const patch = errors.set('passwordReset', err).commit();
+				localServer.dispatchUpdate('/errors', patch);
+			});
 	},
 	'/logout': () => {
 		hoodie.account.signOut()
@@ -384,7 +397,6 @@ const actions = {
 			currency_code: /(EUR|USD)/.exec(userInfos.get('plan'))[0],
 		})
 		.then(() => {
-			
 			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
 			ga( 'send', 'event', 'app', 'paying' );
 			hoodie.stripe.customers.retrieve()
@@ -483,7 +495,7 @@ const actions = {
 			}).commit();
 			return localServer.dispatchUpdate('/errors', patch);
 		}
-		
+
 		let valid = true;
 		['street_name', 'city', 'postal_code', 'country'].forEach((field) => {
 			if (!invoice_address[field]) {

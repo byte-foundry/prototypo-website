@@ -186,9 +186,7 @@ var Account = (function (_React$Component) {
 					_this2.signIn(e);
 				} }, _react2['default'].createElement('label', { htmlFor: 'login', className: 'form-label' }, 'Your email'), _react2['default'].createElement('input', { type: 'text', id: 'email-sign-in', name: 'login', ref: 'username', className: 'form-input', placeholder: 'mj@domain.com' }), _react2['default'].createElement('label', { htmlFor: 'password', className: 'form-label' }, 'Password'), _react2['default'].createElement('input', { type: 'password', id: 'password-sign-in', className: 'form-input', name: 'password', ref: 'password', placeholder: 'abc123' }), _react2['default'].createElement('label', { id: 'signin-error', htmlFor: '', className: 'error hidden' }), _react2['default'].createElement('label', { className: 'reset-password-toggle right marginBottom30 textSize-title-small colorGray', onClick: function onClick() {
 					_this2.setState({ resetPassword: true });
-				} }, 'Forgotten your password?'), signinError, _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement('button', { id: 'sign-me-in', className: 'form-label btn-success marginBottom30 marginRight15', type: 'submit' }, 'Sign in'), _react2['default'].createElement('button', { className: 'form-label btn-danger marginBottom30', onClick: function onClick(e) {
-					e.preventDefault();location.href = "/pricing/subscribe";
-				} }, 'Sign up')))) : false;
+				} }, 'Forgotten your password?'), signinError, _react2['default'].createElement('div', { className: 'marginTop30' }, _react2['default'].createElement('button', { id: 'sign-me-in', className: 'form-label btn-success marginBottom30 marginRight15', type: 'submit' }, 'Sign in'), _react2['default'].createElement('a', { className: 'form-label button btn-danger marginBottom30 marginRight15', href: '/pricing/subscribe' }, 'Sign up')))) : false;
 
 			if (!this.state.user) {
 				return _react2['default'].createElement('div', null, _react2['default'].createElement('header', { className: 'PageHeader text-left fitToContent' }, _react2['default'].createElement('h1', { className: 'textType-title textSize-title-large' }, 'Sign in')), _react2['default'].createElement('section', { className: 'Article Section-fontsItemWrap' }, signin, resetPassword));
@@ -2148,11 +2146,21 @@ var actions = {
 	'/reset-password': function resetPassword(_ref4) {
 		var username = _ref4.username;
 
-		hoodie.account.resetPassword(username).then(function () {
-			var patchError = errors.set('passwordReset', undefined).commit();
-			localServer.dispatchUpdate('/errors', patchError);
-			var patch = userInfos.set('passwordReset', true).commit();
-			localServer.dispatchUpdate('/userInfos', patch);
+		// clear remaining error
+		var patchError = errors.set('passwordReset', undefined).commit();
+		localServer.dispatchUpdate('/errors', patchError);
+
+		hoodie.stripe.usernames.exist(username).then(function (isExisting) {
+			if (!isExisting) {
+				throw new Error('No such username, cannot reset password.');
+			}
+
+			return hoodie.account.resetPassword(username).then(function () {
+				var patchError = errors.set('passwordReset', undefined).commit();
+				localServer.dispatchUpdate('/errors', patchError);
+				var patch = userInfos.set('passwordReset', true).commit();
+				localServer.dispatchUpdate('/userInfos', patch);
+			});
 		})['catch'](function (err) {
 			var patch = errors.set('passwordReset', err).commit();
 			localServer.dispatchUpdate('/errors', patch);
@@ -2282,7 +2290,6 @@ var actions = {
 			coupon: userInfos.get('coupon'),
 			currency_code: /(EUR|USD)/.exec(userInfos.get('plan'))[0]
 		}).then(function () {
-
 			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
 			ga('send', 'event', 'app', 'paying');
 			hoodie.stripe.customers.retrieve().then(function (data) {

@@ -143,32 +143,32 @@ input:focus {
 
 
 .textType-articleTitle {
-  font-family:$thirdFont, inherit;
+  font-family: $thirdFont;
   font-weight:normal;
 }
 
 .textType-title {
-  font-family:$mainFont, inherit;
+  font-family: $mainFont;
   font-weight:bold;
 }
 
 .textType-subtitle {
-  font-family:$mainFont, inherit;
+  font-family:$mainFont;
   font-weight:normal;
   font-style:italic;
   margin-top: 0.5em;
 }
 
 .textType-txt {
-  font-family:$mainFont, inherit;
+  font-family:$mainFont;
 }
 
 .textType-subtxt {
-  font-family:$mainFont, inherit;
+  font-family:$mainFont;
 }
 
 .textType-callTo {
-  font-family: $mainFont, inherit;
+  font-family: $mainFont;
   font-weight: bold;
   font-style: italic;
 }
@@ -181,7 +181,7 @@ input:focus {
 //   outline:none;
 //   color:$colorDarkGray;
 //   font-size:16px;
-//   font-family:$mainFont, inherit;
+//   font-family:$mainFont;
 //   padding:10px 18px 7px 18px;
 //   display:inline-block;
 //   border:none;

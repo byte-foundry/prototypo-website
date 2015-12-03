@@ -114,7 +114,7 @@ export default class Account extends React.Component {
 					{signinError}
 					<div className="marginTop30">
 						<button id="sign-me-in" className="form-label btn-success marginBottom30 marginRight15" type="submit">Sign in</button>
-						<button className="form-label btn-danger marginBottom30" onClick={(e) => { e.preventDefault(); location.href = "/pricing/subscribe"}}>Sign up</button>
+						<a className="form-label button btn-danger marginBottom30 marginRight15" href="/pricing/subscribe">Sign up</a>
 					</div>
 				</form>
 			</div>
