@@ -2167,7 +2167,7 @@ var actions = {
 		});
 	},
 	'/logout': function logout() {
-		hoodie.account.signOut().done(function () {
+		hoodie.account.signOut({ ignoreLocalChanges: true }).done(function () {
 			var patch = userInfos.set('username', undefined).set('card', undefined).set('plan', undefined).commit();
 			localServer.dispatchUpdate('/userInfos', patch);
 
@@ -2446,14 +2446,32 @@ var actions = {
 	}
 };
 
-if (hoodie.account.username) {
-	var patch = userInfos.set('username', hoodie.account.username).commit();
-	localServer.dispatchUpdate('/userInfos', patch);
+if (hoodie.account.username && hoodie.isConnected()) {
+	hoodie.stripe.customers.retrieve({ includeCharges: true }).then(function (data) {
+		var patch = userInfos.set('username', hoodie.account.username).set('card', data.sources.data[0]).set('plan', 'personal_' + sessionStorage.recurrence + '_' + _servicesCurrencyServicesJsx2['default'].getCurrency(data.sources.data[0]) + '_taxfree').set('subscription', data.subscriptions.data[0]).set('charges', data.charges.data ? data.charges.data : undefined).commit();
+
+		localServer.dispatchUpdate('/userInfos', patch);
+	})['catch'](function (error) {
+		if (error.status === 401 || error.statusCode === 401) {
+			hoodie.account.signOut({ ignoreLocalChanges: true });
+			// TODO: clearing localStorage here is a bit extreme. Ideally
+			// we shouldn't do this.
+			localStorage.clear();
+		}
+	});
+
+	_servicesValuesServicesJsx.UserValues.get({ typeface: 'default' }).then(function (_ref10) {
+		var values = _ref10.values;
+
+		var patch = userInfos.set('firstName', values.firstName).set('lastName', values.lastName).set('website', values.website).set('twitter', values.twitter).set('invoice_address', values.invoice_address).set('buyer_name', values.buyer_name).commit();
+
+		localServer.dispatchUpdate('/userInfos', patch);
+	});
 }
 
-localServer.on('action', function (_ref10) {
-	var path = _ref10.path;
-	var params = _ref10.params;
+localServer.on('action', function (_ref11) {
+	var path = _ref11.path;
+	var params = _ref11.params;
 
 	if (actions[path] !== void 0) {
 		actions[path](params);
@@ -2478,19 +2496,6 @@ var App = (function (_React$Component) {
 
 	return App;
 })(_react2['default'].Component);
-
-hoodie.stripe.customers.retrieve({ includeCharges: true }).then(function (data) {
-	var patch = userInfos.set('card', data.sources.data[0]).set('plan', 'personal_' + sessionStorage.recurrence + '_' + _servicesCurrencyServicesJsx2['default'].getCurrency(data.sources.data[0]) + '_taxfree').set('subscription', data.subscriptions.data[0]).set('charges', data.charges.data ? data.charges.data : undefined).commit();
-	localServer.dispatchUpdate('/userInfos', patch);
-});
-
-_servicesValuesServicesJsx.UserValues.get({ typeface: 'default' }).then(function (_ref11) {
-	var values = _ref11.values;
-
-	var patch = userInfos.set('firstName', values.firstName).set('lastName', values.lastName).set('website', values.website).set('twitter', values.twitter).set('invoice_address', values.invoice_address).set('buyer_name', values.buyer_name).commit();
-
-	localServer.dispatchUpdate('/userInfos', patch);
-});
 
 (0, _reactDom.render)(_react2['default'].createElement(_accountHeaderComponentsJsx2['default'], null), document.getElementById('header-container'));
 

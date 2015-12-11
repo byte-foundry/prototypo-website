@@ -10,7 +10,6 @@
 
 <script src="/assets/js/demo.js"></script>
 <script src="/assets/js/faq.js"></script>
-<script src="/assets/js/pricing.js"></script>
 <script src="/assets/js/subscribe.js"></script>
 <script src="/assets/js/account.js"></script>
 <script src="/assets/js/moment.min.js"></script>

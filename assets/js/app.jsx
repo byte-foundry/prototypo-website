@@ -254,7 +254,7 @@ const actions = {
 			});
 	},
 	'/logout': () => {
-		hoodie.account.signOut()
+		hoodie.account.signOut({ignoreLocalChanges: true})
 			.done(() => {
 				const patch = userInfos
 					.set('username', undefined)
@@ -563,9 +563,41 @@ const actions = {
 	},
 }
 
-if (hoodie.account.username) {
-		const patch = userInfos.set('username', hoodie.account.username).commit();
-		localServer.dispatchUpdate('/userInfos', patch);
+if ( hoodie.account.username && hoodie.isConnected() ) {
+	hoodie.stripe.customers.retrieve({includeCharges:true})
+		.then((data) => {
+			const patch = userInfos
+				.set('username', hoodie.account.username)
+				.set('card', data.sources.data[0])
+				.set('plan',`personal_${sessionStorage.recurrence}_${ currencyService.getCurrency(data.sources.data[0])}_taxfree`)
+				.set('subscription', data.subscriptions.data[0])
+				.set('charges', data.charges.data ? data.charges.data : undefined)
+				.commit();
+
+			localServer.dispatchUpdate('/userInfos', patch);
+		})
+		.catch((error) => {
+			if ( error.status === 401 || error.statusCode === 401 ) {
+				hoodie.account.signOut({ignoreLocalChanges: true});
+				// TODO: clearing localStorage here is a bit extreme. Ideally
+				// we shouldn't do this.
+				localStorage.clear();
+			}
+		});
+
+	UserValues.get({typeface: 'default'})
+		.then(({values}) => {
+			const patch = userInfos
+				.set('firstName', values.firstName)
+				.set('lastName', values.lastName)
+				.set('website', values.website)
+				.set('twitter', values.twitter)
+				.set('invoice_address', values.invoice_address)
+				.set('buyer_name', values.buyer_name)
+				.commit();
+
+			localServer.dispatchUpdate('/userInfos', patch);
+		});
 }
 
 localServer.on('action',({path, params}) => {
@@ -587,31 +619,6 @@ class App extends React.Component {
 		)
 	}
 }
-
-hoodie.stripe.customers.retrieve({includeCharges:true})
-	.then((data) => {
-		const patch = userInfos
-			.set('card', data.sources.data[0])
-			.set('plan',`personal_${sessionStorage.recurrence}_${ currencyService.getCurrency(data.sources.data[0])}_taxfree`)
-			.set('subscription', data.subscriptions.data[0])
-			.set('charges', data.charges.data ? data.charges.data : undefined)
-			.commit();
-		localServer.dispatchUpdate('/userInfos', patch);
-	});
-
-UserValues.get({typeface: 'default'})
-	.then(({values}) => {
-		const patch = userInfos
-			.set('firstName', values.firstName)
-			.set('lastName', values.lastName)
-			.set('website', values.website)
-			.set('twitter', values.twitter)
-			.set('invoice_address', values.invoice_address)
-			.set('buyer_name', values.buyer_name)
-			.commit();
-
-		localServer.dispatchUpdate('/userInfos', patch);
-	});
 
 render(<Header />, document.getElementById('header-container'));
 
