@@ -271,7 +271,7 @@
 			</h3>
 		</section>
 
-		<section class="Section Section-newsletter hide-for-print">
+		<section id="newsletter" class="Section Section-newsletter hide-for-print">
 
 		<header class="SectionHeader text-center fitToContent">
 			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->section3Title()->kirbytextSans(); ?></h1>
