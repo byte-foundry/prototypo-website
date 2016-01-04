@@ -79,9 +79,9 @@ function bundle() {
             browserSync.notify('Browserify Error!');
             this.emit('end');
         })
-        .pipe(exorcist('./assets/js/bundle.js.map'))
+        .pipe(exorcist('./assets/bundle.js.map'))
         .pipe(source('bundle.js'))
-        .pipe(gulp.dest('./assets/js/'))
+        .pipe(gulp.dest('./assets/'))
         .pipe(browserSync.stream({once: true}));
 }
 

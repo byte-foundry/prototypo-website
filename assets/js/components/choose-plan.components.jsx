@@ -14,7 +14,7 @@ export default class ChoosePlan extends React.Component {
 		ReactDOM.findDOMNode(this.refs[plan]).checked = true;
 		this.client.dispatchAction('/choose-plan', {
 			plan:`personal_${plan}_${ currencyService.getCurrency(this.props.card.country)}_taxfree`,
-			coupon: `noel_${plan}_${ currencyService.getCurrency(this.props.card.country)}`,
+			coupon: `easter_${plan}_${ currencyService.getCurrency(this.props.card.country)}`,
 		});
 	}
 
