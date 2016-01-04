@@ -24,7 +24,7 @@ var source      = require('vinyl-source-stream');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass', 'watchify'], function() {
 
     phpconnect.server({
         port: 8000
@@ -52,13 +52,14 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch('./assets/css/**/*.scss', ['sass']);
     gulp.watch([
         './assets/js/**/*.js',
+        './assets/bundle.js',
         './site/**/*.php'
     ]).on('change', browserSync.reload);
 });
 
 watchify.args.debug = true;
 watchify.args.extensions = ['.jsx', '.js'];
-var bundler = watchify(browserify('./assets/js/app.jsx', watchify.args));
+var bundler = browserify('./assets/js/app.jsx', watchify.args);
 
 // Babel transform
 bundler.transform(babelify.configure({
@@ -66,9 +67,6 @@ bundler.transform(babelify.configure({
 	stage: 0,
 	extensions: ['.jsx', '.js']
 }));
-
-// On updates recompile
-bundler.on('update', bundle);
 
 function bundle() {
     gutil.log('Compiling JS...');
@@ -85,8 +83,13 @@ function bundle() {
         .pipe(browserSync.stream({once: true}));
 }
 
-// gulp task alias
-gulp.task('bundle', function () {
+gulp.task('browserify', function () {
+    return bundle();
+});
+
+gulp.task('watchify', function () {
+    bundler = watchify(bundler);
+    bundler.on('update', bundle);
     return bundle();
 });
 
@@ -110,7 +113,11 @@ gulp.task('copy:images', ['clean:dist'], function(cb) {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build:assets', ['sass', 'clean:dist'], function() {
+gulp.task('build:bundle', ['clean:dist'], function () {
+    return bundle();
+});
+
+gulp.task('build:assets', ['sass', 'build:bundle'], function() {
     var assets = useref.assets({
             searchPath: './'
         });

@@ -30,8 +30,8 @@ import ChangeSubConfirmationPanel from './account/change-sub-confirmation-panel.
 import ChangeInvoiceAddress from './account/change-invoice-address.components.jsx';
 import ChangePassword from './account/change-password.components.jsx';
 
-Stripe.setPublishableKey('pk_live_CVrzdDZTEowrAZaRizc4G14c');
-window.hoodie = new Hoodie('https://prototypo.appback.com/');
+Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
+window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
 
 const stores = {};
 const localServer = new LocalServer(stores).instance;
@@ -82,19 +82,7 @@ const plansInfos = stores['/plansInfos'] = new Remutable({
 		recurrence: 'month',
 		realAmount: '8.00€',
 		discount: -700,
-	},
-	'free_monthly_EUR_taxfree': {
-		name: 'Prototypo Free plan',
-		recurrence: 'month',
-		realAmount: '0€',
-		discount: 0,
-	},
-	'free_monthly_USD_taxfree': {
-		name: 'Prototypo Free plan',
-		recurrence: 'month',
-		realAmount: '$0',
-		discount: 0,
-	},
+	}
 });
 
 const paymentStore = stores['/paymentStore'] = new Remutable({});
@@ -150,12 +138,6 @@ const actions = {
 			.done((data) => {
 				const patch = userInfos.set('username', hoodie.account.username).commit();
 				localServer.dispatchUpdate('/userInfos', patch);
-				window.Intercom('boot', {
-					app_id: "mnph1bst",
-					email: username, // TODO: The current logged in user's email address.
-				});
-				twttr.conversion.trackPid('ntxe3', { tw_sale_amount: 0, tw_order_quantity: 0 });
-				ga( 'send', 'event', 'app', 'subscribed' );
 
 				hoodie.stripe.customers.create({
 						email: hoodie.account.username,
@@ -189,10 +171,6 @@ const actions = {
 	'/sign-in': ({username, password}) => {
 		hoodie.account.signIn(username, password)
 			.done((username) => {
-				window.Intercom('boot', {
-					app_id: "mnph1bst",
-					email: username, // TODO: The current logged in user's email address.
-				});
 
 				hoodie.stripe.customers.retrieve({includeCharges:true})
 					.then((data) => {
@@ -262,8 +240,6 @@ const actions = {
 					.set('plan', undefined)
 					.commit();
 				localServer.dispatchUpdate('/userInfos', patch);
-
-				window.Intercom('shutdown');
 			})
 			.fail(() => {
 			});
@@ -383,7 +359,11 @@ const actions = {
 			localServer.dispatchUpdate('/errors', patch);
 		}
 		else {
-			const patch = errors.set('plan', {message: 'Choose a plan before confirming'}).commit();
+			const patch = (
+				errors
+					.set('plan', {message: 'Choose a plan before confirming'})
+					.commit()
+			);
 			localServer.dispatchUpdate('/errors', patch);
 		}
 	},
@@ -394,15 +374,22 @@ const actions = {
 		hoodie.stripe.customers.updateSubscription({
 			plan: userInfos.get('plan'),
 			coupon: userInfos.get('coupon'),
-			currency_code: /(EUR|USD)/.exec(userInfos.get('plan'))[0],
 		})
 		.then(() => {
-			twttr.conversion.trackPid('ntxef', { tw_sale_amount: 0, tw_order_quantity: 0 });
+
+			twttr.conversion.trackPid('ntxef', {
+				tw_sale_amount: 0,
+				tw_order_quantity: 0
+			});
 			ga( 'send', 'event', 'app', 'paying' );
+
 			hoodie.stripe.customers.retrieve()
 				.then((data) => {
 					const patch = userInfos
-						.set('subscription', data.subscriptions ? data.subscriptions.data[0] : undefined)
+						.set('subscription', data.subscriptions ?
+							data.subscriptions.data[0] :
+							undefined
+						)
 						.commit();
 					localServer.dispatchUpdate('/userInfos', patch);
 
@@ -476,9 +463,6 @@ const actions = {
 
 				const loadedPatch = loading.set('loading', false).commit();
 				localServer.dispatchUpdate('/loading', loadedPatch);
-
-				const planPatch = userInfos.set('plan', plan).commit();
-				localServer.dispatchUpdate('/plan', planPatch);
 
 				location.hash = '#/change-sub-confirmation';
 			})
