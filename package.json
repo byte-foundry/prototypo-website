@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-	  "node": ">=4.0.0"
+    "node": ">=4.0.0"
   },
   "main": "gulpfile.js",
   "dependencies": {
@@ -23,6 +23,7 @@
     "browser-sync": "^2.7.13",
     "browserify": "^11.2.0",
     "connect-modrewrite": "^0.8.1",
+    "envify": "^3.4.0",
     "exorcist": "^0.4.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -54,6 +55,7 @@
   },
   "browserify": {
     "transform": [
+      "envify",
       "babelify"
     ]
   },

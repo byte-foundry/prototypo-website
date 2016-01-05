@@ -31,7 +31,10 @@ import ChangeInvoiceAddress from './account/change-invoice-address.components.js
 import ChangePassword from './account/change-password.components.jsx';
 
 Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
-window.hoodie = new Hoodie('https://prototypo-dev.appback.com/');
+const hoodieBackendUrl = process.env.TRAVIS_BRANCH === 'master' ?
+	'https://prototypo.appback.com/' :
+	'https://prototypo-dev.appback.com/';
+window.hoodie = new Hoodie(hoodieBackendUrl);
 
 const stores = {};
 const localServer = new LocalServer(stores).instance;
