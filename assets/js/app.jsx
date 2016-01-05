@@ -30,7 +30,11 @@ import ChangeSubConfirmationPanel from './account/change-sub-confirmation-panel.
 import ChangeInvoiceAddress from './account/change-invoice-address.components.jsx';
 import ChangePassword from './account/change-password.components.jsx';
 
-Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
+const stripePublicKey = process.env.TRAVIS_BRANCH === 'master' ?
+	'pk_live_CVrzdDZTEowrAZaRizc4G14c' :
+	'pk_test_PkwKlOWOqSoimNJo2vsT21sE';
+	
+Stripe.setPublishableKey(stripePublicKey);
 const hoodieBackendUrl = process.env.TRAVIS_BRANCH === 'master' ?
 	'https://prototypo.appback.com/' :
 	'https://prototypo-dev.appback.com/';
