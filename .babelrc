@@ -1,0 +1,15 @@
+{
+	"presets": [
+		"es2015",
+		"react"
+	],
+	"ignore": "/node_modules\/(?!lifespan)/",
+	"plugins": [
+		"transform-class-properties",
+		"syntax-async-functions",
+		["transform-async-to-module-method", {
+			"module": "bluebird",
+			"method": "coroutine"
+		}]
+	]
+}

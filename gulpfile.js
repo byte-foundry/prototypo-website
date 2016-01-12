@@ -23,8 +23,12 @@ var exorcist    = require('exorcist');
 var source      = require('vinyl-source-stream');
 var autoprefixer = require('gulp-autoprefixer');
 
+var webpack         = require('webpack');
+var WebpackDevServer= require('webpack-dev-server');
+var webpackConfig   = require('./webpack.config.js');
+
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'watchify'], function() {
+gulp.task('serve', ['sass'], function() {
 
     phpconnect.server({
         port: 8000
@@ -44,7 +48,7 @@ gulp.task('serve', ['sass', 'watchify'], function() {
             }
         });
         browserSync.init({
-            port: 8002,
+            port: 9002,
             proxy: 'localhost:8001'
         });
     });
@@ -64,8 +68,10 @@ var bundler = browserify('./assets/js/app.jsx', watchify.args);
 // Babel transform
 bundler.transform(babelify.configure({
 	sourceMapRelative: '.',
-	stage: 0,
-	extensions: ['.jsx', '.js']
+	presets: [
+		'react',
+		'es2015'
+	]
 }));
 
 function bundle() {
@@ -91,6 +97,39 @@ gulp.task('watchify', function () {
     bundler = watchify(bundler);
     bundler.on('update', bundle);
     return bundle();
+});
+
+gulp.task('webpack:build', function(callback) {
+	var prototypoConfig = Object.create(webpackConfig);
+	webpack(prototypoConfig, function(err, stats) {
+		if (err) return new gutil.PluginError("webpack", err);
+
+		gutil.log('[webpack]', stats.toString({
+		}));
+
+		callback();
+	});
+});
+
+gulp.task('webpack:serve', function() {
+	// Start a webpack-dev-server
+	var prototypoConfig = Object.create(webpackConfig);
+	prototypoConfig.devtool = 'eval';
+	prototypoConfig.debug = true;
+	var compiler = webpack(prototypoConfig);
+
+	new WebpackDevServer(compiler, {
+		publicPath: webpackConfig.output.publicPath,
+		hot: true,
+		contentBase: 'dist/',
+	}).listen(9000, "0.0.0.0", function(err) {
+	if(err) throw new gutil.PluginError("webpack-dev-server", err);
+		// Server listening
+		gutil.log("[webpack-dev-server]", "http://localhost:9000/webpack-dev-server/");
+
+		// keep the server alive or continue?
+		// callback();
+	});
 });
 
 // Compile sass into CSS & auto-inject into browsers
