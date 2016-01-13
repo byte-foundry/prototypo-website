@@ -37,7 +37,7 @@ export default class ChangeSubConfirmationPanel extends React.Component {
 			});
 	}
 
-	componentWillUnmoun() {
+	componentWillUnmount() {
 		this.lifespan.release();
 	}
 
@@ -97,7 +97,7 @@ class Invoice extends React.Component {
 			});
 	}
 
-	componentWillUnmoun() {
+	componentWillUnmount() {
 		this.lifespan.release();
 	}
 
