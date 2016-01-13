@@ -26,6 +26,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var webpack         = require('webpack');
 var WebpackDevServer= require('webpack-dev-server');
 var webpackConfig   = require('./webpack.config.js');
+var prodWebpackConfig   = require('./prod.config.js');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -99,7 +100,7 @@ gulp.task('watchify', function () {
     return bundle();
 });
 
-gulp.task('webpack:build', function(callback) {
+gulp.task('webpack:build', ['clean:dist'], function(callback) {
 	var prototypoConfig = Object.create(webpackConfig);
 	webpack(prototypoConfig, function(err, stats) {
 		if (err) return new gutil.PluginError("webpack", err);
@@ -156,7 +157,7 @@ gulp.task('build:bundle', ['clean:dist'], function () {
     return bundle();
 });
 
-gulp.task('build:assets', ['sass', 'build:bundle'], function() {
+gulp.task('build:assets', ['sass', 'webpack:build'], function() {
     var assets = useref.assets({
             searchPath: './'
         });

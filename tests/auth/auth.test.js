@@ -58,7 +58,7 @@ describe('Account', function() {
 	  TestUtils.Simulate.click(reset);
 		
 	  var resetContainer = this.signin.refs.resetPasswordContainer;
-	  assert.equals(ReactDOM.findDOMNode(resetContainer).tagName, 'DIV');
+	  assert.equal(ReactDOM.findDOMNode(resetContainer).tagName, 'DIV');
 	  done();
   });
 });
