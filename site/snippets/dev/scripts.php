@@ -14,6 +14,7 @@
 <script src="/assets/js/account.js"></script>
 <script src="/assets/js/moment.min.js"></script>
 <!-- endbuild -->
-
+<!-- build:remove -->
 <script src="/dll/libs.dll.js"></script>
+<!-- endbuild -->
 <script src="/assets/bundle.js"></script>
