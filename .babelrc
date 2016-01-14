@@ -7,9 +7,6 @@
 	"plugins": [
 		"transform-class-properties",
 		"syntax-async-functions",
-		["transform-async-to-module-method", {
-			"module": "bluebird",
-			"method": "coroutine"
-		}]
+		"transform-regenerator"
 	]
 }
