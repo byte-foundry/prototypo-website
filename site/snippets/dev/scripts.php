@@ -15,4 +15,5 @@
 <script src="/assets/js/moment.min.js"></script>
 <!-- endbuild -->
 
+<script src="/dll/libs.dll.js"></script>
 <script src="/assets/bundle.js"></script>

@@ -25,11 +25,12 @@ var autoprefixer = require('gulp-autoprefixer');
 
 var webpack         = require('webpack');
 var WebpackDevServer= require('webpack-dev-server');
-var webpackConfig   = require('./webpack.config.js');
+var devWebpackConfig   = require('./dev.config.js');
+var dllWebpackConfig   = require('./dll.config.js');
 var prodWebpackConfig   = require('./prod.config.js');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('php', ['sass'], function(cb) {
 
     phpconnect.server({
         port: 8000
@@ -47,61 +48,31 @@ gulp.task('serve', ['sass'], function() {
                     ])
                 ];
             }
-        });
-        browserSync.init({
-            port: 9002,
-            proxy: 'localhost:8001'
-        });
+		});
+		cb();
     });
 
     gulp.watch('./assets/css/**/*.scss', ['sass']);
-    gulp.watch([
-        './assets/js/**/*.js',
-        './assets/bundle.js',
-        './site/**/*.php'
-    ]).on('change', browserSync.reload);
 });
 
-watchify.args.debug = true;
-watchify.args.extensions = ['.jsx', '.js'];
-var bundler = browserify('./assets/js/app.jsx', watchify.args);
-
-// Babel transform
-bundler.transform(babelify.configure({
-	sourceMapRelative: '.',
-	presets: [
-		'react',
-		'es2015'
-	]
-}));
-
-function bundle() {
-    gutil.log('Compiling JS...');
-
-    return bundler.bundle()
-        .on('error', function (err) {
-            gutil.log(err.message);
-            browserSync.notify('Browserify Error!');
-            this.emit('end');
-        })
-        .pipe(exorcist('./assets/bundle.js.map'))
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest('./assets/'))
-        .pipe(browserSync.stream({once: true}));
-}
-
-gulp.task('browserify', function () {
-    return bundle();
+gulp.task('serve', ['php', 'webpack:dll'], function() {
+	new WebpackDevServer(webpack(devWebpackConfig), {
+		publicPath: devWebpackConfig.output.publicPath,
+		hot: true,
+		historyApiFallback: true,
+		proxy: {
+			'*':'http://localhost:8001',
+		},
+	}).listen(9002, '0.0.0.0', function(err, result) {
+		if (err) {
+			console.log(err);
+		}
+		console.log('Listening at localhost:9002');
+	});
 });
 
-gulp.task('watchify', function () {
-    bundler = watchify(bundler);
-    bundler.on('update', bundle);
-    return bundle();
-});
-
-gulp.task('webpack:build', ['clean:dist'], function(callback) {
-	var prototypoConfig = Object.create(webpackConfig);
+gulp.task('webpack:dll', ['clean:dll'], function(callback) {
+	var prototypoConfig = Object.create(dllWebpackConfig);
 	webpack(prototypoConfig, function(err, stats) {
 		if (err) return new gutil.PluginError("webpack", err);
 
@@ -112,24 +83,15 @@ gulp.task('webpack:build', ['clean:dist'], function(callback) {
 	});
 });
 
-gulp.task('webpack:serve', function() {
-	// Start a webpack-dev-server
-	var prototypoConfig = Object.create(webpackConfig);
-	prototypoConfig.devtool = 'eval';
-	prototypoConfig.debug = true;
-	var compiler = webpack(prototypoConfig);
+gulp.task('webpack:build', ['clean:dist'], function(callback) {
+	var prototypoConfig = Object.create(prodWebpackConfig);
+	webpack(prototypoConfig, function(err, stats) {
+		if (err) return new gutil.PluginError("webpack", err);
 
-	new WebpackDevServer(compiler, {
-		publicPath: webpackConfig.output.publicPath,
-		hot: true,
-		contentBase: 'dist/',
-	}).listen(9000, "0.0.0.0", function(err) {
-	if(err) throw new gutil.PluginError("webpack-dev-server", err);
-		// Server listening
-		gutil.log("[webpack-dev-server]", "http://localhost:9000/webpack-dev-server/");
+		gutil.log('[webpack]', stats.toString({
+		}));
 
-		// keep the server alive or continue?
-		// callback();
+		callback();
 	});
 });
 
@@ -146,15 +108,14 @@ gulp.task('clean:dist', function(cb) {
     rimraf('./dist', cb);
 });
 
+gulp.task('clean:dll', function(cb) {
+    rimraf('./dll', cb);
+});
 // This task can be used instead of clean:dist to make sure all root images
 // are copied over to dist.
 gulp.task('copy:images', ['clean:dist'], function(cb) {
     return gulp.src('./*.png')
         .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('build:bundle', ['clean:dist'], function () {
-    return bundle();
 });
 
 gulp.task('build:assets', ['sass', 'webpack:build'], function() {
