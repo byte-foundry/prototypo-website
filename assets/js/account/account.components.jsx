@@ -75,7 +75,6 @@ export default class Account extends React.Component {
 		const resetPasswordSuccess = this.state.passwordReset ? (
 				<div id="hoodie-success" className="marginTop30">
 					<label htmlFor="" className="success-message">A new password was sent to <span id="user-email"></span></label>
-					<div className="reset-password-toggle form-label btn-success marginBottom30 marginRight15" onClick={() => {this.setState({resetPassword:false})}}>Sign in</div>
 				</div>
 		) : false;
 
