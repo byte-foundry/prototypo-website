@@ -13,9 +13,9 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{ 
+			{
 				test: /\.jsx?$/,
-				loaders: ['babel-loader'],
+				loaders: ['babel-loader', 'transform/cacheable?envify'],
 				include: [
 					path.join(__dirname, 'assets')
 				]
