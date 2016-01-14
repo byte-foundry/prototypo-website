@@ -64,6 +64,11 @@ export default class ChangeSubPanel extends React.Component {
 		this.lifespan.release();
 	}
 
+	cancelSub() {
+		this.client.dispatchAction('/calc-invoice',{ plan: this.state.freePlan });
+		this.client.dispatchAction('/choose-plan',{ plan: this.state.freePlan })
+	}
+
 	render() {
 		let annualState = false;
 		let monthlyState = false;
@@ -84,7 +89,7 @@ export default class ChangeSubPanel extends React.Component {
 				<ChoosePlan plans={this.state.plans} plan="launch" card={this.state.card} monthlyState={monthlyState} annualState={annualState}/>
 				<WaitForLoad loaded={!this.state.loading}>
 					<button disabled={!this.state.planId} className="form-label btn-success marginTop30 marginRight15" onClick={() => { this.client.dispatchAction('/calc-invoice',{plan: this.state.planId})}}>Change subscription</button>
-					<button className="form-label btn-danger marginTop30" onClick={() => { this.client.dispatchAction('/calc-invoice',{plan: this.state.freePlan})}}>Cancel subscription</button>
+					<button className="form-label btn-danger marginTop30" onClick={() => {this.cancelSub()} }>Cancel subscription</button>
 				</WaitForLoad>
 			</div>
 		)

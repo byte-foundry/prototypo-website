@@ -29,10 +29,6 @@ export default class SubscriptionPanel extends React.Component {
 
 		const plansInfos = await this.client.fetch('/plansInfos');
 
-		this.setState({
-			plan: plansInfos.head.toJS()[this.state.planId] || noPlan,
-		});
-
 		this.client.getStore('/userInfos', this.lifespan)
 			.onUpdate(({head}) => {
 				this.setState({

@@ -24,6 +24,10 @@ export default class Header extends React.Component {
 			});
 	}
 
+	componentWillUnmount() {
+		this.lifespan.release();
+	}
+
 	logout() {
 		this.client.dispatchAction('/logout');
 	}

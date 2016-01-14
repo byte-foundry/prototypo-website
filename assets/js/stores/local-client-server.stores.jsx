@@ -1,4 +1,4 @@
-import {Client, Server} from 'nexus-flux/src/adapters/Local';
+import {Client, Server} from 'nexus-flux';
 
 class LocalClient {
 	static setup(server) {
@@ -34,4 +34,4 @@ class LocalServer {
 	}
 }
 
-export default {LocalClient, LocalServer};
+export {LocalClient, LocalServer};
