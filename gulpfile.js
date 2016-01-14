@@ -2,7 +2,6 @@ var gulp        = require('gulp');
 var gutil       = require('gulp-util');
 var phpconnect  = require('gulp-connect-php');
 var connect     = require('gulp-connect');
-var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var rev         = require('gulp-rev');
 var revReplace  = require('gulp-rev-replace');
@@ -16,11 +15,6 @@ var rimraf      = require('rimraf');
 var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
-var babelify    = require('babelify');
-var browserify  = require('browserify');
-var watchify    = require('watchify');
-var exorcist    = require('exorcist');
-var source      = require('vinyl-source-stream');
 var autoprefixer = require('gulp-autoprefixer');
 
 var webpack         = require('webpack');
@@ -101,7 +95,6 @@ gulp.task('sass', function() {
       .pipe(sass().on('error', sass.logError))
 	  .pipe(autoprefixer())
       .pipe(gulp.dest('./.tmp/assets'))
-      .pipe(browserSync.stream());
 });
 
 gulp.task('clean:dist', function(cb) {
