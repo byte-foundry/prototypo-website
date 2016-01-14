@@ -84,7 +84,7 @@ export default class Account extends React.Component {
 		) : false;
 
 		const resetPassword = this.state.resetPassword ? (
-			<div id="wrap-reset-password" className="subscribe">
+			<div ref="resetPasswordContainer" id="wrap-reset-password" className="subscribe">
 				<p className="textSize-title-small marginBottom30">Reset your password</p>
 				<label className="form-label">Please fill the following input with the email address you've used to register.</label>
 				<input type="text" className="form-input" id="email-reset-password" name="login" ref="resetPassword" placeholder="mj@domain.com"></input>
@@ -93,7 +93,7 @@ export default class Account extends React.Component {
 				{resetPasswordSuccess}
 				<div id="reset-password-actions" className="marginTop30">
 					<button className="reset-password-toggle form-label btn-danger marginRight15" onClick={() => {this.setState({resetPassword:false})}}>Cancel</button>
-					<button id="reset-password" className="form-label btn-error" onClick={() => {this.resetPassword()}}>Reset</button>
+					<button ref="resetPasswordBtn" id="reset-password" className="form-label btn-error" onClick={() => {this.resetPassword()}}>Reset</button>
 				</div>
 			</div>
 		) : false;
@@ -104,13 +104,13 @@ export default class Account extends React.Component {
 
 		const signin = !this.state.resetPassword ? (
 			<div id="wrap-sign-in" className="subscribe">
-				<form onSubmit={(e) => {this.signIn(e)}}>
+				<form ref="signInForm" onSubmit={(e) => {this.signIn(e)}}>
 					<label htmlFor="login" className="form-label">Your email</label>
 					<input type="text" id="email-sign-in" name="login" ref="username" className="form-input" placeholder="mj@domain.com"></input>
 					<label htmlFor="password" className="form-label">Password</label>
 					<input type="password" id="password-sign-in" className="form-input" name="password" ref="password" placeholder="abc123"></input>
 					<label id="signin-error" htmlFor="" className="error hidden"></label>
-					<label className="reset-password-toggle right marginBottom30 textSize-title-small colorGray" onClick={() => {this.setState({resetPassword:true})}}>Forgotten your password?</label>
+					<label ref="resetPassword" className="reset-password-toggle right marginBottom30 textSize-title-small colorGray" onClick={() => {this.setState({resetPassword:true})}}>Forgotten your password?</label>
 					{signinError}
 					<div className="marginTop30">
 						<button id="sign-me-in" className="form-label btn-success marginBottom30 marginRight15" type="submit">Sign in</button>

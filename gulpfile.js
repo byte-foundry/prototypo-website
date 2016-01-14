@@ -2,7 +2,6 @@ var gulp        = require('gulp');
 var gutil       = require('gulp-util');
 var phpconnect  = require('gulp-connect-php');
 var connect     = require('gulp-connect');
-var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var rev         = require('gulp-rev');
 var revReplace  = require('gulp-rev-replace');
@@ -16,15 +15,13 @@ var rimraf      = require('rimraf');
 var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
-var babelify    = require('babelify');
-var browserify  = require('browserify');
-var watchify    = require('watchify');
-var exorcist    = require('exorcist');
-var source      = require('vinyl-source-stream');
 var autoprefixer = require('gulp-autoprefixer');
 
+var webpack         = require('webpack');
+var WebpackDevServer= require('webpack-dev-server');
+
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'watchify'], function() {
+gulp.task('php', ['sass'], function(cb) {
 
     phpconnect.server({
         port: 8000
@@ -42,55 +39,54 @@ gulp.task('serve', ['sass', 'watchify'], function() {
                     ])
                 ];
             }
-        });
-        browserSync.init({
-            port: 8002,
-            proxy: 'localhost:8001'
-        });
+		});
+		cb();
     });
 
     gulp.watch('./assets/css/**/*.scss', ['sass']);
-    gulp.watch([
-        './assets/js/**/*.js',
-        './assets/bundle.js',
-        './site/**/*.php'
-    ]).on('change', browserSync.reload);
 });
 
-watchify.args.debug = true;
-watchify.args.extensions = ['.jsx', '.js'];
-var bundler = browserify('./assets/js/app.jsx', watchify.args);
-
-// Babel transform
-bundler.transform(babelify.configure({
-	sourceMapRelative: '.',
-	stage: 0,
-	extensions: ['.jsx', '.js']
-}));
-
-function bundle() {
-    gutil.log('Compiling JS...');
-
-    return bundler.bundle()
-        .on('error', function (err) {
-            gutil.log(err.message);
-            browserSync.notify('Browserify Error!');
-            this.emit('end');
-        })
-        .pipe(exorcist('./assets/bundle.js.map'))
-        .pipe(source('bundle.js'))
-        .pipe(gulp.dest('./assets/'))
-        .pipe(browserSync.stream({once: true}));
-}
-
-gulp.task('browserify', function () {
-    return bundle();
+gulp.task('serve', ['php', 'webpack:dll'], function() {
+	var devWebpackConfig   = require('./dev.config.js');
+	new WebpackDevServer(webpack(devWebpackConfig), {
+		publicPath: devWebpackConfig.output.publicPath,
+		hot: true,
+		historyApiFallback: true,
+		proxy: {
+			'*':'http://localhost:8001',
+		},
+	}).listen(9002, '0.0.0.0', function(err, result) {
+		if (err) {
+			console.log(err);
+		}
+		console.log('Listening at localhost:9002');
+	});
 });
 
-gulp.task('watchify', function () {
-    bundler = watchify(bundler);
-    bundler.on('update', bundle);
-    return bundle();
+gulp.task('webpack:dll', ['clean:dll'], function(callback) {
+	var dllWebpackConfig   = require('./dll.config.js');
+	var prototypoConfig = Object.create(dllWebpackConfig);
+	webpack(prototypoConfig, function(err, stats) {
+		if (err) return new gutil.PluginError("webpack", err);
+
+		gutil.log('[webpack]', stats.toString({
+		}));
+
+		callback();
+	});
+});
+
+gulp.task('webpack:build', ['clean:dist'], function(callback) {
+	var prodWebpackConfig   = require('./prod.config.js');
+	var prototypoConfig = Object.create(prodWebpackConfig);
+	webpack(prototypoConfig, function(err, stats) {
+		if (err) return new gutil.PluginError("webpack", err);
+
+		gutil.log('[webpack]', stats.toString({
+		}));
+
+		callback();
+	});
 });
 
 // Compile sass into CSS & auto-inject into browsers
@@ -99,13 +95,15 @@ gulp.task('sass', function() {
       .pipe(sass().on('error', sass.logError))
 	  .pipe(autoprefixer())
       .pipe(gulp.dest('./.tmp/assets'))
-      .pipe(browserSync.stream());
 });
 
 gulp.task('clean:dist', function(cb) {
     rimraf('./dist', cb);
 });
 
+gulp.task('clean:dll', function(cb) {
+    rimraf('./dll', cb);
+});
 // This task can be used instead of clean:dist to make sure all root images
 // are copied over to dist.
 gulp.task('copy:images', ['clean:dist'], function(cb) {
@@ -113,11 +111,7 @@ gulp.task('copy:images', ['clean:dist'], function(cb) {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build:bundle', ['clean:dist'], function () {
-    return bundle();
-});
-
-gulp.task('build:assets', ['sass', 'build:bundle'], function() {
+gulp.task('build:assets', ['sass', 'webpack:build'], function() {
     var assets = useref.assets({
             searchPath: './'
         });

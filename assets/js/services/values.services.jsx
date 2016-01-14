@@ -14,7 +14,5 @@ function values(prefix) {
 	}
 }
 
-export default {
-	AppValues: values('newapp'),
-	UserValues: values('userinfos'),
-}
+export var AppValues = values('newapp');
+export var UserValues = values('userinfos');

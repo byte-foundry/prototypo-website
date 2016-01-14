@@ -36,6 +36,10 @@ export default class BreadCrumb extends React.Component {
 			});
 	}
 
+	componentWillUnmount() {
+		this.lifespan.release();
+	}
+
 	render() {
 		return (
 			<div className="bread-crumb">
