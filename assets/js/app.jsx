@@ -29,8 +29,11 @@ import ChangeSubPanel from './account/change-sub-panel.components.jsx';
 import ChangeSubConfirmationPanel from './account/change-sub-confirmation-panel.components.jsx';
 import ChangeInvoiceAddress from './account/change-invoice-address.components.jsx';
 import ChangePassword from './account/change-password.components.jsx';
+const stripePublishKey = process.env.TRAVIS_BRANCH === 'master' ?
+	'pk_live_CVrzdDZTEowrAZaRizc4G14c' :
+	'pk_test_PkwKlOWOqSoimNJo2vsT21sE';
 
-Stripe.setPublishableKey('pk_test_PkwKlOWOqSoimNJo2vsT21sE');
+Stripe.setPublishableKey(stripePublishKey);
 const hoodieBackendUrl = process.env.TRAVIS_BRANCH === 'master' ?
 	'https://prototypo.appback.com/' :
 	'https://prototypo-dev.appback.com/';
