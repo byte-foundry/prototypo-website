@@ -93,7 +93,10 @@
     			<span class="show-for-sr">Facebook</span>
     		</a>
 
-    		<a href="<?php echo $site->twitter()->html() ?>" target="_blank" class="Social-item Social-itemTwitter">
+    		<a href="<?php echo $site->instagram()->html() ?>" target="_blank" class="Social-item Social-itemInstagram">
+      		<span class="show-for-sr">Instagram</span>
+
+			<a href="<?php echo $site->twitter()->html() ?>" target="_blank" class="Social-item Social-itemTwitter">
       		<span class="show-for-sr">Twitter</span>
         </a>
   		</div>

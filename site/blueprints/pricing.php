@@ -18,69 +18,30 @@ fields:
     placeholder: Pricing
     default: Pricing
 
-  ogDescription:
-    label: description of the page
-    type:  textarea
-
-  ogImage:
-    label: Page thumbnail
-    type:  text
-
   line-a:
     type:line
 
-  section0Info:
-    type: info
-    text: >
-      **Section : Get access to Prototypo**
-
-      **Content** : Access to freemium.
-
-  section0Title:
+  mainTitle:
     type: text
-    placeholder: Title of the section
-    default: Get access to Prototypo
+    placeholder: Simple plans for everyone!
+    default: Simple plans for everyone!
 
-  section0Subtitle:
-    type: text
-    placeholder: Subtitle of the section
-    default: Try prototypo for free with the freemium version
-
-  section0Txt:
-    type: textarea
-    placeholder: Text content of the section
-
-  freemiumImg:
-    type: select
-    label: Image of freemium version
-    options: files
-
-  freemiumToS:
-    type: textarea
-    label: Terms of Service
-
-  freemiumSubmit:
-    type: text
-    label: Try Prototypo button label
-
-
-
-  section1Info:
-    type: info
-    text: >
-      **Section : Your Prototypo is here**
-
-      **Content** : Three pricing packs.
-
-  section1Title:
-    type: text
-    placeholder: Title of the section
-    default: Your Prototypo is here
-
-  section1Subtitle:
+  Subtitle:
     type: text
     placeholder: Subtitle of the section
     default: 3 packs that fit your needs
+
+  headerImg:
+      type: select
+      label: Image header
+      options: files
+
+  description:
+    label: description of the page
+    type:  textarea
+
+  line-a:
+    type:line
 
   packs:
     label: Pricing packs
@@ -123,8 +84,10 @@ fields:
         label: Button label
         placeholder: "Get started now!" or "Available soon"
 
+  freemiumToS:
+    type: textarea
+    label: Terms of Service
 
-
-  section1TxtAfter:
+  TxtAfter:
     type: textarea
     placeholder: Text content after the pricing packs

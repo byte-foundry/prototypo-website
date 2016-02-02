@@ -14,7 +14,7 @@ Keywords: Prototypo,Font,Creation
 
 ----
 
-Copyright: 
+Copyright:
 
 By (link: http://twitter.com/_____________y text: YM popup: yes) & (link: http://twitter.com/louis_remi text: LRB popup: yes) with love | © Prototypo 2015
 Fonts powered by (link: http://www.productiontype.com text:Production Type popup: yes)
@@ -26,3 +26,7 @@ Facebook: http://www.facebook.com/prototypoApp
 ----
 
 Twitter: http://twitter.com/prototypoApp
+
+----
+
+Instagram: https://www.instagram.com/prototypoapp/

@@ -51,6 +51,7 @@ $(function() {
 
 	$('.js_annualBilling').on('mousedown', function() {
 		sessionStorage.recurrence = 'annual';
+		$('.totalAnnual').slideDown();
 		$('.Pricing').removeClass('showMonthlyBilling').addClass('showAnnualBilling');
 		if (!hoodie.account.username) {
 			$('.billing').each(function() {
@@ -61,6 +62,7 @@ $(function() {
 
 	$('.js_monthlyBilling').on('mousedown', function() {
 		sessionStorage.recurrence = 'monthly';
+		$('.totalAnnual').hide();
 		$('.Pricing').removeClass('showAnnualBilling').addClass('showMonthlyBilling');
 		if (!hoodie.account.username) {
 			$('.billing').each(function() {

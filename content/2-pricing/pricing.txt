@@ -1,12 +1,8 @@
-Title: Pricing
+Title: pricing
 
 ----
 
-Section1title: Simple plans for everyone!
-
-----
-
-Section1subtitle: 4 packs that fit your needs
+Subtitle: Subscriptions without commitment: feel free to test!
 
 ----
 
@@ -24,10 +20,10 @@ Packs:
   packstate: available
   packbuttonlabel: Get started!
 - 
-  packname: launch
+  packname: Professional
   packpricettc: 15
   packprice2ttc: 12
-  packpricelaunch: 8
+  packpricelaunch:
   packservices: |
     Unlimited fonts
     All parameters
@@ -60,23 +56,11 @@ Packs:
 
 ----
 
-Section1txtafter: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued.
+Txtafter: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued.
 
 ----
 
-Section0title: Get access to Prototypo!
-
-----
-
-Section0subtitle: Try prototypo with the free version
-
-----
-
-Section0txt: For a few days, all features are available in the free version!
-
-----
-
-Freemiumimg: prototypo.svg
+Headerimg: prototypo.svg
 
 ----
 
@@ -84,4 +68,8 @@ Freemiumtos: By clicking on Subscribe, I agree to (link: cgu text: Prototypo's T
 
 ----
 
-Freemiumsubmit: Try Prototypo!
+Description: Get 2 months free by choosing annual billing!
+
+----
+
+Maintitle: Simple plans for everyone!

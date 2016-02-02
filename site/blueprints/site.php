@@ -24,3 +24,6 @@ fields:
   twitter:
     label: Twitter
     type:  url
+  instagram:
+      label: Instagram
+      type:  url
