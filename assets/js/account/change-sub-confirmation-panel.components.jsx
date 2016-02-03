@@ -102,18 +102,6 @@ class Invoice extends React.Component {
 	}
 
 	render() {
-		if (this.props.invoice.lines.data[0].description === 'Launch discount') {
-			this.props.invoice.lines.data[0] = {
-				description: 'Launch discount',
-				amount: this.state.plan ? this.state.planInfos[this.state.plan].discount : 0,
-			};
-		}
-		else {
-			this.props.invoice.lines.data.unshift({
-				description: 'Launch discount',
-				amount: this.state.plan ? this.state.planInfos[this.state.plan].discount : 0,
-			});
-		}
 
 		const total = _.reduce(this.props.invoice.lines.data, (total, line) => {
 			return total + line.amount;

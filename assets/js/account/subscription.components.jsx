@@ -110,7 +110,7 @@ export default class SubscriptionPanel extends React.Component {
 						</div>
 
 						<div id="error-create-customer" className="textType-txt textSize-txt-large marginBottom30 general-infos hidden">
-							There was an error during your subscription. We've subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the launch plan.
+							There was an error during your subscription. We've subscribed your account to the Free subscription. To subscribe you will need to add a valid card at the bottom of the page and then subscribe to the professional plan.
 						</div>
 
 						<div className="clearfix marginTop30">

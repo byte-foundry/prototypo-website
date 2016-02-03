@@ -48,11 +48,11 @@ export default class ChoosePlan extends React.Component {
 				<div className="radio-wrap" id="recurrence-selector">
 					<input id="monthly" type="radio" name="monthYearSwitch" className="monthYearSwitch" value="monthly" ref="monthly" checked={this.props.monthlyState}></input>
 					<label className="radio text-center" htmlFor="monthly" onClick={() => { this.choosePlan('monthly')}} >
-						<div className="plan"><div className="type">Monthly billing: <div className="launch-infos">The first 6 month, <span className={currencyClass}>{monthly.realTotal}</span> after</div></div><span className={monthCurrency}>{monthly.amount}</span></div>
+						<div className="plan"><div className="type">Monthly billing: </div><span className={monthCurrency}>{monthly.amount}</span><span className="billing-period">/month</span></div>
 					</label>
 					<input id="annual" type="radio" name="monthYearSwitch" className="monthYearSwitch" value="annual" ref="annual" checked={this.props.annualState}></input>
 					<label className="radio text-center" htmlFor="annual" onClick={() => { this.choosePlan('annual')}}>
-						<div className="plan"><div className="type">Annual billing: <div className="launch-infos">One year for <span className={currencyClass}>{annual.total}</span> instead of <span className={currencyClass}>{annual.realTotal}</span></div></div><span className={yearCurrency}>{annual.amount}</span></div>
+						<div className="plan"><div className="type">Annual billing: </div><span className={yearCurrency}>{annual.amount}</span><span className="billing-period">/year</span></div>
 					</label>
 				</div>
 			</div>
