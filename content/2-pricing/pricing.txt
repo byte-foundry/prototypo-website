@@ -2,7 +2,7 @@ Title: Pricing
 
 ----
 
-Subtitle: Feel free to test!
+Subtitle: Monthly subscriptions are without commitment!
 
 ----
 
@@ -72,4 +72,4 @@ Description: Get 2 months free by choosing annual billing!
 
 ----
 
-Maintitle: Subscriptions without commitment
+Maintitle: Feel free to test,
