@@ -81,7 +81,7 @@ Section2title: Upcoming features
 
 ----
 
-Section2subtitle: We're hard at work, launching next fall!
+Section2subtitle: We're hard at work, improving the app!
 
 ----
 
@@ -102,6 +102,7 @@ Features:
   featureimg: pictofeaturessplitviews.svg
   featurename: Split views
   featuredescription: 'Improve your design process with severals views: glyph, words, paragraphs, and watch changes in real time.'
+  featuredone: 'true'
 - 
   featureimg: pictofeaturesfontmanager.svg
   featurename: Font manager
@@ -109,20 +110,23 @@ Features:
     Create and manage multiple projects!
     Define variants of a master typeface, or
     branch it in sub-projects!
+  featuredone: 'true'
 - 
   featureimg: pictofeaturesswitchalternates.svg
   featurename: Switch alternates
   featuredescription: >
-    A lot of glyphs are proposed with one or
+    Many glyphs are available with one or
     more alternates to define the perfect
     shape to fit your custom design.
+  featuredone: 'true'
 - 
-  featureimg: pictofeaturesmoretocome.svg
-  featurename: …and more!
+  featureimg: pictofeaturesindiv.svg
+  featurename: Individualize parameters
   featuredescription: >
-    We work on more advanced great features,
-    like spacing/kerning, individualize
-    parameters, and more!
+    Individualize glyphs or groups of glyphs
+    to refine your design and create unique
+    typefaces.
+  featuredone: 'true'
 
 ----
 
@@ -201,3 +205,7 @@ Ogdescription: Prototypo is an online application that allows to create beautifu
 ----
 
 Ogimage: /content/home/home-screenshot.png
+
+----
+
+Section2text: We work on more advanced great features, like spacing/kerning, live preview on your website, cyrillic and more!

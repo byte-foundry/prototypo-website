@@ -178,7 +178,17 @@ fields:
       featuredescription:
         type: textarea
         label: Feature description
+      featureDone:
+        label: Feature done?
+        type: radio
+        default: false
+        options:
+          true: Yep!
+          false: No :(
 
+  section2Text:
+        type: text
+        placeholder: Description
 
   line-e:
     type: line

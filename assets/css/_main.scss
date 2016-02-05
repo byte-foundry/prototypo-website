@@ -528,6 +528,13 @@ header {
 }
 .Section-featuresTitle {
 	margin-bottom: 10px;
+	&.done {
+		&::after {
+			content: url("/assets/img/done.svg");
+			position: absolute;
+			margin: 0 0 -10px 10px;
+		}
+	}
 }
 .Section-featuresDescription {
 
