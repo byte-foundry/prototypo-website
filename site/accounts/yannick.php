@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - home
   - pricing
   - about
   - press
   - cgu/charte-de-confidentialite
-  - cgu

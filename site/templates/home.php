@@ -216,7 +216,8 @@
 				<div class="Section-featuresPictoWrap">
 					<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto">
 				</div>
-				<h5 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large"><?php echo $feature['featurename']; ?></h5>
+				<h5 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large <?php if ( isset( $feature['featuredone'] ) ) echo ' done' ?>"><?php echo $feature['featurename']; ?></h5>
+
 				<div class="Section-featuresDescription textType-subtxt textSize-txt-small colorBrightest">
 					<?php echo $feature['featuredescription']; ?>
 				</div>
@@ -224,6 +225,10 @@
 
 			<?php endforeach; ?>
 			</ul>
+
+			<div class="Section-featuresDescription textType-subtxt textSize-txt-xlarge text-center colorBrightest marginTop30 marginBottom30">
+				<?php echo $page->section2Text()->kirbytextSans(); ?>
+			</div>
 
 		</div>
 
