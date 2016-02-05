@@ -45,19 +45,19 @@ LocalClient.setup(localServer);
 
 const plans = stores['/plans'] = new Remutable({
 	monthly: {
-		launch: {
-			amount: 8,
+		personal: {
+			amount: 15,
 			realAmount: 15,
-			total: 8,
+			total: 15,
 			realTotal: 15,
 			recurrence: 'month',
 		},
 	},
 	annual: {
-		launch: {
-			amount: 8,
-			realAmount: 12,
-			total: 96,
+		personal: {
+			amount: 144,
+			realAmount: 144,
+			total: 144,
 			realTotal: 144,
 			recurrence: 'year',
 		}
@@ -68,26 +68,26 @@ const plansInfos = stores['/plansInfos'] = new Remutable({
 	'personal_annual_USD_taxfree': {
 		name: 'Prototypo professional annual subscription',
 		recurrence: 'year',
-		realAmount: '$96.00',
-		discount: -4800,
+		realAmount: '$144.00',
+		discount: 0,
 	},
 	'personal_annual_EUR_taxfree': {
 		name: 'Prototypo professional annual subscription',
 		recurrence: 'year',
-		realAmount: '96.00€',
-		discount: -4800,
+		realAmount: '144.00€',
+		discount: 0,
 	},
 	'personal_monthly_USD_taxfree': {
 		name: 'Prototypo professional monthly subscription',
 		recurrence: 'month',
-		realAmount: '$8.00',
-		discount: -700,
+		realAmount: '$15.00',
+		discount: 0,
 	},
 	'personal_monthly_EUR_taxfree': {
 		name: 'Prototypo professional monthly subscription',
 		recurrence: 'month',
-		realAmount: '8.00€',
-		discount: -700,
+		realAmount: '15.00€',
+		discount: 0,
 	},
 	'free_monthly_EUR_taxfree': {
 		name: 'Prototypo Free plan',
@@ -391,7 +391,7 @@ const actions = {
 
 		hoodie.stripe.customers.updateSubscription({
 			plan: userInfos.get('plan'),
-			coupon: userInfos.get('coupon'),
+			// coupon: userInfos.get('coupon'),
 		})
 		.then(() => {
 

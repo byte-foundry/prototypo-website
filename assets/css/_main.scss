@@ -668,6 +668,18 @@ header {
 	width: 100%;
 	position: relative;
 }
+
+.PricingItem-header {
+	position: relative;
+	min-height: 145px;
+
+	.totalAnnual {
+		padding-top: 1em;
+		color: $secondBackgroundColor;
+		font-size: 14px;
+	}
+}
+
 /*
 
 .PricingItem:nth-child(2) {
@@ -920,6 +932,9 @@ header {
 }
 .MembersItem-linksItem-twitter {
 	background-image: url("/assets/img/pictos/pictoSocialTwitterDark.svg");
+}
+.MembersItem-linksItem-instagram {
+	background-image: url("/assets/img/pictos/pictoSocialInstagramDark.svg");
 }
 .MembersItem-linksItem-github {
 	background-image: url("/assets/img/pictos/pictoSocialGitHubDark.svg");

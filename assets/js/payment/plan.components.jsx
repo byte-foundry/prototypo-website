@@ -88,7 +88,7 @@ export default class PlanPanel extends React.Component {
 
 		return (
 			<div className="plan-panel">
-				<ChoosePlan plans={this.state.plans} plan={this.state.plan} card={this.state.card}/>
+				<ChoosePlan plans={this.state.plans} plan="personal" card={this.state.card}/>
 				<p className="message message-error">{error}</p>
 				<button className="form-label btn-success marginTop30" onClick={() => { this.confirmPlan() }}>Checkout</button>
 			</div>
