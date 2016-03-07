@@ -89,13 +89,13 @@ class PagesController extends Controller {
 
           if($num > 0) {
             $page->sort($num);
-          } 
+          }
 
         }
 
       }
 
-      // get the blueprint of the parent page to find the 
+      // get the blueprint of the parent page to find the
       // correct sorting mode for this page
       $parentBlueprint = blueprint::find($page->parent());
 

@@ -5,6 +5,7 @@ var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
 var config = {
 	devtool: 'eval',
+	debug: true,
 	entry: {
 		bundle: [
 			'webpack-dev-server/client?http://0.0.0.0:9002', // WebpackDevServer host and port
@@ -14,7 +15,7 @@ var config = {
 		],
 	},
 	output: {
-		path: path.join(__dirname, 'assets/'),
+		path: path.join(__dirname, 'assets'),
 		publicPath: '/assets/',
 		filename: '[name].js'
 	},
@@ -27,7 +28,7 @@ var config = {
 			}
 		],
 		noParse: [
-			/(levelup|prototypo-canvas|lifespan|nexus-flux|remutable)/
+			/(levelup|prototypo.js)/
 		],
 	},
 	plugins: [

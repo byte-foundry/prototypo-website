@@ -301,7 +301,7 @@ class Str {
 
   /**
    * Checks if the given string is a URL
-   * 
+   *
    * @param string $string
    * @return boolean
    */
@@ -378,7 +378,7 @@ class Str {
    * @return string
    */
   static public function substr($str, $start, $length = null) {
-    return MB ? mb_substr($str, $start, $length == null ? static::length($str) : $length, 'UTF-8') : substr($str, $start, $length);
+    return MB ? mb_substr($str, $start, $length == null ? static::length($str) : $length, 'UTF-8') : substr($str, $start, $length == null ? static::length($str) : $length);
   }
 
   /**

@@ -180,7 +180,7 @@ abstract class PageAbstract {
 
   /**
    * Returns the full URL for the content folder
-   * 
+   *
    * @return string
    */
   public function contentUrl() {
@@ -500,7 +500,7 @@ abstract class PageAbstract {
     if(!$this->parent) {
       return null;
     } else {
-      return $this->_next($this->parent->children(), $sort, $direction, 'visible');      
+      return $this->_next($this->parent->children(), $sort, $direction, 'visible');
     }
   }
 
@@ -700,7 +700,7 @@ abstract class PageAbstract {
    *
    * @return Field
    */
-  public function title() {    
+  public function title() {
     $title = $this->content()->get('title');
     if($title != '') {
       return $title;
@@ -1128,7 +1128,7 @@ abstract class PageAbstract {
    * @param array
    */
   public function update($data = array()) {
-
+    error_log("here");
     $data = array_merge($this->content()->toArray(), $data);
 
     if(!data::write($this->textfile(), $data, 'kd')) {
@@ -1267,9 +1267,9 @@ abstract class PageAbstract {
   }
 
   /**
-   * Converts the entire page object into 
+   * Converts the entire page object into
    * a plain PHP array
-   * 
+   *
    * @param closure $callback Filter callback
    * @return array
    */
@@ -1306,9 +1306,9 @@ abstract class PageAbstract {
   }
 
   /**
-   * Converts the entire page array into 
+   * Converts the entire page array into
    * a json string
-   * 
+   *
    * @param closure $callback Filter callback
    * @return string
    */
