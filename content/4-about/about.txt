@@ -50,10 +50,22 @@ Members:
   membervimeo:
   memberphoto: jbl_slanted_.jpg
 - 
+  membername: Yann Guillet
+  memberjob: Marketing Director
+  memberdescription: "Yann is a google adword guru. Raising the revenue of a health supply ecommerce , through sweat and modeling hazmat suits photoshoot, from 300K€ to 1M€ in 3 years. He is the missing link between us and Prototypo's success. Using the latest technology available to marketeers and commerce oriented commando squad he makes sure our customers are satisfied and happy."
+  memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=kinder%20bueno'
+  memberfacebook: https://www.facebook.com/yannguill
+  membergithub: https://github.com/yannPrototypo
+  membertwitter: https://twitter.com/yannus10
+  memberwebsite:
+  membermail: mailto:yann@prototypo.io
+  membervimeo:
+  memberphoto: yann.jpg
+- 
   membername: François Poizat
   memberjob: Developer
   memberdescription: |
-    François is the hidden twin brother of Wikipedia: he knows everything about everything, or at least he knows just enough to convince his teammates that he does. A question about the Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. Since he got his engineer degree at INSA, he has been involved in many research projects in France and Japan. 
+    François is the hidden twin brother of Wikipedia: he knows everything about everything, or at least he knows just enough to convince his teammates that he does. A question about Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. Since he got his engineer degree at INSA, he has been involved in many research projects in France and Japan.
     Ohayō François!
   memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&tbm=vid&q=falcon+melee+tournament'
   memberfacebook: >
@@ -64,26 +76,6 @@ Members:
   membermail: mailto:contact@prototypo.io
   membervimeo:
   memberphoto: franzp.jpg
-- 
-  membername: Antoine Heber-Suffrin
-  memberjob: Head of marketing
-  memberdescription: >
-    Antoine is passionate about bringing
-    digital products and business to market.
-    A 3-times entrepreneur, he acquired the
-    skills needed to market digital products
-    at Google in Paris and, since 2013, in
-    Silicon Valley start ups. He joined the
-    Prototypo team in 2015 to help launch
-    the product and develop the business.
-  memberquery:
-  memberfacebook:
-  membergithub:
-  membertwitter: https://twitter.com/ahebersuffrin
-  memberwebsite: https://www.linkedin.com/in/antoinehs
-  membermail: mailto:antoine@prototypo.io
-  membervimeo:
-  memberphoto: antoinehsleweb.jpg
 - 
   membername: MJ
   memberjob: Community manager

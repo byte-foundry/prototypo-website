@@ -21,7 +21,7 @@ module.exports = {
 				]
 			}
 		],
-		noParse:/(levelup|prototypo-canvas|lifespan|nexus-flux|remutable)/
+		noParse:/(levelup|prototypo-canvas)/
 	},
 	resolve: {
 		extensions: ['','.js', '.jsx']
