@@ -146,6 +146,10 @@ gulp.task('build:static', ['build:server'], function(done) {
                     '--recursive --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
             ]))
             .pipe(shell([
+                'wget http://localhost:' + buildPort + '/googlefe2ce91b44ba9af0.html ' +
+                    '--recursive --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
+            ]))
+            .pipe(shell([
                 'wget http://localhost:' + buildPort + '/404 ' +
                     '--content-on-error --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
                 // kill php server
