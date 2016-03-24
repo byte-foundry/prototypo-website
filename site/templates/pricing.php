@@ -90,14 +90,17 @@
 						</div>
 
 						<div class="PricingItem-getStarted">
-                            <?php
-                                if( $pack['packname'] === 'Want more?') {
-                                    echo '<a href="mailto:contact@prototypo.io" class="callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
-                                }
-                                else {
-        							echo '<a href="/pricing/subscribe#/signup" name="' . $pack['packname'] . '" class="choose-plan subscribe-page billing callToAction ' . $state . '">' . $pack['packbuttonlabel'] . '</a>';
-                                }
-                            ?>
+							<?php
+								$subdomain = c::get('env') === 'dev' ? 'dev' : 'app';
+								$hash = $pack['packname'] === 'free' ? '/signup' : '/account/create';
+
+								if( $pack['packname'] === 'Want more?') {
+									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction {$state}\">{$pack['packbuttonlabel']}</a>";
+								}
+								else {
+									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction {$state}\">{$pack['packbuttonlabel']}</a>";
+								}
+							?>
 						</div>
 					</div>
 				</div>

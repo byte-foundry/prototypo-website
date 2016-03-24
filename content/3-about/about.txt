@@ -1,0 +1,114 @@
+Title: About us
+
+----
+
+Section1title: About us
+
+----
+
+Section1subtitle: Everything you need to know about the Prototypo team
+
+----
+
+Members: 
+
+- 
+  membername: Yannick Mathey
+  memberjob: Co-founder, art director
+  memberdescription: 'YM is specialist in nothing and curious about everything. It was during his last year of studies at ESAD Strasbourg that he discovered his passion for type design. His final year of studies gave him a year of "free time" to learn the basics of letters & code, and develop the alpha version of prototypo with <a href="https://processing.org" target="_blank" class="colorDarkest ">Processing</a>.'
+  memberquery: 'https://www.google.fr/search?safe=off&site=&tbm=isch&source=hp&biw=1629&bih=1271&q=cheese&oq=cheese&gs_l=img.3..0l10.1905.2702.0.5822.6.5.0.1.1.0.143.427.4j1.5.0....0...1ac.1.29.img..1.5.334.5X3spjq-vfg'
+  memberfacebook: >
+    https://www.facebook.com/yannick.mathey.9
+  membergithub: https://github.com/yannickmathey
+  membertwitter: https://twitter.com/_____________y
+  memberwebsite: http://yannickmathey.com/
+  membermail: mailto:yannick@prototypo.io
+  membervimeo:
+  memberphoto: ym-300x196.jpg
+- 
+  membername: Louis-Rémi Babé
+  memberjob: Co-founder, lead developer
+  memberdescription: "LRB 's passion is to create websites and web-apps. He fell in love with JS in 2004 and has contributed patches and features to jQuery 1.X (if you have browsed the web in the past 9 years, you've used some code he wrote). He's an active mozillian since 2009 and was an intern at Mozilla Paris in 2011. He's helped start a local JS meetup: lyonJS."
+  memberquery: 'https://www.google.fr/search?q=flan+de+courge&tbm=isch'
+  memberfacebook: https://www.facebook.com/lrbabe
+  membergithub: https://github.com/louisremi/
+  membertwitter: http://twitter.com/louis_remi
+  memberwebsite: http://louisremi.com/
+  membermail: mailto:louisremi@prototypo.io
+  membervimeo:
+  memberphoto: lrb-300x197.jpg
+- 
+  membername: Jean-Baptiste Levée
+  memberjob: Associate type advisor
+  memberdescription: 'Jean-Baptiste Levée runs the digital type foundry Production Type. As a typeface designer he has designed over a hundred typefaces for industry, moving pictures, fashion and publishing. His work has won multiple awards and has been shown internationally in group and solo shows, and is featured in the permanent collections of the French national library (BnF) and the National Center of arts (Cnap); of the Newberry Library in Chicago, and several printing museums in Europe. He is also a board member at ATypI (Association Typographique Internationale). Levée curates exhibitions on typeface design, organizes research symposiums and teaches typeface design at the Amiens school of Arts & Design.'
+  memberquery:
+  memberfacebook: https://www.facebook.com/productiontype
+  membergithub:
+  membertwitter: https://twitter.com/productiontype
+  memberwebsite: https://www.productiontype.com/
+  membermail: mailto:jeanbaptiste@prototypo.io
+  membervimeo:
+  memberphoto: jbl_slanted_.jpg
+- 
+  membername: Yann Guillet
+  memberjob: Marketing Director
+  memberdescription: "Yann is a google adword guru. Raising the revenue of a health supply ecommerce , through sweat and modeling hazmat suits photoshoot, from 300K€ to 1M€ in 3 years. He is the missing link between us and Prototypo's success. Using the latest technology available to marketeers and commerce oriented commando squad he makes sure our customers are satisfied and happy."
+  memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=kinder%20bueno'
+  memberfacebook: https://www.facebook.com/yannguill
+  membergithub: https://github.com/yannPrototypo
+  membertwitter: https://twitter.com/yannus10
+  memberwebsite:
+  membermail: mailto:yann@prototypo.io
+  membervimeo:
+  memberphoto: yann.jpg
+- 
+  membername: François Poizat
+  memberjob: Developer
+  memberdescription: |
+    François is the hidden twin brother of Wikipedia: he knows everything about everything, or at least he knows just enough to convince his teammates that he does. A question about Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. Since he got his engineer degree at INSA, he has been involved in many research projects in France and Japan.
+    Ohayō François!
+  memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#safe=off&tbm=vid&q=falcon+melee+tournament'
+  memberfacebook: >
+    https://www.facebook.com/francois.poizat?fref=ts
+  membergithub: https://github.com/FranzPoize
+  membertwitter: https://twitter.com/FranzP
+  memberwebsite:
+  membermail: mailto:contact@prototypo.io
+  membervimeo:
+  memberphoto: franzp.jpg
+- 
+  membername: MJ
+  memberjob: Community manager
+  memberdescription: "MJ is my name, and I've been kind enough to accept the role of author on this blog and community manager for Prototypo. You have to excuse my English because I'm just a cat, and keyboards aren't really meant for paws. When I'm not tweeting, I enjoy chasing mouse cursors, chewing headphone cables, making a mess in YM's houseplants, causing LRB to sneeze, and sleeping on people's lap without their consent."
+  memberquery: 'https://www.google.fr/search?q=lizard+sushi&tbm=isch'
+  memberfacebook: http://facebook.com/prototypoApp
+  membergithub:
+  membertwitter: http://twitter.com/prototypoApp
+  memberwebsite: http://blog.prototypo.io/
+  membermail: mailto:contact@prototypo.io
+  membervimeo: https://vimeo.com/user4849193
+  memberphoto: mj.jpg
+
+----
+
+Section1txt: Prototypo is a user-friendly parameter-based font generator being built by a team of fiery font and code lovers. You can learn more about the project on its (link: http://prototypo.io/ text: home page) or (email: contact@prototypo.io text: contact us at contact@prototypo.io).
+
+----
+
+Section1txtafter: 
+
+----
+
+Backerstitle: …and we're 1 670 more in the team!
+
+----
+
+Backerssubtitle: Check our awesome backers!
+
+----
+
+Ogdescription: Prototypo is a user-friendly parameter-based font generator being built by a team of fiery font and code lovers. Meet the people behind the tool.
+
+----
+
+Ogimage: /content/4-about/about-screenshot.png

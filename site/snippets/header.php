@@ -85,8 +85,22 @@
 			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
 		</a>
 
-		<div id="header-container" class="right"></div>
-      <?php snippet('menu') ?>
+        <div id="header-container" class="right">
+            <div class="header">
+                <div class="header-window">
+                    <div class="header-part">
+                        <div>
+                            <a class="login" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signin" target="_blank" >Log in</a>
+                        </div>
+                        <div>
+                            <a class="callToAction header-part-button" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signup" target="_blank" >Create your first font!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php snippet('menu') ?>
 
   		<div class="Social hide-for-small-only">
   			<a href="<?php echo $site->facebook()->html() ?>" target="_blank" class="Social-item Social-itemFacebook">

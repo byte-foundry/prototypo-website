@@ -6,9 +6,9 @@ Subtitle: Monthly subscriptions are without commitment!
 
 ----
 
-Packs: 
+Packs:
 
-- 
+-
   packname: free
   packpricettc: 0
   packprice2ttc: 0
@@ -19,7 +19,7 @@ Packs:
   packservices2:
   packstate: available
   packbuttonlabel: Get started!
-- 
+-
   packname: Professional
   packpricettc: 15
   packprice2ttc: 12
@@ -27,11 +27,11 @@ Packs:
   packservices: |
     Unlimited fonts
     All parameters
-    Fifteen projects
+    Five projects
   packservices2:
   packstate: available
   packbuttonlabel: Get started!
-- 
+-
   packname: agency
   packpricettc: 59
   packprice2ttc: 48
@@ -41,7 +41,7 @@ Packs:
   packservices2: Up to 5 users
   packstate: notavailable
   packbuttonlabel: Get started!
-- 
+-
   packname: Want more?
   packpricettc:
   packprice2ttc:
@@ -72,4 +72,4 @@ Description: Get 2 months free by choosing annual billing!
 
 ----
 
-Maintitle: Feel free to test,
+Maintitle: Try it for free or go pro!

@@ -13,14 +13,13 @@
 			<a class="Footer-socialItem Footer-socialItem-Instagram" target="_blank" href="<?php echo $site->instagram()->html() ?>"></a>
             <a class="Footer-socialItem Footer-socialItem-Twitter" target="_blank" href="<?php echo $site->twitter()->html() ?>"></a>
 		</div>
-		<a style="display:none;" href="/account">account</a>
+		<a style="display:none;" href="/blog">blog</a>
+        <a style="display:none;" href="/cgu">cgu</a>
 
     </footer>
 </main>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <?php snippet( c::get('env') . '/scripts' ); ?>
-
-<script type="text/javascript" src="https://api.taxamo.com/js/v1/taxamo.all.nojquery.js"></script>
 
 <script type="text/javascript">
    adroll_adv_id = "TTP725TQI5FEZIX2X4TIUJ";
