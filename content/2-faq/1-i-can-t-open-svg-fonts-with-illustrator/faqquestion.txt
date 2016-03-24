@@ -1,9 +1,0 @@
-Title: I can't open .svg fonts with illustrator.
-
-----
-
-Tags: 
-
-----
-
-Answer: Illustrator can open .svg illustrations, not fonts. Use instead a type design application (Glyphr is an open-source web-app, give it a try!)
