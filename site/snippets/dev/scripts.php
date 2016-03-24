@@ -1,6 +1,4 @@
 <!-- build:js /assets/scripts.min.js -->
-<script src="/assets/js/hoodie.js"></script>
-<script src="/assets/js/hoodie.stripe.js"></script>
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/prototypo.js"></script>
 <script src="/assets/js/prototypo-canvas.js"></script>
@@ -10,11 +8,4 @@
 
 <script src="/assets/js/demo.js"></script>
 <script src="/assets/js/faq.js"></script>
-<script src="/assets/js/subscribe.js"></script>
-<script src="/assets/js/account.js"></script>
-<script src="/assets/js/moment.min.js"></script>
 <!-- endbuild -->
-<!-- build:remove -->
-<script src="/dll/libs.dll.js"></script>
-<!-- endbuild -->
-<script src="/assets/bundle.js"></script>

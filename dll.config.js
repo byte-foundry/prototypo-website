@@ -7,7 +7,6 @@ module.exports = {
 		libs: [
 			'react',
 			'moment',
-			'babel-polyfill',
 			'lifespan',
 			'nexus-flux',
 			'remutable',

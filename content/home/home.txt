@@ -1,18 +1,18 @@
-Title: Prototypo
+Title: Create your own font in 5 minutes
 
 ----
 
-Infobox1: 
+Infobox1:
 
 Customize more
 than twenty parameters…
 
 ----
 
-Infobox2: 
+Infobox2:
 
 …see your own
-font take shape 
+font take shape
 in real time!
 
 ----
@@ -21,7 +21,7 @@ Textlineunderdemo: <a href="https://vimeo.com/86406495" style="color: white" tar
 
 ----
 
-Getstartedtagline: Streamlining font creation
+Getstartedtagline: Create your own font in a few clicks
 
 ----
 
@@ -29,11 +29,11 @@ Getstartedbuttonlabel: Get started
 
 ----
 
-Section1title: A parametric type design tool
+Section1title: Three parametric typefaces to start with
 
 ----
 
-Section1subtitle: Two parametric typefaces to start with
+Section1subtitle: And an infinite number of variations
 
 ----
 
@@ -41,32 +41,30 @@ Section1txt: Fonts powered by (link: https://productiontype.com text: Production
 
 ----
 
-Fonts: 
+Fonts:
 
-- 
+-
   fontfile: venus-preview.svg
   fontname: Prototypo Grotesk
   fontdescription: >
-    A perfect sans serif, with infinite
-    variations.
+    The sans serif that makes sens.
   fontstring: G2
   fontsize: 100
   fontlineheight: 120
-- 
+-
   fontfile: john-fell-preview.svg
-  fontname: Prototypo John Fell
+  fontname: Prototypo Fell
   fontdescription: >
-    An Elzevir as we all like it, move it,
-    move it.
+    Classical serif font for classy designs.
   fontstring: Qn
   fontsize: 14
   fontlineheight: 120
-- 
-  fontfile: dunno-preview.png
-  fontname: And more to come!
+-
+  fontfile: elzevir-preview.svg
+  fontname: Prototypo Elzevir
   fontdescription: >
-    More styles will be added in future
-    versions.
+    An Elzevir as we all like it, move it,
+    move it.
   fontstring: Abc
   fontsize: 100
   fontlineheight: 150
@@ -77,33 +75,33 @@ Downloadbuttonlabel: Download this font!
 
 ----
 
-Section2title: Upcoming features
+Section2title: Product Features
 
 ----
 
-Section2subtitle: We're hard at work, improving the app!
+Section2subtitle: This, that, and much more.
 
 ----
 
-Features: 
+Features:
 
-- 
+-
   featureimg: pictofeaturescharactersset.svg
   featurename: Characters set
   featuredescription: >
     Works with a basic Latin character set.
     Includes uppercase, lowercase,
     smallcaps, figures and punctuation!
-- 
+-
   featureimg: pictofeaturesexportfonts.svg
   featurename: Export fonts
   featuredescription: 'Once your design is ok, you can export all font format you need to use your fonts offline & online.'
-- 
+-
   featureimg: pictofeaturessplitviews.svg
   featurename: Split views
   featuredescription: 'Improve your design process with severals views: glyph, words, paragraphs, and watch changes in real time.'
   featuredone: 'true'
-- 
+-
   featureimg: pictofeaturesfontmanager.svg
   featurename: Font manager
   featuredescription: >
@@ -111,7 +109,7 @@ Features:
     Define variants of a master typeface, or
     branch it in sub-projects!
   featuredone: 'true'
-- 
+-
   featureimg: pictofeaturesswitchalternates.svg
   featurename: Switch alternates
   featuredescription: >
@@ -119,7 +117,7 @@ Features:
     more alternates to define the perfect
     shape to fit your custom design.
   featuredone: 'true'
-- 
+-
   featureimg: pictofeaturesindiv.svg
   featurename: Individualize parameters
   featuredescription: >
@@ -130,11 +128,11 @@ Features:
 
 ----
 
-Section3title: We've just released the official Beta!
+Section3title: The application is constantly improving!
 
 ----
 
-Section3subtitle: Subscribe to our newsletter for more news about the V1.0
+Section3subtitle: Don't miss out on news, features and special offers. Subscribe to our newsletter!
 
 ----
 
@@ -154,33 +152,33 @@ Section4title: They talk about us!
 
 ----
 
-Section4subtitle: 
+Section4subtitle:
 
 ----
 
-Theytalkaboutus: 
+Theytalkaboutus:
 
-- 
+-
   ttauimg: gray-mashable.png
   ttauname: Mashable
   ttauurl: >
     http://mashable.com/2014/05/04/prototypo-fonts/
-- 
+-
   ttauimg: gray-wired.png
   ttauname: WIRED
   ttauurl: >
     http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
-- 
+-
   ttauimg: gray-linuxfr.png
   ttauname: LinuxFR
   ttauurl: >
     http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
-- 
+-
   ttauimg: gray-framasoft.png
   ttauname: Framasoft
   ttauurl: >
     http://framablog.org/2014/04/22/prototypo-vos-polices-sur-mesure/
-- 
+-
   ttauimg: gray-creapills.png
   ttauname: Creapills
   ttauurl: >
@@ -208,4 +206,4 @@ Ogimage: /content/home/home-screenshot.png
 
 ----
 
-Section2text: We work on more advanced great features, like spacing/kerning, live preview on your website, cyrillic and more!
+Section2text: We're working on advanced features such as spacing/kerning, live preview on your website, cyrillic and more!

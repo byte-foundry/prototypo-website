@@ -10,9 +10,9 @@ Section1subtitle: Everything you need to know about the Prototypo team
 
 ----
 
-Members: 
+Members:
 
-- 
+-
   membername: Yannick Mathey
   memberjob: Co-founder, art director
   memberdescription: 'YM is specialist in nothing and curious about everything. It was during his last year of studies at ESAD Strasbourg that he discovered his passion for type design. His final year of studies gave him a year of "free time" to learn the basics of letters & code, and develop the alpha version of prototypo with <a href="https://processing.org" target="_blank" class="colorDarkest ">Processing</a>.'
@@ -25,7 +25,7 @@ Members:
   membermail: mailto:yannick@prototypo.io
   membervimeo:
   memberphoto: ym-300x196.jpg
-- 
+-
   membername: Louis-Rémi Babé
   memberjob: Co-founder, lead developer
   memberdescription: "LRB 's passion is to create websites and web-apps. He fell in love with JS in 2004 and has contributed patches and features to jQuery 1.X (if you have browsed the web in the past 9 years, you've used some code he wrote). He's an active mozillian since 2009 and was an intern at Mozilla Paris in 2011. He's helped start a local JS meetup: lyonJS."
@@ -37,7 +37,7 @@ Members:
   membermail: mailto:louisremi@prototypo.io
   membervimeo:
   memberphoto: lrb-300x197.jpg
-- 
+-
   membername: Jean-Baptiste Levée
   memberjob: Associate type advisor
   memberdescription: 'Jean-Baptiste Levée runs the digital type foundry Production Type. As a typeface designer he has designed over a hundred typefaces for industry, moving pictures, fashion and publishing. His work has won multiple awards and has been shown internationally in group and solo shows, and is featured in the permanent collections of the French national library (BnF) and the National Center of arts (Cnap); of the Newberry Library in Chicago, and several printing museums in Europe. He is also a board member at ATypI (Association Typographique Internationale). Levée curates exhibitions on typeface design, organizes research symposiums and teaches typeface design at the Amiens school of Arts & Design.'
@@ -49,7 +49,7 @@ Members:
   membermail: mailto:jeanbaptiste@prototypo.io
   membervimeo:
   memberphoto: jbl_slanted_.jpg
-- 
+-
   membername: Yann Guillet
   memberjob: Marketing Director
   memberdescription: "Yann is a google adword guru. Raising the revenue of a health supply ecommerce , through sweat and modeling hazmat suits photoshoot, from 300K€ to 1M€ in 3 years. He is the missing link between us and Prototypo's success. Using the latest technology available to marketeers and commerce oriented commando squad he makes sure our customers are satisfied and happy."
@@ -61,7 +61,7 @@ Members:
   membermail: mailto:yann@prototypo.io
   membervimeo:
   memberphoto: yann.jpg
-- 
+-
   membername: François Poizat
   memberjob: Developer
   memberdescription: |
@@ -76,7 +76,7 @@ Members:
   membermail: mailto:contact@prototypo.io
   membervimeo:
   memberphoto: franzp.jpg
-- 
+-
   membername: MJ
   memberjob: Community manager
   memberdescription: "MJ is my name, and I've been kind enough to accept the role of author on this blog and community manager for Prototypo. You have to excuse my English because I'm just a cat, and keyboards aren't really meant for paws. When I'm not tweeting, I enjoy chasing mouse cursors, chewing headphone cables, making a mess in YM's houseplants, causing LRB to sneeze, and sleeping on people's lap without their consent."
@@ -95,7 +95,7 @@ Section1txt: Prototypo is a user-friendly parameter-based font generator being b
 
 ----
 
-Section1txtafter: 
+Section1txtafter:
 
 ----
 
@@ -111,4 +111,4 @@ Ogdescription: Prototypo is a user-friendly parameter-based font generator being
 
 ----
 
-Ogimage: /content/4-about/about-screenshot.png
+Ogimage: /content/3-about/about-screenshot.png

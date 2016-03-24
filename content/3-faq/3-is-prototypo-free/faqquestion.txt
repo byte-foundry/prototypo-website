@@ -1,9 +1,0 @@
-Title: Is Prototypo free?
-
-----
-
-Tags: 
-
-----
-
-Answer: All of prototypo's core is open-source, on our (link: https://github.com/byte-foundry/prototypo text: github) and will stay there. You can download it and launch Prototypo with some command lines. If you don't know how to use a terminal, we will propose to use our servers with subscriptions.

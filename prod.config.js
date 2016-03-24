@@ -3,6 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
 	cache: true,
+debug:true,
 	entry: [
 		'./assets/js/app.jsx',
 	],

@@ -7,7 +7,7 @@
 		<div class="Section-homepageWrap">
 
 			<div class="Section-homepageGetStartedLine text-center marginBottom30">
-				<h1 class="Section-homepageGetStartedLineTitle colorWhite marginBottom30"><?php echo $page->title()->kirbytextSans(); ?></h1>
+				<h1 class="Section-homepageGetStartedLineTitle colorWhite marginBottom30">Prototypo</h1>
 				<h3 class="Section-homepageGetStartedLineSubtitle colorBrightest marginBottom30"><?php echo $page->getStartedTagline()->kirbytextSans(); ?></h3>
 			</div>
 

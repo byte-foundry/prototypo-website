@@ -32,7 +32,7 @@ fields:
     type:  text
     width: 2/4
     placeholder: eg. Streamlining font creation
-    default: Streamlining font creation
+    default: Create your own font in 5 min
 
   getStartedButtonLabel:
     label: Label of the button

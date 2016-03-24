@@ -93,7 +93,11 @@ data::$adapters['kd'] = array(
 
     $result = array();
     foreach($data AS $key => $value) {
-      $key = str::ucfirst(str::slug($key));
+      error_log($key);
+      $key = str::slug($key);
+      error_log($key);
+      $key = str::ucfirst($key);
+      error_log($key);
       if(empty($key) or is_null($value)) continue;
       // escape accidental dividers within a field
       $value = preg_replace('!\n----(.*?\R*)!', "\n ----$1", $value);
@@ -103,7 +107,7 @@ data::$adapters['kd'] = array(
         $result[$key] = $key . ": \n\n" . trim($value);
       // single-line content
       } else {
-        $result[$key] = $key . ': ' . trim($value);        
+        $result[$key] = $key . ': ' . trim($value);
       }
 
     }
