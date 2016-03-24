@@ -10,7 +10,7 @@ Section1subtitle: Stay tuned!
 
 ----
 
-Section1txt: 
+Section1txt:
 
 ----
 
@@ -18,4 +18,4 @@ Ogdescription: We regularly write articles about the improvements we make to Pro
 
 ----
 
-Ogimage: /content/1-blog/blog-screenshot.png
+Ogimage: /content/blog/blog-screenshot.png
