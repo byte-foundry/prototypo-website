@@ -15,7 +15,9 @@
 	</div>
 	<div class="fitToContent">
 
-
+		<h3 class="txt-promo Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+			<?php echo $page->descriptionPromo(); ?>
+		</h3>
 
 		<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4 PricingTable marginTop60">
 			<?php
@@ -44,14 +46,14 @@
 
 									<span class="PricingItem-price textSize-title-xlarge">
 
-										<?php if (isset( $pack['packpricelaunch'] ) && $pack['packpricelaunch'] != '' ): ?>
+										<?php if (isset( $pack['packpricepromomonthly'] ) && $pack['packpricepromomonthly'] != '' ): ?>
 
 											<div class="js_price">
 												<?php
 												echo '<span class="solded">' . $pack['packprice2ttc'] . '</span>';
-												echo $pack['packpricelaunch'].'<br/>';
+												echo $pack['packpricepromoannual'].'<br/>';
 												echo '<span class="solded solded-year">' . $pack['packpricettc'] . '</span>';
-												echo $pack['packpricelaunch'];
+												echo $pack['packpricepromomonthly'];
 												?>
 											</div>
 
@@ -62,7 +64,6 @@
 												<?php echo $pack['packprice2ttc']; ?><br />
 												<!-- YEAR  -->
 												<?php echo $pack['packpricettc']; ?>
-
 											</div>
 
 								<?php endif; ?>
