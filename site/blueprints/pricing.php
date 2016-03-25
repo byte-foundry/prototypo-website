@@ -36,6 +36,10 @@ fields:
       label: Image header
       options: files
 
+  descriptionPromo:
+      label: message promo
+      type:  textarea
+
   description:
     label: description of the page
     type:  textarea
@@ -64,10 +68,14 @@ fields:
         type: text
         label: Pack price (annual) TTC
         placeholder: Price/mo (annual)
-      packpricelaunch:
+      packpricepromomonthly:
         type: text
-        label: Pack price launch TTC
+        label: Pack price Promo TTC
         placeholder: Price/mo (monthly)
+      packpricepromoannual:
+        type: text
+        label: Pack price Promo TTC
+        placeholder: Price/mo (annual)
       packservices:
         type: textarea
         label: Pack service
