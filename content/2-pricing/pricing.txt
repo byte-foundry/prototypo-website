@@ -77,4 +77,4 @@ Maintitle: Try it for free or go pro!
 
 ----
 
-Descriptionpromo: <b>30% off</b> on prices below until April the 3rd!
+Descriptionpromo: 
