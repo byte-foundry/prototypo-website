@@ -9,8 +9,9 @@ password: >
 language: en
 role: admin
 history:
+  - >
+    blog/point-break-point-prototypos-workshop-at-mirage-festival
+  - blog
   - pricing
   - home
   - about
-  - press
-  - cgu/charte-de-confidentialite

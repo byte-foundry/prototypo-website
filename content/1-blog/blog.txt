@@ -10,7 +10,7 @@ Section1subtitle: Stay tuned!
 
 ----
 
-Section1txt:
+Section1txt: 
 
 ----
 
