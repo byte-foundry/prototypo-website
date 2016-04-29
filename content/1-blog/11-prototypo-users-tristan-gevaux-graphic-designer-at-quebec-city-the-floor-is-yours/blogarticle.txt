@@ -1,0 +1,49 @@
+Title: Prototypo users: Tristan Gevaux (Graphic Designer at Quebec City). The floor is yours!
+
+----
+
+Ogdescription: We talked about graphic design, font creation and Prototypo with Tristan Gevaux, a graphic designer from Quebec City.
+
+----
+
+Ogimage: 
+
+----
+
+Tags: interview,user,graphic design,font design
+
+----
+
+Date: 2016-04-29
+
+----
+
+Subtitle: We talked about graphic design, font creation and Prototypo with Tristan Gevaux a graphic designer from Quebec City
+
+----
+
+Contentarticle: 
+
+(image: tristangevaux-1.jpg)
+<span style="font-weight: bold">Prototypo: Hi Tristan, can you introduce yourself?</span><br><span style="font-weight: bold">Tristan Gevaux:</span> Tristan Gevaux, I’m a graphic designer in Quebec City. I work for an advertising agency and I also undertake projects as a freelancer. Basically, I’m not a font designer but a print/branding designer. Since I’m in Quebec I work more on web design and user interface.
+<span style="font-weight: bold">What’s your career path?</span><br>I studied design in France at Intuit Lab Aix en Provence. After my degree, I left France for Quebec. It’s easier here to get a first job and there is a craze for design here. The work is of high quality in Quebec.
+<span style="font-weight: bold">Why did you want to create a font?</span><br>At the begining I didn’t have a font project. I discovered Prototypo through the Kickstarter campaign and I was thrilled with the video presentation. I followed the evolution of the project and upon its release, I wanted to try it. For the moment I’ve created fonts for personnal projects but I will need it in my future job. Leading a branding project with a customized font is a short term goal for me.
+>Prototypo will democratize type design
+
+<span style="font-weight: bold">Have you already made a complete font with Prototypo?</span><br>Yes, several but only one that I’ve truly liked. I may be too critical with my work but it’s probably a common trait to all designers. I recently tried the new Elzevir wich is really accomplished. Otherwise, I have used a font created with Prototypo as part of a project for a group of photographers.
+<span style="font-weight: bold">What has been your creative process?</span><br>First, I tried many things, played with the serifs and the x height, doing things by feeling. I wanted to test the app based on what I like, so I tried to reproduce character styles that I love and that I use frequently. I played a lot with Prototypo Grotesk. As soon as I came to something that satisfied me, I edited it in other programs. Then I did a little artwork to see the rendering.
+<span style="font-weight: bold">For the moment it’s recommended to use other tools to tweak the font after export, but the goal is to adjust the skeleton in Prototypo.</span><br>I was wondering if you planned to work on it, because for me that’s what will make the difference with other tools. As it is now, Prototypo makes it easy to create posters, refine texts. For a whole typography project, I expect some extra features. In the future, I imagine using Prototypo for projects in the cultural world. Something in which I’ll have more freedom to express myself through the application.
+>A huge time saver for graphic designers
+
+<span style="font-weight: bold">What is the strength of Prototypo?</span><br>For me this will democratize type design and give more freedom to the designers in their creations. We are not all able to invest $500 in a single font. Prototypo allows us to make a font by ourselves. Thanks to the WYSIWYG interface we have a real control on our creation. It allows me to work on something that’s normally only accessible to people who have an expert knowledge in this. Most design schools don't turn you into a professional type designer. If you want to go further in this domain, you have to specialize, to do internships. Prototypo will not turn me into a professional type designer, but its big advantage is to democratize typography. Prototypo can also be a huge time saver for type designers.
+(image: img_6907.jpg)
+
+<span style="font-weight: bold">We want Prototypo to be a gateway to the type design world, and encourage people to make their first steps in this field.</span><br>Prototypo would have its place in schools, it can be a great tool for students. Currently, it makes me want to experience things in typography. When we will be able to play with Bezier curves, Prototypo will be more complete. We will not have to use expensive and complex software. The individualized glyphs feature is already a real plus, and a step in the right direction, we can fix any defects glyph by glyph.
+> Prototypo would have its place in schools
+
+<span style="font-weight: bold">Except Bezier curves that we just mentioned, is there any other feature that you would like to see in Prototypo?</span><br>The ability to preview the font in its final context. A web page generator for example, where we can see a live preview of the font that we’re customizing.
+<span style="font-weight: bold">This is actually a feaure under development. You’ll soon be able to apply your changes in Prototypo by selecting areas of the website via CSS selectors.</span><br>The view in a website will be a real plus for web designers. For the moment you have a preview in the app, but you just realise what you’ve done when you export your font. A concrete preview will be a big step!
+**Have a look at (link: http://tristangevaux.com/ text: Tristan’s portfolio)** <a href="http://tristangevaux.com/" style="background: none">(image:tristan-folio.jpg)</a>
+
+<blockquote class="twitter-tweet" data-lang="en" style="text-align: center"><p lang="en" dir="ltr">Check out this video <a href="https://t.co/65Ac34GGF2">https://t.co/65Ac34GGF2</a><br>The web synchronization is coming soon!<a href="https://twitter.com/hashtag/webdesign?src=hash">#webdesign</a> <a href="https://twitter.com/hashtag/typography?src=hash">#typography</a> <a href="https://twitter.com/hashtag/css?src=hash">#css</a></p>— Prototypo (@prototypoApp) <a href="https://twitter.com/prototypoApp/status/725005353604149248">April 26, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

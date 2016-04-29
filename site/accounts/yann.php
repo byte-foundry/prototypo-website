@@ -9,5 +9,7 @@ password: >
 language: fr
 role: admin
 history:
+  - >
+    blog/user-interview-tristan-gevaux-graphic-designer
   - about
   - faq
