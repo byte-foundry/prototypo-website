@@ -1038,6 +1038,28 @@ header {
 	padding: 85px 60px;
 	position: relative;
 	clear: both;
+
+	blockquote p {
+
+		position: relative;
+		padding-left: 2.5em;
+		font-size: 1.1em;
+		font-style: italic;
+		color: $secondBackgroundColor;
+
+		&:before {
+			content: "“";
+			font-size: 6em;
+			position: absolute;
+			top: -0.5em;
+			left: -0.15em;
+			color: lighten($secondBackgroundColor, 10%);
+		}
+	}
+
+	strong {
+		font-weight: bold;
+	}
 }
 .Article-content:before {
 	content: "";
