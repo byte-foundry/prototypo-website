@@ -7,27 +7,31 @@
 				<h1 class="textType-title textSize-title-large colorWhite">
 					<?php echo $page->mainTitle()->kirbytextSans(); ?>
 				</h1>
-				<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
-					<?php echo $page->subtitle()->kirbytextSans(); ?>
-				</h3>
+
+				<?php if($page->subtitle()->kirbytextSans()->isNotEmpty()): ?>
+					<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+						<?php echo $page->subtitle()->kirbytextSans(); ?>
+					</h3>
+				<?php endif ?>
+
 			</header>
 		</div>
 	</div>
 	<div class="fitToContent">
 
-		<h3 class="txt-promo Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
-			<?php echo $page->descriptionPromo(); ?>
-		</h3>
+		<?php if($page->descriptionPromo()->isNotEmpty()): ?>
+			<h3 class="txt-promo Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+				<?php echo $page->descriptionPromo(); ?>
+			</h3>
+		<?php endif ?>
 
 		<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4 PricingTable marginTop60">
 			<?php
 				$packs = yaml($page->packs());
-
 				foreach($packs as $id => $pack):
-					$state = ($pack['packstate'] == 'notavailable') ? 'plan-disabled' : '';
 			?>
 			<li class="PricingItem">
-				<div class="PricingItem-wrap <?php echo $state; ?>">
+				<div class="PricingItem-wrap">
 
 					<div class="PricingItem-header">
 
@@ -35,74 +39,63 @@
 							<?php echo $pack['packname']; ?>
 						</h3>
 
-						<h3 class="PricingItem-title textType-txt textSize-title-small
-						<?php
-							if ($state == 'disabled') echo 'colorGray';
-							else echo 'colorSecondBackgroundColor'; ?>">
-								<?php if ($pack['packpricettc'] === ''): ?>
+						<h3 class="PricingItem-title textType-txt textSize-title-small colorSecondBackgroundColor">
+							<?php if ($pack['price'] === ''): ?>
 								<img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
 							<?php else: ?>
 									<span class="PricingItem-priceBefore textSize-txt-large">€/$</span>
 
 									<span class="PricingItem-price textSize-title-xlarge">
+										<?php
+											if (isset( $pack['promo'] ) && $pack['promo'] != '' ):
+												echo '<span class="solded">' . $pack['price'] . '</span>';
+												echo $pack['promo'];
+											else:
+												echo $pack['price'];
+											endif;
+										?>
+									</span>
 
-										<?php if (isset( $pack['packpricepromomonthly'] ) && $pack['packpricepromomonthly'] != '' ): ?>
+									<span class="PricingItem-priceAfter textSize-txt-medium">
+										<?php
+											if ( str::contains($pack['packname'], 'monthly', $i = true) ):
+												echo '/mo. *';
+											elseif ( str::contains($pack['packname'], 'annual', $i = true) ):
+												echo '/yr. *';
+											else:
+												echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+											endif;
+										?>
+									</span>
 
-											<div class="js_price">
-												<?php
-												echo '<span class="solded">' . $pack['packprice2ttc'] . '</span>';
-												echo $pack['packpricepromoannual'].'<br/>';
-												echo '<span class="solded solded-year">' . $pack['packpricettc'] . '</span>';
-												echo $pack['packpricepromomonthly'];
-												?>
-											</div>
-
-										<?php else: ?>
-
-											<div class="js_price">
-												<!-- MONTH -->
-												<?php echo $pack['packprice2ttc']; ?><br />
-												<!-- YEAR  -->
-												<?php echo $pack['packpricettc']; ?>
-											</div>
-
-								<?php endif; ?>
-
-							</span>
-
-							<span class="PricingItem-priceAfter textSize-txt-medium">/mo. *</span>
 							<?php endif; ?>
 						</h3>
 
-						<?php if ( $pack['packpricettc'] != ''): ?>
-							<div class="totalAnnual textSize-txt-large"><?php echo intval($pack['packprice2ttc']) * 12 . ' /year'; ?></div>
-						<?php endif; ?>
+						<h3 class="textType-txt textSize-txt-small marginTop15 red">
+							<?php echo $pack['baseline']; ?>
+						</h3>
 
 					</div>
 
 					<div class="PricingItem-infos textType-subtxt colorDarkGray">
 
 						<div class="PricingItem-pack textType-txt textSize-txt-medium">
-							<?php echo nl2br($pack['packservices']); ?>
-						</div>
-
-						<div class="PricingItem-pack textType-txt textSize-txt-medium">
-							<?php echo nl2br($pack['packservices2']); ?>
+							<?php echo nl2br($pack['options']); ?>
 						</div>
 
 						<div class="PricingItem-getStarted">
 							<?php
 								$subdomain = c::get('env') === 'dev' ? 'dev' : 'app';
-								$hash = $pack['packname'] === 'free' ? '/signup' : '/account/create';
+								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/account/create';
 
-								if( $pack['packname'] === 'Want more?') {
-									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction {$state}\">{$pack['packbuttonlabel']}</a>";
-								}
-								else {
-									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction {$state}\">{$pack['packbuttonlabel']}</a>";
-								}
+								if ( str::contains($pack['packname'], 'schools/agencies', $i = true) ):
+									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction {$state}\">{$pack['button']}</a>";
+								else:
+									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction {$state}\">{$pack['button']}</a>";
+								endif;
 							?>
 						</div>
+
 					</div>
 				</div>
 			</li>
@@ -111,18 +104,56 @@
 				?>
 		</ul>
 
-		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
-			<?php echo $page->description()->kirbytext(); ?>
-		</div>
-
-		<div class="PricingSwitch text-center textType-txt textSize-txt-medium">
-			<span class="PricingSwitch-item js_annualBilling" name="annual">Annual billing</span>
-			<span class="PricingSwitch-item js_monthlyBilling" name="monthly">Monthly billing</span>
-		</div>
-
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop60 colorBrightest text-center">
 			<?php echo $page->TxtAfter()->kirbytext(); ?>
 		</div>
+
+		<h2 class="big bold text-center marginTop60 marginBottom60 white">Some happy users!</h2>
+
+		<ul class="marginTop60 testimonials">
+			<?php
+				$users = yaml($page->users());
+				foreach($users as $id => $user):
+			?>
+			<li class="">
+				<img  class="portrait" src="<?php echo $page->file($user['portrait'])->url(); ?>" alt="" />
+				<h2><?php echo $user['name']; ?></h2>
+				<h3><?php echo $user['infos']; ?></h3>
+				<p>“<?php echo $user['quote']; ?>”</p>
+			</li>
+			<?php endforeach; ?>
+		</ul>
+
+		<h2 class="big bold text-center marginTop60 marginBottom60 white">Any questions?</h2>
+
+		<ul class="marginTop60 marginBottom60 faq">
+			<?php
+				$faq = yaml($page->faq());
+				foreach($faq as $id => $question):
+			?>
+			<li>
+				<div class="">
+					<h2><?php echo $question['question']; ?></h2>
+					<p><?php echo $question['answer']; ?></p>
+				</div>
+			</li>
+			<?php endforeach; ?>
+		</ul>
+
+		<h2 class="big bold text-center marginTop60 marginBottom60 white">Need help?</h2>
+
+		<div class="textarea">
+			<textarea id="question" name="name" rows="8" cols="40" placeholder="If you have any questions about the app, the features, etc. just ask us!" class="marginTop30"></textarea>
+			<button onclick="javascript:sendMail()" id="mailto" type="button" name="button" class="marginTop15">Send</button>
+		</div>
+
+		<script>
+			function sendMail() {
+			    var yourMessage = document.getElementById("question").value;
+			    document.location.href = "mailto:contact@prototypo.io?subject=I have a question about…" + "&body=" + encodeURIComponent(yourMessage);
+			}
+		</script>
+
 
 	</div>
 </main>

@@ -6,8 +6,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
-
-  <meta name="description" content="<?php echo $site->description()->html() ?>">
+  <meta name="description" content="
+		<?php
+			if($page->ogDescription()->isNotEmpty()):
+				echo $page->ogDescription();
+			else:
+				echo $site->description()->html();
+			endif;
+		?>
+	">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

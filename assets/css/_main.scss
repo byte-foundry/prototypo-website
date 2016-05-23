@@ -498,6 +498,7 @@ header {
 	margin: 30px -30px -30px;
 	background: $colorLighterGray;
 	padding: 30px;
+	min-height: 100px;
 }
 .Section-fontsName {
 	margin-top: 5px;
@@ -678,7 +679,7 @@ header {
 
 .PricingItem-header {
 	position: relative;
-	min-height: 145px;
+	min-height: 160px;
 
 	.totalAnnual {
 		padding-top: 1em;
@@ -739,22 +740,20 @@ header {
 }
 
 .solded {
-	font-size: .4em;
+	font-size: .35em;
 	position: absolute;
-	left: -3px;
-	top: -15px;
-	font-weight: bold;
+	right: 36px;
+	top: 22px;
+	font-weight: lighter;
+	color: $medium-grey;
 	&:before {
 		content: "";
 		display: block;
-		width: 220%;
+		width: 200%;
 		position: absolute;
-		border-top: 1px solid $secondBackgroundColor;
-		transform: rotate(-45deg) translateX(-23px);
-		top: 21px;
-	}
-	&.solded-year {
-		top: 52px;
+		border-top: 1px solid $light-grey;
+		transform: rotate(-45deg) translateX(-12px);
+		top: 25px;
 	}
 }
 

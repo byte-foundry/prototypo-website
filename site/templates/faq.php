@@ -13,7 +13,7 @@
 
       <?php
 
-        $questions = $page->children()->visible()->flip();
+        $questions = $page->children()->visible();
         if($tag = param('tag')) {
           $questions = $questions->filterBy('tags', $tag, ',');
         }

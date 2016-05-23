@@ -9,9 +9,9 @@ password: >
 language: en
 role: admin
 history:
-  - >
-    blog/point-break-point-prototypos-workshop-at-mirage-festival
-  - blog
   - pricing
-  - home
-  - about
+  - faq
+  - faq/is-the-technical-support-included
+  - faq/is-it-possible-to-pay-through-paypal
+  - >
+    faq/can-i-sell-the-fonts-that-i-ve-made-with-prototypo

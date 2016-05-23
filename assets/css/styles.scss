@@ -3,6 +3,16 @@
  *  http://prototypo.io
  */
 
+$green: #24d390;
+$medium-grey: #7e7e7e;
+$light-grey: #C6C6C6;
+$dark-grey: #3B3B3B;
+$white: #fefefe;
+$yellow: #f5e462;
+$black: #303030;
+$red: #f96752;
+$blue: #00c4d6;
+
 @import 'sass';
 @import 'foundation/_settings.scss';
 @import 'foundation';
@@ -13,3 +23,4 @@
 @import 'main';
 @import 'forms';
 @import 'medias';
+@import 'version2';

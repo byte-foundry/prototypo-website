@@ -1,9 +1,0 @@
-Title: When the v1.0 will be available?
-
-----
-
-Tags: 
-
-----
-
-Answer: We plan to release a first version in september with primary features announced in Kickstarter campaign. The dev version is our sandbox, and the v1.0 will be so much better! In the current version, we design glyphs only with contours and the result is not always satisfying. We are writing from scratch the next version to deal with custom skeletons/components to get the best design as possible.
