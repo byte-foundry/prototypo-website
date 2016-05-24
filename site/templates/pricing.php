@@ -89,7 +89,7 @@
 								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/account/create';
 
 								if ( str::contains($pack['packname'], 'schools/agencies', $i = true) ):
-									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction {$state}\">{$pack['button']}</a>";
+									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction \">{$pack['button']}</a>";
 								else:
 									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction\">{$pack['button']}</a>";
 								endif;
