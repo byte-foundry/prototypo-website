@@ -2,8 +2,12 @@ Title: Can I sell the fonts that I've made with Prototypo?
 
 ----
 
+<<<<<<< HEAD
 Tags: 
 
 ----
 
 Answer: Absolutely, you own the font that you have created with Prototypo and you can do whatever you want with it.
+=======
+Answer: Absolutely, you own the font that you have created with Prototypo and you can do whatever you want with it.
+>>>>>>> afd0c75... remove tags from FAQ

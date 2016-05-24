@@ -11,17 +11,7 @@
 
     <div class="fitToContent">
 
-      <?php
-
-        $questions = $page->children()->visible();
-        if($tag = param('tag')) {
-          $questions = $questions->filterBy('tags', $tag, ',');
-        }
-      //  $questions = $questions->paginate(1);
-      ?>
-
-
-
+      <?php $questions = $page->children()->visible(); ?>
 
       <?php  foreach($questions as $question): ?>
 
@@ -30,19 +20,6 @@
         <header class="Question-header">
           <a class="Question-anchor textSize-txt-large textType-txt colorGray" href="<?php echo url('faq'); ?>#<?php echo $question->slug(); ?>">#</a>
           <h1 class="Question-title textType-title textSize-txt-xlarge"><?php echo $question->title()->html() ?></h1>
-
-          <div class="Question-infos">
-            <?php $tags = explode(',',$question->tags()); ?>
-            <ul class="Question-tags">
-              <?php foreach($tags as $tag): ?>
-              <li class="Question-tag">
-                <a class="Question-tagLink" href="<?php echo url('faq/tag:' . $tag)?>">
-                  <?php echo html($tag) ?>
-                </a>
-              </li>
-              <?php endforeach ?>
-            </ul>
-          </div>
         </header>
 
         <div class="Question-content textType-subtxt textSize-txt-small">

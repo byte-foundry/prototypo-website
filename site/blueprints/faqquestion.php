@@ -18,11 +18,6 @@ fields:
     type:  text
     placeholder: Blog article name
 
-  tags:
-    label: Tags
-    type: tags
-    width: 1/2
-
   answer:
     type: textarea
     placeholder: Content of the article
