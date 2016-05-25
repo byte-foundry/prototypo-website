@@ -98,15 +98,14 @@ Users:
   infos: Graphic designer, Québec City
   quote: >
     Prototypo opened a field that was
-    initially reserved for typography
-    specialists.
+    initially reserved for type design
+    specialists and give more freedom to the
+    designers in their creations.
   portrait: tristan.jpg
 - 
   name: Manuel W.
   infos: Graphic designer, Saarbrücken
-  quote: >
-    Prototypo helps me make my font ideas
-    concrete faster than ever
+  quote: 'What we like in Prototypo: the base type design just works. It really takes a lot of bad will to turn your font unuseful — and yet it still looks charming.'
   portrait: manuel.jpg
 
 ----
