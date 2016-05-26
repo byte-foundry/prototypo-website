@@ -2,7 +2,7 @@ Title: I didn’t shoot the serif
 
 ----
 
-Tags: design principle,serifs
+Tags: serifs,design-principle
 
 ----
 
@@ -56,3 +56,11 @@ This is the beauty of code generated fonts: all points that do not affect a segm
 The version 1.0 of Prototypo should allow users to edit this serif template or create their owns to suit their needs.
 
 Stay tuned!
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 

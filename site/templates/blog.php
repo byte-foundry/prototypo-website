@@ -15,7 +15,7 @@
 
         $articles = $page->children()->visible()->flip();
         if($tag = param('tag')) {
-          $articles = $articles->filterBy('tags', $tag, ',');
+          $articles = $articles->filterBy('tags', urldecode($tag), ',');
         }
         $articles = $articles->paginate(1);
       ?>

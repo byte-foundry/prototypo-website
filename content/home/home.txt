@@ -1,15 +1,15 @@
-Title: Create your own font in 5 minutes
+Title: Create your own font in a few clicks
 
 ----
 
-Infobox1:
+Infobox1: 
 
 Customize more
 than twenty parameters…
 
 ----
 
-Infobox2:
+Infobox2: 
 
 …see your own
 font take shape
@@ -41,25 +41,23 @@ Section1txt: Fonts powered by (link: https://productiontype.com text: Production
 
 ----
 
-Fonts:
+Fonts: 
 
--
+- 
   fontfile: venus-preview.svg
   fontname: Prototypo Grotesk
-  fontdescription: >
-    The sans serif that makes sens.
+  fontdescription: The sans serif that makes sens.
   fontstring: G2
   fontsize: 100
   fontlineheight: 120
--
+- 
   fontfile: john-fell-preview.svg
   fontname: Prototypo Fell
-  fontdescription: >
-    Classical serif font for classy designs.
+  fontdescription: Classical serif font for classy designs.
   fontstring: Qn
   fontsize: 14
   fontlineheight: 120
--
+- 
   fontfile: elzevir-preview.svg
   fontname: Prototypo Elzevir
   fontdescription: >
@@ -83,25 +81,25 @@ Section2subtitle: This, that, and much more.
 
 ----
 
-Features:
+Features: 
 
--
+- 
   featureimg: pictofeaturescharactersset.svg
   featurename: Characters set
   featuredescription: >
     Works with a basic Latin character set.
     Includes uppercase, lowercase,
     smallcaps, figures and punctuation!
--
+- 
   featureimg: pictofeaturesexportfonts.svg
   featurename: Export fonts
   featuredescription: 'Once your design is ok, you can export all font format you need to use your fonts offline & online.'
--
+- 
   featureimg: pictofeaturessplitviews.svg
   featurename: Split views
   featuredescription: 'Improve your design process with severals views: glyph, words, paragraphs, and watch changes in real time.'
   featuredone: 'true'
--
+- 
   featureimg: pictofeaturesfontmanager.svg
   featurename: Font manager
   featuredescription: >
@@ -109,7 +107,7 @@ Features:
     Define variants of a master typeface, or
     branch it in sub-projects!
   featuredone: 'true'
--
+- 
   featureimg: pictofeaturesswitchalternates.svg
   featurename: Switch alternates
   featuredescription: >
@@ -117,7 +115,7 @@ Features:
     more alternates to define the perfect
     shape to fit your custom design.
   featuredone: 'true'
--
+- 
   featureimg: pictofeaturesindiv.svg
   featurename: Individualize parameters
   featuredescription: >
@@ -152,33 +150,33 @@ Section4title: They talk about us!
 
 ----
 
-Section4subtitle:
+Section4subtitle: 
 
 ----
 
-Theytalkaboutus:
+Theytalkaboutus: 
 
--
+- 
   ttauimg: gray-mashable.png
   ttauname: Mashable
   ttauurl: >
     http://mashable.com/2014/05/04/prototypo-fonts/
--
+- 
   ttauimg: gray-wired.png
   ttauname: WIRED
   ttauurl: >
     http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
--
+- 
   ttauimg: gray-linuxfr.png
   ttauname: LinuxFR
   ttauurl: >
     http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
--
+- 
   ttauimg: gray-framasoft.png
   ttauname: Framasoft
   ttauurl: >
     http://framablog.org/2014/04/22/prototypo-vos-polices-sur-mesure/
--
+- 
   ttauimg: gray-creapills.png
   ttauname: Creapills
   ttauurl: >

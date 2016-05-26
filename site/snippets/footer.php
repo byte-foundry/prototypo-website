@@ -1,23 +1,22 @@
-    <footer class="Footer colorLightBlack textSize-txt-medium textType-txt text-center cf" role="contentinfo">
+<footer class="Footer colorLightBlack textSize-txt-medium textType-txt text-center cf" role="contentinfo">
 
-        <img class="Footer-logo" src="<?php echo url('assets/img/byteFoundryLogoWhite.svg'); ?>" alt="Byte-Foundry">
+    <img class="Footer-logo" src="<?php echo url('assets/img/byteFoundryLogoWhite.svg'); ?>" alt="Byte-Foundry">
 
-        <?php snippet('menu', array('prefixe'=>'Footer-')) ?>
+    <?php snippet('menu', array('prefixe'=>'Footer-')) ?>
 
-        <div class="Footer-copyright">
-            <?php echo $site->copyright()->kirbytext() ?>
-        </div>
+    <div class="Footer-copyright">
+        <?php echo $site->copyright()->kirbytext() ?>
+    </div>
 
-        <div class="Footer-social marginTop30">
-            <a class="Footer-socialItem Footer-socialItem-Facebook" target="_blank" href="<?php echo $site->facebook()->html() ?>"></a>
-			<a class="Footer-socialItem Footer-socialItem-Instagram" target="_blank" href="<?php echo $site->instagram()->html() ?>"></a>
-            <a class="Footer-socialItem Footer-socialItem-Twitter" target="_blank" href="<?php echo $site->twitter()->html() ?>"></a>
-		</div>
-		<a style="display:none;" href="/blog">blog</a>
-        <a style="display:none;" href="/cgu">cgu</a>
+    <div class="Footer-social marginTop30">
+        <a class="Footer-socialItem Footer-socialItem-Facebook" target="_blank" href="<?php echo $site->facebook()->html() ?>"></a>
+		<a class="Footer-socialItem Footer-socialItem-Instagram" target="_blank" href="<?php echo $site->instagram()->html() ?>"></a>
+        <a class="Footer-socialItem Footer-socialItem-Twitter" target="_blank" href="<?php echo $site->twitter()->html() ?>"></a>
+	</div>
+	<a style="display:none;" href="/blog">blog</a>
+    <a style="display:none;" href="/cgu">cgu</a>
 
-    </footer>
-</main>
+</footer>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <?php snippet( c::get('env') . '/scripts' ); ?>
 

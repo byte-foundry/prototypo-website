@@ -10,8 +10,10 @@ language: en
 role: admin
 token: 57ab361293709894c6ec79b701e65f94027853a0
 history:
-  - pricing
-  - pricing/subscribe
-  - press
+  - >
+    blog/prototypo-update-4-overcoming-dilemmas
+  - blog/i-didnt-shoot-the-serif
+  - >
+    blog/point-break-point-prototypos-workshop-at-mirage-festival
+  - faq
   - home
-  - blog/the-new-prototypo-is-here
