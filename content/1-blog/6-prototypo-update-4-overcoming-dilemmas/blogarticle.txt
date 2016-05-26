@@ -2,7 +2,7 @@ Title: Prototypo update #4, Overcoming Dilemmas
 
 ----
 
-Tags: redesign,open source
+Tags: redesign,open-source
 
 ----
 
@@ -41,3 +41,11 @@ Crowd-funding a project represents a great opportunity and a big risk as well. I
 When starting this project, (link: about text: the team) had zero experience in marketing. We know we haven’t done enough, and we could always do better to get the word out. But when you have very limited resource, every hour spent doing marketing is an hour not spent adding more features to your application.
 
 This will inevitably change as we start working on the KickStarter campaign. We’ve closed our code editor and we try hard to stop thinking about those exciting features already in the pipes (draggable outline nodes, manual spacing). It’s time to focus on building an effective campaign!
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 

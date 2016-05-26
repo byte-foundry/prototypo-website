@@ -2,15 +2,15 @@ Title: “Point-Break-Point” Prototypo’s workshop at Mirage Festival
 
 ----
 
-Ogdescription:
+Ogdescription: 
 
 ----
 
-Ogimage:
+Ogimage: 
 
 ----
 
-Tags: workshop,plumin.js,responsive design,lab
+Tags: workshop,lab,pluminjs,responsive-design
 
 ----
 
@@ -18,7 +18,7 @@ Date: 2016-03-09
 
 ----
 
-Subtitle:
+Subtitle: 
 
 ----
 

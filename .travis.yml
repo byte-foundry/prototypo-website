@@ -1,17 +1,16 @@
 sudo: false
 language: php
 php:
-  - 5.4
+  - 7.0
 before_script:
-- nvm install v0.12
-- nvm use v0.12
+- nvm install v4.4.4
 - npm install -g gulp surge
 - npm install
 script:
 - gulp build
 after_script:
-- '[ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ] && surge --project ./dist --domain www.prototypo.io'
-- '[ "$TRAVIS_BRANCH" == "develop" -a "$TRAVIS_PULL_REQUEST" == "false" ] && surge --project ./dist --domain devvv.prototypo.io'
+- if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false" ]; then surge --project ./dist --domain www.prototypo.io; fi
+- if [ "$TRAVIS_BRANCH" == "develop" -a "$TRAVIS_PULL_REQUEST" == "false" ]; then surge --project ./dist --domain devvv.prototypo.io; fi
 branches:
   only:
     - master

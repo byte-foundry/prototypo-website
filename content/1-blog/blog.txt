@@ -18,4 +18,4 @@ Ogdescription: We regularly write articles about the improvements we make to Pro
 
 ----
 
-Ogimage: /content/blog/blog-screenshot.png
+Ogimage: /content/1-blog/blog-screenshot.png
