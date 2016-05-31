@@ -37,6 +37,6 @@ All the changes you'll make in Prototypo will be applied  immediately on your we
 The extension enables you to preview your fonts together in their final environment. 
  **A real plus for your web designs!**
 
-We hope you'll have a great time using the Web Preview extension. If you have any issue <a href="mailto:contact@prototypo.io">**write to us**</a>, use our in-app chat or <a href="https://twitter.com/prototypoApp" target="_blank"> **tweet to us**</a> !
+_We hope you'll have a great time using the Web Preview extension. If you have any issue <a href="mailto:contact@prototypo.io">**write to us**</a>, use our in-app chat or <a href="https://twitter.com/prototypoApp" target="_blank"> **tweet to us**</a> !_
 
 **Cheers!**

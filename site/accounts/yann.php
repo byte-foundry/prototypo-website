@@ -10,6 +10,8 @@ language: fr
 role: admin
 history:
   - >
-    blog/user-interview-tristan-gevaux-graphic-designer
+    blog/prototypo-in-the-wild-schema-projects
+  - >
+    blog/introducing-prototypo-web-preview-extension
   - about
   - faq
