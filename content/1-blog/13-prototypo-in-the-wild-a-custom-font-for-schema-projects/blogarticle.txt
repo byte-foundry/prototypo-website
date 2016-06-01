@@ -27,7 +27,7 @@ Contentarticle:
 (image: kiku-obata_schema-projects_22-1200x800.jpg)
 <legend>Schema Projects Gallery in NYC © Kiku Obata & Company</legend>
 
-(link:http://schemaprojects.com/ text:Schema Projects) is a Brooklyn based gallery dedicated to works on paper. Some time ago they commisionned the studio  (link:http://kikuobata.com/ text:Kiku Obata & Company) to design the visual identity of the gallery. The project included a custom font intented to be used on their communication medias (exhibition cards, ads, signage, invites and totes). They got the job done with style and … Prototypo!
+(link:http://schemaprojects.com/ text:Schema Projects) is a Brooklyn based gallery dedicated to works on paper. Some time ago they commisionned the studio  (link:http://kikuobata.com/ text:Kiku Obata & Company) to design the visual identity of the gallery. The project included a custom font intented to be used on their communication medias (exhibition cards, ads, signage, invites and totes). They got the job done with style and… Prototypo!
 
 The challenge lay in getting a sophisticated but subtle result so that attention remains on the artists and not on the identity of the gallery. The designers started from Prototypo Grotesk to draw a custom typeface in a single weight, for the logo and to use across all materials. 
 
