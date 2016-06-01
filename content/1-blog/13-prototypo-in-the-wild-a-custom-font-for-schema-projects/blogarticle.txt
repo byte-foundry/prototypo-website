@@ -34,12 +34,12 @@ The challenge lay in getting a sophisticated but subtle result so that attention
 (image: kiku-obata_schema-projects_font.jpg)
 <legend>Font-in-use © Kiku Obata & Company</legend>
 
-<h2><b>An idea + Prototypo + Some adjustments = A winning combination!</b></h2>
+<h2>An idea + Prototypo + Some adjustments = A winning combination!</h2>
 
-First, Kiku Obata & Company’s team had an overall idea of the final rendering. The following step was to set the global tone of the font by adjusting the proportions and other details in Prototypo. Then they exported the font to refine it in a classic typeface software. 
+First, Kiku Obata & Company’s team had an overall idea of the final result. The following step was to set the global tone of the font by adjusting the proportions and other details in Prototypo. Then they exported the font to refine it in a classic type design software. 
 
 (image: comma.jpg)
-<legend>"clap clap comma" © Kiku Obata & Company</legend>
+<legend>"clap clap" comma © Kiku Obata & Company</legend>
 
 The comma especially caught our attention, because of its radical design. A small detail that counts!
 
