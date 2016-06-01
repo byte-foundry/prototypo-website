@@ -1096,23 +1096,15 @@ header {
 	@extend .textType-articleTitle;
 	@extend .textSize-txt-xlarge;
 }
-.Article-content a {
-	color: $colorDark;
-	background: $colorLighterGray;
-	padding: 3px 7px;
-	border-radius: $global-radius;
-	transition: all 300ms ease;
-}
-.Article-content a:hover {
-	color: $colorBrightest;
-	background: $colorDark;
-}
+
 .Article-content ul {
 	margin-left: -20px;
 	list-style-type: square;
 	padding-left: 20px;
 }
 .Article-content p {
+	font-size: 18px;
+	line-height: 1.6;
 	margin-bottom: .5em;
 }
 .Article-leaveComment {

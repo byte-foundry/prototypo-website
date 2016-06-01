@@ -9,9 +9,9 @@ password: >
 language: en
 role: admin
 history:
+  - >
+    blog/prototypo-in-the-wild-schema-projects
   - pricing
   - faq
   - faq/is-the-technical-support-included
   - faq/is-it-possible-to-pay-through-paypal
-  - >
-    faq/can-i-sell-the-fonts-that-i-ve-made-with-prototypo

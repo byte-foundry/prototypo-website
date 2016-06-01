@@ -89,3 +89,25 @@
 		float: right;
 	}
 }
+
+main.Blog {
+	.Article-content {
+
+		a {
+			color: $red;
+			font-weight: bold;
+
+			&:hover {
+				border-bottom: 3px solid $red;
+			}
+		}
+
+		legend {
+			width: 100%;
+			text-align: center;
+			font-size: 0.75em;
+			font-style: italic;
+		}
+
+	}
+}

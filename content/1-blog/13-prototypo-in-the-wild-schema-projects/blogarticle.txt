@@ -1,0 +1,59 @@
+Title: Prototypo in the Wild: Schema Projects' custom font
+
+----
+
+Ogdescription: The new Schema Project identity is an amazing example of what you can do with Prototypo! We really love the work of Kiku Obata & Company who have completely understood how to use Prototypo.
+
+----
+
+Ogimage: 
+
+----
+
+Tags: user,project,custom font
+
+----
+
+Date: 2016-05-31
+
+----
+
+Subtitle: The new Schema Projects identity is an amazing example of what you can do with Prototypo! We are impressed by the work of Kiku Obata & Company who have completely understood how to use Prototypo.
+
+----
+
+Contentarticle: 
+
+(image: kiku-obata_schema-projects_22-1200x800.jpg)
+<legend>Schema Projects Gallery in NYC © Kiku Obata & Company</legend>
+
+(link:http://schemaprojects.com/ text:Schema Projects) is a Brooklyn based gallery dedicated to works on paper. Some time ago they commisionned the studio  (link:http://kikuobata.com/ text:Kiku Obata & Company) to design the visual identity of the gallery. The project included a custom font intented to be used on their communication medias (exhibition cards, ads, signage, invites and totes). They got the job done with style and … Prototypo!
+
+The challenge lay in getting a sophisticated but subtle result so that attention remains on the artists and not on the identity of the gallery. The designers started from Prototypo Grotesk to draw a custom typeface in a single weight, for the logo and to use across all materials. 
+
+(image: kiku-obata_schema-projects_font.jpg)
+<legend>Font-in-use © Kiku Obata & Company</legend>
+
+<h2><b>An idea + Prototypo + Some adjustments = A winning combination!</b></h2>
+
+First, Kiku Obata & Company’s team had an overall idea of the final rendering. The following step was to set the global tone of the font by adjusting the proportions and other details in Prototypo. Then they exported the font to refine it in a classic typeface software. 
+
+(image: comma.jpg)
+<legend>"clap clap comma" © Kiku Obata & Company</legend>
+
+The comma especially caught our attention, because of its radical design. A small detail that counts!
+
+(image: kiku-obata_schema-projects_14-1200x800.jpg)
+<legend>Embroidered typeface! © Kiku Obata & Company</legend>
+
+Thank you Kiku Obata for the first embroidered Prototypo’s font, a “haute couture” work, that’s the way we like it!
+
+(image: schema_typeface_animation.gif)
+<legend>Sneek peek of the Schema Project typeface © Kiku Obata & Company</legend>
+
+(image: kiku-obata_schema-projects_04.jpg)
+<legend>Business cards set in Schema Project font © Kiku Obata & Company</legend>
+
+Working on a custom font project? Need some advices or just want to share it with us? Let us know, we’ll be happy to discuss it! You can find us at <a href="https://twitter.com/prototypoApp" target="_blank"> @prototypoApp</a> & <a href="mailto:contact@prototypo.io">contact@prototypo.io</a>.
+
+<strong>Cheers!</strong>
