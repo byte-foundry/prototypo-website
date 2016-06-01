@@ -1,4 +1,4 @@
-Title: Prototypo in the Wild: Schema Projects' custom font
+Title: Prototypo in the Wild: a custom font for Schema Projects
 
 ----
 
