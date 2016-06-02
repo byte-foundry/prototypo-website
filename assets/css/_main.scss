@@ -132,7 +132,7 @@ header {
 	display: inline-block;
 	font-family: $mainFont;
 	font-size: 24px;
-	font-weight: 700;
+	font-weight: bold;
 }
 .Section-homepageGetStartedLineSubtitle {
 	display: inline-block;
@@ -680,6 +680,7 @@ header {
 .PricingItem-header {
 	position: relative;
 	min-height: 160px;
+	padding: 0 5px;
 
 	.totalAnnual {
 		padding-top: 1em;
@@ -727,11 +728,11 @@ header {
 	opacity: 0.6;
 }
 .PricingItem-price {
-	letter-spacing: -2px;
 	display: inline-block;
 	width: 80px;
 	height: 58px;
 	overflow: hidden;
+	font-weight: bold;
 }
 .js_price {
 	transition: all 300ms ease;
@@ -1730,7 +1731,7 @@ body.account .Article {
 					content: "⇧";
 					display: inline-block;
 					transform: rotate(180deg);
-					font-family: sans-serif;
+					font-family: $mainFont; // sans-serif;
 					margin-left: .5em;
 				}
 			}

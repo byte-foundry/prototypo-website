@@ -4,7 +4,7 @@
 	line-height: 2.4;
 
 	font-size: 16px;
-	font-family: "PT Sans", sans-serif;
+	font-family: $mainFont;
 	color: $colorDarkGray;
 	background-color: transparent;
 
@@ -35,7 +35,7 @@ a {
 
 		color: #787878;
 		font-size: 16px;
-		font-family: "PT Sans", sans-serif;
+		font-family: $mainFont;
 		padding: 8px 18px;
 		display: inline-block;
 		border: none;

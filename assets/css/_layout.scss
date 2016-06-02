@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	font-family: $mainFont, Helvetica, Arial, sans-serif;
+	font-family: $mainFont;
 	color:#444;
 	padding-top:65px;
   background:$colorBlack; /* equal to footer background */
@@ -148,13 +148,11 @@ input:focus {
 
 .textType-title {
   font-family: $mainFont;
-  font-weight:bold;
 }
 
 .textType-subtitle {
   font-family:$mainFont;
-  font-weight:normal;
-  font-style:italic;
+  font-style: italic;
   margin-top: 0.5em;
 }
 
@@ -502,7 +500,7 @@ input[type="password"]:focus {
   vertical-align:top;
   padding: 21px 15px 23px 20px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   color: $colorBlack;
 }
 
