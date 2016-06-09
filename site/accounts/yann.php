@@ -9,8 +9,7 @@ password: >
 language: fr
 role: admin
 history:
-  - >
-    blog/prototypo-in-the-wild-schema-projects
+  - blog/a-glyph-parade-for-our-top-backers
   - >
     blog/introducing-prototypo-web-preview-extension
   - about
