@@ -6,7 +6,7 @@ Ogdescription: We talked about graphic design, font creation and Prototypo with 
 
 ----
 
-Ogimage: 
+Ogimage:
 
 ----
 
@@ -22,7 +22,7 @@ Subtitle: We talked about graphic design, font creation and Prototypo with Trist
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
 (image: tristangevaux-1.jpg)
 <span style="font-weight: bold">Prototypo: Hi Tristan, can you introduce yourself?</span><br><span style="font-weight: bold">Tristan Gevaux:</span> Tristan Gevaux, I’m a graphic designer in Quebec City. I work for an advertising agency and I also undertake projects as a freelancer. Basically, I’m not a font designer but a print/branding designer. Since I’m in Quebec I work more on web design and user interface.
@@ -46,4 +46,4 @@ Contentarticle:
 **Have a look at (link: http://tristangevaux.com/ text: Tristan’s portfolio)** <a href="http://tristangevaux.com/" style="background: none">(image:tristan-folio.jpg)</a>
 
 <blockquote class="twitter-tweet" data-lang="en" style="text-align: center"><p lang="en" dir="ltr">Check out this video <a href="https://t.co/65Ac34GGF2">https://t.co/65Ac34GGF2</a><br>The web synchronization is coming soon!<a href="https://twitter.com/hashtag/webdesign?src=hash">#webdesign</a> <a href="https://twitter.com/hashtag/typography?src=hash">#typography</a> <a href="https://twitter.com/hashtag/css?src=hash">#css</a></p>— Prototypo (@prototypoApp) <a href="https://twitter.com/prototypoApp/status/725005353604149248">April 26, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

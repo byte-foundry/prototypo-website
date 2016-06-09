@@ -6,7 +6,7 @@ Ogdescription: In 2014, we launched a Kickstarter campaign to keep developing Pr
 
 ----
 
-Ogimage: 
+Ogimage:
 
 ----
 
@@ -22,22 +22,22 @@ Subtitle: In 2014, we launched a Kickstarter campaign to keep developing Prototy
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
 <em>In 2014, we launched a Kickstarter campaign to keep developing Prototypo. It succeeded beyond our expectations, creating an international community around the project. Among our 1670 wonderful backers, five of them deserve a special shoutout for their distinguished contribution: one of them sponsored code that powers the application, and four sponsored glyphs that have been integrated to our last brainchild, Prototypo Elzevir!</em>
 <strong>Paul Rouget</strong> is a humble but talented developer and Open Web advocate. You might not know him, but we can guarantee his voice and code has positively affected the web you browse and enjoy today. Paul sponsored two entire weeks of development!
 (image: paul-rouget.png)
 <strong>Kevin Hohler</strong> sponsored “Ampersand” for Elzevir. Did you know that this character used to be the 27th letter of the English alphabet? <a href="http://nowiknow.com/and-the-27th-letter-of-the-alphabet/" target="_blank">True story!</a>  Kevin is a french graphic designer, you can have a look at his work on <a href="http://kevin-hohler.com/" target="_blank">kevin-hohler.com</a>.
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In 2014, <a href="https://twitter.com/HohlerKevin">@HohlerKevin</a> was 1 of our suppa backers! He sponsored this glyph. Thanks Kévin!<a href="https://t.co/UkSvQS4tzm">https://t.co/UkSvQS4tzm</a> <a href="https://t.co/78Fblkfonn">pic.twitter.com/78Fblkfonn</a></p>— Prototypo (@prototypoApp) <a href="https://twitter.com/prototypoApp/status/735412446668656640">May 25, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <strong>Mathias Rabiot</strong> sponsored the Elzevir “Arobase”. <a href="https://en.wikipedia.org/wiki/All_your_base_are_belong_to_us" target="_blank">"All your arobase are belong to us!”</a>  Mathias is Art Director @ <a href="http://www.grapheine.com/" target="_blank">Graphéine</a>, a great graphic design agency in Lyon.
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In 2014, <a href="https://twitter.com/mathias_rabiot">@mathias_rabiot</a> from <a href="https://twitter.com/grapheine">@grapheine</a> was one of our great backers on Kickstarter! He sponsored this glyph. Thx <a href="https://t.co/V2utTpN0bE">pic.twitter.com/V2utTpN0bE</a></p>— Prototypo (@prototypoApp) <a href="https://twitter.com/prototypoApp/status/727890747286953985">May 4, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <strong>Guillaume Leduc</strong> sponsored the “R”, a kind of useful letter to spell words like refrigerator (if someone finds a word with more r’s, we give him a free access to Prototypo for a month!). Thank you Guillaume, you R great!
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In 2014, Guillaume Leduc was one of our amazing backers on Kickstarter! He sponsored this glyph. Thx <a href="https://twitter.com/float_type">@float_type</a> <a href="https://t.co/Uv2U5xIV2P">pic.twitter.com/Uv2U5xIV2P</a></p>— Prototypo (@prototypoApp) <a href="https://twitter.com/prototypoApp/status/722466266389344258">April 19, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <strong>Michael Tupy</strong> sponsored Elzevir “Braces”. Brace yourselves because Michael is a mindblowing graphic designer. You can have a look at his work here: <a href="http://www.t-2.at/" target="_blank">www.t-2.at</a>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Michael Tupy was one of our amazing backers! He sponsored this glyph. Check out <a href="https://t.co/isbYGicmfY">https://t.co/isbYGicmfY</a>. Thx <a href="https://twitter.com/mict">@mict</a>! <a href="https://t.co/Rq4K5QhIq8">pic.twitter.com/Rq4K5QhIq8</a></p>— Prototypo (@prototypoApp) <a href="https://twitter.com/prototypoApp/status/719916157885628417">April 12, 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 A big thank to <strong>Kevin, Mathias, Guillaume, Michael</strong> and to <a href="https://www.prototypo.io/thanks.html" target="_blank">all our backers</a>!
 <strong>Cheers,</strong><a href="https://twitter.com/Yann__G" target="_blank">Yann</a>
