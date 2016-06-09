@@ -9,10 +9,9 @@ password: >
 language: en
 role: admin
 history:
+  - blog/a-glyph-parade-for-our-top-backers
   - >
     blog/prototypo-in-the-wild-a-custom-font-for-schema-projects
-  - >
-    blog/prototypo-in-the-wild-schema-projects
   - pricing
   - faq
   - faq/is-the-technical-support-included
