@@ -8,7 +8,7 @@
 
 			<div class="Section-homepageGetStartedLine text-center marginBottom30">
 				<h1 class="Section-homepageGetStartedLineTitle colorWhite marginBottom30">Prototypo</h1>
-				<h3 class="Section-homepageGetStartedLineSubtitle colorBrightest marginBottom30"><?php echo $page->getStartedTagline()->kirbytextSans(); ?></h3>
+				<h2 class="Section-homepageGetStartedLineSubtitle colorBrightest marginBottom30"><?php echo $page->getStartedTagline()->kirbytextSans(); ?></h2>
 			</div>
 
 			<div class="DemoHome">
@@ -29,24 +29,24 @@
 
 					<div class="DemoControls">
 						<div class="DemoControls-PotentiometerItem">
-							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
-							<div  id="test-me" class="test-me">
+							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
+							<div id="test-me" class="test-me">
 								<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
 							</div>
 						</div>
 
 						<div class="DemoControls-PotentiometerItem">
-							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsContrast.svg'); ?>" class="DemoControls-PotentiometerPicto">
+							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsContrast.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
 							<input type="range" data-param="_contrast" class="DemoControls-Potentiometer" min="-2" max="-0.15" value="-1" step="0.01" />
 						</div>
 
 						<div class="DemoControls-PotentiometerItem">
-							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
+							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
 							<input type="range" data-param="serifHeight" class="DemoControls-Potentiometer" min="0" max="70" value="20" step="1" />
 						</div>
 
 						<div class="DemoControls-PotentiometerItem">
-							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsSerif.svg'); ?>" class="DemoControls-PotentiometerPicto">
+							<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsSerif.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
 							<input type="range" data-param="serifWidth" class="DemoControls-Potentiometer" min="0" max="100" value="65" step="1" />
 						</div>
 					</div><!-- .DemoControls -->
@@ -103,7 +103,7 @@
 	<section class="Section Section-parametricDesignTool colorDarkest text-center">
 		<header class="SectionHeader fitToContent">
 			<h1 class="textType-title textSize-title-large"><?php echo $page->section1Title()->kirbytextSans(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h3>
+			<h2 class="Section-parametricDesignToolSubtitle textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h2>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorDarkest fitToContent">
@@ -137,7 +137,7 @@
 					<div class="Section-fontsView colorDarkest">
 						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[0]['fontfile']); ?>" alt="<?php echo $fonts[0]['fontname']; ?>" />
 					</div>
-					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0]['fontname']; ?></h6>
+					<h3 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0]['fontname']; ?></h3>
 
 					<div class="Section-fontsInfos">
 						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[0]['fontdescription']; ?></div>
@@ -156,7 +156,7 @@
 					<div class="Section-fontsView colorDarkest">
 						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[1]['fontfile']); ?>" alt="<?php echo $fonts[1]['fontname']; ?>" />
 					</div>
-					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1]['fontname']; ?></h6>
+					<h3 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1]['fontname']; ?></h3>
 
 					<div class="Section-fontsInfos">
 						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[1]['fontdescription']; ?></div>
@@ -175,7 +175,7 @@
 					<div class="Section-fontsView colorDarkest">
 						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[2]['fontfile']); ?>" alt="<?php echo $fonts[2]['fontname']; ?>" />
 					</div>
-					<h6 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2]['fontname']; ?></h6>
+					<h3 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2]['fontname']; ?></h3>
 
 				<div class="Section-fontsInfos">
 					<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[2]['fontdescription']; ?></div>
@@ -200,7 +200,7 @@
 
 		<header class="SectionHeader text-left fitToContent">
 			<h1 class="textType-title textSize-title-large colorLighterGray small-only-text-center"><?php echo $page->section2Title()->kirbytextSans(); ?></h1>
-		<h3 class="textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytextSans(); ?></h3>
+			<h2 class="Section-featuresSubtitle textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytextSans(); ?></h2>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt fitToContent">
@@ -214,9 +214,9 @@
 
 			<li class="Section-featuresItem text-center">
 				<div class="Section-featuresPictoWrap">
-					<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto">
+					<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto" alt="">
 				</div>
-				<h5 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large <?php if ( isset( $feature['featuredone'] ) ) echo ' done' ?>"><?php echo $feature['featurename']; ?></h5>
+				<h3 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large <?php if ( isset( $feature['featuredone'] ) ) echo ' done' ?>"><?php echo $feature['featurename']; ?></h3>
 
 				<div class="Section-featuresDescription textType-subtxt textSize-txt-small colorBrightest">
 					<?php echo $feature['featuredescription']; ?>
@@ -240,7 +240,7 @@
 
 		<div class="text-center fitToContent">
 			<h1 class="textType-title textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Title()->kirbytextSans(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytextSans(); ?></h3>
+			<h2 class="textType-subtitle textSize-title-xsmall colorGray small-only-text-center"><?php echo $page->section4Subtitle()->kirbytextSans(); ?></h2>
 		</div>
 
 		<div class="Section-wrapTxt textType-txt fitToContent text-center">
@@ -255,7 +255,7 @@
 				<li class="Section-theytalkaboutusItem text-center">
 					<a class="Section-theytalkaboutusPictoWrap" href="<?php echo $ttau['ttauurl']; ?>" target="_blank">
 						<span class="Section-theytalkaboutusHelper"></span>
-						<img src="<?php echo url('content/'.$page->dirname().'/'.$ttau['ttauimg']); ?>" class="Section-theytalkaboutusPicto">
+						<img alt="<?php echo $ttau['ttauname']; ?>" src="<?php echo url('content/'.$page->dirname().'/'.$ttau['ttauimg']); ?>" class="Section-theytalkaboutusPicto">
 					</a>
 				</li>
 
@@ -271,26 +271,26 @@
 
 		<section id="subscribed" class="Section Section-subscribed hide-for-print text-center">
 			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->sectionSubscribedTitle()->kirbytextSans(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-small colorBrightest marginTop30">
+			<h2 class="textType-subtitle textSize-title-small colorBrightest marginTop30">
 				<?php echo $page->SectionSubscribedSubtitle()->kirbytextSans(); ?>
-			</h3>
+			</h2>
 		</section>
 
 		<section id="newsletter" class="Section Section-newsletter hide-for-print">
 
-		<header class="SectionHeader text-center fitToContent">
-			<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->section3Title()->kirbytextSans(); ?></h1>
-			<h3 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytextSans(); ?></h3>
-		</header>
+			<header class="SectionHeader text-center fitToContent">
+				<h1 class="textType-title textSize-title-medium colorWhite"><?php echo $page->section3Title()->kirbytextSans(); ?></h1>
+				<h2 class="textType-subtitle textSize-title-small colorBrightest"><?php echo $page->section3Subtitle()->kirbytextSans(); ?></h2>
+			</header>
 
-		<div class="Section-wrapTxt textType-txt fitToContent">
-			<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="form-small Newsletter text-center">
-				<input class="form-input form-newsletter-input Newsletter-name" type="text" name="name" id="name" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
-				<input class="form-input form-newsletter-input Newsletter-email" type="text" name="email" id="email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
-				<input type="hidden" name="list" value="ytAwOnCM1u2l9ak9zwB7bw">
-				<input class="form-newsletter-input NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
-			</form>
-		</div>
+			<div class="Section-wrapTxt textType-txt fitToContent">
+				<form action="http://sendy.kuem.me.uk/subscribe" method="POST" accept-charset="utf-8" class="form-small Newsletter text-center">
+					<input class="form-input form-newsletter-input Newsletter-name" type="text" name="name" id="name" placeholder="<?php echo $page->newsletterNamePlaceholder(); ?>">
+					<input class="form-input form-newsletter-input Newsletter-email" type="text" name="email" id="email" placeholder="<?php echo $page->newsletterMailPlaceholder(); ?>">
+					<input type="hidden" name="list" value="ytAwOnCM1u2l9ak9zwB7bw">
+					<input class="form-newsletter-input NewsletterInput-submit callToAction" type="submit" id="submit" name="submit" value="<?php echo $page->newsletterSubmitLabel(); ?>">
+				</form>
+			</div>
 
 		</section>
 <?php snippet('footer') ?>
