@@ -29,7 +29,16 @@
 		'https://www.prototypo.io' . $ogImage;
   ?>"/>
   <?php // The following link is just here to make sure wget downloads local thumbnails ?>
-  <link rel="image_src" type="image/png" href="<?php echo $ogImage; ?>">
+  <?php
+    if(isset($ogImage)){
+      if(trim($ogImage) !== ""){
+        ?>
+          <link rel="image_src" type="image/png" href="<?php echo $ogImage; ?>">
+        <?php
+      }
+    }
+  ?>
+
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
