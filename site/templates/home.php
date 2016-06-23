@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-<main class="home minHeight100" role="main">
+<main class="home minHeight100">
 
 	<div class="Section Section-homepage hide-for-print">
 		<h1 class="Section-homepageGetStartedLineTitle colorWhite marginBottom30">
@@ -16,7 +16,7 @@
 				<div class="DemoHome">
 
 					<div class="toggleSwitch hide" style="width:100%; height: 100%;">
-						<iframe id="videoplayer" data-src="//player.vimeo.com/video/140628893?badge=0&byline=0&color=49E4A9&autoplay=1" style="width:100%; height: 100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						<iframe id="videoplayer" data-src="//player.vimeo.com/video/140628893?badge=0&byline=0&color=49E4A9&autoplay=1" style="width:100%; height: 100%;" allowfullscreen></iframe>
 					</div>
 
 					<div class="toggleSwitch">

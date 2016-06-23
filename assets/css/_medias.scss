@@ -248,6 +248,7 @@ only screen and (min-resolution:144dpi) {
 		/* Can't use .hide-for-small-only because of display:inline-block ≠ display:block (foundation 5 current issue) */
 	}
 	.Section-homepageGetStartedLineTitle {
+		display: none;
 		margin-right: 15px;
 	}
 	.small-full-width {

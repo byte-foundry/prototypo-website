@@ -1,4 +1,4 @@
-<footer class="Footer colorLightBlack textSize-txt-medium textType-txt text-center cf" role="contentinfo">
+<footer class="Footer colorLightBlack textSize-txt-medium textType-txt text-center cf">
 
     <img class="Footer-logo" src="<?php echo url('assets/img/byteFoundryLogoWhite.svg'); ?>" alt="Byte-Foundry">
 
