@@ -1,11 +1,11 @@
 <?php snippet('header') ?>
 
-  <main class="PageContent FAQ" role="main">
+  <main class="PageContent FAQ">
 
     <header class="PageHeader text-left fitToContent">
       <a href="<?php echo url('faq'); ?>">
     		<h1 class="textType-title textSize-title-large"><?php echo $page->section1Title()->kirbytextSans(); ?></h1>
-        <h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h3>
+        <h2 class="faq_subtitle textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h2>
       </a>
 		</header>
 
@@ -19,7 +19,7 @@
 
         <header class="Question-header">
           <a class="Question-anchor textSize-txt-large textType-txt colorGray" href="<?php echo url('faq'); ?>#<?php echo $question->slug(); ?>">#</a>
-          <h1 class="Question-title textType-title textSize-txt-xlarge"><?php echo $question->title()->html() ?></h1>
+          <h3 class="Question-title textType-title textSize-txt-xlarge"><?php echo $question->title()->html() ?></h3>
         </header>
 
         <div class="Question-content textType-subtxt textSize-txt-small">

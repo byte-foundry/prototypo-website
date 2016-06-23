@@ -1,12 +1,12 @@
 <?php snippet('header') ?>
 
-  <main class="PageContent About" role="main">
+  <main class="PageContent About">
 
     <div class="fitToContent">
 
   		<header class="PageHeader text-center fitToContent">
     		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->section1Title()->kirbytextSans(); ?></h1>
-        <h3 class="textType-subtitle textSize-title-small colorBright"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h3>
+        <h2 class="aboutus_subtitle textType-subtitle textSize-title-small colorBright"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h2>
   		</header>
 
   		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
@@ -31,7 +31,7 @@
 
             <div class="MembersItem-bloc">
               <h3 class="MembersItem-name textType-subtitle textSize-title-medium"><?php echo $member['membername']; ?></h3>
-              <h3 class="MembersItem-job marginTop15"><?php echo $member['memberjob']; ?></h3>
+              <p class="MembersItem-job marginTop15"><?php echo $member['memberjob']; ?></p>
 
               <ul class="MembersItem-links text-center">
                 <?php if (!empty($member['memberquery'])) : ?>
@@ -115,7 +115,7 @@
   		<a class="Members-thankstobackers textType-txt marginTop30 colorBrightest text-center"
     		 style="background-image:url(<?php echo url('assets/img/ourAwesomeBackers.png'); ?>)"
          href="<?php echo $site->find('thanks')->url() ?>">
-    		<h1 class="textType-title textSize-title-small colorWhite"><?php echo $page->backersTitle()->kirbytextSans(); ?></h1>
+    		<h2 class="textType-title textSize-title-small colorWhite"><?php echo $page->backersTitle()->kirbytextSans(); ?></h2>
         <h3 class="textType-subtitle textSize-txt-xlarge colorBright"><?php echo $page->backersSubtitle()->kirbytextSans(); ?></h3>
   		</a>
 

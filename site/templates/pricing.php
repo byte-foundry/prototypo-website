@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<main class="PageContent Pricing showAnnualBilling" role="main">
+<main class="PageContent Pricing showAnnualBilling">
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->headerImg())->url(); ?>)">
 		<div class="PricingItemFree-wrap">
@@ -9,9 +9,9 @@
 				</h1>
 
 				<?php if($page->subtitle()->kirbytextSans()->isNotEmpty()): ?>
-					<h3 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+					<h2 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
 						<?php echo $page->subtitle()->kirbytextSans(); ?>
-					</h3>
+					</h2>
 				<?php endif ?>
 
 			</header>
@@ -20,9 +20,9 @@
 	<div class="fitToContent">
 
 		<?php if($page->descriptionPromo()->isNotEmpty()): ?>
-			<h3 class="txt-promo Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+			<h2 class="txt-promo Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
 				<?php echo $page->descriptionPromo(); ?>
-			</h3>
+			</h2>
 		<?php endif ?>
 
 		<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4 PricingTable marginTop60">
@@ -35,13 +35,13 @@
 
 					<div class="PricingItem-header">
 
-						<h3 class="PricingItem-packtitle textType-txt textSize-txt-small">
+						<h2 class="PricingItem-packtitle textType-txt textSize-txt-small">
 							<?php echo $pack['packname']; ?>
-						</h3>
+						</h2>
 
-						<h3 class="PricingItem-title textType-txt textSize-title-small colorSecondBackgroundColor">
+						<p class="PricingItem-title textType-txt textSize-title-small colorSecondBackgroundColor">
 							<?php if ($pack['price'] === ''): ?>
-								<img src="<?php echo url('assets/img/Enterprise.svg'); ?>">
+								<img src="<?php echo url('assets/img/Enterprise.svg'); ?>" alt="">
 							<?php else: ?>
 									<span class="PricingItem-priceBefore textSize-txt-large">€/$</span>
 
@@ -69,11 +69,11 @@
 									</span>
 
 							<?php endif; ?>
-						</h3>
+						</p>
 
-						<h3 class="textType-txt textSize-txt-small marginTop15 red">
+						<p class="textType-txt textSize-txt-small marginTop15 red">
 							<?php echo $pack['baseline']; ?>
-						</h3>
+						</p>
 
 					</div>
 
@@ -117,8 +117,8 @@
 			?>
 			<li class="">
 				<img  class="portrait" src="<?php echo $page->file($user['portrait'])->url(); ?>" alt="" />
-				<h2><?php echo $user['name']; ?></h2>
-				<h3><?php echo $user['infos']; ?></h3>
+				<h3><?php echo $user['name']; ?></h3>
+				<p class="testimonials_description"><?php echo $user['infos']; ?></p>
 				<p>“<?php echo $user['quote']; ?>”</p>
 			</li>
 			<?php endforeach; ?>
@@ -133,7 +133,7 @@
 			?>
 			<li>
 				<div class="">
-					<h2><?php echo $question['question']; ?></h2>
+					<p class="anyquestion_question"><?php echo $question['question']; ?></p>
 					<p><?php echo $question['answer']; ?></p>
 				</div>
 			</li>
