@@ -10,7 +10,7 @@ Section1subtitle: Tips and news about typography world, fonts, type design and P
 
 ----
 
-Section1txt:
+Section1txt: 
 
 ----
 
@@ -22,8 +22,8 @@ Ogimage: /content/1-blog/blog-screenshot.png
 
 ----
 
-Ctatext: Want to prototype your first typeface project?
+Ctatext: Want to design your first font project?
 
 ----
 
-Ctabtn: Feel free to try Prototypo!
+Ctabtn: Try Prototypo!
