@@ -16,7 +16,7 @@
 		?>
 	">
   <meta name="keywords" content="<?php echo $site->keywords()->html() ?>">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="og:url" content="https://www.prototypo.io/<?php if ( $page->uri() !== 'home' ) { echo $page->uri(); } ?>"/>
@@ -29,7 +29,16 @@
 		'https://www.prototypo.io' . $ogImage;
   ?>"/>
   <?php // The following link is just here to make sure wget downloads local thumbnails ?>
-  <link rel="image" type="image/png" href="<?php echo $ogImage; ?>">
+  <?php
+    if(isset($ogImage)){
+      if(trim($ogImage) !== ""){
+        ?>
+          <link rel="image_src" type="image/png" href="<?php echo $ogImage; ?>">
+        <?php
+      }
+    }
+  ?>
+
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -85,18 +94,18 @@
 
 
 
-  <header class="Header" role="banner">
-	<!--
-	  When we remove this line, we need to update:
-	  - _layout.sccs #405: s/118/78
-	  - _layout.scss #393: s/105/65
-	-->
-	<div class="show-for-large-up" style="text-align: center; font-size: 20px; line-height: 40px; background-color: #FBD373;">
-	  This week of development is sponsored by Paul Rouget.
-	</div>
+  <header class="Header">
+    <!--
+      When we remove this line, we need to update:
+      - _layout.sccs #405: s/118/78
+      - _layout.scss #393: s/105/65
+    -->
+    <div class="show-for-large-up" style="text-align: center; font-size: 20px; line-height: 40px; background-color: #FBD373;">
+      This week of development is sponsored by Paul Rouget.
+    </div>
 
 
-	<nav class="Nav" role="navigation">
+    <nav class="Nav">
 
 		<a href="<?php echo url('home'); ?>" class="Nav-logo">
 			<span class="Nav-logoPicto keep-styles-for-print"></span>

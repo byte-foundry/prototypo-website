@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-    <main class="main" role="main">
+    <main class="main">
         <section class="Section Section-parametricDesignTool">
 
             <div class="fitToContent">
@@ -17,29 +17,29 @@
 
 						<div class="marginTop60">
 							<h2>Show time!</h2>
-							<iframe src="https://player.vimeo.com/video/140628893?badge=0&byline=0&color=49E4A9" style="width:100%; height: 100%; min-height:300px;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<iframe src="https://player.vimeo.com/video/140628893?badge=0&byline=0&color=49E4A9" style="width:100%; height: 100%; min-height:300px;" allowfullscreen></iframe>
 						</div>
 
 						<div class="demo">
 							<h2>A quick demo</h2>
 							<div class="DemoControls" style="position: relative; height: auto; margin-left: -60px;">
 								<div class="DemoControls-PotentiometerItem">
-									<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
+									<img alt="" src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
 									<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
 								</div>
 
 								<div class="DemoControls-PotentiometerItem">
-									<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsContrast.svg'); ?>" class="DemoControls-PotentiometerPicto">
+									<img alt="" src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsContrast.svg'); ?>" class="DemoControls-PotentiometerPicto">
 									<input type="range" data-param="_contrast" class="DemoControls-Potentiometer" min="-2" max="-0.15" value="-1" step="0.01" />
 								</div>
 
 								<div class="DemoControls-PotentiometerItem">
-									<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
+									<img alt="" src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto">
 									<input type="range" data-param="serifHeight" class="DemoControls-Potentiometer" min="0" max="70" value="20" step="1" />
 								</div>
 
 								<div class="DemoControls-PotentiometerItem">
-									<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsSerif.svg'); ?>" class="DemoControls-PotentiometerPicto">
+									<img alt="" src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsSerif.svg'); ?>" class="DemoControls-PotentiometerPicto">
 									<input type="range" data-param="serifWidth" class="DemoControls-Potentiometer" min="0" max="100" value="65" step="1" />
 								</div>
 							</div><!-- .DemoControls -->

@@ -4,6 +4,7 @@ $(function() {
 	}
 
 	/* FAQ Code */
+	$('.Question-content').hide();
 	$('.Question-header').not('.Question-anchor').on('click', function() {
 		$(this).parent().find('.Question-content').slideToggle(200);
 	});

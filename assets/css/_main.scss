@@ -66,6 +66,16 @@ a {
 	margin-bottom: 60px;
 }
 
+// ajout martin
+.Section-parametricDesignToolSubtitle,
+.Section-featuresSubtitle,
+.Section-subscribed .textType-subtitle,
+.Section-newsletter .textType-subtitle,
+.Section-homepageDiscoverFeaturesLine .textType-subtitle,
+.aboutus_subtitle,.faq_subtitle{
+	font-weight: 400;
+}
+
 header {
 	.logout {
 		margin-left: 15px;
@@ -119,20 +129,30 @@ header {
 }
 .Section-homepageWrap {
 	position: absolute;
-	margin-top: -390px;
+	margin-top: -320px;
 	height: 600px;
 	top: 50%;
 	left: 0;
 	right: 0;
 }
+iframe{
+	border: none;
+}
 .Section-homepageGetStartedLine {
 	margin: 30px 0 20px;
 }
 .Section-homepageGetStartedLineTitle {
-	display: inline-block;
+	display: block;
 	font-family: $mainFont;
 	font-size: 24px;
 	font-weight: bold;
+	text-align: center;
+}
+.Section-homepageGetStartedLineTitle .internal_header {
+	font-size: 22px;
+	font-style: italic;
+	font-weight: 400;
+	margin: 0 15px;
 }
 .Section-homepageGetStartedLineSubtitle {
 	display: inline-block;
@@ -1236,12 +1256,12 @@ header {
 	right: 17px;
 }
 .Question-title {
+	font-weight: 700;
 	margin: 0;
 }
 .Question-content {
 	padding: 15px 40px 15px 70px;
 	background: $blocSecondBackgroundColor;
-	display: none;
 }
 
 /*

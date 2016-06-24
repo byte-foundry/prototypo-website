@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-	<main class="PageContent Blog" role="main">
+	<main class="PageContent Blog">
 
 	<header class="PageHeader text-left fitToContent">
 		<a href="<?php echo url('blog'); ?>">
