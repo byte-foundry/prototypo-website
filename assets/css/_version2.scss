@@ -157,6 +157,9 @@ main.Blog {
 	.section-action {
 		margin-top: 100px;
 		background-color: $colorWhite;
+		border-radius: 4px;
+		background-image: url("/assets/img/prototypo.svg");
+		background-size: cover;
 		padding: 40px;
 		text-align: center;
 

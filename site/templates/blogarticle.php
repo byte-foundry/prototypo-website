@@ -83,7 +83,7 @@
 
 		<div class="section-action">
 			<h3 class="textType-subtitle colorBrightest textSize-txt-xlarge"><?php echo $page->parent()->ctaText(); ?></h3>
-			<a href="../pricing" class="NewsletterInput-submit callToAction center"><?php echo $page->parent()->ctaBtn(); ?></a>
+			<a href="<?php echo url('pricing'); ?>" class="NewsletterInput-submit callToAction center"><?php echo $page->parent()->ctaBtn(); ?></a>
 		</div>
 
 
