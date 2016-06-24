@@ -24,9 +24,9 @@
   <meta property="og:type" content="website"/>
   <meta property="og:description" content="<?php echo $page->ogDescription(); ?>"/>
   <meta property="og:image" content="<?php
-    $ogImage = $page->ogImage(); echo strpos( $ogImage, 'http:' ) === 0 ?
-        $ogImage :
-        'https://www.prototypo.io' . $ogImage;
+	$ogImage = $page->ogImage(); echo strpos( $ogImage, 'http:' ) === 0 ?
+		$ogImage :
+		'https://www.prototypo.io' . $ogImage;
   ?>"/>
   <?php // The following link is just here to make sure wget downloads local thumbnails ?>
   <link rel="image" type="image/png" href="<?php echo $ogImage; ?>">
@@ -50,22 +50,22 @@
   <meta name="theme-color" content="#232323">
 
   <?php
-    snippet( c::get('env') . '/styles' );
+	snippet( c::get('env') . '/styles' );
   ?>
 
 </head>
 <body class="<?= $page->id(); ?>">
 <script>
   WebFontConfig = {
-    google: { families: [ 'Roboto+Slab:300:latin', 'PT+Sans:400,400italic,700italic,700:latin' ] },
-    timeout: 2000
+	google: { families: [ 'Roboto+Slab:300:latin', 'PT+Sans:400,400italic,700italic,700:latin' ] },
+	timeout: 2000
   };
   (function() {
-    var wf = document.createElement('script');
-    wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.async = 1;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
+	var wf = document.createElement('script');
+	wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	wf.async = 1;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(wf, s);
   })();
 </script>
 
@@ -79,65 +79,66 @@
   ga('send', 'pageview');
 
   window.addEventListener('error', function(e) {
-    ga( 'send', 'event', 'js-error', e.message, e.filename + ':  ' + e.lineno );
+	ga( 'send', 'event', 'js-error', e.message, e.filename + ':  ' + e.lineno );
   });
 </script>
 
 
 
   <header class="Header" role="banner">
-    <!--
-      When we remove this line, we need to update:
-      - _layout.sccs #405: s/118/78
-      - _layout.scss #393: s/105/65
-    -->
-    <div class="show-for-large-up" style="text-align: center; font-size: 20px; line-height: 40px; background-color: #FBD373;">
-      This week of development is sponsored by Paul Rouget.
-    </div>
+	<!--
+	  When we remove this line, we need to update:
+	  - _layout.sccs #405: s/118/78
+	  - _layout.scss #393: s/105/65
+	-->
+	<div class="show-for-large-up" style="text-align: center; font-size: 20px; line-height: 40px; background-color: #FBD373;">
+	  This week of development is sponsored by Paul Rouget.
+	</div>
 
 
-    <nav class="Nav" role="navigation">
+	<nav class="Nav" role="navigation">
 
 		<a href="<?php echo url('home'); ?>" class="Nav-logo">
 			<span class="Nav-logoPicto keep-styles-for-print"></span>
 			<span class="Nav-logoInner keep-styles-for-print">Prototypo</span>
 		</a>
 
-        <div id="header-container" class="right">
-            <div class="header">
-                <div class="header-window">
-                    <div class="header-part">
-                        <div>
-                            <a class="login" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signin" target="_blank" >Log in</a>
-                        </div>
-                        <div>
-                            <a class="callToAction header-part-button" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signup" target="_blank" >Create your first font!</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div id="header-container" class="right">
+			<div class="header">
+				<div class="header-window">
+					<div class="header-part">
+						<div>
+							<a class="login" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signin" target="_blank" >Log in</a>
+						</div>
+						<div>
+							<!-- <a class="callToAction header-part-button" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signup" target="_blank" >Create your first font!</a> -->
+							<a class="callToAction header-part-button" href="pricing" target="_blank" >Create your first font!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <?php snippet('menu') ?>
+		<?php snippet('menu') ?>
 
   		<div class="Social hide-for-small-only">
   			<a href="<?php echo $site->facebook()->html() ?>" target="_blank" class="Social-item Social-itemFacebook">
-    			<span class="show-for-sr">Facebook</span>
-    		</a>
+				<span class="show-for-sr">Facebook</span>
+			</a>
 
-    		<a href="<?php echo $site->instagram()->html() ?>" target="_blank" class="Social-item Social-itemInstagram">
-      		        <span class="show-for-sr">Instagram</span>
-            </a>
+			<a href="<?php echo $site->instagram()->html() ?>" target="_blank" class="Social-item Social-itemInstagram">
+	  				<span class="show-for-sr">Instagram</span>
+			</a>
 
 			<a href="<?php echo $site->twitter()->html() ?>" target="_blank" class="Social-item Social-itemTwitter">
-      		        <span class="show-for-sr">Twitter</span>
-            </a>
+	  				<span class="show-for-sr">Twitter</span>
+			</a>
   		</div>
 
-    </nav>
+	</nav>
 
-    <button id="toggleMainNav" class="ToggleSwitch ToggleSwitch-hamburgerToCross Nav-hamburgerMenuHandler">
-      <span class="ToggleSwitch-inner">Toggle menu</span>
-    </button>
+	<button id="toggleMainNav" class="ToggleSwitch ToggleSwitch-hamburgerToCross Nav-hamburgerMenuHandler">
+	  <span class="ToggleSwitch-inner">Toggle menu</span>
+	</button>
 
   </header>

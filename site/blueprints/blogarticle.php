@@ -24,7 +24,8 @@ fields:
 
   ogImage:
     label: Page thumbnail
-    type:  text
+    type:  select
+    options: files
 
   tags:
     label: Tags

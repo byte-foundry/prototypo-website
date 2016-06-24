@@ -2,60 +2,93 @@
 
   <main class="PageContent Blog" role="main">
 
-    <header class="PageHeader text-left fitToContent">
-      <a href="<?php echo url('blog'); ?>">
-    		<h1 class="textType-title textSize-title-large"><?php echo $page->parent()->section1Title()->kirbytextSans(); ?></h1>
-        <h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->parent()->section1Subtitle()->kirbytextSans(); ?></h3>
-      </a>
-		</header>
+	<header class="PageHeader text-left fitToContent">
+		<a href="<?php echo url('blog'); ?>">
+			<h1 class="textType-title textSize-title-large"><?php echo $page->parent()->section1Title()->kirbytextSans(); ?></h1>
+			<h3 class="textType-subtitle textSize-title-small colorDark"><?php echo $page->parent()->section1Subtitle()->kirbytextSans(); ?></h3>
+		</a>
+	</header>
 
-    <div class="fitToContent">
+	<div class="fitToContent">
 
-      <nav class="BlogPagination BlogPagination-before">
-        <a class="BlogPagination-item BlogPagination-back textType-txt textSize-txt-small" href="<?php echo url('blog'); ?>">Back to blog</a>
-      </nav>
+		<?php
+			$articles = $page->parent();
+			if($tag = param('tag')) {
+				$articles = $articles->filterBy('tags', urldecode($tag), ',');
+			}
+			$articles = $articles->paginate(1);
+		?>
+
+		<?php if($articles->pagination()->hasPages()): ?>
+			<nav class="BlogPagination BlogPagination-before">
+				<?php if($page->hasNextVisible()): ?>
+					<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small" href="<?php echo $page->nextVisible()->url() ?>">newer post</a>
+				<?php endif ?>
+				<?php if($page->hasPrevVisible()): ?>
+					<a class="BlogPagination-item right textType-txt textSize-txt-small" href="<?php echo $page->prevVisible()->url() ?>">older post</a>
+				<?php endif ?>
+			</nav>
+		<?php endif ?>
+
+		<nav class="BlogPagination BlogPagination-before">
+		<a class="BlogPagination-item left BlogPagination-back textType-txt textSize-txt-small" href="<?php echo url('blog'); ?>">Back to blog</a>
+		</nav>
 
   		<article class="Article">
 
-        <header class="Article-header">
-          <a class="Article-titleLink" href="<?php echo $page->url(); ?>">
-            <h1 class="Article-title textType-title textSize-title-small"><?php echo $page->title()->html() ?></h1>
-            <h3 class="Article-subtitle textType-subtitle textSize-txt-xlarge"><?php echo $page->subtitle()->kirbytext(); ?></h3>
-          </a>
+			<header class="Article-header">
+				<h1 class="Article-title textType-title textSize-title-small"><?php echo $page->title()->html() ?></h1>
+				<h3 class="Article-subtitle textType-subtitle textSize-txt-xlarge"><?php echo $page->subtitle()->kirbytext(); ?></h3>
 
-          <div class="Article-infos textType-txt textSize-txt-small">
-            <?php echo $page->date('F j, Y') ?>
+				<div class="Article-infos textType-txt textSize-txt-small">
+				<?php echo $page->date('F j, Y') ?>
 
-            <?php if ( $page->tags() ) : $tags = explode(',',$page->tags()); ?>
+				<?php if ( $page->tags() ) : $tags = explode(',',$page->tags()); ?>
 
-            <ul class="Article-tags">
-              <?php foreach($tags as $tag): ?>
-              <li class="Article-tag">
-                <a class="Article-tagLink colorWhite" href="<?php echo url('blog/tag:' . $tag)?>">
-                  <?php echo html($tag) ?>
-                </a>
-              </li>
-              <?php endforeach ?>
-            </ul>
+				<ul class="Article-tags">
+					<?php foreach($tags as $tag): ?>
+						<li class="Article-tag">
+					<a class="Article-tagLink colorWhite" href="<?php echo url('blog/tag:' . $tag)?>">
+						<?php echo html($tag) ?>
+					</a>
+					</li>
+					<?php endforeach ?>
+				</ul>
 
-            <?php endif; ?>
+				<?php endif; ?>
 
-          </div>
-        </header>
+				</div>
+			</header>
 
-        <div class="Article-content textType-txt textSize-txt-medium">
+			<div class="Article-content textType-txt textSize-txt-medium">
+				<?php echo nl2br($page->contentarticle()->kirbytext()); ?>
+			</div>
 
-          <?php echo nl2br($page->contentarticle()->kirbytext()); ?>
-        </div>
+			<div class="Disqus text-center textType-txt textSize-txt-small colorDark" id="Disqus">
+				<?php snippet('disqus', array('disqus_shortname' => 'prototypoapp', 'disqus_developer' => true)) ?>
+			</div>
 
-        <div class="Disqus text-center textType-txt textSize-txt-small colorDark" id="Disqus">
-          <?php snippet('disqus', array('disqus_shortname' => 'prototypoapp', 'disqus_developer' => true)) ?>
-        </div>
+		</article>
 
-      </article>
+		<?php if($articles->pagination()->hasPages()): ?>
+			<nav class="BlogPagination BlogPagination-after">
+				<?php if($page->hasNextVisible()): ?>
+					<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small" href="<?php echo $page->nextVisible()->url() ?>">newer post</a>
+				<?php endif ?>
+				<?php if($page->hasPrevVisible()): ?>
+					<a class="BlogPagination-item right textType-txt textSize-txt-small" href="<?php echo $page->prevVisible()->url() ?>">older post</a>
+				<?php endif ?>
+			</nav>
+		<?php endif ?>
 
-    </div>
+		<div class="section-action">
+			<h3 class="textType-subtitle colorBrightest textSize-txt-xlarge"><?php echo $page->parent()->ctaText(); ?></h3>
+			<a href="../pricing" class="NewsletterInput-submit callToAction center"><?php echo $page->parent()->ctaBtn(); ?></a>
+		</div>
 
-  </main>
+
+	</div>
+
+</main>
 
 <?php snippet('footer') ?>

@@ -2,7 +2,7 @@ Title: The new Prototypo is here!
 
 ----
 
-Tags: update,beta
+Tags: beta,release
 
 ----
 
@@ -36,4 +36,4 @@ Ogdescription: The new Prototypo is here. We've rebuilt it from scratch, adding 
 
 ----
 
-Ogimage: https://ksr-ugc.imgix.net/assets/004/461/666/5ed96e49333556d753cc17a561a53533_original.gif
+Ogimage: 

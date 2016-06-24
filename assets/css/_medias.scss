@@ -70,12 +70,17 @@ only screen and (min-resolution:144dpi) {
 }
 @media #{$large-down} {
 
-	// #header-container {
-	// 	margin-right: 40px;
-	// }
-	// .header.is-online {
-	// 	width: 290px;
-	// }
+	.Article-list {
+		display: flex;
+		flex-direction: row;
+
+		.Articles {
+			flex: 0 0 70%;
+		}
+		.cloudTags {
+			flex: 0 0 30%;
+		}
+	}
 
 	/*@media only screen and (max-width:910px) {*/
 	.Article-leaveComment {
@@ -166,6 +171,18 @@ only screen and (min-resolution:144dpi) {
 	}
 }
 @media #{$medium-down} {
+
+	.Article-list {
+		display: flex;
+		flex-direction: row;
+
+		.Articles {
+			flex: 0 0 100%;
+		}
+		.cloudTags {
+			display: none;
+		}
+	}
 
 	.Article-content h2 {
 		font-size: 22px;

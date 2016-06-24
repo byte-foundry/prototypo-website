@@ -40,3 +40,15 @@ fields:
   section1Txt:
     type: textarea
     placeholder: Text content of the section
+
+  ctaText:
+    label: CTA text at bottom of each article
+    type: text
+    placeholder: Want to prototype your first project?
+    default: Want to prototype your first project?
+
+  ctaBtn:
+    label: CTA button at bottom of each article
+    type: text
+    placeholder: Try Prototypo!
+    default: Try Prototypo!

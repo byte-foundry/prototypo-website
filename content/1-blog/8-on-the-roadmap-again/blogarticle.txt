@@ -87,4 +87,12 @@ Date: 2014-09-19
 
 ----
 
-Tags: design principle,v1
+Tags: design principle,beta
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 

@@ -150,4 +150,16 @@ main.Blog {
 		}
 
 	}
+
+	.section-action {
+		margin-top: 100px;
+		background-color: $colorWhite;
+		padding: 40px;
+		text-align: center;
+
+		h3 {
+			color: $secondBackgroundColor;
+			margin-bottom: 20px;
+		}
+	}
 }

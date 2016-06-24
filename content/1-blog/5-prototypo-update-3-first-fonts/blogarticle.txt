@@ -2,7 +2,7 @@ Title: Prototypo Update #3, First fonts
 
 ----
 
-Tags: update,beta
+Tags: beta
 
 ----
 
@@ -29,3 +29,11 @@ The road to 1.0 consists in reducing the number of extra steps and tools require
 ### Public beta is coming
 
 A limited number of beta invites have been sent to make sure that Prototypo is not only useful but also easy to use, before it is released. Work is already underway to address early feedback, and as soon as the main issues are solved, the focus will shift on preparing an effective campaign to fund the development of Prototypo 1.0
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 

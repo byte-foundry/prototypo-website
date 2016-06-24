@@ -6,11 +6,11 @@ Ogdescription: In 2014, we launched a Kickstarter campaign to keep developing Pr
 
 ----
 
-Ogimage:
+Ogimage: paul-rouget.png
 
 ----
 
-Tags: glyphs,prototypo,user
+Tags: glyphs,user
 
 ----
 
@@ -22,7 +22,7 @@ Subtitle: In 2014, we launched a Kickstarter campaign to keep developing Prototy
 
 ----
 
-Contentarticle:
+Contentarticle: 
 
 <em>In 2014, we launched a Kickstarter campaign to keep developing Prototypo. It succeeded beyond our expectations, creating an international community around the project. Among our 1670 wonderful backers, five of them deserve a special shoutout for their distinguished contribution: one of them sponsored code that powers the application, and four sponsored glyphs that have been integrated to our last brainchild, Prototypo Elzevir!</em>
 <strong>Paul Rouget</strong> is a humble but talented developer and Open Web advocate. You might not know him, but we can guarantee his voice and code has positively affected the web you browse and enjoy today. Paul sponsored two entire weeks of development!

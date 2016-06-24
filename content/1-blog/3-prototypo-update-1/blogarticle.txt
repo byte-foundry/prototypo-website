@@ -2,7 +2,7 @@ Title: Prototypo Update #1
 
 ----
 
-Tags: ui,dev
+Tags: ui,team
 
 ----
 
@@ -50,3 +50,11 @@ The humans have been hard at work this week and they didn’t have much time to 
 There is still a lot of work to do before having something worth putting in the hands of users. But the team has been invited to present Prototypo on December 18th at Paris HTML5 meetup. It means that a usable version has to be produced by this date. Parisians are invited to meet the team and be the first to give the app a try. The beta and the crowd-funding campaign will follow shortly after (although December 24th to January 1st probably isn’t a good timing to get people’s attention ;^).
 
 Typography is an effervescent field and we have a lot of ideas for Prototypo 1.0 and beyond. We’ll unveil some of them in the coming weeks ; we hope that you’ll be surprised and as excited as we are :^)
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: 

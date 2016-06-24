@@ -6,16 +6,24 @@ Section1title: Prototypo blog
 
 ----
 
-Section1subtitle: Stay tuned!
+Section1subtitle: Tips and news about typography world, fonts, type design and Prototypo!
 
 ----
 
-Section1txt: 
+Section1txt:
 
 ----
 
-Ogdescription: We regularly write articles about the improvements we make to Prototypo, and we also like to talk about design, technical and business topics related to font creation.
+Ogdescription: Prototypo Blog: Keep in touch with us and the typography world, don't miss any of our users stories and learn how to get the most out of Prototypo, your online font creator!
 
 ----
 
 Ogimage: /content/1-blog/blog-screenshot.png
+
+----
+
+Ctatext: Want to prototype your first typeface project?
+
+----
+
+Ctabtn: Feel free to try Prototypo!

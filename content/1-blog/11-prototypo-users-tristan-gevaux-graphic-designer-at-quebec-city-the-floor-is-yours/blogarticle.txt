@@ -6,11 +6,11 @@ Ogdescription: We talked about graphic design, font creation and Prototypo with 
 
 ----
 
-Ogimage:
+Ogimage: 
 
 ----
 
-Tags: interview,user,graphic design,font design
+Tags: interview,user,font design
 
 ----
 
@@ -22,7 +22,7 @@ Subtitle: We talked about graphic design, font creation and Prototypo with Trist
 
 ----
 
-Contentarticle:
+Contentarticle: 
 
 (image: tristangevaux-1.jpg)
 <span style="font-weight: bold">Prototypo: Hi Tristan, can you introduce yourself?</span><br><span style="font-weight: bold">Tristan Gevaux:</span> Tristan Gevaux, I’m a graphic designer in Quebec City. I work for an advertising agency and I also undertake projects as a freelancer. Basically, I’m not a font designer but a print/branding designer. Since I’m in Quebec I work more on web design and user interface.
