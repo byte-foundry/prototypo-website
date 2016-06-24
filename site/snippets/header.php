@@ -26,7 +26,7 @@
   <meta property="og:image" content="<?php
 	$ogImage = $page->ogImage(); echo strpos( $ogImage, 'http:' ) === 0 ?
 		$ogImage :
-		'https://www.prototypo.io' . $ogImage;
+		'https://www.prototypo.io/' . $ogImage;
   ?>"/>
   <?php // The following link is just here to make sure wget downloads local thumbnails ?>
   <?php

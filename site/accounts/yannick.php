@@ -9,10 +9,10 @@ password: >
 language: en
 role: admin
 history:
+  - home
   - blog
   - blog/a-glyph-parade-for-our-top-backers
   - >
     blog/prototypo-update-4-overcoming-dilemmas
   - >
     blog/prototypo-users-tristan-gevaux-graphic-designer-at-quebec-city-the-floor-is-yours
-  - blog/on-the-roadmap-again

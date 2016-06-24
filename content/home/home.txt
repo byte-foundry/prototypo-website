@@ -200,7 +200,7 @@ Ogdescription: Prototypo is an online application that allows to create beautifu
 
 ----
 
-Ogimage: /content/home/home-screenshot.png
+Ogimage: content/home/home-screenshot.png
 
 ----
 
