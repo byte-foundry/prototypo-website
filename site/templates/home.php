@@ -106,7 +106,7 @@
 	<section class="Section Section-parametricDesignTool colorDarkest text-center">
 		<header class="SectionHeader fitToContent">
 			<h2 class="textType-title textSize-title-large"><?php echo $page->section1Title()->kirbytextSans(); ?></h2>
-			<h3 class="Section-parametricDesignToolSubtitle textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h3>
+			<p class="Section-parametricDesignToolSubtitle textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></p>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorDarkest fitToContent">
@@ -140,7 +140,7 @@
 					<div class="Section-fontsView colorDarkest">
 						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[0]['fontfile']); ?>" alt="<?php echo $fonts[0]['fontname']; ?>" />
 					</div>
-					<h4 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0]['fontname']; ?></h4>
+					<h3 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[0]['fontname']; ?></h3>
 
 					<div class="Section-fontsInfos">
 						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[0]['fontdescription']; ?></div>
@@ -159,7 +159,7 @@
 					<div class="Section-fontsView colorDarkest">
 						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[1]['fontfile']); ?>" alt="<?php echo $fonts[1]['fontname']; ?>" />
 					</div>
-					<h4 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1]['fontname']; ?></h4>
+					<h3 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[1]['fontname']; ?></h3>
 
 					<div class="Section-fontsInfos">
 						<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[1]['fontdescription']; ?></div>
@@ -178,7 +178,7 @@
 					<div class="Section-fontsView colorDarkest">
 						<img src="<?php echo url('/content/'.$page->dirname().'/'.$fonts[2]['fontfile']); ?>" alt="<?php echo $fonts[2]['fontname']; ?>" />
 					</div>
-					<h4 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2]['fontname']; ?></h4>
+					<h3 class="Section-fontsName textType-subtitle textSize-txt-xlarge colorDarkest"><?php echo $fonts[2]['fontname']; ?></h3>
 
 				<div class="Section-fontsInfos">
 					<div class="Section-fontsDescription textType-subtxt textSize-txt-medium colorDark"><?php echo $fonts[2]['fontdescription']; ?></div>
@@ -203,7 +203,7 @@
 
 		<header class="SectionHeader text-left fitToContent">
 			<h2 class="textType-title textSize-title-large colorLighterGray small-only-text-center"><?php echo $page->section2Title()->kirbytextSans(); ?></h2>
-			<h3 class="Section-featuresSubtitle textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytextSans(); ?></h3>
+			<p class="Section-featuresSubtitle textType-subtitle textSize-title-small colorLightGray small-only-text-center"><?php echo $page->section2Subtitle()->kirbytextSans(); ?></p>
 		</header>
 
 		<div class="Section-wrapTxt textType-txt fitToContent">
@@ -219,7 +219,7 @@
 						<div class="Section-featuresPictoWrap">
 							<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto" alt="">
 						</div>
-						<h4 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large <?php if ( isset( $feature['featuredone'] ) ) echo ' done' ?>"><?php echo $feature['featurename']; ?></h4>
+						<h3 class="Section-featuresTitle colorWhite textType-subtitle textSize-txt-large <?php if ( isset( $feature['featuredone'] ) ) echo ' done' ?>"><?php echo $feature['featurename']; ?></h3>
 
 						<div class="Section-featuresDescription textType-subtxt textSize-txt-small colorBrightest">
 							<?php echo $feature['featuredescription']; ?>
@@ -229,9 +229,9 @@
 				<?php endforeach; ?>
 			</ul>
 
-			<div class="Section-featuresDescription textType-subtxt textSize-txt-xlarge text-center colorBrightest marginTop30 marginBottom30">
+			<h3 class="Section-featuresDescription textType-subtxt textSize-txt-xlarge text-center colorBrightest marginTop30 marginBottom30">
 				<?php echo $page->section2Text()->kirbytextSans(); ?>
-			</div>
+			</h3>
 
 		</div>
 
