@@ -64,7 +64,7 @@
 							<?php
 								if( is_object($article->image()) ):
 									if( $article->ogImage() != "" ):
-										echo '<div class="Article-preview" style="background-image:url(' . $article->image($article->ogImage())->url() . ')"></div>';
+										echo '<div class="Article-preview" style="background-image:url(' . $article->image($article->ogImage()) . ')"></div>';
 									else:
 										echo '<div class="Article-preview" style="background-image:url(' . $article->image()->url() . ')"></div>';
 									endif;
