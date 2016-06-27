@@ -111,4 +111,4 @@ Ogdescription: Prototypo is a user-friendly parameter-based font generator being
 
 ----
 
-Ogimage: content/3-about/about-screenshot.png
+Ogimage: about-screenshot.png

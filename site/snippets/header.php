@@ -23,22 +23,20 @@
   <meta property="og:title" content="<?php echo $page->title(); ?>"/>
   <meta property="og:type" content="website"/>
   <meta property="og:description" content="<?php echo $page->ogDescription(); ?>"/>
-  <meta property="og:image" content="<?php
-	$ogImage = $page->ogImage(); echo strpos( $ogImage, '/' ) !== false ?
-		$ogImage :
-		$page->url() . '/' . $ogImage;
-  ?>"/>
-  <?php // The following link is just here to make sure wget downloads local thumbnails ?>
   <?php
-    if(isset($ogImage)){
-      if(trim($ogImage) !== ""){
-        ?>
-          <link rel="image_src" type="image/png" href="<?php echo $ogImage; ?>">
-        <?php
-      }
+    $ogImage = $page->ogImage();
+    if ( isset($ogImage) && trim($ogImage) !== '' ) {
+        $ogImage = '/content/' . $page->diruri() . '/' . $ogImage;
+    }
+    else {
+        $ogImage = '';
     }
   ?>
-
+  <meta property="og:image" content="<?php echo $ogImage; ?>"/>
+  <?php // The following link is just here to make sure wget downloads local thumbnails ?>
+  <?php if ( $ogImage !== '' ): ?>
+    <link rel="image_src" type="image/png" href="<?php echo $ogImage; ?>">
+  <?php endif; ?>
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">

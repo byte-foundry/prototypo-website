@@ -25,4 +25,4 @@ Ogdescription: If you have a question, chances are you will find the answer on t
 
 ----
 
-Ogimage: content/4-faq/faq-screenshot.png
+Ogimage: faq-screenshot.png
