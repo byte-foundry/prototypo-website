@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - home
   - blog
+  - home
   - blog/a-glyph-parade-for-our-top-backers
   - >
     blog/prototypo-update-4-overcoming-dilemmas

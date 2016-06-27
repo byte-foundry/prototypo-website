@@ -24,9 +24,9 @@
   <meta property="og:type" content="website"/>
   <meta property="og:description" content="<?php echo $page->ogDescription(); ?>"/>
   <meta property="og:image" content="<?php
-	$ogImage = $page->ogImage(); echo strpos( $ogImage, 'http:' ) === 0 ?
+	$ogImage = $page->ogImage(); echo strpos( $ogImage, '/' ) !== false ?
 		$ogImage :
-		'https://www.prototypo.io/' . $ogImage;
+		$page->url() . '/' . $ogImage;
   ?>"/>
   <?php // The following link is just here to make sure wget downloads local thumbnails ?>
   <?php

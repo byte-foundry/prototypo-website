@@ -10,7 +10,7 @@ Section1subtitle: Tips and news about typography world, fonts, type design and P
 
 ----
 
-Section1txt:
+Section1txt: 
 
 ----
 
@@ -18,7 +18,7 @@ Ogdescription: Prototypo Blog: Keep in touch with us and the typography world, d
 
 ----
 
-Ogimage: content/1-blog/blog-screenshot.png
+Ogimage: blog-screenshot.png
 
 ----
 
