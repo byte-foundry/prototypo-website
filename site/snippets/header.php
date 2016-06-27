@@ -93,15 +93,14 @@
 
 
   <header class="Header">
-    <!--
-      When we remove this line, we need to update:
-      - _layout.sccs #405: s/118/78
-      - _layout.scss #393: s/105/65
-    -->
-    <div class="show-for-large-up" style="text-align: center; font-size: 20px; line-height: 40px; background-color: #FBD373;">
-      This week of development is sponsored by Paul Rouget.
-    </div>
-
+	<!--
+		When we remove this line, we need to update:
+		- _layout.sccs #405: s/118/78
+		- _layout.scss #393: s/105/65
+		<div class="show-for-large-up" style="text-align: center; font-size: 20px; line-height: 40px; background-color: #FBD373;">
+			This week of development is sponsored by Paul Rouget.
+		</div>
+	-->
 
     <nav class="Nav">
 
