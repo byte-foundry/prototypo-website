@@ -127,7 +127,7 @@
 			<ul class="Article-tags">
 				<?php foreach($tags as $tag): ?>
 					<li class="Article-tag">
-						<a class="Article-tagLink colorWhite" href="<?php echo url('blog/tag:' . $tag)?>">
+						<a class="Article-tagLink colorWhite" href="<?php echo url('/blog/tag:' . $tag)?>">
 							<?php echo html($tag) ?>
 						</a>
 					</li>
