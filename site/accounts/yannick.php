@@ -9,10 +9,10 @@ password: >
 language: en
 role: admin
 history:
+  - >
+    blog/prototypo-users-jo-klaps-freelance-designer-at-brussels-the-floor-is-yours
   - blog
   - home
   - blog/a-glyph-parade-for-our-top-backers
   - >
     blog/prototypo-update-4-overcoming-dilemmas
-  - >
-    blog/prototypo-users-tristan-gevaux-graphic-designer-at-quebec-city-the-floor-is-yours

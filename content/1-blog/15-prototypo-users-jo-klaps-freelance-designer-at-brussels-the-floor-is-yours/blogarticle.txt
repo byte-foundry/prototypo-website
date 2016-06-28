@@ -6,7 +6,7 @@ Ogdescription: Jo Klaps, a freelance designer from Brussels gave us a moment to 
 
 ----
 
-Ogimage: 
+Ogimage: ode-ice.jpg
 
 ----
 
@@ -24,12 +24,24 @@ Subtitle: Jo Klaps, a freelance designer from Brussels gave us a moment to answe
 
 Contentarticle: 
 
-<strong>Hi Jo, can you introduce yourself?</strong><br>Hello, my name is Jo Klaps. I’m a freelance designer since 1988. Most of my work is about spatial design and graphic design. The name of my company is <strong>Studio Brussels Lof</strong> (more information: <a href="http://www.brusselslof.be/" target="_blank"> www.brusselslof.be</a> ). I also teach Scenography at the University of Hasselt (UHasselt, Belgium)
+*That's the kind of graphic designer we really love at Prototypo: always playing with letters, from experimental shapes to vernacular alphabets! *
 
-<strong>You’re more a graphic designer than a typedesigner?</strong><br>I’m mostly a graphic designer, but I love old fonts that I find on buildings, graves or monuments. I try to save them with my project <a href="http://www.brusselslof.be/?page_id=1587" target="_blank">Fontrescue</a>. I take pictures of these fonts and I collect them in an online photobook. I also love to create fonts with original materials like ice, chocolate or plaster.
+(image: Fontrescue-home.jpg)
+<legend>Home page of the vernacular project: Fontrescue</legend>
+
+<strong>Hi Jo, can you introduce yourself?</strong><br>Hello, my name is Jo Klaps. I’m a freelance designer since 1988. Most of my work is about spatial design and graphic design. The name of my company is (link: http://www.brusselslof.be/ text: Studio Brussels Lof popup: yes). I also teach Scenography at the University of Hasselt (UHasselt, Belgium)
+
+<strong>You’re more a graphic designer than a typedesigner?</strong><br>I’m mostly a graphic designer, but I love old fonts that I find on buildings, graves or monuments. I try to save them with my project (link: http://www.brusselslof.be/?page_id=1587 text: Fontrescue popup: yes). I take pictures of these fonts and I collect them in an online photobook. I also love to create fonts with original materials like ice, chocolate or plaster.
+
+(image: Fontrescue.jpg)
+<legend>LEVENSGEVAAR alphabet</legend>
 
 <strong>Have you allready drawn a font before using Prototypo? How did you do?</strong><br>Yes I did. I used Illustrator and imported the design into a font editor.
 >I love to create fonts with original materials like ice, chocolate or plaster
+
+(image: ode-2.jpg)
+(image: ode-1.jpg)
+<legend>Posters for the "One Day Expo" @ BLIDS</legend>
 
 <strong>For what purpose did you need your own font?</strong><br>I created a font for a brochure called EXIT, a document about student projects.
 
@@ -45,3 +57,5 @@ Contentarticle:
 <strong>How did Prototypo help you?</strong><br>Prototypo is very easy to use and intuitive. The app simply allows creating most of the glyphs in the same style. I wish I had more fonts to start with, but I’ll surely keep using Prototypo for my futur font projects.
 
 <strong>You told us that you’re also a teacher. Do you think Prototypo could be a good tool to learn the basics of typography?</strong><br>I use it with my students. Prototypo makes them think about all the different parts of a font. You can compare a font with a piece of furniture. It consists of different parts that need each other to be really useful.
+
+Thank you Jo!

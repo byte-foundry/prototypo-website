@@ -1113,11 +1113,12 @@ iframe{
 		color: $secondBackgroundColor;
 
 		&:before {
-			content: "“";
+			content: "«";
+			font-family: sans-serif;
 			font-size: 6em;
 			position: absolute;
-			top: -0.5em;
-			left: -0.15em;
+			top: -0.85em;
+			left: -0.25em;
 			color: lighten($secondBackgroundColor, 10%);
 		}
 	}
