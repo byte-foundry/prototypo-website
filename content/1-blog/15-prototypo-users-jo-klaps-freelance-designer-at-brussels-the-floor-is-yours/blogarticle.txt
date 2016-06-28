@@ -1,0 +1,47 @@
+Title: Prototypo users: Jo Klaps (freelance designer at Brussels). The floor is yours!
+
+----
+
+Ogdescription: Jo Klaps, a freelance designer from Brussels gave us a moment to answer a few questions about his work and his use of Prototypo.
+
+----
+
+Ogimage: 
+
+----
+
+Tags: interview,user,font design
+
+----
+
+Date: 2016-06-28
+
+----
+
+Subtitle: Jo Klaps, a freelance designer from Brussels gave us a moment to answer a few questions about his work and his use of Prototypo.
+
+----
+
+Contentarticle: 
+
+<strong>Hi Jo, can you introduce yourself?</strong><br>Hello, my name is Jo Klaps. I’m a freelance designer since 1988. Most of my work is about spatial design and graphic design. The name of my company is <strong>Studio Brussels Lof</strong> (more information: <a href="http://www.brusselslof.be/" target="_blank"> www.brusselslof.be</a> ). I also teach Scenography at the University of Hasselt (UHasselt, Belgium)
+
+<strong>You’re more a graphic designer than a typedesigner?</strong><br>I’m mostly a graphic designer, but I love old fonts that I find on buildings, graves or monuments. I try to save them with my project <a href="http://www.brusselslof.be/?page_id=1587" target="_blank">Fontrescue</a>. I take pictures of these fonts and I collect them in an online photobook. I also love to create fonts with original materials like ice, chocolate or plaster.
+
+<strong>Have you allready drawn a font before using Prototypo? How did you do?</strong><br>Yes I did. I used Illustrator and imported the design into a font editor.
+>I love to create fonts with original materials like ice, chocolate or plaster
+
+<strong>For what purpose did you need your own font?</strong><br>I created a font for a brochure called EXIT, a document about student projects.
+
+<strong>Why didn’t you use an existing font for this project?</strong><br>I wanted a personal font which didn’t look too obvious.
+
+<strong>How many fonts did you create with Prototypo?</strong><br>Untill now I’ve completed one font, but I’m still working on other projects.
+
+<strong>Can you tell us what has been your creative process?</strong><br>Well, I’ve adjusted the parameters in Prototypo untill I got something I liked. Then I just exported the font and used it. I didn’t need to refine the font in a typeface editor.
+>Prototypo is very easy to use and intuitive
+
+<strong>Did you think about a final result before you started moving the parameters in Prototypo?</strong><br>No I had no final result in mind. I just changed some parameters until I was satisfied.
+
+<strong>How did Prototypo help you?</strong><br>Prototypo is very easy to use and intuitive. The app simply allows creating most of the glyphs in the same style. I wish I had more fonts to start with, but I’ll surely keep using Prototypo for my futur font projects.
+
+<strong>You told us that you’re also a teacher. Do you think Prototypo could be a good tool to learn the basics of typography?</strong><br>I use it with my students. Prototypo makes them think about all the different parts of a font. You can compare a font with a piece of furniture. It consists of different parts that need each other to be really useful.
