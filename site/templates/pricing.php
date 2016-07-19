@@ -91,7 +91,24 @@
 								if ( str::contains($pack['packname'], 'schools/agencies', $i = true) ):
 									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction \">{$pack['button']}</a>";
 								else:
-									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction\">{$pack['button']}</a>";
+									$packNameId = null;
+									switch($pack['packname']) {
+										case 'Monthly billing' :
+											$packNameId = 'personal_monthly';
+											break;
+										case 'Annual billing' :
+											$packNameId = 'personal_annual_99';
+											break;
+										default:
+											$packNameId = null;
+											break;
+									}
+
+									if ($packNameId):
+										echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}?fromWebsite=true&plan={$packNameId}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction\">{$pack['button']}</a>";
+									else:
+										echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction\">{$pack['button']}</a>";
+									endif;
 								endif;
 							?>
 						</div>
