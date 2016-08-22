@@ -14,7 +14,7 @@ Packs:
   promo:
   baseline:
   options: |
-    Limited parameters
+    Limited export
     One project per template
   button: Try it for free
 - 
@@ -35,7 +35,7 @@ Packs:
     Unlimited font exports
     Customize all parameters
     Access to beta versions
-  button: Get started!
+  button: Save 45% !
 - 
   packname: Schools/Agencies
   price:
@@ -72,7 +72,10 @@ Faq:
   question: >
     How many fonts can I export with the
     full version?
-  answer: "You can export as many fonts as you want with the full version. You can also do with the free version but you'll have the ability to modify your characters with 5 parameters instead of 30 with the full version."
+  answer: >
+    You can export as many fonts as you want
+    by buying a monthly subscription or
+    buying export credits.
 - 
   question: "Can I sell the fonts that I've made with Prototypo?"
   answer: >
