@@ -6,7 +6,7 @@ Ogdescription: If you’ve been on Prototypo the last few days, you may have see
 
 ----
 
-Ogimage: 
+Ogimage: pop-up-template-new-project-ok.png
 
 ----
 
