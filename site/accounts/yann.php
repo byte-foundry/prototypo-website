@@ -9,8 +9,11 @@ password: >
 language: fr
 role: admin
 history:
+  - blog/prototypo-gives-itself-a-makeover
+  - >
+    blog/prototypo-user-anatole-trainee-at-prototypo-the-floor-is-yours
+  - >
+    blog/prototypo-users-jo-klaps-freelance-designer-at-brussels-the-floor-is-yours
   - blog/a-glyph-parade-for-our-top-backers
   - >
     blog/introducing-prototypo-web-preview-extension
-  - about
-  - faq

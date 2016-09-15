@@ -1,0 +1,84 @@
+Title: Prototypo gives itself a makeover!
+
+----
+
+Ogdescription: If you’ve been on Prototypo the last few days, you may have seen that things look a little different. Here we are, our new user interface has come! Clearer, more functional and hopefully to your taste… We tell you all!
+
+----
+
+Ogimage: 
+
+----
+
+Tags: prototypo,ui,ux
+
+----
+
+Date: 2016-09-15
+
+----
+
+Subtitle: If you’ve been on Prototypo the last few days, you may have seen that things look a little different.
+
+----
+
+Contentarticle: 
+
+*Here we are, our new user interface has come! Clearer, more functional and hopefully to your taste… We tell you all!*
+(image: www.prototypo.io-m-all.gif)
+<h2>A cooperation with web usability experts</h2>
+Since the public launch in October 2015, the application is constantly improving with new features and new parametric fonts. Among these enhancements, we always had in mind to simplify the use of the software. Why? We knew that Prototypo’s interface had much room for improvement and that a reshaping of the first version was essential.
+To assist us in this tough task, we secured the services of a specialist in user experience (UX), the <a href="http://www.stash.fr/" target="_blank">Stash </a>agency. For nearly 10 years, Stash has shared its expertise with big brands such as HP or Dior.
+Their original idea was to see the application in the hands of users to gather feedback and observe how they use it. The aim was to <strong>identify the navigation issues and to determine axis of improvement</strong>. 
+With this in mind we formed a panel of users composed of graphic designers, web designers, artistic directors, working as freelancer or in web/print agencies.
+These testers have then used Prototypo during one hour sessions, trying to complete predefined objectives. Some basics tasks like creating a new font family with variants, individualizing groups of glyphs or exporting a font to Glyphr Studio. Of course you knew those features, didn’t you? 
+In addition to observe the testers, Stash filmed them in order to watch in detail their behavior and habits of use. 
+This testing stage was part of a complete audit of the application. <strong>A comprehensive analysis which allowed these UI/UX experts to highlight key usability issues</strong> and gave us a set of solutions to overcome them.
+<h2>Your feedback counts</h2>
+Aside of the expert advices of Stash and test users comments, <strong>our reflection has been guided by your precious feedback</strong>. You are now more than 10,000 users and we are committed to sharing daily with you. 
+Thanks to this privileged relationship, we have collected many reviews on your experiences of Prototypo. <strong>Each comment allowed us to build an application that hopefully will match your needs</strong>.
+<h2>What’s new</h2>
+It appeared that most users were able to quickly understand how the app worked and use it to create their first font. However, managing the font library and using more advanced features deserved a serious makeover. <strong>Here are some of the enhancements you may have already noticed.</strong>
+<h2>Simplifying your experience</h2>
+First of all, we wanted to make the project creation step simpler: 
+(image: pop-up-template-new-project-ok.png)
+<legend>Choose a template and start your project!</legend>
+
+Displayed at the top left, the header menu is easier to reach. The new project creation process is more logical: choose your template (the choice is highlighted in green), type the name of your new font, that’s all, you can customize your font family!
+(image: breadcrumb-menu.png)
+<legend>Switch from a project to another from the breadcrumb menu</legend>
+
+Managing many projects could cause confusion for users, that’s why we added a breadcrumb menu to the application. It provides an overview of the font project, from the family down to the details (macro to micro), so you can clearly identify the font you are working on, and easily switch from a project to another.
+(image: variant-management-from-breadcrumb-menu-cropped.png)
+<legend>Variants management from the breadcrumb menu</legend>
+
+Variants creation and edition could be confusing, even be a blocking factor for some users, so we have completely redesigned it. This function is now accessible from the breadcrumb menu, by clicking on the name of the variant you are editing.
+(image: variants-from-collection-menu.png)
+<legend>Variants management from the collection menu</legend>
+
+The variant is reachable from the collection menu as well.
+<h2>Hightlighting advanced features</h2>
+<strong>Did you know that you were able to individualize glyphs or groups of glyph?</strong> If this major feature has been hidden for a while, now it’s clearly visible. You can reach it via the breadcrumb menu or with a switcher at the top right of your screen.
+(image: indiv-switch-breadcrumb-ok.png)
+<legend>Switch easily to the individualization area</legend>
+
+The individualization area is much better identified through its own color scheme (yellow = group of glyphs, green = all glyphs).
+(image: indiv-interface.png)
+<legend>Individualization interface</legend>
+
+Group of glyphs creation has also been simplified, you just have to name the group, then choose the glyphs that make it up, and finally click “Open in Prototypo” to modify your characters.
+(image: indiv-parameters.png)
+<legend>two ways to modify your individualization parameters</legend>
+
+There are two ways to modify your individualization parameters. The proportional individualization (x) will multiply the current value of your parameters by your individualization value. The second mode is absolute (+) which will add or subtract the value of your individualization parameter to your global parameters.
+The font collection management has been clarified too.
+(image: my-collection.png)
+<legend>Manage your font collections</legend>
+
+The different options for your font family are more identifiables thanks to a drawer menu in which they are sorted by categories. Note that from this interface you can now download either an entire family or just a variant. Another important addition, the possibility to change the family name.
+All these changes may appear disturbing to the regular Prototypo users. Do not panic! <strong>We kept the overall functioning of the application, including sliders simple to use and accessible from their menu on the left of your screen</strong>. The display of the different views of your font project has remained the same. If you have any issue you can contact us through the in app chat.
+<h2>Unlock all the parameters and export 5 projects for $5</h2>
+We’ve heard your suggestions, that’s why we offer a new plan. You can now unlock all the parameters and export 5 projects for $5. <strong>Pay once $5 and get the most out of Prototypo without time limit!</strong> Our monthly and annual plans are still available, they allow you to export as many fonts as you want during your subscription.
+<a href= "https://app.prototypo.io/#/dashboard" style="background: none" target="_blank"><img src="http://i.imgur.com/deLZEYF.png" alt="get 5 exports for $5" width="303" height="60" /></a>
+<strong>It’s your turn! Log in to the application and discover the new Prototypo. Any comments? <a href="mailto:contact@prototypo.io">Contact us</a>, we love to chat with our users.
+Cheers!</strong>
