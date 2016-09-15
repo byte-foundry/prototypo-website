@@ -83,7 +83,7 @@ As you may already know, spacing plays an important role in the quality of a fon
 <div  style='position:relative;padding-bottom:85%'><iframe src='https://gfycat.com/ifr/LeftUnkemptEastsiberianlaika' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div><br/><legend>As you can see it’s also possible to resize your workspace!</legend>
 
 <h2>Unlock all the parameters and export 5 projects for $5</h2>
-We’ve heard your suggestions, that’s why we offer a new plan. You can now unlock all the parameters and export 5 projects for $5. <strong>Pay once $5 and get the most out of Prototypo without time limit!</strong> Our monthly and annual plans are still available, they allow you to export as many fonts as you want during your subscription.
+<p>We’ve heard your suggestions, that’s why we offer a new plan. You can now unlock all the parameters and export 5 projects for $5. <strong>Pay once $5 and get the most out of Prototypo without time limit!</strong> Our monthly and annual plans are still available, they allow you to export as many fonts as you want during your subscription.</p>
 <a href= "https://app.prototypo.io/#/dashboard" style="background: none" target="_blank"><img src="http://i.imgur.com/deLZEYF.png" alt="get 5 exports for $5" width="303" height="60" /></a>
-<strong>It’s your turn! Log in to the application and discover the new Prototypo. Any comments? <a href="mailto:contact@prototypo.io">Contact us</a>, we love to chat with our users.
-Cheers!</strong>
+<p><strong>It’s your turn! Log in to the application and discover the new Prototypo. Any comments? <a href="mailto:contact@prototypo.io">Contact us</a>, we love to chat with our users.
+Cheers!</strong></p>
