@@ -2,14 +2,14 @@ Title: Create your own font in a few clicks
 
 ----
 
-Infobox1:
+Infobox1: 
 
 Customize more
 than twenty parameters…
 
 ----
 
-Infobox2:
+Infobox2: 
 
 …see your own
 font take shape
@@ -25,7 +25,7 @@ Getstartedtagline: Create your own font in a few clicks
 
 ----
 
-Getstartedbuttonlabel: Get started
+Getstartedbuttonlabel: Try Prototypo now
 
 ----
 
@@ -37,35 +37,27 @@ Section1subtitle: And an infinite number of variations
 
 ----
 
-Section1txt: Fonts powered by (link: https://productiontype.com text: Production Type popup: yes)
+Section1txt: 
 
 ----
 
-Fonts:
+Fonts: 
 
--
-  fontfile: venus-preview.svg
-  fontname: Prototypo Grotesk
-  fontdescription: The sans serif that makes sens.
-  fontstring: G2
-  fontsize: 100
-  fontlineheight: 120
--
-  fontfile: john-fell-preview.svg
+- 
+  cover: john-fell-preview.svg
   fontname: Prototypo Fell
-  fontdescription: Classical serif font for classy designs.
-  fontstring: Qn
-  fontsize: 14
-  fontlineheight: 120
--
-  fontfile: elzevir-preview.svg
-  fontname: Prototypo Elzevir
   fontdescription: >
-    An Elzevir as we all like it, move it,
-    move it.
-  fontstring: Abc
-  fontsize: 100
-  fontlineheight: 150
+    A digital makeover of the Canon and
+    3-line pica Roman cut by John Fell ca.
+    1686.
+- 
+  cover: venus-preview.svg
+  fontname: Prototypo Grotesk
+  fontdescription: 'A somewhat distant interpretation of a Wagner & Schmidt design, 1907.'
+- 
+  cover: elzevir-preview.svg
+  fontname: Prototypo Elzevir
+  fontdescription: 'One of the many Elzévirs by the French foundry Renaud during the  19th century.'
 
 ----
 
@@ -81,106 +73,38 @@ Section2subtitle: This, that, and much more.
 
 ----
 
-Features:
+Features: 
 
--
+- 
   featureimg: pictofeaturescharactersset.svg
-  featurename: Characters set
+  featurename: Latin characters set
   featuredescription: >
-    Works with a basic Latin character set.
-    Includes uppercase, lowercase,
-    smallcaps, figures and punctuation!
--
-  featureimg: pictofeaturesexportfonts.svg
-  featurename: Export fonts
-  featuredescription: 'Once your design is ok, you can export all font format you need to use your fonts offline & online.'
--
-  featureimg: pictofeaturessplitviews.svg
-  featurename: Split views
-  featuredescription: 'Improve your design process with severals views: glyph, words, paragraphs, and watch changes in real time.'
-  featuredone: 'true'
--
-  featureimg: pictofeaturesfontmanager.svg
-  featurename: Font manager
-  featuredescription: >
-    Create and manage multiple projects!
-    Define variants of a master typeface, or
-    branch it in sub-projects!
-  featuredone: 'true'
--
-  featureimg: pictofeaturesswitchalternates.svg
-  featurename: Switch alternates
-  featuredescription: >
-    Many glyphs are available with one or
-    more alternates to define the perfect
-    shape to fit your custom design.
-  featuredone: 'true'
--
+    Modify the shape and proportion of each
+    letter in the Latin character set.
+    Including smallcaps and basic
+    punctuation.
+- 
   featureimg: pictofeaturesindiv.svg
-  featurename: Individualize parameters
+  featurename: Individualize glyphs/groups of glyphs
   featuredescription: >
-    Individualize glyphs or groups of glyphs
-    to refine your design and create unique
-    typefaces.
-  featuredone: 'true'
-
-----
-
-Section3title: The application is constantly improving!
-
-----
-
-Section3subtitle: Don't miss out on news, features and special offers. Subscribe to our newsletter!
-
-----
-
-Newsletternameplaceholder: Your name
-
-----
-
-Newslettermailplaceholder: Your email
-
-----
-
-Newslettersubmitlabel: Keep me posted
-
-----
-
-Section4title: They talk about us!
-
-----
-
-Section4subtitle:
-
-----
-
-Theytalkaboutus:
-
--
-  ttauimg: gray-mashable.png
-  ttauname: Mashable
-  ttauurl: >
-    http://mashable.com/2014/05/04/prototypo-fonts/
--
-  ttauimg: gray-wired.png
-  ttauname: WIRED
-  ttauurl: >
-    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
--
-  ttauimg: gray-linuxfr.png
-  ttauname: LinuxFR
-  ttauurl: >
-    http://linuxfr.org/news/prototypo-ou-comment-devenir-typographe-en-quelques-clics
--
-  ttauimg: gray-framasoft.png
-  ttauname: Framasoft
-  ttauurl: >
-    http://framablog.org/2014/04/22/prototypo-vos-polices-sur-mesure/
--
-  ttauimg: gray-creapills.png
-  ttauname: Creapills
-  ttauurl: >
-    http://creapills.com/les-idees/1-prototypo-application-open-source-creer-police-vos-reves-plus-20-parametres-20032014
+    Create a very unique font. The
+    individualisation feature allows you to
+    modify separately letters or groups of
+    letters.
+- 
+  featureimg: web-extension.svg
+  featurename: Preview your fonts on any website
+  featuredescription: >
+    Tweak your fonts in Prototypo and live
+    preview your changes on any website
+    thanks to a Chrome extension.
+- 
+  featureimg: pictofeaturesexportfonts.svg
+  featurename: Export to Glyphr Studio
+  featuredescription: >
+    Export your font directly in this open
+    source editing tool and refine each
+    character.
 
 ----
 
@@ -192,11 +116,7 @@ Sectionsubscribedsubtitle: We also post more frequent updates on <a href="https:
 
 ----
 
-Getintothefullapp: Want more? Get the full app!
-
-----
-
-Ogdescription: Prototypo is an online application that allows to create beautiful fonts in minutes. Start with one of our templates, customize it with more than twenty sliders, and download your font to use it on the Web or on your desktop.
+Ogdescription: The web application Prototypo gives anyone the possibility to create personalized fully functional fonts and export them to use on their website or desktop application.
 
 ----
 
@@ -205,3 +125,114 @@ Ogimage: home-screenshot.png
 ----
 
 Section2text: We're working on advanced features such as spacing/kerning, live preview on your website, cyrillic and more!
+
+----
+
+Title1: Save time and be more creative
+
+----
+
+Content1: 
+
+We know what a waste of time it can be to search for the perfect font without finding it.
+
+We also know the months it takes to draw one from scratch. That's why we built Prototypo, an online app that enables designers to customize their own typeface in a few clicks.
+
+----
+
+Title2: How does it work?
+
+----
+
+Content2: Creating a prototype for an original typeface, a custom logo for your brand/client or experimenting with type design ideas has never been so easy.
+
+----
+
+Steps: 
+
+- 
+  title: You need a specific font for a project
+  content: >
+    Sometimes the font perfectly fitting
+    your project doesn’t exist. Why
+    don’t you create it?
+- 
+  title: >
+    Start your project with one of our 3
+    parametric typefaces
+  content: 'The basic set starts with Prototypo Fell, Prototypo Grotesk and Prototypo Elzevir. All our fonts are powered by our partner <b><a href="https://productiontype.com" target="_blank">Production Type</a></b>'
+  cover: production-type-fonts.svg
+- 
+  title: >
+    Shape your font adjusting more than 30
+    parameters
+  content: >
+    Prototypo lets you tweak over thirty
+    parameters such as thickness, aperture
+    and roundness. You can also fine-tuned
+    the serifs separately.
+  cover: www.prototypo.io_M-all.gif
+- 
+  title: Export your font and use it anywhere
+  content: >
+    Your fonts can be exported to .otf
+    format that can be installed on macOS,
+    Windows and Linux to be used in any
+    desktop application, or displayed on a
+    website in any browser.
+  cover:
+
+----
+
+Title3: They talk about Prototypo
+
+----
+
+Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b>10,000 users</b> from over <b>100 countries!</b>
+
+----
+
+Testimonials: 
+
+- 
+  quote: >
+    Prototypo will let anyone design an
+    entire font system all at once
+  name: Mashable
+  url: 'http://mashable.com/2014/05/04/prototypo-fonts/#A5wqMtGxW8qc'
+  logo: gray-mashable.png
+- 
+  quote: >
+    Hobbyists and type designers can
+    experiment and refine a wide range of
+    fonts
+  name: Design taxi
+  url: >
+    http://designtaxi.com/news/364486/An-Open-Source-App-That-Lets-Users-Make-And-Download-Their-Own-Fonts/
+  logo: gray-taxi.png
+- 
+  quote: A user interface accessible to all
+  name: Wired
+  url: >
+    http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
+  logo: gray-wired.png
+
+----
+
+Cta2: Create your own font now
+
+----
+
+Cta3: Join the community!
+
+----
+
+Title4: A powerful tool to design your font
+
+----
+
+Content4: 
+
+----
+
+Cta4: Start with Prototypo now!

@@ -1,15 +1,15 @@
 <?php snippet('header') ?>
-<main class="PageContent Pricing showAnnualBilling">
+<main class="PageContent Pricing showAnnualBilling gradient-red">
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->headerImg())->url(); ?>)">
 		<div class="PricingItemFree-wrap">
 			<header class="PageHeader text-center fitToContent marginTop60">
-				<h1 class="textType-title textSize-title-large colorWhite">
+				<h1 class="textType-title textSize-title-large white">
 					<?php echo $page->mainTitle()->kirbytextSans(); ?>
 				</h1>
 
 				<?php if($page->subtitle()->kirbytextSans()->isNotEmpty()): ?>
-					<h2 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+					<h2 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle ">
 						<?php echo $page->subtitle()->kirbytextSans(); ?>
 					</h2>
 				<?php endif ?>
@@ -104,25 +104,34 @@
 				?>
 		</ul>
 
-		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop60 colorBrightest text-center">
+		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop60 text-center marginBottom30 white">
 			<?php echo $page->TxtAfter()->kirbytext(); ?>
 		</div>
 
-		<h2 class="big bold text-center marginTop60 marginBottom60 white">Some happy users!</h2>
+	</div>
 
-		<ul class="marginTop60 testimonials">
-			<?php
-				$users = yaml($page->users());
-				foreach($users as $id => $user):
-			?>
-			<li class="">
-				<img  class="portrait" src="<?php echo $page->file($user['portrait'])->url(); ?>" alt="" />
-				<h3><?php echo $user['name']; ?></h3>
-				<p class="testimonials_description"><?php echo $user['infos']; ?></p>
-				<p>“<?php echo $user['quote']; ?>”</p>
-			</li>
-			<?php endforeach; ?>
-		</ul>
+	<section class="bg-white clearfix">
+		<div class="fitToContent marginTop60 ">
+			<h2 class="big bold text-center marginTop60 marginBottom60">Some happy users!</h2>
+
+			<ul class="marginTop60 testimonials marginBottom60">
+				<?php
+					$users = yaml($page->users());
+					foreach($users as $id => $user):
+				?>
+				<li class="black">
+					<img  class="portrait" src="<?php echo $page->file($user['portrait'])->url(); ?>" alt="" />
+					<h3><?php echo $user['name']; ?></h3>
+					<p class="testimonials_description"><?php echo $user['infos']; ?></p>
+					<p>“<?php echo $user['quote']; ?>”</p>
+				</li>
+				<?php endforeach; ?>
+			</ul>
+
+		</div>
+	</section>
+
+	<div class="fitToContent">
 
 		<h2 class="big bold text-center marginTop60 marginBottom60 white">Any questions?</h2>
 
