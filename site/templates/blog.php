@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-	<main class="PageContent Blog">
+	<main class="PageContent Blog gradient-yellow">
 
 	<header class="PageHeader text-left fitToContent">
 		<a href="<?php echo url('blog'); ?>">
@@ -44,11 +44,11 @@
 					<nav class="BlogPagination BlogPagination-before">
 
 						<?php if($articles->pagination()->hasNextPage()): ?>
-							<a class="BlogPagination-item right textType-txt textSize-txt-small" href="<?php echo $articles->pagination()->nextPageURL() ?>">older post</a>
+							<a class="BlogPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $articles->pagination()->nextPageURL() ?>">older post</a>
 						<?php endif ?>
 
 						<?php if($articles->pagination()->hasPrevPage()): ?>
-							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer post</a>
+							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer post</a>
 						<?php endif ?>
 
 					</nav>
@@ -103,11 +103,11 @@
 					<nav class="BlogPagination BlogPagination-after">
 
 						<?php if($articles->pagination()->hasNextPage()): ?>
-							<a class="BlogPagination-item right textType-txt textSize-txt-small" href="<?php echo $articles->pagination()->nextPageURL() ?>">older post</a>
+							<a class="BlogPagination-item right textType-txt textSize-txt-small  red bg-white" href="<?php echo $articles->pagination()->nextPageURL() ?>">older post</a>
 						<?php endif ?>
 
 						<?php if($articles->pagination()->hasPrevPage()): ?>
-							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer post</a>
+							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small  red bg-white" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer post</a>
 						<?php endif ?>
 
 					</nav>

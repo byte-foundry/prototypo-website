@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 
-  <main class="PageContent FAQ">
+  <main class="PageContent FAQ gradient-green">
 
     <header class="PageHeader text-left fitToContent">
       <a href="<?php echo url('faq'); ?>">

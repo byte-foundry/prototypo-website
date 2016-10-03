@@ -29,6 +29,13 @@ Enjoy,
 The Prototypo team
 
 
+**P.S.: If you want to use our live-tester on your blog, feel free to use our iframe:**
+````
+<iframe src="https://iframe.prototypo.io" width="720" height="370"></iframe>
+
+````
+
+
 **Press contacts:**
  ----
 - Antoine Heber-Suffrin | (email: mailto:antoine@prototypo.io text: antoine@prototypo.io) 

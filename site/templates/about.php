@@ -1,15 +1,15 @@
 <?php snippet('header') ?>
 
-  <main class="PageContent About">
+  <main class="PageContent About gradient-yellow ">
 
     <div class="fitToContent">
 
   		<header class="PageHeader text-center fitToContent">
-    		<h1 class="textType-title textSize-title-large colorWhite"><?php echo $page->section1Title()->kirbytextSans(); ?></h1>
-        <h2 class="aboutus_subtitle textType-subtitle textSize-title-small colorBright"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h2>
+    		<h1 class="textType-title textSize-title-large black text-left"><?php echo $page->section1Title()->kirbytextSans(); ?></h1>
+        <h2 class="aboutus_subtitle textType-subtitle textSize-title-small black text-left"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></h2>
   		</header>
 
-  		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30 colorBrightest text-center">
+  		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop30">
         <?php echo $page->section1Txt()->kirbytext(); ?>
   		</div>
 

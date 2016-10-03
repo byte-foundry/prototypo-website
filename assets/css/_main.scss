@@ -82,10 +82,9 @@ header {
 	}
 }
 .Section-wrapTxt a {
-	color: $colorBrightest;
+	font-weight: bold;
 }
 .Section-wrapTxt a:hover {
-	color: $colorWhite;
 	text-decoration: underline;
 }
 .Section-wrapTxt.colorDarkGray a,
@@ -148,12 +147,12 @@ iframe{
 	font-weight: bold;
 	text-align: center;
 }
-.Section-homepageGetStartedLineTitle .internal_header {
-	font-size: 22px;
-	font-style: italic;
-	font-weight: 400;
-	margin: 0 15px;
-}
+// .Section-homepageGetStartedLineTitle .internal_header {
+// 	font-size: 22px;
+// 	font-style: italic;
+// 	font-weight: 400;
+// 	margin: 0 15px;
+// }
 .Section-homepageGetStartedLineSubtitle {
 	display: inline-block;
 	margin: 0 15px;
@@ -184,6 +183,7 @@ iframe{
 	border-radius: $global-radius;
 }
 .DemoHome:after {
+	display: none;
 	content: "";
 	position: absolute;
 	z-index: -1;
@@ -695,6 +695,7 @@ iframe{
 	flex-direction: column;
 	width: 100%;
 	position: relative;
+	border: 3px solid $colorLighterGray;
 }
 
 .PricingItem-header {
@@ -1036,7 +1037,7 @@ iframe{
 	background: $colorWhite;
 	border-radius: $global-radius;
 	margin-bottom: 20px;
-	box-shadow: 0 2px 40px rgba(darken(adjust-hue(#a2e392, 355deg),10%),.5);
+	// box-shadow: 0 2px 40px rgba(darken(adjust-hue(#a2e392, 355deg),10%),.5);
 	clear: both;
 	overflow: hidden;
 }
@@ -1190,11 +1191,11 @@ iframe{
 .BlogPagination-item {
 	display: inline-block;
 	padding: 13px 30px 10px;
-	color: $colorWhite;
+	// color: $colorWhite;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;
-	background: $blocSecondBackgroundColor;
+	// background: $blocSecondBackgroundColor;
 	transition: all 300ms ease;
 	margin-right: 10px;
 	text-align: center !important;
@@ -1215,8 +1216,8 @@ iframe{
 	border-top: solid 3px $lineBorderColor;
 }
 .BlogPagination-item:hover {
-	color: $colorWhite;
-	background-color: rgba($blocSecondBackgroundColor,.2);
+	color: $white;
+	background-color: $red;
 }
 .Disqus {
 	background: $blocSecondBackgroundColor;

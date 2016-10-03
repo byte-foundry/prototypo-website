@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
-    <main class="main">
-        <section class="Section Section-parametricDesignTool">
+    <main class="main ">
+        <section class="Section Section-parametricDesignTool gradient-yellow">
 
             <div class="fitToContent">
 
