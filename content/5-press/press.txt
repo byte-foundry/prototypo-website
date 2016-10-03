@@ -2,7 +2,7 @@ Title: Press
 
 ----
 
-Text: 
+Text:
 
 # Prototypo | Create your own font in just a few clicks
 
@@ -12,11 +12,11 @@ The web application Prototypo gives anyone the possibility to create personalize
 
 “We’ve built Prototypo because we were frustrated by the difficulty of finding original fonts perfectly fitting our specific needs, and the months it takes to draw custom ones” said the art director and cofounder Yannick Mathey. Prototypo offers a new approach to typography that integrates historical, mathematical, visual rules of this discipline and automates repetitive tasks to let users focus on overall design. The user can modify the shape and proportion of each letter in the Latin alphabet by playing around with more than 20 sliders. This innovative approach to type design brings users the opportunity to get stronger visual identity with original fonts or to spend a lot of time on traditional drawing softwares.
 
-## An international community 
+## An international community
 
 Since May 2014, date of their first fundraising on the crowdfunding platform (link: https://www.kickstarter.com/projects/599698621/prototypo-streamlining-font-creation text: “Kickstarter”), more than 1.800 people from all over the world pre-ordered one year access to the web-app. Today, they count 3.000 followers on twitter, 3.500 fans on Facebook and 18.000 subscribers to their newsletter mainly in the US. This first step strengthened the ambitions of their creators: “our first users come from over 35 different countries, which represents a pool of more than one million graphic designers. Going forward, we want to help them create the perfect font by bringing Prototypo closer to their creation: the first step is to provide the ability to instantly preview their font on any website.” said Louis-Rémi Babé the lead developer and cofounder of Prototypo.
 
-## Launching online! 
+## Launching online!
 
 After a year of R&D and private beta testing, Prototypo is now publicly available with a launch price of $8 per month and it comes with 2 parametrics typefaces designed by our partner (link: https://www.productiontype.com/ text: Production Type)!
 
@@ -38,5 +38,4 @@ The Prototypo team
 
 **Press contacts:**
  ----
-- Antoine Heber-Suffrin | (email: mailto:antoine@prototypo.io text: antoine@prototypo.io) 
-- Sarah Chbihi | (email: sarah@prototypo.io text: sarah@prototypo.io)
+Yann Guillet | (email: mailto:yann@prototypo.io text: yann@prototypo.io)
