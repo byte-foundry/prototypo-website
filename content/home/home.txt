@@ -169,7 +169,7 @@ Steps:
   content: >
     Prototypo lets you tweak over thirty
     parameters such as thickness, aperture
-    and roundness. You can also fine-tuned
+    and roundness. You can also fine-tune
     the serifs separately.
   cover: www.prototypo.io_M-all.gif
 - 

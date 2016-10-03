@@ -70,7 +70,7 @@
 
 							<div class="hide-for-large-up marginTop15 marginBottom60">
 								<?php if (!empty($step['cover'])) : ?>
-									<img style="width:90%" src="<?php echo url('content/'.$page->dirname().'/'.$step['cover']); ?>" alt="">
+									<img style="width:90%" src="<?php echo url('content/'.$page->dirname().'/'.$step['cover']); ?>" alt="Prototypo: <?php echo $step['title']; ?>" title="Prototypo: <?php echo $step['title']; ?>">
 								<?php endif; ?>
 							</div>
 
@@ -90,7 +90,7 @@
 				<div class="columns large-6 medium-12 small-12 image show-for-large-up">
 					<?php  foreach($steps as $step): ?>
 						<?php if (!empty($step['cover'])) : ?>
-							<img src="<?php echo url('content/'.$page->dirname().'/'.$step['cover']); ?>" alt="">
+							<img src="<?php echo url('content/'.$page->dirname().'/'.$step['cover']); ?>" alt="Prototypo: <?php echo $step['title']; ?>" title="Prototypo: <?php echo $step['title']; ?>">
 						<?php endif; ?>
 					<?php endforeach; ?>
 				</div>
@@ -118,7 +118,6 @@
 							<?php if (!empty($testimonial['name'])) : ?>
 								<a target="_blank" href="<?php echo $testimonial['url']; ?>">
 									<span class="red">
-										<!-- <?php echo $testimonial['name']; ?> -->
 										<img alt="<?php echo $testimonial['name']; ?>" src="<?php echo url('content/'.$page->dirname().'/'.$testimonial['logo']); ?>">
 									</span>
 								</a>
@@ -158,7 +157,7 @@
 				<?php foreach($features as $feature): ?>
 					<li class="medium-block-grid-2 home-feature">
 						<div class="">
-							<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto" alt="">
+							<img src="<?php echo url('content/'.$page->dirname().'/'.$feature['featureimg']); ?>" class="Section-featuresPicto" alt="Prototypo: <?php echo $feature['featurename']; ?>" title="Prototypo: <?php echo $feature['featurename']; ?>">
 						</div>
 						<div class="">
 							<h3 class="white marginTop30 marginBottom15"><?php echo $feature['featurename']; ?></h3>
