@@ -30,7 +30,7 @@
 
 </footer>
 
-<section id="subscribed-" class="Section gradient-green hide-for-print text-center">
+<section id="subscribed" class="Section gradient-green hide-for-print text-center">
 	<h2 class="textType-title textSize-title-medium colorWhite"><?php echo $page->sectionSubscribedTitle()->kirbytextSans(); ?></h2>
 	<h3 class="textType-subtitle textSize-title-small colorBrightest marginTop30">
 		<?php echo $page->SectionSubscribedSubtitle()->kirbytextSans(); ?>
