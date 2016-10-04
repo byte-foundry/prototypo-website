@@ -15,7 +15,7 @@
 
 			<div class="textSize-txt-large text-center marginTop60">
 				<div class="marginTop30">
-					<a href="pricing" class="NewsletterInput-submit callToAction medium" onclick="ga('send', 'home-CTA1');">
+					<a href="pricing" class="NewsletterInput-submit callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA1');">
 						<?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?>
 					</a>
 				</div>
@@ -79,7 +79,7 @@
 
 					<div class="textSize-txt-large marginTop60">
 						<div class="marginTop30">
-							<a href="pricing" class="callToAction medium" onclick="ga('send', 'home-CTA2');">
+							<a href="pricing" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA2');">
 								<?php echo $page->CTA2()->kirbytextSans(); ?>
 							</a>
 						</div>
@@ -134,7 +134,7 @@
 
 			<div class="textSize-txt-large text-center marginTop60">
 				<div class="marginTop30">
-					<a href="pricing" class="callToAction medium" onclick="ga('send', 'home-CTA3');">
+					<a href="pricing" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA3');">
 						<?php echo $page->CTA3()->kirbytextSans(); ?>
 					</a>
 				</div>
@@ -176,7 +176,7 @@
 
 			<div class="textSize-txt-large text-center marginTop60">
 				<div class="marginTop30">
-					<a href="pricing" class="callToAction medium" onclick="ga('send', 'home-CTA4');">
+					<a href="pricing" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA4');">
 						<?php echo $page->CTA4()->kirbytextSans(); ?>
 					</a>
 				</div>
