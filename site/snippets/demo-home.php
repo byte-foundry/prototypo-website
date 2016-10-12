@@ -8,7 +8,7 @@
 		<div class="DemoHome-windowBackground"></div>
 		<div class="DemoHome-windowTopBar"></div>
 
-		<img class="DemoHome-windowLogo" src="<?php echo url('assets/img/prototypoIcon.svg'); ?>" alt="">
+		<img class="DemoHome-windowLogo" src="<?php echo url('assets/img/prototypoIcon.svg'); ?>" alt="Prototypo logo">
 
 		<div class="DemoHome-windowButton DemoHome-windowButtonRed"></div>
 		<div class="DemoHome-windowButton DemoHome-windowButtonYellow"></div>
@@ -16,24 +16,24 @@
 
 		<div class="DemoControls">
 			<div class="DemoControls-PotentiometerItem">
-				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
+				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsWeight.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="Prototypo thickness slider">
 				<div id="test-me" class="test-me">
 					<input type="range" data-param="thickness" class="DemoControls-Potentiometer" min="20" max="160" value="85" step="1" />
 				</div>
 			</div>
 
 			<div class="DemoControls-PotentiometerItem">
-				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsContrast.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
+				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsContrast.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="Prototypo contrast slider">
 				<input type="range" data-param="_contrast" class="DemoControls-Potentiometer" min="-2" max="-0.15" value="-1" step="0.01" />
 			</div>
 
 			<div class="DemoControls-PotentiometerItem">
-				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
+				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsHeight.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="Prototypo serif height slider">
 				<input type="range" data-param="serifHeight" class="DemoControls-Potentiometer" min="0" max="70" value="20" step="1" />
 			</div>
 
 			<div class="DemoControls-PotentiometerItem">
-				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsSerif.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="">
+				<img src="<?php echo url('assets/img/pictos/pictoDemoHomeControlsSerif.svg'); ?>" class="DemoControls-PotentiometerPicto" alt="Prototypo serif width slider">
 				<input type="range" data-param="serifWidth" class="DemoControls-Potentiometer" min="0" max="100" value="65" step="1" />
 			</div>
 		</div><!-- .DemoControls -->
