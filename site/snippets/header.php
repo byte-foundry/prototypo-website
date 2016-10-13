@@ -59,6 +59,7 @@
   <?php
 	snippet( c::get('env') . '/styles' );
   ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="font-awesome">
 
 </head>
 <body class="<?= $page->id(); ?>">
