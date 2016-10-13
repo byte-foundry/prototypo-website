@@ -70,6 +70,13 @@ only screen and (min-resolution:144dpi) {
 }
 @media #{$large-down} {
 
+	#share {
+		width: 38px;
+		left: calc(50% - 470px);
+		top: 400px;
+		position: fixed;
+	}
+
 	.Article-list {
 		display: flex;
 		flex-direction: row;
