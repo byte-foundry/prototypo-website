@@ -22,19 +22,21 @@
 		<?php if($articles->pagination()->hasPages()): ?>
 			<nav class="BlogPagination BlogPagination-before">
 				<?php if($page->hasNextVisible()): ?>
-					<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small" href="<?php echo $page->nextVisible()->url() ?>">newer post</a>
+					<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $page->nextVisible()->url() ?>">newer post</a>
 				<?php endif ?>
 				<?php if($page->hasPrevVisible()): ?>
-					<a class="BlogPagination-item right textType-txt textSize-txt-small" href="<?php echo $page->prevVisible()->url() ?>">older post</a>
+					<a class="BlogPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $page->prevVisible()->url() ?>">older post</a>
 				<?php endif ?>
 			</nav>
 		<?php endif ?>
 
 		<nav class="BlogPagination BlogPagination-before">
-		<a class="BlogPagination-item left BlogPagination-back textType-txt textSize-txt-small" href="<?php echo url('blog'); ?>">Back to blog</a>
+		<a class="BlogPagination-item left BlogPagination-back textType-txt textSize-txt-small red bg-white" href="<?php echo url('blog'); ?>">Back to blog</a>
 		</nav>
 
   		<article class="Article">
+
+			<?php snippet('share-btn') ?>
 
 			<header class="Article-header">
 				<h1 class="Article-title textType-title textSize-title-small"><?php echo $page->title()->html() ?></h1>
@@ -73,10 +75,10 @@
 		<?php if($articles->pagination()->hasPages()): ?>
 			<nav class="BlogPagination BlogPagination-after">
 				<?php if($page->hasNextVisible()): ?>
-					<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small" href="<?php echo $page->nextVisible()->url() ?>">newer post</a>
+					<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $page->nextVisible()->url() ?>">newer post</a>
 				<?php endif ?>
 				<?php if($page->hasPrevVisible()): ?>
-					<a class="BlogPagination-item right textType-txt textSize-txt-small" href="<?php echo $page->prevVisible()->url() ?>">older post</a>
+					<a class="BlogPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $page->prevVisible()->url() ?>">older post</a>
 				<?php endif ?>
 			</nav>
 		<?php endif ?>
