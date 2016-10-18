@@ -18,4 +18,4 @@ Ogdescription: Welcome to the lab, where dream fonts are born and font demons ar
 
 ----
 
-Ogimage: blog-screenshot.png
+Ogimage: lab-screenshot.png
