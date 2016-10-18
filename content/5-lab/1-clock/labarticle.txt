@@ -1,0 +1,21 @@
+Title: clock
+
+----
+
+Ogimage: clock.gif
+
+----
+
+Tags: workshop
+
+----
+
+Subtitle: subtitle
+
+----
+
+Contentarticle: content
+
+----
+
+Link: https://lab.prototypo.io/clock/

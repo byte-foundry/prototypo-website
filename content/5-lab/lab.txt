@@ -1,0 +1,21 @@
+Title: Lab
+
+----
+
+Section1title: The Lab.
+
+----
+
+Section1subtitle: Experiments around Prototypo that might explode and get you covered in pixels.
+
+----
+
+Section1txt: 
+
+----
+
+Ogdescription: Welcome to the lab, where dream fonts are born and font demons are summoned!
+
+----
+
+Ogimage: blog-screenshot.png

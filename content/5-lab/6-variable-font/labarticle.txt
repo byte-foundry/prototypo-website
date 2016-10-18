@@ -1,0 +1,17 @@
+Title: Variable font
+
+----
+
+Ogimage: varaible-font.png
+
+----
+
+Link: https://lab.prototypo.io/smartFont/
+
+----
+
+Tags: variable font
+
+----
+
+Contentarticle: content
