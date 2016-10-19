@@ -10,11 +10,7 @@ Tags: workshop
 
 ----
 
-Subtitle: subtitle
-
-----
-
-Contentarticle: content
+Contentarticle: A digital clock with a font whose thickness and size vary depending on the current time.
 
 ----
 

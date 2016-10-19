@@ -14,7 +14,7 @@ Section1txt:
 
 ----
 
-Ogdescription: Welcome to the lab, where dream fonts are born and font demons are summoned!
+Ogdescription: The lab is where we tinker with ideas and shapes. Comes with absolutely no warranties!
 
 ----
 

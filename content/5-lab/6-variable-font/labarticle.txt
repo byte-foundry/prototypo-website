@@ -10,8 +10,8 @@ Link: https://lab.prototypo.io/smartFont/
 
 ----
 
-Tags: variable font
+Tags: variable font,webdesign
 
 ----
 
-Contentarticle: content
+Contentarticle: Digital typefaces are used on devices that come in a lot of different shapes and sizes. Take a look at  how a font could fits its context.

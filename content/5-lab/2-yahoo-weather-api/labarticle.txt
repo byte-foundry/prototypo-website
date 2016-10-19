@@ -10,7 +10,7 @@ Tags: workshop
 
 ----
 
-Contentarticle: content
+Contentarticle: What's the weather like? Have a look at this application displaying the name of cities in different ways, depending on the wind strengh or their latitude. The font height is linked to the proximity of a city with the equator.
 
 ----
 
