@@ -2,11 +2,11 @@ Title: Versatile Type Design for the Web
 
 ----
 
-Ogdescription: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CEO and Cofounder of Prototypo, to broach the subject of versatile type design for the web. For those who missed it, here’s a look back on its talk..
+Ogdescription: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CEO and Cofounder of Prototypo, to broach the subject of versatile type design for the web.
 
 ----
 
-Ogimage: 
+Ogimage: louis-rmi-babe-at-atypi-warsaw-2016.jpg
 
 ----
 
@@ -18,11 +18,13 @@ Date: 2016-10-19
 
 ----
 
-Subtitle: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CEO and Cofounder of Prototypo, to broach the subject of versatile type design for the web. For those who missed it, here’s a look back on its talk.
+Subtitle: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month.  A great opportunity to broach the subject of versatile type design for the web.
 
 ----
 
 Contentarticle: 
+
+*ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CEO and Cofounder of Prototypo, to broach the subject of versatile type design for the web. For those who missed it, here’s a look back on its talk.*
 
 (image: louis-rmi-babe-at-atypi-warsaw-2016.jpg)
 
