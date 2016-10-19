@@ -1,0 +1,17 @@
+Title: Whistle
+
+----
+
+Ogimage: whistle.png
+
+----
+
+Link: https://lab.prototypo.io/whistle/
+
+----
+
+Tags: sound
+
+----
+
+Contentarticle: Who cannot sing, may whistle! Try it and whatch your font moving.

@@ -1,0 +1,17 @@
+Title: clock
+
+----
+
+Ogimage: clock.gif
+
+----
+
+Tags: workshop
+
+----
+
+Contentarticle: A digital clock with a font whose thickness and size vary depending on the current time.
+
+----
+
+Link: https://lab.prototypo.io/clock/

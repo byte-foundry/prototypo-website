@@ -21,6 +21,10 @@ fields:
 		label: Page description
 		type: text
 
+	ogImage:
+		label: Page thumbnail
+		type:  text
+
 	line-a:
 		type:line
 

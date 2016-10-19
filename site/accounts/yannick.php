@@ -9,9 +9,8 @@ password: >
 language: en
 role: admin
 history:
-  - home
-  - press
-  - blog/prototypo-gives-itself-a-makeover
+  - blog/versatile-type-design-for-the-web
   - pricing
-  - >
-    blog/prototypo-user-anatole-trainee-at-prototypo-the-floor-is-yours
+  - lab
+  - lab/variable-font
+  - lab/elzevir-specimen

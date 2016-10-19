@@ -1,0 +1,17 @@
+Title: Elzévir spécimen
+
+----
+
+Ogimage: elzevir-specimen.png
+
+----
+
+Link: https://lab.prototypo.io/elzevir-specimen/
+
+----
+
+Tags: specimen,template
+
+----
+
+Contentarticle: An interactive preview of Prototypo Elzevir, our latest parametric font designed by the french foundry Production Type.

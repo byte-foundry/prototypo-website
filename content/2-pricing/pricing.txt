@@ -114,3 +114,7 @@ Users:
 ----
 
 Ogdescription: The web application Prototypo allows you to create your own font in a few clicks, choose the plan that fits your needs or try Prototypo for free and start now!
+
+----
+
+Ogimage: pricing-screenshot.png

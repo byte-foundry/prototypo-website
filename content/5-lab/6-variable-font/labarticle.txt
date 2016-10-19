@@ -1,0 +1,17 @@
+Title: Variable font
+
+----
+
+Ogimage: varaible-font.png
+
+----
+
+Link: https://lab.prototypo.io/smartFont/
+
+----
+
+Tags: variable font,webdesign
+
+----
+
+Contentarticle: Digital typefaces are used on devices that come in a lot of different shapes and sizes. Take a look at  how a font could fits its context.

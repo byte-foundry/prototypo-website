@@ -1,0 +1,17 @@
+Title: Brightness
+
+----
+
+Ogimage: brightness.png
+
+----
+
+Link: https://lab.prototypo.io/brightness/
+
+----
+
+Tags: webdesign
+
+----
+
+Contentarticle: Different brightness, different thickness. When the font suits your eyes for a better reading experience.
