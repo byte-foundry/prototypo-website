@@ -2,7 +2,7 @@ Title: Versatile Type Design for the Web
 
 ----
 
-Ogdescription: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CEO and Cofounder of Prototypo, to broach the subject of versatile type design for the web.
+Ogdescription: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, co-founder of Prototypo, to broach the subject of versatile type design for the web.
 
 ----
 
@@ -71,11 +71,11 @@ Another benefit of parametric typefaces is that they’re easier to build as com
 
 <h2>Horizon</h2>
 Interpolated fonts and parametric fonts will play a key part in the upcoming font revolution because they have all the characteristics to be adapted, by the graphic designer, or to their context.
-And they can both be compiled down to OpenType GX format. OpenType GX is basically an official format for interpolated fonts, but the good news is that we also can convert a parametric font to OpenType GX, without loosing too much adaptability. So it’s another key piece of technology that will bring interpolated fonts and parametric fonts to the masses in the foreseeable future.
+And they can both be compiled down to variable fonts format. Variable fonts are basically an official format for interpolated fonts, but the good news is that we also can convert a parametric font to variable fonts format, without loosing too much adaptability. So it’s another key piece of technology that will bring interpolated fonts and parametric fonts to the masses in the foreseeable future.
 
 <iframe src="https://player.vimeo.com/video/120047887" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<legend>TrueType GX Variations — Skia by Matthew Carter. Video by FontLab Ltd</legend>
+<legend>TrueType GX Variations (parent of variable fonts) — Skia by Matthew Carter. Video by FontLab Ltd</legend>
 
 <h2>The web makes the future tangible now</h2>
 The final piece of technology in this revolution is, we believe, the web. Web browsers are omnipotent and ubiquitous technological wonders. They are present on many devices, and can do a lot of things:
