@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - pricing
   - lab
   - lab/variable-font
   - lab/elzevir-specimen
   - lab/whistle
-  - lab/brightness
