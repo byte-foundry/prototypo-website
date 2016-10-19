@@ -1,9 +1,9 @@
 <?php snippet('header') ?>
 
-	<main class="PageContent Blog gradient-green">
+	<main class="PageContent gradient-green">
 
 	<header class="PageHeader text-left fitToContent">
-		<a href="<?php echo url('blog'); ?>">
+		<a href="<?php echo url('lab'); ?>">
 			<h1 class="textType-title textSize-title-large">
 				<?php echo $page->section1Title()->kirbytextSans(); ?>
 				<div class="textType-subtitle textSize-title-small colorDark"><?php echo $page->section1Subtitle()->kirbytextSans(); ?></div>
@@ -25,7 +25,7 @@
 
 			<?php if($isTag = param('tag')): ?>
 				<nav class="BlogPagination BlogPagination-before">
-				  <a class="BlogPagination-item BlogPagination right textType-txt textSize-txt-small" href="<?php echo url('blog'); ?>">Back to blog</a>
+				  <a class="BlogPagination-item BlogPagination right textType-txt textSize-txt-small" href="<?php echo url('lab'); ?>">Back to lab</a>
 				</nav>
 			<?php endif; ?>
 
@@ -44,11 +44,11 @@
 					<nav class="BlogPagination BlogPagination-before">
 
 						<?php if($articles->pagination()->hasNextPage()): ?>
-							<a class="BlogPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $articles->pagination()->nextPageURL() ?>">older post</a>
+							<a class="BlogPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $articles->pagination()->nextPageURL() ?>">older posts</a>
 						<?php endif ?>
 
 						<?php if($articles->pagination()->hasPrevPage()): ?>
-							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer post</a>
+							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer posts</a>
 						<?php endif ?>
 
 					</nav>
@@ -90,7 +90,7 @@
 							<ul class="Article-tags">
 								<?php foreach($tags as $tag): ?>
 								<li class="Article-tag">
-								<a class="Article-tagLink colorWhite" href="<?php echo url('blog/tag:' . $tag)?>">
+								<a class="Article-tagLink colorWhite" href="<?php echo url('lab/tag:' . $tag)?>">
 									<?php echo html($tag) ?>
 								</a>
 								</li>
@@ -108,11 +108,11 @@
 					<nav class="BlogPagination BlogPagination-after">
 
 						<?php if($articles->pagination()->hasNextPage()): ?>
-							<a class="BlogPagination-item right textType-txt textSize-txt-small  red bg-white" href="<?php echo $articles->pagination()->nextPageURL() ?>">older post</a>
+							<a class="BlogPagination-item right textType-txt textSize-txt-small  red bg-white" href="<?php echo $articles->pagination()->nextPageURL() ?>">older posts</a>
 						<?php endif ?>
 
 						<?php if($articles->pagination()->hasPrevPage()): ?>
-							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small  red bg-white" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer post</a>
+							<a class="BlogPagination-item BlogPagination-next textType-txt textSize-txt-small  red bg-white" href="<?php echo $articles->pagination()->prevPageURL() ?>">newer posts</a>
 						<?php endif ?>
 
 					</nav>
