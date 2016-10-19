@@ -93,7 +93,7 @@ They have access to all sensors available on modern devices to give context to t
 <legend>Whistle Type</legend>
 
 <strong>More experiments on <a href="https://lab.prototypo.io/" target="_blank">Prototypo's Lab</a>:</strong>
-<a href="https://lab.prototypo.io/" style="background: none" target="_blank">(image: prototypo-lab.png)</a>
+<a href="https://www.prototypo.io/lab" style="background: none" target="_blank">(image: prototypo-lab.png)</a>
 <h2>Parametric font challenges</h2>
 At Prototypo, we believe parametric type design has the potential to save a lot of time to type designers.
 This is why we are investing a lot of energy into our parametric font technologies.
