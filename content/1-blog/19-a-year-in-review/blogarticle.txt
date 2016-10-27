@@ -1,0 +1,72 @@
+Title: A year in review
+
+----
+
+Ogdescription: As Prototypo celebrates the first birthday of its commercial launch, it’s time for us to take stock of this busy year and look forward to the next steps.
+
+----
+
+Ogimage: a-manual.gif
+
+----
+
+Tags: prototypo,project,features
+
+----
+
+Date: 2016-10-27
+
+----
+
+Subtitle: As Prototypo celebrates the first birthday of its commercial launch, it’s time for us to take stock of this busy year and look forward to the next steps.
+
+----
+
+Contentarticle: 
+
+<h2>An ongoing improvement</h2>
+Prototypo has quite evolved since October 2015. Let’s have a look back on the main achievements during this year.
+First of all, we have been pleased to welcome <strong>Prototypo Elzevir</strong>, the latest brainchild of our partners and friends from <a href="https://www.productiontype.com/" target="_blank"> Production Type</a>.  
+At this time, Prototypo Elzevir was our most complete parametric font thanks to the experience accumulated on the first 2 templates. They have since also been updated and are fully functional too!
+(image: elz-specimen.gif)
+<legend>Prototypo Elzevir by Production Type</legend>
+Also new this year, you may have heard about <strong>Prototypo’s Web Preview Extension</strong>. This Chrome extension lets you preview your font on any website. Thanks to this tool, all the changes you make in Prototypo can be applied immediately on your website. The real plus is that you can now preview your fonts together in their final environment. 
+Still haven’t tried it? <a href="https://www.prototypo.io/blog/introducing-prototypo-web-preview-extension.html" target="_blank">Here is the way it works</a>!
+<strong>A brand new user interface</strong>
+The release of our brand new user interface has been another big step forward. It has been a long process from the usability tests to the integration, but the result was worth it.
+The new interface is much more functional, with some major options more recognizable. Glyphs individualization and variants management are for instance way easier to use. 
+This makeover of Prototypo came along with new features, like spacing management, which was missing from the app so far.
+(image: indiv-new-ui.gif)
+<legend>Parameters individualization in Prototypo's new UI</legend>
+We continue to collect your feedback constantly in order to improve the interface that we know can always be better.
+<h2>A growing community</h2>
+You are now <strong>more than 15,000 users coming from over 130 countries</strong>! A great community of designers and typography lovers around the world with whom we communicate every day.
+(image: mirage-workshop-min.png)
+<legend>“Point-Break-Point” Prototypo’s workshop at Mirage Festival</legend>
+We took advantage of this year to meet you through different workshops and talks. 
+<a href="https://blog.prototypo.io/play-on-letters-9bb1d583846#.toyz3o41q" target="_blank">Letters Are My Friends</a>, <a href="https://www.prototypo.io/blog/point-break-point-prototypos-workshop-at-mirage-festival.html" target="_blank">Mirage Festival</a>, <a href="http://typotalks.com/" target="_blank">Typo Berlin</a>, <a href="http://anrt-nancy.fr/fr/presentation/" target="_blank">ANRT Nancy</a>, <a href="https://www.prototypo.io/blog/versatile-type-design-for-the-web.html" target="_blank">ATypI Warsaw 2016</a>, several events during which we tried to explore the limits of Prototypo, and imagine what the parametric typography could be tomorrow (you can have a look at some experiments in <a href="https://www.prototypo.io/lab.html" target="_blank">the lab</a>).
+Want to experiment with prototypo.js? Turn your original font into a parametric one? Or set a digital installation working with our technologies? <strong>Just tell us, we’re always up for original experiences!</strong>
+<h2>What’s next?</h2>
+This permanent contact with the community allows us to steadily improve the application and to work on the features you need. Here are some revelations about what you can expect in the next months.
+We can already tell you that <strong>manual edition on glyphs</strong> will be the next big thing.
+(image: a-manual.gif)
+<legend>Manual edition by Prototypo</legend>
+Many of you asked for this for such a long time, it will be a reality in the coming weeks!
+With the manual edition feature you'll be able to change the position, distribution, width and angle of every node in our templates and create the font you truly wanted, with no restriction.
+<strong>Build your own parametric fonts</strong>
+Another huge addition to come is the<strong> Prototypo Parametric Font Builder</strong>.
+This visual tool will allow you to create your own parametric fonts point by point. You’ll then be able to use your creation in Prototypo just as you do today with our 3 templates. 
+This builder is under development and will be released early 2017.
+<iframe width="700" height="393" src="https://www.youtube.com/embed/oWs5j95Sv0c" frameborder="0" allowfullscreen></iframe>
+<legend>A sneak peek at the builder</legend>
+Among still other things to come, we can announce that <strong>a new font powered by Production Type</strong> will be on the menu in the next months. A fourth template meaning another range of possibilities for your type designs!
+<strong>What kind of font do you expect? A geometric sans serif? A humanist? Tell us on <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a> and <a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>!</strong>
+As you can see in the animation below, we are working on the <strong>control of glyph components</strong>.
+(image: a-components.gif)
+<legend>Control of glyphs components</legend>
+Keeping a half of a serif or tweaking its shape could be the right moves for your logo design. Or maybe not? At least you will be able to easily try by switching all the built-in components!
+These coming enhancements are part of a global aim which is to grant a maximum freedom to users. By <strong>increasing the degree of customization in Prototypo</strong>, we want you to express your creativity without limit.
+Prototypo was built to let people create unique fonts and experiment ideas as quickly as possible so they can just focus on overall design.
+<strong>Now go ahead and try the app! We are eager to read your thoughts. <a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>, <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a>,  <a href="mailto:contact@prototypo.io">email</a>, contact us. We love to chat with our users!
+The Team,
+Cheers!</strong>
