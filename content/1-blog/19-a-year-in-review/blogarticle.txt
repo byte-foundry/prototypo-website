@@ -2,11 +2,11 @@ Title: A year in review
 
 ----
 
-Ogdescription: As Prototypo celebrates the first birthday of its commercial launch, it’s time for us to take stock of this busy year and look forward for the next steps.
+Ogdescription: As Prototypo celebrates the first birthday of its commercial launch, it’s time for us to take stock of this busy year and look forward to the next steps.
 
 ----
 
-Ogimage: 
+Ogimage: a-manual.gif
 
 ----
 
@@ -18,7 +18,7 @@ Date: 2016-10-27
 
 ----
 
-Subtitle: As Prototypo celebrates the first birthday of its commercial launch, it’s time for us to take stock of this busy year and look forward for the next steps.
+Subtitle: As Prototypo celebrates the first birthday of its commercial launch, it’s time for us to take stock of this busy year and look forward to the next steps.
 
 ----
 
@@ -31,17 +31,17 @@ At this time, Prototypo Elzevir was our most complete parametric font thanks to 
 (image: elz-specimen.gif)
 <legend>Prototypo Elzevir by Production Type</legend>
 Also new this year, you may have heard about <strong>Prototypo’s Web Preview Extension</strong>. This Chrome extension lets you preview your font on any website. Thanks to this tool, all the changes you make in Prototypo can be applied immediately on your website. The real plus is that you can now preview your fonts together in their final environment. 
-Still haven’t try it? <a href="https://www.prototypo.io/blog/introducing-prototypo-web-preview-extension.html" target="_blank">Here is the way it works</a>!
+Still haven’t tried it? <a href="https://www.prototypo.io/blog/introducing-prototypo-web-preview-extension.html" target="_blank">Here is the way it works</a>!
 <strong>A brand new user interface</strong>
 The release of our brand new user interface has been another big step forward. It has been a long process from the usability tests to the integration, but the result was worth it.
 The new interface is much more functional, with some major options more recognizable. Glyphs individualization and variants management are for instance way easier to use. 
 This makeover of Prototypo came along with new features, like spacing management, which was missing from the app so far.
-(image: prototypo-indiv-glyphs.gif)
+(image: indiv-new-ui.gif)
 <legend>Parameters individualization in Prototypo's new UI</legend>
 We continue to collect your feedback constantly in order to improve the interface that we know can always be better.
 <h2>A growing community</h2>
-You are now <strong>more than 15,000 users coming from over 130 countries</strong>! A great community of designers and typography lovers around the world with whom we communicate everyday.
-(image: mirage-workshop.png)
+You are now <strong>more than 15,000 users coming from over 130 countries</strong>! A great community of designers and typography lovers around the world with whom we communicate every day.
+(image: mirage-workshop-min.png)
 <legend>“Point-Break-Point” Prototypo’s workshop at Mirage Festival</legend>
 We took advantage of this year to meet you through different workshops and talks. 
 <a href="https://blog.prototypo.io/play-on-letters-9bb1d583846#.toyz3o41q" target="_blank">Letters Are My Friends</a>, <a href="https://www.prototypo.io/blog/point-break-point-prototypos-workshop-at-mirage-festival.html" target="_blank">Mirage Festival</a>, <a href="http://typotalks.com/" target="_blank">Typo Berlin</a>, <a href="http://anrt-nancy.fr/fr/presentation/" target="_blank">ANRT Nancy</a>, <a href="https://www.prototypo.io/blog/versatile-type-design-for-the-web.html" target="_blank">ATypI Warsaw 2016</a>, several events during which we tried to explore the limits of Prototypo, and imagine what the parametric typography could be tomorrow (you can have a look at some experiments in <a href="https://www.prototypo.io/lab.html" target="_blank">the lab</a>).
@@ -64,7 +64,7 @@ Among still other things to come, we can announce that <strong>a new font powere
 As you can see in the animation below, we are working on the <strong>control of glyph components</strong>.
 (image: a-components.gif)
 <legend>Control of glyphs components</legend>
-Keeping a half of a serif or tweaking its shape could be the right moves for your logo design. Or maybe not? At least you will be able to easily try by switching all the buit-in components!
+Keeping a half of a serif or tweaking its shape could be the right moves for your logo design. Or maybe not? At least you will be able to easily try by switching all the built-in components!
 These coming enhancements are part of a global aim which is to grant a maximum freedom to users. By <strong>increasing the degree of customization in Prototypo</strong>, we want you to express your creativity without limit.
 Prototypo was built to let people create unique fonts and experiment ideas as quickly as possible so they can just focus on overall design.
 <strong>Now go ahead and try the app! We are eager to read your thoughts. <a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>, <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a>,  <a href="mailto:contact@prototypo.io">email</a>, contact us. We love to chat with our users!
