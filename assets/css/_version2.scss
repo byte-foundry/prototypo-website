@@ -383,3 +383,11 @@ li.home-feature {
 		float: right;
 	}
 }
+
+#infopromo {
+	// display: none;
+
+	&:target{
+		display:block;
+	}
+}
