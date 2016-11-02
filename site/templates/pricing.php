@@ -1,5 +1,6 @@
 <?php snippet('header') ?>
 <main class="PageContent Pricing showAnnualBilling gradient-red">
+
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->headerImg())->url(); ?>)">
 		<div class="PricingItemFree-wrap">
@@ -20,7 +21,7 @@
 	<div class="fitToContent">
 
 		<?php if($page->descriptionPromo()->isNotEmpty()): ?>
-			<h2 class="txt-promo Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
+			<h2 id="infopromo" class="txt-promo Section-wrapTxt textType-txt marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle">
 				<?php echo $page->descriptionPromo(); ?>
 			</h2>
 		<?php endif ?>
