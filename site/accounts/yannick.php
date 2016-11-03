@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - home
   - pricing
   - blog/versatile-type-design-for-the-web
   - lab
   - lab/variable-font
-  - lab/elzevir-specimen
