@@ -91,6 +91,15 @@
 
 	</div>
 
+	<!--  Surge hack to avoid 404 videos -->
+	<div style="display: none;">
+		<?php foreach($page->files() as $file): ?>
+			<?php if ($file->extension() === 'mp4' ): ?>
+				<a href="<?php echo $file->url() ?>"><?php echo $file->filename() ?></a>
+			<?php endif; ?>
+		<?php endforeach ?>
+	</div>
+
 </main>
 
 <?php snippet('footer') ?>
