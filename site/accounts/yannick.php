@@ -9,8 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - press
   - blog/introducing-prototypo-v2
   - pricing
   - home
   - blog/versatile-type-design-for-the-web
-  - lab
