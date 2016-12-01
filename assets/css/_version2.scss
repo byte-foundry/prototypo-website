@@ -218,6 +218,7 @@ main.Blog {
 			text-align: center;
 			font-size: 0.75em;
 			font-style: italic;
+			margin: 1em 0;
 		}
 
 		twitterwidget {
@@ -225,7 +226,8 @@ main.Blog {
 			border: 1px solid #e1e8ed;
 		}
 
-		iframe {
+		iframe,
+		video {
 			width: 100%;
 			max-width: 100%;
 		}

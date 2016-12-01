@@ -627,7 +627,7 @@ PrototypoCanvas.load = load;
 paper.PaperScope.prototype.Path.prototype._drawSelected = _drawSelected;
 _.assign( paper.settings, {
 	handleSize: 6,
-	handleColor: '#FF725E',
+	handleColor: '#fc5454',
 	nodeColor: '#00C4D6',
 	drawCoords: false,
 	handleFont: '12px monospace'
