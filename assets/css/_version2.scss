@@ -393,3 +393,23 @@ li.home-feature {
 		display:block;
 	}
 }
+
+.pressArticles {
+	&.row { max-width: 100%; }
+	a {
+		display: inline-block;
+		width: 100%;
+		&:hover {
+			color: $red;
+		}
+	}
+	&.table { display:table; }
+	.table-row {
+		display:table-row;
+		&::nth(odd) {
+			background-color: red;
+		}
+	}
+	.table-cell { display:table-cell; }
+	.large-1 { text-align: right; }
+}
