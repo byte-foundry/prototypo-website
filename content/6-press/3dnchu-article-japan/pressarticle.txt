@@ -1,0 +1,13 @@
+Title: ブラウザ上でフォント開発が行えるサービス！細かな調整が可能になった新バージョン！
+
+----
+
+Siteblog: 3dnchu.com
+
+----
+
+Urlblog: http://3dnchu.com/archives/prototypo-2/
+
+----
+
+Lang: JP
