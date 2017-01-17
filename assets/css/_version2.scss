@@ -405,7 +405,7 @@ li.home-feature {
 	}
 	&.table { display:table; }
 	.table-row {
-		display:table-row;
+		// display:table-row;
 		&::nth(odd) {
 			background-color: red;
 		}
