@@ -1,0 +1,13 @@
+Title: How Prototypo simplified their web app
+
+----
+
+Siteblog: Invision
+
+----
+
+Urlblog: http://blog.invisionapp.com/prototypo-design-teardown/
+
+----
+
+Lang: EN

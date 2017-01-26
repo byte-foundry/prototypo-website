@@ -2,14 +2,14 @@ Title: Create your own font in a few clicks
 
 ----
 
-Infobox1: 
+Infobox1:
 
 Customize more
 than twenty parameters…
 
 ----
 
-Infobox2: 
+Infobox2:
 
 …see your own
 font take shape
@@ -37,24 +37,24 @@ Section1subtitle: And an infinite number of variations
 
 ----
 
-Section1txt: 
+Section1txt:
 
 ----
 
-Fonts: 
+Fonts:
 
-- 
+-
   cover: john-fell-preview.svg
   fontname: Prototypo Fell
   fontdescription: >
     A digital makeover of the Canon and
     3-line pica Roman cut by John Fell ca.
     1686.
-- 
+-
   cover: venus-preview.svg
   fontname: Prototypo Grotesk
   fontdescription: 'A somewhat distant interpretation of a Wagner & Schmidt design, 1907.'
-- 
+-
   cover: elzevir-preview.svg
   fontname: Prototypo Elzevir
   fontdescription: 'One of the many Elzévirs by the French foundry Renaud during the  19th century.'
@@ -73,9 +73,9 @@ Section2subtitle: This, that, and much more.
 
 ----
 
-Features: 
+Features:
 
-- 
+-
   featureimg: pictofeaturescharactersset.svg
   featurename: Latin characters set
   featuredescription: >
@@ -83,7 +83,7 @@ Features:
     letter in the Latin character set.
     Including smallcaps and basic
     punctuation.
-- 
+-
   featureimg: pictofeaturesindiv.svg
   featurename: Individualize glyphs/groups of glyphs
   featuredescription: >
@@ -91,14 +91,14 @@ Features:
     individualisation feature allows you to
     modify separately letters or groups of
     letters.
-- 
+-
   featureimg: web-extension.svg
   featurename: Preview your fonts on any website
   featuredescription: >
     Tweak your fonts in Prototypo and live
     preview your changes on any website
     thanks to a Chrome extension.
-- 
+-
   featureimg: pictofeaturesexportfonts.svg
   featurename: Export to Glyphr Studio
   featuredescription: >
@@ -132,7 +132,7 @@ Title1: Save time and be more creative
 
 ----
 
-Content1: 
+Content1:
 
 We know what a waste of time it can be to search for the perfect font without finding it.
 
@@ -148,21 +148,21 @@ Content2: Creating a prototype for an original typeface, a custom logo for your 
 
 ----
 
-Steps: 
+Steps:
 
-- 
+-
   title: You need a specific font for a project
   content: >
     Sometimes the font perfectly fitting
     your project doesn’t exist. Why
     don’t you create it?
-- 
+-
   title: >
     Start your project with one of our 3
     parametric typefaces
   content: 'The basic set starts with Prototypo Fell, Prototypo Grotesk and Prototypo Elzevir. All our fonts are powered by our partner <b><a href="https://productiontype.com" target="_blank">Production Type</a></b>'
   cover: production-type-fonts.svg
-- 
+-
   title: >
     Shape your font adjusting more than 30
     parameters
@@ -172,7 +172,7 @@ Steps:
     and roundness. You can also fine-tune
     the serifs separately.
   cover: www.prototypo.io_M-all.gif
-- 
+-
   title: Export your font and use it anywhere
   content: >
     Your fonts can be exported to .otf
@@ -188,20 +188,20 @@ Title3: They talk about Prototypo
 
 ----
 
-Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b>15,000 users</b> from over <b>100 countries!</b>
+Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b>20,000 users</b> from over <b>130 countries!</b>
 
 ----
 
-Testimonials: 
+Testimonials:
 
-- 
+-
   quote: >
     Prototypo will let anyone design an
     entire font system all at once
   name: Mashable
   url: 'http://mashable.com/2014/05/04/prototypo-fonts/#A5wqMtGxW8qc'
   logo: gray-mashable.png
-- 
+-
   quote: >
     Hobbyists and type designers can
     experiment and refine a wide range of
@@ -210,7 +210,7 @@ Testimonials:
   url: >
     http://designtaxi.com/news/364486/An-Open-Source-App-That-Lets-Users-Make-And-Download-Their-Own-Fonts/
   logo: gray-taxi.png
-- 
+-
   quote: A user interface accessible to all
   name: Wired
   url: >
@@ -231,7 +231,7 @@ Title4: A powerful tool to design your font
 
 ----
 
-Content4: 
+Content4:
 
 ----
 
