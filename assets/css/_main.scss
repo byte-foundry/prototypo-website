@@ -643,8 +643,46 @@ iframe{
 	float: right;
 }
 .PricingSwitch {
-	color: $colorBrightest;
-	margin-top: 20px;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  button {
+  	color: white;
+    background-color: $red;
+    border: 2px solid $white;
+    &:hover, &:focus {
+      background-color: $white;
+      border-color: $colorLighterGray;
+      color: $red;
+      outline: none;
+    }
+    &.active {
+      background-color: $white;
+      color: $red;
+      border-color: $colorLighterGray;
+    }
+  }
+  button + button {
+    margin-left: 5px;
+  }
+  .PricingSwitch-savings {
+    position: absolute;
+    top: -15px;
+    right: 24%;
+    transform: translateX(-24%);
+    .PricingSwitch-savings-text {
+      margin-bottom: 5px;
+      span {
+        padding-left: 50px;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+    .PricingSwitch-savings-arrow {
+        fill: $white;
+    }
+  }
 }
 .PricingSwitch-item {
 	display: inline-block;
@@ -708,6 +746,39 @@ iframe{
 		color: $secondBackgroundColor;
 		font-size: 14px;
 	}
+}
+
+.SchoolsItem {
+  margin: 0;
+	padding: 35px;
+	background: $colorWhite;
+	border-radius: $global-radius;
+	box-shadow: 0 2px 40px rgba($secondBackgroundColor,.2);
+	text-align: center;
+	border-top: solid 3px $colorWhite;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	width: 100%;
+	position: relative;
+	border: 3px solid $colorLighterGray;
+}
+
+.SchoolsItem-packtitle {
+  text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: $secondBackgroundColor;
+	margin-bottom: 20px;
+}
+
+.SchoolsItem-text {
+  vertical-align: middle;
+  text-align: left;
+  padding: 0 35px 0;
 }
 
 /*
@@ -786,11 +857,12 @@ iframe{
 	margin-right: -10px;
 	display: inline-block;
 	opacity: 0.6;
+  text-align: left;
 }
 .PricingItem-infos {
 	background: $colorLighterGray;
 	margin: 25px 0 0;
-	padding: 25px 10px 80px;
+	padding: 0px 10px 65px;
 	flex: 1;
 	position: relative;
 }
@@ -814,6 +886,95 @@ iframe{
 .PricingItem-pack2 {
 	font-weight: bold;
 	text-transform: uppercase;
+}
+.PricingItem-pack-options {
+	margin-left: 0;
+}
+.PricingItem-pack-option {
+	padding-top: 10px;
+  hr {
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 0;
+  }
+}
+.PricingItem-pack-option-usercount {
+  text-align: center;
+  display: inline-block;
+  margin-top: -2px;
+  margin-bottom: 2px;
+  .input-number,
+  .input-number-decrement,
+  .input-number-increment,
+  .input-number-text {
+    border: 1px solid #ccc;
+    height: 25px;
+    user-select: none;
+    float: left;
+  }
+
+  .input-number {
+    width: 40px;
+    padding: 0 4px;
+    margin-bottom: 0;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+    border-right: none;
+    font-size: 16px;
+    line-height: 21px;
+    background: inherit;
+    box-shadow: none;
+    color: $colorDark;
+    &:focus {
+      outline: none;
+      background: inherit;
+      box-shadow: none;
+      border-color: #ccc;
+    }
+  }
+
+  .input-number-text {
+    font-size: 16px;
+    line-height: 21px;
+    border-left: none;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0 12px;
+    padding-left: 0;
+  }
+
+
+
+  .input-number-decrement,
+  .input-number-increment {
+    display: inline-block;
+    width: 30px;
+    line-height: 21px;
+    background: #f1f1f1;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .input-number-decrement:active,
+  .input-number-increment:active {
+    background: #ddd;
+  }
+
+  .input-number-decrement {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .input-number-increment {
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+  }
+  & + hr {
+    margin-top: 0;
+  }
 }
 .PricingItem-content {
 	margin-top: 8px;

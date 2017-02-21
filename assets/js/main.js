@@ -74,5 +74,132 @@ $(function() {
 	function pad(number) {
 		return (number < 10) ? '0' + number.toString() : number.toString();
 	}
+  
+  //Pricing - Switch monthly / annually and company user select
+  if ($('main.Pricing').length > 0) {
+    
+    /*** Get user count ***/
+    $.ajax({url: "https://tc1b6vq6o8.execute-api.eu-west-1.amazonaws.com/dev/customers", success: function(result){
+        console.log(result);
+        if (result.total_count) {
+          $('#Pricing-UserCount').text(result.total_count);
+        }
+    }});
+    /*** / Get user count ***/
+    
+    var $numberControl = $('.PricingItem-pack-option-usercount .input-number');
+    var $companyUserMin = $numberControl.attr('min') || false;
+    var $companyUserMax = $numberControl.attr('max') || false;
+    var $companyPrice = $('.PricingItem-price-company');
+    var $monthlyButton = $('#Pricing-monthly-plan');
+    var $yearlyButton = $('#Pricing-yearly-plan');
+    var prices = [];
+    $('.PricingItem-price').each(function(index, value) {
+      var price = $(value).text().split(',');
+      prices.push({
+        monthly: parseInt(price[1].replace(/\s+/g, ' ').trim()),
+        yearly: parseInt(price[0].replace(/\s+/g, ' ').trim())
+      })
+    });
+    var baseCompanyPrice = prices[2].yearly;
+
+    $('.PricingItem-price').each(function(index, value) {
+      $(value).text(prices[index].yearly);
+      setPrice($numberControl[0].value);
+    });
+
+    /*** Switch Monthly / yearly ***/
+    $monthlyButton.on('click', function(e) {
+      $monthlyButton.addClass('active');
+      $yearlyButton.removeClass('active');
+      
+      $('.PricingItem-price').each(function(index, value) {
+        $(value).text(prices[index].monthly);
+        baseCompanyPrice = prices[2].monthly;
+        setPrice($numberControl[0].value);
+      });
+      
+    });
+    
+    $yearlyButton.on('click', function(e) {
+      $yearlyButton.addClass('active');
+      $monthlyButton.removeClass('active');
+      
+      $('.PricingItem-price').each(function(index, value) {
+        $(value).text(prices[index].yearly);
+        baseCompanyPrice = prices[2].yearly;
+        setPrice($numberControl[0].value);
+      });
+    });
+    /*** /Switch Monthly / yearly ***/
+    
+    /*** Company user count ***/    
+    
+    var $controls = {
+      dec: $numberControl.prev(),
+      inc: $numberControl.next().next()
+    }
+    
+    $numberControl.each(function() {
+      init($(this));
+      $(this).on('input',function(e){
+       setPrice($numberControl[0].value);
+      });
+    });
+    
+    function init(el) {
+
+      $controls.dec.on('click', decrement);
+      $controls.inc.on('click', increment);
+
+      function decrement() {
+        var value = el[0].value;
+        value--;
+        if(!$companyUserMin || value >= $companyUserMin) {
+          el[0].value = value;
+          setPrice(el[0].value);
+        }
+      }
+
+      function increment() {
+        var value = el[0].value;
+        value++;
+        if(!$companyUserMax || value <= $companyUserMax) {
+          el[0].value = value++;
+          setPrice(el[0].value);
+        }
+      }
+      
+    }
+    
+    function setPrice(numLicences) {
+      if (numLicences < 4) {
+        $numberControl[0].value = 4;
+        numLicences = 4;
+      }
+      
+      if (numLicences > 100) {
+        $numberControl[0].value = 100;
+        numLicences = 100;
+      }
+      
+      $companyPrice.text(baseCompanyPrice * numLicences);
+      switch ($companyPrice.text().toString().length) {
+        case 4:
+          $companyPrice.css('width', '140px');
+          break;
+        case 3:
+          $companyPrice.css('width', '110px');
+          break;
+        default:
+          $companyPrice.css('width', '80px');
+      }
+    }
+    
+    /*** / Company user count ***/
+    
+  }
 
 });
+
+

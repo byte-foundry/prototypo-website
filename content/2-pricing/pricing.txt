@@ -9,44 +9,29 @@ Subtitle:
 Packs: 
 
 - 
-  packname: free version
-  price: 0
+  packname: Free
+  price: 0, 0
   promo:
-  baseline:
-  options: |
-    Limited export
-    One project per template
+  description: See for yourself how it works and discover the features.
+  baseline: Free forever, the first Pro month for $1!
+  options: 1 user, 3 templates, 48h support, Unlimited projects, Limited sliders, Access to the academy, -,-,-,-,-,-,-,-,-
   button: Try it for free
 - 
-  packname: Monthly billing
-  price: 15
+  packname: Pro
+  price: 8, 15
+  description: Perfect for solo designers working on several projects.
   promo:
   baseline: End your subscription whenever you want
-  options: |
-    Unlimited font exports
-    Customize all parameters
-  button: Get started!
+  options: 1 user, 3 templates, 48h support, Unlimited projects, Access to all the parameters, Access to the academy, Unlimited font exports, Customize all parameters, Manual editing, Glyph individualization, Export to Glyphr Studio, Web preview extension,-,-,-
+  button: Try it for $1!
 - 
-  packname: Annual billing
-  price: 99
+  packname: Company
+  price: 16, 30
+  description: Great for teams and growing businesses. Contact us for more informations!
   promo:
-  baseline: Save more than 5 months!
-  options: |
-    Unlimited font exports
-    Customize all parameters
-    Access to beta versions
-  button: Save 45% !
-- 
-  packname: Schools/Agencies
-  price:
-  promo:
-  baseline:
-  options: |
-    Unlimited font exports
-    Customize all parameters
-    Collaborative tools
-    Users management
-  button: Contact us
+  baseline: Custom plan and pricing for larger teams
+  options: X user, on-demand templates, 24h support, Unlimited projects, Access to all the parameters, Access to the academy, Unlimited font exports, Customize all parameters, Manual editing, Glyph individualization, Export to Glyphr Studio, Web preview extension, Team management*, User roles*, Collaborative tools* 
+  button: Get a quote
 
 ----
 
