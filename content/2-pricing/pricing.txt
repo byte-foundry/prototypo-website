@@ -13,29 +13,31 @@ Packs:
   price: 0, 0
   promo:
   description: See for yourself how it works and discover the features.
-  baseline: Free forever, the first Pro month for $1!
-  options: 1 user, 3 templates, 48h support, Unlimited projects, Limited sliders, Access to the academy, -,-,-,-,-,-,-,-,-
+  baseline: Free forever!
+  options: 1 user, One week support, Limited parameter range,-,-,-,-,-,-
   button: Try it for free
 - 
   packname: Pro
-  price: 8, 15
+  price: 8.25, 15
   description: Perfect for solo designers working on several projects.
   promo:
   baseline: End your subscription whenever you want
-  options: 1 user, 3 templates, 48h support, Unlimited projects, Access to all the parameters, Access to the academy, Unlimited font exports, Customize all parameters, Manual editing, Glyph individualization, Export to Glyphr Studio, Web preview extension,-,-,-
+  options: 1 user, 48h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension,-,-
   button: Try it for $1!
+  offer: 1<sup>st</sup> month for $1
 - 
   packname: Company
-  price: 16, 30
+  price: 12.5, 22.5
   description: Great for teams and growing businesses. Contact us for more informations!
   promo:
   baseline: Custom plan and pricing for larger teams
-  options: X user, on-demand templates, 24h support, Unlimited projects, Access to all the parameters, Access to the academy, Unlimited font exports, Customize all parameters, Manual editing, Glyph individualization, Export to Glyphr Studio, Web preview extension, Team management*, User roles*, Collaborative tools* 
+  options: X user, 24h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension, Team management and user roles**, Collaborative tools** 
   button: Get a quote
 
 ----
 
 Txtafter: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued.
+\** Coming soon!
 
 ----
 

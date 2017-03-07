@@ -29,17 +29,6 @@
     <div class="PricingSwitch text-center marginTop60">
           <button href="#" id="Pricing-monthly-plan" class="button textType-txt textSize-txt-large radius">Monthly biling</button>
           <button href="#" id="Pricing-yearly-plan" class="button active radius textType-txt textSize-txt-large">Yearly biling</button>
-          <div class="PricingSwitch-savings">
-            <div class="PricingSwitch-savings-text textSize-txt-medium">
-                <span class="textType-txt">
-                    Save 47%!
-                </span>
-            </div>
-
-            <svg class="PricingSwitch-savings-arrow" width="22" height="18" viewBox="0 0 22 18">
-                <path d="M5.15,17.68A.8.8,0,0,0,5,16.52L2.94,14.24a23.36,23.36,0,0,0,11.63-3,16,16,0,0,0,6.16-6.6A13.11,13.11,0,0,0,22,.92.82.82,0,0,0,21.25,0a.89.89,0,0,0-.57.12.83.83,0,0,0-.4.6,11.9,11.9,0,0,1-1.2,3.39,14.31,14.31,0,0,1-5.42,5.73A21.58,21.58,0,0,1,2.87,12.59l1.33-2A.8.8,0,0,0,4,9.44a.9.9,0,0,0-1,0,.87.87,0,0,0-.23.2L.18,13.25A.8.8,0,0,0,.33,14.4l3.61,3.43a.89.89,0,0,0,1.21-.15Z"></path>
-            </svg>
-        </div>
     </div>    
 
 		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 PricingTable marginTop30">
@@ -49,14 +38,18 @@
 			?>
 			<li class="PricingItem">
 				<div class="PricingItem-wrap">
-
+          <?php if (isset( $pack['offer'] )): ?>
+            <div class="PricingItem-offerRibbon">
+              <div class="PricingItem-offerRibbon-content"><?php echo $pack['offer']; ?></div>
+            </div>
+          <?php endif ?>
 					<div class="PricingItem-header">
 
 						<h2 class="PricingItem-packtitle textType-txt textSize-txt-small">
 							<?php echo $pack['packname']; ?>
 						</h2>
             
-            <p class="textType-txt textSize-txt-small marginTop15">
+            <p class="textType-txt textSize-txt-small marginTop15 PricingItem-description">
 							<?php echo $pack['description']; ?>
 						</p>
 
@@ -89,7 +82,7 @@
 							<?php endif; ?>
 						</p>
 
-						<p class="textType-txt textSize-txt-small marginTop15 red">
+						<p class="textType-txt textSize-txt-small marginTop15 red PricingItem-baseline">
 							<?php echo $pack['baseline']; ?>
 						</p>
 
@@ -101,7 +94,11 @@
               <?php if ( $pack['options'] ) : $options = explode(',',$pack['options']); ?>
               <ul class="PricingItem-pack-options">
       					<?php foreach($options as $index => $option): ?>
+                  <?php if ($option === '-'): ?>
+                  <li class="PricingItem-pack-option hidden-for-small-down">
+                  <?php else: ?>
                   <li class="PricingItem-pack-option">
+                  <?php endif ?>
                     <?php if ( str::contains($pack['packname'], 'Company', $i = true) && $index === 0 ): ?>
                       <div class="PricingItem-pack-option-usercount">
                         <span class="input-number-decrement">–</span>
@@ -126,12 +123,7 @@
 							<?php
 								$subdomain = c::get('env') === 'dev' ? 'dev' : 'app';
 								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/account/create';
-
-								if ( str::contains($pack['packname'], 'schools/agencies', $i = true) ):
-									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction \">{$pack['button']}</a>";
-								else:
-									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction\">{$pack['button']}</a>";
-								endif;
+                echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction callToAction-{$pack['packname']}\">{$pack['button']}</a>";
 							?>
 						</div>
 
@@ -151,9 +143,9 @@
         <img src="<?php echo url('assets/img/Enterprise.svg'); ?>" alt="">
       </div>
       <div class="SchoolsItem-column SchoolsItem-text textType-txt textSize-txt-medium">
-          Ipsum burgdoggen proident ham incididunt pastrami ut kielbasa voluptate cupidatat. Ad sed ham ea ex shank tongue do laboris tail biltong ut consectetur kevin. Eiusmod in ut rump pork belly aute kevin occaecat sint!
+          We think Prototypo is an awesome tool for students to learn the basics of type design, so we definitely want to make students to access Prototypo easily: save up to 80% on the commercial price.
           <br/><br/>
-          <a href="mailto:contact@prototypo.io" class="callToAction">Contact us!</a>
+          <a href="/education" class="callToAction">Learn more about it!</a>
       </div>
     </div>
 

@@ -666,22 +666,21 @@ iframe{
   button + button {
     margin-left: 5px;
   }
-  .PricingSwitch-savings {
+  #Pricing-yearly-plan::after {
+    content: 'Save 47%!';
+    display: block;
     position: absolute;
-    top: -20px;
-    right: 21%;
-    transform: translateX(-21%);
-    .PricingSwitch-savings-text {
-      margin-bottom: 5px;
-      span {
-        padding-left: 50px;
-        color: $white;
-        text-transform: uppercase;
-      }
-    }
-    .PricingSwitch-savings-arrow {
-        fill: $white;
-    }
+    font-weight: 600;
+    right: -90px;
+    top: -30px;
+    height: 45px;
+    color: $white;
+    background-color: transparent;
+    background-image: url("/assets/img/pricing-arrow.svg");
+    background-size: 22px 18px;
+    background-repeat: no-repeat;
+    background-position: 30% 100%;
+    overflow: visible;
   }
 }
 .PricingSwitch-item {
@@ -735,6 +734,73 @@ iframe{
 	position: relative;
 	border: 3px solid $colorLighterGray;
 }
+.PricingItem-description {
+  min-height: 36px;
+}
+.PricingItem-baseline {
+  min-height: 36px;
+}
+.PricingItem-description, .PricingItem-baseline {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.PricingItem-offerRibbon {
+  width: 108px;
+  height: 108px;
+  overflow: hidden;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  .PricingItem-offerRibbon-content {
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    transform: rotate(45deg);
+    position: relative;
+    padding: 9px 0;
+    left: -4px;
+    top: 26px;
+    width: 150px;
+    background-color: mix(white, $red, 10%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    box-shadow: -3px 5px 6px -5px rgba(0, 0, 0, 0.5);
+    sup {
+      font-size: 0.6em;
+    }
+    &::before, &::after {
+      content: "";
+      border-top: 4px solid mix(black, $red, 30%);
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      position: absolute;
+      bottom: -4px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      z-index: -1;
+      border-left: 4px solid mix(black, $red, 30%);
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-top: 4px solid mix(black, $red, 30%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 100%;
+      z-index: -1;
+      border-left: 2px solid transparent;
+      border-right: 2px solid mix(black, $red, 30%);
+      border-bottom: 2px solid transparent;
+      border-top: 2px solid mix(black, $red, 30%);
+    }
+  }
+}
 
 .PricingItem-header {
 	position: relative;
@@ -750,6 +816,7 @@ iframe{
 
 .SchoolsItem {
   margin: 0;
+  margin-top: 10px;
 	padding: 35px;
 	background: $colorWhite;
 	border-radius: $global-radius;
@@ -765,6 +832,7 @@ iframe{
 	width: 100%;
 	position: relative;
 	border: 3px solid $colorLighterGray;
+	
 }
 
 .SchoolsItem-packtitle {
@@ -2051,6 +2119,299 @@ body.account .Article {
 	}
 
 }
+
+.Education {
+  
+  .Section-newsletter {
+    .SectionHeader {
+      margin-bottom: 10px;
+    }
+    .Section-wrapTxt {
+      padding: 5px 60px;
+    }
+  }
+  
+  /* general style for the form */
+  .nl-form {
+  	width: 100%;
+  	margin: 0.3em auto 0 auto;
+  	font-size: 20px;
+    line-height: 1.6;
+    padding: 10px 0px;
+  }
+
+  .nl-form ul {
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+  }
+
+  /* normalize the input elements, make them look like everything else */
+  .nl-form input,
+  .nl-form select,
+  .nl-form button:not(.callToAction) {
+  	border: none;
+    box-shadow: none;
+  	background: transparent;
+  	font-family: inherit;
+  	font-size: inherit;
+  	color: inherit;
+  	font-weight: inherit;
+  	line-height: inherit;
+  	display: inline-block;
+  	padding: 0;
+  	margin: 0;
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
+  }
+
+  .nl-form input:focus {
+  	outline: none;
+  }
+
+  /* custom field (drop-down, text element) styling  */
+  .nl-field {
+  	display: inline-block;
+  	position: relative;
+		border-radius: 3px;
+  	border: 1px solid $light-grey;
+		margin: 2px 2px 2px 0px;
+  }
+
+  .nl-field.nl-field-open {
+  	z-index: 10000;
+  }
+
+  /* the toggle is the visible part in the form */
+  .nl-field-toggle,
+  .nl-form input,
+  .nl-form select  {
+  	line-height: inherit;
+  	display: inline-block;
+  	color: $red;
+  	cursor: pointer;
+		padding: 5px 35px 5px 10px;
+		margin: 2px 2px;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			width: 0; 
+		  height: 0; 
+		  border-left: 5px solid transparent;
+		  border-right: 5px solid transparent;
+		  border-top: 5px solid $red;
+		}
+  }
+
+  /* drop-down list / text element */
+  .nl-field ul {
+  	position: absolute;
+  	visibility: hidden;
+  	background: $red;
+    border-radius: 3px;
+  	left: -0.25em;
+  	top: 50%;
+  	font-size: 100%;
+  	opacity: 0;
+  	transform: translateY(-40%) scale(0.9);
+  	transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
+  }
+
+  .nl-field.nl-field-open ul {
+  	visibility: visible;
+  	opacity: 1;
+  	transform: translateY(-50%) scale(1);
+  	transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
+  }
+
+  .nl-field ul li {
+  	color: #fff;
+  	position: relative;
+  }
+
+  .nl-dd ul li {
+  	padding: 0 2em 0 0.75em;
+  	cursor: pointer;
+  	white-space: nowrap;
+  }
+
+  .nl-dd ul li.nl-dd-checked {
+  	color: mix(white, $red, 70%);
+  }
+
+  .nl-dd ul li:hover {
+  	background: rgba(0,0,0,0.05);
+  }
+
+  .nl-dd ul li:hover:active {
+  	color: mix(white, $red, 70%);
+  }
+
+  .nl-dd ul li.nl-dd-checked:before {
+  	content: "";
+  	position: absolute;
+  	right: 1em;
+    top: 0.35em;
+		width: 8px;
+		height: 14px;
+		border: solid mix(white, $red, 70%);
+		border-width: 0 2px 2px 0;
+		transform: rotate(45deg);
+  }
+
+  .nl-ti-text ul {
+  	min-width: 400px;
+  }
+
+  .nl-ti-text ul li.nl-ti-input input {
+  	width: 100%;
+  	padding: 0.2em 2em 0.2em 0.5em;
+  	border-bottom: none;
+  	color: #fff;
+  }
+
+  .nl-form .nl-field-go {
+  	position: absolute;
+  	right: 0;
+  	top: 0;
+  	height: 100%;
+  	cursor: pointer;
+  	background: rgba(0,0,0,0.1);
+  	width: 1.8em;
+  	text-align: center;
+  	color: transparent;
+  }
+
+  .nl-field-go:before {
+  	content: "➜";
+  	font-size: 75%;
+  	color: #fff;
+  	width: 100%;
+  	line-height: 2.5;
+  	display: block;
+  }
+
+  /* custom placeholder color */
+  input::-webkit-input-placeholder {
+  	color: rgba(255,255,255,0.8);
+  }
+
+  input:active::-webkit-input-placeholder ,
+  input:focus::-webkit-input-placeholder {
+  	color: rgba(255,255,255,0.2);
+  }
+
+  input::-moz-placeholder {
+  	color: rgba(255,255,255,0.8);
+  }
+
+  input:active::-moz-placeholder,
+  input:focus::-moz-placeholder {
+  	color: rgba(255,255,255,0.2);
+  }
+
+  input:-ms-input-placeholder {  
+  	color: rgba(255,255,255,0.8);
+  }
+
+  input:active::-ms-input-placeholder ,
+  input:focus::-ms-input-placeholder {
+  	color: rgba(255,255,255,0.2);
+  }
+
+  /* example field below text input */
+  .nl-ti-text ul li.nl-ti-example {
+  	font-size: 80%;
+  	font-style: italic;
+  	font-weight: 400;
+  	padding: 0.4em 1em;
+  	color: rgba(255,255,255,0.7);
+  	border-top: 1px dashed rgba(255,255,255,0.7);
+  }
+
+  .nl-ti-text ul li.nl-ti-example em {
+  	color: #fff
+  }
+
+  /* submit button */
+  .nl-submit-wrap {
+  	margin-top: 0.4em;
+  }
+
+  .nl-form .nl-submit {
+  	line-height: 3;
+  	text-transform: uppercase;
+  	cursor: pointer;
+  	position: relative;
+  	background: $red;
+  	color: #fff;
+  	padding: 0 1em 0 0;
+  	font-size: 40%;
+  	font-weight: bold;
+  	letter-spacing: 3px;
+  }
+
+  .nl-submit:before {
+  	content: "➜";
+  	color: #fff;
+  	float: left;
+  	padding: 0 0.7em;
+  	margin: 0 0.8em 0 0;
+  	background: mix(white, $red, 30%);
+  }
+
+  .no-touch .nl-form .nl-submit:hover,
+  .no-touch .nl-form .nl-submit:active {
+  	background: mix(white, $red, 30%);
+  }
+
+  .no-touch .nl-form .nl-submit:hover:before {
+  	background: mix(white, $red, 30%);
+  }
+
+  /* overlay becomes visible when a field is opened */
+  .nl-overlay {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  	background: rgba(0,0,0,0.5);
+  	opacity: 0;
+  	z-index: 9999;
+  	visibility: hidden;
+  	-webkit-transition: visibility 0s 0.3s, opacity 0.3s;
+  	-moz-transition: visibility 0s 0.3s, opacity 0.3s;
+  	transition: visibility 0s 0.3s, opacity 0.3s;
+  }
+
+  .nl-field.nl-field-open ~ .nl-overlay {
+  	opacity: 1;
+  	visibility: visible;
+  	-webkit-transition-delay: 0s;
+  	-moz-transition-delay: 0s;
+  	transition-delay: 0s;
+  }
+
+  @media screen and (max-width: 45em) {
+    .Section-newsletter {
+      .Section-wrapTxt {
+        padding: 5px 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 25em) {
+    .Section-newsletter {
+      .Section-wrapTxt {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+  
 
 .wait-for-load {
 	display:flex;
