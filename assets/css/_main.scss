@@ -667,11 +667,11 @@ iframe{
     margin-left: 5px;
   }
   #Pricing-yearly-plan::after {
-    content: 'Save 47%!';
+    content: 'Save 47%';
     display: block;
     position: absolute;
     font-weight: 600;
-    right: -90px;
+    right: -95px;
     top: -30px;
     height: 45px;
     color: $white;
@@ -679,7 +679,7 @@ iframe{
     background-image: url("/assets/img/pricing-arrow.svg");
     background-size: 22px 18px;
     background-repeat: no-repeat;
-    background-position: 30% 100%;
+    background-position: 0% 100%;
     overflow: visible;
   }
 }
