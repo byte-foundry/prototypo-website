@@ -16,6 +16,7 @@
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
     "nexus-flux": "FranzPoize/nexus-flux#master",
+    "pump": "^1.0.2",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-router": "^1.0.0-rc3",
@@ -27,7 +28,7 @@
     "babel-plugin-syntax-async-functions": "^6.3.13",
     "babel-plugin-transform-class-properties": "^6.4.0",
     "babel-plugin-transform-regenerator": "^6.3.13",
-    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.3.13",
     "babel-register": "^6.3.13",
     "blanket": "^1.1.6",
@@ -64,8 +65,7 @@
     "webpack": "^1.12.10",
     "webpack-dev-server": "^1.14.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "browserify": {
     "transform": [
       "envify",
