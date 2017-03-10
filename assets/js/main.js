@@ -255,7 +255,6 @@ $(function() {
     
     /*** Get user count ***/
     $.ajax({url: "https://e4jpj60rk8.execute-api.eu-west-1.amazonaws.com/prod/customers", success: function(result){
-        console.log(result);
         if (result.total_count) {
           $('#Pricing-UserCount').text(result.total_count);
         }
@@ -270,22 +269,38 @@ $(function() {
     var $yearlyButton = $('#Pricing-yearly-plan');
     var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href');
     var prices = [];
+    var baselines = [];
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
-        monthly: parseInt(price[1].replace(/\s+/g, ' ').trim()),
-        yearly: parseInt(price[0].replace(/\s+/g, ' ').trim())
+        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
+        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
+      })
+    });
+    $('.PricingItem-baseline').each(function(index, value) {
+      var baseline = $(value).text().split(',');
+      baselines.push({
+        monthly: baseline[0].replace(/\s+/g, ' ').trim(),
+        yearly: baseline[1].replace(/\s+/g, ' ').trim()
       })
     });
     var baseCompanyPrice = prices[2].yearly;
 
     $('.PricingItem-price').each(function(index, value) {
-      $(value).text(prices[index].yearly);
+      let priceSplit = prices[index].yearly.toString().split('.');
+      if (priceSplit.length > 1) {
+        $(value).html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
+      } else {
+        $(value).text(prices[index].yearly);
+      }
       setPrice($numberControl[0].value);
+    });
+    $('.PricingItem-baseline').each(function(index, value) {
+      $(value).text(baselines[index].yearly);
     });
 		$('.PricingItem-offerRibbon').hide();
     $('.callToAction-Pro').text('Go pro!');
-    $('.callToAction-Company').text('Create your team!');
+    $('.callToAction-Company').text('Get a quote!');
 
     /*** Switch Monthly / yearly ***/
     $monthlyButton.on('click', function(e) {
@@ -293,9 +308,17 @@ $(function() {
       $yearlyButton.removeClass('active');
       
       $('.PricingItem-price').each(function(index, value) {
-        $(value).text(prices[index].monthly);
+        let priceSplit = prices[index].monthly.toString().split('.');
+        if (priceSplit.length > 1) {
+          $(value).html(priceSplit[0] + '<div class="PricingItem-price-small">.' + priceSplit[1] + '</div>');
+        } else {
+          $(value).text(prices[index].monthly);
+        }
         baseCompanyPrice = prices[2].monthly;
         setPrice($numberControl[0].value);
+      });
+      $('.PricingItem-baseline').each(function(index, value) {
+        $(value).text(baselines[index].monthly);
       });
 			
 			$('.PricingItem-offerRibbon').show();
@@ -308,9 +331,19 @@ $(function() {
       $monthlyButton.removeClass('active');
       
       $('.PricingItem-price').each(function(index, value) {
-        $(value).text(prices[index].yearly);
+        let priceSplit = prices[index].yearly.toString().split('.');
+        if (priceSplit.length > 1) {
+          $(value).html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
+        } else {
+          $(value).text(prices[index].yearly);
+        }
+        
         baseCompanyPrice = prices[2].yearly;
         setPrice($numberControl[0].value);
+        
+      });
+      $('.PricingItem-baseline').each(function(index, value) {
+        $(value).text(baselines[index].yearly);
       });
 			
 			$('.PricingItem-offerRibbon').hide();
@@ -369,25 +402,24 @@ $(function() {
         numLicences = 100;
       }
       
-      $companyPrice.text(baseCompanyPrice * numLicences);
-      switch ($companyPrice.text().toString().length) {
-        case 4:
-          $companyPrice.css('width', '140px');
-          break;
-        case 3:
-          $companyPrice.css('width', '110px');
-          break;
-        default:
-          $companyPrice.css('width', '80px');
+      let price = baseCompanyPrice * numLicences;
+      let priceSplit = price.toString().split('.');
+      if (priceSplit.length > 1) {
+        $companyPrice.html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
+      } else {
+        $companyPrice.text(price);
       }
       
-      if (numLicences <= 10) {
+      
+      /*if (numLicences <= 10) {
         $('.callToAction-Company').text('Create your team!');
         $('.callToAction-Company').attr('href', $baseCompanyCtaUrl);
       } else {
         $('.callToAction-Company').text('Get a quote!');
         $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
-      }
+      }*/
+      $('.callToAction-Company').text('Get a quote!');
+      $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
     }
     
     /*** / Company user count ***/   

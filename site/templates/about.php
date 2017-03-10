@@ -37,7 +37,6 @@
                 <?php if (!empty($member['memberquery'])) : ?>
                 <li class="MembersItem-linksItem textSize-small">
                   <a href="<?php echo $member['memberquery']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-query">
-                  <span class="show-for-sr">Query</span>
                   </a>
                 </li>
                 <?php endif; ?>
@@ -45,7 +44,6 @@
                 <?php if (!empty($member['memberfacebook'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['memberfacebook']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-facebook">
-                  <span class="show-for-sr">Facebook</span>
                   </a>
                 </li>
                 <?php endif; ?>
@@ -53,7 +51,6 @@
                 <?php if (!empty($member['membertwitter'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['membertwitter']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-twitter">
-                  <span class="show-for-sr">Twitter</span>
                   </a>
                 </li>
                 <?php endif; ?>
@@ -61,7 +58,6 @@
                 <?php if (!empty($member['membergithub'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['membergithub']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-github">
-                  <span class="show-for-sr">GitHub</span>
                   </a>
                 </li>
                 <?php endif; ?>
@@ -69,7 +65,6 @@
                 <?php if (!empty($member['membervimeo'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['membervimeo']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-vimeo">
-                  <span class="show-for-sr">Vimeo</span>
                   </a>
                 </li>
                 <?php endif; ?>
@@ -77,7 +72,6 @@
                 <?php if (!empty($member['memberwebsite'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['memberwebsite']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-website">
-                  <span class="show-for-sr">Website</span>
                   </a>
                 </li>
                 <?php endif; ?>
@@ -85,7 +79,6 @@
                 <?php if (!empty($member['membermail'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['membermail']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-mail">
-                  <span class="show-for-sr">Mail</span>
                   </a>
                 </li>
                 <?php endif; ?>

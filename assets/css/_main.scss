@@ -889,10 +889,12 @@ iframe{
 }
 .PricingItem-price {
 	display: inline-block;
-	width: 80px;
 	height: 58px;
 	overflow: hidden;
 	font-weight: bold;
+  &-small {
+    font-size: 30%;
+  }
 }
 .js_price {
 	transition: all 300ms ease;

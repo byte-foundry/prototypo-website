@@ -51,7 +51,7 @@ Members:
   memberphoto: yann.jpg
 -
   membername: François Poizat
-  memberjob: Developer
+  memberjob: Lead developer
   memberdescription: |
     François is the hidden twin brother of Wikipedia: he knows everything about everything, or at least he knows just enough to convince his teammates that he does. A question about Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. Since he got his engineer degree at INSA, he has been involved in many research projects in France and Japan.
     Ohayō François!
@@ -61,16 +61,31 @@ Members:
   membergithub: https://github.com/FranzPoize
   membertwitter: https://twitter.com/FranzP
   memberwebsite:
-  membermail: mailto:contact@prototypo.io
+  membermail: mailto:francois@prototypo.io
   membervimeo:
   memberphoto: franzp.jpg
+-
+  membername: Julien Barret
+  memberjob: Developer
+  memberdescription: |
+    Julien is an engineer who goes crazy when it comes to food, like eating natto or making instant curry that lasts a whole week.
+    Coming from the obscure world of web agencies, he's mainly working on the new app features and put his efforts in making the app as beautiful as possible. When he's not busy angrying at CSS that never works, he plays the bass guitar and fights people and monsters on online games.
+  memberquery: 'https://www.google.fr/search?q=corgi+coffee&hl=fr&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiNusaN_cnSAhWE7hoKHZoHBOsQ_AUIBigB&biw=1920&bih=951'
+  memberfacebook: >
+    https://www.facebook.com/barret.jul
+  membergithub: https://github.com/Aldrian
+  membertwitter: https://twitter.com/barretjul
+  memberwebsite:
+  membermail: mailto:julien@prototypo.io
+  membervimeo:
+  memberphoto: julien.jpg
 -
   membername: Alexis Launay
   memberjob: Developer
   memberdescription: |
     Alexis has always been passionate about development.  While still being a student, he worked on several indie games, a twitter extension, a redux devtools packages and much more.
     At prototypo, he's mainly working on the back-end and the API, using a lot of top-notch tech. He also enjoys bothering the dev team with picky code reviews, coming from his conscientious spirit and his code refactoring passion.
-    Alexis also has an unshared love for some underground punk rock and tries to play the guitar on lunch break, but we like it for that too.
+    Alexis also has an unshared love for some underground punk rock and tries to play the guitar on lunch breaks, but we like it for that too.
   memberquery: 'https://www.google.fr/search?q=flying+potato&safe=off&biw=1920&bih=951&tbm=isch&source=lnms&sa=X&sqi=2&pjf=1&ved=0ahUKEwiktPLs_aDSAhWsBcAKHR-8D-kQ_AUIBigB&dpr=1'
   memberfacebook: >
     https://www.facebook.com/YoruNoHikage
@@ -79,7 +94,7 @@ Members:
   memberwebsite: http://blog.yorunohikage.fr
   membermail: mailto:alexis@prototypo.io
   membervimeo:
-  memberphoto: alexis-3.jpg
+  memberphoto: alexis.jpg
 
 ----
 

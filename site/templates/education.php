@@ -37,10 +37,10 @@
   							And I would like to use Prototypo for
   							<select>
   								<option value="1" selected>myself</option>
-  								<option value="2">2-5 people</option>
-  								<option value="3">6-10 people</option>
-  								<option value="4">11-20 people</option>
-  								<option value="2">20+ people</option>
+  								<option value="2">2-10 people</option>
+  								<option value="3">11-25 people</option>
+  								<option value="4">26-50 people</option>
+  								<option value="2">50+ people</option>
   							</select>.
   							<br />
   							Please get in touch with me by email at
