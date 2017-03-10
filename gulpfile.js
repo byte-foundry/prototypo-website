@@ -91,13 +91,11 @@ gulp.task('webpack:build', ['clean:dist'], function(callback) {
 });
 
 // Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function(done) {
-    pump([
-      gulp.src('./assets/css/*.scss'),
-      sass().on('error', sass.logError),
-	    autoprefixer(),
-      gulp.dest('./.tmp/assets')
-    ], done);
+gulp.task('sass', function() {
+    return gulp.src('./assets/css/*.scss')
+      .pipe(sass().on('error', sass.logError))
+	  .pipe(autoprefixer())
+      .pipe(gulp.dest('./.tmp/assets'))
 });
 
 gulp.task('clean:dist', function(cb) {
@@ -114,24 +112,21 @@ gulp.task('copy:images', ['clean:dist'], function(cb) {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build:assets', ['sass', 'webpack:build'], function(done) {
+gulp.task('build:assets', ['sass', 'webpack:build'], function() {
     var assets = useref.assets({
             searchPath: './'
         });
-    pump([
-      gulp.src('./site/snippets/dev/*.php'),
-      assets,
-      // gulpif('*.js', uglify()),
-      // gulpif('*.css', cssmin({
-      //      rebase: true
-      // })),
-      rev(),
-      assets.restore(),
-      useref(),
-      revReplace({
-          replaceInExtensions: ['.php']
-      })
-    ], done);
+        
+    return gulp.src('./site/snippets/dev/*.php')
+        .pipe(assets)
+        .pipe(rev())
+        .pipe(assets.restore())
+        .pipe(useref())
+        .pipe(revReplace({
+            replaceInExtensions: ['.php']
+        }))
+        .pipe(gulpif(/(\.js|\.css)$/, gulp.dest('./')))
+        .pipe(gulpif('*.php', gulp.dest('./site/snippets/prod')));
 });
 
 var buildPort = 8003;
