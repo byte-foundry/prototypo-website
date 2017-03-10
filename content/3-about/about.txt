@@ -14,7 +14,7 @@ Members:
 
 -
   membername: Yannick Mathey
-  memberjob: Co-founder, art director
+  memberjob: Founder, art director
   memberdescription: 'YM is specialist in nothing and curious about everything. It was during his last year of studies at ESAD Strasbourg that he discovered his passion for type design. His final year of studies gave him a year of "free time" to learn the basics of letters & code, and develop the alpha version of prototypo with <a href="https://processing.org" target="_blank" class="colorDarkest ">Processing</a>.'
   memberquery: 'https://www.google.fr/search?safe=off&site=&tbm=isch&source=hp&biw=1629&bih=1271&q=cheese&oq=cheese&gs_l=img.3..0l10.1905.2702.0.5822.6.5.0.1.1.0.143.427.4j1.5.0....0...1ac.1.29.img..1.5.334.5X3spjq-vfg'
   memberfacebook: >
@@ -25,18 +25,6 @@ Members:
   membermail: mailto:yannick@prototypo.io
   membervimeo:
   memberphoto: ym-300x196.jpg
--
-  membername: Louis-Rémi Babé
-  memberjob: Co-founder, lead developer
-  memberdescription: "LRB 's passion is to create websites and web-apps. He fell in love with JS in 2004 and has contributed patches and features to jQuery 1.X (if you have browsed the web in the past 9 years, you've used some code he wrote). He's an active mozillian since 2009 and was an intern at Mozilla Paris in 2011. He's helped start a local JS meetup: lyonJS."
-  memberquery: 'https://www.google.fr/search?q=flan+de+courge&tbm=isch'
-  memberfacebook: https://www.facebook.com/lrbabe
-  membergithub: https://github.com/louisremi/
-  membertwitter: http://twitter.com/louis_remi
-  memberwebsite: http://louisremi.com/
-  membermail: mailto:louisremi@prototypo.io
-  membervimeo:
-  memberphoto: lrb-300x197.jpg
 -
   membername: Jean-Baptiste Levée
   memberjob: Associate type advisor
@@ -63,7 +51,7 @@ Members:
   memberphoto: yann.jpg
 -
   membername: François Poizat
-  memberjob: Developer
+  memberjob: Lead developer
   memberdescription: |
     François is the hidden twin brother of Wikipedia: he knows everything about everything, or at least he knows just enough to convince his teammates that he does. A question about Schrödinger’s cat? He has the answer. But at Prototypo he is in charge of shipping a lot of very cool features. Since he got his engineer degree at INSA, he has been involved in many research projects in France and Japan.
     Ohayō François!
@@ -73,21 +61,40 @@ Members:
   membergithub: https://github.com/FranzPoize
   membertwitter: https://twitter.com/FranzP
   memberwebsite:
-  membermail: mailto:contact@prototypo.io
+  membermail: mailto:francois@prototypo.io
   membervimeo:
   memberphoto: franzp.jpg
 -
-  membername: MJ
-  memberjob: Community manager
-  memberdescription: "MJ is my name, and I've been kind enough to accept the role of author on this blog and community manager for Prototypo. You have to excuse my English because I'm just a cat, and keyboards aren't really meant for paws. When I'm not tweeting, I enjoy chasing mouse cursors, chewing headphone cables, making a mess in YM's houseplants, causing LRB to sneeze, and sleeping on people's lap without their consent."
-  memberquery: 'https://www.google.fr/search?q=lizard+sushi&tbm=isch'
-  memberfacebook: http://facebook.com/prototypoApp
-  membergithub:
-  membertwitter: http://twitter.com/prototypoApp
-  memberwebsite: http://blog.prototypo.io/
-  membermail: mailto:contact@prototypo.io
-  membervimeo: https://vimeo.com/user4849193
-  memberphoto: mj.jpg
+  membername: Julien Barret
+  memberjob: Developer
+  memberdescription: |
+    Julien is an engineer who goes crazy when it comes to food, like eating natto or making instant curry that lasts a whole week.
+    Coming from the obscure world of web agencies, he's mainly working on the new app features and put his efforts in making the app as beautiful as possible. When he's not busy angrying at CSS that never works, he plays the bass guitar and fights people and monsters on online games.
+  memberquery: 'https://www.google.fr/search?q=corgi+coffee&hl=fr&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiNusaN_cnSAhWE7hoKHZoHBOsQ_AUIBigB&biw=1920&bih=951'
+  memberfacebook: >
+    https://www.facebook.com/barret.jul
+  membergithub: https://github.com/Aldrian
+  membertwitter: https://twitter.com/barretjul
+  memberwebsite:
+  membermail: mailto:julien@prototypo.io
+  membervimeo:
+  memberphoto: julien.jpg
+-
+  membername: Alexis Launay
+  memberjob: Developer
+  memberdescription: |
+    Alexis has always been passionate about development.  While still being a student, he worked on several indie games, a twitter extension, a redux devtools packages and much more.
+    At prototypo, he's mainly working on the back-end and the API, using a lot of top-notch tech. He also enjoys bothering the dev team with picky code reviews, coming from his conscientious spirit and his code refactoring passion.
+    Alexis also has an unshared love for some underground punk rock and tries to play the guitar on lunch breaks, but we like it for that too.
+  memberquery: 'https://www.google.fr/search?q=flying+potato&safe=off&biw=1920&bih=951&tbm=isch&source=lnms&sa=X&sqi=2&pjf=1&ved=0ahUKEwiktPLs_aDSAhWsBcAKHR-8D-kQ_AUIBigB&dpr=1'
+  memberfacebook: >
+    https://www.facebook.com/YoruNoHikage
+  membergithub: https://github.com/YoruNoHikage
+  membertwitter: https://twitter.com/yorunohikage
+  memberwebsite: http://blog.yorunohikage.fr
+  membermail: mailto:alexis@prototypo.io
+  membervimeo:
+  memberphoto: alexis.jpg
 
 ----
 

@@ -24,7 +24,8 @@
 
 
 		<div class="Footer-copyright marginTop60">
-			<?php echo $site->copyright()->kirbytext() ?>
+			© <a href="/about">Prototypo</a> 2009 -  <?php echo date("Y"); ?> | Fonts powered by <a href="http://www.productiontype.com" target="_blank">Production Type</a>
+      <?php echo $site->copyright()->kirbytextSans(); ?>
 		</div>
 
 
