@@ -666,21 +666,23 @@ iframe{
   button + button {
     margin-left: 5px;
   }
-  #Pricing-yearly-plan::after {
-    content: 'Save 47%';
-    display: block;
-    position: absolute;
-    font-weight: 600;
-    right: -95px;
-    top: -30px;
-    height: 45px;
-    color: $white;
-    background-color: transparent;
-    background-image: url("/assets/img/pricing-arrow.svg");
-    background-size: 22px 18px;
-    background-repeat: no-repeat;
-    background-position: 0% 100%;
-    overflow: visible;
+  @media screen and (min-width: 540px) {
+    #Pricing-yearly-plan::after {
+      content: 'Save 47%';
+      display: block;
+      position: absolute;
+      font-weight: 600;
+      right: -95px;
+      top: -30px;
+      height: 45px;
+      color: $white;
+      background-color: transparent;
+      background-image: url("/assets/img/pricing-arrow.svg");
+      background-size: 22px 18px;
+      background-repeat: no-repeat;
+      background-position: 0% 100%;
+      overflow: visible;
+    }
   }
 }
 .PricingSwitch-item {
@@ -833,6 +835,18 @@ iframe{
 	position: relative;
 	border: 3px solid $colorLighterGray;
 	
+}
+
+@media screen and (max-width: 600px) {
+  .SchoolsItem {
+    -webkit-flex-direction: column;
+  	-ms-flex-direction: column;
+  	flex-direction: column;
+    
+    img {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .SchoolsItem-packtitle {
