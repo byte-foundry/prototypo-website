@@ -325,7 +325,7 @@ $(function() {
 			$('.PricingItem-offerRibbon').show();
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
-			$('.callToAction-Pro').attr('href', urlsplit[0] + '?plan=personal_monthly');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
       
     });
     
@@ -352,7 +352,7 @@ $(function() {
 			$('.PricingItem-offerRibbon').hide();
       $('.callToAction-Pro').text('Go pro!');
 			let urlsplit = $baseProCtaUrl.split('?');
-			$('.callToAction-Pro').attr('href', urlsplit[0] + '?plan=personal_annual_99');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
 			
     });
     /*** /Switch Monthly / yearly ***/
