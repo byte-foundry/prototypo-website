@@ -268,6 +268,7 @@ $(function() {
     var $monthlyButton = $('#Pricing-monthly-plan');
     var $yearlyButton = $('#Pricing-yearly-plan');
     var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href');
+		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
     $('.PricingItem-price').each(function(index, value) {
@@ -323,6 +324,8 @@ $(function() {
 			
 			$('.PricingItem-offerRibbon').show();
       $('.callToAction-Pro').text('Try it for $1!');
+			let urlsplit = $baseProCtaUrl.split('?');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?plan=personal_monthly');
       
     });
     
@@ -348,6 +351,8 @@ $(function() {
 			
 			$('.PricingItem-offerRibbon').hide();
       $('.callToAction-Pro').text('Go pro!');
+			let urlsplit = $baseProCtaUrl.split('?');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?plan=personal_annual_99');
 			
     });
     /*** /Switch Monthly / yearly ***/

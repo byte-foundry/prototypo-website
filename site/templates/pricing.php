@@ -122,7 +122,7 @@
 						<div class="PricingItem-getStarted">
 							<?php
 								$subdomain = c::get('env') === 'dev' ? 'dev' : 'app';
-								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/account/create';
+								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/signup?plan=personal_annual_99';
                 echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction callToAction-{$pack['packname']}\">{$pack['button']}</a>";
 							?>
 						</div>
