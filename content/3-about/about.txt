@@ -24,6 +24,8 @@ Members:
   memberwebsite: http://yannickmathey.com/
   membermail: mailto:yannick@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/yannick-mathey/
+  memberphone:
   memberphoto: ym-300x196.jpg
 -
   membername: Jean-Baptiste Levée
@@ -36,6 +38,8 @@ Members:
   memberwebsite: https://www.productiontype.com/
   membermail: mailto:jeanbaptiste@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/jblevee/
+  memberphone:
   memberphoto: jbl_slanted_.jpg
 -
   membername: Yann Guillet
@@ -48,6 +52,8 @@ Members:
   memberwebsite:
   membermail: mailto:yann@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/yann-guillet-422a30b3/
+  memberphone:
   memberphoto: yann.jpg
 -
   membername: Giacomo Furlanetto
@@ -60,6 +66,8 @@ Members:
   memberwebsite: http://www.jacquesedward.com/
   membermail: mailto:giacomo@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/giacomofurlanetto/
+  memberphone: tel:+33769703855
   memberphoto: giacomo.jpg
 -
   membername: François Poizat
@@ -75,6 +83,8 @@ Members:
   memberwebsite:
   membermail: mailto:francois@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/francoispoizat/
+  memberphone:
   memberphoto: franzp.jpg
 -
   membername: Julien Barret
@@ -90,6 +100,8 @@ Members:
   memberwebsite:
   membermail: mailto:julien@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/julien-barret-957802a6/
+  memberphone:
   memberphoto: julien.jpg
 -
   membername: Alexis Launay
@@ -106,6 +118,9 @@ Members:
   memberwebsite: http://blog.yorunohikage.fr
   membermail: mailto:alexis@prototypo.io
   membervimeo:
+  memberlinkedin: https://www.linkedin.com/in/alexislaunay/
+  memberphone:
+  
   memberphoto: alexis.jpg
 
 ----

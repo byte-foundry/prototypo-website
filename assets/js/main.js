@@ -437,7 +437,10 @@ $(function() {
   }
   
   $('#EducationContactForm-button').on('click', function(){
-    document.location.href = "mailto:contact@prototypo.io?subject=School / Student discount request" + "&body=" + encodeURIComponent($('#nl-form')[0].innerText);
+    document.location.href = "mailto:education@prototypo.io?subject=School / Student discount request" + "&body=" + encodeURIComponent($('#nl-form')[0].innerText);
+		setTimeout(function () {
+			$('#Education-contactForm-error').text('Something went wrong. Please contact us at education@prototypo.io while we are fixing this.')
+		}, 4000);
   });
 });
 
