@@ -14,8 +14,7 @@ Keywords: Prototypo,Font,Creation
 
 ----
 
-Copyright: © (link: about text:Prototypo) 2016 | Fonts powered by (link: http://www.productiontype.com text:Production Type popup: yes)
-
+Copyright: 
 ----
 
 Facebook: http://www.facebook.com/prototypoApp

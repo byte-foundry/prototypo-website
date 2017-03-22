@@ -25,28 +25,44 @@
 				<?php echo $page->descriptionPromo(); ?>
 			</h2>
 		<?php endif ?>
+    
+    <div class="PricingSwitch text-center marginTop60">
+          <button href="#" id="Pricing-monthly-plan" class="button textType-txt textSize-txt-large radius">Monthly biling</button>
+          <button href="#" id="Pricing-yearly-plan" class="button active radius textType-txt textSize-txt-large">Yearly biling</button>
+    </div>    
 
-		<ul class="small-block-grid-1 medium-block-grid-4 large-block-grid-4 PricingTable marginTop60">
+		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 PricingTable marginTop30">
 			<?php
 				$packs = yaml($page->packs());
 				foreach($packs as $id => $pack):
 			?>
 			<li class="PricingItem">
 				<div class="PricingItem-wrap">
-
+          <?php if (isset( $pack['offer'] )): ?>
+            <div class="PricingItem-offerRibbon">
+              <div class="PricingItem-offerRibbon-content"><?php echo $pack['offer']; ?></div>
+            </div>
+          <?php endif ?>
 					<div class="PricingItem-header">
 
 						<h2 class="PricingItem-packtitle textType-txt textSize-txt-small">
 							<?php echo $pack['packname']; ?>
 						</h2>
+            
+            <p class="textType-txt textSize-txt-small marginTop15 PricingItem-description">
+							<?php echo $pack['description']; ?>
+						</p>
 
 						<p class="PricingItem-title textType-txt textSize-title-small colorSecondBackgroundColor">
 							<?php if ($pack['price'] === ''): ?>
 								<img src="<?php echo url('assets/img/Enterprise.svg'); ?>" alt="">
 							<?php else: ?>
-									<span class="PricingItem-priceBefore textSize-txt-large">€/$</span>
-
-									<span class="PricingItem-price textSize-title-xlarge">
+									<span class="PricingItem-priceBefore textSize-txt-large">$</span>
+                  <?php if ( str::contains($pack['packname'], 'Company', $i = true)): ?>
+			              <span class="PricingItem-price PricingItem-price-company textSize-title-xlarge">
+                  <?php else: ?>
+                    <span class="PricingItem-price  textSize-title-xlarge">
+                  <?php endif; ?>
 										<?php
 											if (isset( $pack['promo'] ) && $pack['promo'] != '' ):
 												echo '<span class="solded">' . $pack['price'] . '</span>';
@@ -58,21 +74,15 @@
 									</span>
 
 									<span class="PricingItem-priceAfter textSize-txt-medium">
-										<?php
-											if ( str::contains($pack['packname'], 'monthly', $i = true) ):
-												echo '/mo. *';
-											elseif ( str::contains($pack['packname'], 'annual', $i = true) ):
-												echo '/yr. *';
-											else:
-												echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-											endif;
-										?>
+											per
+                      <br/>
+                      month *
 									</span>
 
 							<?php endif; ?>
 						</p>
 
-						<p class="textType-txt textSize-txt-small marginTop15 red">
+						<p class="textType-txt textSize-txt-small marginTop15 red PricingItem-baseline">
 							<?php echo $pack['baseline']; ?>
 						</p>
 
@@ -81,19 +91,39 @@
 					<div class="PricingItem-infos textType-subtxt colorDarkGray">
 
 						<div class="PricingItem-pack textType-txt textSize-txt-medium">
-							<?php echo nl2br($pack['options']); ?>
+              <?php if ( $pack['options'] ) : $options = explode(',',$pack['options']); ?>
+              <ul class="PricingItem-pack-options">
+      					<?php foreach($options as $index => $option): ?>
+                  <?php if ($option === '-'): ?>
+                  <li class="PricingItem-pack-option hidden-for-small-down">
+                  <?php else: ?>
+                  <li class="PricingItem-pack-option">
+                  <?php endif ?>
+                    <?php if ( str::contains($pack['packname'], 'Company', $i = true) && $index === 0 ): ?>
+                      <div class="PricingItem-pack-option-usercount">
+                        <span class="input-number-decrement">–</span>
+                        <input class="input-number" type="text" value="4" min="4" max="100"/>
+                        <span class="input-number-text">users</span>
+                        <span class="input-number-increment">+</span>
+                      </div>
+                      <hr/>
+                    <?php else: ?>
+                      <?php echo $option ?>
+                      <?php if ( $index !== count($options) - 1 ): ?>
+                        <hr/>
+                      <?php endif ?>
+                    <?php endif ?>
+      					  </li>
+                <?php endforeach ?>
+              </ul>
+              <?php endif; ?>
 						</div>
 
 						<div class="PricingItem-getStarted">
 							<?php
 								$subdomain = c::get('env') === 'dev' ? 'dev' : 'app';
-								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/account/create';
-
-								if ( str::contains($pack['packname'], 'schools/agencies', $i = true) ):
-									echo "<a href=\"mailto:contact@prototypo.io\" class=\"callToAction \">{$pack['button']}</a>";
-								else:
-									echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction\">{$pack['button']}</a>";
-								endif;
+								$hash = str::contains($pack['packname'], 'free', $i = true) ? '/signup' : '/signup?plan=personal_annual_99';
+                echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"{$pack['packname']}\" class=\"choose-plan subscribe-page billing callToAction callToAction-{$pack['packname']}\">{$pack['button']}</a>";
 							?>
 						</div>
 
@@ -104,6 +134,20 @@
 				endforeach;
 				?>
 		</ul>
+    
+    <div class="SchoolsItem small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+      <div class="SchoolsItem-column">
+        <h2 class="SchoolsItem-packtitle textType-txt textSize-txt-medium marginBottom15">
+  				Schools/Students
+  			</h2>
+        <img src="<?php echo url('assets/img/Enterprise.svg'); ?>" alt="">
+      </div>
+      <div class="SchoolsItem-column SchoolsItem-text textType-txt textSize-txt-medium">
+          We think Prototypo is an awesome tool for students to learn the basics of type design, so we definitely want to make students to access Prototypo easily: save up to 80% on the commercial price.
+          <br/><br/>
+          <a href="/education" class="callToAction">Learn more about it!</a>
+      </div>
+    </div>
 
 		<div class="Section-wrapTxt textType-txt textSize-txt-large marginTop60 text-center marginBottom30 white">
 			<?php echo $page->TxtAfter()->kirbytext(); ?>
@@ -113,10 +157,10 @@
 
 	<section class="bg-white clearfix">
 		<div class="fitToContent marginTop60 ">
-			<h2 class="big bold text-center marginTop60 marginBottom60">Some happy users!</h2>
+			<h2 class="big bold text-center marginTop60 marginBottom60"><span id="Pricing-UserCount">Thousands of</span> happy users use Prototypo, including</h2>
 
-			<ul class="marginTop60 testimonials marginBottom60">
-				<?php
+			<ul class="marginTop60 testimonials marginBottom0">
+        <?php
 					$users = yaml($page->users());
 					foreach($users as $id => $user):
 				?>
@@ -129,6 +173,19 @@
 				<?php endforeach; ?>
 			</ul>
 
+		</div>
+	</section>
+  
+  <section class="clearfix bg-white">
+		<div class="fitToContent marginTop60 ">
+			<h2 class="big bold text-center marginBottom30">Save time and money, use Prototypo</h2>
+      <div class="textSize-txt-large text-center marginTop30  marginBottom60">
+          <?php
+            $subdomain = c::get('env') === 'dev' ? 'dev' : 'app';
+            $hash = '/signup';
+              echo "<a href=\"https://{$subdomain}.prototypo.io/#{$hash}\" name=\"free\" class=\"choose-plan subscribe-page billing callToAction\">Get started</a>";
+          ?>
+			</div>
 		</div>
 	</section>
 

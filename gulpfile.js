@@ -16,6 +16,7 @@ var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
 var autoprefixer = require('gulp-autoprefixer');
+var pump = require('pump');
 
 var webpack         = require('webpack');
 var WebpackDevServer= require('webpack-dev-server');
@@ -115,13 +116,9 @@ gulp.task('build:assets', ['sass', 'webpack:build'], function() {
     var assets = useref.assets({
             searchPath: './'
         });
-
+        
     return gulp.src('./site/snippets/dev/*.php')
         .pipe(assets)
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', cssmin({
-            rebase: false
-        })))
         .pipe(rev())
         .pipe(assets.restore())
         .pipe(useref())
