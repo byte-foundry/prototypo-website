@@ -2,4 +2,4 @@ Title: Can I create cursive fonts with Prototypo?
 
 ----
 
-Answer: Prototypo use parametric templates and we don't have for the moment such cursive font templates.
+Answer: Prototypo use parametric templates and we don't have at the moment such cursive font templates.

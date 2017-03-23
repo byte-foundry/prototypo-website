@@ -2,4 +2,4 @@ Title: Can I import my own font to modify it?
 
 ----
 
-Answer: Actually, it's not that way Prototypo works. We create letter templates with all parameters behaviours. But we want to give you an easy way to code your own templates and increase the possibilities to make custom fonts.
+Answer: Prototypo does not work that way. We code letter templates with functions and algorithms. But we want to give you an easy way to code your own templates and increase the possibilities of Prototypo.

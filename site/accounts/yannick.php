@@ -10,10 +10,11 @@ language: en
 role: admin
 history:
   - cgu
-  - pricing
+  - >
+    faq/which-language-or-glyph-set-prototypo-supports
   - >
     faq/can-i-create-cursive-fonts-with-prototypo
   - >
-    faq/is-there-any-tutorials-to-learn-how-create-fonts-with-prototypo
+    faq/what-are-the-minimum-requirements-to-run-prototypo
   - >
-    faq/is-there-any-education-advantages-for-students
+    faq/is-there-any-tutorials-to-learn-how-create-fonts-with-prototypo

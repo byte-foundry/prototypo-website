@@ -2,4 +2,4 @@ Title: Can I sell the fonts that I've made with Prototypo?
 
 ----
 
-Answer: Absolutely. Prototypo fonts are under (link: https://creativecommons.org/publicdomain/zero/1.0/ text: CC-0 licenses:) you own the font that you have created and you can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission.
+Answer: Absolutely. Prototypo fonts are under (link: https://creativecommons.org/publicdomain/zero/1.0/ text: CC-0 license:) you own the font that you have created and you can copy, modify, distribute and perform the work, even for commercial purposes, all without asking our permission.

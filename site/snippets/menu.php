@@ -5,7 +5,7 @@
   </li>
   <?php endforeach ?>
   <li class="Footer-Nav-layoutItem">
-    <a class="Footer-Nav-layoutItemLink" target="_blank" href="cgu">CGU</a>
+    <a class="Footer-Nav-layoutItemLink" href="/cgu">CGU</a>
   </li>
   <li class="Footer-Nav-layoutItem">
     <a class="Footer-Nav-layoutItemLink" target="_blank" href="mailto:contact@prototypo.io">Contact us</a>

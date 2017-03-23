@@ -4,7 +4,9 @@ Title: CGU
 
 Text: 
 
-Find the english version after the french one.
+English version available after the french one.
+
+ ----
 
 ** CONDITIONS GENERALES D'UTILISATION DE PROTOTYPO **
 
