@@ -1,5 +1,0 @@
-Title: I can't connect to the dev version.
-
-----
-
-Answer: We may encounter some issues with our server. You get either "unexpected error" or "prototypo is down, working on it". Please try again later, and ping us on twitter, we will glad to help! — @prototypoApp

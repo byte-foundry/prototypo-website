@@ -1,0 +1,5 @@
+Title: what are the minimum requirements to run Prototypo?
+
+----
+
+Answer: Prototypo uses modern technologies to render fonts in the browser. To run the app, you will need recent versions of Chrome, Firefox or Opera. We will soon support Safari.

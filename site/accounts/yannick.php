@@ -9,10 +9,11 @@ password: >
 language: en
 role: admin
 history:
-  - >
-    press/prototypo-disena-tu-propia-fuente-con-unos-pocos-clics
-  - >
-    press/vive-le-startup-5-french-companies-leading-a-tech-revolution
-  - press
-  - blog/introducing-prototypo-v2
+  - cgu
   - pricing
+  - >
+    faq/can-i-create-cursive-fonts-with-prototypo
+  - >
+    faq/is-there-any-tutorials-to-learn-how-create-fonts-with-prototypo
+  - >
+    faq/is-there-any-education-advantages-for-students

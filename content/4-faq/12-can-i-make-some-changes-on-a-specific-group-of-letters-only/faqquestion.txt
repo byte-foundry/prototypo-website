@@ -1,0 +1,5 @@
+Title: Can I make some changes on a specific group of letters only?
+
+----
+
+Answer: Of course. With the individualization feature, you can make specific adjustments on each letters or groups of letters. See: Edit > Individualize parameters. You can also make manual adjustments by using the manual editing tool (white arrow in the glyph view).
