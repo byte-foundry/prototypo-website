@@ -1,0 +1,5 @@
+Title: Which language or glyph set Prototypo supports?
+
+----
+
+Answer: Prototypo supports the Latin Extended 3 glyph set which will let you create fonts for Occidental purposes. In a not so distant future, we will extend it to another languages like the Cyrillic, Greek, Arabic, etc.

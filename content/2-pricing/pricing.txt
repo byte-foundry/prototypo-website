@@ -12,32 +12,49 @@ Packs:
   packname: Free
   price: 0, 0
   promo:
-  description: See for yourself how it works and discover the features.
+  description: >
+    See for yourself how it works and
+    discover the features.
   baseline: Free forever!,Free forever!
-  options: 1 user, One week support, Limited parameter range,-,-,-,-,-,-
+  options: >
+    1 user, One week support, Limited
+    parameter range,-,-,-,-,-,-
   button: Try it for free
 - 
   packname: Pro
   price: 8.25, 15
-  description: Perfect for solo designers working on several projects.
+  description: >
+    Perfect for solo designers working on
+    several projects.
   promo:
-  baseline: End your subscription whenever you want,Unlock all the possibilities of Prototypo
-  options: 1 user, 48h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension,-,-
+  baseline: >
+    End your subscription whenever you
+    want,Unlock all the possibilities of
+    Prototypo
+  options: >
+    1 user, 48h support, Full-range
+    parameters, Unlimited font exports,
+    Manual editing, Glyph individualization,
+    Web preview extension,-,-
   button: Try it for $1!
-  offer: 1<sup>st</sup> month for $1
+  offer: '1<sup>st</sup> month for $1'
 - 
   packname: Company
   price: 12.5, 22.5
-  description: Great for teams and growing businesses. Contact us for more informations!
+  description: >
+    Great for teams and growing businesses.
+    Contact us for more informations!
   promo:
-  baseline: Custom plan and pricing for larger teams,Custom plan and pricing for larger teams
-  options: X user, 24h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension, Team management and user roles**, Collaborative tools** 
+  baseline: >
+    Custom plan and pricing for larger
+    teams,Custom plan and pricing for larger
+    teams
+  options: 'X user, 24h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension, Team management and user roles**, Collaborative tools**'
   button: Get a quote
 
 ----
 
-Txtafter: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued.
-\** Coming soon!
+Txtafter: \* Taxes are offered for private individuals. Currency ultimately depends on the country where your credit card has been issued. \** Coming soon!
 
 ----
 
@@ -61,8 +78,7 @@ Faq:
     full version?
   answer: >
     You can export as many fonts as you want
-    by buying a monthly subscription or
-    buying export credits.
+    by buying a pro subscription.
 - 
   question: "Can I sell the fonts that I've made with Prototypo?"
   answer: >

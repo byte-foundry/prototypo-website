@@ -9,10 +9,12 @@ password: >
 language: en
 role: admin
 history:
+  - cgu
   - >
-    press/prototypo-disena-tu-propia-fuente-con-unos-pocos-clics
+    faq/which-language-or-glyph-set-prototypo-supports
   - >
-    press/vive-le-startup-5-french-companies-leading-a-tech-revolution
-  - press
-  - blog/introducing-prototypo-v2
-  - pricing
+    faq/can-i-create-cursive-fonts-with-prototypo
+  - >
+    faq/what-are-the-minimum-requirements-to-run-prototypo
+  - >
+    faq/is-there-any-tutorials-to-learn-how-create-fonts-with-prototypo

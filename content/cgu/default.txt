@@ -4,6 +4,10 @@ Title: CGU
 
 Text: 
 
+English version available after the french one.
+
+ ----
+
 ** CONDITIONS GENERALES D'UTILISATION DE PROTOTYPO **
 
 
@@ -280,3 +284,255 @@ En cas de contestation sur la validité, l'interprétation et/ou l'exécution de
 ## Entrée en vigueur
 
 Les présentes conditions générales sont entrées en vigueur le **1er septembre 2015**.
+
+
+
+ ----
+
+
+
+# English version
+
+
+
+ ----
+
+
+
+** PROTOTYPO TERMS AND CONDITIONS **
+
+## Object
+
+The purpose of these terms and conditions is to define the terms and conditions for the use of the services offered on the site (hereinafter the "Services") and to define the rights and obligations of the parties in this context.
+
+They may be supplemented, if necessary, by conditions of use specific to certain Services. In case of contradiction, the special conditions prevail over these general conditions.
+
+## Operator of the Services
+
+The Services are operated by the company Prototypo, SAS, with a share capital of € 5,000, registered with the RCS in Lyon, France, with the number 812 750 297 with the following legal address: 111, Boulevard de la Croix-Rousse, 69004, Lyon, France.
+
+Prototypo can be contacted as follow :
+
+By mail : 111, Boulevard de la Croix-Rousse, 69004, Lyon, France.
+By e-mail : contact@prototypo.io
+
+## Access to Site and Services
+
+The Services are accessible, subject to the restrictions provided on the site:
+
+To any natural person with full legal capacity to commit under these general conditions. An individual who does not have full legal capacity may access the Site and the Services only with the agreement of his legal representative;
+
+To any legal person acting through a natural person with legal capacity to contract in the name and on behalf of the legal person.
+
+## Acceptance of Terms and Conditions
+
+Acceptance of these general conditions is evidenced by the validation of the registration form made by clicking on the subscription button. This acceptance can only be full and complete. Any adherence under reservation shall be considered null and not done. Users who do not agree to be bound by these terms and conditions shall not use the Services.
+
+## Registration on the site
+
+The use of the Services requires that the User register on the site, filling the form provided for this purpose. The User must provide all the information marked as obligatory. Any incomplete entries will not be validated.
+Registration automatically entails the opening of an account in the name of the User (the "Account"), giving access to a personal space (the "Personal Space") which makes it possible to manage its use of the Services in a form and according to the technical means that Prototypo deems most appropriate to render the Services.
+
+The User warrants that all information provided in the registration form is accurate, up-to-date and truthful and is not misleading.
+
+He / she undertakes to update this information in his / her “Personal Space” in case of modifications, so that they always correspond to the above mentioned criteria.
+
+The User is informed and accepts that the information entered for the creation or the updating of his / her “Account” are proof of his / her identity. The information entered by the”User” engages it as soon as they are validated.
+
+The “User” can access his “Personal Area” at any time after having identified himself with his login and password.
+The User undertakes to personally use the Services and not to allow any third party to use them in his place or on his behalf, except to assume full responsibility for them.
+
+He is also responsible for maintaining the confidentiality of his username and password. He must immediately contact Prototypo at the contact details mentioned in Article 2 of this form if he notices that his Account has been used without his knowledge. It recognizes Prototypo's right to take all appropriate measures in such cases.
+
+## Description of Services
+
+The User has access to the Services described on the site, in a form and according to the functionalities and technical means that Prototypo deems most appropriate.
+
+## Free and paid services
+
+The Services of the free version are provided free of charge.
+
+## Price
+The price of the Services is indicated on the site.
+
+Unless otherwise stated, they are expressed in euros and dollars, all European taxes are included.
+
+Prototypo reserves the right, at its own discretion and under the terms and conditions of its own discretion, to propose promotional offers or price reductions.
+
+## Price-revision
+The price of Services may be reviewed by Prototypo at any time at its discretion.
+
+The User will be notified of these modifications by Prototypo by e-mail at least one month before the new tariffs apply.
+
+Users who do not accept new prices must stop using the Services in accordance with the terms and conditions set out in Article 18. Failing that, they will be judged to have accepted the new rates.
+
+## Billing
+The Services are subject of invoices which are communicated to the User by any useful means.
+
+## Payment modalities
+Terms of payment for the Services are described on the website.
+
+Payment is made by direct debit from the credit card number of the User.
+
+The withdrawal is implemented by the payment provider designated on the site, which only keeps the bank account of the User for this purpose. Prototypo does not keep any bank details.
+
+The User warrants to Prototypo that he has the necessary authorizations to use the chosen payment method. He/She guarantees to take the necessary measures to ensure that the automatic withdrawal of the price of the Services can be effected.
+
+## Delays and payment incidents
+The User is expressly informed and accepts that any delay in payment of all or part of the amount due at its expiration will automatically entail, without prejudice to the provisions of Article 12 and without prior notice:
+
+The decay of the term of all the sums owed by the User and their immediate exigibility;
+
+The immediate suspension of the Services in progress until the complete payment of the sums due by the User;
+
+The invoicing to Prototypo of interest at the rate of 0.93% (zero point ninety-three percent) the rate of legal interest, based on the amount of the total amount owed by the User.
+
+## Data
+
+The User acknowledges and expressly agrees:
+
+The data collected on the site and on the computer equipment of Prototypo are proof of the reality of the operations carried out as stated in here.
+
+These data constitute the only mode of proof admitted between the parties, in particular for the calculation of sums due to Prototypo.
+The User can access this data in his Personal Space.
+Obligations of the User
+
+Without prejudice to the other obligations provided in here, the User undertakes to respect the following obligations:
+
+The User undertakes, in his/her use of the Services, to respect the laws and regulations in force and not to infringe the rights of third parties or public order.
+In particular, he / she is solely responsible for the proper fulfillment of all administrative, fiscal and / or social formalities and all payments of contributions, or taxes of any kind which he / she may have to pay in connection with his or her use of the Services. In any case or event Prototypo will not be liable in this respect.
+
+The User acknowledges that he has taken the understanding on the site of the characteristics and constraints, in particular technical, of all the Services. He / she is the only responsible for the use of the Services.
+
+The User is also solely responsible for the relations he / she may establish with the other Users and the information he communicates to them within the framework of the Services. It is his / her responsibility to exercise appropriate prudence and discernment in these relationships and communications. The User further agrees, in his / her exchanges with other Users, to respect the usual rules of politeness and courtesy.
+
+The User agrees to make strictly personal use of the Services. Consequently, it is prohibited to assign, grant or transfer all or any of the rights or obligations here described to any third party in any way whatsoever.
+
+The User agrees to provide Prototypo with all information necessary for the proper performance of the Services. More generally, the User agrees to cooperate actively with Prototypo for the proper execution of the present.
+
+The User is solely responsible for the contents of any kind (editorial, graphic, audiovisual or other, including the name and / or image possibly chosen by the User to identify it on the site) The Services (the "Contents").
+The User guarantees to Prototypo that he / she has all the rights and authorizations necessary for the diffusion of these Contents.
+
+He / she undertakes to ensure that the mentioned Content is lawful, does not infringe public order, morality or the rights of third parties, infringe any legislative or regulatory provision and, more generally, it does not’ compromise the civil and legal responsibility of Prototypo.
+
+The User is also forbidden to broadcast, in particular and without this list being exhaustive:
+
+Pornographic, obscene, indecent, offensive or inappropriate to a family audience, defamatory, abusive, violent, racist, xenophobic or revisionist content.
+Counterfeit Content.
+Content that is a threat to the image of a third party,
+Misleading or deceptive content or proposing or promoting illicit, fraudulent or misleading activities.
+Content harmful to the computer systems of others (such as viruses, worms, Trojans, etc.),
+And more generally of the Contents which may infringe the rights of third parties or be prejudicial to third parties, in any manner and in any form whatsoever.
+The User acknowledges that the Services offer him an additional but non-alternative solution of the means which he /she already uses to achieve the same objective and that this solution can not be a substitute for these other means.
+
+The User must take the necessary measures to safeguard by his own means the information of his Personal Space that he deems necessary, of which no copy will be provided.
+
+The User is informed and accepts that the implementation of the Services requires that it is connected to the Internet and that the quality of the Services depends directly on this connection, of which he / she is the only responsible.
+
+## User Guarantee
+
+The User warrants Prototypo against any claims, complains, actions and / or accusations that Prototypo may suffer as a result of the User's breach of any of its obligations or warranties under these terms and conditions.
+
+He / she agrees to compensate Prototypo for any prejudice suffered by it and to pay all costs, charges and / or convictions which it may have to bear as a result.
+
+## Prohibited behaviors
+
+It is strictly forbidden to use the Services for the following purposes:
+
+The illegal, fraudulent or infringing activities of a third party.
+The breach of public order or the violation of the laws and regulations in force.
+Intrusion into the computer system of a third party or any activity likely to harm, control, interfere, or intercept all or part of the computer system of a third party, violate integrity or security,
+Sending of unsolicited emails and / or prospecting or commercial solicitation.
+The manipulations intended to improve the referencing of a third party site.
+Assistance or incitement, in any form or by any means, to one or more of the acts and activities described above.
+And more generally any practice diverting the Services for purposes other than those for which they were designed.
+Users are strictly prohibited from copying and / or diverting the concept, technology or any other element of the Prototypo site for their own or third party purposes.
+The following are also strictly prohibited: (I) any behavior likely to interrupt, suspend, slow down or prevent the continuity of the Services, (II) any intrusion or attempted intrusion into the Prototypo systems, (III) all hijacking site system resources, (IV) any action likely to impose a disproportionate burden on the infrastructure of the latter, (V) any breach of security and authentication measures, (VI) any act likely to infringe financial rights and interests , Commercial or moral of Prototypo or the users of its site, and more generally (VII) any breach of these general conditions.
+
+It is strictly forbidden to cash, sell or grant all or part of the access to the Services or the site, as well as to the information hosted therein and / or shared.
+
+## Penalties for breaches
+
+In the event of breach of any of the provisions of these general conditions or more generally of violation of the laws and regulations in force by a User, Prototypo reserves the right to take any appropriate measure and in particular of:
+
+Suspend or terminate access to, or participation in, the Services of the User, the person who committed the breach or infringement.
+Delete any content posted on the site.
+Publish on the site any information message that Prototypo deems useful.
+Notify any relevant authority.
+Any legal action.
+
+## Prototypo's liability and warranty
+
+Prototypo undertakes to provide the Services with diligence and according to the standard rules, it has being specified that it weighs on it an obligation of means, with the exclusion of any obligation of result, what the Users acknowledge and expressly accept .
+
+Prototypo is not aware of any Content posted by Users in connection with the Services, on which it does not make any moderation, selection, verification or control of any kind and for which it only intervenes As a hosting provider.
+
+Consequently, Prototypo can not be held liable for the Contents, the authors of which are third parties, any possible claim to be directed in the first place towards the author of the Contents in question.
+
+Contents harmful to a third party may be notified to Prototypo in accordance with the provisions of Article 6 I 5 of Law No 2004-575 of 21 June 2004 for confidence in the digital economy, Prototypo Reserving the right to take the measures described in Article 12.
+
+Prototypo shall not be liable for any loss of information available in the User's Personal Area, who must save a copy of the information and can not claim any compensation in this respect.
+
+Prototypo undertakes to carry out regular checks to verify the operation and accessibility of the site. As such, Prototypo reserves the right to temporarily interrupt access to the site for maintenance reasons. Similarly, Prototypo can not be held responsible for the temporary difficulties or impossibilities of access to the site which are caused by circumstances outside it, force majeure, or which are due to disturbances of the telecommunication networks.
+
+Prototypo does not warrant to Users (I) that the Services, subject to constant research to improve performance and progress, will be completely free from errors, defects or defects, (I) that the Services are standard and in no way proposed to the sole intention of a given User according to his : her own personal constraints, will respond specifically to his / her needs and expectations.
+
+In any event, the liability likely to be incurred by Prototypo as stated is expressly limited to the only direct damage suffered by the User.
+
+## Intellectual property
+
+The software, structures, infrastructures, databases and contents of any kind (texts, images, visuals, music, logos, trademarks, database, etc.) operated by Prototypo within the site are protected by Intellectual property or rights of existing database producers. All acts of reproduction, representation, dissemination and use of any of these elements, in whole or in part, without the authorization of Prototypo, are strictly prohibited and any disassembly, decompilation, decryption, extraction, reuse, may be prosecuted.
+
+The fonts exported from Prototypo Services are licensed CC0, which means that the User may copy, modify, distribute and represent the work, even for commercial purposes, without the need for permission.
+
+Patents and trademark rights that may be held by others are not affected in any way by CC0, nor for the rights that others may have over the work or how it is used, such as the right Image or privacy.
+Unless otherwise expressly stated, the person who has identified a work with this notice does not grant any warranty on the work and declines any responsibility for any use of the work, to the extent permitted by law.
+When the User uses or mentions the work, it can not imply the support of the author or the person who asserts.
+
+## Personal data
+
+Prototypo practices a policy of protection of the personal data whose characteristics are explained in the document entitled "Privacy Policy", of which the User is expressly invited to take notice on the site.
+
+## Publicity
+
+Prototypo reserves the right to insert on any page of the site and in any communication to the Users all advertising or promotional messages in a form and under conditions of which Prototypo will be the sole judge.
+
+Links and third-party sites
+
+In no event shall Prototypo be held responsible for the technical availability of websites or mobile applications operated by third parties (including potential partners) to which the User may access via the site.
+
+Prototypo assumes no responsibility for the content, advertising, products and / or services available on such third-party websites and mobile applications, which are reminded that they are governed by their own terms of use.
+
+Prototypo shall not be liable for any transactions between the User and any advertiser, professional or merchant (including any potential partners) to which the User is directed via the Site and shall in no way be liable party to any disputes with third parties concerning the delivery of products and / or services, warranties, declarations and other obligations to which such third parties are liable.
+
+## Duration of Services, unsubscription
+
+The Services are subscribed for an indefinite period.
+
+The User may unsubscribe from the Services at any time by sending a request to Prototypo by email to the contact details mentioned in Article 2.
+
+Unsubscription is effective immediately. It causes the User Account to be deleted automatically.
+
+## Changes
+
+Prototypo reserves the right to modify these general conditions at any time.
+
+The User will be informed of these changes by any useful means.
+
+Users who do not accept the modified terms and conditions must opt out of the Services in accordance with the terms and conditions set out in Article 18.
+
+Any User who uses the Services after the coming into force of the modified terms and conditions shall be deemed to have accepted the modifications.
+
+## Language
+
+In the event of a translation of the present general conditions into one or more languages, the language of interpretation shall be the French language in the event of contradiction or dispute as to the meaning of a term or provision.
+
+## Applicable law and jurisdiction
+
+These general terms and conditions are governed by French law.
+
+In the event of a dispute as to the validity, interpretation and / or execution of the present general conditions, the parties agree that the courts of Lyon (France) shall have exclusive jurisdiction to rule on them, except in the case of mandatory rules of procedure to the contrary.
+
+## Coming into force
+
+These Terms and Conditions came into force on September the first of 2015.

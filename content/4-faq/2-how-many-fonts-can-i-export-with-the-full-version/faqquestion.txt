@@ -2,4 +2,4 @@ Title: How many fonts can I export with the full version?
 
 ----
 
-Answer: You can export as many fonts as you want with the full version. You can also do with the free version but you'll have the ability to modify your characters with 5 parameters instead of 30 with the full version.
+Answer: You can export as many fonts as you want with the full version.

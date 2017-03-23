@@ -834,7 +834,7 @@ iframe{
 	width: 100%;
 	position: relative;
 	border: 3px solid $colorLighterGray;
-	
+
 }
 
 @media screen and (max-width: 600px) {
@@ -842,7 +842,7 @@ iframe{
     -webkit-flex-direction: column;
   	-ms-flex-direction: column;
   	flex-direction: column;
-    
+
     img {
       margin-bottom: 25px;
     }
@@ -1515,6 +1515,13 @@ iframe{
 .Question-content {
 	padding: 15px 40px 15px 70px;
 	background: $blocSecondBackgroundColor;
+	a {
+		border-bottom: 1px solid $secondBackgroundColor;
+		&:hover {
+			color: $secondBackgroundColor;
+			transition: all ease 400ms;
+		}
+	}
 }
 
 /*
@@ -2143,7 +2150,7 @@ body.account .Article {
 }
 
 .Education {
-  
+
   .Section-newsletter {
     .SectionHeader {
       margin-bottom: 10px;
@@ -2152,7 +2159,7 @@ body.account .Article {
       padding: 5px 60px;
     }
   }
-  
+
   /* general style for the form */
   .nl-form {
   	width: 100%;
@@ -2219,8 +2226,8 @@ body.account .Article {
 			position: absolute;
 			top: 50%;
 			right: 15px;
-			width: 0; 
-		  height: 0; 
+			width: 0;
+		  height: 0;
 		  border-left: 5px solid transparent;
 		  border-right: 5px solid transparent;
 		  border-top: 5px solid $red;
@@ -2334,7 +2341,7 @@ body.account .Article {
   	color: rgba(255,255,255,0.2);
   }
 
-  input:-ms-input-placeholder {  
+  input:-ms-input-placeholder {
   	color: rgba(255,255,255,0.8);
   }
 
@@ -2433,7 +2440,7 @@ body.account .Article {
     }
   }
 }
-  
+
 
 .wait-for-load {
 	display:flex;
