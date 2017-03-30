@@ -54,6 +54,13 @@
                   </a>
                 </li>
                 <?php endif; ?>
+                
+                <?php if (!empty($member['memberlinkedin'])) : ?>
+                <li class="MembersItem-linksItem textType-txt textSize-txt-small">
+                  <a href="<?php echo $member['memberlinkedin']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-linkedin">
+                  </a>
+                </li>
+                <?php endif; ?>
 
                 <?php if (!empty($member['membergithub'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
@@ -79,6 +86,13 @@
                 <?php if (!empty($member['membermail'])) : ?>
                 <li class="MembersItem-linksItem textType-txt textSize-txt-small">
                   <a href="<?php echo $member['membermail']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-mail">
+                  </a>
+                </li>
+                <?php endif; ?>
+                
+                <?php if (!empty($member['memberphone'])) : ?>
+                <li class="MembersItem-linksItem textType-txt textSize-txt-small">
+                  <a href="<?php echo $member['memberphone']; ?>" target="_blank" class="MembersItem-linksItemLink MembersItem-linksItem-phone">
                   </a>
                 </li>
                 <?php endif; ?>

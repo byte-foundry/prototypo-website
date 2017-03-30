@@ -52,6 +52,7 @@
   							<div class="nl-overlay"></div>
   						</form>
               <button class="callToAction marginTop15" id="EducationContactForm-button" type="submit">Send message</button>
+							<p id="Education-contactForm-error" class="red marginTop15"></p>
   					</div>
 					</div>
 

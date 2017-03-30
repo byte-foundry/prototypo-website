@@ -249,6 +249,16 @@ $(function() {
 	function pad(number) {
 		return (number < 10) ? '0' + number.toString() : number.toString();
 	}
+	
+	$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if (results==null){
+       return null;
+    }
+    else{
+       return results[1] || 0;
+    }
+}
   
   //Pricing - Switch monthly / annually and company user select
   if ($('main.Pricing').length > 0) {
@@ -286,22 +296,48 @@ $(function() {
       })
     });
     var baseCompanyPrice = prices[2].yearly;
-
-    $('.PricingItem-price').each(function(index, value) {
-      let priceSplit = prices[index].yearly.toString().split('.');
-      if (priceSplit.length > 1) {
-        $(value).html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
-      } else {
-        $(value).text(prices[index].yearly);
-      }
-      setPrice($numberControl[0].value);
-    });
-    $('.PricingItem-baseline').each(function(index, value) {
-      $(value).text(baselines[index].yearly);
-    });
-		$('.PricingItem-offerRibbon').hide();
-    $('.callToAction-Pro').text('Go pro!');
-    $('.callToAction-Company').text('Get a quote!');
+		
+		
+		if ($.urlParam('billing') && $.urlParam('billing') === 'monthly') {
+			$monthlyButton.addClass('active');
+      $yearlyButton.removeClass('active');
+      
+      $('.PricingItem-price').each(function(index, value) {
+        let priceSplit = prices[index].monthly.toString().split('.');
+        if (priceSplit.length > 1) {
+          $(value).html(priceSplit[0] + '<div class="PricingItem-price-small">.' + priceSplit[1] + '</div>');
+        } else {
+          $(value).text(prices[index].monthly);
+        }
+        baseCompanyPrice = prices[2].monthly;
+        setPrice($numberControl[0].value);
+      });
+      $('.PricingItem-baseline').each(function(index, value) {
+        $(value).text(baselines[index].monthly);
+      });
+			
+			$('.PricingItem-offerRibbon').show();
+      $('.callToAction-Pro').text('Try it for $1!');
+			let urlsplit = $baseProCtaUrl.split('?');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
+		}
+		else {
+			$('.PricingItem-price').each(function(index, value) {
+	      let priceSplit = prices[index].yearly.toString().split('.');
+	      if (priceSplit.length > 1) {
+	        $(value).html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
+	      } else {
+	        $(value).text(prices[index].yearly);
+	      }
+	      setPrice($numberControl[0].value);
+	    });
+	    $('.PricingItem-baseline').each(function(index, value) {
+	      $(value).text(baselines[index].yearly);
+	    });
+			$('.PricingItem-offerRibbon').hide();
+	    $('.callToAction-Pro').text('Go pro!');
+	    $('.callToAction-Company').text('Get a quote!');
+		}
 
     /*** Switch Monthly / yearly ***/
     $monthlyButton.on('click', function(e) {
@@ -325,7 +361,7 @@ $(function() {
 			$('.PricingItem-offerRibbon').show();
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
-			$('.callToAction-Pro').attr('href', urlsplit[0] + '?plan=personal_monthly');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
       
     });
     
@@ -352,7 +388,7 @@ $(function() {
 			$('.PricingItem-offerRibbon').hide();
       $('.callToAction-Pro').text('Go pro!');
 			let urlsplit = $baseProCtaUrl.split('?');
-			$('.callToAction-Pro').attr('href', urlsplit[0] + '?plan=personal_annual_99');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
 			
     });
     /*** /Switch Monthly / yearly ***/
@@ -437,7 +473,10 @@ $(function() {
   }
   
   $('#EducationContactForm-button').on('click', function(){
-    document.location.href = "mailto:contact@prototypo.io?subject=School / Student discount request" + "&body=" + encodeURIComponent($('#nl-form')[0].innerText);
+    document.location.href = "mailto:education@prototypo.io?subject=School / Student discount request" + "&body=" + encodeURIComponent($('#nl-form')[0].innerText);
+		setTimeout(function () {
+			$('#Education-contactForm-error').text('Something went wrong. Please contact us at education@prototypo.io while we are fixing this.')
+		}, 4000);
   });
 });
 
