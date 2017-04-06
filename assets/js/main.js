@@ -135,8 +135,8 @@
 			}
 			this.open = true;
 			this.form.fldOpen = this.pos;
-			var self = this;
 			this.fld.className += ' nl-field-open';
+			$('input', this.fld).focus();
 		},
 		close : function( opt, idx ) {
 			if( !this.open ) {
