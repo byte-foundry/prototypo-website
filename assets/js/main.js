@@ -471,13 +471,46 @@ $(function() {
   if ($('main.Education').length > 0) {
     var nlform = new NLForm( document.getElementById( 'nl-form' ) );
   }
-  
-  $('#EducationContactForm-button').on('click', function(){
-    document.location.href = "mailto:education@prototypo.io?subject=School / Student discount request" + "&body=" + encodeURIComponent($('#nl-form')[0].innerText);
+
+	$('#nl-form').on('submit', function(e) {
+		e.preventDefault();
+
+		var form = e.target;
+
+		var name = form.name[0].value || undefined;
+		var job = form.job.value || undefined;
+		var school = form.school[0].value || undefined;
+		var audience = form.audience.value || undefined;
+		var email = form.email[0].value || undefined;
+		var phone = form.phone[0].value || undefined;
+
+		var text = $('#nl-form .nl-form-content')[0].innerText.replace(/(\r\n|\n|\r)/gm, '');
+
+		if (Intercom) {
+			Intercom('trackEvent', 'asked-educational-pricing', {
+				school: school,
+				job: job,
+				audience: audience,
+			});
+
+			Intercom('update', {
+				// email: email, // creates a user instead of a lead
+				name: name,
+				job_title: job,
+				company: school,
+				phone: phone,
+			});
+
+			Intercom('showNewMessage', text);
+
+			return;
+		}
+
+	  document.location.href = "mailto:education@prototypo.io?subject=School / Student discount request" + "&body=" + encodeURIComponent(text);
 		setTimeout(function () {
 			$('#Education-contactForm-error').text('Something went wrong. Please contact us at education@prototypo.io while we are fixing this.')
 		}, 4000);
-  });
+	});
 });
 
 
