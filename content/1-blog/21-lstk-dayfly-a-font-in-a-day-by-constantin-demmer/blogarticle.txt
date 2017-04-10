@@ -26,7 +26,7 @@ Contentarticle:
 
 (image: intro_visuels-lstk-v1.1.png)
 <legend>LSTK Dayfly v2</legend>
-Celebrating its 10th anniversary, the <a href="http://www.viennadesignweek.at/festival.php" target="_blank"> Vienna Design Week</a> invited 10 Austrian designers and illustrators (including me) to work in public on an ad-hoc magazine as part of their event <a href="http://www.viennadesignweek.at/archive.php?id=1149&lang_id=en" target="_blank"> Open Office</a>. The organisation gave us a day to experience the festival. The day after, we were supposed to set up a mobile studio in the festival headquarters, allowing the visitors to witness a design process.
+Celebrating its 10th anniversary, the <a href="http://www.viennadesignweek.at/festival.php" target="_blank"> Vienna Design Week</a> invited 10 Austrian designers and illustrators (including me, Constantin Demner) to work in public on an ad-hoc magazine as part of their event <a href="http://www.viennadesignweek.at/archive.php?id=1149&lang_id=en" target="_blank"> Open Office</a>. The organisation gave us a day to experience the festival. The day after, we were supposed to set up a mobile studio in the festival headquarters, allowing the visitors to witness a design process.
 For my research, I decided to visit one of the exhibitors: <a href="http://www.viennadesignweek.at/archive.php?id=1141&lang_id=en" target="_blank">The Wolfgang Schön Artistic Institute for Copperplate Printing</a>. This institution, founded in 1922, is one of the last copperplate printer still operating in Austria. I had a long conversation with Mr Schon about the disappearance of this practice because of industrial production methods. I wanted my contribution to the festival’s magazine to be based on the subjects raised: the loss of craftsmanship due to a lack of time and the industrial production processes.
 (videoext: mp4: 24h.mp4 autoplay:true loop:true)
 <legend>24 hours, LSTK Dayfly first version</legend>
@@ -57,9 +57,15 @@ That allowed me to broach the question of the quality of a work produced in such
 While a part of me thinks that it’s possible to get amazing results, even with limited resources, I remain a die-hard perfectionist that is not easily satisfied. 
 Anyway, I’m eager to see the typeface in use and see what people can create with it. 
 I’m really looking forward to get feedback from anyone working with it! You can reach me out at hello@studioelastik.com.
-<strong>Constantin Demner, MA studioelasitk.com hello@studioelastik.com</strong>
+
 <strong>You can download LSTK Dayfly Prototype and LSTK Dayfly v2 on <a href="http://www.studioelastik.com/dayfly" target="_blank">Constantin's website</a>.</strong>
-As mentioned before, Prototypo v2 wasn’t released at the time Constantin wrote those lines. We set ourselves the challenge to reshape LSTK Dayfly, mainly using the Manual Editing feature on the glyphs which needed a correction. <strong>Discover what we have done on the pictures below (<a href="http://www.studioelastik.com/dayfly" target="_blank">download LSTK Dayfly v2 on Constantin’s website</a>).
+
+(image: constantin-demner.jpg)
+<strong>Constantin Demner, MA studioelasitk.com hello@studioelastik.com</strong>
+
+
+##Dayfly V.2.0!
+As mentioned before, Prototypo v2 wasn’t released at the time Constantin wrote those lines. We set ourselves the challenge to reshape LSTK Dayfly in a couple of hours, mainly using the Manual Editing feature on the glyphs which needed a correction. <strong>Discover what we have done on the pictures below (<a href="http://www.studioelastik.com/dayfly" target="_blank">download LSTK Dayfly v2 on Constantin’s website</a>).
 (image: alphabet_visuels-lstk-v1.1.png)
 <legend>LSTK Dayfly v2, fine tuned with Prototypo v2</legend>
 (image: outro_visuels-lstk-v1.1.png)
