@@ -9,6 +9,8 @@ password: >
 language: en
 role: admin
 history:
+  - >
+    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demmer
   - cgu
   - >
     faq/which-language-or-glyph-set-prototypo-supports
@@ -16,5 +18,3 @@ history:
     faq/can-i-create-cursive-fonts-with-prototypo
   - >
     faq/what-are-the-minimum-requirements-to-run-prototypo
-  - >
-    faq/is-there-any-tutorials-to-learn-how-create-fonts-with-prototypo
