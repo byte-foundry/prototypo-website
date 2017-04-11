@@ -10,7 +10,7 @@ language: fr
 role: admin
 history:
   - >
-    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demmer
+    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
   - >
     press/you-the-font-designer-with-prototypo
   - >

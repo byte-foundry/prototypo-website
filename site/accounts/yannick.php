@@ -10,7 +10,7 @@ language: en
 role: admin
 history:
   - >
-    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demmer
+    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
   - cgu
   - >
     faq/which-language-or-glyph-set-prototypo-supports
