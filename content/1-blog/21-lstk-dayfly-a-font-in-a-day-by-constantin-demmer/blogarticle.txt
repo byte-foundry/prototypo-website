@@ -6,7 +6,7 @@ Ogdescription: Create a font in just 24 hours, is that reasonable? Constantin, a
 
 ----
 
-Ogimage: 
+Ogimage:
 
 ----
 
@@ -22,7 +22,7 @@ Subtitle: Create a font in just 24 hours, is that reasonable? Constantin, a grap
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
 (image: intro_visuels-lstk-v1.1.png)
 <legend>LSTK Dayfly v2</legend>
@@ -44,18 +44,18 @@ I started to modify some glyphs and diacritics that needed a more detailed work.
 (image: na-bravo.png)
 <legend>LSTK Dayfly first version</legend>
 ##Identify my priorities
-I knew my time was counted, so I tried to find a balance between tweaking as many elements as possible and leaving some dodgy and rough (lowercase “y” and ampersand are for example still weird!). I tried to adjust the kerning and the leading as good as I could, but again, restricted time meant that this couldn’t be perfect (it helps to manually kern the font or at least to use optical metrics in Adobe CS). 
-I named the font LSTK Dayfly. All the fonts I have released have the prefix LSTK which is the abbreviation of Studioelastik.com. 
+I knew my time was counted, so I tried to find a balance between tweaking as many elements as possible and leaving some dodgy and rough (lowercase “y” and ampersand are for example still weird!). I tried to adjust the kerning and the leading as good as I could, but again, restricted time meant that this couldn’t be perfect (it helps to manually kern the font or at least to use optical metrics in Adobe CS).
+I named the font LSTK Dayfly. All the fonts I have released have the prefix LSTK which is the abbreviation of Studioelastik.com.
 “Dayfly” fitted the project as in addition to being the name of an insect that has a life expectancy of a day, it’s also a word describing the phenomenon of a “one hit wonder”.
-It is important for me to say that the creation of good typefaces uses to take months, even years.  It is a very fine and complicated work process that requires talent, discipline and a huge amount of patience, just like any craft does. 
+It is important for me to say that the creation of good typefaces uses to take months, even years.  It is a very fine and complicated work process that requires talent, discipline and a huge amount of patience, just like any craft does.
 Every type-designer deserves my deepest respect. I’m a graphic designer who created a font in 24h with all the mistakes that this implies. I didn’t mean to minimise the work of the type designers who are investing so much of their time to work on something that most people take for granted.
 (image: vienna-design-week.png)
 <legend>LSTK Dayfly first version</legend>
 ##Exploring the rules of type design
-My main aim was to explore the rules and the limits imposed in type design. 
+My main aim was to explore the rules and the limits imposed in type design.
 That allowed me to broach the question of the quality of a work produced in such a short timespan. Would it be good enough to be used or would it only be a draft?
-While a part of me thinks that it’s possible to get amazing results, even with limited resources, I remain a die-hard perfectionist that is not easily satisfied. 
-Anyway, I’m eager to see the typeface in use and see what people can create with it. 
+While a part of me thinks that it’s possible to get amazing results, even with limited resources, I remain a die-hard perfectionist that is not easily satisfied.
+Anyway, I’m eager to see the typeface in use and see what people can create with it.
 I’m really looking forward to get feedback from anyone working with it! You can reach me out at hello@studioelastik.com.
 
 <strong>You can download LSTK Dayfly Prototype and LSTK Dayfly v2 on <a href="http://www.studioelastik.com/dayfly" target="_blank">Constantin's website</a>.</strong>
