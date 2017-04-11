@@ -112,6 +112,11 @@ gulp.task('copy:images', ['clean:dist'], function(cb) {
         .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('copy:static', [], function(cb) {
+    return gulp.src('./_redirects')
+        .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('build:assets', ['sass', 'webpack:build'], function() {
     var assets = useref.assets({
             searchPath: './'
@@ -136,7 +141,7 @@ gulp.task('build:server', ['build:assets'], function(done) {
     }, done);
 });
 
-gulp.task('build:static', ['build:server'], function(done) {
+gulp.task('build:static', ['copy:static', 'build:server'], function(done) {
     return gulp.src('')
             .pipe(shell([
                 'wget http://localhost:' + buildPort + ' ' +
