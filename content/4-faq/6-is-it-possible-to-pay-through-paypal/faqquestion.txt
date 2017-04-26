@@ -2,4 +2,4 @@ Title: Is it possible to pay through Paypal?
 
 ----
 
-Answer: We're sorry we can't accept Paypal payment right now.
+Answer: We're sorry we can't accept Paypal payments right now.

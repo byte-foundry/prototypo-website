@@ -1,4 +1,4 @@
-Title: Is there any tutorials on how create fonts with Prototypo?
+Title: Is there any tutorials on how to create fonts with Prototypo?
 
 ----
 
