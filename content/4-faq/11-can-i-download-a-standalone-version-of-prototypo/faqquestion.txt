@@ -2,4 +2,4 @@ Title: Can I download a standalone version of Prototypo?
 
 ----
 
-Answer: We think that a web-app is the best fit for our users needs:  there is no complex installation, updates are instantaneous, your fonts collection is synchronized on all your computers and you benefit of the great advantages that the web offer. That's why we don't plan to release a standalone application for the moment.
+Answer: We think that a web-app is the best fit for our users needs:  there is no complex installation, updates are instantaneous, your fonts collection is synchronized on all your computers and you benefit of the great advantages that the web offer. That's why we are not planning to release a standalone application for the moment.
