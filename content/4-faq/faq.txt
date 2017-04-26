@@ -21,7 +21,7 @@ You also can (link: https://github.com/byte-foundry/prototypo text: check the Gi
 
 ----
 
-Ogdescription: If you have a question, chances are you will find the answer on this Freqently Asked Questions page.
+Ogdescription: If you have a question, chances are you will find the answer on this Frequently Asked Questions page.
 
 ----
 

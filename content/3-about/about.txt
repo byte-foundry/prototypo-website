@@ -57,7 +57,7 @@ Members:
   memberphoto: yann.jpg
 -
   membername: Giacomo Furlanetto
-  memberjob: Business Developper
+  memberjob: Business Developer
   memberdescription: "GF has a broad-eclectic professional background with experiences in diverse domains such as design & photography, advertising & marketing, sales & digital. At Prototypo he is in charge of developing our business towards a variety of clients like designers, agencies, educational institutions, new-technology companies and more to come. In a few words he has to take Prototypo as far as we can and as high as we dream. You wish to have a go with Prototypo? Drop him a line!"
   memberquery: 'https://www.google.fr/search?q=bicycle&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjJuaGqwuXSAhUJtxQKHT8IAgQQ_AUIBigB&biw=1918&bih=990#q=la+bicicletta&tbas=0&tbm=isch&*'
   memberfacebook: https://www.facebook.com/giacomo.furlanetto.90

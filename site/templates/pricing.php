@@ -27,8 +27,8 @@
 		<?php endif ?>
     
     <div class="PricingSwitch text-center marginTop60">
-          <button href="#" id="Pricing-monthly-plan" class="button textType-txt textSize-txt-large radius">Monthly biling</button>
-          <button href="#" id="Pricing-yearly-plan" class="button active radius textType-txt textSize-txt-large">Yearly biling</button>
+          <button href="#" id="Pricing-monthly-plan" class="button textType-txt textSize-txt-large radius">Monthly billing</button>
+          <button href="#" id="Pricing-yearly-plan" class="button active radius textType-txt textSize-txt-large">Yearly billing</button>
     </div>    
 
 		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 PricingTable marginTop30">
