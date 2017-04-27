@@ -211,15 +211,8 @@
 
 		<div class="textarea">
 			<textarea id="question" name="name" rows="8" cols="40" placeholder="If you have any questions about the app, the features, etc. just ask us!" class="marginTop30"></textarea>
-			<button onclick="javascript:sendMail()" id="mailto" type="button" name="button" class="marginTop15">Send</button>
+			<button id="mailto" type="button" name="button" class="marginTop15">Send</button>
 		</div>
-
-		<script>
-			function sendMail() {
-			    var yourMessage = document.getElementById("question").value;
-			    document.location.href = "mailto:contact@prototypo.io?subject=I have a question about…" + "&body=" + encodeURIComponent(yourMessage);
-			}
-		</script>
 
 
 	</div>
