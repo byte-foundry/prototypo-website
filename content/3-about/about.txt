@@ -48,7 +48,7 @@ Members:
   memberquery: 'https://www.google.fr/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=kinder%20bueno'
   memberfacebook: https://www.facebook.com/yannguill
   membergithub: https://github.com/yannPrototypo
-  membertwitter: https://twitter.com/yannus10
+  membertwitter: https://twitter.com/Yann__G
   memberwebsite:
   membermail: mailto:yann@prototypo.io
   membervimeo:

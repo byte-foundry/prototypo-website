@@ -9,8 +9,11 @@ password: >
 language: fr
 role: admin
 history:
-  - blog/versatile-type-design-for-the-web
-  - lab/variable-font
-  - lab/elzevir-specimen
-  - lab/whistle
-  - lab/brightness
+  - >
+    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
+  - >
+    press/you-the-font-designer-with-prototypo
+  - >
+    press/crear-una-nueva-tipografa-completamente-con-prototypo
+  - press/lookatme-ru-article-russian
+  - press/3dnchu-article-japan
