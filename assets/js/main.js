@@ -174,6 +174,18 @@
 
 
 $(function() {
+  
+  $('.js-footer-mailto').on('click', function(e) {
+    e.preventDefault();
+    if (Intercom) {
+      Intercom('trackEvent', 'asked-footer', {});  
+      Intercom('showNewMessage', '');
+      return;
+    }
+    else {
+      document.location.href = "mailto:contact@prototypo.io";
+    }
+  });
 
 	/* Get email from the homepage pre-fill input */
 	$('#get-app-submit').on('click', function(e) {
@@ -463,7 +475,24 @@ $(function() {
       $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
     }
     
-    /*** / Company user count ***/   
+    /*** / Company user count ***/
+    
+    /*** Contact form ***/    
+    $('#mailto').on('click', function(e) {
+      e.preventDefault();
+  
+      var text = $('#question').val();
+  
+      if (Intercom) {
+        Intercom('trackEvent', 'asked-pricing', {});  
+        Intercom('showNewMessage', text);
+        return;
+      }
+      else {
+        document.location.href = "mailto:contact@prototypo.io?subject=I have a question about…" + "&body=" + encodeURIComponent(text);
+      }
+    });
+    /*** / Contact form ***/   
     
   }
   
