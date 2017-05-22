@@ -10,10 +10,12 @@ language: fr
 role: admin
 history:
   - >
+    blog/overview-of-shifting-work-paradigms-g-u-is-work-for-the-biennial-of-design
+  - >
+    blog/overview-of-shifting-work-paradigms-g-u-is-work-for-the-biennal-of-design
+  - >
     blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
   - >
     press/you-the-font-designer-with-prototypo
   - >
     press/crear-una-nueva-tipografa-completamente-con-prototypo
-  - press/lookatme-ru-article-russian
-  - press/3dnchu-article-japan
