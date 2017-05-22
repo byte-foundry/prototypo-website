@@ -82,5 +82,7 @@ We would love to highlight your work on our blog. If you lead a creative project
 <legend>Signage on the staircase using stretched glyphs</legend>
 (image: wooden-board.jpg)
 <legend>Writings on a wooden board</legend>
-(image: one-basic-font-many-variants.jpg)
-<legend>Signage in the Cité du Design</legend>
+(image: cartel.jpg)
+<legend>Close up on a plate</legend>
+(image: projection.jpg)
+<legend>Projection on a wall</legend>
