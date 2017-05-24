@@ -4,20 +4,17 @@
 	<div class="PricingItemFree" style="background-image:url(<?php
 		echo $page->file($page->headerImg())->url(); ?>)">
 		<div class="PricingItemFree-wrap">
-			<header class="PageHeader text-center fitToContent marginTop60">
-				<h1 class="textType-title textSize-title-large white">
+			<header class="text-center fitToContent marginTop60">
+				<h1 class="white centered">
 					<?php echo $page->mainTitle()->kirbytextSans(); ?>
-				</h1>
-
-				<?php if($page->subtitle()->kirbytextSans()->isNotEmpty()): ?>
-					<h2 class="Section-wrapTxt textType-txt marginTop30 marginBottom15 colorBrightest text-center textSize-title-medium textType-subtitle ">
+					<?php if($page->subtitle()->kirbytextSans()->isNotEmpty()): ?>
+					<span class="internal_header">
 						<?php echo $page->subtitle()->kirbytextSans(); ?>
-					</h2>
+					</span>
 				<?php endif ?>
-
+				</h1>
 			</header>
 		</div>
-	</div>
 	<div class="fitToContent">
 
 		<?php if($page->descriptionPromo()->isNotEmpty()): ?>
@@ -154,6 +151,7 @@
 		</div>
 
 	</div>
+</div>
 
 	<section class="bg-white clearfix">
 		<div class="fitToContent marginTop60 ">

@@ -126,7 +126,7 @@
 						</div>
 						<div>
 							<!-- <a class="callToAction header-part-button" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signup" target="_blank" >Create your first font!</a> -->
-							<a class="callToAction header-part-button" href="/pricing">Create your first font!</a>
+							<a class="callToAction header-part-button" href="https://app.prototypo.io/#/signup" onclick="ga('send', 'event', 'Home', 'Click', 'CTA5');">Create your first font!</a>
 						</div>
 					</div>
 				</div>

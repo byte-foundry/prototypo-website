@@ -14,10 +14,13 @@
 			<?php snippet('demo-home') ?>
 
 			<div class="textSize-txt-large text-center marginTop60">
-				<div class="marginTop30">
-					<a href="pricing" class="NewsletterInput-submit callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA1');">
-						<?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?>
-					</a>
+				<div class="marginTop30 row">
+					<div class="columns large-9 medium-9">
+						<input id="emailSignUp" type="text" placeholder="Your email" class="form-input Newsletter-name" style="height:50px"/>
+					</div>
+					<a class="NewsletterInput-submit callToAction medium columns large-3 medium-3"
+						onclick="ga('send', 'event', 'Home', 'Click', 'CTA1');location.href='https://app.prototypo.io/#/signup?emailSignUp=' + document.getElementById('emailSignUp').value;">
+					<?php echo $page->getStartedButtonLabel()->kirbytextSans(); ?></a>
 				</div>
 			</div>
 
@@ -79,7 +82,7 @@
 
 					<div class="textSize-txt-large marginTop60">
 						<div class="marginTop30">
-							<a href="pricing" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA2');">
+							<a href="https://app.prototypo.io/#/signup" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA2');">
 								<?php echo $page->CTA2()->kirbytextSans(); ?>
 							</a>
 						</div>
@@ -134,7 +137,7 @@
 
 			<div class="textSize-txt-large text-center marginTop60">
 				<div class="marginTop30">
-					<a href="pricing" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA3');">
+					<a href="https://app.prototypo.io/#/signup" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA3');">
 						<?php echo $page->CTA3()->kirbytextSans(); ?>
 					</a>
 				</div>
@@ -175,9 +178,13 @@
 			</p>
 
 			<div class="textSize-txt-large text-center marginTop60">
-				<div class="marginTop30">
-					<a href="pricing" class="callToAction medium" onclick="ga('send', 'event', 'Home', 'Click', 'CTA4');">
-						<?php echo $page->CTA4()->kirbytextSans(); ?>
+				<div class="marginTop30 row">
+					<div class="columns large-9 medium-9">
+						<input id="emailSignUp" type="text" placeholder="Your email" class="form-input Newsletter-name" style="height:50px"/>
+					</div>
+					<a class="NewsletterInput-submit callToAction medium columns large-3 medium-3"
+						onclick="ga('send', 'event', 'Home', 'Click', 'CTA1');location.href='https://app.prototypo.io/#/signup?emailSignUp=' + document.getElementById('emailSignUp').value;">
+					<?php echo $page->CTA4()->kirbytextSans(); ?>
 					</a>
 				</div>
 			</div>
