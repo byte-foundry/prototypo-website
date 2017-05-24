@@ -180,10 +180,10 @@
 			<div class="textSize-txt-large text-center marginTop60">
 				<div class="marginTop30 row">
 					<div class="columns large-9 medium-9">
-						<input id="emailSignUp" type="text" placeholder="Your email" class="form-input Newsletter-name" style="height:50px"/>
+						<input id="emailSignUpBot" type="text" placeholder="Your email" class="form-input Newsletter-name" style="height:50px"/>
 					</div>
 					<a class="NewsletterInput-submit callToAction medium columns large-3 medium-3"
-						onclick="ga('send', 'event', 'Home', 'Click', 'CTA1');location.href='https://app.prototypo.io/#/signup?emailSignUp=' + document.getElementById('emailSignUp').value;">
+						onclick="ga('send', 'event', 'Home', 'Click', 'CTA1');location.href='https://app.prototypo.io/#/signup?emailSignUp=' + document.getElementById('emailSignUpBot').value;">
 					<?php echo $page->CTA4()->kirbytextSans(); ?>
 					</a>
 				</div>
