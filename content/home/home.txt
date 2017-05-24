@@ -25,7 +25,7 @@ Getstartedtagline: Create your own font in a few clicks
 
 ----
 
-Getstartedbuttonlabel: Try Prototypo now
+Getstartedbuttonlabel: Try now
 
 ----
 
@@ -235,4 +235,4 @@ Content4:
 
 ----
 
-Cta4: Start with Prototypo now!
+Cta4: Start now!

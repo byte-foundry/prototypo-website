@@ -648,18 +648,16 @@ iframe{
   margin-left: auto;
   margin-right: auto;
   button {
-  	color: white;
-    background-color: $red;
-    border: 2px solid $white;
+  	color: $red;
+    background-color: $white;
     &:hover, &:focus {
-      background-color: $white;
-      border-color: $colorLighterGray;
-      color: $red;
+      background-color: $red;
+      color: $white;
       outline: none;
     }
     &.active {
-      background-color: $white;
-      color: $red;
+      background-color: $red;
+      color: $white;
       border-color: $colorLighterGray;
     }
   }
