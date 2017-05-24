@@ -62,7 +62,11 @@ Headerimg: prototypo.svg
 
 ----
 
-Maintitle: Choose your plan and start to create your font online now!
+Maintitle: Choose your plan
+
+----
+
+Subtitle: and start to create your font online now!
 
 ----
 
