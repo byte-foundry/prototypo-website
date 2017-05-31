@@ -144,6 +144,10 @@
 	  				<span class="show-for-sr">Instagram</span>
 			</a>
 
+			<a href="<?php echo $site->dribbble()->html() ?>" target="_blank" class="Social-item Social-itemDribbble">
+	  				<span class="show-for-sr">Dribbble</span>
+			</a>
+
 			<a href="<?php echo $site->twitter()->html() ?>" target="_blank" class="Social-item Social-itemTwitter">
 	  				<span class="show-for-sr">Twitter</span>
 			</a>
