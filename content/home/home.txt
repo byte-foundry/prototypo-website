@@ -158,9 +158,9 @@ Steps:
     don’t you create it?
 -
   title: >
-    Start your project with one of our 3
+    Start your project with one of our 4
     parametric typefaces
-  content: 'The basic set starts with Prototypo Fell, Prototypo Grotesk and Prototypo Elzevir. All our fonts are powered by our partner <b><a href="https://productiontype.com" target="_blank">Production Type</a></b>'
+  content: 'The basic set starts with Prototypo Fell, Prototypo Grotesk, Prototypo Elzevir and Spectral. All our fonts are powered by our partner <b><a href="https://productiontype.com" target="_blank">Production Type</a></b>'
   cover: production-type-fonts.svg
 -
   title: >
@@ -188,7 +188,7 @@ Title3: They talk about Prototypo
 
 ----
 
-Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b>27,000 users</b> from over <b>130 countries!</b>
+Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b id="UserCount">30,000 users</b> from over <b>130 countries!</b>
 
 ----
 
