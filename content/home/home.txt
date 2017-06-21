@@ -188,7 +188,7 @@ Title3: They talk about Prototypo
 
 ----
 
-Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b id="UserCount">30,000 users</b> from over <b>130 countries!</b>
+Content3: From the beginning Prototypo rose a considerable excitement in the worldwide graphic and type communities. Today we count more than <b id="UserCount">30,000</b> users from over <b>130 countries!</b>
 
 ----
 
