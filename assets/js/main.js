@@ -1,5 +1,5 @@
 ;( function( window ) {
-	
+
 	'use strict';
 
 	var document = window.document;
@@ -8,7 +8,7 @@
 		String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
 	}
 
-	function NLForm( el ) {	
+	function NLForm( el ) {
 		this.el = el;
 		this.overlay = this.el.querySelector( '.nl-overlay' );
 		this.fields = [];
@@ -49,10 +49,10 @@
 	NLField.prototype = {
 		_create : function() {
 			if( this.type === 'dropdown' ) {
-				this._createDropDown();	
+				this._createDropDown();
 			}
 			else if( this.type === 'input' ) {
-				this._createInput();	
+				this._createInput();
 			}
 		},
 		_createDropDown : function() {
@@ -174,11 +174,11 @@
 
 
 $(function() {
-  
+
   $('.js-footer-mailto').on('click', function(e) {
     e.preventDefault();
     if (Intercom) {
-      Intercom('trackEvent', 'asked-footer', {});  
+      Intercom('trackEvent', 'asked-footer', {});
       Intercom('showNewMessage', '');
       return;
     }
@@ -261,7 +261,7 @@ $(function() {
 	function pad(number) {
 		return (number < 10) ? '0' + number.toString() : number.toString();
 	}
-	
+
 	$.urlParam = function(name){
     var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
     if (results==null){
@@ -271,10 +271,20 @@ $(function() {
        return results[1] || 0;
     }
 }
-  
+	if ($('main.home').length > 0) {
+
+	  /*** Get user count ***/
+	  $.ajax({url: "https://e4jpj60rk8.execute-api.eu-west-1.amazonaws.com/prod/customers", success: function(result){
+		  if (result.total_count) {
+			$('#UserCount').text(Math.floor(result.total_count / 1000) + ',000');
+		  }
+	  }});
+	  /*** / Get user count ***/
+	}
+
   //Pricing - Switch monthly / annually and company user select
   if ($('main.Pricing').length > 0) {
-    
+
     /*** Get user count ***/
     $.ajax({url: "https://e4jpj60rk8.execute-api.eu-west-1.amazonaws.com/prod/customers", success: function(result){
         if (result.total_count) {
@@ -282,7 +292,7 @@ $(function() {
         }
     }});
     /*** / Get user count ***/
-    
+
     var $numberControl = $('.PricingItem-pack-option-usercount .input-number');
     var $companyUserMin = $numberControl.attr('min') || false;
     var $companyUserMax = $numberControl.attr('max') || false;
@@ -308,12 +318,12 @@ $(function() {
       })
     });
     var baseCompanyPrice = prices[2].yearly;
-		
-		
+
+
 		if ($.urlParam('billing') && $.urlParam('billing') === 'monthly') {
 			$monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
-      
+
       $('.PricingItem-price').each(function(index, value) {
         let priceSplit = prices[index].monthly.toString().split('.');
         if (priceSplit.length > 1) {
@@ -327,7 +337,7 @@ $(function() {
       $('.PricingItem-baseline').each(function(index, value) {
         $(value).text(baselines[index].monthly);
       });
-			
+
 			$('.PricingItem-offerRibbon').show();
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
@@ -355,7 +365,7 @@ $(function() {
     $monthlyButton.on('click', function(e) {
       $monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
-      
+
       $('.PricingItem-price').each(function(index, value) {
         let priceSplit = prices[index].monthly.toString().split('.');
         if (priceSplit.length > 1) {
@@ -369,18 +379,18 @@ $(function() {
       $('.PricingItem-baseline').each(function(index, value) {
         $(value).text(baselines[index].monthly);
       });
-			
+
 			$('.PricingItem-offerRibbon').show();
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
-      
+
     });
-    
-    $yearlyButton.on('click', function(e) { 
+
+    $yearlyButton.on('click', function(e) {
       $yearlyButton.addClass('active');
       $monthlyButton.removeClass('active');
-      
+
       $('.PricingItem-price').each(function(index, value) {
         let priceSplit = prices[index].yearly.toString().split('.');
         if (priceSplit.length > 1) {
@@ -388,37 +398,37 @@ $(function() {
         } else {
           $(value).text(prices[index].yearly);
         }
-        
+
         baseCompanyPrice = prices[2].yearly;
         setPrice($numberControl[0].value);
-        
+
       });
       $('.PricingItem-baseline').each(function(index, value) {
         $(value).text(baselines[index].yearly);
       });
-			
+
 			$('.PricingItem-offerRibbon').hide();
       $('.callToAction-Pro').text('Go pro!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
-			
+
     });
     /*** /Switch Monthly / yearly ***/
-    
-    /*** Company user count ***/    
-    
+
+    /*** Company user count ***/
+
     var $controls = {
       dec: $numberControl.prev(),
       inc: $numberControl.next().next()
     }
-    
+
     $numberControl.each(function() {
       init($(this));
       $(this).on('input',function(e){
        setPrice($numberControl[0].value);
       });
     });
-    
+
     function init(el) {
 
       $controls.dec.on('click', decrement);
@@ -441,20 +451,20 @@ $(function() {
           setPrice(el[0].value);
         }
       }
-      
+
     }
-    
+
     function setPrice(numLicences) {
       if (numLicences < 4) {
         $numberControl[0].value = 4;
         numLicences = 4;
       }
-      
+
       if (numLicences > 100) {
         $numberControl[0].value = 100;
         numLicences = 100;
       }
-      
+
       let price = baseCompanyPrice * numLicences;
       let priceSplit = price.toString().split('.');
       if (priceSplit.length > 1) {
@@ -462,8 +472,8 @@ $(function() {
       } else {
         $companyPrice.text(price);
       }
-      
-      
+
+
       /*if (numLicences <= 10) {
         $('.callToAction-Company').text('Create your team!');
         $('.callToAction-Company').attr('href', $baseCompanyCtaUrl);
@@ -474,17 +484,17 @@ $(function() {
       $('.callToAction-Company').text('Get a quote!');
       $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
     }
-    
+
     /*** / Company user count ***/
-    
-    /*** Contact form ***/    
+
+    /*** Contact form ***/
     $('#mailto').on('click', function(e) {
       e.preventDefault();
-  
+
       var text = $('#question').val();
-  
+
       if (Intercom) {
-        Intercom('trackEvent', 'asked-pricing', {});  
+        Intercom('trackEvent', 'asked-pricing', {});
         Intercom('showNewMessage', text);
         return;
       }
@@ -492,10 +502,10 @@ $(function() {
         document.location.href = "mailto:contact@prototypo.io?subject=I have a question about…" + "&body=" + encodeURIComponent(text);
       }
     });
-    /*** / Contact form ***/   
-    
+    /*** / Contact form ***/
+
   }
-  
+
   //Education contact form
   if ($('main.Education').length > 0) {
     var nlform = new NLForm( document.getElementById( 'nl-form' ) );
@@ -541,5 +551,3 @@ $(function() {
 		}, 4000);
 	});
 });
-
-
