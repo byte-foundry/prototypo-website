@@ -550,4 +550,90 @@ $(function() {
 			$('#Education-contactForm-error').text('Something went wrong. Please contact us at education@prototypo.io while we are fixing this.')
 		}, 4000);
 	});
+
+	if ($('.AcademyCoursePage').length > 0) {
+    var stickyHeaders = (function() {
+
+      var $window = $(window),
+          $stickies;
+
+      var load = function(stickies) {
+
+        if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
+
+          $stickies = stickies.each(function() {
+
+            var $thisSticky = $(this).wrap('<div class="followWrap" />');
+
+            $thisSticky
+                .data('originalPosition', $thisSticky.offset().top)
+                .data('originalHeight', $thisSticky.outerHeight())
+                  .parent()
+                  .height($thisSticky.outerHeight());
+          });
+
+          $window.off("scroll.stickies").on("scroll.stickies", function() {
+    		  _whenScrolling();
+          });
+        }
+      };
+
+      var _whenScrolling = function() {
+
+        $stickies.each(function(i) {
+
+          var $thisSticky = $(this),
+              $stickyPosition = $thisSticky.data('originalPosition');
+
+          if ($stickyPosition <= $window.scrollTop()) {
+
+            var $nextSticky = $stickies.eq(i + 1),
+                $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
+
+            $thisSticky.addClass("fixed");
+
+          } else {
+
+            var $prevSticky = $stickies.eq(i - 1);
+
+            $thisSticky.removeClass("fixed");
+
+            if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') - $thisSticky.data('originalHeight')) {
+
+              $prevSticky.removeAttr("style");
+            }
+          }
+        });
+      };
+
+      return {
+        load: load
+      };
+    })();
+
+    $(function() {
+      stickyHeaders.load($(".Course-content h2"));
+
+      var $sticky = $('.Course-content-basics');
+      var stickyOrigCssRight = $sticky.css('right');
+      var origOffsetY = $sticky.offset().top;
+      var contentRightOffset = (($('.Course').offset().left + $('.Course').outerWidth()));
+
+      function onScroll(e) {
+        if (window.scrollY >= origOffsetY) {
+          $sticky.addClass('fixed');
+          $sticky.css({'left': contentRightOffset + 'px'});
+          $sticky.css({'right': 'inherit'});
+        } else {
+          $sticky.removeClass('fixed');
+          $sticky.css({'right': stickyOrigCssRight});
+          $sticky.css({'left': 'inherit'});
+        };
+      }
+
+      document.addEventListener('scroll', onScroll);
+    });
+  }
+
+
 });
