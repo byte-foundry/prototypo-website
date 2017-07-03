@@ -11,7 +11,7 @@ Ogdescription: How to use the sliders
 ----
  
  
-Ogimage: http://i.imgur.com/f3tbWJb.jpg
+Ogimage: null
  
  
 ----
@@ -83,8 +83,9 @@ You've seen sliders in the app. But do you know everything about them? Let's see
 ----
 Contentcourse:
 
+
 Working with the sliders is the first step in Prototypo's workflow. This tool allows you to quickly change the overall shape of the font and get to something close to your idea faster. 
-Each slider has a label that show the parameter that will be updated, and the current value of the parameter.
+Each slider has a label that shows the parameter that will be updated and the current value of the parameter.
 It can be moved from left to right by clicking and dragging your mouse on the black circle.
 
 ## The tabs
@@ -93,7 +94,8 @@ It can be moved from left to right by clicking and dragging your mouse on the bl
 Above the slider view are four tabs : **Settings**, **Func**, **Style**, **Serifs**.
 (image: slider-tabs.gif)
 
-Each tabs represents a step on a classic design process. Usually, you should work from left to right: from the sliders on the first tab, on to the second tab and so forth, with some going back and forth to make some changes, of course.
+By default, the functional characteristics (Func) tab is opened.
+Each tab represents a step on a classic design process. Usually, you should work from left to right: from the sliders on the first tab, on to the second tab and so forth, with some going back and forth to make some changes, of course.
 
 ## The red zone
 
@@ -101,7 +103,7 @@ When pushing the sliders to their limit you might have noticed that the slider b
 
 (image: slider-redzone.gif)
 
-Don't worry, it's not a problem. We're just telling you that you are entering the *experimental* zone. It's still perfectly allowed to go onto this sone, but you might have some issues with legibility or small font-size display.
+Don't worry, it's not a problem. We're just telling you that you are entering the *experimental* zone. It's still perfectly allowed to go onto this range, but you might have some issues with legibility or small font-size display.
 However, you can have very nice results and a lot of artistic possibilities by experimenting in these zones. 
 
 ### Setting a manual value for a slider
@@ -110,19 +112,19 @@ If you need to try a specific value for a parameter, or even go further than the
 There, you can input any value you want and it will be set.
 (image: slider-inputmanual.gif)
 
-## More infos
+## More info
 
 If you want to get the default value for a slider, just hover a slider and click on the reset button. The parameter will be reset.
 
 (image: slider-resetbutton.jpg)
 
-Not sure about the effect of a slider ? Don't worry. Click on the **?** icon and a tooltip will slide open, showing what's the effect on a letter. You can circle through the slider by clicking on the arrow below it, and close it if you click on the close icon.
+Not sure about the effect of a slider? Don't worry. Click on the **?** icon and a tooltip will slide open, showing what's the effect on a letter. You can circle through the slider by clicking on the arrow below it, and close it if you click on the close icon.
 (image: slider-tooltip.gif)
 
 Sometimes, there are some sliders that are linked to another one, like this: 
 (image: slider-subslider.jpg).
 
-This means that this slider is a child of his parent, usually meaning that it can control a part of a parent slider. Like on the *Aperture* slider, where you can control the overall aperture, and also the top and the bottom aperture independly.
+This means that this slider is a child of his parent, usually meaning that it can control a part of a parent slider. Like on the *Aperture* slider, where you can control the overall aperture, and also the top and the bottom aperture independently.
 
 
 ### That's the end of the Sliders overview. Thanks for reading!

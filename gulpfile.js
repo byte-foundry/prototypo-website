@@ -128,6 +128,11 @@ gulp.task('copy:tutorials', ['clean:tutorials'], function(cb) {
         .pipe(gulp.dest('./content/6-academy'));
 });
 
+gulp.task('copy:static', [], function(cb) {
+    return gulp.src('./_redirects')
+        .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('build:assets', ['sass', 'webpack:build', 'copy:tutorials'], function() {
     var assets = useref.assets({
             searchPath: './'
