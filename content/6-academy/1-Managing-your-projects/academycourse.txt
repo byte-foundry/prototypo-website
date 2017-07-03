@@ -11,7 +11,7 @@ Ogdescription: How to manage your projects in prototypo
 ----
  
  
-Ogimage: null
+Ogimage: http://i.imgur.com/FhjGNVB.png
  
  
 ----

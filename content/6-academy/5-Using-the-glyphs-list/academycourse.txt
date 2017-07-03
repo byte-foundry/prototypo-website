@@ -11,7 +11,7 @@ Ogdescription: How to use the Prototypo glyphs list
 ----
  
  
-Ogimage: null
+Ogimage: http://i.imgur.com/xnAgMkn.jpg
  
  
 ----

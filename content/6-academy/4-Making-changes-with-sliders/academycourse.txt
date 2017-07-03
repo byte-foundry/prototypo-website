@@ -11,7 +11,7 @@ Ogdescription: How to use the sliders
 ----
  
  
-Ogimage: null
+Ogimage: http://i.imgur.com/f3tbWJb.jpg
  
  
 ----

@@ -11,7 +11,7 @@ Ogdescription: How to use the individualization feature
 ----
  
  
-Ogimage: null
+Ogimage: http://i.imgur.com/B7Chb6l.jpg
  
  
 ----

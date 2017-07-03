@@ -11,7 +11,7 @@ Ogdescription: How to work with the three Prototypo views
 ----
  
  
-Ogimage: null
+Ogimage: http://i.imgur.com/enNtVHA.jpg
  
  
 ----

@@ -11,7 +11,7 @@ Ogdescription: What are the components in Prototypo and how to use them
 ----
  
  
-Ogimage: null
+Ogimage: http://i.imgur.com/ZcFo2ar.png
  
  
 ----
