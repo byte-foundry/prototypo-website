@@ -494,9 +494,26 @@ iframe{
 	border-bottom: solid 15px $colorWhite;
 }
 .Course-content img {
-	margin: 0 auto;
-	display: block;
+	margin: inherit;
+	display: inline-block;
 }
+
+.Course-content figure {
+	margin: inherit;
+	display: inline-block;
+}
+
+.Course-content p img, .Course-content li img {
+	margin: 0;
+	display: inline-block;
+  width: inherit;
+}
+
+.Course-content p figure, .Course-content li figure {
+	display: inline-block;
+  width: inherit;
+}
+
 .Course-content h1 {
 	text-align: left;
 	padding-top: 0;
@@ -547,11 +564,11 @@ iframe{
 .AcademyPagination-item {
 	display: inline-block;
 	padding: 13px 30px 10px;
-	// color: $colorWhite;
+	color: #fc5454;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;
-	// background: $blocSecondBackgroundColor;
+	background: $colorWhite;
 	transition: all 300ms ease;
 	margin-right: 10px;
 	text-align: center !important;

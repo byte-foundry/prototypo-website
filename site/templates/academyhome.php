@@ -25,7 +25,7 @@
 
 			<?php if($isTag = param('tag')): ?>
 				<nav class="AcademyPagination AcademyPagination-before">
-				  <a class="AcademyPagination-item AcademyPagination right textType-txt textSize-txt-small" href="<?php echo url('academy'); ?>">Back to academy</a>
+				  <a class="AcademyPagination-item AcademyPagination right textType-txt textSize-txt-small" href="<?php echo url('academy'); ?>">Back to the course list</a>
 				</nav>
 			<?php endif; ?>
 
@@ -44,11 +44,11 @@
 					<nav class="AcademyPagination AcademyPagination-before">
 
 						<?php if($courses->pagination()->hasNextPage()): ?>
-							<a class="AcademyPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $courses->pagination()->nextPageURL() ?>">older posts</a>
+							<a class="AcademyPagination-item right textType-txt textSize-txt-small red bg-white" href="<?php echo $courses->pagination()->nextPageURL() ?>">Newer courses</a>
 						<?php endif ?>
 
 						<?php if($courses->pagination()->hasPrevPage()): ?>
-							<a class="AcademyPagination-item AcademyPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $courses->pagination()->prevPageURL() ?>">newer posts</a>
+							<a class="AcademyPagination-item AcademyPagination-next textType-txt textSize-txt-small red bg-white" href="<?php echo $courses->pagination()->prevPageURL() ?>">Older courses</a>
 						<?php endif ?>
 
 					</nav>
@@ -77,7 +77,7 @@
 							<a class="Course-link" href="<?php echo $course->url(); ?>">
 								<h2 class="Course-title textType-title textSize-title-xsmall"><?php echo $course->title()->html() ?></h2>
 								<h3 class="Course-subtitle textType-subtitle textSize-txt-xlarge"><?php echo $course->header()->kirbytext(); ?></h3>
-                <?php if($course->reward() != ""): ?>
+                <?php if($course->reward() != "null"): ?>
                   <p>By completing this course you will earn:</p>
                   <ul>
                     <li><?php echo $course->reward(); ?></li>

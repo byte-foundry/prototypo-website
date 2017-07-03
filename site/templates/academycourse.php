@@ -31,7 +31,7 @@
 		<?php endif ?>
 
 		<nav class="AcademyPagination AcademyPagination-before">
-		<a class="AcademyPagination-item left AcademyPagination-back textType-txt textSize-txt-small red bg-white" href="<?php echo url('academy'); ?>">Back to Academy</a>
+		<a class="AcademyPagination-item left AcademyPagination-back textType-txt textSize-txt-small red bg-white" href="<?php echo url('academy'); ?>">Back to the course list</a>
 		</nav>
 
   		<article class="Course">
@@ -41,7 +41,7 @@
 			<header class="Course-header">
 				<h1 class="Course-title textType-title textSize-title-small"><?php echo $page->title()->html() ?></h1>
 				<h3 class="Course-subtitle textType-subtitle textSize-txt-xlarge"><?php echo $page->header()->kirbytext(); ?></h3>
-        <?php if($page->reward() != ""): ?>
+        <?php if($page->reward() != "null"): ?>
           <p>By completing this course you will earn:</p>
           <ul>
             <li><?php echo $page->reward(); ?></li>
