@@ -91,9 +91,9 @@ To open the glyphs list, click on the **Glyphs list** button on the **glyph view
 The glyphs list will slide open on the right part of your screen.
 To close it, just click again on the **Glyphs list** button.
 
-## Select a glyph and see its informations
+## Select a glyph and see its information
 The glyphs list is a scrollable list of all the glyphs available in the template. From there, you can **click on a glyph** select it in the glyph view in order to apply component, to manually edit it or just to have a bigger view of it and make any kind of modifications.
-Some glyphs in the lists have **corners**. At this time, there is two types of corner available:
+Some glyphs in the lists have **corners**. At this time, there are two types of corner available:
 
 (image: glyphlist-hascomponent.jpg) This icon means that this glyph has components. (See [our component course](/academy/course/Using-Components) to get more details about this feature).
 
@@ -101,12 +101,12 @@ Some glyphs in the lists have **corners**. At this time, there is two types of c
 
 ## Filter and search glyphs
 
-If you need to work on a specific glyphset, you might want to reduce the amount of glyphs displayed. In order do do that, there is two options: **filtering** or **searching**.
+If you need to work on a specific glyphset, you might want to reduce the number of glyphs displayed. In order to do that, there are two options: **filtering** or **searching**.
 
 ### Filtering a glyph
 (image: glyphlist-filter.gif)
 
-By clicking on **filter by...** the filter list opens. You can click on a filter to filter the glyphs list (only smallcaps, only diacritics, only latin...) and click on the close icon to close the filter panel.
+By clicking on **filter by...** the filter list opens. You can click on a filter to filter the glyphs list (only small caps, only diacritics, only Latin...) and click on the **close** icon to close the filter panel.
 
 #### Pin a filter
 (image: glyphlist-pin.gif)

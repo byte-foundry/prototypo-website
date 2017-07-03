@@ -83,6 +83,7 @@ The Breadcrumbs and the Top bar are essential tools for anyone using Prototypo. 
 ----
 Contentcourse:
 
+
 ## What's inside?
 
 (image: goldenthreadgifcomp2.gif)
@@ -106,9 +107,9 @@ The Collection button leads you to your typeface family collection. It contains 
 
 To get back to  the application, simply click on the back button 
 
-### Families, variants and groups
+### Families, variants, and groups
 
-The second part of the breadcrumbs is divided into three parts. The Families, the variants and the glyph groups.
+The second part of the breadcrumbs is divided into three parts. The Families, the variants, and the glyph groups.
 
 The Family name of the typeface you're working on: a simple way to both let you know which project you're in and switch from one project to the other. You can use it to see which project you're working on and switch from one Typeface Family to the other. A really handy tool when you're working on multiple projects.
 
@@ -137,7 +138,7 @@ You'll learn more about individualization groups in our [Individualization Tutor
 
 (image: NQnePBs.jpg)
 
-The File menu will let create a new project (a new font family) and export your font with the different font export options. This is were you will also be able to log out from Prototypo.
+The File menu will let create a new project (a new font family) and export your font with the different font export options. This is where you will also be able to log out from Prototypo.
 
 The different exports will let you choose between a fully ready font, a more accurate font for editing in a type design software or to export to Glyphr a web based type design application:
 
@@ -147,7 +148,7 @@ This export type will create a fully merged font ready to use in your favorite s
 
 (image: merged_font.png)
 
-This is a merged font. Every glyph consist of contours that do not overlap. It is better for compatibility. If you do not have any experience with font software use this export.
+This is a merged font. Every glyph consists of contours that do not overlap. It is better for compatibility. If you do not have any experience with font software use this export.
 
 The &ldquo;Export font as...&rdquo; option we let you choose the name family and the name of the style of the font exported.
 
@@ -174,13 +175,13 @@ Window is a quick way to access the different Views available in Prototypo (and 
 To chat with Prototypo, access the FAQ, Restart the Tutorials, access the Academy.
 
 
-Your account button accesses you to your Prototypo account dashboard containing every infos you need to manage your subscription and billing, your profile (adress and infos about yourself), your billing history, etc. You can learn more about the account dashboard in our [Account tutorial](#/academy/course/Account).
+Your account button gets you to your Prototypo account dashboard containing every info you need to manage your subscription and billing, your profile (address and info about yourself), your billing history, etc. You can learn more about the account dashboard in our [Account tutorial](#/academy/course/Account).
 
 #### Views
 
 (image: views_topbar.gif)
 
-Glyph View allows you to see what you're doing on a specific letter and give you access to tools to modify said letters. Word View allows you to see the glyph modification changes on a sentence and also give you access to changing the sidebar of a glyph / Text view allows you to see  the typeface modification when used in a text block (in different sizes). 
+Glyph View allows you to see what you're doing on a specific letter and give you access to tools to modify said letters. Word View allows you to see the glyph modification changes on a sentence and also give you access to changing the sidebar of a glyph / Text view allows you to see the typeface modification when used in a text block (in different sizes). 
 
 ### And that concludes our tutorial about the breadcrumbs and the top bar! Congratulations!
 

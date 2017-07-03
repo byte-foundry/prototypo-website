@@ -89,7 +89,7 @@ Contentcourse:
 Individualization groups are awesome if you want to tweak the shape of a specific set of glyphs.
 You can use this feature to make corrections, to get some diversity in your project or to make one character stand out, possibilities are endless! 
 
-In this course you will get to know this feature, how to use it and to combine it with the regular view to make outstanding projects.
+In this course, you will get to know this feature, how to use it and to combine it with the regular view to make outstanding projects.
 
 ## How to use it
 (image: indiv-changeview.gif)
@@ -98,7 +98,7 @@ The sliders can work in two modes: the regular one, symbolized by a green UI, an
 
 ### Getting into the individualization panel
 
-There are three way to switch modes :
+There is three way to switch modes:
 
 (image: indiv-one.jpg)
 
@@ -106,7 +106,7 @@ You can click on this switch to quickly jump from one mode to another.
 
 (image: indiv-two.jpg)
 
-You can also achieve the same result by going in the Edit > Individualize parameters menu option.
+You can also achieve the same result by going to the **Edit** > **Individualize Parameters** menu option.
 
 (image: indiv-three.jpg)
 
@@ -120,12 +120,13 @@ A group is a set of glyphs that will be modified together.
 (image: indiv-creategroup.gif)
 
 #### Create a group
-To create a group, select the glyphs that you want to put into by clicking on them, then name the group and click on **save change**. The new group will be put in the group list.
+To create a group, select the glyphs that you want to put into by clicking on them, then name the group and click on **save change**.
+As a general rule, name the group according to the letters it contains, but it is up to you to be more inventive! As a reminder, you’ll see a recap of the glyphs contained in the group above its name. The new group will be put in the group list.
 
 #### Grey letters in your glyphs list
 > A glyph can only be on one individualization group at a time
 
-If a letter in your list is grey, it means that this letter is already used in another group. If you want to use it in your new group you will have to remove it from the previous group beforehands.
+If a letter in your list is gray, it means that this letter is already used in another group. If you want to use it in your new group you will have to remove it from the previous group beforehand.
 
 #### Filter the glyphset
 Just like the glyphs list, you can filter the glyphset displayed to find the needed glyphs faster.
@@ -154,7 +155,7 @@ If you click on this item, you can switch between your groups, go back to the no
 You might also notice that the *text view* have changed a bit, like this:
 (image: indiv-greyletters.jpg)
 
-The black letters are the letters inside your actual individualization group. The grey ones are the other letters.
+The black letters are the letters inside your actual individualization group. The gray ones are the other letters.
 
 #### Using the sliders 
 
@@ -163,7 +164,7 @@ There is two new buttons in the slider view:
 (image: indiv-absoluterelative.jpg)
 These buttons can enable two modes for the sliders: **relative** and **absolute**
 
-* (image: indiv-relative.png) When this icon is active, it means that the slider is in **relative** mode. Every change made to this slider will be relative to the slider value for the overall font (that is set in green mode). This is specially useful to make corrections to some glyphs.
-* (image: indiv-absolute.png) I you do not get the expected result with the relative mode or just want an uncontrolled slider, the **absolute** mode might be for you. The changes made to this slider will be applied independently from the overall value. This can be usefull if your overall slider is set to Zero, if you want more contrast or just want to experiment with your font design.
+* (image: indiv-relative.png) When this icon is active, it means that the slider is in **relative** mode. Every change made to this slider will multiply the slider value for the overall font (that is set in green mode) with your individualization value. This is especially useful to make corrections to some glyphs.
+* (image: indiv-absolute.png) If you do not get the expected result with the relative mode or just want an uncontrolled slider, the **absolute** mode might be for you. The changes made to this slider will be directly added or subtracted from the overall value. This can be useful if your overall slider is set to Zeroz if you want more contrast or just want to experiment with your font design.
 
 ### We hope you found everything you needed to know about the individualization in this tutorial!
