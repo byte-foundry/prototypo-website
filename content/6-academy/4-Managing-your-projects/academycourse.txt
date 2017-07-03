@@ -83,7 +83,6 @@ In this tutorial, we will see how to manage your families and variants, as well 
 ----
 Contentcourse:
 
-
 ## The basics
 
 (image: CollectionIntro.gif)

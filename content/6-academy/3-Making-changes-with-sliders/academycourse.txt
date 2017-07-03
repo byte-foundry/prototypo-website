@@ -83,7 +83,6 @@ You've seen sliders in the app. But do you know everything about them? Let's see
 ----
 Contentcourse:
 
-
 Working with the sliders is the first step in Prototypo's workflow. This tool allows you to quickly change the overall shape of the font and get to something close to your idea faster. 
 Each slider has a label that shows the parameter that will be updated and the current value of the parameter.
 It can be moved from left to right by clicking and dragging your mouse on the black circle.
@@ -110,7 +109,7 @@ However, you can have very nice results and a lot of artistic possibilities by e
 
 If you need to try a specific value for a parameter, or even go further than the sliders allows you to go, click on the slider value.
 There, you can input any value you want and it will be set.
-(image: slider-inputmanual.gif)
+(image: slider-input-manual.gif)
 
 ## More info
 

@@ -113,7 +113,8 @@ gulp.task('clean:dll', function(cb) {
 gulp.task('clean:tutorials', function(cb) {
     return del([
       './content/6-academy/**/*',
-      '!./content/6-academy/academyhome.txt'
+      '!./content/6-academy/academyhome.txt',
+      '!./content/6-academy/academy-screenshot.png'
     ]);
 });
 // This task can be used instead of clean:dist to make sure all root images
@@ -128,12 +129,12 @@ gulp.task('copy:tutorials', ['clean:tutorials'], function(cb) {
         .pipe(gulp.dest('./content/6-academy'));
 });
 
-gulp.task('copy:static', [], function(cb) {
+gulp.task('copy:static', ['copy:tutorials'], function(cb) {
     return gulp.src('./_redirects')
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('build:assets', ['sass', 'webpack:build', 'copy:tutorials'], function() {
+gulp.task('build:assets', ['sass', 'webpack:build'], function() {
     var assets = useref.assets({
             searchPath: './'
         });
@@ -161,7 +162,7 @@ gulp.task('build:static', ['copy:static', 'build:server'], function(done) {
     return gulp.src('')
             .pipe(shell([
                 'wget http://localhost:' + buildPort + ' ' +
-                    '--recursive --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
+                    '-q --recursive --reject-regex \'imgur\' --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
             ]))
             .pipe(shell([
                 'wget http://localhost:' + buildPort + '/googlefe2ce91b44ba9af0.html ' +
