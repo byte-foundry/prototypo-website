@@ -11,7 +11,7 @@ var uglify      = require('gulp-uglify');
 var cssmin      = require('gulp-minify-css');
 var debug       = require('gulp-debug');
 var gzip        = require('gulp-gzip');
-var rimraf      = require('rimraf');
+var del         = require('del');
 var modrewrite  = require('connect-modrewrite');
 var replace     = require('gulp-replace');
 var shell       = require('gulp-shell');
@@ -47,7 +47,7 @@ gulp.task('php', ['sass'], function(cb) {
     gulp.watch('./assets/css/**/*.scss', ['sass']);
 });
 
-gulp.task('serve', ['php', 'webpack:dll'], function() {
+gulp.task('serve', ['php', 'webpack:dll', 'copy:tutorials'], function() {
 	var devWebpackConfig   = require('./dev.config.js');
 	new WebpackDevServer(webpack(devWebpackConfig), {
 		publicPath: devWebpackConfig.output.publicPath,
@@ -99,11 +99,22 @@ gulp.task('sass', function() {
 });
 
 gulp.task('clean:dist', function(cb) {
-    rimraf('./dist', cb);
+    return del([
+      './dist/**/*'
+    ]);
 });
 
 gulp.task('clean:dll', function(cb) {
-    rimraf('./dll', cb);
+    return del([
+      './dll/**/*'
+    ]);
+});
+
+gulp.task('clean:tutorials', function(cb) {
+    return del([
+      './content/6-academy/**/*',
+      '!./content/6-academy/academyhome.txt'
+    ]);
 });
 // This task can be used instead of clean:dist to make sure all root images
 // are copied over to dist.
@@ -112,16 +123,16 @@ gulp.task('copy:images', ['clean:dist'], function(cb) {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('copy:static', [], function(cb) {
-    return gulp.src('./_redirects')
-        .pipe(gulp.dest('./dist'));
+gulp.task('copy:tutorials', ['clean:tutorials'], function(cb) {
+    return gulp.src('./node_modules/tutorial-content/libKirby/**/*')
+        .pipe(gulp.dest('./content/6-academy'));
 });
 
-gulp.task('build:assets', ['sass', 'webpack:build'], function() {
+gulp.task('build:assets', ['sass', 'webpack:build', 'copy:tutorials'], function() {
     var assets = useref.assets({
             searchPath: './'
         });
-        
+
     return gulp.src('./site/snippets/dev/*.php')
         .pipe(assets)
         .pipe(rev())

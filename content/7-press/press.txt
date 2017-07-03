@@ -1,0 +1,58 @@
+Title: Press
+
+----
+
+Text: 
+
+# Prototypo | Create your own font in a few clicks
+
+**Prototypo is the first real time font creation software allowing anyone to create a unique font in a few clicks.**
+
+
+## Create unique fonts in clicks
+
+The web application Prototypo gives graphic designers and type lovers the ability to create personalized fonts and export them to use wherever they want. 
+After choosing one of our three font templates (designed by the international foundry (link: https://www.productiontype.com/ text:Production Type popup: yes)) users can draw their own font by moving over 30 sliders (x-height, curves of the serifs, width…). The changes apply directly on each character of the Latin alphabet.
+
+
+This innovative approach to type design brings users the opportunity to get stronger visual identity with original fonts.
+
+
+<br/>
+(image: www.prototypo.io-m-all.gif)
+<br/>
+
+## A high degree of customization
+
+According to Yannick Mathey, art director and cofounder, the rationale behind the application is that “Prototypo was built because we were frustrated by the difficulty of finding original fonts perfectly fitting our specific needs, and to shorten the time it takes to draw a custom font, from months to days.”  
+
+Based on the parametric fonts technology, the app aims to give designers maximum freedom in their creations. Users can modify glyphs or group of glyphs separately, and with the release of its Manual Editing feature, Prototypo reaches the highest degree of customization as it’s now possible to move each point of any letters.
+
+<br/><br/>
+(image: fakir.gif)
+<br/><br/>
+
+A subscription of $15/month without commitment and a $99/year offer gives access to the full version of Prototypo with the ability to export an unlimited number of fonts. It’s also possible to buy a pack of 5 exports at a price of $5.
+
+
+## Coming next
+
+2017 will see important additions to the application. New fonts are announced as well as the ability to control the components of each glyph. A tool, “Prototypo Builder”, will allow users to create their own parametric fonts and use it in Prototypo as any other templates.
+
+
+## About Prototypo
+
+Created in May 2013 by Yannick Mathey and Louis-Rémi Babé in Lyon, Prototypo now gather a team of 7 people. Prototypo is the first real time font creation software with no drawing skills required. The tool is used by more than 15000 graphic designers and type lovers coming from over 130 countries. You can find more information on www.prototypo.io, joining the 7000 Facebook fans or being part of the 4000 Twitter followers.
+
+
+
+P.S.: If you want to use the live-tester on your blog, feel free to use the iframe:
+
+````
+<iframe src="https://iframe.prototypo.io" width="720" height="370"></iframe>
+
+````
+
+**Press contacts:**
+ ----
+Yann Guillet | (email: mailto:yann@prototypo.io text: yann@prototypo.io)

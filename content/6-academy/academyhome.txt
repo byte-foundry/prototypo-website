@@ -1,0 +1,33 @@
+Title: Academy
+
+----
+
+Section1title: Prototypo academy
+
+----
+
+Section1subtitle:
+The adademy is a place to learn and improve.
+Come and stay here for a bit to discover all the features of Prototypo and learn how to make your own custom logos and typefaces.
+
+----
+
+Section1txt:
+
+----
+
+Ogdescription: Prototypo Academy:
+The adademy is a place to learn and improve.
+Come and stay here for a bit to discover all the features of Prototypo and learn how to make your own custom logos and typefaces.
+
+----
+
+Ogimage: blog-screenshot.png
+
+----
+
+Ctatext: Want to design your first font project?
+
+----
+
+Ctabtn: Try Prototypo!
