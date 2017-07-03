@@ -132,7 +132,7 @@ To change the text displayed, click on the green bar below the Word view, and ty
 (image: viewsystem-wordviewchangetext.gif)
 
 One feature of the word view is to work on the spacing between letters. To do that, click on a glyph inside the word view and drag the green bars. 
-(Learn more about spacing in [our spacing course](/academy/course/Spacing-In-Prototypo).
+(Learn more about spacing in [our spacing course](/academy/Spacing-Handling-in-Prototypo).
 
 (image: viewsystem-wordspacing.jpg)
 
@@ -155,7 +155,7 @@ This view is mainly used to do some fine-tuning or corrections to a specific gly
 
 There are several ways to change the glyph displayed:
 * Double click on a letter in the word view, as said above.
-* Click on **glyphs list** then select the glyph (see [our glyphs list course](/academy/course/Using-the-glyphs-list)).
+* Click on **glyphs list** then select the glyph (see [our glyphs list course](/academy/Using-the-glyphs-list)).
 * Click on the **glyph** button next to the **glyphs list** button which highlights it, then press the character that you want to be displayed on your keyboard.
 (image: viewsystem-glyphviewchangeglyph.gif)
 
@@ -166,7 +166,7 @@ At the top of the view, there is a menu bar. Each symbol represents a feature in
 (image: viewsystem-move.jpg) the first menu is the **move** feature. In this feature, you can move your glyph inside the view by dragging it with your mouse. You can reset the view by double-clicking on the glyph view or right clicking / clicking on the wheel icon then click on *reset view*.
 You can temporarily go back to this view while keeping the **space** key pressed. 
 
-(image: viewsystem-components.jpg) the second one is the components feature. It allows you to quickly add or remove components on this glyph. See [our components course](/academy/course/Using-Components) for more details on this feature.
+(image: viewsystem-components.jpg) the second one is the components feature. It allows you to quickly add or remove components on this glyph. See [our components course](/academy/Using-Components) for more details on this feature.
 
 (image: viewsystem-manualedit.jpg) the last menu item is the manual editing feature. In there, you have access to all the nodes composing the glyph. You can click on a node to show the controls. 
 Drag the node around to change its position, or drag the controls to get a more subtle change.

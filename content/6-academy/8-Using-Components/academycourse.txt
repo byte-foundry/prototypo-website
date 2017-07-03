@@ -83,7 +83,6 @@ There is a feature in Prototypo called components. What are those and how to use
 ----
 Contentcourse:
 
-
 ## Components?
 
 >You found a template that fits your needs but it's not quite right?

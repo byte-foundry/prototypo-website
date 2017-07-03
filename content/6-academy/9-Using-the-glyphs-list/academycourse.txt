@@ -95,7 +95,7 @@ To close it, just click again on the **Glyphs list** button.
 The glyphs list is a scrollable list of all the glyphs available in the template. From there, you can **click on a glyph** select it in the glyph view in order to apply component, to manually edit it or just to have a bigger view of it and make any kind of modifications.
 Some glyphs in the lists have **corners**. At this time, there are two types of corner available:
 
-(image: glyphlist-hascomponent.jpg) This icon means that this glyph has components. (See [our component course](/academy/course/Using-Components) to get more details about this feature).
+(image: glyphlist-hascomponent.jpg) This icon means that this glyph has components. (See [our component course](/academy/Using-Components) to get more details about this feature).
 
 (image: glyphlist-hasmanualedit.jpg) This icon means that this glyph has been edited using the **Manual edition** feature.
 
