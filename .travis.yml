@@ -1,9 +1,9 @@
 sudo: false
+dist: trusty
 language: php
 php:
   - 7.0
 before_script:
-- wget -V
 - nvm install v4.4.4
 - npm install -g gulp surge
 - npm install
