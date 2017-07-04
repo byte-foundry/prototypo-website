@@ -3,7 +3,8 @@ language: php
 php:
   - 7.0
 before_script:
-- sudo apt-get update -q
+- wget -V
+- sudo apt-get update
 - sudo apt-get install wget -y
 - nvm install v4.4.4
 - npm install -g gulp surge
