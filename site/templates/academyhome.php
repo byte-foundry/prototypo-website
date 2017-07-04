@@ -115,11 +115,11 @@
 					<nav class="AcademyPagination AcademyPagination-after">
 
 						<?php if($courses->pagination()->hasNextPage()): ?>
-							<a class="AcademyPagination-item right textType-txt textSize-txt-small  red bg-white" href="<?php echo $courses->pagination()->nextPageURL() ?>">older posts</a>
+							<a class="AcademyPagination-item right textType-txt textSize-txt-small  red bg-white" href="<?php echo $courses->pagination()->nextPageURL() ?>">older courses</a>
 						<?php endif ?>
 
 						<?php if($courses->pagination()->hasPrevPage()): ?>
-							<a class="AcademyPagination-item AcademyPagination-next textType-txt textSize-txt-small  red bg-white" href="<?php echo $courses->pagination()->prevPageURL() ?>">newer posts</a>
+							<a class="AcademyPagination-item AcademyPagination-next textType-txt textSize-txt-small  red bg-white" href="<?php echo $courses->pagination()->prevPageURL() ?>">newer courses</a>
 						<?php endif ?>
 
 					</nav>
