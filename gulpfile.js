@@ -162,7 +162,7 @@ gulp.task('build:static', ['copy:static', 'build:server'], function(done) {
     return gulp.src('')
             .pipe(shell([
                 'wget http://localhost:' + buildPort + ' ' +
-                    '-q --recursive --reject-regex \'imgur\' --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
+                    '--recursive --reject-regex \'imgur\' --level=0 --adjust-extension --convert-links --no-host-directories --directory-prefix dist/',
             ]))
             .pipe(shell([
                 'wget http://localhost:' + buildPort + '/googlefe2ce91b44ba9af0.html ' +
