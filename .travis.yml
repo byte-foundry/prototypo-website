@@ -3,7 +3,6 @@ language: php
 php:
   - 7.0
 before_script:
-- wget -v
 - nvm install v4.4.4
 - npm install -g gulp surge
 - npm install
