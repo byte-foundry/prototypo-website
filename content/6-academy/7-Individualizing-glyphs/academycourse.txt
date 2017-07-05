@@ -1,19 +1,19 @@
 
 Title: Individualizing glyphs
- 
- 
+
+
 ----
- 
- 
+
+
 Ogdescription: How to use the individualization feature
- 
- 
+
+
 ----
- 
- 
+
+
 Ogimage: http://i.imgur.com/B7Chb6l.jpg
- 
- 
+
+
 ----
 
 
@@ -21,33 +21,33 @@ Headerimage: http://i.imgur.com/B7Chb6l.jpg
 
 
 ----
- 
+
 
 Tags: Text,Basics
- 
- 
+
+
 ----
- 
+
 
 Basicsurl: Making-changes-with-sliders
- 
+
 ----
- 
+
 
 Basicstitle: Making changes with sliders
- 
+
 ----
- 
- 
-Date: Mon Jan 09 2017 01:00:00 GMT+0100 (Paris, Madrid)
- 
- 
+
+
+Date: Sun Jul 02 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+
+
 ----
 
 
 Readingtime: 10
- 
- 
+
+
 ----
 
 
@@ -73,21 +73,22 @@ Subtitle: Get to know the individualization tool
 
 
 ----
- 
- 
+
+
 Header:
 You might want to apply changes to only one part of the font. Learn how to use the individualization feature to do it!
 
- 
- 
+
+
 ----
 Contentcourse:
+
 
 ## About the feature
 (image: indiv-main.gif)
 
 Individualization groups are awesome if you want to tweak the shape of a specific set of glyphs.
-You can use this feature to make corrections, to get some diversity in your project or to make one character stand out, possibilities are endless! 
+You can use this feature to make corrections, to get some diversity in your project or to make one character stand out, possibilities are endless!
 
 In this course, you will get to know this feature, how to use it and to combine it with the regular view to make outstanding projects.
 
@@ -134,7 +135,7 @@ Just like the glyphs list, you can filter the glyphset displayed to find the nee
 #### Edit your groups
 (image: indiv-editordelete.gif)
 
-In the individualization mode, you have access to your group list. 
+In the individualization mode, you have access to your group list.
 You can rename, edit the glyphs in a group or remove the group easily.
 
 
@@ -142,7 +143,7 @@ You can rename, edit the glyphs in a group or remove the group easily.
 Once you have created your group, or selected an existing group and clicked on "open in Prototypo", you will be put in a yellow version of the app, which means that you are in the individualization mode.
 
 #### Switching groups
-You can see your active group on the last item of the breadcrumbs: 
+You can see your active group on the last item of the breadcrumbs:
 
 (image: indiv-ariane.png)
 
@@ -157,14 +158,15 @@ You might also notice that the *text view* have changed a bit, like this:
 
 The black letters are the letters inside your actual individualization group. The gray ones are the other letters.
 
-#### Using the sliders 
+#### Using the sliders
 
-There is two new buttons in the slider view: 
+There is two new buttons in the slider view:
 
 (image: indiv-absoluterelative.jpg)
 These buttons can enable two modes for the sliders: **relative** and **absolute**
 
 * (image: indiv-relative.png) When this icon is active, it means that the slider is in **relative** mode. Every change made to this slider will multiply the slider value for the overall font (that is set in green mode) with your individualization value. This is especially useful to make corrections to some glyphs.
-* (image: indiv-absolute.png) If you do not get the expected result with the relative mode or just want an uncontrolled slider, the **absolute** mode might be for you. The changes made to this slider will be directly added or subtracted from the overall value. This can be useful if your overall slider is set to Zeroz if you want more contrast or just want to experiment with your font design.
+* (image: indiv-absolute.png) If you do not get the expected result with the relative mode or just want an uncontrolled slider, the **absolute** mode might be for you. The changes made to this slider will be directly added or subtracted from the overall value. This can be useful if your overall slider is set to zero if you want more contrast or just want to experiment with your font design.
 
 ### We hope you found everything you needed to know about the individualization in this tutorial!
+

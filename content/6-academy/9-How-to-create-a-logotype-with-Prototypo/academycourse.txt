@@ -1,19 +1,19 @@
 
 Title: How to create a logotype with Prototypo
- 
- 
+
+
 ----
- 
- 
+
+
 Ogdescription: How to create a logotype with Prototypo - Video
- 
- 
+
+
 ----
- 
- 
+
+
 Ogimage: http://i.imgur.com/7S3B8MB.jpg
- 
- 
+
+
 ----
 
 
@@ -21,33 +21,33 @@ Headerimage: http://i.imgur.com/7S3B8MB.jpg
 
 
 ----
- 
+
 
 Tags: Video
- 
- 
+
+
 ----
- 
 
 
- 
+
+
 ----
- 
 
 
- 
+
+
 ----
- 
- 
-Date: Thu Jan 12 2017 01:00:00 GMT+0100 (Paris, Madrid)
- 
- 
+
+
+Date: Tue Jul 04 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+
+
 ----
 
 
 Readingtime: 4
- 
- 
+
+
 ----
 
 
@@ -73,15 +73,16 @@ Subtitle: Video tutorial 1
 
 
 ----
- 
- 
+
+
 Header:
 This video tutorial will help you to prototype a logo with Prototypo, particularly using the letter individualisation feature.
 
- 
- 
+
+
 ----
 Contentcourse:
+
 <iframe width="670" height="376" src="https://www.youtube.com/embed/kyfbwxnivRs" frameborder="0" allowfullscreen></iframe>
 
 

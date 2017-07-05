@@ -1,19 +1,19 @@
 
 Title: Webinar 1 - Introducing Prototypo
- 
- 
+
+
 ----
- 
- 
+
+
 Ogdescription: Webinar 1 - Introducing Prototypo - Video
- 
- 
+
+
 ----
- 
- 
+
+
 Ogimage: http://i.imgur.com/zhad0gx.jpg
- 
- 
+
+
 ----
 
 
@@ -21,33 +21,33 @@ Headerimage: http://i.imgur.com/zhad0gx.jpg
 
 
 ----
- 
+
 
 Tags: Video
- 
- 
+
+
 ----
- 
 
 
- 
+
+
 ----
- 
 
 
- 
+
+
 ----
- 
- 
-Date: Tue Apr 11 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
- 
- 
+
+
+Date: Wed Jul 05 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+
+
 ----
 
 
 Readingtime: 50
- 
- 
+
+
 ----
 
 
@@ -73,18 +73,18 @@ Subtitle: Webinar 1
 
 
 ----
- 
- 
+
+
 Header:
 This is the first Prototypo webinar, hosted by François which goes through all Prototypo features.
 
- 
- 
+
+
 ----
 Contentcourse:
+
 <iframe width="670" height="376" src="https://www.youtube.com/embed/mGj4k6LEv80" frameborder="0" allowfullscreen></iframe>
 
 
 This is the first Prototypo webinar, hosted by François which goes through all Prototypo features.
-
 
