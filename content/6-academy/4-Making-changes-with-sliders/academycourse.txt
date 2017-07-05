@@ -39,7 +39,7 @@ Tags: Text,Basics
 ----
 
 
-Date: Thu Jun 29 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+Date: Thu Jun 29 2017 02:00:00 GMT+0200 (CEST)
 
 
 ----
@@ -82,7 +82,6 @@ You've seen sliders in the app. But do you know everything about them? Let's see
 
 ----
 Contentcourse:
-
 
 Working with the sliders is the first step in Prototypo's workflow. This tool allows you to quickly change the overall shape of the font and get to something close to your idea faster.
 Each slider has a label that shows the parameter that will be updated and the current value of the parameter.

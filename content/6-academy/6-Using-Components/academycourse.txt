@@ -39,7 +39,7 @@ Tags: Text,Basics
 ----
 
 
-Date: Sat Jul 01 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+Date: Sat Jul 01 2017 02:00:00 GMT+0200 (CEST)
 
 
 ----
@@ -82,7 +82,6 @@ There is a feature in Prototypo called components. What are those and how to use
 
 ----
 Contentcourse:
-
 
 ## Components?
 

@@ -39,7 +39,7 @@ Tags: Text,Basics
 ----
 
 
-Date: Wed Jun 28 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+Date: Wed Jun 28 2017 02:00:00 GMT+0200 (CEST)
 
 
 ----
@@ -82,7 +82,6 @@ The breadcrumbs and the top bar are essential tools for anyone using Prototypo. 
 
 ----
 Contentcourse:
-
 
 ## What's inside?
 
