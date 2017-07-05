@@ -9,12 +9,10 @@ password: >
 language: en
 role: admin
 history:
+  - lab
+  - lab/google-font-spectral
   - >
     blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
   - cgu
   - >
     faq/which-language-or-glyph-set-prototypo-supports
-  - >
-    faq/can-i-create-cursive-fonts-with-prototypo
-  - >
-    faq/what-are-the-minimum-requirements-to-run-prototypo
