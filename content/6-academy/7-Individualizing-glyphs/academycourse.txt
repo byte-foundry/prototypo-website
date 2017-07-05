@@ -39,7 +39,7 @@ Basicstitle: Making changes with sliders
 ----
 
 
-Date: Sun Jul 02 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+Date: Sun Jul 02 2017 02:00:00 GMT+0200 (CEST)
 
 
 ----
@@ -82,7 +82,6 @@ You might want to apply changes to only one part of the font. Learn how to use t
 
 ----
 Contentcourse:
-
 
 ## About the feature
 (image: indiv-main.gif)

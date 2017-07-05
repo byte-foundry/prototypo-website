@@ -39,7 +39,7 @@ Tags: Text,Basics
 ----
 
 
-Date: Mon Jul 03 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+Date: Mon Jul 03 2017 02:00:00 GMT+0200 (CEST)
 
 
 ----
@@ -82,7 +82,6 @@ While working on your project you might want to adjust the spacing. We will show
 
 ----
 Contentcourse:
-
 
 In typography, the spacing of a font has a huge impact on its readability; it refers to the amount of space between the characters, and it’s as important as the letter itself.
 Good letter shapes without the proper spacing will not be good to use.

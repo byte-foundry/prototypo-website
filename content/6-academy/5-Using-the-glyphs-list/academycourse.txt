@@ -39,7 +39,7 @@ Tags: Text,Basics
 ----
 
 
-Date: Fri Jun 30 2017 02:00:00 GMT+0200 (Paris, Madrid (heure d’été))
+Date: Fri Jun 30 2017 02:00:00 GMT+0200 (CEST)
 
 
 ----
@@ -82,7 +82,6 @@ In prototypo, all the glyphs in a template are stores in a glyphs list. In this 
 
 ----
 Contentcourse:
-
 
 
 ## Open and close the glyphs list
