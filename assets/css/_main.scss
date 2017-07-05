@@ -458,8 +458,34 @@ iframe{
 }
 .Course-content {
 	padding: 85px 60px;
+	padding-top: 0;
 	position: relative;
 	clear: both;
+
+	h2:first-of-type {
+		margin-top: 0;
+	}
+
+	a {
+		border-bottom: 1px dashed $green;
+		transition: all .2s ease;
+		&:hover {
+			border-color: transparent;
+			color: $green;
+		}
+	}
+	.Course-content-basics {
+		margin-bottom: 20px;
+		&.fixed {
+			top: 40px;
+			background: $white;
+			padding: 14px 20px 14px 20px;
+			border-top-right-radius: 8px;
+			border-bottom-right-radius: 8px;
+			display: inline-block;
+			width: inherit;
+		}
+	}
 
 	blockquote p {
 
@@ -498,8 +524,19 @@ iframe{
 	display: inline-block;
 }
 
+.Course-content li br:first-of-type {
+	display: none;
+}
+
 .Course-content figure {
 	margin: inherit;
+	display: inline-block;
+	&~p {
+		margin-top: 20px;
+	}
+}
+
+.Course-tagLink {
 	display: inline-block;
 }
 
@@ -524,12 +561,25 @@ iframe{
 }
 .Course-content h2 {
 	text-align: left;
-	border-top: solid 1px $lineBorderColor;
+	background-color: $green;
+	color: $white;
+	margin-left: -60px;
+	margin-right: -60px;
+	padding-left: 60px;
 	padding-top: 25px;
+	padding-bottom: 25px;
 	margin-top: 15px;
 	margin-bottom: 20px;
 	@extend .textType-articleTitle;
 	@extend .textSize-title-xsmall;
+	&.fixed {
+		top: 65px;
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 }
 .Course-content h3 {
 	text-align: left;
@@ -538,8 +588,14 @@ iframe{
 	@extend .textSize-txt-xlarge;
 }
 
+.Course-content h4 {
+	text-align: left;
+	margin-top: 25px;
+	@extend .textType-articleTitle;
+	@extend .textSize-txt-xlarge;
+}
+
 .Course-content ul {
-	margin-left: -20px;
 	list-style-type: square;
 	padding-left: 20px;
 }
