@@ -201,6 +201,27 @@ p {
 	}
 }
 
+main.Academy {
+	twitterwidget {
+		margin: 20px auto !important;
+		border: 1px solid #e1e8ed;
+	}
+	.section-action {
+		margin-top: 100px;
+		background-color: $colorWhite;
+		border-radius: 4px;
+		background-image: url("/assets/img/prototypo.svg");
+		background-size: cover;
+		padding: 40px;
+		text-align: center;
+
+		h3 {
+			color: $secondBackgroundColor;
+			margin-bottom: 20px;
+		}
+	}
+}
+
 main.Blog {
 	.Article-content {
 

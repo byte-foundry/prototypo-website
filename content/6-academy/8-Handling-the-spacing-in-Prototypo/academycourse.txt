@@ -89,21 +89,25 @@ A nice spacing optimizes legibility, creating an even text "color" or visual tex
 Think about a drawing in black and white. There needs to be white to let the black shine. The same can be applied for a logo or a typeface.
 
 ## Adjusting the global spacing from the sliders
-(image: spacing-sliders.gif)
+(image:spacing-sliders.gif)
+
 
 There is a slider in the **settings** menu called **spacing**.
-(image: spacing-slider.jpg)
+(image:spacing-slider.jpg)
+
 
 Changing its value will change the overall spacing of your project.
 
 > You can also adjust the spacing for a group of letters by creating an individualisation group.
 
 ## Fine-tuning the spacing in the word view
-(image: spacing-wordview.gif)
+(image:spacing-wordview.gif)
+
 
 If you need to make some adjustment on your spacing between some letters, you can change it in the **word view**.
 Select a glyph by clicking on it, you will see two green bars, and at the bottom the current spacing value.
-(image: usingspacing-wordui.jpg)
+(image:usingspacing-wordui.jpg)
+
 
 Drag them to the left or the right to adjust the spacing value for this letter.
 

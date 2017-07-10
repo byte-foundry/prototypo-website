@@ -92,7 +92,7 @@
 				<?php snippet('disqus', array('disqus_shortname' => 'prototypoapp', 'disqus_developer' => true)) ?>
 			</div>
 
-		</Course>
+		</article>
 
 		<?php if($Courses->pagination()->hasPages()): ?>
 			<nav class="AcademyPagination AcademyPagination-after">
@@ -105,13 +105,15 @@
 			</nav>
 		<?php endif ?>
 
-		<div class="section-action">
-			<h3 class="textType-subtitle colorBrightest textSize-txt-xlarge"><?php echo $page->parent()->ctaText(); ?></h3>
-			<a href="<?php echo url('pricing'); ?>" class="NewsletterInput-submit callToAction center"><?php echo $page->parent()->ctaBtn(); ?></a>
-		</div>
+    <div class="section-action">
+      <h3 class="textType-subtitle colorBrightest textSize-txt-xlarge"><?php echo $page->parent()->ctaText(); ?></h3>
+      <a href="<?php echo url('pricing'); ?>" class="NewsletterInput-submit callToAction center"><?php echo $page->parent()->ctaBtn(); ?></a>
+    </div>
 
 
 	</div>
+
+
 
 	<!--  Surge hack to avoid 404 videos -->
 	<div style="display: none;">
