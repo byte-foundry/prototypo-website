@@ -1,17 +1,13 @@
-Title: Prototypo diseña tu propia fuente con unos pocos clics
+Title: Creating intelligent fonts capable of fitting all types of uses and media is now a reality
 
 ----
 
-Urlblog: http://www.byfanzine.com/prototypo/
+Urlblog: https://thenextweb.com/google/2017/06/22/google-responsive-font-spectral/#.tnw_fw7xH9Ox
 
 ----
 
-Lang: ES
+Lang: EN
 
 ----
 
-Date: 2016-04-21
-
-----
-
-Siteblog: ByFanzine.com
+Siteblog: The Next Web

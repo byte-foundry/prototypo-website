@@ -97,7 +97,7 @@ The glyphs list is a scrollable list of all the glyphs available in the template
 Some glyphs in the lists have **corners**. At this time, there are two types of corner available:
 
 (image:glyphlist-hascomponent.jpg)
- This icon means that this glyph has components. (See [our component course](/academy/Using-Components) to get more details about this feature).
+ This icon means that this glyph has components. (See [our component course](/academy/Using-components) to get more details about this feature).
 
 (image:glyphlist-hasmanualedit.jpg)
  This icon means that this glyph has been edited using the **Manual edition** feature.

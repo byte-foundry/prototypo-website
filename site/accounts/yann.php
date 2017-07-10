@@ -10,12 +10,11 @@ language: fr
 role: admin
 history:
   - >
-    blog/overview-of-shifting-work-paradigms-g-u-is-work-for-the-biennial-of-design
+    press/prototypo-levoluzione-della-tipografia
   - >
-    blog/overview-of-shifting-work-paradigms-g-u-is-work-for-the-biennal-of-design
+    press/prototypo-will-let-anyone-design-original-fonts
   - >
-    blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
+    press/revised-editing-tool-promises-to-revolutionise-font-creation
   - >
-    press/you-the-font-designer-with-prototypo
-  - >
-    press/crear-una-nueva-tipografa-completamente-con-prototypo
+    press/prototypo-loutil-ultime-pour-crer-vos-typographies
+  - press/lookatme-ru-article-russian

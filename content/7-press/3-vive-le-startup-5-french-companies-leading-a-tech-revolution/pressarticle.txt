@@ -1,8 +1,8 @@
-Title: Vive Le Startup: 5 French Companies Leading A Tech Revolution
+Title: The Parametric font technology enables designers to develop unique identities thanks to bespoke fonts
 
 ----
 
-UrlBlog: http://www.forbes.com/sites/amyguttman/2016/06/01/vive-le-startup-5-french-companies-leading-a-tech-revolution/#66e8fc69411f
+Urlblog: http://designtaxi.com/news/393768/Spectral-Google-s-First-Parametric-Font-That-s-Responsive-And-Customizable/
 
 ----
 
@@ -10,4 +10,4 @@ Lang: EN
 
 ----
 
-Siteblog: Forbes
+Siteblog: Design Taxi

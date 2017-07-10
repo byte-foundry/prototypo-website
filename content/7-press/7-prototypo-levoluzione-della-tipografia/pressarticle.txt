@@ -1,13 +1,13 @@
-Title: Prototypo, l’evoluzione della tipografia
+Title: How Prototypo simplified their web app
 
 ----
 
-Siteblog: Wired
+Siteblog: Invision
 
 ----
 
-Urlblog: http://www.wired.it/internet/web/2014/05/07/prototypo-levoluzione-della-tipografia-passa-da-kickstarter/
+Urlblog: https://www.invisionapp.com/blog/prototypo-design-teardown/
 
 ----
 
-Lang: IT
+Lang: EN

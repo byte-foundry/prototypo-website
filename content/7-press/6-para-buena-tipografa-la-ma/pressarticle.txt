@@ -1,13 +1,13 @@
-Title: Para buena tipografía, la mía
+Title: Customize and export fully functional fonts, not just prototypes
 
 ----
 
-Siteblog: Yorokobu
+Siteblog: Awwwards
 
 ----
 
-Urlblog: http://www.yorokobu.es/para-buena-tipografia-la-mia/
+Urlblog: https://www.awwwards.com/the-typographer-we-should-all-have-inside.html
 
 ----
 
-Lang: ES
+Lang: EN
