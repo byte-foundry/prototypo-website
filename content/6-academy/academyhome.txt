@@ -7,7 +7,7 @@ Section1title: Prototypo academy
 ----
 
 Section1subtitle:
-Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes.
+Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes. 
 
 
 ----
@@ -17,7 +17,7 @@ Section1txt:
 ----
 
 Ogdescription: Prototypo Academy:
-Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes.
+Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes. 
 
 ----
 
