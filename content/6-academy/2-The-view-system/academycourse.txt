@@ -183,7 +183,7 @@ At the top of the view, there is a menu bar. Each symbol represents a feature in
 You can temporarily go back to this view while keeping the **space** key pressed.
 
 (image:viewsystem-components.jpg)
- the second one is the components feature. It allows you to quickly add or remove components on this glyph. See [our components course](/academy/Using-Components) for more details on this feature.
+ the second one is the components feature. It allows you to quickly add or remove components on this glyph. See [our components course](/academy/Using-components) for more details on this feature.
 
 (image:viewsystem-manualedit.jpg)
  the last menu item is the manual editing feature. In there, you have access to all the nodes composing the glyph. You can click on a node to show the controls.

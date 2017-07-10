@@ -299,10 +299,12 @@ $(function() {
     var $companyPrice = $('.PricingItem-price-company');
     var $monthlyButton = $('#Pricing-monthly-plan');
     var $yearlyButton = $('#Pricing-yearly-plan');
-    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href');
+    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href').includes('dev') ? 'https://dev.prototypo.io/#/signup?subscribe=' : 'https://app.prototypo.io/#/signup?subscribe=';
 		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
+		var plan = "annual";
+		$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
@@ -321,6 +323,7 @@ $(function() {
 
 
 		if ($.urlParam('billing') && $.urlParam('billing') === 'monthly') {
+			plan = "monthly";
 			$monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
 
@@ -342,8 +345,10 @@ $(function() {
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 		}
 		else {
+			plan = "annual";
 			$('.PricingItem-price').each(function(index, value) {
 	      let priceSplit = prices[index].yearly.toString().split('.');
 	      if (priceSplit.length > 1) {
@@ -357,12 +362,14 @@ $(function() {
 	      $(value).text(baselines[index].yearly);
 	    });
 			$('.PricingItem-offerRibbon').hide();
-	    $('.callToAction-Pro').text('Go pro!');
-	    $('.callToAction-Company').text('Get a quote!');
+	    $('.callToAction-Pro').text('Go pro');
+	    $('.callToAction-Company').text('Create your team');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 		}
 
     /*** Switch Monthly / yearly ***/
     $monthlyButton.on('click', function(e) {
+			plan = "monthly";
       $monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
 
@@ -384,10 +391,12 @@ $(function() {
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 
     });
 
     $yearlyButton.on('click', function(e) {
+			plan = "annual";
       $yearlyButton.addClass('active');
       $monthlyButton.removeClass('active');
 
@@ -408,9 +417,10 @@ $(function() {
       });
 
 			$('.PricingItem-offerRibbon').hide();
-      $('.callToAction-Pro').text('Go pro!');
+      $('.callToAction-Pro').text('Go pro');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 
     });
     /*** /Switch Monthly / yearly ***/
@@ -474,15 +484,13 @@ $(function() {
       }
 
 
-      /*if (numLicences <= 10) {
-        $('.callToAction-Company').text('Create your team!');
-        $('.callToAction-Company').attr('href', $baseCompanyCtaUrl);
+      if (numLicences <= 10) {
+        $('.callToAction-Company').text('Create your team');
+        $('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
       } else {
-        $('.callToAction-Company').text('Get a quote!');
+        $('.callToAction-Company').text('Get a quote');
         $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
-      }*/
-      $('.callToAction-Company').text('Get a quote!');
-      $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
+      }
     }
 
     /*** / Company user count ***/
