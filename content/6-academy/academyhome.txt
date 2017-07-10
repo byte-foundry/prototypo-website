@@ -7,8 +7,7 @@ Section1title: Prototypo academy
 ----
 
 Section1subtitle:
-This is the place to learn and improve your experience with Prototypo.
-Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes.
+Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes. 
 
 
 ----
@@ -18,8 +17,7 @@ Section1txt:
 ----
 
 Ogdescription: Prototypo Academy:
-The adademy is a place to learn and improve.
-Come and stay here for a bit to discover all the features of Prototypo and learn how to make your own custom logos and typefaces.
+Discover and master all the features. Make the best out of it, create your custom fonts for a logo, a visual identities and your unique design outcomes. 
 
 ----
 
