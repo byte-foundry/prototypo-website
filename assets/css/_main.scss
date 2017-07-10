@@ -506,6 +506,10 @@ iframe{
 		}
 	}
 
+	blockquote br {
+		display: none;
+	}
+
 	strong {
 		font-weight: bold;
 	}
@@ -534,7 +538,17 @@ iframe{
 	&~p {
 		margin-top: 20px;
 	}
+	&~br {
+		display: none;
+	}
 }
+
+.Course-content li figure {
+	&~br {
+		display: none;
+	}
+}
+
 
 .Course-tagLink {
 	display: inline-block;
