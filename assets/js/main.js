@@ -299,10 +299,12 @@ $(function() {
     var $companyPrice = $('.PricingItem-price-company');
     var $monthlyButton = $('#Pricing-monthly-plan');
     var $yearlyButton = $('#Pricing-yearly-plan');
-    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href');
+    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href').includes('dev') ? 'https://dev.prototypo.io/#/signup?subscribe=' : 'https://app.prototypo.io/#/signup?subscribe=';
 		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
+		var plan = "annual";
+		$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
@@ -321,6 +323,7 @@ $(function() {
 
 
 		if ($.urlParam('billing') && $.urlParam('billing') === 'monthly') {
+			plan = "monthly";
 			$monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
 
@@ -342,8 +345,10 @@ $(function() {
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 		}
 		else {
+			plan = "annual";
 			$('.PricingItem-price').each(function(index, value) {
 	      let priceSplit = prices[index].yearly.toString().split('.');
 	      if (priceSplit.length > 1) {
@@ -357,12 +362,14 @@ $(function() {
 	      $(value).text(baselines[index].yearly);
 	    });
 			$('.PricingItem-offerRibbon').hide();
-	    $('.callToAction-Pro').text('Go pro!');
-	    $('.callToAction-Company').text('Get a quote!');
+	    $('.callToAction-Pro').text('Go pro');
+	    $('.callToAction-Company').text('Create your team');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 		}
 
     /*** Switch Monthly / yearly ***/
     $monthlyButton.on('click', function(e) {
+			plan = "monthly";
       $monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
 
@@ -384,10 +391,12 @@ $(function() {
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 
     });
 
     $yearlyButton.on('click', function(e) {
+			plan = "annual";
       $yearlyButton.addClass('active');
       $monthlyButton.removeClass('active');
 
@@ -408,9 +417,10 @@ $(function() {
       });
 
 			$('.PricingItem-offerRibbon').hide();
-      $('.callToAction-Pro').text('Go pro!');
+      $('.callToAction-Pro').text('Go pro');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
 
     });
     /*** /Switch Monthly / yearly ***/
@@ -474,15 +484,13 @@ $(function() {
       }
 
 
-      /*if (numLicences <= 10) {
-        $('.callToAction-Company').text('Create your team!');
-        $('.callToAction-Company').attr('href', $baseCompanyCtaUrl);
+      if (numLicences <= 10) {
+        $('.callToAction-Company').text('Create your team');
+        $('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
       } else {
-        $('.callToAction-Company').text('Get a quote!');
+        $('.callToAction-Company').text('Get a quote');
         $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
-      }*/
-      $('.callToAction-Company').text('Get a quote!');
-      $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
+      }
     }
 
     /*** / Company user count ***/
@@ -550,4 +558,90 @@ $(function() {
 			$('#Education-contactForm-error').text('Something went wrong. Please contact us at education@prototypo.io while we are fixing this.')
 		}, 4000);
 	});
+
+	if ($('.AcademyCoursePage').length > 0) {
+    var stickyHeaders = (function() {
+
+      var $window = $(window),
+          $stickies;
+
+      var load = function(stickies) {
+
+        if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
+
+          $stickies = stickies.each(function() {
+
+            var $thisSticky = $(this).wrap('<div class="followWrap" />');
+
+            $thisSticky
+                .data('originalPosition', $thisSticky.offset().top)
+                .data('originalHeight', $thisSticky.outerHeight())
+                  .parent()
+                  .height($thisSticky.outerHeight());
+          });
+
+          $window.off("scroll.stickies").on("scroll.stickies", function() {
+    		  _whenScrolling();
+          });
+        }
+      };
+
+      var _whenScrolling = function() {
+
+        $stickies.each(function(i) {
+
+          var $thisSticky = $(this),
+              $stickyPosition = $thisSticky.data('originalPosition');
+
+          if ($stickyPosition <= $window.scrollTop()) {
+
+            var $nextSticky = $stickies.eq(i + 1),
+                $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
+
+            $thisSticky.addClass("fixed");
+
+          } else {
+
+            var $prevSticky = $stickies.eq(i - 1);
+
+            $thisSticky.removeClass("fixed");
+
+            if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') - $thisSticky.data('originalHeight')) {
+
+              $prevSticky.removeAttr("style");
+            }
+          }
+        });
+      };
+
+      return {
+        load: load
+      };
+    })();
+
+    $(function() {
+      stickyHeaders.load($(".Course-content h2"));
+
+      var $sticky = $('.Course-content-basics');
+      var stickyOrigCssRight = $sticky.css('right');
+      var origOffsetY = $sticky.offset().top;
+      var contentRightOffset = (($('.Course').offset().left + $('.Course').outerWidth()));
+
+      function onScroll(e) {
+        if (window.scrollY >= origOffsetY) {
+          $sticky.addClass('fixed');
+          $sticky.css({'left': contentRightOffset + 'px'});
+          $sticky.css({'right': 'inherit'});
+        } else {
+          $sticky.removeClass('fixed');
+          $sticky.css({'right': stickyOrigCssRight});
+          $sticky.css({'left': 'inherit'});
+        };
+      }
+
+      document.addEventListener('scroll', onScroll);
+    });
+  }
+
+
 });

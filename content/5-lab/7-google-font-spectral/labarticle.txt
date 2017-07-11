@@ -1,0 +1,17 @@
+Title: Google Font Spectral
+
+----
+
+Ogimage: prototypo-spectrall-all-blue.gif
+
+----
+
+Link: https://spectral.prototypo.io/
+
+----
+
+Tags: specimen,template,responsive
+
+----
+
+Contentarticle: Spectral, designed by our partner Production Type, is the first Google font turned parametric by Prototypo.

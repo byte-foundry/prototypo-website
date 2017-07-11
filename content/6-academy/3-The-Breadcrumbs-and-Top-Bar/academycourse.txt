@@ -1,0 +1,198 @@
+
+Title: The breadcrumbs and top bar
+
+
+----
+
+
+Ogdescription: Tutorial about the breadcrumbs and how to use it
+
+
+----
+
+
+Ogimage: http://i.imgur.com/pzE27Om.png
+
+
+----
+
+
+Headerimage: http://i.imgur.com/pzE27Om.png
+
+
+----
+
+
+Tags: Text,Basics
+
+
+----
+
+
+
+
+----
+
+
+
+
+----
+
+
+Date: Wed Jun 28 2017 02:00:00 GMT+0200 (CEST)
+
+
+----
+
+
+Readingtime: 8
+
+
+----
+
+
+Published: true
+
+
+----
+
+
+Isvideo: false
+
+
+----
+
+
+Reward: null
+
+
+----
+
+
+Subtitle: What breadcrumbs and the top bar are used for?
+
+
+----
+
+
+Header:
+The breadcrumbs and the top bar are essential tools for anyone using Prototypo. In this tutorial we will cover what's in both of those tools and how to use them.
+
+
+
+----
+Contentcourse:
+
+## What's inside?
+
+(image:goldenthreadgifcomp2.gif)
+
+
+The breadcrumbs and the top bar are essential tools for anyone using Prototypo. They are linked to eachother and give you access to your projects or to the typeface you're working on from different angles. In this tutorial we will cover what those tools are and how to use them.
+
+
+## The Breadcrumbs
+
+(image:IA7NfHu.jpg)
+
+
+> The Breadcrumbs is an area in which you will have access to everything you need to navigate between your projects and the Typeface you're working on.
+
+First, let's cover what is inside the Breadcrumbs in Prototypo:
+
+### Your project list
+
+(image:collection_intro.gif)
+
+
+The ** My projects ** button leads you to your typeface family collection. It contains everything you've already created using Prototypo. When accessing it you can also create a new family, change family names, add variants or delete family. You can use this button to see everything you've already worked on and apply change to the whole &ldquo;editorial&rdquo; part of the typeface family: names, styles. You'll be able to learn more about the project list in its own course [Right here](/academy/Managing-your-projects)
+
+To get back to the application, simply click on the back button
+
+### Families, variants, and groups
+
+The second part of the breadcrumbs is divided into three parts. The Families, the variants, and the glyph groups.
+
+The Family name of the typeface you're working on: a simple way to both let you know which project you're in and switch from one project to the other. You can use it to see which project you're working on and switch from one Typeface Family to the other. A really handy tool when you're working on multiple projects.
+
+(image:family_bread_crumb.gif)
+
+
+Variants of the Typeface you're working on: you can click on that button to add a new variant to the typeface family or to easily switch from one variant (typeface style) to the other. When you click on &ldquo;Add new variant&rdquo;, a pop-up window will show, you can add a new variant name or choose a variant from the list Prototypo offers you and that Variant's style will be added to your existing typeface along with its specific design details. For example, if you choose to add a Thin Italic version to your existing font, the new variant will be a thinner and slanted.
+
+(image:variant_bread_crumb.gif)
+
+
+All Glyphs button / All glyph slider: those allow you to switch between the All Glyphs mode and the Group of Glyph mode.
+You can use those to create certain groups of letters which you can modify independently from the rest of the font. Glyph groups are a powerful tool that lets you create highly customized and precise typeface. You can learn more about them in the own course.
+
+(image:indiv_bread_crumb.gif)
+
+
+You'll learn more about individualization groups in our [Individualization Tutorial](/academy/Individualizing-glyphs)
+
+### Now that we have covered what's the breadcrumbs, we can focus on the other part of this tutorial: the top bar.
+
+## The Top Bar
+
+(image:menus_small.gif)
+
+
+> The top bar is your usual software button area where you can manage several things linked both to you, the user, and to your projects.
+
+### The File Menu
+
+(image:NQnePBs.jpg)
+
+
+The File menu will let create a new project (a new font family) and export your font with the different font export options. This is where you will also be able to log out from Prototypo.
+
+The different exports will let you choose between a fully ready font, a more accurate font for editing in a type design software or to export to Glyphr a web based type design application:
+
+#### Export font and Export font as...
+
+This export type will create a fully merged font ready to use in your favorite software.
+
+(image:merged_font.png)
+
+
+This is a merged font. Every glyph consists of contours that do not overlap. It is better for compatibility. If you do not have any experience with font software use this export.
+
+The &ldquo;Export font as...&rdquo; option we let you choose the name family and the name of the style of the font exported.
+
+#### Export source file
+
+(image:unmerged_font.png)
+
+
+This font is not merged. The glyphs are made of several different contours that overlap. This cannot be used as ease but it's better to use if you want to make modification to your font in a different software. You will have to remove the overlap after you've finished your modifications.
+
+#### Edit Menu
+
+(image:rbroGP5.jpg)
+
+
+Individualize parameters gives you access to the individualization feature about which you can learn more in our [Individualization tutorial](/academy/Individualizing-glyphs). Undo/Redo (ctrl+Z / ctrl+Y). Reset All Parameters to / Reset All changes: both to be used if you want to revert back to the original template of the typeface you're working on.
+
+
+#### Window Menu
+
+Window is a quick way to access the different Views available in Prototypo (and its linked to the Views Iconic bar).
+
+
+#### Help Button
+
+To chat with Prototypo, access the FAQ, Restart the Tutorials, access the Academy.
+
+
+Your account button gets you to your Prototypo account dashboard containing every info you need to manage your subscription and billing, your profile (address and info about yourself), your billing history, etc.
+
+#### Views
+
+(image:views_topbar.gif)
+
+
+Glyph View allows you to see what you're doing on a specific letter and give you access to tools to modify said letters. Word View allows you to see the glyph modification changes on a sentence and also give you access to changing the sidebar of a glyph / Text view allows you to see the typeface modification when used in a text block (in different sizes).
+
+### And that concludes our tutorial about the breadcrumbs and the top bar! Congratulations!
+
