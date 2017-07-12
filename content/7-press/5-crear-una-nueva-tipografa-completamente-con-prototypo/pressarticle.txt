@@ -1,13 +1,13 @@
-Title: Crear una nueva tipografía completamente con Prototypo
+Title: Par le passé, les fonts créées étaient statiques et ne se pliaient à aucune tentative de modification : ce n’est plus le cas aujourd’hui
 
 ----
 
-Siteblog: Domestika
+Siteblog: Siècle digital
 
 ----
 
-Urlblog: https://www.domestika.org/es/blog/414-prototypo-permite-customizar-tipografias
+Urlblog: https://siecledigital.fr/2017/06/26/google-cree-spectral-une-typo-responsive-et-personnalisable/
 
 ----
 
-Lang: ES
+Lang: FR

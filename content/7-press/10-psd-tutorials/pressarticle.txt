@@ -1,13 +1,13 @@
-Title: Einfach eigene Schriften kreieren mit Prototypo
+Title: Vive Le Startup: 5 French Companies Leading A Tech Revolution
 
 ----
 
-Siteblog: PSD-Tutorials.de
+Siteblog: Forbes
 
 ----
 
-Urlblog: https://www.psd-tutorials.de/news/view/einfach-eigene-schriften-kreieren-mit-prototypo
+Urlblog: https://www.forbes.com/sites/amyguttman/2016/06/01/vive-le-startup-5-french-companies-leading-a-tech-revolution/#1f8a7fe262f1
 
 ----
 
-Lang: DE
+Lang: EN

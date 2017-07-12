@@ -1,15 +1,13 @@
-Title: 
-
-Инструмент для всех и никого: Интервью с его создателями
+Title: Wolltest Du schon immer mal Typedesigner sein und genau DIE richtige Schrift für Dein nächstes Projekt kreieren? Dann ist Prototypo was für Dich!
 
 ----
 
-Siteblog: Lookatme.ru
+Siteblog: Slanted
 
 ----
 
-Urlblog: http://www.lookatme.ru/mag/live/opinion/203811-prototypo
+Urlblog: http://www.slanted.de/eintrag/prototypo
 
 ----
 
-Lang: RU
+Lang: DE

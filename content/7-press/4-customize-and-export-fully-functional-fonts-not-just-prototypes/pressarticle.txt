@@ -1,13 +1,13 @@
-Title: Customize and export fully functional fonts, not just prototypes
+Title: このフォントは数回のクリックだけでオリジナルのフォントが作れる「Prototypo」で作られた初のGoogleフォントとなっています。
 
 ----
 
-Siteblog: Awwwards
+Siteblog: Gigazine
 
 ----
 
-Urlblog: http://www.awwwards.com/the-typographer-we-should-all-have-inside.html
+Urlblog: http://gigazine.net/news/20170622-spectral/
 
 ----
 
-Lang: EN
+Lang: JP

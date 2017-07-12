@@ -1,13 +1,13 @@
-Title: How Prototypo simplified their web app
+Title: Características son fácilmente manipulables gracias a la automatización de procesos de diseño tipográfico, permitiendo a los diseñadores crear variaciones completamente personalizadas
 
 ----
 
-Siteblog: Invision
+Siteblog: Domestika
 
 ----
 
-Urlblog: http://blog.invisionapp.com/prototypo-design-teardown/
+Urlblog: https://www.domestika.org/es/blog/862-spectral-la-primera-tipografia-responsive-de-google
 
 ----
 
-Lang: EN
+Lang: ES
