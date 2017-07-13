@@ -2,16 +2,16 @@ Title: Press
 
 ----
 
-Text: 
+Text:
 
-# Prototypo | Create your own font in a few clicks
+# Prototypo | Design stronger identities with bespoke fonts
 
 **Prototypo is the first real time font creation software allowing anyone to create a unique font in a few clicks.**
 
 
 ## Create unique fonts in clicks
 
-The web application Prototypo gives graphic designers and type lovers the ability to create personalized fonts and export them to use wherever they want. 
+The web application Prototypo gives graphic designers and type lovers the ability to create personalized fonts and export them to use wherever they want.
 After choosing one of our three font templates (designed by the international foundry (link: https://www.productiontype.com/ text:Production Type popup: yes)) users can draw their own font by moving over 30 sliders (x-height, curves of the serifs, width…). The changes apply directly on each character of the Latin alphabet.
 
 
@@ -24,7 +24,7 @@ This innovative approach to type design brings users the opportunity to get stro
 
 ## A high degree of customization
 
-According to Yannick Mathey, art director and cofounder, the rationale behind the application is that “Prototypo was built because we were frustrated by the difficulty of finding original fonts perfectly fitting our specific needs, and to shorten the time it takes to draw a custom font, from months to days.”  
+According to Yannick Mathey, art director and cofounder, the rationale behind the application is that “Prototypo was built because we were frustrated by the difficulty of finding original fonts perfectly fitting our specific needs, and to shorten the time it takes to draw a custom font, from months to days.”
 
 Based on the parametric fonts technology, the app aims to give designers maximum freedom in their creations. Users can modify glyphs or group of glyphs separately, and with the release of its Manual Editing feature, Prototypo reaches the highest degree of customization as it’s now possible to move each point of any letters.
 

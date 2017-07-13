@@ -4,8 +4,8 @@
 
 	<section class="section breath gradient-green">
 		<div class="fitToContent">
-			<h1 class="white centered marginBottom60">
-				Prototypo
+
+			<h1 class="white centered marginBottom30 marginTop30">
 				<span class="internal_header">
 					<?php echo $page->getStartedTagline()->kirbytextSans(); ?>
 				</span>

@@ -88,12 +88,10 @@ Each slider has a label that shows the parameter that will be updated and the cu
 It can be moved from left to right by clicking and dragging your mouse on the black circle.
 
 ## The tabs
-(image:https://www.prototypo.io/content/6-press/www.prototypo.io-m-all.gif)
-
+(image: https://www.prototypo.io/content/6-press/www.prototypo.io-m-all.gif)
 
 Above the slider view are four tabs : **Settings**, **Func**, **Style**, **Serifs**.
-(image:slider-tabs.gif)
-
+(image: slider-tabs.gif)
 
 By default, the functional characteristics (Func) tab is opened.
 Each tab represents a step on a classic design process. Usually, you should work from left to right: from the sliders on the first tab, on to the second tab and so forth, with some going back and forth to make some changes, of course.
@@ -102,8 +100,7 @@ Each tab represents a step on a classic design process. Usually, you should work
 
 When pushing the sliders to their limit you might have noticed that the slider background went red, like this:
 
-(image:slider-redzone.gif)
-
+(image: slider-redzone.gif)
 
 Don't worry, it's not a problem. We're just telling you that you are entering the *experimental* zone. It's still perfectly allowed to go onto this range, but you might have some issues with legibility or small font-size display.
 However, you can have very nice results and a lot of artistic possibilities by experimenting in these zones.
@@ -112,23 +109,19 @@ However, you can have very nice results and a lot of artistic possibilities by e
 
 If you need to try a specific value for a parameter, or even go further than the sliders allows you to go, click on the slider value.
 There, you can input any value you want and it will be set.
-(image:slider-input-manual.gif)
-
+(image: slider-input-manual.gif)
 
 ## More info
 
 If you want to get the default value for a slider, just hover a slider and click on the reset button. The parameter will be reset.
 
-(image:slider-resetbutton.jpg)
-
+(image: slider-resetbutton.jpg)
 
 Not sure about the effect of a slider? Don't worry. Click on the **?** icon and a tooltip will slide open, showing what's the effect on a letter. You can circle through the slider by clicking on the arrow below it, and close it if you click on the close icon.
-(image:slider-tooltip.gif)
-
+(image: slider-tooltip.gif)
 
 Sometimes, there are some sliders that are linked to another one, like this:
-(image:slider-subslider.jpg)
-.
+(image: slider-subslider.jpg).
 
 This means that this slider is a child of his parent, usually meaning that it can control a part of a parent slider. Like on the *Aperture* slider, where you can control the overall aperture, and also the top and the bottom aperture independently.
 
