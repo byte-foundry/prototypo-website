@@ -1,4 +1,4 @@
-Title: Create your own font in a few clicks
+Title: Design stronger identities with bespoke fonts
 
 ----
 
@@ -21,11 +21,11 @@ Textlineunderdemo: <a href="https://vimeo.com/86406495" style="color: white" tar
 
 ----
 
-Getstartedtagline: Create your own font in a few clicks
+Getstartedtagline: Design stronger identities with bespoke fonts
 
 ----
 
-Getstartedbuttonlabel: Try now
+Getstartedbuttonlabel: Free trial
 
 ----
 

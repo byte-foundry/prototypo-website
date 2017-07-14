@@ -2,13 +2,13 @@ Title: Pricing
 
 ----
 
-Subtitle: 
+Subtitle:
 
 ----
 
-Packs: 
+Packs:
 
-- 
+-
   packname: Free
   price: 0, 0
   promo:
@@ -20,7 +20,7 @@ Packs:
     1 user, One week support, Limited
     parameter range,-,-,-,-,-,-
   button: Try it for free
-- 
+-
   packname: Pro
   price: 8.25, 15
   description: >
@@ -38,7 +38,7 @@ Packs:
     Web preview extension,-,-
   button: Try it for $1!
   offer: '1<sup>st</sup> month for $1'
-- 
+-
   packname: Company
   price: 12.5, 22.5
   description: >
@@ -70,29 +70,29 @@ Subtitle: and start to create your font online now!
 
 ----
 
-Descriptionpromo: 
+Descriptionpromo:
 
 ----
 
-Faq: 
+Faq:
 
-- 
+-
   question: >
     How many fonts can I export with the
     full version?
   answer: >
     You can export as many fonts as you want
     by buying a pro subscription.
-- 
+-
   question: "Can I sell the fonts that I've made with Prototypo?"
   answer: >
     Absolutely, you own the font that you
     have created with Prototypo and you can
     do whatever you want with it.
-- 
+-
   question: ' Is it possible to pay through Paypal?'
   answer: "We're sorry we can't accept Paypal payment right now."
-- 
+-
   question: Is the technical support included?
   answer: >
     You can ask our team whenever you want,
@@ -101,9 +101,9 @@ Faq:
 
 ----
 
-Users: 
+Users:
 
-- 
+-
   name: Tristan G.
   infos: Graphic designer, Québec City
   quote: >
@@ -112,7 +112,7 @@ Users:
     specialists and give more freedom to the
     designers in their creations.
   portrait: tristan.jpg
-- 
+-
   name: Manuel W.
   infos: Graphic designer, Saarbrücken
   quote: 'What we like in Prototypo: the base type design just works. It really takes a lot of bad will to turn your font unuseful — and yet it still looks charming.'
@@ -120,7 +120,7 @@ Users:
 
 ----
 
-Ogdescription: The web application Prototypo allows you to create your own font in a few clicks, choose the plan that fits your needs or try Prototypo for free and start now!
+Ogdescription: The web application Prototypo allows you to design stronger identities with bespoke fonts, choose the plan that fits your needs or try Prototypo for free and start now!
 
 ----
 
