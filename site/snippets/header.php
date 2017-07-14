@@ -125,8 +125,8 @@
 							<a class="login" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signin" target="_blank" >Log in</a>
 						</div>
 						<div>
-							<!-- <a class="callToAction header-part-button" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signup" target="_blank" >Desing your first font</a> -->
-							<a class="callToAction header-part-button" href="https://app.prototypo.io/#/signup" onclick="ga('send', 'event', 'Home', 'Click', 'CTA5');">Desing your first font</a>
+							<!-- <a class="callToAction header-part-button" href="https://<?php echo c::get('env') === 'dev' ? 'dev' : 'app'; ?>.prototypo.io/#/signup" target="_blank" >Design your first font</a> -->
+							<a class="callToAction header-part-button" href="https://app.prototypo.io/#/signup" onclick="ga('send', 'event', 'Home', 'Click', 'CTA5');">Design your first font</a>
 						</div>
 					</div>
 				</div>
