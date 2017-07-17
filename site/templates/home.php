@@ -12,7 +12,7 @@
 
 			<?php snippet('demo-home') ?>
 
-			<div class="textSize-txt-large text-center marginTop60">
+			<div class="textSize-txt-large text-center marginTop30">
 				<div class="marginTop30 row">
 					<div class="columns large-9 medium-9">
 						<input id="emailSignUp" type="text" placeholder="Your email" class="form-input Newsletter-name" style="height:50px"/>
