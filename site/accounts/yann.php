@@ -9,6 +9,7 @@ password: >
 language: fr
 role: admin
 history:
+  - press
   - >
     press/prototypo-levoluzione-della-tipografia
   - >
@@ -17,4 +18,3 @@ history:
     press/revised-editing-tool-promises-to-revolutionise-font-creation
   - >
     press/prototypo-loutil-ultime-pour-crer-vos-typographies
-  - press/lookatme-ru-article-russian

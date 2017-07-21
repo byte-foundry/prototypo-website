@@ -2,47 +2,49 @@ Title: Press
 
 ----
 
-Text:
+Text: 
 
-# Prototypo | Design stronger identities with bespoke fonts
+# Prototypo | Create your own font in a few clicks
 
-**Prototypo is the first real time font creation software allowing anyone to create a unique font in a few clicks.**
-
-
-## Create unique fonts in clicks
-
-The web application Prototypo gives graphic designers and type lovers the ability to create personalized fonts and export them to use wherever they want.
-After choosing one of our three font templates (designed by the international foundry (link: https://www.productiontype.com/ text:Production Type popup: yes)) users can draw their own font by moving over 30 sliders (x-height, curves of the serifs, width…). The changes apply directly on each character of the Latin alphabet.
+**Prototypo is the first web app allowing people to create unique identities with bespoke fonts.**
 
 
-This innovative approach to type design brings users the opportunity to get stronger visual identity with original fonts.
+## Creating custom fonts has never been easier
+
+A custom font conveys a company’s heritage and values. It is a priceless investment lasting the brand’s lifetime.
+The web application Prototypo gives the ability to create custom fonts and export them to use everywhere (desktop applications, websites…). 
+
+After choosing one of the four templates available (designed by the international foundry Production Type) users can design their own font by moving over 30 sliders (x-height, curves of the serifs, width…). 
+The changes apply live to each character of the Latin alphabet.
+
+Thanks to its “Glyphs individualization” and “Manual editing” features, the app gives users a high degree of customisation. Prototypo allows them to create a fully functional font without using any other software.
 
 
 <br/>
 (image: www.prototypo.io-m-all.gif)
 <br/>
 
-## A high degree of customization
+## An outstanding technology
 
-According to Yannick Mathey, art director and founder, the rationale behind the application is that “Prototypo was built because we were frustrated by the difficulty of finding original fonts perfectly fitting our specific needs, and to shorten the time it takes to draw a custom font, from months to days.”
+Based on the parametric fonts technology that uses algorithms to generate letters, Prototypo automates the repetitive tasks specific to type design. 
 
-Based on the parametric fonts technology, the app aims to give designers maximum freedom in their creations. Users can modify glyphs or group of glyphs separately, and with the release of its Manual Editing feature, Prototypo reaches the highest degree of customization as it’s now possible to move each point of any letters.
+Beyond its primarily “web-app use”, Prototypo’s engine has an infinite range of applications. Think shop windows that react according to the movements of passers-by, data visualisation that mixes info and text or websites with readability and accessibility enhanced for visually impaired people. 
+
+Creating intelligent fonts capable of fitting all types of uses and media is now a reality.
 
 <br/><br/>
-(image: fakir.gif)
+(image: prototypo-spectral-specimen-all.gif)
 <br/><br/>
 
-A subscription of $15/month without commitment and a $99/year offer gives access to the full version of Prototypo with the ability to export an unlimited number of fonts. It’s also possible to buy a pack of 5 exports at a price of $5.
+## A constant pursuit of improvement
 
+In June 2017 Prototypo sparked a global excitement, turning the latest Google font, “Spectral”, into a parametric template. This first ever parametric Google font is now exclusively available in Prototypo. 
 
-## Coming next
-
-2017 will see important additions to the application. New fonts are announced as well as the ability to control the components of each glyph. A tool, “Prototypo Builder”, will allow users to create their own parametric fonts and use it in Prototypo as any other templates.
-
+Other significant additions are under development, including a parametric fonts builder that will let advanced users create their own font template. A Cyrillic alphabet adaptation will be released by the end of the year.
 
 ## About Prototypo
 
-Created in May 2013 by Yannick Mathey and Louis-Rémi Babé in Lyon, Prototypo now gather a team of 7 people. Prototypo is the first real time font creation software with no drawing skills required. The tool is used by more than 15000 graphic designers and type lovers coming from over 130 countries. You can find more information on www.prototypo.io, joining the 7000 Facebook fans or being part of the 4000 Twitter followers.
+Created in May 2013 in Lyon — France, Prototypo gathers a team of experts in type, graphic design and code. Its unique font creation service is used by more than 35K designers coming from over 130 countries. 
 
 
 
@@ -53,6 +55,6 @@ P.S.: If you want to use the live-tester on your blog, feel free to use the ifra
 
 ````
 
-**Press contacts:**
+**Press contact:**
  ----
 Yann Guillet | (email: mailto:yann@prototypo.io text: yann@prototypo.io)
