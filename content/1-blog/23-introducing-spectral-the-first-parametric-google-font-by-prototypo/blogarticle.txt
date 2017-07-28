@@ -2,7 +2,7 @@ Title: Introducing Spectral, the first parametric Google font by Prototypo
 
 ----
 
-Ogdescription: Primarily intended for use in the collaborative office-suite programs, Google Docs, Sheets, and Slides, Spectral has been designed by our partner Production Type while we took care of its parametric format adaptation.
+Ogdescription: Spectral has been designed by our partner Production Type while we took care of its parametric format adaptation.
 
 ----
 
