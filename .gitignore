@@ -8,4 +8,4 @@ site/snippets/prod
 site/templates/pricing copie.php
 *.swp
 dll/
-content/6-academy/**/*.*
+content/6-academy/*/**/*.*
