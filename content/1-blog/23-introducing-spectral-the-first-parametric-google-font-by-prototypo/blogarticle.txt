@@ -1,0 +1,52 @@
+Title: Introducing Spectral, the first parametric Google font by Prototypo
+
+----
+
+Ogdescription: Primarily intended for use in the collaborative office-suite programs, Google Docs, Sheets, and Slides, Spectral has been designed by our partner Production Type while we took care of its parametric format adaptation.
+
+----
+
+Ogimage: hero-twitter.png
+
+----
+
+Tags: New font,release,prototypo
+
+----
+
+Date: 2017-07-28
+
+----
+
+Subtitle: We are proud to announce the release of Spectral, our fourth template and above all, the first ever parametric Google Font.
+
+----
+
+Contentarticle: 
+
+Primarily intended for use in the collaborative office-suite programs, Google Docs, Sheets, and Slides, Spectral has been designed by our partner Production Type while we took care of its parametric format adaptation.
+(videoext: mp4: spectral-specimen.mp4 autoplay:true loop:true)
+<legend>A glimpse of Spectral's interactive specimen</legend>
+Google has called on <a href="https://productiontype.com/" target="_blank"> Production Type</a>'s expertise in digital typography to design this new typeface. Spectral is expected to fill a lack of extensive serif families and shows that a serif font can be perfectly readable on all kind of screens. The latest Google Font is already in the line of high-quality typefaces created for digital media in the past, like Georgia, Trinité or Demos.
+(videoext: mp4: spectral-ec.mp4 autoplay:true loop:true)
+<legend>Contrast variation on Spectral's "e" and "c"</legend>
+##Turning a Google font into a parametric template
+Run by our associate, Jean Baptiste Levée, Production Type is known worldwide for the creation of custom typefaces for brands such as Louis Vuitton, Printemps or Ubisoft. 
+The release of Spectral's parametric version is the result of a year-long collaboration between our teams and the french digital type design agency.
+(videoext: mp4: prototypo-g.mp4 autoplay:true loop:true)
+<legend>Spectral in action in Prototypo</legend>
+Spectral is our fourth template and will be <a href="https://app.prototypo.io/#/signin" target="_blank">exclusively available in Prototypo</a> in its parametric version. This will provide users with an ever-infinite range of creative options.
+##A global excitement both on tech blogs and forums
+This release has sparked a global excitement on the web, media putting the parametric technology in perspective.
+According to <a href="https://thenextweb.com/google/2017/06/22/google-responsive-font-spectral/#.tnw_ZbLgNx64" target="_blank">The Next Web</a>, “*Spectral follows the principles of responsive design, which means the font retains the capacity to alter its form in order to seamlessly fit in with the overall layout of your page.*” For <a href="http://designtaxi.com/news/393768/Spectral-Google-s-First-Parametric-Font-That-s-Responsive-And-Customizable/"target="_blank">Design Taxi</a>, “*the parametric font technology enables designers to develop unique identities*” while <a href="https://www.fastcodesign.com/90131239/this-tool-is-built-to-make-responsive-type-a-reality" target="_blank">Fastco Design</a> notes that Prototypo’s technology “*has exciting implications for responsive design, which requires different variants for different screens. *”
+(videoext: mp4: spectral-nnn.mp4 autoplay:true loop:true)
+<legend>Width management on Spectral's "n"</legend>
+##Experience it
+Now it’s time to form your own opinion on Spectral. 
+Experience the parametric template on a dedicated <a href="http://spectral.prototypo.io"target="_blank">interactive specimen</a> or try it exclusively in <a href="https://app.prototypo.io/#/signin"target="_blank">the application</a>.
+(videoext: mp4: spectral.mp4 autoplay:true loop:true)
+<legend>Spectral is the fourth parametric template available in Prototypo</legend>
+The “static” version of Spectral is available for anyone to use via <a href="https://fonts.google.com/specimen/Spectral"target="_blank">Google Fonts</a>, Google’s collection of free, open-source font families.
+In addition of Spectral, we can already tell you that we are working on 3 more templates that will be available by the end of the year. 
+For more information, keep in touch with us on <a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>, <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a> and  <a href="https://www.linkedin.com/company-beta/10330517/" target="_blank">Linkedin</a>.
+<strong>Cheers <br>The team</strong>

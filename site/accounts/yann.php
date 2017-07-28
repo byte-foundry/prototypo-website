@@ -9,6 +9,8 @@ password: >
 language: fr
 role: admin
 history:
+  - >
+    blog/introducing-spectral-the-first-parametric-google-font-by-prototypo
   - press
   - >
     press/prototypo-levoluzione-della-tipografia
@@ -16,5 +18,3 @@ history:
     press/prototypo-will-let-anyone-design-original-fonts
   - >
     press/revised-editing-tool-promises-to-revolutionise-font-creation
-  - >
-    press/prototypo-loutil-ultime-pour-crer-vos-typographies
