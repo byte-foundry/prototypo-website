@@ -9,10 +9,10 @@ password: >
 language: en
 role: admin
 history:
+  - >
+    blog/introducing-spectral-the-first-parametric-google-font-by-prototypo
   - lab
   - lab/google-font-spectral
   - >
     blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
   - cgu
-  - >
-    faq/which-language-or-glyph-set-prototypo-supports
