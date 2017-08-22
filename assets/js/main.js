@@ -325,6 +325,13 @@ $(function() {
         baseCompanyPrice = prices[2].monthly;
         setPrice($numberControl[0].value);
       });
+	  $('.PricingItem-baseline').each(function(index, value) {
+      var baseline = $(value).text().split(',');
+      baselines.push({
+        monthly: baseline[0].replace(/\s+/g, ' ').trim(),
+        yearly: baseline[1].replace(/\s+/g, ' ').trim()
+      })
+    });
       $('.PricingItem-baseline').each(function(index, value) {
         $(value).text(baselines[index].monthly);
       });
@@ -334,13 +341,7 @@ $(function() {
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
 			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value)
-    $('.PricingItem-baseline').each(function(index, value) {
-      var baseline = $(value).text().split(',');
-      baselines.push({
-        monthly: baseline[0].replace(/\s+/g, ' ').trim(),
-        yearly: baseline[1].replace(/\s+/g, ' ').trim()
-      })
-    });
+    
     var baseCompanyPrice = prices[2].yearly;
 
 
