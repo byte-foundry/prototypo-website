@@ -303,8 +303,29 @@ $(function() {
 		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
-		var plan = "monthly";
-		$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
+				var plan = "monthly";
+      $monthlyButton.addClass('active');
+      $yearlyButton.removeClass('active');
+
+      $('.PricingItem-price').each(function(index, value) {
+        let priceSplit = prices[index].monthly.toString().split('.');
+        if (priceSplit.length > 1) {
+          $(value).html(priceSplit[0] + '<div class="PricingItem-price-small">.' + priceSplit[1] + '</div>');
+        } else {
+          $(value).text(prices[index].monthly);
+        }
+        baseCompanyPrice = prices[2].monthly;
+        setPrice($numberControl[0].value);
+      });
+      $('.PricingItem-baseline').each(function(index, value) {
+        $(value).text(baselines[index].monthly);
+      });
+
+			$('.PricingItem-offerRibbon').show();
+      $('.callToAction-Pro').text('Try it for $1!');
+			let urlsplit = $baseProCtaUrl.split('?');
+			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
+			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value)
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
