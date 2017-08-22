@@ -303,7 +303,15 @@ $(function() {
 		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
-				var plan = "monthly";
+				
+    $('.PricingItem-price').each(function(index, value) {
+      var price = $(value).text().split(',');
+      prices.push({
+        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
+        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
+      })
+    });
+	  var plan = "monthly";
       $monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
 
@@ -326,13 +334,6 @@ $(function() {
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
 			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value)
-    $('.PricingItem-price').each(function(index, value) {
-      var price = $(value).text().split(',');
-      prices.push({
-        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
-        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
-      })
-    });
     $('.PricingItem-baseline').each(function(index, value) {
       var baseline = $(value).text().split(',');
       baselines.push({
