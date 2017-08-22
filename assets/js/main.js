@@ -303,7 +303,7 @@ $(function() {
 		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
-		var plan = "annual";
+		var plan = "monthly";
 		$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
