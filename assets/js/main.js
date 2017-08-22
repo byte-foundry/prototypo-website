@@ -292,106 +292,9 @@ $(function() {
         }
     }});
     /*** / Get user count ***/
-
-    var $numberControl = $('.PricingItem-pack-option-usercount .input-number');
-    var $companyUserMin = $numberControl.attr('min') || false;
-    var $companyUserMax = $numberControl.attr('max') || false;
-    var $companyPrice = $('.PricingItem-price-company');
-    var $monthlyButton = $('#Pricing-monthly-plan');
-    var $yearlyButton = $('#Pricing-yearly-plan');
-    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href').includes('dev') ? 'https://dev.prototypo.io/#/signup?subscribe=' : 'https://app.prototypo.io/#/signup?subscribe=';
-		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
-    var prices = [];
-    var baselines = [];
-				
-    $('.PricingItem-price').each(function(index, value) {
-      var price = $(value).text().split(',');
-      prices.push({
-        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
-        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
-      })
-    });
-	  var plan = "monthly";
-      $monthlyButton.addClass('active');
-      $yearlyButton.removeClass('active');
-
-      $('.PricingItem-price').each(function(index, value) {
-        let priceSplit = prices[index].monthly.toString().split('.');
-        if (priceSplit.length > 1) {
-          $(value).html(priceSplit[0] + '<div class="PricingItem-price-small">.' + priceSplit[1] + '</div>');
-        } else {
-          $(value).text(prices[index].monthly);
-        }
-        baseCompanyPrice = prices[2].monthly;
-        setPrice($numberControl[0].value);
-      });
-	  $('.PricingItem-baseline').each(function(index, value) {
-      var baseline = $(value).text().split(',');
-      baselines.push({
-        monthly: baseline[0].replace(/\s+/g, ' ').trim(),
-        yearly: baseline[1].replace(/\s+/g, ' ').trim()
-      })
-    });
-      $('.PricingItem-baseline').each(function(index, value) {
-        $(value).text(baselines[index].monthly);
-      });
-
-			$('.PricingItem-offerRibbon').show();
-      $('.callToAction-Pro').text('Try it for $1!');
-			let urlsplit = $baseProCtaUrl.split('?');
-			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
-			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value)
-    
-    var baseCompanyPrice = prices[2].yearly;
-
-
-		if ($.urlParam('billing') && $.urlParam('billing') === 'monthly') {
-			plan = "monthly";
-			$monthlyButton.addClass('active');
-      $yearlyButton.removeClass('active');
-
-      $('.PricingItem-price').each(function(index, value) {
-        let priceSplit = prices[index].monthly.toString().split('.');
-        if (priceSplit.length > 1) {
-          $(value).html(priceSplit[0] + '<div class="PricingItem-price-small">.' + priceSplit[1] + '</div>');
-        } else {
-          $(value).text(prices[index].monthly);
-        }
-        baseCompanyPrice = prices[2].monthly;
-        setPrice($numberControl[0].value);
-      });
-      $('.PricingItem-baseline').each(function(index, value) {
-        $(value).text(baselines[index].monthly);
-      });
-
-			$('.PricingItem-offerRibbon').show();
-      $('.callToAction-Pro').text('Try it for $1!');
-			let urlsplit = $baseProCtaUrl.split('?');
-			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
-			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
-		}
-		else {
-			plan = "annual";
-			$('.PricingItem-price').each(function(index, value) {
-	      let priceSplit = prices[index].yearly.toString().split('.');
-	      if (priceSplit.length > 1) {
-	        $(value).html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
-	      } else {
-	        $(value).text(prices[index].yearly);
-	      }
-	      setPrice($numberControl[0].value);
-	    });
-	    $('.PricingItem-baseline').each(function(index, value) {
-	      $(value).text(baselines[index].yearly);
-	    });
-			$('.PricingItem-offerRibbon').hide();
-	    $('.callToAction-Pro').text('Go pro');
-	    $('.callToAction-Company').text('Create your team');
-			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
-		}
-
-    /*** Switch Monthly / yearly ***/
-    $monthlyButton.on('click', function(e) {
+		
+		var setMonthly = function() {
+			console.log("set monthly");
 			plan = "monthly";
       $monthlyButton.addClass('active');
       $yearlyButton.removeClass('active');
@@ -415,10 +318,10 @@ $(function() {
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
 			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
-
-    });
-
-    $yearlyButton.on('click', function(e) {
+		}
+		
+		var setAnnual = function() {
+			console.log("set annual");
 			plan = "annual";
       $yearlyButton.addClass('active');
       $monthlyButton.removeClass('active');
@@ -444,7 +347,50 @@ $(function() {
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
 			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
+		}
 
+    var $numberControl = $('.PricingItem-pack-option-usercount .input-number');
+    var $companyUserMin = $numberControl.attr('min') || false;
+    var $companyUserMax = $numberControl.attr('max') || false;
+    var $companyPrice = $('.PricingItem-price-company');
+    var $monthlyButton = $('#Pricing-monthly-plan');
+    var $yearlyButton = $('#Pricing-yearly-plan');
+    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href').includes('dev') ? 'https://dev.prototypo.io/#/signup?subscribe=' : 'https://app.prototypo.io/#/signup?subscribe=';
+		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
+    var prices = [];
+    var baselines = [];
+		var plan = "monthly";
+    $('.PricingItem-price').each(function(index, value) {
+      var price = $(value).text().split(',');
+      prices.push({
+        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
+        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
+      })
+    });
+		$('.PricingItem-baseline').each(function(index, value) {
+      var baseline = $(value).text().split(',');
+      baselines.push({
+        monthly: baseline[0].replace(/\s+/g, ' ').trim(),
+        yearly: baseline[1].replace(/\s+/g, ' ').trim()
+      })
+    });
+		
+		setMonthly();
+
+		if ($.urlParam('annual') && $.urlParam('billing') === 'annual') {
+			setAnnual();
+		}
+		else {
+			setMonthly();
+		}
+
+    /*** Switch Monthly / yearly ***/
+    $monthlyButton.on('click', function(e) {
+			setMonthly();
+    });
+
+    $yearlyButton.on('click', function(e) {
+			setAnnual();
     });
     /*** /Switch Monthly / yearly ***/
 
