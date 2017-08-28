@@ -9,12 +9,11 @@ password: >
 language: fr
 role: admin
 history:
+  - >
+    blog/parametric-fonts-technology-infinite-range-of-responsive-applications
+  - >
+    blog/parametric-fonts-technology-range-of-responsive-applications
+  - blog/a-year-in-review
+  - >
+    blog/one-technology-an-infinite-range-of-applications
   - press
-  - >
-    press/creating-a-designer-font-is-time-consuming-and-difficult-this-french-startup-has-made-the-whole-process-as-simple-as-a-couple-of-clicks
-  - >
-    blog/introducing-spectral-the-first-parametric-google-font-by-prototypo
-  - >
-    press/prototypo-levoluzione-della-tipografia
-  - >
-    press/prototypo-will-let-anyone-design-original-fonts
