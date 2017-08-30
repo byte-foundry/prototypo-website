@@ -6,7 +6,7 @@ Ogdescription: Here is an overview of  what Prototypo's technology can offer, in
 
 ----
 
-Ogimage: 
+Ogimage: ASTANA-loop.mp4.mp4
 
 ----
 
@@ -14,7 +14,7 @@ Tags: prototypo,tech,responsive-design
 
 ----
 
-Date: 2017-08-23
+Date: 2017-08-30
 
 ----
 
@@ -35,14 +35,14 @@ To do that, we use maths formulas that create the differents glyphs, using a Jav
 In our web app, these parameters change depending on the sliders, but they can be moved by any data source that could be collected.
 Now consider sounds, movements, light, temperature, etc. as many sources of informations that could be handled and let your imagination comes into play. There’s no need to be a computer engineer to see all the perspectives that the parametric fonts technology has to offer.
 ##Algorithmically generated font
-If the release of Spectral the latest <a href="https://www.prototypo.io/blog/introducing-spectral-the-first-parametric-google-font-by-prototypo.html" target="_blank"> Google font, designed by Production Type and turned parametric by Prototypo</a>, recently sparked a worldwide interest, it’s largely because people have seen a huge potential in our technology. 
+If the release of Spectral, the latest <a href="https://www.prototypo.io/blog/introducing-spectral-the-first-parametric-google-font-by-prototypo.html" target="_blank"> Google font, designed by Production Type and turned parametric by Prototypo</a>, recently sparked a worldwide interest, it’s largely because people have seen a huge potential in our technology. 
 Medias have especially talked about the possibility of generating responsive fonts and it’s indeed the first thing that comes to mind when talking about fonts adapting to their environment.
 (image: responsive-font.gif)
 <legend>Adapting a font to its environment</legend>
 For years now, designing a website without thinking about its responsive versions is a complete nonsense. Web designers use to consider adapting all the components of a page (composition, colors, size of characters, etc.) except the drawing of the characters. But the drawing of a font in size 10 (caption) is quite different from the one of a font for a title (display). 
 We want to bring the same level of detail in both type design and web typography. We already worked on such a project and you can see what it looks like <a href="https://lab.prototypo.io/smartFont/" target="_blank"> in the lab</a>.
 (videoext: mp4: kinect_franz_kinect.mp4 autoplay:true loop:true)
-<legend>François Poizat, lead developer at Prototypo experiencing the Kinect + Prototypo installation</legend>
+<legend>François Poizat, lead developer at Prototypo experiencing a Kinect + Prototypo installation</legend>
 But fitting a context doesn’t only mean adapting to a screen, modern web browsers can provide much more information and context. 
 As you can see in the lab, we already led many experiences. For example you can <a href="https://lab.prototypo.io/whistle/" target="_blank">try this letter</a> reacting to your voice and whistles. In this application we connected the thickness, the contrast and the curviness to the pitch of the sound.
 <iframe width="700" height="393" src="https://www.youtube.com/embed/VB56qwy5Nhg" frameborder="0" allowfullscreen></iframe>
@@ -54,19 +54,18 @@ We could also mention <a href="https://lab.prototypo.io/brightness/" target="_bl
 <legend>Width = hours, xHeight = minutes, thickness = seconds. Based on a concept by Damien Roche</legend>
 ##Great applications for businesses
 We are more and more asked by all kind of clients (events managers, design agencies, companies, etc.) for projects involving our technology.
-We recently worked with a Swiss-based agency on an interactive message welcoming the visitors of the “Expo 2017 Astana”.
+We recently worked with a Swiss-based agency on an interactive message welcoming the visitors at the “<a href="https://expo2017astana.com" target="_blank">Expo 2017 Astana</a>”.
 (videoext: mp4: ASTANA-loop.mp4.mp4 autoplay:true loop:true)
 <legend>"Artists and robots" interactive installation at Expo 2017 Astana. - Video shooting : Claude Mossessian and Thomas Granovsky
 Artists: Miguel Chevalier, Demian Conrad (Automatico) - Original video: <a href="https://vimeo.com/223637913" target="_blank">https://vimeo.com/223637913</a></legend>
-As you can see on the video above, words displayed on a big screen were reacting according to the guests moves, captured by a Kinect. 
-More than just an interactive work, this installation meant to show visitors the direction of the tour, the font becoming a piece of “conceptual art” if they headed to the wrong way.
-In the same way we developed a “font game” for the latest edition of the “Puces Typo” in Paris. The players had to move to modify the x-height, slant and width of a font displayed on a screen and match several predetermined variants.
+As you can see on the video above, words displayed on a big screen were reacting according to the guests moves, captured by a Kinect. More than just an interactive work, this installation meant to show visitors the direction of the tour, the font becoming a piece of “conceptual art” if they headed to the wrong way.
+In the same vein, we developed a “font game” for the latest edition of the “Puces Typo” in Paris. The players had to move to modify the x-height, slant and width of a font displayed on a screen and match several predetermined variants.
 (videoext: mp4: demo_puces_typo.mp4 autoplay:true loop:true)
 <legend>Alexis Launay, backend developer at Prototypo shows off his dancing skills in a typographic game during the Puces Typo in Paris</legend>
 These are just a few examples among an infinite range of possibilities offered by the parametric fonts technology. Imagine all the business opportunities for you or your clients.
 Think interactive street installations reacting according to the movements of passers-by, data visualization that mixes info and text or websites with readability and accessibility enhanced for visually impaired people.
 Creating intelligent fonts capable of fitting all types of uses and media is now a reality.
 <strong>Any project we could help you to develop? <a href="mailto:contact@prototypo.io">Reach out to us</a>.</strong>
-We are eager to be involved in new projects using Prototypo’s technology. If you have anything in mind for you or a client, please share it with us.
-Contact us on<a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>, <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a> and  <a href="https://www.linkedin.com/company-beta/10330517/" target="_blank">Linkedin</a> and head to the lab where you will see all the experiments around Prototypo.
+We are eager to be involved in new projects using Prototypo’s technology. If you have anything in mind, for you or a client, please share it with us.
+Contact us on<a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>, <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a> and  <a href="https://www.linkedin.com/company-beta/10330517/" target="_blank">Linkedin</a> and head to <a href="https://www.prototypo.io/lab.html" target="_blank">the lab</a> where you will see all the experiments around Prototypo.
 <strong>The Team,<br>Cheers</strong>

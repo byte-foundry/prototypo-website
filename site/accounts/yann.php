@@ -11,9 +11,5 @@ role: admin
 history:
   - >
     blog/parametric-fonts-technology-infinite-range-of-responsive-applications
-  - >
-    blog/parametric-fonts-technology-range-of-responsive-applications
   - blog/a-year-in-review
-  - >
-    blog/one-technology-an-infinite-range-of-applications
   - press
