@@ -10,9 +10,10 @@ language: en
 role: admin
 history:
   - >
+    blog/parametric-fonts-technology-infinite-range-of-responsive-applications
+  - >
     blog/introducing-spectral-the-first-parametric-google-font-by-prototypo
   - lab
   - lab/google-font-spectral
   - >
     blog/lstk-dayfly-a-font-in-a-day-by-constantin-demner
-  - cgu
