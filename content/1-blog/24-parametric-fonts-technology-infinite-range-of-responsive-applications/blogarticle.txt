@@ -6,7 +6,7 @@ Ogdescription: Here is an overview of  what Prototypo's technology can offer, in
 
 ----
 
-Ogimage: ASTANA-loop.mp4.mp4
+Ogimage: artists-robots.png
 
 ----
 
