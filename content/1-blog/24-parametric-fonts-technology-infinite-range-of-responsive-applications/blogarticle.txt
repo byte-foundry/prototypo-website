@@ -22,28 +22,28 @@ Subtitle: You probably know about the “web app” use of Prototypo’s technol
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
 (image: artists-robots.png)
 <legend>"Artists and robots" interactive installation at Expo 2017 Astana. - Video shooting : Claude Mossessian and Thomas Granovsky
-Artists: Miguel Chevalier, Demian Conrad (Automatico)</legend>
+Artist: Demian Conrad</legend>
 ##Algorithmically generated font
-First, let’s explain what lies behind Prototypo’s core. To put in simple terms, our technology takes different font parameters, some widely-known some less, to generate a dynamic font and display it on a screen. 
+First, let’s explain what lies behind Prototypo’s core. To put in simple terms, our technology takes different font parameters, some widely-known some less, to generate a dynamic font and display it on a screen.
 To do that, we use maths formulas that create the differents glyphs, using a Javascript algorithm. A new static font file is generated and injected in the browser window every time you change the parameters (we are able to generate up to 30 fonts per second), thus enabling the dynamic movement that appears on the screen.
 (videoext: mp4: different-light-different-thickness.mp4 autoplay:true loop:true)
 <legend>Different light different thickness. © Yann Alary</legend>
 In our web app, these parameters change depending on the sliders, but they can be moved by any data source that could be collected.
 Now consider sounds, movements, light, temperature, etc. as many sources of informations that could be handled and let your imagination comes into play. There’s no need to be a computer engineer to see all the perspectives that the parametric fonts technology has to offer.
 ##Algorithmically generated font
-If the release of Spectral, the latest <a href="https://www.prototypo.io/blog/introducing-spectral-the-first-parametric-google-font-by-prototypo.html" target="_blank"> Google font, designed by Production Type and turned parametric by Prototypo</a>, recently sparked a worldwide interest, it’s largely because people have seen a huge potential in our technology. 
+If the release of Spectral, the latest <a href="https://www.prototypo.io/blog/introducing-spectral-the-first-parametric-google-font-by-prototypo.html" target="_blank"> Google font, designed by Production Type and turned parametric by Prototypo</a>, recently sparked a worldwide interest, it’s largely because people have seen a huge potential in our technology.
 Medias have especially talked about the possibility of generating responsive fonts and it’s indeed the first thing that comes to mind when talking about fonts adapting to their environment.
 (image: responsive-font.gif)
 <legend>Adapting a font to its environment</legend>
-For years now, designing a website without thinking about its responsive versions is a complete nonsense. Web designers use to consider adapting all the components of a page (composition, colors, size of characters, etc.) except the drawing of the characters. But the drawing of a font in size 10 (caption) is quite different from the one of a font for a title (display). 
+For years now, designing a website without thinking about its responsive versions is a complete nonsense. Web designers use to consider adapting all the components of a page (composition, colors, size of characters, etc.) except the drawing of the characters. But the drawing of a font in size 10 (caption) is quite different from the one of a font for a title (display).
 We want to bring the same level of detail in both type design and web typography. We already worked on such a project and you can see what it looks like <a href="https://lab.prototypo.io/smartFont/" target="_blank"> in the lab</a>.
 (videoext: mp4: kinect_franz_kinect.mp4 autoplay:true loop:true)
 <legend>François Poizat, lead developer at Prototypo experiencing a Kinect + Prototypo installation</legend>
-But fitting a context doesn’t only mean adapting to a screen, modern web browsers can provide much more information and context. 
+But fitting a context doesn’t only mean adapting to a screen, modern web browsers can provide much more information and context.
 As you can see in the lab, we already led many experiences. For example you can <a href="https://lab.prototypo.io/whistle/" target="_blank">try this letter</a> reacting to your voice and whistles. In this application we connected the thickness, the contrast and the curviness to the pitch of the sound.
 <iframe width="700" height="393" src="https://www.youtube.com/embed/VB56qwy5Nhg" frameborder="0" allowfullscreen></iframe>
 <legend>Whistle type</legend>
