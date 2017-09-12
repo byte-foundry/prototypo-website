@@ -54,10 +54,10 @@ We could also mention <a href="https://lab.prototypo.io/brightness/" target="_bl
 <legend>Width = hours, xHeight = minutes, thickness = seconds. Based on a concept by Damien Roche</legend>
 ##Great applications for businesses
 We are more and more asked by all kind of clients (events managers, design agencies, companies, etc.) for projects involving our technology.
-We recently worked with a Swiss-based agency on an interactive message welcoming the visitors at the “<a href="https://expo2017astana.com" target="_blank">Expo 2017 Astana</a>”.
+We recently worked with a swiss artist on an interactive message welcoming the visitors at the “<a href="https://expo2017astana.com" target="_blank">Expo 2017 Astana</a>”.
 (videoext: mp4: ASTANA-loop.mp4.mp4 autoplay:true loop:true)
 <legend>"Artists and robots" interactive installation at Expo 2017 Astana. - Video shooting : Claude Mossessian and Thomas Granovsky
-Artists: Miguel Chevalier, Demian Conrad (Automatico) - Original video: <a href="https://vimeo.com/223637913" target="_blank">https://vimeo.com/223637913</a></legend>
+Artists: Demian Conrad - Original video: <a href="https://vimeo.com/223637913" target="_blank">https://vimeo.com/223637913</a></legend>
 As you can see on the video above, words displayed on a big screen were reacting according to the guests moves, captured by a Kinect. More than just an interactive work, this installation meant to show visitors the direction of the tour, the font becoming a piece of “conceptual art” if they headed to the wrong way.
 In the same vein, we developed a “font game” for the latest edition of the “Puces Typo” in Paris. The players had to move to modify the x-height, slant and width of a font displayed on a screen and match several predetermined variants.
 (videoext: mp4: demo_puces_typo.mp4 autoplay:true loop:true)
