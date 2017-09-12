@@ -49,7 +49,7 @@ Packs:
     Custom plan and pricing for larger
     teams,Custom plan and pricing for larger
     teams
-  options: 'X user, 24h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension, Team management and user roles**, Collaborative tools**'
+  options: 'X user, 24h support, Full-range parameters, Unlimited font exports, Manual editing, Glyph individualization, Web preview extension, Team management and user roles, Collaborative tools**'
   button: Get a quote
 
 ----
