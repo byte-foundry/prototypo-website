@@ -2,7 +2,7 @@ Title: Versatile Type Design for the Web
 
 ----
 
-Ogdescription: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, co-founder of Prototypo, to broach the subject of versatile type design for the web.
+Ogdescription: ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, cofounder of Prototypo, to broach the subject of versatile type design for the web.
 
 ----
 
@@ -22,16 +22,16 @@ Subtitle: ATypI (the International Typography Association) held its 60th annual 
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
-*ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CEO and Cofounder of Prototypo, to broach the subject of versatile type design for the web. For those who missed it, here’s a look back on its talk.*
+*ATypI (the International Typography Association) held its 60th annual conference in Warsaw (Poland) last month. A great opportunity for Louis Rémi Babé, CTO and Cofounder of Prototypo, to broach the subject of versatile type design for the web. For those who missed it, here’s a look back on its talk.*
 
 (image: louis-rmi-babe-at-atypi-warsaw-2016.jpg)
 
 <legend>Louis-Rémi BABE at ATypI Warsaw 2016</legend>
 
 <h2>A revolution is coming up</h2>
-So far, type design has put all the power in the hands of the type designer, and limited power in the hands of the graphic designer. Type designers start with a blank page and a pen, while most graphic designers are only free to choose a family and then pick a variant. Even in the case of super-families, only the type designer chooses the granularity and range of available variants. 
+So far, type design has put all the power in the hands of the type designer, and limited power in the hands of the graphic designer. Type designers start with a blank page and a pen, while most graphic designers are only free to choose a family and then pick a variant. Even in the case of super-families, only the type designer chooses the granularity and range of available variants.
 But there are two obvious reasons why this paradigm is about to change.
 <a href="http://panorama.productiontype.com/" style="background: none" target="_blank">(image: panorama.png)</a>
 
@@ -51,8 +51,8 @@ There are different technologies that make this revolution finally possible, and
 As you might know, interpolated fonts (we should say interpolatable font sets) designate two or more fonts that have been specially constructed so that a program could mix them and create intermediary variants.
 You might already be familiar with Prepolator and Superpolator to build interpolated fonts.
 <h2>Parametric fonts</h2>
-A parametric font is an algorithmically generated font. “Algorithm” is very much a buzz word these days. In any context you hear this word, it’s important to remember that it just means “a recipe written for a computer”. A parametric font is the recipe of a font, with its mandatory list of ingredients. But for each ingredient, the quantity is left up to you. 
-Now, when you start following the recipe of a banana bread, you can be pretty sure that, no matter how much you mess up the quantities, you’ll never end up with a chicken curry soup. Same goes for a parametric font: it’s a recipe for a certain kind of fonts, not for any font. 
+A parametric font is an algorithmically generated font. “Algorithm” is very much a buzz word these days. In any context you hear this word, it’s important to remember that it just means “a recipe written for a computer”. A parametric font is the recipe of a font, with its mandatory list of ingredients. But for each ingredient, the quantity is left up to you.
+Now, when you start following the recipe of a banana bread, you can be pretty sure that, no matter how much you mess up the quantities, you’ll never end up with a chicken curry soup. Same goes for a parametric font: it’s a recipe for a certain kind of fonts, not for any font.
 The history of parametric fonts could be the subject of an entire talk, so we won’t detail it, but you might have heard of MetaFont, fontChameleon, Infinifont, FlexFont, Kalliculator, MetaFlop, Metapolator, or Prototypo.
 
 (image: parametric-font.gif)
@@ -79,7 +79,7 @@ And they can both be compiled down to variable fonts format. Variable fonts are 
 
 <h2>The web makes the future tangible now</h2>
 The final piece of technology in this revolution is, we believe, the web. Web browsers are omnipotent and ubiquitous technological wonders. They are present on many devices, and can do a lot of things:
-They can display content (images, videos, and of course text) 
+They can display content (images, videos, and of course text)
 They can manipulate this content pretty much any way they want: thanks to OpenType.js and other libraries you can now parse a font directly in the browser, or generate one and display it. Modern browsers are fast enough to animate fonts.
 They have access to all sensors available on modern devices to give context to the content: what is the size of the screen, what is the ambient luminosity, how far is the reader from the screen, where on earth is he, etc.
 <strong>This opens up a lot of possibilities, as you can see with these few demos:</strong>

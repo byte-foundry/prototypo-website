@@ -49,7 +49,7 @@ $(function() {
 			// retrieve the colors used in the stylesheet.
 			var colors =
 				$('.DemoControls-Potentiometer')
-				.css('background-image')
+				.css('background')
 				.replace(/^.*?(rgb\(.*?\)).*?(rgb\(.*?\)).*$/, ' $1 | $2 ')
 				.split('|'),
 				updateSliderBg = function(el) {
@@ -57,10 +57,10 @@ $(function() {
 						// the amplitude correction is empirical
 						percent = 100 * (el.value - el.min + 0.05 * amplitude) / (el.max - el.min + 0.10 * amplitude);
 
-					el.style['background-image'] =
+					el.style['background'] =
 						'linear-gradient( to right,' +
-						colors[0] + percent + '%,' +
-						colors[1] + (percent + 0.01) + '%)';
+						colors[1] + percent + '%,' +
+						'gainsboro ' + (percent + 0.01) + '%)';
 				};
 
 			$('.DemoControls').on('input', '.DemoControls-Potentiometer', function(e) {

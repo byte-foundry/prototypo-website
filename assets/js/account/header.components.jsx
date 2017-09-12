@@ -61,8 +61,8 @@ export default class Header extends React.Component {
 						</div>
 						<div>
 							<a href="/pricing" className="callToAction header-part-button">
-								<span className="show-for-medium-up">Create your font now!</span>
-								<span className="show-for-small-only text-center">Get started!</span>
+								<span className="show-for-medium-up">Create your font now</span>
+								<span className="show-for-small-only text-center">Get started</span>
 							</a>
 						</div>
 					</div>

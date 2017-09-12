@@ -22,7 +22,7 @@ Subtitle: A year after it’s commercial launch, we’re glad to introduce Proto
 
 ----
 
-Contentarticle: 
+Contentarticle:
 
 A few weeks ago we celebrated the first anniversary of Prototypo. A first year during which we improved the app and worked on making it as functional as possible, in order to let designers create their own fonts in the simplest way.
 
@@ -39,7 +39,7 @@ There was a solution to my frustration: drawing my own parametric typefaces, by 
 (image: modular-typeface-2008.png)
 <legend>A modular typeface I did in 2008 for a student project.</legend>
 
-Many times I told myself: “I want to draw my own entire alphabet. I want it to be original, with some graphic qualities, as well as being readable and optimized”. All I ended up with was a folder full of font files with fancy names, and containing only a handful of characters. 
+Many times I told myself: “I want to draw my own entire alphabet. I want it to be original, with some graphic qualities, as well as being readable and optimized”. All I ended up with was a folder full of font files with fancy names, and containing only a handful of characters.
 I had ideas, though. I just lacked a solid basis of theoretical and practical drawing skills. The whole concept of Prototypo was born from the simple observation that an alphabet could be defined as a system of shapes, and that it was possible to code this system.
 
 <iframe width="560" height="565" src="https://www.youtube.com/embed/_js8qBbgMug" frameborder="0" allowfullscreen></iframe>
@@ -48,7 +48,7 @@ I had ideas, though. I just lacked a solid basis of theoretical and practical dr
 A few years later, after many sleepless nights, liters of coffee and, most of all, some great encounters, we finally built Prototypo: an application to prototype ideas, that can model as many typefaces as you want from a template created by professional type designers.
 For a year we offered an export to GlyphR Studio, an open source tool that lets users manually edit bézier curves in the browser. This provided an interesting second level of customization for advanced users, but there was no way to go back to the parametric level, should users want to make another global change. Even if typeface design is a matter of going back-and-forth between drawing and printing proofs, it is obviously much better if you don’t have to constantly start the same work over.
 
-We have therefore sought to give more freedom to the user within Prototypo, while keeping the parametric aspect, which is the backbone of our tool. 
+We have therefore sought to give more freedom to the user within Prototypo, while keeping the parametric aspect, which is the backbone of our tool.
 
 # V2! 🎉🎉🎉
 
@@ -84,4 +84,4 @@ That is where we want to bring Prototypo: an application that can guide users th
 
 According to you, which feature is still missing from Prototypo so that it can become a tool you might want to use everyday? Tell us in the comments or on <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a> and  <a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>!
 
-<strong>(link:https://twitter.com/_____________y text:Yannick, popup: yes)<br/>cofounder & Art Director of Prototypo.</strong>
+<strong>(link:https://twitter.com/_____________y text:Yannick, popup: yes)<br/>founder & Art Director of Prototypo.</strong>
