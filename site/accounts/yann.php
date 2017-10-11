@@ -9,6 +9,9 @@ password: >
 language: fr
 role: admin
 history:
+  - lab/prototypo-yahoo-weather-api
+  - >
+    lab/antique-gothic-sound-sensitive-specimen
   - >
     blog/parametric-fonts-technology-infinite-range-of-responsive-applications
   - blog/a-year-in-review
