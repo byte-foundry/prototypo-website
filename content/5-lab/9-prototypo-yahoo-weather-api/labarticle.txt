@@ -1,0 +1,20 @@
+Title: Prototypo + Yahoo Weather API
+
+----
+
+Ogimage: preview-codepen-small.png
+
+----
+
+Link: https://codepen.io/FranzPoize/pen/ayYevr
+
+----
+
+Tags: Yahoo Weather API,dataviz
+
+----
+
+Contentarticle: 
+
+What temperature is it today? Is it windy over there? 
+Try Prototypo + Yahoo Weather API with the cities of your choice and let the fonts show you the weather forecast!
