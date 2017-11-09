@@ -26,7 +26,7 @@
 
 		<div class="Footer-copyright marginTop60">
 			© <a href="/about">Prototypo</a> 2009 -  <?php echo date("Y"); ?> | Fonts powered by <a href="http://www.productiontype.com" target="_blank">Production Type</a>
-      <?php echo $site->copyright()->kirbytextSans(); ?>
+      <?php echo $site->copyright()->kirbytextSans(); ?> - Call us: +33 (0)7 69 70 38 55
 		</div>
 
 

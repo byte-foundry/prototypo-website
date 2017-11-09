@@ -22,11 +22,13 @@
 				<?php echo $page->descriptionPromo(); ?>
 			</h2>
 		<?php endif ?>
-    
+
+
+
     <div class="PricingSwitch text-center marginTop60">
           <button href="#" id="Pricing-monthly-plan" class="button textType-txt textSize-txt-large radius">Monthly billing</button>
           <button href="#" id="Pricing-yearly-plan" class="button active radius textType-txt textSize-txt-large">Yearly billing</button>
-    </div>    
+    </div>
 
 		<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3 PricingTable marginTop30">
 			<?php
@@ -45,7 +47,7 @@
 						<h2 class="PricingItem-packtitle textType-txt textSize-txt-small">
 							<?php echo $pack['packname']; ?>
 						</h2>
-            
+
             <p class="textType-txt textSize-txt-small marginTop15 PricingItem-description">
 							<?php echo $pack['description']; ?>
 						</p>
@@ -131,7 +133,11 @@
 				endforeach;
 				?>
 		</ul>
-    
+
+		<p class="white text-center marginTop15 marginBottom15">
+			Do you have any questions? Do you want to book an online presentation for your company?<br/> Call Giacomo <a href="tel:+33769703855">+33 (0)7 69 70 38 55</a> or send us an email <a href="mailto:giacomo@prototypo.io">giacomo@prototypo.io</a>
+		</p>
+
     <div class="SchoolsItem small-block-grid-1 medium-block-grid-2 large-block-grid-2">
       <div class="SchoolsItem-column">
         <h2 class="SchoolsItem-packtitle textType-txt textSize-txt-medium marginBottom15">
@@ -140,7 +146,7 @@
         <img src="<?php echo url('assets/img/Enterprise.svg'); ?>" alt="">
       </div>
       <div class="SchoolsItem-column SchoolsItem-text textType-txt textSize-txt-medium">
-          We think Prototypo is an awesome tool for students to learn the basics of type design, so we definitely want to make students to access Prototypo easily: save up to 80% on the commercial price.
+		  We think Prototypo is an awesome tool for students to learn the basics of type design, so we definitely want to make students to access Prototypo easily: contact us and tell us more about your needs!
           <br/><br/>
           <a href="/education" class="callToAction">Learn more about it!</a>
       </div>
@@ -173,10 +179,10 @@
 
 		</div>
 	</section>
-  
+
   <section class="clearfix bg-white">
 		<div class="fitToContent marginTop60 ">
-			<h2 class="big bold text-center marginBottom30">Save time and money, use Prototypo</h2>
+			<h2 class="bold text-center marginBottom30">Start offering custom typefaces to your clients</h2>
       <div class="textSize-txt-large text-center marginTop30  marginBottom60">
           <?php
             $subdomain = c::get('env') === 'dev' ? 'dev' : 'app';

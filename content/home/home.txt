@@ -128,7 +128,7 @@ Section2text: We're working on advanced features such as spacing/kerning, live p
 
 ----
 
-Title1: Save time and be more creative
+Title1: Start offering custom typefaces to your clients
 
 ----
 
