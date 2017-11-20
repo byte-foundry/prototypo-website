@@ -5,6 +5,9 @@
   </li>
   <?php endforeach ?>
   <li class="Footer-Nav-layoutItem">
+    <a class="Footer-Nav-layoutItemLink" href="/jobs">Jobs</a>
+  </li>
+  <li class="Footer-Nav-layoutItem">
     <a class="Footer-Nav-layoutItemLink" href="/cgu">CGU</a>
   </li>
   <li class="Footer-Nav-layoutItem">

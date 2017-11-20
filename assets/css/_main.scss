@@ -1617,6 +1617,105 @@ iframe{
 	// overflow: hidden;
 }
 
+.Jobs {
+	position: relative;
+	background: $colorWhite;
+	border-radius: $global-radius;
+	margin-bottom: 20px;
+	// box-shadow: 0 2px 40px rgba(darken(adjust-hue(#a2e392, 355deg),10%),.5);
+	clear: both;
+	// overflow: hidden;
+}
+
+.Jobs-content {
+	padding: 15px 60px;
+	position: relative;
+	clear: both;
+
+	blockquote p {
+
+		position: relative;
+		padding-left: 2.5em;
+		font-size: 1.1em;
+		font-style: italic;
+		color: $secondBackgroundColor;
+
+		&:before {
+			content: "«";
+			font-family: sans-serif;
+			font-size: 6em;
+			position: absolute;
+			top: -0.85em;
+			left: -0.25em;
+			color: lighten($secondBackgroundColor, 10%);
+		}
+	}
+
+	&:first-of-type {
+		padding-top: 85px;
+	}
+
+	&:last-of-type {
+		padding-bottom: 85px;
+	}
+
+	strong {
+		font-weight: bold;
+	}
+}
+.Jobs-content:before {
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 50%;
+	margin-left: -15px;
+	border: solid 15px transparent;
+	border-bottom: solid 15px $colorWhite;
+}
+.Jobs-content img {
+	margin: 0 auto;
+	display: block;
+}
+.Jobs-content h1 {
+	text-align: left;
+	padding-top: 0;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	@extend .textType-articleTitle;
+	@extend .textSize-title-medium;
+}
+.Jobs-content h2 {
+	text-align: left;
+	border-top: solid 1px $lineBorderColor;
+	padding-top: 25px;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	@extend .textType-articleTitle;
+	@extend .textSize-title-xsmall;
+}
+.Jobs-content h3 {
+	text-align: left;
+	margin-top: 25px;
+	@extend .textType-articleTitle;
+	@extend .textSize-txt-xlarge;
+}
+
+.Jobs-content ul {
+	margin-left: -20px;
+	list-style-type: square;
+	padding-left: 20px;
+}
+.Jobs-content p {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: .5em;
+}
+
+.Jobs-content a {
+	color: $red;
+    font-weight: bold;
+}
+
 
 
 .Article:last-of-type {
