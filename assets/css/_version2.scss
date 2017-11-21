@@ -434,3 +434,29 @@ li.home-feature {
 	.table-cell { display:table-cell; }
 	.large-1 { text-align: right; }
 }
+
+.Jobs {
+	ul {
+		margin-top: 0;
+
+		li {
+			margin-bottom: 0.5em;
+			list-style: none;
+			padding-left: 2em;
+			&::before {
+				content: "—";
+				margin-left: -2em;
+				margin-right: 1em;
+				display: inline-block;
+				color: $red;
+			}
+			& + br {
+				display: none;
+			}
+		}
+	}
+
+	p + br {
+		display: none;
+	}
+}

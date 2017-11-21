@@ -1,57 +1,88 @@
-
 Title: Jobs
 
 ----
 
-Ogdescription: How to manage your projects in prototypo
+Ogdescription: We are hiring!
 
 ----
 
-Ogimage: http://i.imgur.com/FhjGNVB.png
+Ogimage: jobs-thumb.png
 
 ----
 
-Header:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+Header: 
+
+Prototypo is always looking for the right people to join our team. If you submit your resume, we will review your information and contact you as we have opportunities that may be the right fit. In the meantime, please find below open opportunities.
+
+Please follow us on (link: https://www.linkedin.com/organization/10330517/ text: LinkedIn) and (link: https://twitter.com/prototypoapp text: Twitter) to stay up to date on our latest news, including specific job openings.
 
 ----
 
-Offer1:
+Offer1: 
 
-## Offer 1
+## Designer Graphique (F/H) en CDI, à Lyon.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Nous recherchons un·e designer graphique pour créer du contenu et mettre en valeur les possibilités de Prototypo.
+- Utiliser Prototypo pour créer une vitrine de caractères typographiques et les mettre en contexte dans des cartes blanches,
+- Intégrer les nouveaux templates typographiques et s’assurer de leur bon fonctionnement,
+- Concevoir des mini sites specimen interactifs mettant en valeur la technologie des fontes responsives,
+- Concevoir de nouvelles interfaces pour la suite d’outils Prototypo.
 
-(file: offre.pdf text: Complete offer [In French])
-
-----
-
-Offer2:
-
-## Offer 2
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-
-(file: offre.pdf text: Complete offer [In French])
+**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
 
 ----
 
-Offer3:
+Offer2: 
 
-## Offer 3
+## Business developer assistant·e (F/H) en stage, à Lyon.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+2 ans après le lancement officiel de l’application, nous recherchons un·e business developer assistant·e pour nous épauler dans la phase d’accélération commerciale de Prototypo. Vous interviendrez notamment dans le développement de  notre offre B2B.
 
-(file: offre.pdf text: Complete offer [In French])
+- Rechercher des leads et détecter de nouveaux marchés,
+- Prospection téléphonique,
+- Cibler et évaluer des prospects potentiels dans le but de nouer des partenariats,
+- Participer à la construction des supports de vente,
+- Participer à l’élaboration de la stratégie commerciale B2B.
+
+**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
+
+----
+
+Offer3: 
+
+## Développeur / Intégrateur (F/H) en stage, à Lyon.
+
+Nous proposons un stage pour un·e développeur·se / intégrateur·rice afin de se former en contribuant à la création et l’évolution des produits de Prototypo.
+
+- Conception et intégration de sites vitrines interactifs,
+- Intégration de campagnes de newsletters,
+- Développement d’outils d’administration et gestion utilisateurs.
+
+**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
 
 ----
 
-Offer4:
+Offer4: 
 
-## Offer 4
+## Designer Graphique (F/H) en stage, à Lyon.
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+Nous recherchons un·e designer graphique pour mettre en valeur les possibilités de Prototypo et assister le lead designer dans la création de contenus.
 
-(file: offre.pdf text: Complete offer [In French])
+- Utiliser Prototypo pour créer une vitrine de caractères typographiques et les mettre en contexte dans des cartes blanches,
+- Créer du contenu visuel pour nos canaux de communication,
+- Veille sur l’actualité typographique.
+
+**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
 
 ----
+
+Offer5: 
+
+## Product manager (F/H) en stage, à Lyon.
+
+Vous participerez à l’accélération du développement de Prototypo et au lancement de nouveaux produits utilisant sa technologie. Vous évoluerez dans un start-up comptant 90% de ses utilisateurs à l’étranger et aurez d’importantes responsabilités au sein d’une équipe dynamique.
+
+- Participer au lancement d’un nouveau produit,
+- Etablir une stratégie SMO.
+
+**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])

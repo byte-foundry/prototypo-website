@@ -9,6 +9,7 @@ password: >
 language: en
 role: admin
 history:
+  - jobs
   - pricing
   - >
     press/how-new-font-technologies-will-improve-the-web
@@ -16,4 +17,3 @@ history:
     blog/parametric-fonts-technology-infinite-range-of-responsive-applications
   - >
     blog/introducing-spectral-the-first-parametric-google-font-by-prototypo
-  - lab
