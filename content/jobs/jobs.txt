@@ -28,7 +28,7 @@ Nous recherchons un·e designer graphique pour créer du contenu et mettre en va
 - Concevoir des mini sites specimen interactifs mettant en valeur la technologie des fontes responsives,
 - Concevoir de nouvelles interfaces pour la suite d’outils Prototypo.
 
-**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
+**Plus d'infos:** (file: Prototypo-designer-CDI.pdf text: Complete offer [In French])
 
 ----
 
@@ -44,7 +44,7 @@ Offer2:
 - Participer à la construction des supports de vente,
 - Participer à l’élaboration de la stratégie commerciale B2B.
 
-**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
+**Plus d'infos:** (file: Prototypo-business-STAGE.pdf text: Complete offer [In French])
 
 ----
 
@@ -58,7 +58,7 @@ Nous proposons un stage pour un·e développeur·se / intégrateur·rice afin de
 - Intégration de campagnes de newsletters,
 - Développement d’outils d’administration et gestion utilisateurs.
 
-**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
+**Plus d'infos:** (file: Prototypo-dev-STAGE.pdf text: Complete offer [In French])
 
 ----
 
@@ -72,17 +72,17 @@ Nous recherchons un·e designer graphique pour mettre en valeur les possibilité
 - Créer du contenu visuel pour nos canaux de communication,
 - Veille sur l’actualité typographique.
 
-**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
+**Plus d'infos:** (file: Prototypo-designer-STAGE.pdf text: Complete offer [In French])
 
 ----
 
 Offer5: 
 
-## Product manager (F/H) en stage, à Lyon.
+## Product manager assistant·e (F/H) en stage, à Lyon.
 
 Vous participerez à l’accélération du développement de Prototypo et au lancement de nouveaux produits utilisant sa technologie. Vous évoluerez dans un start-up comptant 90% de ses utilisateurs à l’étranger et aurez d’importantes responsabilités au sein d’une équipe dynamique.
 
 - Participer au lancement d’un nouveau produit,
 - Etablir une stratégie SMO.
 
-**Plus d'infos:** (file: offre.pdf text: Complete offer [In French])
+**Plus d'infos:** (file: Prototypo-marketing-STAGE.pdf text: Complete offer [In French])
