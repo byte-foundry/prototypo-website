@@ -24,22 +24,6 @@
 				<?php echo nl2br($page->offer1()->kirbytext()); ?>
 			</div>
 
-			<div class="Jobs-content textType-txt textSize-txt-medium">
-				<?php echo nl2br($page->offer2()->kirbytext()); ?>
-			</div>
-
-			<div class="Jobs-content textType-txt textSize-txt-medium">
-				<?php echo nl2br($page->offer3()->kirbytext()); ?>
-			</div>
-
-			<div class="Jobs-content textType-txt textSize-txt-medium">
-				<?php echo nl2br($page->offer4()->kirbytext()); ?>
-			</div>
-
-			<div class="Jobs-content textType-txt textSize-txt-medium">
-				<?php echo nl2br($page->offer5()->kirbytext()); ?>
-			</div>
-
 		</article>
 
 

@@ -30,9 +30,13 @@ Nous recherchons un·e designer graphique pour créer du contenu et mettre en va
 
 **Plus d'infos:** (file: Prototypo-designer-CDI.pdf text: Complete offer [In French])
 
-----
+ ----
 
-Offer2: 
+## Copywriter (F/H) freelancing, remote.
+
+Complete offer coming soon.
+
+ ----
 
 ## Business developer assistant·e (F/H) en stage, à Lyon.
 
@@ -46,9 +50,7 @@ Offer2:
 
 **Plus d'infos:** (file: Prototypo-business-STAGE.pdf text: Complete offer [In French])
 
-----
-
-Offer3: 
+ ----
 
 ## Développeur / Intégrateur (F/H) en stage, à Lyon.
 
@@ -60,9 +62,7 @@ Nous proposons un stage pour un·e développeur·se / intégrateur·rice afin de
 
 **Plus d'infos:** (file: Prototypo-dev-STAGE.pdf text: Complete offer [In French])
 
-----
-
-Offer4: 
+ ----
 
 ## Designer Graphique (F/H) en stage, à Lyon.
 
@@ -74,9 +74,7 @@ Nous recherchons un·e designer graphique pour mettre en valeur les possibilité
 
 **Plus d'infos:** (file: Prototypo-designer-STAGE.pdf text: Complete offer [In French])
 
-----
-
-Offer5: 
+ ----
 
 ## Product manager assistant·e (F/H) en stage, à Lyon.
 

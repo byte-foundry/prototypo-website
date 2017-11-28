@@ -34,19 +34,3 @@ fields:
   offer1:
     type: textarea
     placeholder: Offer 1 content
-
-  offer2:
-    type: textarea
-    placeholder: Offer 2 content
-
-  offer3:
-    type: textarea
-    placeholder: Offer 3 content
-
-  offer4:
-    type: textarea
-    placeholder: Offer 4 content
-
-  offer5:
-    type: textarea
-    placeholder: Offer 5 content
