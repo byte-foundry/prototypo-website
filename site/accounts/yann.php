@@ -10,11 +10,11 @@ language: fr
 role: admin
 history:
   - >
+    blog/how-new-font-technologies-will-improve-the-web
+  - >
     press/how-new-font-technologies-will-improve-the-web
   - >
     press/augmented-responsive-typeface-for-artists-robots
   - lab/prototypo-yahoo-weather-api
   - >
     lab/antique-gothic-sound-sensitive-specimen
-  - >
-    blog/parametric-fonts-technology-infinite-range-of-responsive-applications
