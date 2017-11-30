@@ -54,9 +54,11 @@ If you want to see what people do with and say about variable fonts, we’ve gat
 </ul>
 The best source of news on variable fonts is, without question, <a href="https://twitter.com/variablefonts" style="background: none" target="_blank">the Twitter feed led by Nick Sherman</a>, who collects everything on the web about variable fonts (and for which we should be grateful).
 Thanks to the new variable fonts format, it will be possible to precisely adapt typography to its context. Variable fonts are based on a pretty simple idea: They contain several variants of a single typeface or, more precisely, a master variant and deltas from other ones, and the user is free to choose an interpolation of these different versions using only CSS. For example, the typeface could contain a light variant and a bold variant, and you would be able to choose a weight between these light and bold weights using CSS, like so:
-<code class="language-css"> h2 {
+~~~ css 
+h2 {
     font-variation-settings: "wght" 200;
-}</code>
+}
+~~~
 (image: new-font-technologies-aa-hd-large-opt.png)
 <legend>Simple interpolations (also known as multiple masters) - Image: Smashing</legend>
 Variable fonts are picky. For them to work, all masters of the font’s base variants must have exactly the same number of points. Morphing between two shapes will be smooth and unique only if the shape you start from and the shape you end up with are similar. Nevertheless, some type creators are used to designing for masters for variable fonts. A similar concept was used for Adobe’s “multiple master” format, and type designers use interpolation to create extended families with tools such as Superpolator. Yet <code>font-variation-settings</code> is still not prevalent in web browsers, and as of the time of writing, only Firefox has implemented the feature. But others should soon follow suit.
@@ -120,179 +122,224 @@ The other option is to use Prototypo parametric technology directly. We’ll exp
 </ul>
 <h2>Set up the project</h2>
 This is the tag you will have to add to your HTML to import the Prototypo library.
-<code class="language-markup"><script type="application/javascript" src="https://library.prototypo.io/ptypo.js"></script></code>
+~~~ markup
+<script type="application/javascript" src="https://library.prototypo.io/ptypo.js"></script>
+~~~
 You can also import this script asynchronously, but you’ll have to wait for its <code>load</code> event to use the library:
-<code class="language-markup"><script async type="application/javascript" src="https://library.prototypo.io/ptypo.js" id="script"></script>
+~~~ markup
+<script async type="application/javascript" src="https://library.prototypo.io/ptypo.js" id="script"></script>   
 <script type="application/javascript">
     document.getElementById('script').addEventListener('load', function() {
         // You’ll have access to the Ptypo global variable here
     });
-</script></code>
+</script>
+~~~
 So, what can this library do for you, you ask? Well, it will create a <code>Ptypo</code> global variable that we will use to create our parametric font.
 Let’s look at an example to better understand how we can use the library.
 <h2>Making a light-font mode and a dark-font mode</h2>
 See the Pen <a href="https://codepen.io/FranzPoize/pen/bRKbxY/" style="background: none" target="_blank">bRKbxY</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize" style="background: none" target="_blank">@FranzPoize</a>) on <a href="https://codepen.io/" style="background: none" target="_blank">CodePen</a>.
+
+<p data-height="600" data-theme-id="light" data-slug-hash="bRKbxY" data-default-tab="result" data-user="FranzPoize" data-embed-version="2" data-pen-title="bRKbxY" class="codepen">See the Pen <a href="https://codepen.io/FranzPoize/pen/bRKbxY/">bRKbxY</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize">@FranzPoize</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 For the first example, we will try to create a font whose weight looks the same whether written in dark on light or light on dark. Text tends to look bolder when written light on dark because light colors tend to bleed on dark colors, making the lighter font seem heavier.
 We’ll make a simple HTML document that can be switched from light mode to dark mode, and we will change the parameters of the font accordingly. You could also have several color schemes and produce parameters that would look the same for each color scheme.
 Let’s start by creating our font factory.
-<code class="language-javascript">const ptypoFactory = new Ptypo.default();</code>
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+~~~
 Here, you can use your token if you subscribe to the Prototypo application. (You can find more information about that in our <a href="https://doc.prototypo.io/" style="background: none" target="_blank">documentation</a>.)
 Once we have our font factory, it’s time to start creating fonts. For the dynamic part of this example, we’ll create two fonts — named <code>titleFont</code> and <code>paragraphFont</code> for the <code>h1</code> heading and the paragraph, respectively.
-<code class="language-javascript">ptypoFactory.createFont(
- 'titleFont',
- Ptypo.templateNames.ELZEVIR).then(function(font) {
+~~~ javascript
+ptypoFactory.createFont(
+    'titleFont',
+    Ptypo.templateNames.ELZEVIR
+ ).then(function(font) {
   //Setting up the right parameters
   font.changeParam('thickness', 110);
 });
 
 ptypoFactory.createFont(
- 'paragraphFont',
- Ptypo.templateNames.GROTESK).then(function(font) {
+    'paragraphFont',
+    Ptypo.templateNames.GROTESK
+ ).then(function(font) {
   font.changeParams({thickness: 70, spacing: 0.5});
-});</code>
+});
+~~~
 The title font uses the Elzevir template, which is a serif template, and the paragraph font uses the Grotesk template, which is a sans-serif. We can set the parameters as we please (you can change the value if you want).
 As you can see, we can modify the parameters in two ways:
-<code class="language-javascript">font.changeParam('nameOfParameter', parameterValue)
+~~~ javascript
+font.changeParam('nameOfParameter', parameterValue)
 font.changeParams({
- parameter1: parameter1Value,
- parameter2: parameter2Value,
- parameter3: parameter3Value
- …
-});</code>
+    parameter1: parameter1Value,
+    parameter2: parameter2Value,
+    parameter3: parameter3Value
+    …
+});
+~~~
 You can learn more about the different parameters available in our API documentation.
 Now we need to write the HTML that goes with it and the CSS that will assign the correct font to the correct element.
-<code class="language-markup"><div class="container">
- <h1>
-  With Param
- </h1>
- <p>
-  Lorem ipsum dolor sit amet..
- </p>
-</div></code>
-<code class="language-css">h1 {
- font-size: 100px;
- font-family: 'titleFont';
- font-weight: normal;
+~~~ markup
+<div class="container">
+    <h1>
+        With Param
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet..
+    </p>
+</div>
+~~~
+~~~ css
+h1 {
+    font-size: 100px;
+    font-family: 'titleFont';
+    font-weight: normal;
 }
 
 p {
- font-size: 18px;
- line-height: 24px;
- font-family: 'paragraphFont';
-}</code>
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'paragraphFont';
+}
+~~~
 Here, we’ve created a heading and a paragraph of text and attached the correct font to them: <code>titleFont</code> for the heading and <code>paragraphFont</code> for the paragraph.
 We now need to create a button to switch between light and dark mode and create the functions that will modify the fonts.
-<code class="language-markup"><a href=”#” id="dark-button">
- Dark mode
-</a></code>
+~~~ markup
+<a href=”#” id="dark-button">
+    Dark mode
+</a>
+~~~
 There are many ways to modify our fonts. What we will do is create an array that we will fill with an object literal containing our functions once the fonts are created.
-<code class="language-javascript">const fontToggles = [];
+~~~ javascript
+const fontToggles = [];
 ptypoFactory.createFont(
- 'titleFont',
- Ptypo.templateNames.ELZEVIR).then(function(font) {
-  //Setting up the right parameters
-  font.changeParam('thickness', 110);
-
-  //Storing the function that will be used to change from light to dark
-  //and vice versa
-  fontToggles.push({
-   lightMode: function() {
+    'titleFont',
+    Ptypo.templateNames.ELZEVIR
+).then(function(font) {
+    //Setting up the right parameters
     font.changeParam('thickness', 110);
-   },
-   darkMode: function() {
-    font.changeParam('thickness', 107);
-   },
-  });
+
+    //Storing the function that will be used to change from light to dark
+    //and vice versa
+    fontToggles.push({
+        lightMode: function() {
+            font.changeParam('thickness', 110);
+        },
+        darkMode: function() {
+            font.changeParam('thickness', 107);
+        },
+    });
 });
 ptypoFactory.createFont(
- 'paragraphFont',
- Ptypo.templateNames.GROTESK).then(function(font) {
-  font.changeParams({thickness: 70, spacing: 0.5});
+    'paragraphFont',
+    Ptypo.templateNames.GROTESK
+).then(function(font) {
+    font.changeParams({thickness: 70, spacing: 0.5});
 
-  fontToggles.push({
-   lightMode: function() {
-    font.changeParam('thickness', 70);
-   },
-   darkMode: function() {
-    font.changeParam('thickness', 50);
-   },
-  });
-});</code>
+    fontToggles.push({
+        lightMode: function() {
+            font.changeParam('thickness', 70);
+        },
+        darkMode: function() {
+            font.changeParam('thickness', 50);
+        },
+    });
+});
+~~~
 In this part, we start by creating a font using the <code>ptypoFactory.createFont</code> method.
-<code class="language-javascript">Ptypo.templateNames.ELZEVIR).then(function(font) {
+~~~ javascript
+Ptypo.templateNames.ELZEVIR).then(function(font) {
     ...
-});</code>
+});
+~~~
 Once the font is created, we put in default parameters for the thickness. We’ve decided to put a thickness of <code>110</code> for the heading font and a thickness of <code>70</code> and a spacing of <code>0.5</code> for the paragraph font.
-<code class="language-javascript">font.changeParams({thickness: 70, spacing: 0.5});</code>
+~~~ javascript
+font.changeParams({thickness: 70, spacing: 0.5});
+~~~
 For each font, we will add an object to the <code>fontToggles</code> array. This object will contain a <code>lightMode</code> and a <code>darkMode</code> property. These two functions are to be executed when the page enters light mode and dark mode, respectively, using our button.
-<code class="language-javascript">fontToggles.push({
- lightMode: function() {
-  font.changeParam('thickness', 70);
- },
- darkMode: function() {
-  font.changeParam('thickness', 50);
- },
-});</code>
+~~~ javascript
+fontToggles.push({
+    lightMode: function() {
+        font.changeParam('thickness', 70);
+    },
+    darkMode: function() {
+        font.changeParam('thickness', 50);
+    },
+});
+~~~
 Now we can add our listener on the click event of the button and use the functions contained in the array to modify our font according the mode we are in.
-<code class="language-javascript">let button = document.getElementById('dark-button');
+~~~ javascript
+let button = document.getElementById('dark-button');
 button.addEventListener('click', function(e) {
- document.body.classList.toggle('dark');
+    document.body.classList.toggle('dark');
 
- fontToggles.forEach(function(toggle) {
-  toggle[document.body.classList.contains('dark')
-      ? 'darkMode'
-      : 'lightMode']();
- });
+    fontToggles.forEach(function(toggle) {
+    toggle[document.body.classList.contains('dark')
+        ? 'darkMode'
+        : 'lightMode']();
+    });
 
- e.preventDefault();
-});</code>
+    e.preventDefault();
+});
+~~~
 Thanks to this code, once we click on our dark-mode button, it will add the <code>dark</code> class to the <code>body</code>. It will loop through our font, modifying functions and executing the <code>darkMode</code> one if there a <code>dark</code> class on <code>body</code> and executing <code>lightMode</code> if there is no <code>dark</code> class on <code>body</code>.
 In our example, we’ve included a font that does not change in dark mode, to show what the difference will be between the regular font and the slightly modified one.
 <h2>Customize fonts with data</h2>
 In this example, we’re going to create several fonts, one for each city’s weather that we want to display, customized using the temperature and wind speed of the given city. The thickness of the font will be tied to the temperature, and the slant will be tied to the wind speed.
 See the Pen <a href="https://codepen.io/FranzPoize/pen/ayYevr/" style="background: none" target="_blank">ayYevr</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize" style="background: none" target="_blank">@FranzPoize</a>) on <a href="https://codepen.io" style="background: none" target="_blank">CodePen</a>.
+
+<p data-height="600" data-theme-id="light" data-slug-hash="ayYevr" data-default-tab="result" data-user="FranzPoize" data-embed-version="2" data-pen-title="ayYevr" class="codepen">See the Pen <a href="https://codepen.io/FranzPoize/pen/ayYevr/">ayYevr</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize">@FranzPoize</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 First, we’ll create a list of the cities we want to display.
-<code class="language-javascript">const cities = [
- 'Lyon',
- 'Padova',
- 'Rennes',
- 'Tokyo',
- 'Johannesburg',
- 'Moscow',
- 'Beijing',
- 'San Francisco',
- 'Marrakech',
- 'Trondheim',
+~~~ javascript
+const cities = [
+    'Lyon',
+    'Padova',
+    'Rennes',
+    'Tokyo',
+    'Johannesburg',
+    'Moscow',
+    'Beijing',
+    'San Francisco',
+    'Marrakech',
+    'Trondheim',
 ];
-</code>
+~~~
 We’ve chosen cities from around the world, to have a nice range of temperatures and wind speeds.
-<code class="language-javascript">function yahooApiQuery(city, callback) {
- if (!city || !callback) {
-  throw new Error('$.YQL(): Parameters may not be undefined');
- }
- const encodedQuery = encodeURIComponent(
-  `select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')`.toLowerCase()
- );
- const url = `https://query.yahooapis.com/v1/public/yql?q=${encodedQuery}&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?`;
- $.getJSON(url, callback);
-};</code>
+~~~ javascript
+function yahooApiQuery(city, callback) {
+    if (!city || !callback) {
+        throw new Error('$.YQL(): Parameters may not be undefined');
+    }
+    const encodedQuery = encodeURIComponent(
+        `select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')`.toLowerCase()
+    );
+    const url = `https://query.yahooapis.com/v1/public/yql?q=${encodedQuery}&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?`;
+    $.getJSON(url, callback);
+};
+~~~
 This function requests the <a href="https://developer.yahoo.com/weather/" style="background: none" target="_blank">Yahoo weather API</a> (which comes with <a href="https://developer.yahoo.com/weather/documentation.html" style="background: none" target="_blank">documentation</a>). We’ll use jQuery’s <code>getJson</code> function to get the JSON from the API.
-<code class="language-javascript">function getValueAndChangeFont(city, font) {
- yahooApiQuery(
-  city,
-  function(data) {
-   font.changeParams({
+~~~ javascript
+function getValueAndChangeFont(city, font) {
+    yahooApiQuery(
+        city,
+        function(data) {
+            font.changeParams({
+                thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
+                slant: parseInt(data.query.results.channel.wind.speed),
+            });
+        }
+    );
+}
+~~~
+We’ve created a function that takes the name of a city and the font. Then, we’ve requested the weather for this city and changed the parameters of the font according to the temperature and wind speed.
+~~~ javascript
+font.changeParams({
     thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
     slant: parseInt(data.query.results.channel.wind.speed),
-   });
-  }
- );
-}</code>
-We’ve created a function that takes the name of a city and the font. Then, we’ve requested the weather for this city and changed the parameters of the font according to the temperature and wind speed.
-<code class="language-javascript">font.changeParams({
- thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
- slant: parseInt(data.query.results.channel.wind.speed),
-});</code>
+});
+~~~
 (image: new-font-technologies-deskext-large-web-extension.png)
 <legend>The Prototypo web extension lets you visualize your customized font in real time - Image: Prototypo</legend>
 <h2>Prototypo parametric typeface library</h2>
@@ -305,196 +352,242 @@ The other option is to use Prototypo parametric technology directly. We’ll exp
 </ul>
 <h2>Set up the project</h2>
 This is the tag you will have to add to your HTML to import the Prototypo library.
-<code class="language-markup"><script type="application/javascript" src="https://library.prototypo.io/ptypo.js"></script></code>
+~~~ markup
+<script type="application/javascript" src="https://library.prototypo.io/ptypo.js"></script>
+~~~
 You can also import this script asynchronously, but you’ll have to wait for its <code>load</code> event to use the library:
-<code class="language-markup"><script async type="application/javascript" src="https://library.prototypo.io/ptypo.js" id="script"></script>
+~~~ markup
+<script async type="application/javascript" src="https://library.prototypo.io/ptypo.js" id="script"></script>
 <script type="application/javascript">
     document.getElementById('script').addEventListener('load', function() {
         // You’ll have access to the Ptypo global variable here
     });
-</script></code
+</script>
+~~~
 So, what can this library do for you, you ask? Well, it will create a <code>Ptypo</code> global variable that we will use to create our parametric font.
 Let’s look at an example to better understand how we can use the library.
 <h2>Making a light-font mode and a dark-font mode</h2>
 See the Pen <a href="https://codepen.io/FranzPoize/pen/bRKbxY/">bRKbxY</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize" style="background: none" target="_blank">@FranzPoize</a>) on <a href="https://codepen.io" style="background: none" target="_blank">CodePen</a>.
+
+<p data-height="600" data-theme-id="light" data-slug-hash="bRKbxY" data-default-tab="result" data-user="FranzPoize" data-embed-version="2" data-pen-title="bRKbxY" class="codepen">See the Pen <a href="https://codepen.io/FranzPoize/pen/bRKbxY/">bRKbxY</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize">@FranzPoize</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 For the first example, we will try to create a font whose weight looks the same whether written in dark on light or light on dark. Text tends to look bolder when written light on dark because light colors tend to bleed on dark colors, making the lighter font seem heavier.
 We’ll make a simple HTML document that can be switched from light mode to dark mode, and we will change the parameters of the font accordingly. You could also have several color schemes and produce parameters that would look the same for each color scheme.
 Let’s start by creating our font factory.
-<code class="language-javascript">const ptypoFactory = new Ptypo.default();</code>
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+~~~
 Here, you can use your token if you subscribe to the Prototypo application. (You can find more information about that in our <a href="https://doc.prototypo.io/" style="background: none" target="_blank">documentation</a>.)
 Once we have our font factory, it’s time to start creating fonts. For the dynamic part of this example, we’ll create two fonts — named <code>titleFont</code> and <code>paragraphFont</code> for the <code>h1</code> heading and the paragraph, respectively.
-<code class="language-javascript">ptypoFactory.createFont(
- 'titleFont',
- Ptypo.templateNames.ELZEVIR).then(function(font) {
-  //Setting up the right parameters
-  font.changeParam('thickness', 110);
+~~~ javascript
+ptypoFactory.createFont(
+    'titleFont',
+    Ptypo.templateNames.ELZEVIR
+).then(function(font) {
+    //Setting up the right parameters
+    font.changeParam('thickness', 110);
 });
 
 ptypoFactory.createFont(
- 'paragraphFont',
- Ptypo.templateNames.GROTESK).then(function(font) {
-  font.changeParams({thickness: 70, spacing: 0.5});
-});</code>
+    'paragraphFont',
+    Ptypo.templateNames.GROTESK
+).then(function(font) {
+    font.changeParams({thickness: 70, spacing: 0.5});
+});
+~~~
 The title font uses the Elzevir template, which is a serif template, and the paragraph font uses the Grotesk template, which is a sans-serif. We can set the parameters as we please (you can change the value if you want).
 As you can see, we can modify the parameters in two ways:
-<code class="language-javascript">font.changeParam('nameOfParameter', parameterValue)
+~~~ javascript
+font.changeParam('nameOfParameter', parameterValue)
 font.changeParams({
- parameter1: parameter1Value,
- parameter2: parameter2Value,
- parameter3: parameter3Value
- …
-});</code>
+    parameter1: parameter1Value,
+    parameter2: parameter2Value,
+    parameter3: parameter3Value
+    …
+});
+~~~
 You can learn more about the different parameters available in our API documentation.
 Now we need to write the HTML that goes with it and the CSS that will assign the correct font to the correct element.
-<code class="language-markup"><div class="container">
- <h1>
-  With Param
- </h1>
- <p>
-  Lorem ipsum dolor sit amet..
- </p>
-</div></code>
-<code class="language-css">h1 {
- font-size: 100px;
- font-family: 'titleFont';
- font-weight: normal;
+~~~ markup
+<div class="container">
+    <h1>
+        With Param
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet..
+    </p>
+</div>
+~~~
+~~~ css
+h1 {
+    font-size: 100px;
+    font-family: 'titleFont';
+    font-weight: normal;
 }
 
 p {
- font-size: 18px;
- line-height: 24px;
- font-family: 'paragraphFont';
-}</code>
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'paragraphFont';
+}
+~~~
 Here, we’ve created a heading and a paragraph of text and attached the correct font to them: <code>titleFont</code> for the heading and <code>paragraphFont</code> for the paragraph.
 We now need to create a button to switch between light and dark mode and create the functions that will modify the fonts.
-<code class="language-markup"><a href=”#” id="dark-button">
- Dark mode
-</a></code>
+~~~ markup
+<a href=”#” id="dark-button">
+    Dark mode
+</a>
+~~~
 There are many ways to modify our fonts. What we will do is create an array that we will fill with an object literal containing our functions once the fonts are created.
-<code class="language-javascript">const fontToggles = [];
+~~~ javascript
+const fontToggles = [];
 ptypoFactory.createFont(
- 'titleFont',
- Ptypo.templateNames.ELZEVIR).then(function(font) {
-  //Setting up the right parameters
-  font.changeParam('thickness', 110);
-
-  //Storing the function that will be used to change from light to dark
-  //and vice versa
-  fontToggles.push({
-   lightMode: function() {
+    'titleFont',
+    Ptypo.templateNames.ELZEVIR
+).then(function(font) {
+    //Setting up the right parameters
     font.changeParam('thickness', 110);
-   },
-   darkMode: function() {
-    font.changeParam('thickness', 107);
-   },
-  });
+
+    //Storing the function that will be used to change from light to dark
+    //and vice versa
+    fontToggles.push({
+        lightMode: function() {
+            font.changeParam('thickness', 110);
+        },
+        darkMode: function() {
+            font.changeParam('thickness', 107);
+        },
+    });
 });
 ptypoFactory.createFont(
- 'paragraphFont',
- Ptypo.templateNames.GROTESK).then(function(font) {
-  font.changeParams({thickness: 70, spacing: 0.5});
-
-  fontToggles.push({
-   lightMode: function() {
-    font.changeParam('thickness', 70);
-   },
-   darkMode: function() {
-    font.changeParam('thickness', 50);
-   },
-  });
-});</code>
+    'paragraphFont',
+    Ptypo.templateNames.GROTESK
+).then(function(font) {
+    font.changeParams({thickness: 70, spacing: 0.5});
+    fontToggles.push({
+        lightMode: function() {
+            font.changeParam('thickness', 70);
+        },
+        darkMode: function() {
+            font.changeParam('thickness', 50);
+        },
+    });
+});
+~~~
 In this part, we start by creating a font using the <code>ptypoFactory.createFont</code> method.
-<code class="language-javascript">Ptypo.templateNames.ELZEVIR).then(function(font) {
+~~~ javascript
+Ptypo.templateNames.ELZEVIR).then(function(font) {
     ...
-});</code>
+});
+~~~
 Once the font is created, we put in default parameters for the thickness. We’ve decided to put a thickness of <code>110</code> for the heading font and a thickness of <code>70</code> and a spacing of <code>0.5</code> for the paragraph font.
-<code class="language-javascript">font.changeParams({thickness: 70, spacing: 0.5});</code>
+~~~ javascript
+font.changeParams({thickness: 70, spacing: 0.5});
+~~~
 For each font, we will add an object to the <code>fontToggles</code> array. This object will contain a <code>lightMode</code> and a <code>darkMode</code> property. These two functions are to be executed when the page enters light mode and dark mode, respectively, using our button.
-<code class="language-javascript">fontToggles.push({
- lightMode: function() {
-  font.changeParam('thickness', 70);
- },
- darkMode: function() {
-  font.changeParam('thickness', 50);
- },
-});</code>
+~~~ javascript
+fontToggles.push({
+    lightMode: function() {
+        font.changeParam('thickness', 70);
+    },
+    darkMode: function() {
+        font.changeParam('thickness', 50);
+    },
+});
+~~~
 Now we can add our listener on the click event of the button and use the functions contained in the array to modify our font according the mode we are in.
-<code class="language-javascript">let button = document.getElementById('dark-button');
+~~~ javascript
+let button = document.getElementById('dark-button');
 button.addEventListener('click', function(e) {
- document.body.classList.toggle('dark');
+    document.body.classList.toggle('dark');
 
- fontToggles.forEach(function(toggle) {
-  toggle[document.body.classList.contains('dark')
-      ? 'darkMode'
-      : 'lightMode']();
- });
+    fontToggles.forEach(function(toggle) {
+    toggle[document.body.classList.contains('dark')
+        ? 'darkMode'
+        : 'lightMode']();
+    });
 
- e.preventDefault();
-});</code>
+    e.preventDefault();
+});
+~~~
 Thanks to this code, once we click on our dark-mode button, it will add the <code>dark</code> class to the <code>body</code>. It will loop through our font, modifying functions and executing the <code>darkMode</code> one if there a <code>dark</code> class on <code>body</code> and executing <code>lightMode</code> if there is no <code>dark</code> class on <code>body</code>.
 In our example, we’ve included a font that does not change in dark mode, to show what the difference will be between the regular font and the slightly modified one.
 <h2>Customize fonts with data</h2>
 In this example, we’re going to create several fonts, one for each city’s weather that we want to display, customized using the temperature and wind speed of the given city. The thickness of the font will be tied to the temperature, and the slant will be tied to the wind speed.
 See the Pen <a href="https://codepen.io/FranzPoize/pen/ayYevr/" style="background: none" target="_blank">ayYevr</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize" style="background: none" target="_blank">@FranzPoize</a>) on <a href="https://codepen.io" style="background: none" target="_blank">CodePen</a>.
+
+<p data-height="600" data-theme-id="light" data-slug-hash="ayYevr" data-default-tab="result" data-user="FranzPoize" data-embed-version="2" data-pen-title="ayYevr" class="codepen">See the Pen <a href="https://codepen.io/FranzPoize/pen/ayYevr/">ayYevr</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize">@FranzPoize</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 First, we’ll create a list of the cities we want to display.
-<code class="language-javascript">const cities = [
- 'Lyon',
- 'Padova',
- 'Rennes',
- 'Tokyo',
- 'Johannesburg',
- 'Moscow',
- 'Beijing',
- 'San Francisco',
- 'Marrakech',
- 'Trondheim',
+~~~ javascript
+const cities = [
+    'Lyon',
+    'Padova',
+    'Rennes',
+    'Tokyo',
+    'Johannesburg',
+    'Moscow',
+    'Beijing',
+    'San Francisco',
+    'Marrakech',
+    'Trondheim',
 ];
-</code>
+~~~
 We’ve chosen cities from around the world, to have a nice range of temperatures and wind speeds.
-<code class="language-javascript">function yahooApiQuery(city, callback) {
- if (!city || !callback) {
-  throw new Error('$.YQL(): Parameters may not be undefined');
- }
- const encodedQuery = encodeURIComponent(
-  `select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')`.toLowerCase()
- );
- const url = `https://query.yahooapis.com/v1/public/yql?q=${encodedQuery}&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?`;
- $.getJSON(url, callback);
-};</code>
+~~~ javascript
+function yahooApiQuery(city, callback) {
+if (!city || !callback) {
+    throw new Error('$.YQL(): Parameters may not be undefined');
+}
+const encodedQuery = encodeURIComponent(
+    `select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')`.toLowerCase()
+);
+const url = `https://query.yahooapis.com/v1/public/yql?q=${encodedQuery}&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?`;
+$.getJSON(url, callback);
+};
+~~~
 This function requests the <a href="https://developer.yahoo.com/weather/" style="background: none" target="_blank">Yahoo weather API</a> (which comes with <a href="https://developer.yahoo.com/weather/documentation.html" style="background: none" target="_blank">documentation</a>). We’ll use jQuery’s <code>getJson</code> function to get the JSON from the API.
-<code class="language-javascript">function getValueAndChangeFont(city, font) {
- yahooApiQuery(
-  city,
-  function(data) {
-   font.changeParams({
+~~~ javascript
+function getValueAndChangeFont(city, font) {
+    yahooApiQuery(
+        city,
+        function(data) {
+            font.changeParams({
+                thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
+                slant: parseInt(data.query.results.channel.wind.speed),
+            });
+        }
+    );
+}
+~~~
+We’ve created a function that takes the name of a city and the font. Then, we’ve requested the weather for this city and changed the parameters of the font according to the temperature and wind speed.
+~~~ javascript
+font.changeParams({
     thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
     slant: parseInt(data.query.results.channel.wind.speed),
-   });
-  }
- );
-}</code>
-We’ve created a function that takes the name of a city and the font. Then, we’ve requested the weather for this city and changed the parameters of the font according to the temperature and wind speed.
-<code class="language-javascript">font.changeParams({
- thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
- slant: parseInt(data.query.results.channel.wind.speed),
-});</code>
-We’ve multiplied the temperature by two because most temperatures in Fahrenheit are between 0 and 100 degrees, and we want the thickness to be between 0 and 200, so that the contrast is stronger. We’ve left the speed of the wind untouched because it can probably take values from 0 to 40, which would be great as an angle for the slant.
-<code class="language-javascript">const ptypoFactory = new Ptypo.default();
-cities.forEach(function(city) {
- $('#city-names').append(
-  `<span style="font-family: ${city}WeatherFont">${city}</span> `
- );
- ptypoFactory.createFont(
-  `${city}WeatherFont`,
-  Ptypo.templateNames.GROTESK).then(
-   function(font) {
-    getValueAndChangeFont(city, font);
-   }
-  );
 });
-</code>
+~~~
+We’ve multiplied the temperature by two because most temperatures in Fahrenheit are between 0 and 100 degrees, and we want the thickness to be between 0 and 200, so that the contrast is stronger. We’ve left the speed of the wind untouched because it can probably take values from 0 to 40, which would be great as an angle for the slant.
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+cities.forEach(function(city) {
+    $('#city-names').append(
+        `<span style="font-family: ${city}WeatherFont">${city}</span> `
+    );
+    ptypoFactory.createFont(
+        `${city}WeatherFont`,
+        Ptypo.templateNames.GROTESK
+    ).then(function(font) {
+        getValueAndChangeFont(city, font);
+    });
+});
+~~~
 For each city, we create a <code>span</code> element that is styled with the right font family. We then create this font using Prototypo’s library. We go through the same process explained in the first example. Let’s create the factory:
-<code class="language-javascript">const ptypoFactory = new Ptypo.default();</code>
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+~~~
 Then, for each city, we create the city’s font with the correct name, <code>${city}WeatherFont</code>, using our <code>getValueAndChangeFont</code> function to customize the font.
 This simple example shows how Prototypo can be very helpful for designing a new kind of data visualization: creating typefaces that are able to express more than the text, directly linked to data. Feel free to test this Codepen with your own city, to try others parameters (x-height, width, etc.) and to show us what you’ve achieved!
 This concludes our examples. If you want to see more experiments we’ve created with the library, head over to <a href="https://www.prototypo.io/lab.html" style="background: none" target="_blank">our lab</a>.
