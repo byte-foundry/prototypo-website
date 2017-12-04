@@ -1,0 +1,375 @@
+Title: How new font technologies will improve the web
+
+----
+
+Ogdescription: Words are the primary component of content for the web. However, until a short while ago, all we had at our disposal were but a few system fonts. Adding to that, those system typefaces weren’t necessarily coherent from operating system to operating system (OS). Fortunately, Windows, macOS and Linux made up font-wise, and since then, all modern fonts have been compatible across those OS’. **There’s no question, the future of web typography looks promising**.
+
+----
+
+Ogimage: weather-api.jpg
+
+----
+
+Tags: tech
+
+----
+
+Date: 2017-11-29
+
+----
+
+Subtitle: Words are the primary component of content for the web. However, until a short while ago, all we had at our disposal were but a few system fonts.
+
+----
+
+Contentarticle: 
+
+(image: weather-api.jpg)
+<legend>Displaying cities name according to the weather - Image: Prototypo</legend>
+Words are the primary component of content for the web. However, until a short while ago, all we had at our disposal were but a few system fonts. Adding to that, those system typefaces weren’t necessarily coherent from operating system to operating system (OS). Fortunately, Windows, macOS and Linux made up font-wise, and since then, all modern fonts have been compatible across those OS’. <strong>There’s no question, the future of web typography looks promising</strong>.
+And it’s looking more and more promising, too. At the 2016 ATypI conference, the world’s biggest type design conference, Microsoft, Google, Apple and Adobe announced that they have been working on a new iteration of the OpenType standard, called variable fonts. Because it gives a lot more control to the user to modify the typeface depending on the context and device, this new version opens new opportunities for web typography and will close the gap in quality between web and print.
+Variable fonts and <a href="https://www.prototypo.io/blog/versatile-type-design-for-the-web.html" style="background: none" target="_blank">parametric fonts</a> are tools that will undeniably revolutionize responsive web type. They will allow graphic and web designers to explore shapes and sizes on their own and to tailor typefaces to their needs. Let’s learn the ins and outs of these new tools and how to take control of our typography.
+<h2>Web Is Not Print With Pixels</h2>
+When a paradigm shift comes forth, such as a new medium for typography, the first thing it encounters is resistance. We feel like we need to push the status quo to its limit before it can break free and make room for a new way of thinking. Typography is no exception, and for a long time designers have considered screen as paper made of pixels instead of trees. Typefaces used on computers were, and still are for the most part, just a static embodiment of physical fonts. Sure, the screen medium brought with it a number of necessary and extra elements, such as hinting, but the legacy of physical fonts still resonate strongly in type design.
+Still, it feels like digital typography is behind physical typography on a range of issues, not so much in the diversity or quality of design, but in the huge fragmentation of screen media. For print design, a cast of physical fonts could be optimized depending on the sizes and shapes of the letters to increase readability. Once the fonts were produced, the result was the same every time; you got exactly what you paid for.
+On a screen, it’s a lot more complicated. Once you’re lost in a forest of DPI values and different renderers, what the user gets is all up in the air. And because type designers have little incentive to produce different optical sizes, a lot of digital typefaces include only a couple of them, which hinders the readability of web typography.
+(image: new-font-technologies-trianonfamily-hd-large-opt.png)
+<legend>Different optical sizes of the Trianon family from Production Type - Image: Production Type</legend>
+When a graphic designer works on a poster, they already know how it will be displayed or distributed. They know the size of the poster, the size of the font, the colors they will use, etc. All of these are known variables that will contribute to their design choices. Also, the designer knows that, once it’s done and printed, the design will not change, and all viewers will experience the same poster.
+(image: new-font-technologies-rags-hd-large-opt.png)
+<legend>Atta rag! Oh, you’re such a good rag - Image: Smashing</legend>
+Let’s look at another aspect that is difficult to fix in web typography: rags. Rags are easy to deal with in print: You can adjust the tracking a bit, insert line breaks or hyphenate to clean up the rags. Unfortunately, achieving this degree of detail in web typography is more complicated. The width changes, and the font size can be changed by the user. The dynamism of web pages makes it difficult to make the right choice of size, letter-spacing, etc.
+Fortunately, it is possible to gather some data about the context in which your website will be browsed. Thanks to CSS and JavaScript, you can adapt the typography of a web page. However, as easy as it is to change the size of a typeface gradually, it is still impossible to easily change from one variant to another progressively. The only option left is to set up breakpoints, with one variant on one side and another on the other side.
+Loading more variants has a price. Adding 150 KB of fonts might not seem like a bad trade-off, but it compounds every time you add a new font to the website. Because loading time is a major factor in the bounce rate of a page, you wouldn’t want users to bail just because your web page has <a href="https://blog.kissmetrics.com/loading-time/?wide=1" style="background: none" target="_blank">too much to load</a>.
+<h2>Responsive Web Type Technologies</h2>
+Having described the challenges of web typography, let’s dive into the heart of the matter. We’ll go deep into the two main technologies that help us make great typography for the web: variable fonts and parametric fonts.
+<h2>Variable fonts</h2>
+With the ATypI 2016 conference on variable fonts, variable fonts have made a big entrance on the web. They’re pushed by the biggest names in web browsing (Google, Adobe, Apple and Microsoft), and they are here to stay.
+If you want to see what people do with and say about variable fonts, we’ve gathered resources from around the web. You’ll have to use a browser that supports variable fonts, either Chrome from version 59.0 or Firefox from version 53.0:
+<ul>
+<li><a href="http://www.axis-praxis.org/specimens/__DEFAULT__" style="background: none" target="_blank">Axis-Praxis</a> (variable fonts playground)</li>
+<li><a href="http://www.alphabettes.org/responsive-variable-fonts/" style="background: none" target="_blank">“Typographic Potential of Variable Fonts </a>,”Alphabettes</li>
+<li><a href="https://www.typenetwork.com/brochure/decovar-a-decorative-variable-font-by-david-berlow#?skelID=SA&skel=1&termID=TA&term=1" style="background: none" target="_blank">“Decovar, A Multistyle Decorative Variable Font by David Berlow,</a>” TypeNetwork</li>
+<li><a href="http://www.underware.nl/" style="background: none" target="_blank">Zeitung</a> (variable font), Underware</li>
+</ul>
+The best source of news on variable fonts is, without question, <a href="https://twitter.com/variablefonts" style="background: none" target="_blank">the Twitter feed led by Nick Sherman</a>, who collects everything on the web about variable fonts (and for which we should be grateful).
+Thanks to the new variable fonts format, it will be possible to precisely adapt typography to its context. Variable fonts are based on a pretty simple idea: They contain several variants of a single typeface or, more precisely, a master variant and deltas from other ones, and the user is free to choose an interpolation of these different versions using only CSS. For example, the typeface could contain a light variant and a bold variant, and you would be able to choose a weight between these light and bold weights using CSS, like so:
+~~~ css 
+h2 {
+    font-variation-settings: "wght" 200;
+}
+~~~
+(image: new-font-technologies-aa-hd-large-opt.png)
+<legend>Simple interpolations (also known as multiple masters) - Image: Smashing</legend>
+Variable fonts are picky. For them to work, all masters of the font’s base variants must have exactly the same number of points. Morphing between two shapes will be smooth and unique only if the shape you start from and the shape you end up with are similar. Nevertheless, some type creators are used to designing for masters for variable fonts. A similar concept was used for Adobe’s “multiple master” format, and type designers use interpolation to create extended families with tools such as Superpolator. Yet <code>font-variation-settings</code> is still not prevalent in web browsers, and as of the time of writing, only Firefox has implemented the feature. But others should soon follow suit.
+There are still a lot of hurdles to jump before variable fonts become an integral part of responsive web typography. Making them is a long endeavor, and type designers now have to think about variations from the get go in order to create typefaces that take full advantage of these new features. Even though converting old typefaces to variable fonts is possible, the old ways are not necessarily suited to the new and more relevant uses that we’ve discussed:
+<ul>
+<li>Generating grades on the spot for screens with different DPI.</li>
+<li>Changing the width of a typeface depending on the way the user wants to fill lines.</li>
+<li>Modifying the optical size depending on the font’s size.</li>
+</ul>
+Unfortunately, variable fonts don’t solve every problem with responsive web typography. For example, how do we reduce the number of media queries? How do we handle outliers? How do we make the typeface a part of the web page?
+Parametric fonts are intended to fix these issues. They differ from variable fonts in concept and production. They put customization logic at the heart of the font, instead of letting a software do the transformation. All typographic rules are inherently a part of the font, but the font is still easily customizable on the user’s side.
+<h2>Parametric fonts</h2>
+Parametric fonts are an old idea that seems to be revisited regularly by people from different backgrounds. It looks to solve the same issues that variable fonts solve but coming from a more automated way of thinking. So, it has usually been a subject tackled by computer scientists who take an interest in type design.
+As with variable fonts, we’ve gathered links from around the web that deal with parametric fonts and their history:
+<ul>
+<li>"<a href="https://en.wikipedia.org/wiki/Metafont" style="background: none" target="_blank">Metafont</a>," Wikipedia
+The father of all modern parametric typeface frameworks</li>
+<li>"<a href="https://www.metaflop.com/" style="background: none" target="_blank">Metaflop</a>," 
+A Metafont graphics interface</li>
+<li>"<a href="http://metapolator.com/home/" style="background: none" target="_blank">Metapolator</a>," 
+A parametric typeface creation tool based on Metaflop</li>
+<li>"<a href="http://www.truetype-typography.com/ttparam.htm" style="background: none" target="_blank">Parametric TrueType Fonts</a>,"TrueType Typography 
+Information about the now discontinued FontChameleon, which is font software that let you merge fonts from a wide library</li>
+<li>"<a href="https://www.typotheque.com/fonts/elementar#sans-a_09_11_3" style="background: none" target="_blank">Elementar</a>," Typotheque
+A bitmap parametric font</li>
+</ul>
+It’s been almost 40 years since Donald Knuth pioneered the concept of parametric fonts. By creating Metafont and Tex, Knuth opened up a new era of typography, in which typefaces were created using a series of steps and equations to describe each character.
+That’s the big difference between variable fonts and parametric fonts. Variable fonts are interpolated, meaning that they are confined in a design space. The designer is not able to escape this space; moreover, adding dimensions to it requires the type designer to create a new master (i.e. a completely new font). Parametric fonts are extrapolated, meaning that they emerge from a single definition. The space in which they live is not limited because they behave like a mathematical object.
+(image: new-font-technologies-metafont-a-large-opt.jpg)
+<legend>An “A” created with Metafont - Image: MAlumni</legend>
+Take the simple example of a circle. In a variable font world, the type designer would produce two circles and tell you, “Choose either of these circles.” In a parametric font world, the type designer would tell you, “Give the font a radius, and it will produce a circle of that radius.”
+(image: new-font-technologies-otvar-pfonts-hd-large-opt.png)
+<legend>Available design space of variable fonts and parametric fonts - Image: Smashing</legend>
+Adding a new dimension to your design space is easy with parametric fonts. For variable fonts, it would mean creating a new master. For a parametric font, you just have to bake the new dimension into the existing equations.
+It is also easy to add constraints or to alter the rate of change of some points using parametric fonts. As well, you can add logic directly into the font.
+(image: parametric-font.gif)
+<legend>The “g”s ear will always stay on the curve - Image: Prototypo</legend>
+<h2>How to start working with parametric Fonts?</h2>
+Parametric fonts are pretty easy to use, and the result can look gorgeous. As we’ll see in the examples, parametric fonts can mitigate optical differences between different colors of text. You can also create text that responds to its context or to any interface you can imagine.
+(image: new-font-technologies-kinect.gif)
+<legend>Feeding a Kinect’s data into a font - Image: Prototypo</legend>
+To make life easier for you, we’ve created <a href="https://app.prototypo.io/#/signin" style="background: none" target="_blank">Prototypo</a>, a free web application for tweaking and adjusting parametric fonts. You’ll need a subscription to take full advantage of parametric fonts. But in the free version, you’ll be able to use subsetted fonts that contain lowercase and uppercase glyphs (no diacritics or figures). The paid subscription unlocks the full fonts.
+(image: prototypo-interface-smashing.gif)
+<legend>Prototypo, a parametric font web app - Image: Prototypo</legend>
+Here’s how to start experimenting with parametric fonts:
+<ul>
+<li>Use <a href="https://en.wikipedia.org/wiki/Metafont" style="background: none" target="_blank">our web preview extension</a> to test your parametric font directly on your website.</li>
+<li>Embed a parametric font on your website using our JavaScript library.</li>
+</ul>
+<h2>Prototypo Chrome extension</h2>
+The extension can be used to try out parameters for different display sizes and layouts. The extension lets you replace the typefaces on your website. All of the modifications you do in Prototypo are applied to your website in real time. This is the perfect tool to try out different optical weights and widths for your fonts in their final context.
+(image: new-font-technologies-deskext-large-web-extension.png)
+<legend>The Prototypo web extension lets you visualize your customized font in real time - Image: Prototypo</legend>
+<h2>Prototypo parametric typeface library</h2>
+The other option is to use Prototypo parametric technology directly. We’ll explain how you can add the Prototypo library to your website. You’ll be able to create parametric fonts on your website and make them interact as your users need. You can see examples of the parametric technology in <a href="https://www.prototypo.io/lab.html" style="background: none" target="_blank">our lab</a>. For example, you can use a Kinect to generate fonts, or morph and switch letters based on the current timestamp. We’ll discuss how it works and how you can use it in your projects, including how to:
+<ul>
+<li>Set up the project.</li>
+<li>Create a font on the fly.</li>
+<li>Use the created font in CSS.</li>
+<li>Modify the font with JavaScript.</li>
+</ul>
+<h2>Set up the project</h2>
+This is the tag you will have to add to your HTML to import the Prototypo library.
+~~~ markup
+<script type="application/javascript" src="https://library.prototypo.io/ptypo.js"></script>
+~~~
+You can also import this script asynchronously, but you’ll have to wait for its <code>load</code> event to use the library:
+~~~ markup
+<script async type="application/javascript" src="https://library.prototypo.io/ptypo.js" id="script"></script>   
+<script type="application/javascript">
+    document.getElementById('script').addEventListener('load', function() {
+        // You’ll have access to the Ptypo global variable here
+    });
+</script>
+~~~
+So, what can this library do for you, you ask? Well, it will create a <code>Ptypo</code> global variable that we will use to create our parametric font.
+Let’s look at an example to better understand how we can use the library.
+<h2>Making a light-font mode and a dark-font mode</h2>
+See the Pen <a href="https://codepen.io/FranzPoize/pen/bRKbxY/" style="background: none" target="_blank">bRKbxY</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize" style="background: none" target="_blank">@FranzPoize</a>) on <a href="https://codepen.io/" style="background: none" target="_blank">CodePen</a>.
+
+<p data-height="600" data-theme-id="light" data-slug-hash="bRKbxY" data-default-tab="result" data-user="FranzPoize" data-embed-version="2" data-pen-title="bRKbxY" class="codepen">See the Pen <a href="https://codepen.io/FranzPoize/pen/bRKbxY/">bRKbxY</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize">@FranzPoize</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+For the first example, we will try to create a font whose weight looks the same whether written in dark on light or light on dark. Text tends to look bolder when written light on dark because light colors tend to bleed on dark colors, making the lighter font seem heavier.
+We’ll make a simple HTML document that can be switched from light mode to dark mode, and we will change the parameters of the font accordingly. You could also have several color schemes and produce parameters that would look the same for each color scheme.
+Let’s start by creating our font factory.
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+~~~
+Here, you can use your token if you subscribe to the Prototypo application. (You can find more information about that in our <a href="https://doc.prototypo.io/" style="background: none" target="_blank">documentation</a>.)
+Once we have our font factory, it’s time to start creating fonts. For the dynamic part of this example, we’ll create two fonts — named <code>titleFont</code> and <code>paragraphFont</code> for the <code>h1</code> heading and the paragraph, respectively.
+~~~ javascript
+ptypoFactory.createFont(
+    'titleFont',
+    Ptypo.templateNames.ELZEVIR
+ ).then(function(font) {
+  //Setting up the right parameters
+  font.changeParam('thickness', 110);
+});
+
+ptypoFactory.createFont(
+    'paragraphFont',
+    Ptypo.templateNames.GROTESK
+ ).then(function(font) {
+  font.changeParams({thickness: 70, spacing: 0.5});
+});
+~~~
+The title font uses the Elzevir template, which is a serif template, and the paragraph font uses the Grotesk template, which is a sans-serif. We can set the parameters as we please (you can change the value if you want).
+As you can see, we can modify the parameters in two ways:
+~~~ javascript
+font.changeParam('nameOfParameter', parameterValue)
+font.changeParams({
+    parameter1: parameter1Value,
+    parameter2: parameter2Value,
+    parameter3: parameter3Value
+    …
+});
+~~~
+You can learn more about the different parameters available in our API documentation.
+Now we need to write the HTML that goes with it and the CSS that will assign the correct font to the correct element.
+~~~ markup
+<div class="container">
+    <h1>
+        With Param
+    </h1>
+    <p>
+        Lorem ipsum dolor sit amet..
+    </p>
+</div>
+~~~
+~~~ css
+h1 {
+    font-size: 100px;
+    font-family: 'titleFont';
+    font-weight: normal;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'paragraphFont';
+}
+~~~
+Here, we’ve created a heading and a paragraph of text and attached the correct font to them: <code>titleFont</code> for the heading and <code>paragraphFont</code> for the paragraph.
+We now need to create a button to switch between light and dark mode and create the functions that will modify the fonts.
+~~~ markup
+<a href=”#” id="dark-button">
+    Dark mode
+</a>
+~~~
+There are many ways to modify our fonts. What we will do is create an array that we will fill with an object literal containing our functions once the fonts are created.
+~~~ javascript
+const fontToggles = [];
+ptypoFactory.createFont(
+    'titleFont',
+    Ptypo.templateNames.ELZEVIR
+).then(function(font) {
+    //Setting up the right parameters
+    font.changeParam('thickness', 110);
+
+    //Storing the function that will be used to change from light to dark
+    //and vice versa
+    fontToggles.push({
+        lightMode: function() {
+            font.changeParam('thickness', 110);
+        },
+        darkMode: function() {
+            font.changeParam('thickness', 107);
+        },
+    });
+});
+ptypoFactory.createFont(
+    'paragraphFont',
+    Ptypo.templateNames.GROTESK
+).then(function(font) {
+    font.changeParams({thickness: 70, spacing: 0.5});
+
+    fontToggles.push({
+        lightMode: function() {
+            font.changeParam('thickness', 70);
+        },
+        darkMode: function() {
+            font.changeParam('thickness', 50);
+        },
+    });
+});
+~~~
+In this part, we start by creating a font using the <code>ptypoFactory.createFont</code> method.
+~~~ javascript
+Ptypo.templateNames.ELZEVIR).then(function(font) {
+    ...
+});
+~~~
+Once the font is created, we put in default parameters for the thickness. We’ve decided to put a thickness of <code>110</code> for the heading font and a thickness of <code>70</code> and a spacing of <code>0.5</code> for the paragraph font.
+~~~ javascript
+font.changeParams({thickness: 70, spacing: 0.5});
+~~~
+For each font, we will add an object to the <code>fontToggles</code> array. This object will contain a <code>lightMode</code> and a <code>darkMode</code> property. These two functions are to be executed when the page enters light mode and dark mode, respectively, using our button.
+~~~ javascript
+fontToggles.push({
+    lightMode: function() {
+        font.changeParam('thickness', 70);
+    },
+    darkMode: function() {
+        font.changeParam('thickness', 50);
+    },
+});
+~~~
+Now we can add our listener on the click event of the button and use the functions contained in the array to modify our font according the mode we are in.
+~~~ javascript
+let button = document.getElementById('dark-button');
+button.addEventListener('click', function(e) {
+    document.body.classList.toggle('dark');
+
+    fontToggles.forEach(function(toggle) {
+    toggle[document.body.classList.contains('dark')
+        ? 'darkMode'
+        : 'lightMode']();
+    });
+
+    e.preventDefault();
+});
+~~~
+Thanks to this code, once we click on our dark-mode button, it will add the <code>dark</code> class to the <code>body</code>. It will loop through our font, modifying functions and executing the <code>darkMode</code> one if there a <code>dark</code> class on <code>body</code> and executing <code>lightMode</code> if there is no <code>dark</code> class on <code>body</code>.
+In our example, we’ve included a font that does not change in dark mode, to show what the difference will be between the regular font and the slightly modified one.
+<h2>Customize fonts with data</h2>
+In this example, we’re going to create several fonts, one for each city’s weather that we want to display, customized using the temperature and wind speed of the given city. The thickness of the font will be tied to the temperature, and the slant will be tied to the wind speed.
+See the Pen <a href="https://codepen.io/FranzPoize/pen/ayYevr/" style="background: none" target="_blank">ayYevr</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize" style="background: none" target="_blank">@FranzPoize</a>) on <a href="https://codepen.io" style="background: none" target="_blank">CodePen</a>.
+
+<p data-height="600" data-theme-id="light" data-slug-hash="ayYevr" data-default-tab="result" data-user="FranzPoize" data-embed-version="2" data-pen-title="ayYevr" class="codepen">See the Pen <a href="https://codepen.io/FranzPoize/pen/ayYevr/">ayYevr</a> by Francois Poizat (<a href="https://codepen.io/FranzPoize">@FranzPoize</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+First, we’ll create a list of the cities we want to display.
+~~~ javascript
+const cities = [
+    'Lyon',
+    'Padova',
+    'Rennes',
+    'Tokyo',
+    'Johannesburg',
+    'Moscow',
+    'Beijing',
+    'San Francisco',
+    'Marrakech',
+    'Trondheim',
+];
+~~~
+We’ve chosen cities from around the world, to have a nice range of temperatures and wind speeds.
+~~~ javascript
+function yahooApiQuery(city, callback) {
+    if (!city || !callback) {
+        throw new Error('$.YQL(): Parameters may not be undefined');
+    }
+    const encodedQuery = encodeURIComponent(
+        `select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='${city}')`.toLowerCase()
+    );
+    const url = `https://query.yahooapis.com/v1/public/yql?q=${encodedQuery}&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=?`;
+    $.getJSON(url, callback);
+};
+~~~
+This function requests the <a href="https://developer.yahoo.com/weather/" style="background: none" target="_blank">Yahoo weather API</a> (which comes with <a href="https://developer.yahoo.com/weather/documentation.html" style="background: none" target="_blank">documentation</a>). We’ll use jQuery’s <code>getJson</code> function to get the JSON from the API.
+~~~ javascript
+function getValueAndChangeFont(city, font) {
+    yahooApiQuery(
+        city,
+        function(data) {
+            font.changeParams({
+                thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
+                slant: parseInt(data.query.results.channel.wind.speed),
+            });
+        }
+    );
+}
+~~~
+We’ve created a function that takes the name of a city and the font. Then, we’ve requested the weather for this city and changed the parameters of the font according to the temperature and wind speed.
+~~~ javascript
+font.changeParams({
+    thickness: parseInt(data.query.results.channel.item.condition.temp) * 2,
+    slant: parseInt(data.query.results.channel.wind.speed),
+});
+~~~
+We’ve multiplied the temperature by two because most temperatures in Fahrenheit are between 0 and 100 degrees, and we want the thickness to be between 0 and 200, so that the contrast is stronger. We’ve left the speed of the wind untouched because it can probably take values from 0 to 40, which would be great as an angle for the slant.
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+cities.forEach(function(city) {
+    $('#city-names').append(
+        `<span style="font-family: ${city}WeatherFont">${city}</span> `
+    );
+    ptypoFactory.createFont(
+        `${city}WeatherFont`,
+        Ptypo.templateNames.GROTESK
+    ).then(function(font) {
+        getValueAndChangeFont(city, font);
+    });
+});
+~~~
+For each city, we create a <code>span</code> element that is styled with the right font family. We then create this font using Prototypo’s library. We go through the same process explained in the first example. Let’s create the factory:
+~~~ javascript
+const ptypoFactory = new Ptypo.default();
+~~~
+Then, for each city, we create the city’s font with the correct name, <code>${city}WeatherFont</code>, using our <code>getValueAndChangeFont</code> function to customize the font.
+This simple example shows how Prototypo can be very helpful for designing a new kind of data visualization: creating typefaces that are able to express more than the text, directly linked to data. Feel free to test this Codepen with your own city, to try others parameters (x-height, width, etc.) and to show us what you’ve achieved!
+This concludes our examples. If you want to see more experiments we’ve created with the library, head over to <a href="https://www.prototypo.io/lab.html" style="background: none" target="_blank">our lab</a>.
+<h2>Conclusion</h2>
+Parametric font technology will help us improve the user experience by enabling us to optimize how fonts are displayed on all sorts of devices. It also enables us to be more creative with fonts using context, outside variables and physical sensors to modify the input parameters. You just need to find ideas to tailor your typefaces to the experiences you want to provide:
+<ul>
+<li><strong>Create data visualizations that combine text and content.</strong> Imagine that your client has a big website about sports. You will be able to produce a design in which the shapes and proportions of fonts used for players’ names could be linked to the number of touchdowns they’ve scored, the number of games they’ve played, etc.</li>
+<li><strong>Improve the user’s browsing experience with responsive fonts and even adaptive fonts.</strong> Because we can already set our text-size preferences, we can imagine a future when users have their own profile to fit their reading habits, especially those who have visual impairments.</li>
+<li><strong>Design storefronts that respond to passers by.</strong> Design theater plays whose words are shaped directly by the voices of the actors. Design screens that are capable of rendering letters according to the distance of the reader. Parametric fonts are made to interact with people.</li>
+</ul>
+Parametric font technology is both complex and powerful, and like every design tool, it goes awry when it’s used without constraint or perspective. But once you get the logic behind it, you will never go back to a simple breakpoint design.
+The question now is, What would you do if you could morph typefaces to your every whim?
+<strong>(link:https://twitter.com/FranzP text:François, popup: yes)<br/>Lead developer at Prototypo.</strong>
+<em>Article initially published on  <a href="https://www.smashingmagazine.com/2017/09/new-font-technologies-improve-web/" style="background: none" target="_blank">Smashing</a></em>
