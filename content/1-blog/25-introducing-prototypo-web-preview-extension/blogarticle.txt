@@ -1,0 +1,44 @@
+Title: Introducing Prototypo Web Preview extension [UPDATED]
+
+----
+
+Ogdescription: We are thrilled to announce the release of the Prototypo Web Preview extension. This browser extension will let you see your  Prototypo fonts on any websites. Now, both designers and web developers can observe how their fonts look like in a real context.
+
+----
+
+Ogimage: web-preview-extension.gif
+
+----
+
+Tags: release,video,webdesign,prototypo
+
+----
+
+Date: 2017-12-13
+
+----
+
+Subtitle: We are thrilled to announce the release of the Prototypo Web Preview extension. This browser extension will let you see your  Prototypo fonts on any websites. Now, both designers and web developers can observe how their fonts look like in a real context.
+
+----
+
+Contentarticle: 
+
+<b style="color: #fc5454;">Update  12-13-2017</b>
+<b>The 2.0 version is out!</b> In addition of a bug fix, the extension can now work even when Prototypo app is closed. On top of that, we wrote <a href="https://www.prototypo.io/academy/how-to-preview-your-fonts-projects-in-any-website" target="_blank">a short tutorial</a> in the Academy where you will quickly learn how to make the most of the Web Preview extension. 
+(videoext: mp4: prototypo-web-preview-automatic-selector.mp4 autoplay:true loop:true)
+##**Try it now in four simple steps:**
+*  <a href="https://chrome.google.com/webstore/detail/prototypo-web-sync/jglgljnhjnblboeonagfmfgglfdeakkf?hl=fr&authuser=1" target="_blank">**Download the extension**</a> and install it. 
+*  Open Prototypo in a Chrome tab and your website in a separate tab.
+*  Activate the extension by clicking on the icon in your tool bar.
+*  Apply your Prototypo fonts to the web page via the CSS selectors or by using the extension selection tool.
+
+**Watch the introduction video:**
+<a href= "https://www.youtube.com/embed/szrJICcJOJI" style="background: none" target="_blank"><img src="http://i.imgur.com/GY6nX3k.png" alt="Prototypo web preview extension" width="724" height="408" /></a>
+All the changes you'll make in Prototypo will be applied  immediately on your website.
+The extension enables you to preview your fonts together in their final environment. 
+ **A real plus for your web designs!**
+
+We hope you'll have a great time using the Web Preview extension. If you have any issue <a href="mailto:contact@prototypo.io">**write to us**</a>, use our in-app chat or <a href="https://twitter.com/prototypoApp" target="_blank"> **tweet to us**</a> !
+
+**Cheers!**
