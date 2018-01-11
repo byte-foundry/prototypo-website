@@ -20,18 +20,6 @@ Please follow us on (link: https://www.linkedin.com/organization/10330517/ text:
 
 Offer1: 
 
-## Designer Graphique (F/H) en CDI, à Lyon.
-
-Nous recherchons un·e designer graphique pour créer du contenu et mettre en valeur les possibilités de Prototypo.
-- Utiliser Prototypo pour créer une vitrine de caractères typographiques et les mettre en contexte dans des cartes blanches,
-- Intégrer les nouveaux templates typographiques et s’assurer de leur bon fonctionnement,
-- Concevoir des mini sites specimen interactifs mettant en valeur la technologie des fontes responsives,
-- Concevoir de nouvelles interfaces pour la suite d’outils Prototypo.
-
-**Plus d'infos:** (file: Prototypo-designer-CDI.pdf text: Complete offer [In French])
-
- ----
-
 ## Copywriter (F/H) freelancing, remote.
 
 Complete offer coming soon.
@@ -61,26 +49,3 @@ Nous proposons un stage pour un·e développeur·se / intégrateur·rice afin de
 - Développement d’outils d’administration et gestion utilisateurs.
 
 **Plus d'infos:** (file: Prototypo-dev-STAGE.pdf text: Complete offer [In French])
-
- ----
-
-## Designer Graphique (F/H) en stage, à Lyon.
-
-Nous recherchons un·e designer graphique pour mettre en valeur les possibilités de Prototypo et assister le lead designer dans la création de contenus.
-
-- Utiliser Prototypo pour créer une vitrine de caractères typographiques et les mettre en contexte dans des cartes blanches,
-- Créer du contenu visuel pour nos canaux de communication,
-- Veille sur l’actualité typographique.
-
-**Plus d'infos:** (file: Prototypo-designer-STAGE.pdf text: Complete offer [In French])
-
- ----
-
-## Product manager assistant·e (F/H) en stage, à Lyon.
-
-Vous participerez à l’accélération du développement de Prototypo et au lancement de nouveaux produits utilisant sa technologie. Vous évoluerez dans un start-up comptant 90% de ses utilisateurs à l’étranger et aurez d’importantes responsabilités au sein d’une équipe dynamique.
-
-- Participer au lancement d’un nouveau produit,
-- Etablir une stratégie SMO.
-
-**Plus d'infos:** (file: Prototypo-marketing-STAGE.pdf text: Complete offer [In French])
