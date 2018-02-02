@@ -989,11 +989,11 @@ iframe{
   }
   @media screen and (min-width: 540px) {
     #Pricing-yearly-plan::after {
-      content: 'Save 47%';
+      content: 'Save up to 47%';
       display: block;
       position: absolute;
       font-weight: 600;
-      right: -95px;
+      right: -145px;
       top: -30px;
       height: 45px;
       color: $white;

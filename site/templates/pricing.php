@@ -57,7 +57,7 @@
 								<img src="<?php echo url('assets/img/Enterprise.svg'); ?>" alt="">
 							<?php else: ?>
 									<span class="PricingItem-priceBefore textSize-txt-large">$</span>
-                  <?php if ( str::contains($pack['packname'], 'Company', $i = true)): ?>
+                  <?php if ( str::contains($pack['packname'], 'Team', $i = true)): ?>
 			              <span class="PricingItem-price PricingItem-price-company textSize-title-xlarge">
                   <?php else: ?>
                     <span class="PricingItem-price  textSize-title-xlarge">
@@ -98,10 +98,10 @@
                   <?php else: ?>
                   <li class="PricingItem-pack-option">
                   <?php endif ?>
-                    <?php if ( str::contains($pack['packname'], 'Company', $i = true) && $index === 0 ): ?>
+                    <?php if ( str::contains($pack['packname'], 'Team', $i = true) && $index === 0 ): ?>
                       <div class="PricingItem-pack-option-usercount">
                         <span class="input-number-decrement">–</span>
-                        <input class="input-number" type="text" value="4" min="4" max="100"/>
+                        <input class="input-number" type="text" value="4" min="1" max="100"/>
                         <span class="input-number-text">users</span>
                         <span class="input-number-increment">+</span>
                       </div>
