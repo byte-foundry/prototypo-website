@@ -363,8 +363,8 @@ $(function() {
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
-        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
-        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
+        monthly: Math.round((parseFloat(price[1].replace(/\s+/g, ' ').trim()) * 100) / 100),
+        yearly: Math.round((parseFloat(price[0].replace(/\s+/g, ' ').trim()) * 100 ) / 100)
       })
     });
 		$('.PricingItem-baseline').each(function(index, value) {
@@ -444,7 +444,7 @@ $(function() {
         numLicences = 100;
       }
 
-      let price = baseCompanyPrice * numLicences;
+      let price = Math.round((baseCompanyPrice * numLicences) * 100) / 100;
       let priceSplit = price.toString().split('.');
       if (priceSplit.length > 1) {
         $companyPrice.html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');

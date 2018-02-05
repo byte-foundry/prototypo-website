@@ -40,7 +40,7 @@ Packs:
   offer: '1<sup>st</sup> month for $1'
 - 
   packname: Team
-  price: 50, 59
+  price: 49.9, 59
   description: >
     Great for teams and growing businesses.
     Contact us for more informations!
