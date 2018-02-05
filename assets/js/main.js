@@ -317,7 +317,7 @@ $(function() {
       $('.callToAction-Pro').text('Try it for $1!');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_monthly');
-			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
+			$('.callToAction-Team').attr('href', $baseCompanyCtaUrl + 'team_' + plan + '&quantity=' +$numberControl[0].value);
 		}
 		
 		var setAnnual = function() {
@@ -346,7 +346,7 @@ $(function() {
       $('.callToAction-Pro').text('Go pro');
 			let urlsplit = $baseProCtaUrl.split('?');
 			$('.callToAction-Pro').attr('href', urlsplit[0] + '?subscribe=personal_annual_99');
-			$('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
+			$('.callToAction-Team').attr('href', $baseCompanyCtaUrl + 'team_' + plan + '&quantity=' +$numberControl[0].value);
 		}
 
     var $numberControl = $('.PricingItem-pack-option-usercount .input-number');
@@ -355,7 +355,7 @@ $(function() {
     var $companyPrice = $('.PricingItem-price-company');
     var $monthlyButton = $('#Pricing-monthly-plan');
     var $yearlyButton = $('#Pricing-yearly-plan');
-    var $baseCompanyCtaUrl = $('.callToAction-Company').attr('href').includes('dev') ? 'https://dev.prototypo.io/#/signup?subscribe=' : 'https://app.prototypo.io/#/signup?subscribe=';
+    var $baseCompanyCtaUrl = $('.callToAction-Team').attr('href').includes('dev') ? 'https://dev.prototypo.io/#/signup?subscribe=' : 'https://app.prototypo.io/#/signup?subscribe=';
 		var $baseProCtaUrl = $('.callToAction-Pro').attr('href');
     var prices = [];
     var baselines = [];
@@ -363,8 +363,8 @@ $(function() {
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
-        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
-        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
+        monthly: Math.round((parseFloat(price[1].replace(/\s+/g, ' ').trim()) * 100) / 100),
+        yearly: Math.round((parseFloat(price[0].replace(/\s+/g, ' ').trim()) * 100 ) / 100)
       })
     });
 		$('.PricingItem-baseline').each(function(index, value) {
@@ -434,9 +434,9 @@ $(function() {
     }
 
     function setPrice(numLicences) {
-      if (numLicences < 4) {
-        $numberControl[0].value = 4;
-        numLicences = 4;
+      if (numLicences < 1) {
+        $numberControl[0].value = 1;
+        numLicences = 1;
       }
 
       if (numLicences > 100) {
@@ -444,7 +444,7 @@ $(function() {
         numLicences = 100;
       }
 
-      let price = baseCompanyPrice * numLicences;
+      let price = Math.round((baseCompanyPrice * numLicences) * 100) / 100;
       let priceSplit = price.toString().split('.');
       if (priceSplit.length > 1) {
         $companyPrice.html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
@@ -454,11 +454,11 @@ $(function() {
 
 
       if (numLicences <= 10) {
-        $('.callToAction-Company').text('Create your team');
-        $('.callToAction-Company').attr('href', $baseCompanyCtaUrl + 'agency_' + plan + '&quantity=' +$numberControl[0].value);
+        $('.callToAction-Team').text('Create your team');
+        $('.callToAction-Team').attr('href', $baseCompanyCtaUrl + 'team_' + plan + '&quantity=' +$numberControl[0].value);
       } else {
-        $('.callToAction-Company').text('Get a quote');
-        $('.callToAction-Company').attr('href', 'mailto:contact@prototypo.io');
+        $('.callToAction-Team').text('Get a quote');
+        $('.callToAction-Team').attr('href', 'mailto:contact@prototypo.io');
       }
     }
 
