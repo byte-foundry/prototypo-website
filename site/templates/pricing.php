@@ -101,7 +101,7 @@
                     <?php if ( str::contains($pack['packname'], 'Team', $i = true) && $index === 0 ): ?>
                       <div class="PricingItem-pack-option-usercount">
                         <span class="input-number-decrement">–</span>
-                        <input class="input-number" type="text" value="4" min="1" max="100"/>
+                        <input class="input-number" type="text" value="1" min="1" max="100"/>
                         <span class="input-number-text">users</span>
                         <span class="input-number-increment">+</span>
                       </div>
