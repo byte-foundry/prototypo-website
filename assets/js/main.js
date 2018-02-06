@@ -306,7 +306,8 @@ $(function() {
         } else {
           $(value).text(prices[index].monthly);
         }
-        baseCompanyPrice = prices[2].monthly;
+				baseCompanyPrice = prices[2].monthly;
+				console.log(baseCompanyPrice);
         setPrice($numberControl[0].value);
       });
       $('.PricingItem-baseline').each(function(index, value) {
@@ -363,8 +364,8 @@ $(function() {
     $('.PricingItem-price').each(function(index, value) {
       var price = $(value).text().split(',');
       prices.push({
-        monthly: Math.round((parseFloat(price[1].replace(/\s+/g, ' ').trim()) * 100) / 100),
-        yearly: Math.round((parseFloat(price[0].replace(/\s+/g, ' ').trim()) * 100 ) / 100)
+        monthly: parseFloat(price[1].replace(/\s+/g, ' ').trim()),
+        yearly: parseFloat(price[0].replace(/\s+/g, ' ').trim())
       })
     });
 		$('.PricingItem-baseline').each(function(index, value) {
@@ -444,7 +445,9 @@ $(function() {
         numLicences = 100;
       }
 
-      let price = Math.round((baseCompanyPrice * numLicences) * 100) / 100;
+			let price = Math.round((baseCompanyPrice * numLicences) * 100) / 100;
+			console.log(baseCompanyPrice * numLicences)
+			console.log(price)
       let priceSplit = price.toString().split('.');
       if (priceSplit.length > 1) {
         $companyPrice.html(priceSplit[0] + '<span class="PricingItem-price-small">.' + priceSplit[1] + '</span>');
