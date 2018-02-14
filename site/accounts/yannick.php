@@ -9,11 +9,11 @@ password: >
 language: en
 role: admin
 history:
+  - >
+    blog/ranking-our-top-5-fonts-with-the-heart-symbol
   - jobs
   - pricing
   - >
     press/how-new-font-technologies-will-improve-the-web
   - >
     blog/parametric-fonts-technology-infinite-range-of-responsive-applications
-  - >
-    blog/introducing-spectral-the-first-parametric-google-font-by-prototypo
