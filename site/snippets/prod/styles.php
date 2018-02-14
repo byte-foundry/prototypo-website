@@ -1,1 +1,1 @@
-<link rel="stylesheet" href="/assets/styles.min-ef637b48c8.css">
+<link rel="stylesheet" href="/assets/styles.min-5ed0f96cb5.css">
