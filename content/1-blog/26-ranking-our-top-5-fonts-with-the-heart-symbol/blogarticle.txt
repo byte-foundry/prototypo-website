@@ -54,14 +54,14 @@ We couldn't have missed this opportunity to express all the love we have for our
 (image: tuner.png)
 https://www.productiontype.com/family/tuner
 
-## Digestive by (link: www.studiotriple.fr text: Jérémy Landes popup: yes)
+## Digestive by (link: http://www.studiotriple.fr text: Jérémy Landes popup: yes)
 
 Introducing Digestive, an original titling typeface by Jérémy Landes from Studio Triple. The perfect match for extravagant lovers!
 
 (image: digestive.png)
 http://studiotriple.fr/#entry-60
 
-## Input Mono by (link: djr.com text: David Jonathan Ross popup: yes)
+## Input Mono by (link: http://djr.com text: David Jonathan Ross popup: yes)
 
 Here is Input Mono by David Jonathan Ross, a monospaced typeface showing love to coders.
 
