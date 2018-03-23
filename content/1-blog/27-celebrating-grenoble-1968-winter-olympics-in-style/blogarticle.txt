@@ -1,0 +1,44 @@
+Title: Celebrating Grenoble 1968 Winter Olympics in style!
+
+----
+
+Ogdescription: 
+
+----
+
+Ogimage: gustafsson-prev.2jpg.jpg
+
+----
+
+Tags: fonts in use,made with Prototypo,project
+
+----
+
+Date: 2018-03-23
+
+----
+
+Subtitle: 2018 marks the 50th anniversary of the Grenoble Winter Olympic Games. Let’s honor some of 1968’ stand out athletes with a series of visual creations and custom fonts!
+
+----
+
+Contentarticle: 
+
+<b>A quick look at these 5 designs powered by custom fonts created by Luca Murat with his short comment on each.</b>
+"<em>In the same vein as the Helvetians, the idea here is to get closer to more straight forms than the basic template, the Prototypo Grotesk.</em>"
+(image: killy.jpg)
+<legend>prototypo-LM-series-001 for Jean-Claude Killy (based on Prototypo Grotesk)</legend>
+"<em>When an Italian and an American meet you may get a surprising but interesting outcome. A Spectral visiting the Grand Canyon</em>."
+(image: solberg.jpg)
+<legend>prototypo-LM-series-002 for Magnar SOLBERG (based on Spectral)</legend>
+"<em>The fulls and the untieds, sometimes turned upside down, agree here with the serifs to end up in perfect harmony. Elzevir plays with a lot of typographic rules.</em>"
+(image: gustafsson.jpg)
+<legend>prototypo-LM-series-003 for Toini Gustafsson (based on Elzevir)</legend>
+"<em>When it comes to sticking together, Prototypo Grotesk leaves no one behind. We expand and we incorporate more prominent serifs, making connections between the letters</em>."
+(image: raska.jpg)
+<legend>prototypo-lm-series-004 for Jiří Raška (based on Prototypo Grotesk)</legend>
+"<em>Here we posting up a bold display font for Nancy Greene. The Antique Gothic pops out to make headlines!</em>"
+(image: greene.jpg)
+<legend>prototypo-LM-series-006 for Nancy Greene (based on Antique Gothic)</legend>
+<b>Interested in using these fonts or sharing with Luca? Reach out to us at <a href="mailto:contact@prototypo.io">contact@prototypo.io</a>.
+Cheers, The team.</b>
