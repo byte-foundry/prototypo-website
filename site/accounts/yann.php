@@ -9,6 +9,8 @@ password: >
 language: fr
 role: admin
 history:
+  - >
+    blog/celebrating-grenoble-1968-winter-olympics-in-style
   - blog/prototypo-gives-itself-a-makeover
   - >
     blog/introducing-prototypo-web-preview-extension
@@ -16,5 +18,3 @@ history:
     blog/how-new-font-technologies-will-improve-the-web
   - >
     press/how-new-font-technologies-will-improve-the-web
-  - >
-    press/augmented-responsive-typeface-for-artists-robots
