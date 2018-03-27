@@ -1,0 +1,68 @@
+Title: Prototypo’s new core is here!
+
+----
+
+Ogdescription: We heard you, we listened and made it happen.  After carefully reading all your feedback, countless hours, sweat and tears from our development team, we are happy to announce Prototypo’s new core is up and running!  We worked hard to give you the best version of Prototypo yet by rewriting its entire core from scratch! We hope you love it as much as we do!
+
+----
+
+Ogimage: 
+
+----
+
+Tags: prototypo,features,release
+
+----
+
+Date: 2018-03-28
+
+----
+
+Subtitle: We heard you, we listened and made it happen.  After carefully reading all your feedback, countless hours, sweat and tears from our development team, we are happy to announce Prototypo’s new core is up and running!
+
+----
+
+Contentarticle: 
+
+We worked hard to give you the best version of  <a href="https://app.prototypo.io/#/signin" target="_blank"> Prototypo</a> yet by rewriting its entire core from scratch! We hope you love it as much as we do! 
+GIF INTRO NOUVEAU COEUR
+##Manual Editing  
+Prototypo’s manual editing feature has been rebuilt from the ground up. Making changes to your design is more accessible and a whole lot easier now. In previous versions, only skeletons (the glyphs’ basic strokes) were modifiable. 
+Now you can customize the basic shape of letters, serifs, diacritics, and every tiny little detail.  The overall manual editing interface has been revamped as well to make it even more intuitive. 
+We’ve added some helpful info on node positioning, width size, angles etc. for you, depending on which point you’re modifying.
+(image: a.gif)
+<b>Hold Key A</b>: it locks the thickness of the node to focus on the angle. Really useful for working on the axis of your font.
+(image: w.gif)
+<b>Hold Key W</b>: lock out the angle of the current node to set up the right thickness. This feature will be your best friend to work on contrasted fonts.
+(image: d.gif)
+<b>Hold Key D</b>: change the distribution of the contour around the skeleton point. If you’re not familiar with these terms, feel free to subscribe to our next webinar!
+(image: libre.gif)
+By default, you can change the four off-curves of the node. It’ll create more consistency of your design (and as you know, that’s what really matters for good typeface ;)
+(image: cmd.gif)
+<b>Hold Key CMD</b>: change the off-curves’ direction on the same contour.
+(image: cmd-alt.gif)
+<b>Hold Key ALT</b>: change the off-curves direction’ on only one side of the node.
+(image: cmd-alt.gif)
+<b>Hold CMD+ALT</b>: handle with precaution, because there is no more safeguard here. Move the current off-curve with no limitation!
+##Diacritics for Everyone 
+We’ve also completely rewritten our component system! Whenever you make changes to a particular glyph now, it will be applied to all corresponding glyphs. Sounds easy enough, but it was a real challenge to find the right code architecture! <a href="https://app.prototypo.io/#/signin" target="_blank"> Give it a try</a>! 
+
+##Space up your life
+In previous versions of Prototypo, you could only meddle with the spacing in the “word” view. Now you’ll have the option to change the spacing in the “glyph” view as well. Sit tight, we will add more spacing and kerning features soon! 🛰️
+
+##Dear John
+ John Fell was our very first Prototypo template and we felt that it was time to give good ol’ John a makeover. Since we introduced John Fell to the world back in the day, our expertise in parametric fonts has grown quite a bit. We’ve applied everything we’ve learned in the past so John Fell could become the best version of itself. And we must say, JF cleans up nicely with no more bugs and a sparkling new character set. ✨
+
+##In the Shadows 
+You can now import your own typeface into Prototypo as a shadow in the background. This feature easily lets you compare your uploaded typeface and the one you are working on in Prototypo. You design static fonts and want to create a parametric version with equal proportions? This shadow feature is made for you.  
+
+##Bye-bye Bugs 
+ With the help of your feedback and our eagle eyes, we are constantly on the lookout for bugs. You might have experienced that points were acting up, disappearing when moved or handles that did not rotate correctly. We’ve tracked down these little buggers and put an end to them once and for all. Everything runs smoothly now!
+<b>If you spot something suspicious, let us know and we’ll get on it ASAP!</b> 🕵️ 
+Check it out and let us know what you think! Share with us on <a href="https://www.facebook.com/prototypoApp" target="_blank"> Facebook</a> and  <a href="https://twitter.com/prototypoApp" target="_blank"> Twitter</a>, we’re excited to read your comments and feedback! 
+
+Curious what else we have in the making? We are brushing up on Prototypo’s overall UI and added an easier login system that lets you sign in with Twitter, Facebook and Google, too. Also, we’re currently developing a tool to make rounding corners easier soon!
+<b>And hey, for all Safari lovers out there, we might be able to run Prototypo in Safari soon ;)</b>
+
+Stay tuned!
+<strong>(link:https://twitter.com/_____________y text:Yannick, popup: yes)<br/>founder & Art Director of Prototypo.</strong>
