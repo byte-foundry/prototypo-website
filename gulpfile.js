@@ -36,6 +36,7 @@ gulp.task('php', ['sass'], function(cb) {
                     // urls without extensions or with php extension should
                     // be proxied to php. This prevents dots in urls, though.
                     modrewrite([
+                        // '^([^.]*|.*?\.php)$ http://127.0.0.1:8000$1 [P,NC]'
                         '^([^.]*|.*?\.php)$ http://localhost:8000$1 [P,NC]'
                     ])
                 ];
