@@ -9,11 +9,10 @@ password: >
 language: fr
 role: admin
 history:
+  - blog/welcome-unique
   - blog/prototypos-new-core-is-here
   - >
     blog/celebrating-grenoble-1968-winter-olympics-in-style
   - blog/prototypo-gives-itself-a-makeover
   - >
     blog/introducing-prototypo-web-preview-extension
-  - >
-    blog/how-new-font-technologies-will-improve-the-web
